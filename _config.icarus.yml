@@ -229,7 +229,7 @@ widgets:
         position: left
         type: profile
         # Author name
-        author: 梁又文(Avan)
+        author: Avan(梁又文)
         # Author title
         author_title: Keep learning and stay happy...
         # Author's current location
@@ -252,7 +252,7 @@ widgets:
                 url: https://facebook.com
             Twitter:
                 icon: fab fa-twitter
-                url: https://twitter.com
+                url: https://x.com/avancoding
             Dribbble:
                 icon: fab fa-dribbble
                 url: https://dribbble.com
