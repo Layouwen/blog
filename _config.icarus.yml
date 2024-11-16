@@ -229,7 +229,7 @@ widgets:
         position: left
         type: profile
         # Author name
-        author: Avan(梁又文)
+        author: Avan
         # Author title
         author_title: Keep learning and stay happy...
         # Author's current location
