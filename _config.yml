@@ -2,10 +2,10 @@ title: Avan's Blog
 subtitle: Avan 的博客
 description: 记录自己的一些日记 & 技术文章 & 学习笔记等
 keywords: Avan
-author: Avan
+author: 梁又文
 language: zh-CN
 timezone: Asia/Shanghai
-url: http://example.com
+url: https://4van.top
 permalink: ':year/:month/:day/:title/'
 permalink_defaults: null
 pretty_urls:
@@ -58,8 +58,18 @@ pagination_dir: page
 include: null
 exclude: null
 ignore: null
-theme: icarus
+theme: next
 deploy:
   type: git
   repo: https://github.com/Layouwen/blog
   branch: master
+
+# sitemap:
+#   path: 
+#     - sitemap.xml
+#     - sitemap.txt
+#   template: ./sitemap_template.xml
+#   template_txt: ./sitemap_template.txt
+#   rel: false
+#   tags: true
+#   categories: true
