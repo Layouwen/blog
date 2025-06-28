@@ -62,4 +62,4 @@ theme: icarus
 deploy:
   type: git
   repo: https://github.com/Layouwen/blog
-  branch: master
+  branch: deploy
