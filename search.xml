@@ -1,0 +1,624 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Homebrew安装及配置</title>
+    <url>/2020/07/11/Homebrew%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>在终端输入</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/bin/zsh -c <span class="string">&quot;<span class="subst">$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)</span>&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>选择下载源，这里推荐选择 中科大，输入 1</p>
+<p>接着更新brew</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">brew update</span><br></pre></td></tr></table></figure>
+
+<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><p><code>brew cask install 软件名1 软件名2 软件名3</code> 安装软件<br><code>brew cask search [关键词]</code> 列出所有可以安装的软件<br><code>brew cask uninstall 软件名</code> 卸载软件<br><code>brew install 环境1 环境2 环境3</code> 安装环境<br><code>brew search [关键词]</code> 列出所有可以安装的环境<br><code>brew uninstall 环境名</code> 卸载环境<br><code>brew cask info 软件名</code> 查看相关软件的信息<br><code>brew info 环境名</code> 查看相关环境的信息<br><code>brew cask cleanup</code> 删除Homebrew下载的包<br><code>brew cask list</code> 列出Homebrew安装的包<br><code>brew cask update</code> 更新Homebrew Cask</p>
+<h2 id="使用示例"><a href="#使用示例" class="headerlink" title="使用示例"></a>使用示例</h2><p>安装Git</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">brew install git</span><br></pre></td></tr></table></figure>
+
+<p>安装curl</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">brew install curl</span><br></pre></td></tr></table></figure>
+
+<p>安装openssl</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">brew install openssl</span><br></pre></td></tr></table></figure>
+
+<p>安装node</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">brew install node</span><br></pre></td></tr></table></figure>
+
+<p>安装yarn</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">brew install yarn</span><br></pre></td></tr></table></figure>
+
+<p>安装chrome软件</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">brew cask install chrome</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>博客</category>
+        <category>macos</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
+        <tag>homebrew</tag>
+        <tag>macos</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>如何&quot;下班&quot;时间在开源社区提交代码不留下把柄</title>
+    <url>/2025/06/29/TODO-%E5%A6%82%E4%BD%95%22%E4%B8%8B%E7%8F%AD%22%E6%97%B6%E9%97%B4%E5%9C%A8%E5%BC%80%E6%BA%90%E7%A4%BE%E5%8C%BA%E6%8F%90%E4%BA%A4%E4%BB%A3%E7%A0%81%E4%B8%8D%E7%95%99%E4%B8%8B%E6%8A%8A%E6%9F%84/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>如果你是在因为害怕 github 的 commit 提交时间是在某个时间段, 并害怕被某些人发现.</p>
+<p>恭喜你, 你可能跟我考虑的是一个问题.</p>
+<p>通过下面的脚本(ChatGPT 提供), 将 commit 的时间调整至(18:00&#x2F;19:00) 后.</p>
+<blockquote>
+<p>建议 19:00, 18:00 左右的时间容易存在争议</p>
+</blockquote>
+<h1 id="脚本"><a href="#脚本" class="headerlink" title="脚本"></a>脚本</h1><h2 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h2><h2 id="Uni"><a href="#Uni" class="headerlink" title="Uni"></a>Uni</h2>]]></content>
+      <categories>
+        <category>博客</category>
+        <category>后端</category>
+      </categories>
+      <tags>
+        <tag>开源</tag>
+        <tag>后端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>VScode中使用Cmder及一些简单命令</title>
+    <url>/2020/02/12/VScode%E4%B8%AD%E4%BD%BF%E7%94%A8Cmder%E5%8F%8A%E4%B8%80%E4%BA%9B%E7%AE%80%E5%8D%95%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<h1 id="前置条件"><a href="#前置条件" class="headerlink" title="前置条件"></a>前置条件</h1><ol>
+<li>安装了VScode</li>
+<li>安装了Cmder<br>要是没有安装，可以看前两篇文章<br><a href="https://www.jianshu.com/p/ebb9af006e25">前端小白-简单配置VScode及常用快捷键</a><br><a href="https://www.jianshu.com/p/050943776aea">前端小白-Windows下安装Cmder及配置&amp;设置系统右键菜单</a></li>
+</ol>
+<h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><p>打开VScode，使用快捷键 <code>Ctrl + Shift + P</code> 输入“settings json”点击“首选项：打开设置（json）”，注意这里是没有“默认”两个字。<br><img src="http://obsidian.easyhappy.top/avan/202506291721368.png" alt="image.png"></p>
+<p>随便找一行（只要不是最后一行）的逗号后面回车，输入下面代码（<a href="https://github.com/cmderdev/cmder/wiki/Seamless-VS-Code-Integration#use-cmder-embedded-git-in-vscode">原贴</a>）</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="attr">&quot;git.enabled&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span></span><br><span class="line"><span class="attr">&quot;git.path&quot;</span><span class="punctuation">:</span> <span class="string">&quot;[cmder_root]\\vendor\\git-for-windows\\cmd\\git.exe&quot;</span><span class="punctuation">,</span></span><br><span class="line"><span class="attr">&quot;terminal.integrated.shell.windows&quot;</span><span class="punctuation">:</span> <span class="string">&quot;[cmder_root]\\vendor\\git-for-windows\\bin\\bash.exe&quot;</span><span class="punctuation">,</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>注意里面的[cmder_root]换成你Cmder的根目录路径，并且将单斜杠改为双斜杠。如：</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="attr">&quot;git.enabled&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span></span><br><span class="line"><span class="attr">&quot;git.path&quot;</span><span class="punctuation">:</span> <span class="string">&quot;D:\\Programme\\cmder\\vendor\\git-for-windows\\cmd\\git.exe&quot;</span><span class="punctuation">,</span></span><br><span class="line"><span class="attr">&quot;terminal.integrated.shell.windows&quot;</span><span class="punctuation">:</span> <span class="string">&quot;D:\\Programme\\cmder\\vendor\\git-for-windows\\bin\\bash.exe&quot;</span><span class="punctuation">,</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="http://obsidian.easyhappy.top/avan/202506291722740.png" alt="image.png"></p>
+<p>然后 <code>Ctrl + S</code> 保存退出，关闭终端重新打开，即可<br><img src="http://obsidian.easyhappy.top/avan/202506291723112.png" alt="image.png"></p>
+<h1 id="END"><a href="#END" class="headerlink" title="END"></a>END</h1>]]></content>
+      <categories>
+        <category>博客</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
+        <tag>vscode</tag>
+        <tag>cmder</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Windows 下安装Cmder及配置&amp;设置系统右键菜单</title>
+    <url>/2020/02/12/Windows%20%E4%B8%8B%E5%AE%89%E8%A3%85Cmder%E5%8F%8A%E9%85%8D%E7%BD%AE&amp;%E8%AE%BE%E7%BD%AE%E7%B3%BB%E7%BB%9F%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95/</url>
+    <content><![CDATA[<h1 id="下载Cmder"><a href="#下载Cmder" class="headerlink" title="下载Cmder"></a>下载Cmder</h1><p>Cmder的官网 <a href="https://cmder.net/">https://cmder.net/</a><br>Cmder的GitHub下载链接 <a href="https://github-production-release-asset-2e65be.s3.amazonaws.com/11276147/eb0e7b00-3262-11ea-8f83-c17cae9b8b2c?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A/20200210/us-east-1/s3/aws4_request&X-Amz-Date=20200210T075928Z&X-Amz-Expires=300&X-Amz-Signature=9a1d570c489bd1abcc9dd2ceb57e9f965ca8e7adecd4a8f795332c2c035f68e8&X-Amz-SignedHeaders=host&actor_id=60692794&response-content-disposition=attachment;%20filename=cmder.zip&response-content-type=application/octet-stream">点击这里</a></p>
+<h1 id="安装Cmder"><a href="#安装Cmder" class="headerlink" title="安装Cmder"></a>安装Cmder</h1><p>直接解压到文件夹下，打开目录下的 Cmder.exe 即可运行<br><img src="http://obsidian.easyhappy.top/avan/202506291713700.png" alt="image.png"></p>
+<h1 id="简单的配置Cmder"><a href="#简单的配置Cmder" class="headerlink" title="简单的配置Cmder"></a>简单的配置Cmder</h1><ol>
+<li><p>在右下角 鼠标右键 打开设置<br><img src="http://obsidian.easyhappy.top/avan/202506291713456.png" alt="image.png"></p>
+</li>
+<li><p>设置语言为中文<br><img src="http://obsidian.easyhappy.top/avan/202506291714820.png" alt="image.png"></p>
+</li>
+<li><p>把这三个打上勾<br><img src="http://obsidian.easyhappy.top/avan/202506291714823.png" alt="image.png"></p>
+</li>
+<li><p>在设置左边点击 大小&amp;位置 ，按下方图片的数据来设置（可以自己设置）<br><img src="http://obsidian.easyhappy.top/avan/202506291714801.png" alt="image.png"></p>
+</li>
+<li><p>单击保存设置<br><img src="http://obsidian.easyhappy.top/avan/202506291714047.png" alt="image.png"></p>
+</li>
+</ol>
+<p>PS：如果发现下次打开设置页面，又恢复成中文则进行一下操作</p>
+<ol>
+<li><p>再次打开设置，点击导出，右键 ConEmu.xml 文件点击编辑<br><img src="http://obsidian.easyhappy.top/avan/202506291715652.png" alt="image.png"></p>
+</li>
+<li><p>在新打开的记事本中，按 <code>Ctrl + F</code> 搜素关键字 “Language”<br><img src="http://obsidian.easyhappy.top/avan/202506291715179.png" alt="image.png"></p>
+</li>
+<li><p>将后面的 en 改为 zh 然后按 <code>Ctrl + S</code> 保存退出即可。<br><img src="http://obsidian.easyhappy.top/avan/202506291715659.png" alt="image.png"></p>
+</li>
+</ol>
+<h1 id="设置鼠标移出后隐藏Cmder"><a href="#设置鼠标移出后隐藏Cmder" class="headerlink" title="设置鼠标移出后隐藏Cmder"></a>设置鼠标移出后隐藏Cmder</h1><p>在设置页面，单击右边的 Quake 风格 然后勾选下方图片的三个选项，保存设置<br><img src="http://obsidian.easyhappy.top/avan/202506291715076.png" alt="image.png"></p>
+<h1 id="修改呼出快捷键"><a href="#修改呼出快捷键" class="headerlink" title="修改呼出快捷键"></a>修改呼出快捷键</h1><p>在设置页面，单击右边的 通用 然后按下方图片位置，自定义快捷键，我是 <code>Alt + 1</code><br><img src="http://obsidian.easyhappy.top/avan/202506291715566.png" alt="image.png"></p>
+<h1 id="设置默认bash启动"><a href="#设置默认bash启动" class="headerlink" title="设置默认bash启动"></a>设置默认bash启动</h1><p>在设置页面，单击右边的 启动 然后按下方图片位置进行设置<br><img src="http://obsidian.easyhappy.top/avan/202506291716676.png" alt="image.png"></p>
+<h1 id="设置快捷键"><a href="#设置快捷键" class="headerlink" title="设置快捷键"></a>设置快捷键</h1><p>在设置页面，单击右边的 按键&amp;宏 即可自定义快捷键<br><img src="http://obsidian.easyhappy.top/avan/202506291716515.png" alt="image.png"></p>
+<h1 id="设置bash启动目录"><a href="#设置bash启动目录" class="headerlink" title="设置bash启动目录"></a>设置bash启动目录</h1><p>在设计页面。单击右边的 启动，单击 任务 ，然后进行下面图片的设置即可<br><img src="http://obsidian.easyhappy.top/avan/202506291716056.png" alt="image.png"></p>
+<h1 id="设置Cmder系统右键菜单"><a href="#设置Cmder系统右键菜单" class="headerlink" title="设置Cmder系统右键菜单"></a>设置Cmder系统右键菜单</h1><ol>
+<li>将Cmder根目录路径，复制到系统 环境变量 中。<br><img src="http://obsidian.easyhappy.top/avan/202506291716190.png" alt="image.png"></li>
+</ol>
+<p><img src="http://obsidian.easyhappy.top/avan/202506291717488.png" alt="image.png"></p>
+<ol start="2">
+<li>打开 运行 窗口 <code>Ctrl + R</code> 输入“cmd”回车<br><img src="http://obsidian.easyhappy.top/avan/202506291717490.png" alt="image.png"></li>
+</ol>
+<p>然后在新弹出来的窗口中输入 <code>cmder /register all</code> 后回车即可<br><img src="http://obsidian.easyhappy.top/avan/202506291717221.png" alt="image.png"></p>
+]]></content>
+      <categories>
+        <category>博客</category>
+        <category>windows</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
+        <tag>cmder</tag>
+        <tag>windows</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Windows 下安装Node.js和yarn</title>
+    <url>/2020/02/12/Windows%20%E4%B8%8B%E5%AE%89%E8%A3%85Node.js%E5%92%8Cyarn/</url>
+    <content><![CDATA[<h1 id="一、Node-js部分"><a href="#一、Node-js部分" class="headerlink" title="一、Node.js部分"></a>一、Node.js部分</h1><ul>
+<li>下载Node.js</li>
+</ul>
+<p>Node.js官网 <a href="https://nodejs.org/zh-cn/">https://nodejs.org/zh-cn/</a></p>
+<p>Node.js下载链接 <a href="https://nodejs.org/dist/latest-v10.x/node-v10.19.0-x64.msi">https://nodejs.org/dist/latest-v10.x/node-v10.19.0-x64.msi</a></p>
+<ul>
+<li>##安装Node.js</li>
+</ul>
+<p>下载后，双击运行文件，一直点 Next 就可以了。如果想改目录可以自行跟改<br><img src="http://obsidian.easyhappy.top/avan/202506291725117.png" alt="image.png"></p>
+<ul>
+<li>测试是否安装成功</li>
+</ul>
+<p>使用 <code>Ctrl + R</code> 打卡 运行 窗口，输入“cmd”回车进入 命令行窗口。输入 <code>node --version</code> 回车、输入 <code>npm--version</code> 回车、输入 <code>npx--version</code> 回车，如果都返回版本号则安装成功。没有就重启电脑在重复以上操作。</p>
+<p><img src="http://obsidian.easyhappy.top/avan/202506291725377.png" alt="image.png"></p>
+<ul>
+<li>配置Node.js</li>
+</ul>
+<p>在 命令行窗口 输入 <code>npm i -g nrm</code> 回车。下载nrm服务，这里会比较慢，耐心等他下完</p>
+<p><img src="http://obsidian.easyhappy.top/avan/202506291725017.png" alt="image.png"></p>
+<p>下载完后，输入 <code>nrm ls</code> 可以查看所有服务器，使用 <code>nrm use taobao</code> 使用淘宝源</p>
+<p><img src="http://obsidian.easyhappy.top/avan/202506291725445.png" alt="image.png"></p>
+<p>可以输入 <code>nrm i -g http-server</code> 顺便下载此服务，来测试一下速度</p>
+<h1 id="二、yarn部分"><a href="#二、yarn部分" class="headerlink" title="二、yarn部分"></a>二、yarn部分</h1><ul>
+<li>下载yarn</li>
+</ul>
+<p>yarn官网下载链接 <a href="https://classic.yarnpkg.com/zh-Hans/docs/install#windows-stable">https://classic.yarnpkg.com/zh-Hans/docs/install#windows-stable</a></p>
+<ul>
+<li>安装yarn</li>
+</ul>
+<p>同Node.js一样，无脑下一部即可。安装位置可以自己换</p>
+<ul>
+<li>测试是否安装成功</li>
+</ul>
+<p>使用 <code>Ctrl + R</code> 打卡 运行 窗口，输入“cmd”回车进入 命令行窗口。输入 <code>yarn --version</code> 回车，若返回版本号则安装成功。</p>
+<p><img src="http://obsidian.easyhappy.top/avan/202506291726440.png" alt="image.png"></p>
+<ul>
+<li>配置yarn</li>
+</ul>
+<p>在命令行输入 <code>yarn global add yrm</code> 回车，等它下载完。</p>
+<p>输入 <code>yrm ls</code> 回车查看目前服务器，输入 <code>yrm use taobao</code> 回车使用淘宝服务器。</p>
+<p><img src="http://obsidian.easyhappy.top/avan/202506291726855.png" alt="image.png"></p>
+<h1 id="End"><a href="#End" class="headerlink" title="End"></a>End</h1>]]></content>
+      <categories>
+        <category>博客</category>
+        <category>windows</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
+        <tag>node</tag>
+        <tag>yarn</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>nest 循环依赖问题</title>
+    <url>/2024/11/16/nest%20%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<ol>
+<li>module 循环依赖</li>
+</ol>
+<p>例如 asset.module.ts &lt;-&gt; user.module.ts 循环依赖互相调用的情况, 可以通过在 import 中使用 <code>forwardRef</code> 进行延迟加载</p>
+<figure class="highlight ts"><table><tr><td class="code"><pre><span class="line"><span class="comment">// asset.module.ts</span></span><br><span class="line"><span class="meta">@Module</span>(&#123;</span><br><span class="line">  <span class="attr">imports</span>: [</span><br><span class="line">    <span class="title class_">TypeOrmModule</span>.<span class="title function_">forFeature</span>([<span class="title class_">AssetEntity</span>]),</span><br><span class="line">    <span class="title function_">forwardRef</span>(<span class="function">() =&gt;</span> <span class="title class_">UserModule</span>),</span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">controllers</span>: [<span class="title class_">AssetController</span>],</span><br><span class="line">  <span class="attr">providers</span>: [<span class="title class_">AssetService</span>],</span><br><span class="line">  <span class="attr">exports</span>: [<span class="title class_">AssetService</span>],</span><br><span class="line">&#125;)</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">class</span> <span class="title class_">AssetModule</span> &#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight ts"><table><tr><td class="code"><pre><span class="line"><span class="comment">// user.module.ts</span></span><br><span class="line"><span class="meta">@Module</span>(&#123;</span><br><span class="line">  <span class="attr">imports</span>: [<span class="title class_">TypeOrmModule</span>.<span class="title function_">forFeature</span>([<span class="title class_">User</span>]), <span class="title function_">forwardRef</span>(<span class="function">() =&gt;</span> <span class="title class_">AssetModule</span>)],</span><br><span class="line">  <span class="attr">providers</span>: [<span class="title class_">UserService</span>],</span><br><span class="line">  <span class="attr">controllers</span>: [<span class="title class_">UserController</span>],</span><br><span class="line">  <span class="attr">exports</span>: [<span class="title class_">UserService</span>],</span><br><span class="line">&#125;)</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">class</span> <span class="title class_">UserModule</span> &#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>service 循环依赖</li>
+</ol>
+<p>除了 module 会出现循环依赖, service 一样会. 一样通过 <code>forwardRef</code> 包裹即可</p>
+<figure class="highlight ts"><table><tr><td class="code"><pre><span class="line"><span class="comment">// user.service.ts</span></span><br><span class="line"><span class="meta">@Injectable</span>()</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">class</span> <span class="title class_">UserService</span> &#123;</span><br><span class="line">  <span class="title function_">constructor</span>(<span class="params"></span></span><br><span class="line"><span class="params">    <span class="meta">@Inject</span>(forwardRef(() =&gt; AssetService))</span></span><br><span class="line"><span class="params">    <span class="keyword">private</span> <span class="attr">assetService</span>: <span class="title class_">AssetService</span>,</span></span><br><span class="line"><span class="params">  </span>) &#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight ts"><table><tr><td class="code"><pre><span class="line"><span class="comment">// asset.service.ts</span></span><br><span class="line"><span class="meta">@Injectable</span>()</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">class</span> <span class="title class_">AssetService</span> &#123;</span><br><span class="line">  <span class="title function_">constructor</span>(<span class="params"></span></span><br><span class="line"><span class="params">    <span class="meta">@Inject</span>(forwardRef(() =&gt; UserService))</span></span><br><span class="line"><span class="params">    <span class="keyword">private</span> <span class="attr">userService</span>: <span class="title class_">UserService</span>,</span></span><br><span class="line"><span class="params">  </span>) &#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>博客</category>
+        <category>后端</category>
+      </categories>
+      <tags>
+        <tag>后端</tag>
+        <tag>nestjs</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Nuxt3 中使用 pnpm 安装的 NuxtImg 使用会提示找不到图片</title>
+    <url>/2025/06/29/Nuxt3%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20pnpm%20%E5%AE%89%E8%A3%85%E7%9A%84%20NuxtImg%20%E4%BD%BF%E7%94%A8%E4%BC%9A%E6%8F%90%E7%A4%BA%E6%89%BE%E4%B8%8D%E5%88%B0%E5%9B%BE%E7%89%87/</url>
+    <content><![CDATA[<p><img src="http://obsidian.easyhappy.top/avan/202506111712538.png" alt="image.png"></p>
+<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a><strong>背景</strong></h2><p>在一个全新的 Nuxt 3 项目中，我打算像往常一样直接写：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;NuxtImg src=&quot;/images/logo.png&quot; /&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure>
+
+<p>然而页面报错：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">http://localhost:3000/_ipx/_/images/logo.png 500 (Internal Server Error)</span><br></pre></td></tr></table></figure>
+
+<p>猜测这一错误常见于 <strong>IPX</strong> （Nuxt 默认的本地图片处理服务）无法正常工作或缺少二进制依赖，如 sharp 等。</p>
+<h2 id="问题复现与初步排查"><a href="#问题复现与初步排查" class="headerlink" title="问题复现与初步排查"></a><strong>问题复现与初步排查</strong></h2><ol>
+<li><p><strong>确认官方文档</strong></p>
+<p> Nuxt Image 文档并未提到需要额外配置即可本地使用。</p>
+</li>
+<li><p><strong>定位到 IPX</strong></p>
+<p> 查看 Nuxt Image 的默认 provider，可见如果未显式配置，Nuxt 会自动启用 IPX。</p>
+</li>
+<li><p><strong>搜索社区反馈</strong></p>
+<p> 多位开发者在 GitHub 上反馈升级或安装时出现「IPX 500」或「sharp 模块缺失」问题，且大多与包版本或二进制构建方式有关。</p>
+</li>
+</ol>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a><strong>解决方案</strong></h2><h3 id="步骤一：锁定-IPX-版本"><a href="#步骤一：锁定-IPX-版本" class="headerlink" title="步骤一：锁定 IPX 版本"></a><strong>步骤一：锁定 IPX 版本</strong></h3><p>在 package.json 中新增（或合并）以下字段，强制 pnpm 使用 ipx@^3.0.0：</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="comment">// package.json</span></span><br><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;pnpm&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;overrides&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;ipx&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^3.0.0&quot;</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>内心OS: 估计是版本 3 已默认内置预编译好的 sharp 二进制，避免了跨平台自行编译失败的问题。</p>
+<h3 id="步骤二：重新安装依赖并启动"><a href="#步骤二：重新安装依赖并启动" class="headerlink" title="步骤二：重新安装依赖并启动"></a><strong>步骤二：重新安装依赖并启动</strong></h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pnpm install</span><br><span class="line">pnpm dev</span><br></pre></td></tr></table></figure>
+
+<p>此时刷新页面，&#x2F;<em>ipx&#x2F;</em> 路径应能正确返回处理后的图片。  </p>
+<h2 id="为什么-pnpm-会「漏装」或装错-IPX？"><a href="#为什么-pnpm-会「漏装」或装错-IPX？" class="headerlink" title="为什么 pnpm 会「漏装」或装错 IPX？"></a><strong>为什么 pnpm 会「漏装」或装错 IPX？</strong></h2><ul>
+<li><strong>严格的依赖隔离</strong>：pnpm 以硬链接 + 独立虚拟 store 机制保存依赖，若某深层模块声明的版本范围与项目锁文件冲突，可能被解析为旧版。</li>
+<li><strong>可选依赖</strong>：IPX 及其 sharp 本身属于可选依赖；当安装时遇到编译失败，pnpm 会跳过而不抛错，导致运行期才暴露 500。</li>
+<li><strong>overrides 的作用</strong>：显式声明 overrides 可让 pnpm「顶置」该版本，强制一致，避免多版本并存。</li>
+</ul>
+<h2 id="完整代码示例"><a href="#完整代码示例" class="headerlink" title="完整代码示例"></a><strong>完整代码示例</strong></h2><figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="comment">// package.json（节选）</span></span><br><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;nuxt-img-demo&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;dependencies&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;@nuxt/image&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^1.3.0&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;pnpm&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;overrides&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;ipx&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^3.0.0&quot;</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!-- pages/index.vue --&gt;</span><br><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;NuxtImg src=&quot;/images/logo.png&quot; width=&quot;200&quot; height=&quot;200&quot; placeholder /&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a><strong>小结</strong></h2><ul>
+<li>Nuxt 3 里 <NuxtImg> 默认依赖 IPX；IPX 依赖 sharp。 </li>
+<li>当 IPX 版本不兼容或二进制缺失时，会抛出「500 – IPX Error」。  </li>
+<li>在 <strong>pnpm</strong> 项目中，可通过 pnpm.overrides 强制锁定 ipx@^3.0.0，再重新安装即可快速修复。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>博客</category>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>nuxt</tag>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>nestjs websocket 配置</title>
+    <url>/2024/11/16/nestjs%20websocket%20%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<p><strong>src&#x2F;socket&#x2F;socket.module.ts</strong></p>
+<figure class="highlight ts"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Module</span>(&#123;</span><br><span class="line">  <span class="attr">providers</span>: [<span class="title class_">SocketGateway</span>, <span class="title class_">SocketService</span>],</span><br><span class="line">&#125;)</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">class</span> <span class="title class_">SocketModule</span> &#123;&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>src&#x2F;socket&#x2F;socket.service.ts</strong></p>
+<figure class="highlight ts"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Injectable</span>()</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">class</span> <span class="title class_">SocketService</span> &#123;&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>src&#x2F;socket&#x2F;socket.gateway.ts</strong></p>
+<figure class="highlight ts"><table><tr><td class="code"><pre><span class="line"><span class="meta">@WebSocketGateway</span>(&#123;</span><br><span class="line">  <span class="attr">cors</span>: &#123;</span><br><span class="line">    <span class="attr">origin</span>: <span class="string">&#x27;*&#x27;</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;)</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">class</span> <span class="title class_">SocketGateway</span> &#123;</span><br><span class="line">  <span class="meta">@WebSocketServer</span>()</span><br><span class="line">  <span class="attr">server</span>: <span class="title class_">Server</span>;</span><br><span class="line"></span><br><span class="line">  <span class="title function_">afterInit</span>(<span class="params"><span class="attr">server</span>: <span class="title class_">Server</span></span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;Socket server initialized&#x27;</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="meta">@SubscribeMessage</span>(<span class="string">&#x27;message&#x27;</span>)</span><br><span class="line">  <span class="title function_">handleMessage</span>(<span class="attr">client</span>: <span class="title class_">Socket</span>, <span class="attr">payload</span>: <span class="built_in">any</span>): <span class="built_in">void</span> &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">server</span>.<span class="title function_">emit</span>(<span class="string">&#x27;message&#x27;</span>, <span class="string">`server: <span class="subst">$&#123;<span class="built_in">JSON</span>.stirify(payload)&#125;</span>`</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>src&#x2F;app.module.ts</strong></p>
+<figure class="highlight ts"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Module</span>(&#123;</span><br><span class="line">  <span class="attr">imports</span>: [<span class="title class_">SocketModule</span>],</span><br><span class="line">  <span class="attr">controllers</span>: [<span class="title class_">AppController</span>],</span><br><span class="line">  <span class="attr">providers</span>: [<span class="title class_">AppService</span>],</span><br><span class="line">&#125;)</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">class</span> <span class="title class_">AppModule</span> &#123;&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>博客</category>
+        <category>后端</category>
+      </categories>
+      <tags>
+        <tag>后端</tag>
+        <tag>nestjs</tag>
+        <tag>websocket</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>timestamp 转 timestamptz 问题</title>
+    <url>/2024/12/12/timestamp%20%E8%BD%AC%20timestamptz%20%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<p>无时区转带时区的格式的时候, 使用 sync 他会将你原本的字段删除, 重新创建一个类型为 timestamptz 的字段, 数据会完全清空.</p>
+<p>建议新增一个 swaptime 字段, 将原本的 time 先转到 swaptime, 确认没问题后. 对服务器进行暂停维护, 然后开始将 time 的字段去掉, 然后将 swaptime 的名字改成 time. 重新开启服务.</p>
+]]></content>
+      <categories>
+        <category>博客</category>
+        <category>后端</category>
+      </categories>
+      <tags>
+        <tag>后端</tag>
+        <tag>postgres</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>在Windows使用hugo搭建个人博客</title>
+    <url>/2020/02/07/%E5%9C%A8Windows%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<span id="more"></span>
+
+<h2 id="一、本文章食用须知"><a href="#一、本文章食用须知" class="headerlink" title="一、本文章食用须知"></a>一、本文章食用须知</h2><ol>
+<li>能访问外网</li>
+<li>有自己的github账号以及配置了本地git的服务</li>
+<li>对终端操作有所了解</li>
+<li>仔细看完每个字</li>
+</ol>
+<p>如果以上都有了解，就可以开始下面的搭建博客啦~</p>
+<h2 id="二、下载hugo安装包"><a href="#二、下载hugo安装包" class="headerlink" title="二、下载hugo安装包"></a>二、下载hugo安装包</h2><p>链接：<a href="https://gohugo.io/">Hugo官网</a>、<a href="https://github.com/gohugoio/hugo/releases">安装包下载地址</a></p>
+<h3 id="Windows用户"><a href="#Windows用户" class="headerlink" title="Windows用户"></a>Windows用户</h3><p>找到hugo_版本号_Windows-你的系统版本bit.zip下载下来</p>
+<p>这里以hugo0.64版本为例：</p>
+<p>我的电脑是Windows10-64位系统</p>
+<p>就下载hugo_0.64.0_Windows-64bit.zip</p>
+<h3 id="Mac用户"><a href="#Mac用户" class="headerlink" title="Mac用户"></a>Mac用户</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">brew install hugo</span><br><span class="line">hugo version</span><br></pre></td></tr></table></figure>
+
+<h2 id="三、解压安装包"><a href="#三、解压安装包" class="headerlink" title="三、解压安装包"></a>三、解压安装包</h2><p>解压到你所需要放的目录。如：D:\Programme\hugo_0.64.0_Windows-64bit</p>
+<p>配置hugo环境变量</p>
+<p>复制你刚刚解压位置的路径，添加到环境变量中，这里以Win10为例。</p>
+<p>此电脑【右击】 –&gt; 选择 属性 –&gt; 高级系统设置 –&gt; 环境变量 –&gt; 系统变量 –&gt; Path –&gt; 编辑 –&gt; 新建 –&gt; 粘贴你的路径D:\Programme\hugo_0.64.0_Windows-64bit –&gt; 确定</p>
+<p><img src="http://obsidian.easyhappy.top/avan/202506291645555.png"></p>
+<p>打开终端段输入</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hugo version</span><br></pre></td></tr></table></figure>
+
+<p>如果有提示Hugo字样则配置成功。</p>
+<h2 id="四、开始配置博客"><a href="#四、开始配置博客" class="headerlink" title="四、开始配置博客"></a>四、开始配置博客</h2><p>回到终端，cd到你需要存放的目录位置，输入以下指令</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hugo new site github用户名小写.github.io-creator</span><br></pre></td></tr></table></figure>
+
+<p>输入完后会在当前目录创建一个“github用户名小写.github.io-creator”的文件夹，cd进去，输入指令</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git init</span><br><span class="line">git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke</span><br></pre></td></tr></table></figure>
+
+
+
+<p>输入完后它会下载一些东西，等它下完。下完后接着输入</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;theme = &quot;ananke&quot;&#x27;</span> &gt;&gt; config.toml</span><br></pre></td></tr></table></figure>
+
+<p>输入完后即可创建你的一篇博客，内容可以先不写。创建指令</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hugo new posts/第一篇博客的名称.md</span><br></pre></td></tr></table></figure>
+
+<p>输入完后在你目录进入 content 文件夹，在进入 posts 文件夹，即可看到你刚刚创建的博客文章。编辑这个文件，将里面的“true”修改为“false”</p>
+<p><img src="http://obsidian.easyhappy.top/avan/202506291645307.png"></p>
+<p>保存关闭，回到终端。在根目录也就是“github用户名小写.github.io-creator”的目录，输入指令</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hugo server -D</span><br></pre></td></tr></table></figure>
+
+<p>输入完后可以先不要操作，在浏览器输入 localhost:1313 可以预览本地博客。</p>
+<h2 id="五、将本地博客上传到github"><a href="#五、将本地博客上传到github" class="headerlink" title="五、将本地博客上传到github"></a>五、将本地博客上传到github</h2><p>在github新建一个仓库，名字为“用户名.github.io”，然后回到终端进入 public目录，将目录的文件上传到该仓库。下面以我的用户名为例：</p>
+<p><img src="http://obsidian.easyhappy.top/avan/202506291646140.png" alt="image.png"></p>
+<p>输入完后点下面绿色的按钮就好了。我的创建过所以提示红色，你们直接点就好。</p>
+<p>点完后会跳转到另一个界面，点击SSH,然后复制下面的指令，回终端public目录输入即可</p>
+<p><img src="http://obsidian.easyhappy.top/avan/202506291646720.png" alt="image.png"></p>
+<p>紧接着就是git的一些基础操作，回终端将public里的文件提交到这个仓库。下面提供一些基础指令做参考，具体去了解git的使用教程：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git init</span><br><span class="line">git add .</span><br><span class="line">git status</span><br><span class="line">git commit -v</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<p>提交完后，回到github在刚刚仓库上面点击Settings</p>
+<p><img src="http://obsidian.easyhappy.top/avan/202506291646281.png" alt="image.png"></p>
+<p>往下拉找到GitHub Pages，下面显示的就是你的博客域名了，有买私人域名的可以自己绑定，这里就不说了。开始你的博客人生吧~</p>
+<p><img src="http://obsidian.easyhappy.top/avan/202506291647827.png" alt="image.png"></p>
+]]></content>
+      <categories>
+        <category>博客</category>
+      </categories>
+      <tags>
+        <tag>hugo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>常用的Windows快捷键</title>
+    <url>/2020/02/12/%E5%B8%B8%E7%94%A8%E7%9A%84Windows%E5%BF%AB%E6%8D%B7%E9%94%AE/</url>
+    <content><![CDATA[<h1 id="Win组合键"><a href="#Win组合键" class="headerlink" title="Win组合键"></a>Win组合键</h1><p>Win+D——显示&#x2F;隐藏桌面<br>Win+方向键——移动窗口<br>Alt+Tab——切换窗口<br>Alt+Shift+Tab——往后切换窗口<br>Win+Tab——不怎么用的切换窗口<br>Win+Ctrl+方向键——切换桌面</p>
+<h1 id="Ctrl组合键"><a href="#Ctrl组合键" class="headerlink" title="Ctrl组合键"></a>Ctrl组合键</h1><p>Ctrl+A——全选<br>Ctrl+C——复制<br>Ctrl+V——粘贴<br>Ctrl+Z——撤销<br>Ctrl+Y——重做（与撤销相反）<br>Ctrl+R 或 F5——网页刷新<br>Ctrl+P——网页打印</p>
+<h1 id="Chrome快捷键"><a href="#Chrome快捷键" class="headerlink" title="Chrome快捷键"></a>Chrome快捷键</h1><p>鼠标中键——打开或关闭<br>Ctrl+T——新开标签<br>Ctrl+Shift+T——撤销关闭<br>Ctrl+点击——新页面打开<br>Ctrl+W——关闭当前页面<br>Ctrl+L——地址输入栏<br>Ctrl+Shifit+I 或 F12——开发者工具<br>Ctrl+左右——前进后退<br>Atrl+回车——在新标签打开<br>Shift+回车——在新窗口打开<br>Ctrl+Shift+Delete——删除历史记录</p>
+]]></content>
+      <categories>
+        <category>博客</category>
+        <category>windows</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
+        <tag>windows</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>前端编码习惯</title>
+    <url>/2024/11/16/%E5%89%8D%E7%AB%AF%E7%BC%96%E7%A0%81%E4%B9%A0%E6%83%AF/</url>
+    <content><![CDATA[<h1 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h1><p>文件夹采用大驼峰命名 例如 <code>HelloWorld</code></p>
+<p>组件名采用大驼峰命名 例如 <code>HelloWorld.tsx</code></p>
+<p>入口文件统一命名为 <code>index.ts</code>, 统一导出</p>
+<h1 id="Api-管理"><a href="#Api-管理" class="headerlink" title="Api 管理"></a>Api 管理</h1><h2 id="接口定义"><a href="#接口定义" class="headerlink" title="接口定义"></a>接口定义</h2><p>在 <code>api/index.ts</code> 中统一导出</p>
+<p>根据服务区分文件 <code>api/user.ts</code></p>
+<p>接口函数名采用小驼峰命名 例如 <code>getUserInfoApi</code></p>
+<p>函数入参命名</p>
+<p>params 使用 <code>IGetUserInfoApiParams</code></p>
+<p>data 使用 <code>IGetUserInfoApiData</code></p>
+<p>query 使用 <code>IGetUserInfoApiQuery</code></p>
+<p>返回值使用 <code>IGetUserInfoApiResult</code></p>
+<h2 id="Hooks"><a href="#Hooks" class="headerlink" title="Hooks"></a>Hooks</h2><p>请求钩子命名 use + 请求方式 + 接口路径 + Query, <code>useGetUserInfoQuery</code></p>
+<h3 id="Query"><a href="#Query" class="headerlink" title="Query"></a>Query</h3><figure class="highlight ts"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; useQuery &#125; <span class="keyword">from</span> <span class="string">&#x27;@tanstack/react-query&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; useMemo &#125; <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="keyword">type</span> &#123; $API_NAME_CASE$ApiParams &#125; <span class="keyword">from</span> <span class="string">&#x27;@/api&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; $API_NAME$Api &#125; <span class="keyword">from</span> <span class="string">&#x27;@/api&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; isSuccessApi &#125; <span class="keyword">from</span> <span class="string">&#x27;@/utils&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> use$API_NAME_CASE$QueryQueryKey = <span class="string">&#x27;use$API_NAME_CASE$Query&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">function</span> <span class="title function_">use$API_NAME_CASE$Query</span>(<span class="params"><span class="attr">options</span>?: &#123;</span></span><br><span class="line"><span class="params">  params?: $API_NAME_CASE$ApiParams;</span></span><br><span class="line"><span class="params">  options?: &#123;</span></span><br><span class="line"><span class="params">    enabled?: <span class="built_in">boolean</span>;</span></span><br><span class="line"><span class="params">  &#125;;</span></span><br><span class="line"><span class="params">&#125;</span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> &#123; <span class="attr">data</span>: response, ...rest &#125; = <span class="title function_">useQuery</span>(&#123;</span><br><span class="line">    <span class="attr">queryFn</span>: <span class="function">(<span class="params">&#123; queryKey &#125;</span>) =&gt;</span> $API_NAME$Api(queryKey[<span class="number">1</span>]),</span><br><span class="line">    <span class="attr">queryKey</span>: [use$API_NAME_CASE$QueryQueryKey, options?.<span class="property">params</span>] <span class="keyword">as</span> <span class="keyword">const</span>,</span><br><span class="line">    ...options?.<span class="property">options</span>,</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> data = <span class="title function_">useMemo</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (!<span class="title function_">isSuccessApi</span>(response)) <span class="keyword">return</span>;</span><br><span class="line">    <span class="keyword">return</span> response.<span class="property">data</span>;</span><br><span class="line">  &#125;, [response]);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    response,</span><br><span class="line">    data,</span><br><span class="line">    ...rest,</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Mutation"><a href="#Mutation" class="headerlink" title="Mutation"></a>Mutation</h3><figure class="highlight ts"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; useMutation &#125; <span class="keyword">from</span> <span class="string">&#x27;@tanstack/react-query&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; $API_NAME$Api &#125; <span class="keyword">from</span> <span class="string">&#x27;@/api&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; queryClient &#125; <span class="keyword">from</span> <span class="string">&#x27;@/main&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; useGet$GET_API_NAME$QueryQueryKey &#125; <span class="keyword">from</span> <span class="string">&#x27;@/hooks/useGet$GET_API_NAME_CASE$Query&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> <span class="title function_">use$API_NAME_CASE$Mutation</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> &#123; mutateAsync, ...rest &#125; = <span class="title function_">useMutation</span>(&#123;</span><br><span class="line">    <span class="attr">mutationFn</span>: $API_NAME$Api,</span><br><span class="line">    <span class="attr">onSuccess</span>: <span class="function">() =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">void</span> queryClient.<span class="title function_">invalidateQueries</span>(&#123;</span><br><span class="line">        <span class="attr">queryKey</span>: [useGet$GET_API_NAME_CASE$QueryQueryKey],</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> [</span><br><span class="line">    mutateAsync,</span><br><span class="line">    &#123;</span><br><span class="line">      ...rest,</span><br><span class="line">    &#125;,</span><br><span class="line">  ] <span class="keyword">as</span> <span class="keyword">const</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>…待补充</p>
+]]></content>
+      <categories>
+        <category>博客</category>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+        <tag>规范</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>postgres 中断数据库的所有链接, 并重命名数据库</title>
+    <url>/2024/11/16/postgres%E4%B8%AD%E6%96%AD%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E6%89%80%E6%9C%89%E9%93%BE%E6%8E%A5,%20%E5%B9%B6%E9%87%8D%E5%91%BD%E5%90%8D%E6%95%B0%E6%8D%AE%E5%BA%93/</url>
+    <content><![CDATA[<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># docker 直接管理员进入</span></span><br><span class="line">psql -U postgres</span><br><span class="line"><span class="comment"># 查看连接数</span></span><br><span class="line">SELECT COUNT(*) AS connection_count</span><br><span class="line">FROM pg_stat_activity</span><br><span class="line">WHERE datname = <span class="string">&#x27;数据库名字&#x27;</span>;</span><br><span class="line"><span class="comment"># 删除所有连接</span></span><br><span class="line">SELECT pg_terminate_backend(pg_stat_activity.pid)</span><br><span class="line">FROM pg_stat_activity</span><br><span class="line">WHERE datname = <span class="string">&#x27;数据库名字&#x27;</span></span><br><span class="line">  AND pid &lt;&gt; pg_backend_pid();</span><br><span class="line"><span class="comment"># 重命名</span></span><br><span class="line">ALTER DATABASE <span class="string">&quot;原本名字&quot;</span> rename TO <span class="string">&quot;新名字&quot;</span>;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>博客</category>
+        <category>后端</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
+        <tag>后端</tag>
+        <tag>postgres</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>快速了解HTML语言</title>
+    <url>/2020/02/08/%E5%BF%AB%E9%80%9F%E4%BA%86%E8%A7%A3HTML%E8%AF%AD%E8%A8%80/</url>
+    <content><![CDATA[<h1 id="一、本文章食用须知"><a href="#一、本文章食用须知" class="headerlink" title="一、本文章食用须知"></a>一、本文章食用须知</h1><p>软件准备：IDE代码编辑器，如：VScode、Sublime Text等</p>
+<p>VScode <a href="https://code.visualstudio.com/">链接</a></p>
+<p>Sublime Text <a href="https://www.sublimetext.com/">链接</a></p>
+<p>本文章适用于没学过HTML语言的，或者刚接触不久想更加了解的人群。</p>
+<h1 id="二、HTML的发明者"><a href="#二、HTML的发明者" class="headerlink" title="二、HTML的发明者"></a>二、HTML的发明者</h1><p>Tim Berners-Lee（提姆·柏內茲-李）1955年6月8日-至今。</p>
+<p>详情请看维基百科 <a href="https://zh.wikipedia.org/wiki/%E8%92%82%E5%A7%86%C2%B7%E4%BC%AF%E7%BA%B3%E6%96%AF-%E6%9D%8E">链接</a></p>
+<p>李爵士做了些什么事情：</p>
+<ol>
+<li>编写了第一个浏览器</li>
+<li>编写了第一个服务器</li>
+<li>使用自己编写的浏览器访问自己编写的服务器</li>
+<li>发明了WWW，以及HTML、HTTP、URL</li>
+</ol>
+<p>做这些事情为了什么：让每个人输入网址就能看到网页</p>
+<h1 id="三、HTML起手代码"><a href="#三、HTML起手代码" class="headerlink" title="三、HTML起手代码"></a>三、HTML起手代码</h1><p>如果你安装的是VScode，只需要在VScode里面创建html后缀名的文件，输入 ! 然后按TAB键即可自动生成下列内容：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span>    <span class="comment">&lt;!-- 声明是html5文本类型 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span>    <span class="comment">&lt;!-- 使用的语言：en是英语 zh-CN是中文 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span>    <span class="comment">&lt;!-- 头部标签开始 --&gt;</span> </span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span> /&gt;</span>    <span class="comment">&lt;!-- 编码格式 --&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span> /&gt;</span><span class="comment">&lt;!-- 防止缩放 --&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;X-UA-Compatible&quot;</span> <span class="attr">content</span>=<span class="string">&quot;ie=edge&quot;</span> /&gt;</span><span class="comment">&lt;!-- 检查是否IE浏览器，自动调至最新 --&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span>    <span class="comment">&lt;!-- 网站的标题 --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span>    <span class="comment">&lt;!-- 头部标签结束 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span>    <span class="comment">&lt;!-- body标签开始，页面的代码基本上都写在里面--&gt;</span></span><br><span class="line">	内容</span><br><span class="line">	...</span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>如果你是别的编辑器，或者没有这个插件，请手动输入上面内容。</p>
+<h1 id="四、常用的章节标签"><a href="#四、常用的章节标签" class="headerlink" title="四、常用的章节标签"></a>四、常用的章节标签</h1><h3 id="1、标题标签"><a href="#1、标题标签" class="headerlink" title="1、标题标签"></a>1、标题标签</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span><span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h2</span>&gt;</span><span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h3</span>&gt;</span><span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h4</span>&gt;</span><span class="tag">&lt;/<span class="name">h4</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h5</span>&gt;</span><span class="tag">&lt;/<span class="name">h5</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h6</span>&gt;</span><span class="tag">&lt;/<span class="name">h6</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2、章节标签"><a href="#2、章节标签" class="headerlink" title="2、章节标签"></a>2、章节标签</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">section</span>&gt;</span><span class="tag">&lt;/<span class="name">section</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="3、文章标签"><a href="#3、文章标签" class="headerlink" title="3、文章标签"></a>3、文章标签</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">article</span>&gt;</span><span class="tag">&lt;/<span class="name">article</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="4、段落标签"><a href="#4、段落标签" class="headerlink" title="4、段落标签"></a>4、段落标签</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="5、头部标签"><a href="#5、头部标签" class="headerlink" title="5、头部标签"></a>5、头部标签</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">header</span>&gt;</span><span class="tag">&lt;/<span class="name">header</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="6、脚部标签"><a href="#6、脚部标签" class="headerlink" title="6、脚部标签"></a>6、脚部标签</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">footer</span>&gt;</span><span class="tag">&lt;/<span class="name">footer</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="7、主要内容标签"><a href="#7、主要内容标签" class="headerlink" title="7、主要内容标签"></a>7、主要内容标签</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">main</span>&gt;</span><span class="tag">&lt;/<span class="name">main</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="8、旁支标签"><a href="#8、旁支标签" class="headerlink" title="8、旁支标签"></a>8、旁支标签</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">aside</span>&gt;</span><span class="tag">&lt;/<span class="name">aside</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>以上都是一些比较常用的章节标签。</p>
+<h1 id="五、全局属性"><a href="#五、全局属性" class="headerlink" title="五、全局属性"></a>五、全局属性</h1><p>class、contenteditable、hidden、id、style、tabindex、title等。</p>
+<h1 id="六、常用的内容标签"><a href="#六、常用的内容标签" class="headerlink" title="六、常用的内容标签"></a>六、常用的内容标签</h1><h3 id="1、有序标签"><a href="#1、有序标签" class="headerlink" title="1、有序标签"></a>1、有序标签</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ol</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  ...</span><br><span class="line"><span class="tag">&lt;/<span class="name">ol</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="2、无序标签"><a href="#2、无序标签" class="headerlink" title="2、无序标签"></a>2、无序标签</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    ...</span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id=""><a href="#" class="headerlink" title=""></a></h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dl</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dt</span>&gt;</span><span class="tag">&lt;/<span class="name">dt</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dd</span>&gt;</span><span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dd</span>&gt;</span><span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dt</span>&gt;</span><span class="tag">&lt;/<span class="name">dt</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dd</span>&gt;</span><span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dd</span>&gt;</span><span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line">    ...</span><br><span class="line"><span class="tag">&lt;/<span class="name">dl</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="4、链接标签"><a href="#4、链接标签" class="headerlink" title="4、链接标签"></a>4、链接标签</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="5、代码标注标签"><a href="#5、代码标注标签" class="headerlink" title="5、代码标注标签"></a>5、代码标注标签</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">code</span>&gt;</span><span class="tag">&lt;/<span class="name">code</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+<h3 id="6、脚部标签-1"><a href="#6、脚部标签-1" class="headerlink" title="6、脚部标签"></a>6、脚部标签</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">footer</span>&gt;</span><span class="tag">&lt;/<span class="name">footer</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="7、水平分割线标签"><a href="#7、水平分割线标签" class="headerlink" title="7、水平分割线标签"></a>7、水平分割线标签</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">hr</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+<h3 id="8、换行标签"><a href="#8、换行标签" class="headerlink" title="8、换行标签"></a>8、换行标签</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>以上都是一些比较常用的内容标签。</p>
+]]></content>
+      <categories>
+        <category>博客</category>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+        <tag>html</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>快速了解什么是MVC</title>
+    <url>/2020/03/15/%E5%BF%AB%E9%80%9F%E4%BA%86%E8%A7%A3%E4%BB%80%E4%B9%88%E6%98%AFMVC/</url>
+    <content><![CDATA[<ul>
+<li>MVC设计模式</li>
+<li>简单认识EvenBus</li>
+<li>表驱动编程</li>
+<li>模块化</li>
+</ul>
+<h2 id="一、MVC设计模式"><a href="#一、MVC设计模式" class="headerlink" title="一、MVC设计模式"></a>一、MVC设计模式</h2><h3 id="1-为什么要有设计模式"><a href="#1-为什么要有设计模式" class="headerlink" title="1. 为什么要有设计模式"></a>1. 为什么要有设计模式</h3><p>代码重复太多，相同页面重复写等。MVC设计模式就是为了解决代码重复，优化代码结构。</p>
+<h3 id="2-学MVC会有什么情况"><a href="#2-学MVC会有什么情况" class="headerlink" title="2. 学MVC会有什么情况"></a>2. 学MVC会有什么情况</h3><ul>
+<li>会出现意大利面条式代码的情况，过于臃肿太长，代码重复率高，页面不整洁等。</li>
+<li>你会变成类似外包式程序员，每天重复干着重复的事情，不懂得提升自己，不会封装，不会造轮子。</li>
+</ul>
+<h3 id="3-什么是MVC"><a href="#3-什么是MVC" class="headerlink" title="3. 什么是MVC"></a>3. 什么是MVC</h3><p>将平时全部堆在一起的代码，进行分类管理，细分成一段段小代码。再将代码分种类，分别放入对应M模块、V模块、C模块。方面自己和他人阅读、开发。</p>
+<h4 id="M-——-Model（数据类型）负责操作所有数据"><a href="#M-——-Model（数据类型）负责操作所有数据" class="headerlink" title="M —— Model（数据类型）负责操作所有数据"></a>M —— Model（数据类型）负责操作所有数据</h4><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 数据相关放入m中</span></span><br><span class="line"><span class="keyword">const</span> m = &#123;</span><br><span class="line">    数据<span class="number">1</span>,</span><br><span class="line">  数据<span class="number">2</span>,</span><br><span class="line">  数据<span class="number">3</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="V-——-View（视图）负责所有UI页面"><a href="#V-——-View（视图）负责所有UI页面" class="headerlink" title="V —— View（视图）负责所有UI页面"></a>V —— View（视图）负责所有UI页面</h4><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 视图相关放入v中</span></span><br><span class="line"><span class="keyword">const</span> v = &#123;</span><br><span class="line">    html代码,</span><br><span class="line">    渲染等</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="C-——-Controller（控制器）负责其他"><a href="#C-——-Controller（控制器）负责其他" class="headerlink" title="C —— Controller（控制器）负责其他"></a>C —— Controller（控制器）负责其他</h4><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 其他全部放入c中</span></span><br><span class="line"><span class="keyword">const</span> c = &#123;</span><br><span class="line">    事件,</span><br><span class="line">  添加,</span><br><span class="line">  修改等</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="二、简单识EvenBus"><a href="#二、简单识EvenBus" class="headerlink" title="二、简单识EvenBus"></a>二、简单识EvenBus</h2><h3 id="什么是EvenBus"><a href="#什么是EvenBus" class="headerlink" title="- 什么是EvenBus"></a>- 什么是EvenBus</h3><p>EvenBus可以使用监听和触发事件，对所点实现通信。</p>
+<h3 id="监听和触发的两个API"><a href="#监听和触发的两个API" class="headerlink" title="- 监听和触发的两个API"></a>- 监听和触发的两个API</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 发送一个信息，用于给监听事件监听</span></span><br><span class="line">eventBus.<span class="title function_">trigger</span>(<span class="string">&#x27;我触发了&#x27;</span>)</span><br><span class="line"><span class="comment">// 监听一个信息，若监听到了则执行</span></span><br><span class="line">eventBus.<span class="title function_">on</span>(<span class="string">&#x27;我触发了&#x27;</span>, 执行语句)</span><br></pre></td></tr></table></figure>
+
+<h3 id="EvenBus伪代码事例"><a href="#EvenBus伪代码事例" class="headerlink" title="- EvenBus伪代码事例"></a>- EvenBus伪代码事例</h3><p>声明eventBus</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> eventBus = $(<span class="variable language_">window</span>)</span><br></pre></td></tr></table></figure>
+
+<p>创建监听和触发事件</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">组件<span class="number">1</span> &#123;</span><br><span class="line">    ···</span><br><span class="line">  eventBus.<span class="title function_">trigger</span>(<span class="string">&#x27;hereTrigger&#x27;</span>)</span><br><span class="line">  ···</span><br><span class="line">&#125;</span><br><span class="line">组件<span class="number">2</span> &#123;</span><br><span class="line">    ···</span><br><span class="line">  eventBus.<span class="title function_">on</span>(<span class="string">&#x27;hereTrigger&#x27;</span>，()=&gt;&#123;</span><br><span class="line">    consolo.<span class="title function_">log</span>(<span class="string">&#x27;Receive message&#x27;</span>)</span><br><span class="line">  &#125;)</span><br><span class="line">  ···</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>eventBus.trigger执行后，会把hereTrigger发送出去。</p>
+<p>如果evenBus.on收到了信息与hereTrigger一致，那么就会执行consolo.log。</p>
+<p>如果eventBus.trigger没有执行，那么eventBus.on将不会执行。</p>
+<h2 id="三、表驱动编程"><a href="#三、表驱动编程" class="headerlink" title="三、表驱动编程"></a>三、表驱动编程</h2><h3 id="定义"><a href="#定义" class="headerlink" title="- 定义"></a>- 定义</h3><p>表驱动编程，又称之为表驱动、表驱动方法。 “表”是几乎所有数据结构课本都要讨论的非常有用的数据结构。表驱动方法出于特定的目的来使用表，程序员们经常谈到“表驱动”方法，但是课本中却从未提到过什么是”表驱动”方法。表驱动方法是一种使你可以在表中查找信息，而不必用很多的逻辑语句（if或Case）来把它们找出来的方法。事实上，任何信息都可以通过表来挑选。在简单的情况下，逻辑语句往往更简单而且更直接。但随着逻辑链的复杂，表就变得越来越富有吸引力了。</p>
+<p>简单来说，将数据统计放在一个位置，需要获取里面数据的时候，像表一样，一一对应。</p>
+<h3 id="简单的例子"><a href="#简单的例子" class="headerlink" title="- 简单的例子"></a>- 简单的例子</h3><p>拿最常见的if语句来举例</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>(key = <span class="string">&#x27;A&#x27;</span>)&#123;</span><br><span class="line">    执行语句a </span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(key = <span class="string">&#x27;B&#x27;</span>)&#123;</span><br><span class="line">    执行语句b</span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>...</span><br></pre></td></tr></table></figure>
+
+<p>改为表驱动编程来实现</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> table = &#123;</span><br><span class="line">    <span class="attr">a</span>: &#123;</span><br><span class="line">    <span class="title function_">action</span> () &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;执行语句a&quot;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">    <span class="attr">b</span>: &#123;</span><br><span class="line">    <span class="title function_">action</span> () &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;执行语句b&quot;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">handleTable</span>(<span class="params">key</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> table[key]</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">handleTable</span>(<span class="string">&#x27;a&#x27;</span>).<span class="title function_">action</span>()</span><br></pre></td></tr></table></figure>
+
+<h2 id="四、模块化"><a href="#四、模块化" class="headerlink" title="四、模块化"></a>四、模块化</h2><p>所谓模块化，就是一种将复杂代码分解为更好的可管理模块的方式。MVC设计模式就是一种模块化的体现，将代码分门别类的进行管理。</p>
+<h3 id="各自独立"><a href="#各自独立" class="headerlink" title="- 各自独立"></a>- 各自独立</h3><p>在平时写代码的时候，可以将不同功能的代码，单独一个文件来写，然后通过导包导入到主程序中，那么当其中一个出现故障的时候，并不会影响到其他的代码。</p>
+<h3 id="分级启动"><a href="#分级启动" class="headerlink" title="- 分级启动"></a>- 分级启动</h3><p>当加载的时候，可以分开加载。如果加载较慢的时候，可以优先加载重要的模块。</p>
+]]></content>
+      <categories>
+        <category>博客</category>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>简单配置VScode及常用快捷键</title>
+    <url>/2020/02/12/%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AEVScode%E5%8F%8A%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</url>
+    <content><![CDATA[<h1 id="下载VScode"><a href="#下载VScode" class="headerlink" title="下载VScode"></a>下载VScode</h1><p>官网链接：<a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a></p>
+<h1 id="安装VScode"><a href="#安装VScode" class="headerlink" title="安装VScode"></a>安装VScode</h1><p>无脑下一部就好了<br>中有个步骤需要选择，如果看的懂就自己选，如果看不懂，就全选</p>
+<h1 id="配置VScode"><a href="#配置VScode" class="headerlink" title="配置VScode"></a>配置VScode</h1><p>一、汉化<br>使用快捷键 <code>Ctrl + Shift + X</code> 打开拓展菜单，搜索框输入 Chinese，找到自己需要的语言点击Install安装，安装完重启即可<br><img src="http://obsidian.easyhappy.top/avan/202506291707770.png" alt="image.png"></p>
+<p>二、配置</p>
+<ol>
+<li><p>调整字体<br>文件——首选项——设置，搜索设置输入“字体”<br>在 <code>Font Size</code> 属性修改字体大小<br><img src="http://obsidian.easyhappy.top/avan/202506291707328.png" alt="image.png"></p>
+</li>
+<li><p>自动保存<br>搜索设置输入“auto save”<br>将 <code>Auto Save</code> 属性的值修改为 <code>onFocusChange</code><br><img src="http://obsidian.easyhappy.top/avan/202506291708891.png" alt="image.png"></p>
+</li>
+</ol>
+<p>3.自动格式化（适合新手，会格式化他人的代码，慎用）<br>搜索设置输入“format on save”<br>勾选 <code>Format On Save</code> 属性的选项<br><img src="http://obsidian.easyhappy.top/avan/202506291708460.png" alt="image.png"></p>
+<h1 id="可选项"><a href="#可选项" class="headerlink" title="可选项"></a>可选项</h1><h2 id="设置fira-code字体和设置字体连字"><a href="#设置fira-code字体和设置字体连字" class="headerlink" title="设置fira code字体和设置字体连字"></a>设置fira code字体和设置字体连字</h2><ol>
+<li>下载字体安装包 <a href="https://github-production-release-asset-2e65be.s3.amazonaws.com/26500787/88777d80-a7f1-11e9-95ae-146629eb2946?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A/20200210/us-east-1/s3/aws4_request&X-Amz-Date=20200210T070105Z&X-Amz-Expires=300&X-Amz-Signature=a6c29f774fc63b8dd76f2e2ab74fa657fe1f160da08d25b6daecc3b98876ec2f&X-Amz-SignedHeaders=host&actor_id=60692794&response-content-disposition=attachment;%20filename=FiraCode_1.207.zip&response-content-type=application/octet-stream">字体github链接</a></li>
+<li>解压到电脑，进入 otf 文件夹，<code>Ctrl + A</code>全选，右击安装</li>
+</ol>
+<p><img src="http://obsidian.easyhappy.top/avan/202506291708422.png" alt="image.png"></p>
+<ol start="3">
+<li>进入首选项，搜索设置输入“字体”<br>在属性前面输入 “fira font, ” 注意有个逗号，或者直接复制我的</li>
+</ol>
+<p><code>Fira Code,Consolas, &#39;Courier New&#39;, monospace</code><br>    点击 <code>Font Ligatures</code> 属性下的编辑，进入json文件，在中键位置复制粘贴这行指令</p>
+<p><code>&quot;editor.fontLigatures&quot;: true,</code> 然后 <code>Ctrl + S</code> 保存退出<br><img src="http://obsidian.easyhappy.top/avan/202506291710637.png" alt="image.png"></p>
+<p><img src="http://obsidian.easyhappy.top/avan/202506291711331.png" alt="image.png"></p>
+<h1 id="VScode插件"><a href="#VScode插件" class="headerlink" title="VScode插件"></a>VScode插件</h1><ol>
+<li><p>Code Spell Checker（检查有没有拼错单词）<br>使用快捷键 <code>Ctrl + Shift + X</code> 打开拓展菜单，搜索框输入 “Code Spell Checker”，点击 Install 安装即可<br><img src="http://obsidian.easyhappy.top/avan/202506291711762.png" alt="image.png"></p>
+</li>
+<li><p>Git Easy（方便git操作）<br>使用快捷键 <code>Ctrl + Shift + X</code> 打开拓展菜单，搜索框输入 “Git Easy”，点击 Install 安装即可</p>
+</li>
+</ol>
+<h1 id="Vscode简单的快捷键"><a href="#Vscode简单的快捷键" class="headerlink" title="Vscode简单的快捷键"></a>Vscode简单的快捷键</h1><p><code>Ctrl + P</code>  找文件</p>
+<p><code>Ctrl + Shift + P</code>  输入命令</p>
+<p><code>Alt + 鼠标单击</code>  多位置输入</p>
+]]></content>
+      <categories>
+        <category>博客</category>
+        <category>vscode</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
+        <tag>vscode</tag>
+      </tags>
+  </entry>
+</search>
