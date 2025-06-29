@@ -22,7 +22,7 @@ Cmder的GitHub下载链接 [点击这里](https://github-production-release-asse
 
 
 直接解压到文件夹下，打开目录下的 Cmder.exe 即可运行  
-![image.png](http://obsidian.easyhappy.top/avan/202506291713700.png)
+![image.png](https://qinius.easyhappy.top/avan/202506291713700.png)
 
 
 
@@ -31,19 +31,19 @@ Cmder的GitHub下载链接 [点击这里](https://github-production-release-asse
 
 
 1. 在右下角 鼠标右键 打开设置  
-![image.png](http://obsidian.easyhappy.top/avan/202506291713456.png)
+![image.png](https://qinius.easyhappy.top/avan/202506291713456.png)
 
 2. 设置语言为中文  
-![image.png](http://obsidian.easyhappy.top/avan/202506291714820.png)
+![image.png](https://qinius.easyhappy.top/avan/202506291714820.png)
 
 3. 把这三个打上勾  
-![image.png](http://obsidian.easyhappy.top/avan/202506291714823.png)
+![image.png](https://qinius.easyhappy.top/avan/202506291714823.png)
 
 4. 在设置左边点击 大小&位置 ，按下方图片的数据来设置（可以自己设置）  
-![image.png](http://obsidian.easyhappy.top/avan/202506291714801.png)
+![image.png](https://qinius.easyhappy.top/avan/202506291714801.png)
 
 5. 单击保存设置  
-![image.png](http://obsidian.easyhappy.top/avan/202506291714047.png)
+![image.png](https://qinius.easyhappy.top/avan/202506291714047.png)
 
 
 
@@ -53,13 +53,13 @@ PS：如果发现下次打开设置页面，又恢复成中文则进行一下操
 
 
 1. 再次打开设置，点击导出，右键 ConEmu.xml 文件点击编辑  
-![image.png](http://obsidian.easyhappy.top/avan/202506291715652.png)
+![image.png](https://qinius.easyhappy.top/avan/202506291715652.png)
 
 2. 在新打开的记事本中，按 `Ctrl + F` 搜素关键字 “Language”  
-![image.png](http://obsidian.easyhappy.top/avan/202506291715179.png)
+![image.png](https://qinius.easyhappy.top/avan/202506291715179.png)
 
 3. 将后面的 en 改为 zh 然后按 `Ctrl + S` 保存退出即可。  
-![image.png](http://obsidian.easyhappy.top/avan/202506291715659.png)
+![image.png](https://qinius.easyhappy.top/avan/202506291715659.png)
 
 
 
@@ -68,7 +68,7 @@ PS：如果发现下次打开设置页面，又恢复成中文则进行一下操
 
 
 在设置页面，单击右边的 Quake 风格 然后勾选下方图片的三个选项，保存设置  
-![image.png](http://obsidian.easyhappy.top/avan/202506291715076.png)
+![image.png](https://qinius.easyhappy.top/avan/202506291715076.png)
 
 
 
@@ -77,7 +77,7 @@ PS：如果发现下次打开设置页面，又恢复成中文则进行一下操
 
 
 在设置页面，单击右边的 通用 然后按下方图片位置，自定义快捷键，我是 `Alt + 1`  
-![image.png](http://obsidian.easyhappy.top/avan/202506291715566.png)
+![image.png](https://qinius.easyhappy.top/avan/202506291715566.png)
 
 
 
@@ -86,7 +86,7 @@ PS：如果发现下次打开设置页面，又恢复成中文则进行一下操
 
 
 在设置页面，单击右边的 启动 然后按下方图片位置进行设置  
-![image.png](http://obsidian.easyhappy.top/avan/202506291716676.png)
+![image.png](https://qinius.easyhappy.top/avan/202506291716676.png)
 
 
 
@@ -95,7 +95,7 @@ PS：如果发现下次打开设置页面，又恢复成中文则进行一下操
 
 
 在设置页面，单击右边的 按键&宏 即可自定义快捷键  
-![image.png](http://obsidian.easyhappy.top/avan/202506291716515.png)
+![image.png](https://qinius.easyhappy.top/avan/202506291716515.png)
 
 
 
@@ -104,7 +104,7 @@ PS：如果发现下次打开设置页面，又恢复成中文则进行一下操
 
 
 在设计页面。单击右边的 启动，单击 任务 ，然后进行下面图片的设置即可  
-![image.png](http://obsidian.easyhappy.top/avan/202506291716056.png)
+![image.png](https://qinius.easyhappy.top/avan/202506291716056.png)
 
 
 
@@ -113,23 +113,23 @@ PS：如果发现下次打开设置页面，又恢复成中文则进行一下操
 
 
 1. 将Cmder根目录路径，复制到系统 环境变量 中。  
-![image.png](http://obsidian.easyhappy.top/avan/202506291716190.png)
+![image.png](https://qinius.easyhappy.top/avan/202506291716190.png)
 
 
 
 
-![image.png](http://obsidian.easyhappy.top/avan/202506291717488.png)
+![image.png](https://qinius.easyhappy.top/avan/202506291717488.png)
 
 
 
 
 2. 打开 运行 窗口 `Ctrl + R` 输入“cmd”回车  
-![image.png](http://obsidian.easyhappy.top/avan/202506291717490.png)
+![image.png](https://qinius.easyhappy.top/avan/202506291717490.png)
 
 
 
 
 然后在新弹出来的窗口中输入 `cmder /register all` 后回车即可  
-![image.png](http://obsidian.easyhappy.top/avan/202506291717221.png)
+![image.png](https://qinius.easyhappy.top/avan/202506291717221.png)
 
 

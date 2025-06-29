@@ -24,7 +24,7 @@ categories:
 
 
 打开VScode，使用快捷键 `Ctrl + Shift + P` 输入“settings json”点击“首选项：打开设置（json）”，注意这里是没有“默认”两个字。  
-![image.png](http://obsidian.easyhappy.top/avan/202506291721368.png)
+![image.png](https://qinius.easyhappy.top/avan/202506291721368.png)
 
 随便找一行（只要不是最后一行）的逗号后面回车，输入下面代码（[原贴](https://github.com/cmderdev/cmder/wiki/Seamless-VS-Code-Integration#use-cmder-embedded-git-in-vscode)）
 
@@ -50,13 +50,13 @@ categories:
 
 
 
-![image.png](http://obsidian.easyhappy.top/avan/202506291722740.png)
+![image.png](https://qinius.easyhappy.top/avan/202506291722740.png)
 
 
 
 
 然后 `Ctrl + S` 保存退出，关闭终端重新打开，即可  
-![image.png](http://obsidian.easyhappy.top/avan/202506291723112.png)
+![image.png](https://qinius.easyhappy.top/avan/202506291723112.png)
 
 
 

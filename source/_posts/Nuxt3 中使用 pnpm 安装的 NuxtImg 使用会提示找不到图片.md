@@ -9,7 +9,7 @@ categories:
   - 前端
 ---
 
-![image.png](http://obsidian.easyhappy.top/avan/202506111712538.png)
+![image.png](https://qinius.easyhappy.top/avan/202506111712538.png)
 
 
 ## **背景**
