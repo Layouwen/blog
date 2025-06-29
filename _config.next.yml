@@ -98,10 +98,10 @@ open_graph:
 # External url should start with http:// or https://
 menu:
   home: / || fa fa-home
-  about: /about/ || fa fa-user
+  archives: /archives/ || fa fa-archive
   tags: /tags/ || fa fa-tags
   categories: /categories/ || fa fa-th
-  archives: /archives/ || fa fa-archive
+  about: /about/ || fa fa-user
   # schedule: /schedule/ || fa fa-calendar
   # sitemap: /sitemap.xml || fa fa-sitemap
   # commonweal: /404/ || fa fa-heartbeat
@@ -217,7 +217,7 @@ language_switcher: true
 
 footer:
   # Specify the year when the site was setup. If not defined, current year will be used.
-  since: 2021
+  since: 2020
 
   # Icon between year and copyright info.
   icon:
@@ -275,7 +275,7 @@ symbols_count_time:
   item_text_total: false
 
 # Use icon instead of the symbol # to indicate the tag at the bottom of the post
-tag_icon: false
+tag_icon: true
 
 # Donate (Sponsor) settings
 # Front-matter variable (nonsupport animation).
@@ -881,7 +881,7 @@ algolia_search:
 # Local Search
 # Dependencies: https://github.com/next-theme/hexo-generator-searchdb
 local_search:
-  enable: false
+  enable: true
   # Show top n results per article, show all results by setting to -1
   top_n_per_article: 1
   # Unescape html strings to the readable one.
@@ -944,3 +944,8 @@ vendors:
 css: css
 js: js
 images: images
+
+# TODO: 没用
+# auto_excerpt:
+#   enable: true
+#   length: 30
