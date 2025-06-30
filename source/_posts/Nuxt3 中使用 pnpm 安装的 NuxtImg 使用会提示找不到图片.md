@@ -1,21 +1,21 @@
 ---
 title: Nuxt3 中使用 pnpm 安装的 NuxtImg 使用会提示找不到图片
-date: 2025-06-29 17:18:54
+date: 2025-06-11 17:18:54
 tags:
+  - 博客
   - nuxt
   - 前端
 categories:
   - 博客
   - 前端
+  - nuxt
 ---
 
 ![image.png](https://qinius.easyhappy.top/avan/202506111712538.png)
 
-
 ## **背景**
 
 在一个全新的 Nuxt 3 项目中，我打算像往常一样直接写：
-
 
 ```vue
 <template>

@@ -1,6 +1,6 @@
 ---
 title: nestjs websocket 配置
-date: 2024-11-16 17:18:54
+date: 2023-09-16 17:18:54
 tags:
   - nestjs
   - 后端
