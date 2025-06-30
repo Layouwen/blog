@@ -1,6 +1,6 @@
 ---
 title: timestamp 转 timestamptz 问题
-date: 2023-09-12 21:13:54
+date: 2024-09-12 21:13:54
 tags:
   - 后端
   - postgres

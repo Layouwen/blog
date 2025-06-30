@@ -1,6 +1,6 @@
 ---
 title: Obsidian 配置
-date: 2025-06-30 17:18:54
+date: 2024-06-30 17:18:54
 tags:
   - 汇总
   - obsidian

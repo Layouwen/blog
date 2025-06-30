@@ -1,5 +1,6 @@
 ---
-title: 搭建npm私服
+title: 搭建 npm 私服
+date: 2024-06-30 17:18:54
 tags:
   - 汇总
   - npm

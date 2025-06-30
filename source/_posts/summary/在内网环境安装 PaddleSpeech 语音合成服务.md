@@ -1,5 +1,6 @@
 ---
-title: 在内网环境安装 PaddleSpeech 实现语音合成服务
+title: 在内网环境安装 PaddleSpeech 语音合成服务
+date: 2024-06-30 17:18:54
 tags:
   - 汇总
   - paddle-speech
