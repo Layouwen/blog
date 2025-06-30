@@ -1,0 +1,2047 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico">
+  <link rel="mask-icon" href="/images/favicon.ico" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha256-dABdfBfUoC8vJUBOwGVdm8L9qlMWaHTIfXt+7GnZCIo=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"4van.top","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.23.1","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="Node默认包   包名 描述    util 有 promisify 等工具   fs 文件读写库，可以.promises 获取 promise 版本   child_process 创建子进程   readline 检测命令行回车事件   events 订阅发布库   prettier 代码格式化工具   prettier-plugin-tailwindcss Tailwindcss 的 pr">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="npm包">
+<meta property="og:url" content="https://4van.top/2025/06/30/summary/npm%E5%8C%85/index.html">
+<meta property="og:site_name" content="Avan&#39;s Blog">
+<meta property="og:description" content="Node默认包   包名 描述    util 有 promisify 等工具   fs 文件读写库，可以.promises 获取 promise 版本   child_process 创建子进程   readline 检测命令行回车事件   events 订阅发布库   prettier 代码格式化工具   prettier-plugin-tailwindcss Tailwindcss 的 pr">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-06-30T09:22:53.216Z">
+<meta property="article:modified_time" content="2025-06-30T09:24:40.627Z">
+<meta property="article:author" content="梁又文">
+<meta property="article:tag" content="npm">
+<meta property="article:tag" content="汇总">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://4van.top/2025/06/30/summary/npm%E5%8C%85/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://4van.top/2025/06/30/summary/npm%E5%8C%85/","path":"2025/06/30/summary/npm包/","title":"npm包"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>npm包 | Avan's Blog</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script><script src="/js/bookmark.js" defer></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous" defer></script>
+<script src="/js/third-party/search/local-search.js" defer></script>
+
+
+
+
+
+
+  <script src="/js/third-party/addtoany.js" defer></script>
+
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Avan's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Avan 的博客</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">119</span></a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">95</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">28</span></a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Node%E9%BB%98%E8%AE%A4%E5%8C%85"><span class="nav-number">1.</span> <span class="nav-text">Node默认包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%9F%E8%83%BD%E7%B1%BB"><span class="nav-number">2.</span> <span class="nav-text">功能类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7"><span class="nav-number">3.</span> <span class="nav-text">命令行工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%A8%E7%AB%AF%E9%80%9A%E7%94%A8%E5%B7%A5%E5%85%B7"><span class="nav-number">4.</span> <span class="nav-text">全端通用工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E5%B7%A5%E5%85%B7"><span class="nav-number">5.</span> <span class="nav-text">浏览器工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Node%E7%AB%AF%E5%B7%A5%E5%85%B7"><span class="nav-number">6.</span> <span class="nav-text">Node端工具</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83%E7%9B%B8%E5%85%B3"><span class="nav-number">6.1.</span> <span class="nav-text">代码规范相关</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%8D%E5%8A%A1%E7%AB%AF%E7%9B%B8%E5%85%B3"><span class="nav-number">6.2.</span> <span class="nav-text">服务端相关</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Koa"><span class="nav-number">6.2.1.</span> <span class="nav-text">Koa</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#babel%E7%9B%B8%E5%85%B3"><span class="nav-number">6.3.</span> <span class="nav-text">babel相关</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Webpack%E7%9B%B8%E5%85%B3"><span class="nav-number">6.4.</span> <span class="nav-text">Webpack相关</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B7%A5%E5%85%B7"><span class="nav-number">6.4.1.</span> <span class="nav-text">工具</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#loader"><span class="nav-number">6.4.2.</span> <span class="nav-text">loader</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#plugin"><span class="nav-number">6.4.3.</span> <span class="nav-text">plugin</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#React-%E7%B1%BB"><span class="nav-number">7.</span> <span class="nav-text">React 类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8D%E5%86%8D%E6%8E%A8%E8%8D%90"><span class="nav-number">7.1.</span> <span class="nav-text">不再推荐</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B7%A5%E5%85%B7-1"><span class="nav-number">7.2.</span> <span class="nav-text">工具</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ReactNative"><span class="nav-number">8.</span> <span class="nav-text">ReactNative</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Next-js-%E7%B1%BB"><span class="nav-number">9.</span> <span class="nav-text">Next.js 类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Next-js-%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5%E6%A1%86%E6%9E%B6"><span class="nav-number">9.1.</span> <span class="nav-text">Next.js 最佳实践框架</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#UI-%E5%BA%93"><span class="nav-number">10.</span> <span class="nav-text">UI 库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vue-%E7%B1%BB"><span class="nav-number">11.</span> <span class="nav-text">Vue 类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B7%A5%E5%85%B7-2"><span class="nav-number">11.1.</span> <span class="nav-text">工具</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83%E7%B1%BB"><span class="nav-number">12.</span> <span class="nav-text">环境类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9E%84%E5%BB%BA%E4%BC%98%E5%8C%96"><span class="nav-number">13.</span> <span class="nav-text">构建优化</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Mock-%E6%9C%8D%E5%8A%A1"><span class="nav-number"></span> <span class="nav-text">Mock 服务</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B5%8B%E8%AF%95"><span class="nav-number"></span> <span class="nav-text">测试</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E5%BA%93"><span class="nav-number">1.</span> <span class="nav-text">基础库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#E2E"><span class="nav-number">2.</span> <span class="nav-text">E2E</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%8E%E7%AB%AF"><span class="nav-number">3.</span> <span class="nav-text">后端</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B0%8F%E7%A8%8B%E5%BA%8F"><span class="nav-number"></span> <span class="nav-text">小程序</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%A8%E6%A0%88%E6%A1%86%E6%9E%B6"><span class="nav-number"></span> <span class="nav-text">全栈框架</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%87%E6%A1%A3%E6%9E%84%E5%BB%BA"><span class="nav-number"></span> <span class="nav-text">文档构建</span></a></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="梁又文"
+      src="/images/logo.png">
+  <p class="site-author-name" itemprop="name">梁又文</p>
+  <div class="site-description" itemprop="description">记录自己的一些日记 & 技术文章 & 学习笔记等</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">119</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">28</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">95</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/layouwen" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;layouwen" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:layouwen@gmail.com" title="E-Mail → mailto:layouwen@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://x.com/coderavan" title="Twitter → https:&#x2F;&#x2F;x.com&#x2F;coderavan" rel="noopener me" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://t.me/coderavan" title="Telegram → https:&#x2F;&#x2F;t.me&#x2F;coderavan" rel="noopener me" target="_blank"><i class="fab fa-telegram fa-fw"></i>Telegram</a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/big/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+          链接
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <a href="https://github.com/whale-wave" title="https:&#x2F;&#x2F;github.com&#x2F;whale-wave" rel="noopener" target="_blank">Whale Wave</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://4van.top/2025/06/30/summary/npm%E5%8C%85/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/logo.png">
+      <meta itemprop="name" content="梁又文">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Avan's Blog">
+      <meta itemprop="description" content="记录自己的一些日记 & 技术文章 & 学习笔记等">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="npm包 | Avan's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          npm包<a href="https://github.com/layouwen/blog/edit/master/source/_posts/summary/npm%E5%8C%85.md" class="post-edit-link" title="编辑" rel="noopener" target="_blank"><i class="fa fa-pen-nib"></i></a>
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2025-06-30 17:22:53 / 修改时间：17:24:40" itemprop="dateCreated datePublished" datetime="2025-06-30T17:22:53+08:00">2025-06-30</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%B1%87%E6%80%BB/" itemprop="url" rel="index"><span itemprop="name">汇总</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>3k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>11 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h2 id="Node默认包"><a href="#Node默认包" class="headerlink" title="Node默认包"></a>Node默认包</h2><table>
+<thead>
+<tr>
+<th>包名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>util</td>
+<td>有 promisify 等工具</td>
+</tr>
+<tr>
+<td>fs</td>
+<td>文件读写库，可以.promises 获取 promise 版本</td>
+</tr>
+<tr>
+<td>child_process</td>
+<td>创建子进程</td>
+</tr>
+<tr>
+<td>readline</td>
+<td>检测命令行回车事件</td>
+</tr>
+<tr>
+<td>events</td>
+<td>订阅发布库</td>
+</tr>
+<tr>
+<td>prettier</td>
+<td>代码格式化工具</td>
+</tr>
+<tr>
+<td>prettier-plugin-tailwindcss</td>
+<td>Tailwindcss 的 prettier 插件</td>
+</tr>
+</tbody></table>
+<h2 id="功能类"><a href="#功能类" class="headerlink" title="功能类"></a>功能类</h2><table>
+<thead>
+<tr>
+<th>包名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>@locator&#x2F;runtime</td>
+<td>从浏览器快速定位到编辑器</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="命令行工具"><a href="#命令行工具" class="headerlink" title="命令行工具"></a>命令行工具</h2><table>
+<thead>
+<tr>
+<th>包名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>concurrently</td>
+<td>windows 同时执行两个命令</td>
+</tr>
+<tr>
+<td>create-next-app</td>
+<td>构建next脚手架</td>
+</tr>
+<tr>
+<td>yo</td>
+<td>自定义脚手架平台，可自定义模版和下载指定模版</td>
+</tr>
+<tr>
+<td>anywhere</td>
+<td>万金油服务器启动</td>
+</tr>
+<tr>
+<td>ts-node</td>
+<td>执行 ts 程序</td>
+</tr>
+<tr>
+<td>node-dev</td>
+<td>监听 node 程序</td>
+</tr>
+<tr>
+<td>ts-node-dev</td>
+<td>监听 ts 程序，更新自动重启</td>
+</tr>
+<tr>
+<td>nodemon</td>
+<td>js 文件变动重新运行</td>
+</tr>
+<tr>
+<td>supervisor</td>
+<td>监听 node 程序</td>
+</tr>
+<tr>
+<td>tsc</td>
+<td>编译 ts 为 js 文件</td>
+</tr>
+<tr>
+<td>cloc</td>
+<td>统计代码行数</td>
+</tr>
+<tr>
+<td>parcel</td>
+<td>轻量打包工具，启动本地服务</td>
+</tr>
+<tr>
+<td>http-server</td>
+<td>本地服务</td>
+</tr>
+<tr>
+<td>server</td>
+<td>本地服务</td>
+</tr>
+<tr>
+<td>git-open</td>
+<td>快速打开 git 仓库</td>
+</tr>
+<tr>
+<td>json-server</td>
+<td>基于 rest 规则生成服务器</td>
+</tr>
+<tr>
+<td>cross-env</td>
+<td>跨平台设置环境变量</td>
+</tr>
+<tr>
+<td>gh-pages</td>
+<td>自动部署github page</td>
+</tr>
+<tr>
+<td>mitt</td>
+<td>Vue3推荐使用的eventbus</td>
+</tr>
+<tr>
+<td>eventemitter3</td>
+<td>比较老牌的eventbus</td>
+</tr>
+<tr>
+<td>@novu&#x2F;node</td>
+<td>node 端的消息(邮件&#x2F;facebook…)通知库</td>
+</tr>
+<tr>
+<td>release-it</td>
+<td>发版工具</td>
+</tr>
+</tbody></table>
+<h2 id="全端通用工具"><a href="#全端通用工具" class="headerlink" title="全端通用工具"></a>全端通用工具</h2><table>
+<thead>
+<tr>
+<th>包名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>@faker-js&#x2F;faker</td>
+<td>比较新的 mock 数据库</td>
+</tr>
+<tr>
+<td>mathjs</td>
+<td>计算库，包含大数值和小数计算问题解决方案</td>
+</tr>
+<tr>
+<td>crypto-js</td>
+<td>加密库（md5、对称加密等）</td>
+</tr>
+<tr>
+<td>qs</td>
+<td>处理 url 路径 search 参数为对象</td>
+</tr>
+<tr>
+<td>flyio</td>
+<td>http 请求库</td>
+</tr>
+<tr>
+<td>moment</td>
+<td>格式化时间</td>
+</tr>
+<tr>
+<td>dayjs</td>
+<td>格式化时间</td>
+</tr>
+<tr>
+<td>date-fns</td>
+<td>比 dayjs 更新的时间工具</td>
+</tr>
+<tr>
+<td>date-fns-tz</td>
+<td>兼容性较强的, 指定时区格式化</td>
+</tr>
+<tr>
+<td>async</td>
+<td>异步库</td>
+</tr>
+<tr>
+<td>civet</td>
+<td>结合 typescript 和 coffescript 的新框架</td>
+</tr>
+<tr>
+<td>lodash-es</td>
+<td>工具集 lodash 的 es 版本</td>
+</tr>
+<tr>
+<td>radash</td>
+<td>lodash 的替代品</td>
+</tr>
+<tr>
+<td>zod</td>
+<td>数据验证的工具</td>
+</tr>
+<tr>
+<td>zod-i18n-map</td>
+<td>zod 的国际化版本</td>
+</tr>
+<tr>
+<td>yup</td>
+<td>数据验证工具</td>
+</tr>
+<tr>
+<td>valibot</td>
+<td>比 zod 更新的数据验证工具</td>
+</tr>
+<tr>
+<td>fast-xml-parse</td>
+<td>全端通用的 xml parse 库</td>
+</tr>
+<tr>
+<td>p-limit</td>
+<td>并发控制库</td>
+</tr>
+<tr>
+<td>core-js</td>
+<td>各版本 js 实现, 垫片</td>
+</tr>
+<tr>
+<td>globby</td>
+<td>更好的 glob 匹配</td>
+</tr>
+<tr>
+<td>web-worker</td>
+<td>统一浏览器和nodejs的worker写法</td>
+</tr>
+<tr>
+<td>jspdf</td>
+<td>pdf 生成库</td>
+</tr>
+<tr>
+<td>docx</td>
+<td>doc 文档生成</td>
+</tr>
+</tbody></table>
+<h2 id="浏览器工具"><a href="#浏览器工具" class="headerlink" title="浏览器工具"></a>浏览器工具</h2><table>
+<thead>
+<tr>
+<th>包名</th>
+<th>描述</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>nanoid</td>
+<td>生成随机id</td>
+<td></td>
+</tr>
+<tr>
+<td>@fingerprintjs&#x2F;fingerprintjs</td>
+<td>获取浏览器唯一指纹</td>
+<td></td>
+</tr>
+<tr>
+<td>mixpanel-browser</td>
+<td>埋点数据分析库客户端</td>
+<td></td>
+</tr>
+<tr>
+<td>@neodrag&#x2F;vanilla</td>
+<td>js轻量拖拽库</td>
+<td></td>
+</tr>
+<tr>
+<td>@tanstack&#x2F;react-router</td>
+<td>路由库 js&#x2F;ts&#x2F;react&#x2F;vue&#x2F;solid&#x2F;svelte 等</td>
+<td></td>
+</tr>
+<tr>
+<td>highlight.js</td>
+<td>高亮代码块</td>
+<td></td>
+</tr>
+<tr>
+<td>marked</td>
+<td>markdown 编辑器</td>
+<td></td>
+</tr>
+<tr>
+<td>subjx</td>
+<td>拖动、缩放、旋转</td>
+<td></td>
+</tr>
+<tr>
+<td>copy-to-clipboard</td>
+<td>前端复制剪切板</td>
+<td></td>
+</tr>
+<tr>
+<td>html2canvas</td>
+<td>通过 html 生成 canvas</td>
+<td></td>
+</tr>
+<tr>
+<td>canvas2Image</td>
+<td>把 canvas 转图片</td>
+<td></td>
+</tr>
+<tr>
+<td>fullpage.js</td>
+<td>全屏滚动库</td>
+<td></td>
+</tr>
+<tr>
+<td>animejs</td>
+<td>轻小型动画库</td>
+<td></td>
+</tr>
+<tr>
+<td>sentry</td>
+<td>前端异常监控系统</td>
+<td></td>
+</tr>
+<tr>
+<td>aegis</td>
+<td>前端异常监控系统，tdesign在使用</td>
+<td></td>
+</tr>
+<tr>
+<td>nprogress</td>
+<td>网页顶部进度条样式</td>
+<td></td>
+</tr>
+<tr>
+<td>html-to-text</td>
+<td>将标签内容转为text内容，去掉所有标签元素</td>
+<td></td>
+</tr>
+<tr>
+<td>gsap</td>
+<td>牛逼的动画效果库</td>
+<td></td>
+</tr>
+<tr>
+<td>@blocksuite&#x2F;editor</td>
+<td>好看的编辑器</td>
+<td></td>
+</tr>
+<tr>
+<td>driver.js</td>
+<td>步骤提示库, 引导用户操作</td>
+<td></td>
+</tr>
+<tr>
+<td>@n1rjal&#x2F;pm_ts</td>
+<td>根据 postman 的 json 文件生成 typescript 的类型文件</td>
+<td></td>
+</tr>
+<tr>
+<td>@builder.io&#x2F;partytown</td>
+<td>通过 WebWorker 加载第三方脚本</td>
+<td></td>
+</tr>
+<tr>
+<td>@emailjs&#x2F;browser</td>
+<td>无需后端即可完成邮件发送</td>
+<td></td>
+</tr>
+<tr>
+<td>pixi.js</td>
+<td>canvas 与 webgl 结合的框架</td>
+<td></td>
+</tr>
+<tr>
+<td>@trpc&#x2F;client</td>
+<td>trpc 统一前后端的 typescript 类型</td>
+<td></td>
+</tr>
+<tr>
+<td>quill</td>
+<td>富文本工具(国外)</td>
+<td></td>
+</tr>
+<tr>
+<td>@wangeditor&#x2F;editor</td>
+<td>富文本工具(国内)</td>
+<td></td>
+</tr>
+<tr>
+<td>particles.js</td>
+<td>粒子效果装饰库</td>
+<td></td>
+</tr>
+<tr>
+<td>@editorjs&#x2F;editorjs</td>
+<td>类似 notion 的编辑器</td>
+<td></td>
+</tr>
+<tr>
+<td>pdfjs-dist</td>
+<td>react较好的pdf预览组件</td>
+<td></td>
+</tr>
+<tr>
+<td>pdf-viewer</td>
+<td>浏览 pdf 的库</td>
+<td></td>
+</tr>
+<tr>
+<td>@trpc&#x2F;client</td>
+<td>trpc 客户端</td>
+<td></td>
+</tr>
+<tr>
+<td>underscore</td>
+<td>填充一些浏览器中的一些通用函数, 在旧版本中</td>
+<td></td>
+</tr>
+<tr>
+<td>@builder.io&#x2F;partytown</td>
+<td>将资源密集的操作转到 web worker 中</td>
+<td></td>
+</tr>
+<tr>
+<td>watermark-js-plus</td>
+<td>暗水印添加</td>
+<td></td>
+</tr>
+<tr>
+<td>cropperjs</td>
+<td>图片裁剪</td>
+<td></td>
+</tr>
+<tr>
+<td>hotkeys-js</td>
+<td>快捷键库</td>
+<td></td>
+</tr>
+<tr>
+<td>html2canvas</td>
+<td>dom 转 canvas 库, 可用于截图</td>
+<td></td>
+</tr>
+<tr>
+<td>qrcode</td>
+<td>二维码生成</td>
+<td></td>
+</tr>
+<tr>
+<td>node-qrcode</td>
+<td>支持多端的二维码生成</td>
+<td></td>
+</tr>
+<tr>
+<td>file-saver</td>
+<td>保存文件</td>
+<td></td>
+</tr>
+<tr>
+<td>tailwind-merge</td>
+<td>合并重复的 tailwind 类名</td>
+<td></td>
+</tr>
+<tr>
+<td>three</td>
+<td>基于 webgl 的 3d 库</td>
+<td></td>
+</tr>
+<tr>
+<td>stats.js</td>
+<td>threejs 的性能检测面板</td>
+<td></td>
+</tr>
+<tr>
+<td>dat.gui</td>
+<td>threejs 的 gui 修改参数插件</td>
+<td></td>
+</tr>
+<tr>
+<td>three-orbitcontrols</td>
+<td>threejs 相机移动控件</td>
+<td></td>
+</tr>
+<tr>
+<td>@tweenjs&#x2F;tween.js</td>
+<td>补间动画, 类似 css 的关键帧动画</td>
+<td></td>
+</tr>
+<tr>
+<td>babylonjs</td>
+<td>用于游戏开发的 webgl 3d 库</td>
+<td></td>
+</tr>
+<tr>
+<td>chart.js</td>
+<td>国外评分最高的图表库</td>
+<td></td>
+</tr>
+<tr>
+<td>effector</td>
+<td>比较新颖的状态库, 局部和全局. 支持 react &#x2F; vue &#x2F; solid</td>
+<td></td>
+</tr>
+<tr>
+<td>xstate</td>
+<td>基于状态机的 状态管理库</td>
+<td></td>
+</tr>
+<tr>
+<td>@apollo&#x2F;client</td>
+<td>apollo 客户端, graphql</td>
+<td></td>
+</tr>
+<tr>
+<td>radar-sdk-js</td>
+<td>较为实惠的 google 地图替代方案</td>
+<td></td>
+</tr>
+<tr>
+<td>leader-line-new</td>
+<td>动效引导线</td>
+<td></td>
+</tr>
+<tr>
+<td>jheat.js</td>
+<td>类似 github 的热力图</td>
+<td></td>
+</tr>
+<tr>
+<td>JsBarcode</td>
+<td>条形码生成</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="Node端工具"><a href="#Node端工具" class="headerlink" title="Node端工具"></a>Node端工具</h2><table>
+<thead>
+<tr>
+<th>包名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>dotenv</td>
+<td>读取 .env 文件</td>
+</tr>
+<tr>
+<td>mstts-js</td>
+<td>文字转语音</td>
+</tr>
+<tr>
+<td>node-schedule</td>
+<td>定时器工具</td>
+</tr>
+<tr>
+<td>async-validator</td>
+<td>校验库</td>
+</tr>
+<tr>
+<td>md5</td>
+<td>md5 加密</td>
+</tr>
+<tr>
+<td>spark-md5</td>
+<td>提供更多的 md5 方式</td>
+</tr>
+<tr>
+<td>glob</td>
+<td>通过通配符匹配路径</td>
+</tr>
+<tr>
+<td>yargs-parser</td>
+<td>获取 cmd 参数</td>
+</tr>
+<tr>
+<td>chalk</td>
+<td>cmd 信息样式设置</td>
+</tr>
+<tr>
+<td>cli-progress</td>
+<td>node 进度条</td>
+</tr>
+<tr>
+<td>inquirer</td>
+<td>命令行选项</td>
+</tr>
+<tr>
+<td>commander</td>
+<td>定制命令行界面</td>
+</tr>
+<tr>
+<td>clear</td>
+<td>清空控制台</td>
+</tr>
+<tr>
+<td>figlet</td>
+<td>打印字符文字</td>
+</tr>
+<tr>
+<td>download-git-repo</td>
+<td>下载 git 仓库</td>
+</tr>
+<tr>
+<td>ora</td>
+<td>命令行加载动画</td>
+</tr>
+<tr>
+<td>iconv-lite</td>
+<td>解决编码问题</td>
+</tr>
+<tr>
+<td>cheerio</td>
+<td>可以理解为 node 下的 jQuery</td>
+</tr>
+<tr>
+<td>request</td>
+<td>用于在 Node 端发送请求</td>
+</tr>
+<tr>
+<td>nodemailer</td>
+<td>发送邮件</td>
+</tr>
+<tr>
+<td>fs-extra</td>
+<td>文件操作（移动文件等）</td>
+</tr>
+<tr>
+<td>uuid</td>
+<td>uuid 库</td>
+</tr>
+<tr>
+<td>ogr2ogr</td>
+<td>文件格式转换，例如 dxf</td>
+</tr>
+<tr>
+<td>dxf</td>
+<td>dxf 解析工具，可以转 svg</td>
+</tr>
+<tr>
+<td>gh-pages</td>
+<td>github page部署库</td>
+</tr>
+<tr>
+<td>decompress</td>
+<td>解压压缩包</td>
+</tr>
+<tr>
+<td>compress-images</td>
+<td>图片压缩</td>
+</tr>
+<tr>
+<td>imagemin</td>
+<td>图片压缩</td>
+</tr>
+<tr>
+<td>picocolors</td>
+<td>输入颜色字符</td>
+</tr>
+<tr>
+<td>log4js</td>
+<td>生成日志文件</td>
+</tr>
+<tr>
+<td>@trpc&#x2F;server</td>
+<td>trpc 统一前后端的 typescript 类型</td>
+</tr>
+<tr>
+<td>sharp</td>
+<td>图像处理库</td>
+</tr>
+<tr>
+<td>morgan</td>
+<td>http 日志记录库</td>
+</tr>
+<tr>
+<td>zlib</td>
+<td>gzip 压缩解压缩库</td>
+</tr>
+<tr>
+<td>oxlint</td>
+<td>替代 eslint 的库</td>
+</tr>
+<tr>
+<td>@antfu&#x2F;eslint-config</td>
+<td>antfu 推荐的 eslint config</td>
+</tr>
+<tr>
+<td>@trpc&#x2F;server</td>
+<td>trpc 服务端</td>
+</tr>
+<tr>
+<td>consul</td>
+<td>微服务注册关联管理库</td>
+</tr>
+<tr>
+<td>npmlog</td>
+<td>在 cli 中的 log 工具</td>
+</tr>
+<tr>
+<td>semver</td>
+<td>比较版本号大小</td>
+</tr>
+<tr>
+<td>colors</td>
+<td>颜色库</td>
+</tr>
+<tr>
+<td>root-check</td>
+<td>降级 sudo 权限, 避免权限造成的影响</td>
+</tr>
+<tr>
+<td>user-home</td>
+<td>获取用户主目录路径</td>
+</tr>
+<tr>
+<td>path-exists</td>
+<td>判断文件 path 是否存在</td>
+</tr>
+<tr>
+<td>minimist</td>
+<td>命令行参数解析</td>
+</tr>
+<tr>
+<td>url-join</td>
+<td>url 的自动拼接</td>
+</tr>
+<tr>
+<td>npminstall</td>
+<td>cnpm 中通过代码 install 的库</td>
+</tr>
+<tr>
+<td>rimraf</td>
+<td>rm 多系统删除库</td>
+</tr>
+<tr>
+<td>simple-git</td>
+<td>代码进行 git 管理</td>
+</tr>
+<tr>
+<td>bcrypt</td>
+<td>加密库</td>
+</tr>
+<tr>
+<td>figlet</td>
+<td>FIG 字符, 终端绘制字符画</td>
+</tr>
+<tr>
+<td>lru-cache</td>
+<td>lru 缓存算法的实现库</td>
+</tr>
+<tr>
+<td>workerpool</td>
+<td>worker 封装库</td>
+</tr>
+<tr>
+<td>node-html-parser</td>
+<td>html 的解析库</td>
+</tr>
+<tr>
+<td>docusaurus</td>
+<td>文档自动生成工具</td>
+</tr>
+<tr>
+<td>hpp</td>
+<td>参数脏数据清理</td>
+</tr>
+<tr>
+<td>http-status</td>
+<td>http 状态的枚举定义库</td>
+</tr>
+<tr>
+<td>ioredis</td>
+<td>node-redis 的改良版</td>
+</tr>
+<tr>
+<td>@apollo&#x2F;server</td>
+<td>graphql 的实现标准, 支持多个 web 框架</td>
+</tr>
+<tr>
+<td>fast-folder-size</td>
+<td>快速获取文件夹的大小</td>
+</tr>
+<tr>
+<td>passport</td>
+<td>身份验证库</td>
+</tr>
+<tr>
+<td>svg2pdf.js</td>
+<td>svg 转 pdf 文件</td>
+</tr>
+<tr>
+<td>pdf2html</td>
+<td>pdf 文件转 html</td>
+</tr>
+<tr>
+<td>ink</td>
+<td>用 react 编写 cli 界面</td>
+</tr>
+</tbody></table>
+<h3 id="代码规范相关"><a href="#代码规范相关" class="headerlink" title="代码规范相关"></a>代码规范相关</h3><table>
+<thead>
+<tr>
+<th>包名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>husky</td>
+<td>哈士奇，用于 githook</td>
+</tr>
+<tr>
+<td>commitizen</td>
+<td>用于 commit log 生成</td>
+</tr>
+<tr>
+<td>cz-customizable</td>
+<td>自定义 cz 命令行的展示文本</td>
+</tr>
+<tr>
+<td>validate-commit-msg</td>
+<td>用于校验 commit log</td>
+</tr>
+<tr>
+<td>commitlint</td>
+<td>用于校验 commit 的 lint</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="服务端相关"><a href="#服务端相关" class="headerlink" title="服务端相关"></a>服务端相关</h3><table>
+<thead>
+<tr>
+<th>包名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>egg-router-group</td>
+<td>egg 的路由分组</td>
+</tr>
+<tr>
+<td>egg-mongoose</td>
+<td>egg 连接 MongoDB</td>
+</tr>
+<tr>
+<td>egg-valiadate</td>
+<td>egg 校验前端传递参数</td>
+</tr>
+<tr>
+<td>co-wechat</td>
+<td>微信体系</td>
+</tr>
+<tr>
+<td>co-wechat-api</td>
+<td>微信体系 api</td>
+</tr>
+<tr>
+<td>jsonwebtoken</td>
+<td>token 库</td>
+</tr>
+<tr>
+<td>mysql</td>
+<td>mysql 库</td>
+</tr>
+<tr>
+<td>mysql2</td>
+<td>mysql 增强版库，里面有 promise 版本 mysql2&#x2F;promise</td>
+</tr>
+<tr>
+<td>sequelize</td>
+<td>orm 操作数据</td>
+</tr>
+<tr>
+<td>drizzle-orm</td>
+<td>新的 orm 数据库检索工具</td>
+</tr>
+<tr>
+<td>mongodb</td>
+<td>mongo 数据库操作</td>
+</tr>
+<tr>
+<td>mongoose</td>
+<td>基于 mongodb 封装简化操作</td>
+</tr>
+<tr>
+<td>svg-captcha</td>
+<td>验证码</td>
+</tr>
+<tr>
+<td>gm</td>
+<td>使用 <a target="_blank" rel="noopener" href="http://www.graphicsmagick.org/">GraphicsMagick</a> or <a target="_blank" rel="noopener" href="http://www.imagemagick.org/">ImageMagick</a> 生成缩略图</td>
+</tr>
+<tr>
+<td>body-parser</td>
+<td>解析body的内容</td>
+</tr>
+<tr>
+<td>koa2-connect-history-api-fallback</td>
+<td>koa中适配spa应用的history模式</td>
+</tr>
+<tr>
+<td>express</td>
+<td>后端框架</td>
+</tr>
+<tr>
+<td>express-validator<br></td>
+<td>express 请求入参校验</td>
+</tr>
+<tr>
+<td>ipstack</td>
+<td>各种工具 api 集成平台</td>
+</tr>
+</tbody></table>
+<h4 id="Koa"><a href="#Koa" class="headerlink" title="Koa"></a>Koa</h4><table>
+<thead>
+<tr>
+<th>包名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>koa-router</td>
+<td>koa 路由库</td>
+</tr>
+<tr>
+<td>@koa&#x2F;bodyparser</td>
+<td>koa body 处理</td>
+</tr>
+<tr>
+<td>@koa&#x2F;cors</td>
+<td>koa cors 库</td>
+</tr>
+<tr>
+<td>@types&#x2F;koa__cors</td>
+<td>koa cors 库类型</td>
+</tr>
+</tbody></table>
+<h3 id="babel相关"><a href="#babel相关" class="headerlink" title="babel相关"></a>babel相关</h3><table>
+<thead>
+<tr>
+<th>包名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>@babel&#x2F;core</td>
+<td>babel 核心</td>
+</tr>
+<tr>
+<td>@babel&#x2F;preset-env</td>
+<td>解析 es</td>
+</tr>
+<tr>
+<td>@babel&#x2F;preset-react</td>
+<td>解析 react</td>
+</tr>
+<tr>
+<td>@babel&#x2F;preset-typescript</td>
+<td>解析 typescript</td>
+</tr>
+</tbody></table>
+<h3 id="Webpack相关"><a href="#Webpack相关" class="headerlink" title="Webpack相关"></a>Webpack相关</h3><h4 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h4><table>
+<thead>
+<tr>
+<th>包名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>webpack-cli</td>
+<td>webpack 的 cli 工具</td>
+</tr>
+<tr>
+<td>webpack-dev-server</td>
+<td>热更新</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h4 id="loader"><a href="#loader" class="headerlink" title="loader"></a>loader</h4><table>
+<thead>
+<tr>
+<th>包名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>stylus-loader</td>
+<td>stylus 加载器</td>
+</tr>
+<tr>
+<td>ts-loader</td>
+<td>ts 加载器</td>
+</tr>
+<tr>
+<td>awesome-typescript-loader</td>
+<td>ts-loader 的强化版</td>
+</tr>
+<tr>
+<td>babel-loader</td>
+<td>babel 加载器</td>
+</tr>
+<tr>
+<td>vue-loader</td>
+<td>vue 加载器</td>
+</tr>
+<tr>
+<td>loader-utils</td>
+<td>在 loader 中获取 options 的库</td>
+</tr>
+</tbody></table>
+<h4 id="plugin"><a href="#plugin" class="headerlink" title="plugin"></a>plugin</h4><table>
+<thead>
+<tr>
+<th>包名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>mini-css-extract-plugin</td>
+<td>抽离 css 的文件</td>
+</tr>
+<tr>
+<td>html-webpack-plugin</td>
+<td>html 模板插件</td>
+</tr>
+<tr>
+<td>webpack-bundle-analyzer</td>
+<td>打包分析工具</td>
+</tr>
+</tbody></table>
+<h2 id="React-类"><a href="#React-类" class="headerlink" title="React 类"></a>React 类</h2><h3 id="不再推荐"><a href="#不再推荐" class="headerlink" title="不再推荐"></a>不再推荐</h3><table>
+<thead>
+<tr>
+<th>包名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>classnames</td>
+<td>类名写法优化(被 clsx 平替)</td>
+</tr>
+</tbody></table>
+<h3 id="工具-1"><a href="#工具-1" class="headerlink" title="工具"></a>工具</h3><table>
+<thead>
+<tr>
+<th>包名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>react-hook-form</td>
+<td>评分较高的 form 表单封装库</td>
+</tr>
+<tr>
+<td>clsx</td>
+<td>类名写法优化</td>
+</tr>
+<tr>
+<td>braft-editor</td>
+<td>富文本编辑器</td>
+</tr>
+<tr>
+<td>rc-form</td>
+<td>（类组件）react 表单处理，提供一些列 api（检验，默认值，数据读写）等</td>
+</tr>
+<tr>
+<td>react-spring</td>
+<td>交互动画库</td>
+</tr>
+<tr>
+<td>react-error-boundary</td>
+<td>错误边界库</td>
+</tr>
+<tr>
+<td>recoil</td>
+<td>react 状态管理库</td>
+</tr>
+<tr>
+<td>react-redux</td>
+<td>react 封装的 redux 库</td>
+</tr>
+<tr>
+<td>@emotion&#x2F;styled @emotion&#x2F;react</td>
+<td>css-in方案</td>
+</tr>
+<tr>
+<td>react-helmet</td>
+<td>网站head相关的设置</td>
+</tr>
+<tr>
+<td>@welldone-software&#x2F;why-did-you-render</td>
+<td>查看是谁渲染</td>
+</tr>
+<tr>
+<td>immer</td>
+<td>数据不可变，直接改值</td>
+</tr>
+<tr>
+<td>redux-toolkit</td>
+<td>使用immer与react-redux结合，最佳实践</td>
+</tr>
+<tr>
+<td>swr</td>
+<td>与上面类似的兄弟库</td>
+</tr>
+<tr>
+<td>react-beautiful-dnd</td>
+<td>拖拽库</td>
+</tr>
+<tr>
+<td>@dnd-kit&#x2F;core</td>
+<td>拖拽库</td>
+</tr>
+<tr>
+<td>sonner</td>
+<td>比较普适的消息提示弹窗</td>
+</tr>
+<tr>
+<td>react-dragable</td>
+<td>拖拽库</td>
+</tr>
+<tr>
+<td>gridstack</td>
+<td>栅格化拖拽库</td>
+</tr>
+<tr>
+<td>react-grid-layout</td>
+<td>栅格化拖拽库</td>
+</tr>
+<tr>
+<td>rc-resize-observer</td>
+<td>大小监听组件</td>
+</tr>
+<tr>
+<td>react-email</td>
+<td>邮件组件模板</td>
+</tr>
+<tr>
+<td>swr</td>
+<td>接口请求库</td>
+</tr>
+<tr>
+<td>react-transition-group</td>
+<td>动画库</td>
+</tr>
+<tr>
+<td>react-animations</td>
+<td>动画库</td>
+</tr>
+<tr>
+<td>react reveal</td>
+<td>动画库</td>
+</tr>
+<tr>
+<td>tweenone</td>
+<td>动画库</td>
+</tr>
+<tr>
+<td>immutabale.js</td>
+<td>数据不可变库, 反直觉</td>
+</tr>
+<tr>
+<td>react-slick</td>
+<td>滑块轮播图组件, antd 内部使用的这个</td>
+</tr>
+<tr>
+<td>react-icons</td>
+<td>react 用的 icon 图标集</td>
+</tr>
+<tr>
+<td>framer-motion</td>
+<td>丝滑的动画库</td>
+</tr>
+<tr>
+<td>motion</td>
+<td>动画库</td>
+</tr>
+<tr>
+<td>wouter</td>
+<td>一个轻量的route库</td>
+</tr>
+<tr>
+<td>avvvatars-react</td>
+<td>精美的头像占位符</td>
+</tr>
+<tr>
+<td>react-i18next</td>
+<td>i18 库</td>
+</tr>
+<tr>
+<td>recharts</td>
+<td>基于 d3 的 chart 图表库</td>
+</tr>
+<tr>
+<td>react-typewriter</td>
+<td>react 模拟打字动画的库</td>
+</tr>
+<tr>
+<td>react-joyride</td>
+<td>react 引导下一步流程库</td>
+</tr>
+<tr>
+<td>@react-pdf&#x2F;renderer</td>
+<td>react pdf 渲染库</td>
+</tr>
+<tr>
+<td>swiper</td>
+<td>react 的轮播库</td>
+</tr>
+<tr>
+<td>@tanstack&#x2F;react-query</td>
+<td>react 异步状态管理库</td>
+</tr>
+<tr>
+<td>@react-spring&#x2F;web</td>
+<td>react 的动画库</td>
+</tr>
+<tr>
+<td>react-top-loading-bar</td>
+<td>顶部加载条</td>
+</tr>
+<tr>
+<td>react-image-cropper</td>
+<td>图片裁剪库</td>
+</tr>
+<tr>
+<td>react-hot-toast</td>
+<td>消息提示组件</td>
+</tr>
+<tr>
+<td>react.qrcode</td>
+<td>二维码生成</td>
+</tr>
+<tr>
+<td>tldraw</td>
+<td>画板库</td>
+</tr>
+<tr>
+<td>@blocknote&#x2F;core</td>
+<td>类似 notion 的富文本库</td>
+</tr>
+<tr>
+<td>react-error-boundary</td>
+<td>错误捕获</td>
+</tr>
+<tr>
+<td>react-confetti</td>
+<td>庆祝的烟花纸屑动画</td>
+</tr>
+<tr>
+<td>react-lazy-load-image-component</td>
+<td>图片懒加载库</td>
+</tr>
+<tr>
+<td>react-window-infinite-loader</td>
+<td>加载更多库</td>
+</tr>
+<tr>
+<td>react-window</td>
+<td>虚拟滚动库</td>
+</tr>
+<tr>
+<td>lucide-react</td>
+<td>lucide 图表库的 react 实现</td>
+</tr>
+<tr>
+<td>formik</td>
+<td>小巧的表单处理库</td>
+</tr>
+</tbody></table>
+<h2 id="ReactNative"><a href="#ReactNative" class="headerlink" title="ReactNative"></a>ReactNative</h2><table>
+<thead>
+<tr>
+<th>包名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>react-navigation</td>
+<td>导航条</td>
+</tr>
+<tr>
+<td>react-native-looped-carousel</td>
+<td>轮播图</td>
+</tr>
+<tr>
+<td>react-native-refresh-list-view</td>
+<td>上拉加载和下拉刷新</td>
+</tr>
+</tbody></table>
+<h2 id="Next-js-类"><a href="#Next-js-类" class="headerlink" title="Next.js 类"></a>Next.js 类</h2><table>
+<thead>
+<tr>
+<th>包名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>next-intl</td>
+<td>国际化库</td>
+</tr>
+<tr>
+<td>server-only</td>
+<td>防止服务端组件, 在客户端渲染</td>
+</tr>
+<tr>
+<td>next-auth</td>
+<td>集成常用的授权应用</td>
+</tr>
+<tr>
+<td>next-sitemap</td>
+<td>SEO 优化, 方便 google 检索你的网站</td>
+</tr>
+<tr>
+<td>next-seo</td>
+<td>SEO 优化, 生成一些常见的 metadata</td>
+</tr>
+<tr>
+<td>next-pwa</td>
+<td>快速创建离线应用</td>
+</tr>
+</tbody></table>
+<h3 id="Next-js-最佳实践框架"><a href="#Next-js-最佳实践框架" class="headerlink" title="Next.js 最佳实践框架"></a>Next.js 最佳实践框架</h3><table>
+<thead>
+<tr>
+<th>包名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>t3-app@latest</td>
+<td>ts 一个推崇类型安全的 next 实践框架</td>
+</tr>
+</tbody></table>
+<h2 id="UI-库"><a href="#UI-库" class="headerlink" title="UI 库"></a>UI 库</h2><table>
+<thead>
+<tr>
+<th>包名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>@mui&#x2F;material</td>
+<td>mui 谷歌风格的 material 组件库</td>
+</tr>
+<tr>
+<td>@mui&#x2F;joy</td>
+<td>mui 自己设计的组件库</td>
+</tr>
+<tr>
+<td>Mantine</td>
+<td>Mantine UI 库</td>
+</tr>
+<tr>
+<td>shadcn&#x2F;ui</td>
+<td>使用 tailwindcss 编写, 本地组件</td>
+</tr>
+</tbody></table>
+<h2 id="Vue-类"><a href="#Vue-类" class="headerlink" title="Vue 类"></a>Vue 类</h2><table>
+<thead>
+<tr>
+<th>包名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>vue</td>
+<td>vue 核心</td>
+</tr>
+<tr>
+<td>@vue&#x2F;compiler-sfc</td>
+<td>单文件编译器</td>
+</tr>
+</tbody></table>
+<h3 id="工具-2"><a href="#工具-2" class="headerlink" title="工具"></a>工具</h3><table>
+<thead>
+<tr>
+<th>包名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>vuedraggable</td>
+<td>vue的拖拽库</td>
+</tr>
+<tr>
+<td>vue-clipboard3</td>
+<td>剪切板</td>
+</tr>
+<tr>
+<td>vuex-persist</td>
+<td>vuex持久化数据</td>
+</tr>
+<tr>
+<td>vue-reuse-template</td>
+<td>组件内重用部分模板 - 安法师 (非组件)</td>
+</tr>
+<tr>
+<td>unplugin-vue-macros</td>
+<td>组件内重用部分模板</td>
+</tr>
+<tr>
+<td>@tanstack&#x2F;vue-query</td>
+<td>对标 react-query 的异步状态管理库</td>
+</tr>
+</tbody></table>
+<h2 id="环境类"><a href="#环境类" class="headerlink" title="环境类"></a>环境类</h2><table>
+<thead>
+<tr>
+<th>包名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>typescript</td>
+<td>ts 环境</td>
+</tr>
+<tr>
+<td>zx</td>
+<td>用js编写bash脚本</td>
+</tr>
+</tbody></table>
+<h2 id="构建优化"><a href="#构建优化" class="headerlink" title="构建优化"></a>构建优化</h2><table>
+<thead>
+<tr>
+<th>包名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>@million&#x2F;compiler</td>
+<td>自动优化构建的代码, vite 支持</td>
+</tr>
+</tbody></table>
+<h1 id="Mock-服务"><a href="#Mock-服务" class="headerlink" title="Mock 服务"></a>Mock 服务</h1><table>
+<thead>
+<tr>
+<th>包名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>msw</td>
+<td>比较新颖的 mock 服务</td>
+</tr>
+</tbody></table>
+<h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><h2 id="基础库"><a href="#基础库" class="headerlink" title="基础库"></a>基础库</h2><table>
+<thead>
+<tr>
+<th>包名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>flush-promises</td>
+<td>将所有 promise 状态都改为完成</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="E2E"><a href="#E2E" class="headerlink" title="E2E"></a>E2E</h2><table>
+<thead>
+<tr>
+<th>包名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>nightwatch</td>
+<td>基于 webdriver.js 的测试框架</td>
+</tr>
+<tr>
+<td>cypress</td>
+<td>高度内聚的集成测试框架</td>
+</tr>
+<tr>
+<td>testcafe</td>
+<td>傻瓜智能的测试框架</td>
+</tr>
+</tbody></table>
+<h2 id="后端"><a href="#后端" class="headerlink" title="后端"></a>后端</h2><table>
+<thead>
+<tr>
+<th>包名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>supertest</td>
+<td>测试 http 的库</td>
+</tr>
+</tbody></table>
+<h1 id="小程序"><a href="#小程序" class="headerlink" title="小程序"></a>小程序</h1><table>
+<thead>
+<tr>
+<th>包名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>weapp-tailwindcss</td>
+<td>小程序支持 tailwindcss</td>
+</tr>
+</tbody></table>
+<h1 id="全栈框架"><a href="#全栈框架" class="headerlink" title="全栈框架"></a>全栈框架</h1><table>
+<thead>
+<tr>
+<th>包名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>TanStack Start</td>
+<td>tanstack 的全栈框架, 目前是 beta 版本</td>
+</tr>
+<tr>
+<td>Nextjs</td>
+<td>react技术栈</td>
+</tr>
+<tr>
+<td>Nuxtjs</td>
+<td>vue技术栈</td>
+</tr>
+<tr>
+<td>Astro</td>
+<td>领先的分岛框架</td>
+</tr>
+</tbody></table>
+<h1 id="文档构建"><a href="#文档构建" class="headerlink" title="文档构建"></a>文档构建</h1><table>
+<thead>
+<tr>
+<th>包名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>docusaurus</td>
+<td>国外比较流行的 md 文档网站构建</td>
+</tr>
+</tbody></table>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.png" alt="梁又文 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.png" alt="梁又文 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>梁又文
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://4van.top/2025/06/30/summary/npm%E5%8C%85/" title="npm包">https://4van.top/2025/06/30/summary/npm包/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://twitter.com/avancoding">
+            <span class="icon">
+              <i class="fab fa-twitter"></i>
+            </span>
+
+            <span class="label">Twitter</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://t.me/coderavan">
+            <span class="icon">
+              <i class="fab fa-telegram"></i>
+            </span>
+
+            <span class="label">Telegram</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <span class="social-link">
+            <span class="icon">
+              <i class="fab fa-weixin"></i>
+            </span>
+
+            <span class="label">WeChat</span>
+          </span>
+
+          <img class="social-item-img" src="/images/wechat.png">
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://github.com/layouwen">
+            <span class="icon">
+              <i class="fab fa-github"></i>
+            </span>
+
+            <span class="label">GitHub</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/npm/" rel="tag"><i class="fa fa-tag"></i> npm</a>
+              <a href="/tags/%E6%B1%87%E6%80%BB/" rel="tag"><i class="fa fa-tag"></i> 汇总</a>
+          </div>
+
+        
+  <div class="social-like a2a_kit a2a_kit_size_32 a2a_default_style">
+    <a class="a2a_dd" target="_blank" rel="noopener" href="https://www.addtoany.com/share"></a>
+      <a class="a2a_button_facebook"></a>
+      <a class="a2a_button_twitter"></a>
+      <a class="a2a_button_wechat"></a>
+      <a class="a2a_button_x"></a>
+      <a class="a2a_button_email"></a>
+      <a class="a2a_button_linkedin"></a>
+  </div>
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2025/06/30/summary/Mapbox/" rel="prev" title="Mapbox">
+                  <i class="fa fa-angle-left"></i> Mapbox
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2025/06/30/summary/Vpn%20%E6%8E%A8%E8%8D%90/" rel="next" title="Vpn 推荐">
+                  Vpn 推荐 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2020 – 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">梁又文</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">57k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">3:27</span>
+  </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+  <a href="https://github.com/layouwen" class="github-corner" title="在 GitHub 上关注我" aria-label="在 GitHub 上关注我" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>

@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico">
+  <link rel="mask-icon" href="/images/favicon.ico" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha256-dABdfBfUoC8vJUBOwGVdm8L9qlMWaHTIfXt+7GnZCIo=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"4van.top","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.23.1","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="前言博主现在已经转 mac 用户。但是因为家里的台式机是是 win 装黑果遇到各种问题，最终还是放弃在家使用 mac 环境。但是又用习惯了 zsh 的各种插件。所以开始琢磨如何在 win 中使用一套舒适的环境。最开始我是使用 wsl 中的 linux 环境安装 zsh。但毕竟属于子系统，很多环境是不共享。因为我是一名前端工程师，当做桌面程序开发的时候。在 wsl 需要另外配一套环境启动。后面在 g">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="Windows在git-bash安装zsh">
+<meta property="og:url" content="https://4van.top/2022/07/22/article/Windows%E5%9C%A8git-bash%E5%AE%89%E8%A3%85zsh/index.html">
+<meta property="og:site_name" content="Avan&#39;s Blog">
+<meta property="og:description" content="前言博主现在已经转 mac 用户。但是因为家里的台式机是是 win 装黑果遇到各种问题，最终还是放弃在家使用 mac 环境。但是又用习惯了 zsh 的各种插件。所以开始琢磨如何在 win 中使用一套舒适的环境。最开始我是使用 wsl 中的 linux 环境安装 zsh。但毕竟属于子系统，很多环境是不共享。因为我是一名前端工程师，当做桌面程序开发的时候。在 wsl 需要另外配一套环境启动。后面在 g">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://pic1.zhimg.com/80/v2-be6c033a8d8f0c47a1a4b81f736034d1_720w.png">
+<meta property="og:image" content="https://pic3.zhimg.com/80/v2-16838b5c27b5025dec43c65a23381cd3_720w.png">
+<meta property="og:image" content="https://picx.zhimg.com/80/v2-dbb97af1fb3f900f1e44d2c7d2aa9186_720w.png">
+<meta property="og:image" content="https://pica.zhimg.com/80/v2-9929b1394ac9a6a1e3736c1a50ce3041_720w.png">
+<meta property="og:image" content="https://pic1.zhimg.com/80/v2-fcdc278894f89abbd4d15184c6754517_720w.png">
+<meta property="og:image" content="https://pic1.zhimg.com/80/v2-6f88f431319471875930394532079178_720w.png">
+<meta property="og:image" content="https://picx.zhimg.com/80/v2-795af57fac6246fe0d583e014d4e7afe_720w.png">
+<meta property="og:image" content="https://picx.zhimg.com/80/v2-0b832736190f75adf90e1a909a586272_720w.png">
+<meta property="article:published_time" content="2022-07-22T02:00:00.000Z">
+<meta property="article:modified_time" content="2025-06-30T09:24:40.622Z">
+<meta property="article:author" content="梁又文">
+<meta property="article:tag" content="博客">
+<meta property="article:tag" content="windows">
+<meta property="article:tag" content="工具">
+<meta property="article:tag" content="zsh">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic1.zhimg.com/80/v2-be6c033a8d8f0c47a1a4b81f736034d1_720w.png">
+
+
+<link rel="canonical" href="https://4van.top/2022/07/22/article/Windows%E5%9C%A8git-bash%E5%AE%89%E8%A3%85zsh/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://4van.top/2022/07/22/article/Windows%E5%9C%A8git-bash%E5%AE%89%E8%A3%85zsh/","path":"2022/07/22/article/Windows在git-bash安装zsh/","title":"Windows在git-bash安装zsh"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Windows在git-bash安装zsh | Avan's Blog</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script><script src="/js/bookmark.js" defer></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous" defer></script>
+<script src="/js/third-party/search/local-search.js" defer></script>
+
+
+
+
+
+
+  <script src="/js/third-party/addtoany.js" defer></script>
+
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Avan's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Avan 的博客</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">119</span></a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">95</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">28</span></a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-git-bash"><span class="nav-number">2.</span> <span class="nav-text">安装 git-bash</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD-zsh-%E7%9A%84%E5%8C%85"><span class="nav-number">3.</span> <span class="nav-text">下载 zsh 的包</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A7%A3%E5%8E%8B-zsh-%E5%8E%8B%E7%BC%A9%E6%96%87%E4%BB%B6"><span class="nav-number">4.</span> <span class="nav-text">解压 zsh 压缩文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-oh-my-zsh"><span class="nav-number">5.</span> <span class="nav-text">安装 oh-my-zsh</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E4%B8%80%E4%BA%9B%E9%BB%98%E8%AE%A4%E6%8F%92%E4%BB%B6"><span class="nav-number">5.1.</span> <span class="nav-text">使用一些默认插件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E4%B8%BB%E9%A2%98"><span class="nav-number">5.2.</span> <span class="nav-text">配置主题</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E4%B8%80%E4%BA%9B%E5%AE%9E%E7%94%A8%E7%9A%84%E6%8F%92%E4%BB%B6"><span class="nav-number">6.</span> <span class="nav-text">安装一些实用的插件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%AD%E6%B3%95%E9%AB%98%E4%BA%AE"><span class="nav-number">6.1.</span> <span class="nav-text">语法高亮</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E5%8A%A8%E8%A1%A5%E5%85%A8-%E6%8F%90%E7%A4%BA"><span class="nav-number">6.2.</span> <span class="nav-text">自动补全&#x2F;提示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%98%E6%9C%89%E4%B8%80%E4%BA%9B%E5%AE%9E%E7%94%A8%E9%BB%98%E8%AE%A4%E6%8F%92%E4%BB%B6"><span class="nav-number">6.3.</span> <span class="nav-text">还有一些实用默认插件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%8D%E5%A4%AA%E7%9B%B8%E5%85%B3%E7%9A%84%E5%86%85%E5%AE%B9"><span class="nav-number">7.</span> <span class="nav-text">不太相关的内容</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="梁又文"
+      src="/images/logo.png">
+  <p class="site-author-name" itemprop="name">梁又文</p>
+  <div class="site-description" itemprop="description">记录自己的一些日记 & 技术文章 & 学习笔记等</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">119</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">28</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">95</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/layouwen" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;layouwen" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:layouwen@gmail.com" title="E-Mail → mailto:layouwen@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://x.com/coderavan" title="Twitter → https:&#x2F;&#x2F;x.com&#x2F;coderavan" rel="noopener me" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://t.me/coderavan" title="Telegram → https:&#x2F;&#x2F;t.me&#x2F;coderavan" rel="noopener me" target="_blank"><i class="fab fa-telegram fa-fw"></i>Telegram</a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/big/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+          链接
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <a href="https://github.com/whale-wave" title="https:&#x2F;&#x2F;github.com&#x2F;whale-wave" rel="noopener" target="_blank">Whale Wave</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://4van.top/2022/07/22/article/Windows%E5%9C%A8git-bash%E5%AE%89%E8%A3%85zsh/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/logo.png">
+      <meta itemprop="name" content="梁又文">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Avan's Blog">
+      <meta itemprop="description" content="记录自己的一些日记 & 技术文章 & 学习笔记等">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Windows在git-bash安装zsh | Avan's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Windows在git-bash安装zsh<a href="https://github.com/layouwen/blog/edit/master/source/_posts/article/Windows%E5%9C%A8git-bash%E5%AE%89%E8%A3%85zsh.md" class="post-edit-link" title="编辑" rel="noopener" target="_blank"><i class="fa fa-pen-nib"></i></a>
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-07-22 10:00:00" itemprop="dateCreated datePublished" datetime="2022-07-22T10:00:00+08:00">2022-07-22</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-06-30 17:24:40" itemprop="dateModified" datetime="2025-06-30T17:24:40+08:00">2025-06-30</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%8D%9A%E5%AE%A2/" itemprop="url" rel="index"><span itemprop="name">博客</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%8D%9A%E5%AE%A2/%E5%B7%A5%E5%85%B7/" itemprop="url" rel="index"><span itemprop="name">工具</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.1k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>4 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>博主现在已经转 mac 用户。但是因为家里的台式机是是 win 装黑果遇到各种问题，最终还是放弃在家使用 mac 环境。<br>但是又用习惯了 zsh 的各种插件。所以开始琢磨如何在 win 中使用一套舒适的环境。<br>最开始我是使用 wsl 中的 linux 环境安装 zsh。但毕竟属于子系统，很多环境是不共享。因为我是一名前端工程师，当做桌面程序开发的时候。在 wsl 需要另外配一套环境启动。<br>后面在 google 查阅之后。发现 git-bash 中安装 zsh 即可在大多环境与 window 共享的前提下使用 zsh 的生态。</p>
+<h1 id="安装-git-bash"><a href="#安装-git-bash" class="headerlink" title="安装 git-bash"></a>安装 git-bash</h1><p><a target="_blank" rel="noopener" href="https://git-scm.com/downloads">https://git-scm.com/downloads</a></p>
+<p>安装这个没什么好说的，按照提示点击下一步操作。如果不知道怎么配置，全部默认即可。</p>
+<p>打开后是类似这个样子</p>
+<p><img src="https://pic1.zhimg.com/80/v2-be6c033a8d8f0c47a1a4b81f736034d1_720w.png" alt="https:&#x2F;&#x2F;p3-juejin.byteimg.com&#x2F;tos-cn-i-k3u1fbpfcp&#x2F;c1b9f2f96cca4912a6b7b31cc6fbf2a1~tplv-k3u1fbpfcp-zoom-1.image"></p>
+<h1 id="下载-zsh-的包"><a href="#下载-zsh-的包" class="headerlink" title="下载 zsh 的包"></a>下载 zsh 的包</h1><p><a target="_blank" rel="noopener" href="https://packages.msys2.org/package/zsh?repo=msys&variant=x86_64">https://packages.msys2.org/package/zsh?repo=msys&amp;variant=x86_64</a></p>
+<p>下载 <code>zsh-5.8-5-x86_64.pkg.tar.zst</code> 文件。5.8-5 是版本号，当你看到这配文章的时候版本号可能已经发生改变，所以你只需要下载 <code>zsh-xxx-x86_64.pkg.tar.zst</code> 即可。</p>
+<p><img src="https://pic3.zhimg.com/80/v2-16838b5c27b5025dec43c65a23381cd3_720w.png" alt="https:&#x2F;&#x2F;p3-juejin.byteimg.com&#x2F;tos-cn-i-k3u1fbpfcp&#x2F;d325eac0599b4eaea2fa374b345ae8a3~tplv-k3u1fbpfcp-zoom-1.image"></p>
+<h1 id="解压-zsh-压缩文件"><a href="#解压-zsh-压缩文件" class="headerlink" title="解压 zsh 压缩文件"></a>解压 zsh 压缩文件</h1><p>这里推荐使用 <a target="_blank" rel="noopener" href="https://peazip.github.io/">https://peazip.github.io/</a> 进行解压。当然如果你有其他的解压工具能解压也行。</p>
+<p>解压后你的文件中应该包含 <code>etc</code> 和 <code>usr</code> 类似字眼。将解压出来的所有文件，包含刚刚说的文件。复制到 git-bash 安装的根目录。可能会提示冲突，选择覆盖文件即可。</p>
+<p><img src="https://picx.zhimg.com/80/v2-dbb97af1fb3f900f1e44d2c7d2aa9186_720w.png" alt="https:&#x2F;&#x2F;p3-juejin.byteimg.com&#x2F;tos-cn-i-k3u1fbpfcp&#x2F;f185d07fe38c41dfa0a11db13d30311e~tplv-k3u1fbpfcp-zoom-1.image"></p>
+<p><img src="https://pica.zhimg.com/80/v2-9929b1394ac9a6a1e3736c1a50ce3041_720w.png" alt="https:&#x2F;&#x2F;p3-juejin.byteimg.com&#x2F;tos-cn-i-k3u1fbpfcp&#x2F;6314799d90714dbb8c558bad89fdfb8d~tplv-k3u1fbpfcp-zoom-1.image"></p>
+<h1 id="安装-oh-my-zsh"><a href="#安装-oh-my-zsh" class="headerlink" title="安装 oh-my-zsh"></a>安装 oh-my-zsh</h1><p>如果你跟我一样，决定默认使用 zsh。而不进入 bash。可以在 <code>.bashrc</code> 加上下面代码。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> [ -t 1 ]; <span class="keyword">then</span></span><br><span class="line">  <span class="built_in">exec</span> zsh</span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://pic1.zhimg.com/80/v2-fcdc278894f89abbd4d15184c6754517_720w.png" alt="https:&#x2F;&#x2F;p3-juejin.byteimg.com&#x2F;tos-cn-i-k3u1fbpfcp&#x2F;b3b82682481e463e83603572e4066ea7~tplv-k3u1fbpfcp-zoom-1.image"></p>
+<p><img src="https://pic1.zhimg.com/80/v2-6f88f431319471875930394532079178_720w.png" alt="https:&#x2F;&#x2F;p3-juejin.byteimg.com&#x2F;tos-cn-i-k3u1fbpfcp&#x2F;1681b6efd62a4cebb7425ab84f263a75~tplv-k3u1fbpfcp-zoom-1.image"></p>
+<p>在终端输入下面指令。进入 zsh</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zsh</span><br></pre></td></tr></table></figure>
+
+<p>安装 oh-my-zsh</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh -c <span class="string">&quot;<span class="subst">$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)</span>&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="使用一些默认插件"><a href="#使用一些默认插件" class="headerlink" title="使用一些默认插件"></a>使用一些默认插件</h2><p>编辑 <code>~/.zshrc</code> ，如果没有则会自动创建。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim ~/.zshrc</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>上面的 vim 如果不会操作，你可以使用 code 在你的用户根目录打开 .zshrc 文件编辑是一样的效果。但是你都用 zsh 了我相信你都是会用 vim 的。</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">plugins=(</span><br><span class="line">  git</span><br><span class="line">  bundler</span><br><span class="line">  dotenv</span><br><span class="line">  macos</span><br><span class="line">  rake</span><br><span class="line">  rbenv</span><br><span class="line">  ruby</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<p>上面的是写官方的插件，如果你需要使用其他插件只需要安装好后，回车换行添加尚对应插件名即可。</p>
+<h2 id="配置主题"><a href="#配置主题" class="headerlink" title="配置主题"></a>配置主题</h2><p>同样是在 <code>~/.zshrc</code> 文件中配置，添加下面代码</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ZSH_THEME=<span class="string">&quot;robbyrussell&quot;</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>如果你想要使用其他主题，可以在这里查看对应的名字替换即可 <a target="_blank" rel="noopener" href="https://github.com/ohmyzsh/ohmyzsh/wiki/Themes">https://github.com/ohmyzsh/ohmyzsh/wiki/Themes</a></p>
+</blockquote>
+<p>如果你想每次使用都有新的体验，可以设置为随机主题</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ZSH_THEME=<span class="string">&quot;random&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>或者你想在指定的几个主题中随机，那么可以加上下面代码</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ZSH_THEME_RANDOM_CANDIDATES=(</span><br><span class="line">  <span class="string">&quot;robbyrussell&quot;</span></span><br><span class="line">  <span class="string">&quot;agnoster&quot;</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<p>如果不想看到某个特别讨厌的主题，可以忽略它</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ZSH_THEME_RANDOM_IGNORED=(</span><br><span class="line">pygmalion</span><br><span class="line">tjkirch_mod</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>注意！！！<br>上面所有关于 <code>.zshrc</code> 的操作，修改都不会立即生效。你可以退出重新进入终端即可生效，或者执行 <code>source ~/.zshrc</code> 让他立刻生效。</p>
+</blockquote>
+<p>配置完后的大概效果是这样</p>
+<p><img src="https://picx.zhimg.com/80/v2-795af57fac6246fe0d583e014d4e7afe_720w.png" alt="https:&#x2F;&#x2F;p3-juejin.byteimg.com&#x2F;tos-cn-i-k3u1fbpfcp&#x2F;6d5e0cf3f4f046e59eb751f5f6b6d3e9~tplv-k3u1fbpfcp-zoom-1.image"></p>
+<h1 id="安装一些实用的插件"><a href="#安装一些实用的插件" class="headerlink" title="安装一些实用的插件"></a>安装一些实用的插件</h1><h2 id="语法高亮"><a href="#语法高亮" class="headerlink" title="语法高亮"></a>语法高亮</h2><p><code>zsh-syntax-highlighting</code> 他可以高亮你的代码提示，让你更直观的知道你的命令是否有输入错误</p>
+<p>安装</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/zsh-users/zsh-syntax-highlighting.git</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;source <span class="variable">$&#123;(q-)PWD&#125;</span>/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh&quot;</span> &gt;&gt; <span class="variable">$&#123;ZDOTDIR:-<span class="variable">$HOME</span>&#125;</span>/.zshrc</span><br></pre></td></tr></table></figure>
+
+<h2 id="自动补全-提示"><a href="#自动补全-提示" class="headerlink" title="自动补全&#x2F;提示"></a>自动补全&#x2F;提示</h2><p><code>zsh-users/zsh-autosuggestions</code> 他可以在你历史指令中找到与你当前输入指令匹配的记录，并高亮显示，如果想直接使用，可以直接通过 右方向键 补全。</p>
+<p>安装</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/zsh-users/zsh-autosuggestions <span class="variable">$&#123;ZSH_CUSTOM:-~/.oh-my-zsh/custom&#125;</span>/plugins/zsh-autosuggestions</span><br></pre></td></tr></table></figure>
+
+<p>在 <code>plugins</code> 中添加</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">plugins=( </span><br><span class="line">    <span class="comment"># other plugins...</span></span><br><span class="line">    zsh-autosuggestions</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<h2 id="还有一些实用默认插件"><a href="#还有一些实用默认插件" class="headerlink" title="还有一些实用默认插件"></a>还有一些实用默认插件</h2><ul>
+<li>z —— 快速跳转路径</li>
+<li>sudo —— 按两次 ESC 快速添加 sudo 前缀</li>
+</ul>
+<h1 id="不太相关的内容"><a href="#不太相关的内容" class="headerlink" title="不太相关的内容"></a>不太相关的内容</h1><p>如果你想让终端更好看点，可以在 Store 中安装 Windows Terminal 美化你的终端。大概效果就是我的封面图。</p>
+<p><img src="https://picx.zhimg.com/80/v2-0b832736190f75adf90e1a909a586272_720w.png" alt="https:&#x2F;&#x2F;p3-juejin.byteimg.com&#x2F;tos-cn-i-k3u1fbpfcp&#x2F;3b1bb7be94e544ec83ba80f076e9738e~tplv-k3u1fbpfcp-zoom-1.image"></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.png" alt="梁又文 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.png" alt="梁又文 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>梁又文
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://4van.top/2022/07/22/article/Windows%E5%9C%A8git-bash%E5%AE%89%E8%A3%85zsh/" title="Windows在git-bash安装zsh">https://4van.top/2022/07/22/article/Windows在git-bash安装zsh/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://twitter.com/avancoding">
+            <span class="icon">
+              <i class="fab fa-twitter"></i>
+            </span>
+
+            <span class="label">Twitter</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://t.me/coderavan">
+            <span class="icon">
+              <i class="fab fa-telegram"></i>
+            </span>
+
+            <span class="label">Telegram</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <span class="social-link">
+            <span class="icon">
+              <i class="fab fa-weixin"></i>
+            </span>
+
+            <span class="label">WeChat</span>
+          </span>
+
+          <img class="social-item-img" src="/images/wechat.png">
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://github.com/layouwen">
+            <span class="icon">
+              <i class="fab fa-github"></i>
+            </span>
+
+            <span class="label">GitHub</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E5%8D%9A%E5%AE%A2/" rel="tag"><i class="fa fa-tag"></i> 博客</a>
+              <a href="/tags/windows/" rel="tag"><i class="fa fa-tag"></i> windows</a>
+              <a href="/tags/%E5%B7%A5%E5%85%B7/" rel="tag"><i class="fa fa-tag"></i> 工具</a>
+              <a href="/tags/zsh/" rel="tag"><i class="fa fa-tag"></i> zsh</a>
+          </div>
+
+        
+  <div class="social-like a2a_kit a2a_kit_size_32 a2a_default_style">
+    <a class="a2a_dd" target="_blank" rel="noopener" href="https://www.addtoany.com/share"></a>
+      <a class="a2a_button_facebook"></a>
+      <a class="a2a_button_twitter"></a>
+      <a class="a2a_button_wechat"></a>
+      <a class="a2a_button_x"></a>
+      <a class="a2a_button_email"></a>
+      <a class="a2a_button_linkedin"></a>
+  </div>
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/06/29/article/%E8%A7%A3%E5%86%B3Docker%E6%8F%90%E7%A4%BAunsupported%20console%20settings,%20you%20just%20need%20to%20disable%20the%20legacy/" rel="prev" title="解决Docker提示unsupported console settings, you just need to disable the legacy">
+                  <i class="fa fa-angle-left"></i> 解决Docker提示unsupported console settings, you just need to disable the legacy
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2023/02/03/article/%E5%BD%93%E4%BA%86%20leader%20%E5%90%8E%E6%89%8D%E5%8F%91%E7%8E%B0%E7%9A%84%E4%BA%8B%E6%83%85/" rel="next" title="当了 leader 后才发现的事情">
+                  当了 leader 后才发现的事情 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2020 – 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">梁又文</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">57k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">3:27</span>
+  </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+  <a href="https://github.com/layouwen" class="github-corner" title="在 GitHub 上关注我" aria-label="在 GitHub 上关注我" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>
