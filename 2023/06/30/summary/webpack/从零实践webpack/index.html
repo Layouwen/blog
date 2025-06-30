@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico">
+  <link rel="mask-icon" href="/images/favicon.ico" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha256-dABdfBfUoC8vJUBOwGVdm8L9qlMWaHTIfXt+7GnZCIo=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"4van.top","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.23.1","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="1234mkdir zero2one-webpackcd zero2one-webpackpnpm initpnpm i -D webpack webpack-cli @types&#x2F;node style-loader css-loader csv-loader xml-loader toml yamljs json5 html-webpack-plugin webpack-dev-server e">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="从零实践webpack">
+<meta property="og:url" content="https://4van.top/2023/06/30/summary/webpack/%E4%BB%8E%E9%9B%B6%E5%AE%9E%E8%B7%B5webpack/index.html">
+<meta property="og:site_name" content="Avan&#39;s Blog">
+<meta property="og:description" content="1234mkdir zero2one-webpackcd zero2one-webpackpnpm initpnpm i -D webpack webpack-cli @types&#x2F;node style-loader css-loader csv-loader xml-loader toml yamljs json5 html-webpack-plugin webpack-dev-server e">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-06-30T09:18:54.000Z">
+<meta property="article:modified_time" content="2025-06-30T18:07:23.267Z">
+<meta property="article:author" content="梁又文">
+<meta property="article:tag" content="webpack">
+<meta property="article:tag" content="汇总">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://4van.top/2023/06/30/summary/webpack/%E4%BB%8E%E9%9B%B6%E5%AE%9E%E8%B7%B5webpack/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://4van.top/2023/06/30/summary/webpack/%E4%BB%8E%E9%9B%B6%E5%AE%9E%E8%B7%B5webpack/","path":"2023/06/30/summary/webpack/从零实践webpack/","title":"从零实践webpack"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>从零实践webpack | Avan's Blog</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script><script src="/js/bookmark.js" defer></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous" defer></script>
+<script src="/js/third-party/search/local-search.js" defer></script>
+
+
+
+
+
+
+  <script src="/js/third-party/addtoany.js" defer></script>
+
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Avan's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Avan 的博客</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">133</span></a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">102</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">33</span></a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%BB%E8%A6%81%E6%A6%82%E5%BF%B5"><span class="nav-number">1.</span> <span class="nav-text">主要概念</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Loader"><span class="nav-number">2.</span> <span class="nav-text">Loader</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%A0%E8%BD%BD-css"><span class="nav-number">2.1.</span> <span class="nav-text">加载 css</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%A0%E8%BD%BD%E5%9B%BE%E7%89%87-%E5%AD%97%E4%BD%93"><span class="nav-number">2.2.</span> <span class="nav-text">加载图片&#x2F;字体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%A0%E8%BD%BD%E6%95%B0%E6%8D%AE"><span class="nav-number">2.3.</span> <span class="nav-text">加载数据</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8D%E4%BD%BF%E7%94%A8%E5%8A%A0%E8%BD%BD%E5%99%A8%EF%BC%8C%E4%BD%BF%E7%94%A8%E8%A7%A3%E6%9E%90%E5%99%A8%E8%BF%9B%E8%A1%8C%E5%8A%A0%E8%BD%BD%E6%95%B0%E6%8D%AE"><span class="nav-number">2.3.1.</span> <span class="nav-text">不使用加载器，使用解析器进行加载数据</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Plugin"><span class="nav-number">3.</span> <span class="nav-text">Plugin</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#html-webpack-plugin"><span class="nav-number">3.1.</span> <span class="nav-text">html-webpack-plugin</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Source-Map"><span class="nav-number">4.</span> <span class="nav-text">Source Map</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Watch-%E6%96%87%E4%BB%B6%E5%8F%98%E5%8C%96"><span class="nav-number">5.</span> <span class="nav-text">Watch 文件变化</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-webpack-dev-middleware-%E9%85%8D%E5%90%88-express-%E4%BD%BF%E7%94%A8"><span class="nav-number">5.1.</span> <span class="nav-text">使用 webpack-dev-middleware 配合 express 使用</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%88%86%E5%89%B2%E4%BB%A3%E7%A0%81"><span class="nav-number">6.</span> <span class="nav-text">分割代码</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%B4%E6%8E%A5-entry-%E5%88%86%E5%89%B2"><span class="nav-number">6.1.</span> <span class="nav-text">直接 entry 分割</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E5%9D%97%E5%B9%B6%E9%98%BB%E6%AD%A2%E5%A4%8D%E5%88%B6"><span class="nav-number">6.2.</span> <span class="nav-text">分块并阻止复制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%9A%E8%BF%87-dependOn-%E8%BF%9B%E8%A1%8C%E4%BE%9D%E8%B5%96%E9%80%89%E6%8B%A9"><span class="nav-number">6.2.1.</span> <span class="nav-text">通过 dependOn 进行依赖选择</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SplitChunksPluign-%E8%87%AA%E5%8A%A8%E5%88%86%E5%9D%97"><span class="nav-number">6.2.2.</span> <span class="nav-text">SplitChunksPluign 自动分块</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%A8%E6%80%81%E5%AF%BC%E5%85%A5"><span class="nav-number">6.3.</span> <span class="nav-text">动态导入</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A2%84%E8%AF%B7%E6%B1%82-%E9%A2%84%E5%8A%A0%E8%BD%BD"><span class="nav-number">7.</span> <span class="nav-text">预请求&#x2F;预加载</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#preFetch-%E9%A2%84%E8%AF%B7%E6%B1%82"><span class="nav-number">7.1.</span> <span class="nav-text">preFetch 预请求</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#preLoad-%E9%A2%84%E5%8A%A0%E8%BD%BD"><span class="nav-number">7.2.</span> <span class="nav-text">preLoad 预加载</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BC%93%E5%AD%98"><span class="nav-number">8.</span> <span class="nav-text">缓存</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE-hash-%E5%80%BC"><span class="nav-number">8.1.</span> <span class="nav-text">设置 hash 值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%87%E5%89%B2%E5%8C%85-hash"><span class="nav-number">8.2.</span> <span class="nav-text">切割包 hash</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CLI-%E5%8F%82%E6%95%B0"><span class="nav-number">9.</span> <span class="nav-text">CLI 参数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#bundle-%E5%88%86%E6%9E%90"><span class="nav-number">10.</span> <span class="nav-text">bundle 分析</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#webpack-visualizer"><span class="nav-number">10.1.</span> <span class="nav-text">webpack-visualizer</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Webpack-Chart"><span class="nav-number">10.2.</span> <span class="nav-text">Webpack Chart</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8E%A8%E8%8D%90-webpack-bundle-anzlyer"><span class="nav-number">10.3.</span> <span class="nav-text">推荐 webpack-bundle-anzlyer</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8E%A8%E8%8D%90-bundle-stats"><span class="nav-number">10.4.</span> <span class="nav-text">推荐 bundle-stats</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#webpack-%E6%9E%84%E5%BB%BA%E5%BA%93"><span class="nav-number">11.</span> <span class="nav-text">webpack 构建库</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="nav-number">12.</span> <span class="nav-text">设置环境变量</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BC%98%E5%8C%96%E6%9E%84%E5%BB%BA%E6%80%A7%E8%83%BD"><span class="nav-number">13.</span> <span class="nav-text">优化构建性能</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%8D%E5%90%8C%E6%A1%86%E6%9E%B6%E7%9A%84%E7%83%AD%E5%88%B7%E6%96%B0%E5%8A%9F%E8%83%BD"><span class="nav-number">14.</span> <span class="nav-text">不同框架的热刷新功能</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Tree-Shaking-%E6%91%87%E6%A0%91"><span class="nav-number">15.</span> <span class="nav-text">Tree Shaking 摇树</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%91%E6%8C%A5%E6%91%87%E6%A0%91%E7%9A%84%E4%BC%98%E5%8A%BF"><span class="nav-number">15.1.</span> <span class="nav-text">发挥摇树的优势</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%87%92%E5%8A%A0%E8%BD%BD"><span class="nav-number">16.</span> <span class="nav-text">懒加载</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-ts"><span class="nav-number">17.</span> <span class="nav-text">使用 ts</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE-images-%E8%B5%84%E6%BA%90%E8%BE%93%E5%87%BA%E4%BD%8D%E7%BD%AE"><span class="nav-number">18.</span> <span class="nav-text">配置 images 资源输出位置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8C%87%E5%AE%9A%E7%89%B9%E5%AE%9A%E6%96%87%E4%BB%B6%E7%9A%84%E8%BE%93%E5%87%BA%E4%BD%8D%E7%BD%AE"><span class="nav-number">19.</span> <span class="nav-text">指定特定文件的输出位置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E5%86%85%E8%81%94%E5%AF%BC%E5%85%A5%E6%96%B9%E5%BC%8F%EF%BC%8C%E8%8E%B7%E5%8F%96%E7%9B%B8%E5%BA%94-url"><span class="nav-number">20.</span> <span class="nav-text">使用内联导入方式，获取相应 url</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#css%E6%96%87%E4%BB%B6%E4%BC%98%E5%8C%96"><span class="nav-number">21.</span> <span class="nav-text">css文件优化</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E5%88%AB%E5%90%8D"><span class="nav-number">22.</span> <span class="nav-text">配置别名</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="梁又文"
+      src="/images/logo.png">
+  <p class="site-author-name" itemprop="name">梁又文</p>
+  <div class="site-description" itemprop="description">记录自己的一些日记 & 技术文章 & 学习笔记等</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">133</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">33</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">102</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/layouwen" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;layouwen" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:layouwen@gmail.com" title="E-Mail → mailto:layouwen@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://x.com/coderavan" title="Twitter → https:&#x2F;&#x2F;x.com&#x2F;coderavan" rel="noopener me" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://t.me/coderavan" title="Telegram → https:&#x2F;&#x2F;t.me&#x2F;coderavan" rel="noopener me" target="_blank"><i class="fab fa-telegram fa-fw"></i>Telegram</a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/big/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+          链接
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <a href="https://github.com/whale-wave" title="https:&#x2F;&#x2F;github.com&#x2F;whale-wave" rel="noopener" target="_blank">Whale Wave</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://4van.top/2023/06/30/summary/webpack/%E4%BB%8E%E9%9B%B6%E5%AE%9E%E8%B7%B5webpack/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/logo.png">
+      <meta itemprop="name" content="梁又文">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Avan's Blog">
+      <meta itemprop="description" content="记录自己的一些日记 & 技术文章 & 学习笔记等">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="从零实践webpack | Avan's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          从零实践webpack<a href="https://github.com/layouwen/blog/edit/master/source/_posts/summary/webpack/%E4%BB%8E%E9%9B%B6%E5%AE%9E%E8%B7%B5webpack.md" class="post-edit-link" title="编辑" rel="noopener" target="_blank"><i class="fa fa-pen-nib"></i></a>
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2023-06-30 17:18:54" itemprop="dateCreated datePublished" datetime="2023-06-30T17:18:54+08:00">2023-06-30</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-07-01 02:07:23" itemprop="dateModified" datetime="2025-07-01T02:07:23+08:00">2025-07-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%B1%87%E6%80%BB/" itemprop="url" rel="index"><span itemprop="name">汇总</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.9k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>7 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> zero2one-webpack</span><br><span class="line"><span class="built_in">cd</span> zero2one-webpack</span><br><span class="line">pnpm init</span><br><span class="line">pnpm i -D webpack webpack-cli @types/node style-loader css-loader csv-loader xml-loader toml yamljs json5 html-webpack-plugin webpack-dev-server express webpack-dev-middleware webpack-hot-middleware webpack-visualizer-plugin bundle-stats-webpack-plugin</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pnpm i lodash</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npx webpack</span><br></pre></td></tr></table></figure>
+
+<h1 id="主要概念"><a href="#主要概念" class="headerlink" title="主要概念"></a>主要概念</h1><p>entry —— 入口文件，从这个位置开始分析引用<br>output —— 输出文件<br>module —— 模块中可以定义多组规则，规则里面使用对应的加载器<br>loader —— 加载器<br>plugin —— 插件，拓展功能<br>mode —— 开发环境不压缩代码，生产环境会压缩代码</p>
+<h1 id="Loader"><a href="#Loader" class="headerlink" title="Loader"></a>Loader</h1><p>loader 的加载顺序为从后往前。</p>
+<h2 id="加载-css"><a href="#加载-css" class="headerlink" title="加载 css"></a>加载 css</h2><p>通过 <code>css-loader</code> 获取 css 文件的内容，在通过 <code>style-loader</code> 将 css 放到 header 中显示出来。</p>
+<h2 id="加载图片-字体"><a href="#加载图片-字体" class="headerlink" title="加载图片&#x2F;字体"></a>加载图片&#x2F;字体</h2><p>webpack5 自带了 <code>asset/resource</code> loader 用来加载</p>
+<h2 id="加载数据"><a href="#加载数据" class="headerlink" title="加载数据"></a>加载数据</h2><p>使用 <code>csv-loader</code> 和 <code>xml-loader</code> 分别加载 csv&#x2F;tsv 和 xml 的文件。 </p>
+<blockquote>
+<p>JSON 在 webpack5 内置了 loader 进行加载</p>
+</blockquote>
+<h3 id="不使用加载器，使用解析器进行加载数据"><a href="#不使用加载器，使用解析器进行加载数据" class="headerlink" title="不使用加载器，使用解析器进行加载数据"></a>不使用加载器，使用解析器进行加载数据</h3><p>在 module 中，指定 type 为 json，接着使用对应的 parse 解析即可。</p>
+<blockquote>
+<p>toml yamljs json5</p>
+</blockquote>
+<h1 id="Plugin"><a href="#Plugin" class="headerlink" title="Plugin"></a>Plugin</h1><p>plugin 为一个数组，接收不同插件的实例。</p>
+<h2 id="html-webpack-plugin"><a href="#html-webpack-plugin" class="headerlink" title="html-webpack-plugin"></a>html-webpack-plugin</h2><p>自动创建 html 文件，如果更新出入口文件，自动生成对应的 script 标签引入。</p>
+<h1 id="Source-Map"><a href="#Source-Map" class="headerlink" title="Source Map"></a>Source Map</h1><p><code>devtool: &#39;inline-source-map&#39;</code></p>
+<p>开启 source map 可以生成一个映射表，方便在调试的时候对应实际的代码。在 mode 为开发模式的时候，代码虽然已经不压缩了，但是没有办法对应上实际的代码。</p>
+<h1 id="Watch-文件变化"><a href="#Watch-文件变化" class="headerlink" title="Watch 文件变化"></a>Watch 文件变化</h1><p>一种可以直接在 webpack 后面添加 –watch 进行监听文件变化自动重新编译。</p>
+<p>上面那种方式不会自动刷新浏览器，通过 <code>webpack-dev-server</code> 可以使用 websocket 通知浏览器自动刷新。</p>
+<p>配置 <code>wepback.config.js</code> 中的 devServer 和 optimzation 字段即可</p>
+<h2 id="使用-webpack-dev-middleware-配合-express-使用"><a href="#使用-webpack-dev-middleware-配合-express-使用" class="headerlink" title="使用 webpack-dev-middleware 配合 express 使用"></a>使用 webpack-dev-middleware 配合 express 使用</h2><p><code>webpack.config.js</code> 中配置 <code>output.publicPublic: &#39;/&#39;</code></p>
+<p>在 express 中使用 <code>webpack-dev-middleware</code> 中间件，并指定相同的 <code>publicPath</code> 即可</p>
+<blockquote>
+<p>目前只会重新编译不会刷新浏览器，需要搭配 webpack-hot-middleware<br>WebStorm 需关闭 safe save，新版好像没办法关闭这个</p>
+</blockquote>
+<h1 id="分割代码"><a href="#分割代码" class="headerlink" title="分割代码"></a>分割代码</h1><h2 id="直接-entry-分割"><a href="#直接-entry-分割" class="headerlink" title="直接 entry 分割"></a>直接 entry 分割</h2><p>这种方式会导致同一个内容被复制多份</p>
+<h2 id="分块并阻止复制"><a href="#分块并阻止复制" class="headerlink" title="分块并阻止复制"></a>分块并阻止复制</h2><h3 id="通过-dependOn-进行依赖选择"><a href="#通过-dependOn-进行依赖选择" class="headerlink" title="通过 dependOn 进行依赖选择"></a>通过 dependOn 进行依赖选择</h3><p>与 entry 分割基本一致，只是在 dependOn 中指定共享的 入口名</p>
+<h3 id="SplitChunksPluign-自动分块"><a href="#SplitChunksPluign-自动分块" class="headerlink" title="SplitChunksPluign 自动分块"></a>SplitChunksPluign 自动分块</h3><p>自动将文件中用到的通过 npm 包抽离成一个 chunk</p>
+<h2 id="动态导入"><a href="#动态导入" class="headerlink" title="动态导入"></a>动态导入</h2><p>使用 <code>import()</code> 动态导入，自动分块</p>
+<blockquote>
+<p>因为返回的是 <code>Promise</code> ，所以浏览器版本过低是需要使用垫片（promise-polyfill）</p>
+</blockquote>
+<h1 id="预请求-预加载"><a href="#预请求-预加载" class="headerlink" title="预请求&#x2F;预加载"></a>预请求&#x2F;预加载</h1><h2 id="preFetch-预请求"><a href="#preFetch-预请求" class="headerlink" title="preFetch 预请求"></a>preFetch 预请求</h2><p><code>import(/* webpackPrefetch: true */, &#39;./path/to/LoginModal.js&#39;)</code></p>
+<p>在浏览器空闲的时候去请求，当需要的时候可以立刻请求。</p>
+<blockquote>
+<p>上面这句话会在浏览器 header 中添加<br> <link rel="prefet" href = "login-mode-chunk.js"></p>
+</blockquote>
+<h2 id="preLoad-预加载"><a href="#preLoad-预加载" class="headerlink" title="preLoad 预加载"></a>preLoad 预加载</h2><p><code>import(/* webpackPreLoad: true */ &#39;echatLibray&#39;)</code></p>
+<p>预加载块会与父快并行加载，等父块加载完。马上进行加载。</p>
+<h1 id="缓存"><a href="#缓存" class="headerlink" title="缓存"></a>缓存</h1><h2 id="设置-hash-值"><a href="#设置-hash-值" class="headerlink" title="设置 hash 值"></a>设置 hash 值</h2><p>通过在 output 时指定 [contenthash] 来设置他的哈希值。</p>
+<h2 id="切割包-hash"><a href="#切割包-hash" class="headerlink" title="切割包 hash"></a>切割包 hash</h2><p>在 <code>splitChunks</code> 中定义 <code>cacheGroups</code> 字的的匹配规则和生成的包名</p>
+<blockquote>
+<p>其中一个依赖 bundle 发生改变，全部的 hash 值都发生了改变。<br>需要配置 <code>optimization.moduleIdls: deterministic</code> 这样只会改变修改了的文件 </p>
+</blockquote>
+<h1 id="CLI-参数"><a href="#CLI-参数" class="headerlink" title="CLI 参数"></a>CLI 参数</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npx webpack --config webpack.config.js</span><br></pre></td></tr></table></figure>
+
+<h1 id="bundle-分析"><a href="#bundle-分析" class="headerlink" title="bundle 分析"></a>bundle 分析</h1><h2 id="webpack-visualizer"><a href="#webpack-visualizer" class="headerlink" title="webpack-visualizer"></a><a target="_blank" rel="noopener" href="https://chrisbateman.github.io/webpack-visualizer/">webpack-visualizer</a></h2><h2 id="Webpack-Chart"><a href="#Webpack-Chart" class="headerlink" title="Webpack Chart"></a><a target="_blank" rel="noopener" href="https://alexkuz.github.io/webpack-chart/">Webpack Chart</a></h2><h2 id="推荐-webpack-bundle-anzlyer"><a href="#推荐-webpack-bundle-anzlyer" class="headerlink" title="推荐 webpack-bundle-anzlyer"></a><a target="_blank" rel="noopener" href="https://github.com/webpack-contrib/webpack-bundle-analyzer">推荐 webpack-bundle-anzlyer</a></h2><h2 id="推荐-bundle-stats"><a href="#推荐-bundle-stats" class="headerlink" title="推荐 bundle-stats"></a><a target="_blank" rel="noopener" href="https://github.com/relative-ci/bundle-stats/tree/master/packages/webpack-plugin">推荐 bundle-stats</a></h2><p>有个显示的 bug，需要将 tab 栏的 z-index 设置为 0</p>
+<h1 id="webpack-构建库"><a href="#webpack-构建库" class="headerlink" title="webpack 构建库"></a>webpack 构建库</h1><p>指定好 <code>output.library</code> 打包的类型和打包后的调用变量名<br>通过 <code>externals</code> 忽略不想纳入打包中的外部依赖，同时该依赖为 dev 依赖</p>
+<h1 id="设置环境变量"><a href="#设置环境变量" class="headerlink" title="设置环境变量"></a>设置环境变量</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npx webpack --<span class="built_in">env</span> name=avan --<span class="built_in">env</span> production</span><br><span class="line"><span class="comment"># &#123;</span></span><br><span class="line"><span class="comment">#   name: &#x27;avan&#x27;,</span></span><br><span class="line"><span class="comment">#   production: true</span></span><br><span class="line"><span class="comment"># &#125;</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>默认值为 true</p>
+</blockquote>
+<h1 id="优化构建性能"><a href="#优化构建性能" class="headerlink" title="优化构建性能"></a>优化构建性能</h1><ol>
+<li>按需使用开发模式和生产模式</li>
+<li>及时更新包管理工具的版本，提高解析速度</li>
+<li>使用最新版的webpack</li>
+<li>精确控制 loader 的匹配文件，test 关键字</li>
+<li>缩小 loader 的检索范围，include 关键字</li>
+<li>每个 lodaer 都有对应的启动时间，尽可能少的使用 loader</li>
+<li>如果不需要 npm link 的功能，关闭 <code>resolve.symlinks: false</code></li>
+<li>如果使用的 plugin 不依赖与上下文（context）则关闭 <code>resolve.cacheWithContext: false</code></li>
+<li>尽可能减少 <code>resolve.modules</code>、<code>resolve.extensions</code>、<code>resolve.mainFiles</code>、<code>resolve.descriptionFiles</code> 的项目数量，他们会增加文件系统的调用数量</li>
+<li>使用 <code>DllPlugin</code> 将改动小的代码单独编译，但会提高构建复杂性</li>
+<li>减小编译的总大小，如：更小的库、多页面使用 <code>SplitChunksPlugin</code> 、只编译开发的部分</li>
+<li>使用 <code>thread-loader</code> 将较大开销的内容放到线程池</li>
+<li>使用 webpack 的 <code>cache</code> 字段，并在依赖安装前删除缓存目录（<code>postinstall</code>）</li>
+<li>可以关闭不必要的插件，如：进度插件 <code>ProgressPlugin</code></li>
+<li>监听文件不要使用其他工具，使用 <code>watch</code> 模式。有些花费比较大的监听，可以设置 <code>watchOptions.poll</code> 增加轮询间隔。</li>
+<li>按需设置 <code>devtool</code> 的配置，大多情况下 <code>eval-cheap-module-source-map</code> 是最好选择</li>
+<li>开发模式不建议使用的插件 <code>TerserPlugin</code>、<code>AggressiveSplittingPlugin</code>、<code>AggressiveMergingPlugin</code>、<code>ModuleConcatenationPlugin</code></li>
+<li>开发模式不建议生成 <code>[fullhash]</code>&#x2F;<code>[chunkhash]</code>&#x2F;<code>[contenthash]</code>等关键字</li>
+<li>开启 <code>optimization.runtimeChunk: truo</code> </li>
+<li>项目庞大的时候，不要关闭 <code>optimization</code> 中的 <code>removeAvailableModules</code>、<code>removeEmptyChunks</code>、<code>splitChunks</code> 这些开销很大</li>
+<li>必要时关闭输出信息 <code>output.pathinfo: false</code></li>
+<li>不要使用 <code>8.9.10</code> ~ <code>9.11.1</code> 版本的 nodejs，Map 和 Set 存在性能回归</li>
+<li><code>ts-loader</code> 关闭类型检测 <code>options.transplieOnly: true</code>。使用 <code>fork-ts-checker-notifier-webpack-plugin</code> 和 <code>fork-ts-checker-webpack-plugin</code> 插件做检测。他会另开一个线程执行。</li>
+<li><code>babel</code> 尽可能减少预设或插件数量</li>
+<li><code>node-sass</code> 会阻塞线程，使用 <code>thread-loader</code> 设置 <code>workerParalleJobs: 2</code></li>
+</ol>
+<h1 id="不同框架的热刷新功能"><a href="#不同框架的热刷新功能" class="headerlink" title="不同框架的热刷新功能"></a>不同框架的热刷新功能</h1><p>vue —— <code>vue-loader</code> <code>vue-template-compiler</code><br>react —— <code>react-hot-loader</code></p>
+<h1 id="Tree-Shaking-摇树"><a href="#Tree-Shaking-摇树" class="headerlink" title="Tree Shaking 摇树"></a>Tree Shaking 摇树</h1><p>它虽然可以删除未使用到的 import 代码。但是因为有时候我们有些引入的代码是不需要而外引用的，比如：css样式，文件内部已经执行了代码等。</p>
+<p>所以我们需要标记副作用，告诉哪些文件是特殊的。</p>
+<p>kj如果确保全局都没有副作用，可以直接在 <code>package.json</code> 中配置 <code>&quot;sideEffectsk&quot;: false</code> 表示所有文件都没有副作用，可以安心删除<br>或者通过正则匹配指定文件 <code>&quot;sideEffects&quot;: [&quot;./src/some-side-effectful-file.js&quot;, &quot;*.css&quot;]</code> 存在副作用的文件</p>
+<h2 id="发挥摇树的优势"><a href="#发挥摇树的优势" class="headerlink" title="发挥摇树的优势"></a>发挥摇树的优势</h2><ol>
+<li>使用 <code>ES2015</code> 模块导入导出</li>
+<li>确保没有把代码编译为 <code>CommonJS</code> 模块（@babel&#x2F;preset-env）</li>
+<li>在 <code>package.json</code> 配置 <code>sideEffects</code></li>
+<li>开启 <code>production</code> 模式，以及相关判断减少包的大小</li>
+</ol>
+<h1 id="懒加载"><a href="#懒加载" class="headerlink" title="懒加载"></a>懒加载</h1><p><code>() =&gt; import(path)</code> 返回一个promise，如果需要使用，可以在 <code>.then</code> 中获取 <code>default</code> 的内容</p>
+<h1 id="使用-ts"><a href="#使用-ts" class="headerlink" title="使用 ts"></a>使用 ts</h1><p>使用 <code>ts-loader</code> 或者 <code>@babel/preset-typescript</code> 进行解析 ts 文件</p>
+<p>ts 中遇到 webpack 内置变量报错可以</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/// &lt;reference types=&quot;webpack/module&quot; /&gt;</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">import</span>.<span class="property">meta</span>.<span class="property">webpack</span>);</span><br></pre></td></tr></table></figure>
+
+<h1 id="配置-images-资源输出位置"><a href="#配置-images-资源输出位置" class="headerlink" title="配置 images 资源输出位置"></a>配置 images 资源输出位置</h1><p><code>assetModuleFilename: &#39;images/[hash][ext][query]&#39;</code></p>
+<blockquote>
+<p>需要在 loader 的时候匹配到图片，并使用 <code>asset/resource</code> 进行加载</p>
+</blockquote>
+<h1 id="指定特定文件的输出位置"><a href="#指定特定文件的输出位置" class="headerlink" title="指定特定文件的输出位置"></a>指定特定文件的输出位置</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">output</span>: &#123; <span class="comment">// 输出文件</span></span><br><span class="line">  ...</span><br><span class="line">  <span class="attr">assetModuleFilename</span>: <span class="string">&#x27;images/[hash][ext][query]&#x27;</span> <span class="comment">// 指定 image 文件的输出位置</span></span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<h1 id="使用内联导入方式，获取相应-url"><a href="#使用内联导入方式，获取相应-url" class="headerlink" title="使用内联导入方式，获取相应 url"></a>使用内联导入方式，获取相应 url</h1><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  test<span class="punctuation">:</span> /\.svg/<span class="punctuation">,</span></span><br><span class="line">  type<span class="punctuation">:</span> &#x27;asset/inline&#x27;</span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="css文件优化"><a href="#css文件优化" class="headerlink" title="css文件优化"></a>css文件优化</h1><p>生产模式下可以使用 <code>MiniCssExtractPlugin.loader</code> 替换 <code>style-loader</code>。通过环境变量控制</p>
+<h1 id="配置别名"><a href="#配置别名" class="headerlink" title="配置别名"></a>配置别名</h1><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  alias<span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    &#x27;@&#x27;<span class="punctuation">:</span> path.resolve(&#x27;./src&#x27;)</span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.png" alt="梁又文 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.png" alt="梁又文 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>梁又文
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://4van.top/2023/06/30/summary/webpack/%E4%BB%8E%E9%9B%B6%E5%AE%9E%E8%B7%B5webpack/" title="从零实践webpack">https://4van.top/2023/06/30/summary/webpack/从零实践webpack/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://twitter.com/avancoding">
+            <span class="icon">
+              <i class="fab fa-twitter"></i>
+            </span>
+
+            <span class="label">Twitter</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://t.me/coderavan">
+            <span class="icon">
+              <i class="fab fa-telegram"></i>
+            </span>
+
+            <span class="label">Telegram</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <span class="social-link">
+            <span class="icon">
+              <i class="fab fa-weixin"></i>
+            </span>
+
+            <span class="label">WeChat</span>
+          </span>
+
+          <img class="social-item-img" src="/images/wechat.png">
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://github.com/layouwen">
+            <span class="icon">
+              <i class="fab fa-github"></i>
+            </span>
+
+            <span class="label">GitHub</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/webpack/" rel="tag"><i class="fa fa-tag"></i> webpack</a>
+              <a href="/tags/%E6%B1%87%E6%80%BB/" rel="tag"><i class="fa fa-tag"></i> 汇总</a>
+          </div>
+
+        
+  <div class="social-like a2a_kit a2a_kit_size_32 a2a_default_style">
+    <a class="a2a_dd" target="_blank" rel="noopener" href="https://www.addtoany.com/share"></a>
+      <a class="a2a_button_facebook"></a>
+      <a class="a2a_button_twitter"></a>
+      <a class="a2a_button_wechat"></a>
+      <a class="a2a_button_x"></a>
+      <a class="a2a_button_email"></a>
+      <a class="a2a_button_linkedin"></a>
+  </div>
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/05/16/article/postgres%E4%B8%AD%E6%96%AD%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E6%89%80%E6%9C%89%E9%93%BE%E6%8E%A5,%20%E5%B9%B6%E9%87%8D%E5%91%BD%E5%90%8D%E6%95%B0%E6%8D%AE%E5%BA%93/" rel="prev" title="postgres 中断数据库的所有链接, 并重命名数据库">
+                  <i class="fa fa-angle-left"></i> postgres 中断数据库的所有链接, 并重命名数据库
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2023/08/22/summary/HHKB%20%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3/" rel="next" title="HHKB 使用相关">
+                  HHKB 使用相关 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2020 – 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">梁又文</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">62k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">3:46</span>
+  </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+  <a href="https://github.com/layouwen" class="github-corner" title="在 GitHub 上关注我" aria-label="在 GitHub 上关注我" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>

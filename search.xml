@@ -2034,21 +2034,6 @@
       </tags>
   </entry>
   <entry>
-    <title>timestamp 转 timestamptz 问题</title>
-    <url>/2023/09/12/article/timestamp%20%E8%BD%AC%20timestamptz%20%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<p>无时区转带时区的格式的时候, 使用 sync 他会将你原本的字段删除, 重新创建一个类型为 timestamptz 的字段, 数据会完全清空.</p>
-<p>建议新增一个 swaptime 字段, 将原本的 time 先转到 swaptime, 确认没问题后. 对服务器进行暂停维护, 然后开始将 time 的字段去掉, 然后将 swaptime 的名字改成 time. 重新开启服务.</p>
-]]></content>
-      <categories>
-        <category>博客</category>
-        <category>后端</category>
-      </categories>
-      <tags>
-        <tag>后端</tag>
-        <tag>postgres</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>win11在cmder中使用vim查看内容的时候空白</title>
     <url>/2022/06/21/article/win11%E5%9C%A8cmder%E4%B8%AD%E4%BD%BF%E7%94%A8vim%E6%9F%A5%E7%9C%8B%E5%86%85%E5%AE%B9%E7%9A%84%E6%97%B6%E5%80%99%E7%A9%BA%E7%99%BD/</url>
     <content><![CDATA[<p>依次选择，最终打上个<code>√</code>就可以了</p>
@@ -3092,59 +3077,6 @@
         <tag>博客</tag>
         <tag>前端</tag>
         <tag>javascript</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>当了 leader 后才发现的事情</title>
-    <url>/2023/02/03/article/%E5%BD%93%E4%BA%86%20leader%20%E5%90%8E%E6%89%8D%E5%8F%91%E7%8E%B0%E7%9A%84%E4%BA%8B%E6%83%85/</url>
-    <content><![CDATA[<h2 id="原则1"><a href="#原则1" class="headerlink" title="原则1"></a>原则1</h2><p>反馈，一定要反馈！</p>
-<p>我相信所有公司的 leader 基本上交代一个任务给下属的时候。他们内心都不放心的，因为如果下属做不好他们需要担责。所以我们就可以从这个点出发。</p>
-<ol>
-<li>打算怎么做</li>
-<li>不打算做什么</li>
-<li>做成什么样子</li>
-<li>有什么风险</li>
-</ol>
-<h2 id="原则2"><a href="#原则2" class="headerlink" title="原则2"></a>原则2</h2><p>确认目标</p>
-<ol>
-<li>理解上司目标</li>
-<li>表名自己目标</li>
-<li>时常沟通目标</li>
-</ol>
-<p>定风向，推目标一致者</p>
-<h2 id="原则3"><a href="#原则3" class="headerlink" title="原则3"></a>原则3</h2><p>强化人设</p>
-<ol>
-<li>在团队中的人设</li>
-<li>在会议中的人设</li>
-<li>在开发时的人设</li>
-</ol>
-<p>红脸与白脸<br>拆屋顶与开天窗</p>
-<h2 id="反原则1"><a href="#反原则1" class="headerlink" title="反原则1"></a>反原则1</h2><p>毫无反馈</p>
-<ol>
-<li>做一半返工</li>
-<li>还剩一天才求助</li>
-<li>遇到难题就搜索</li>
-</ol>
-<h2 id="反原则2"><a href="#反原则2" class="headerlink" title="反原则2"></a>反原则2</h2><p>你做你的<br>我做我的</p>
-<p>目标与团队不一致</p>
-<h2 id="反原则3"><a href="#反原则3" class="headerlink" title="反原则3"></a>反原则3</h2><ol>
-<li>讲一次不改</li>
-<li>讲两次不改</li>
-<li>讲三次还不改</li>
-</ol>
-<h2 id="反原则4"><a href="#反原则4" class="headerlink" title="反原则4"></a>反原则4</h2><ol>
-<li>昨天活跃，今天消沉</li>
-<li>上周加班，这周怠工</li>
-</ol>
-<p>事出反常必有妖<br>应该提前预警</p>
-]]></content>
-      <categories>
-        <category>博客</category>
-        <category>管理</category>
-      </categories>
-      <tags>
-        <tag>博客</tag>
-        <tag>管理</tag>
       </tags>
   </entry>
   <entry>
@@ -4672,10 +4604,202 @@
       </tags>
   </entry>
   <entry>
-    <title>Chrome各版本安装</title>
-    <url>/2025/06/30/summary/Chrome%E5%90%84%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85/</url>
+    <title>Mac 系统装机配置指北</title>
+    <url>/2024/12/11/summary/Mac%E7%B3%BB%E7%BB%9F/Mac%E7%B3%BB%E7%BB%9F%E8%A3%85%E6%9C%BA%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8C%97/</url>
+    <content><![CDATA[<h1 id="前置条件"><a href="#前置条件" class="headerlink" title="前置条件"></a>前置条件</h1><p>允许任何来源</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> spctl --master-disable</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://www.efcloud.cc/">下载梯子</a></p>
+<p>终端配置</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sh -c <span class="string">&quot;<span class="subst">$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)</span>&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>复制 .zshrc 文件</p>
+<p><a href="https://github.com/Layouwen/config-backup/blob/master/mac/.zshrc">https://github.com/Layouwen/config-backup/blob/master/mac/.zshrc</a></p>
+<blockquote>
+<p>用户名和一些文件路径需要替换一下</p>
+</blockquote>
+<p>spaceship 主题需要执行下面的命令</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/spaceship-prompt/spaceship-prompt.git <span class="string">&quot;<span class="variable">$ZSH_CUSTOM</span>/themes/spaceship-prompt&quot;</span> --depth=1</span><br><span class="line"></span><br><span class="line"><span class="built_in">ln</span> -s <span class="string">&quot;<span class="variable">$ZSH_CUSTOM</span>/themes/spaceship-prompt/spaceship.zsh-theme&quot;</span> <span class="string">&quot;<span class="variable">$ZSH_CUSTOM</span>/themes/spaceship.zsh-theme&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>安装 bun</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">curl -fsSL https://bun.sh/install | bash</span><br></pre></td></tr></table></figure>
+
+<p>下载 brew</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/bin/bash -c <span class="string">&quot;<span class="subst">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)</span>&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>如果需要使用清华国内源，先设置环境变量，在 <code>brew update</code></p>
+<p>设置按键时长</p>
+<p><img src="http://obsidian.easyhappy.top/avan/20230301005456.png"></p>
+<p>设置三脂拖拽</p>
+<p><img src="http://obsidian.easyhappy.top/obsidian/20230617133802.png"></p>
+<p>开启轻点触发</p>
+<p><img src="http://obsidian.easyhappy.top/obsidian/20230617133842.png"></p>
+<p>设置 F1-F12 为默认键</p>
+<p><img src="http://obsidian.easyhappy.top/obsidian/20230617204437.png"></p>
+<p>设置显示秒</p>
+<p><img src="http://obsidian.easyhappy.top/obsidian/20230618082251.png"></p>
+<h2 id="无法按住持续连按"><a href="#无法按住持续连按" class="headerlink" title="无法按住持续连按"></a>无法按住持续连按</h2><h3 id="关闭-ApplePressAndHoldEnabled"><a href="#关闭-ApplePressAndHoldEnabled" class="headerlink" title="关闭 ApplePressAndHoldEnabled"></a>关闭 ApplePressAndHoldEnabled</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">defaults write com.jetbrains.WebStorm ApplePressAndHoldEnabled -bool <span class="literal">false</span> <span class="comment"># webstorm</span></span><br><span class="line">defaults write com.jetbrains.intellij ApplePressAndHoldEnabled -bool <span class="literal">false</span> <span class="comment"># idea</span></span><br><span class="line">defaults write com.runningwithcrayons.Alfred ApplePressAndHoldEnabled -bool <span class="literal">false</span> <span class="comment"># Alfred</span></span><br><span class="line"></span><br><span class="line">defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool <span class="literal">false</span>              <span class="comment"># For VS Code</span></span><br><span class="line">defaults write com.microsoft.VSCodeInsiders ApplePressAndHoldEnabled -bool <span class="literal">false</span>      <span class="comment"># For VS Code Insider</span></span><br><span class="line">defaults write com.visualstudio.code.oss ApplePressAndHoldEnabled -bool <span class="literal">false</span>         <span class="comment"># For VS Codium</span></span><br><span class="line">defaults write com.microsoft.VSCodeExploration ApplePressAndHoldEnabled -bool <span class="literal">false</span>   <span class="comment"># For VS Codium Exploration users</span></span><br><span class="line"></span><br><span class="line">defaults write -g ApplePressAndHoldEnabled -bool <span class="literal">false</span> <span class="comment"># 全局设置</span></span><br><span class="line"></span><br><span class="line">defaults delete -g ApplePressAndHoldEnabled                                           <span class="comment"># If necessary, reset global default</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="brew相关"><a href="#brew相关" class="headerlink" title="brew相关"></a>brew相关</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">brew install \</span><br><span class="line">cowsay \</span><br><span class="line">zplug \</span><br><span class="line">trash \</span><br><span class="line">neofetch \</span><br><span class="line">scc \</span><br><span class="line">duf \</span><br><span class="line">diff-so-fancy \</span><br><span class="line">lolcat \</span><br><span class="line">fzf \</span><br><span class="line">figlet \</span><br><span class="line">tmux \</span><br><span class="line">ctop</span><br><span class="line"></span><br><span class="line"><span class="comment"># ripgrep \</span></span><br><span class="line"><span class="comment"># bat \</span></span><br><span class="line"><span class="comment"># tldr \</span></span><br><span class="line"><span class="comment"># thefuck \</span></span><br><span class="line"><span class="comment"># nvm \</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>scc 更好的统计代码量</li>
+<li>duf 更好的 diff</li>
+<li>diff-so-fancy diff 后的 grep 过滤管道</li>
+<li>fzf 全局查看文件</li>
+<li>figlet 输出字符英文画</li>
+<li>lolcat 彩色输出管道</li>
+<li>10.15.x 支持不太友好<ul>
+<li>tldr 更好的查看 -h</li>
+<li>bat 更好的 cat 替代</li>
+<li>ripgrep 更好的 grep</li>
+</ul>
+</li>
+</ul>
+<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><p>nvm 安装完后，需要创建 <code>~/.nvm</code> 以及更新 <code>~/.zshrc</code> 的配置</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">brew install --cask \</span><br><span class="line">iterm2 \</span><br><span class="line">bob \</span><br><span class="line">mqttx \</span><br><span class="line">firefox \</span><br><span class="line">postman \</span><br><span class="line">nutstore \</span><br><span class="line">soapui \</span><br><span class="line">jetbrains-toolbox \</span><br><span class="line">iina \</span><br><span class="line">adrive \</span><br><span class="line">baidunetdisk \</span><br><span class="line">apifox \</span><br><span class="line">wechatwebdevtools \</span><br><span class="line">visual-studio-code \</span><br><span class="line">ticktick \</span><br><span class="line">snipaste \</span><br><span class="line">wechat \</span><br><span class="line">qq \</span><br><span class="line">telegram \</span><br><span class="line">sourcetree \</span><br><span class="line">sunloginclient \</span><br><span class="line">wechatwork \</span><br><span class="line">feishu \</span><br><span class="line">discord \</span><br><span class="line">tencent-lemon \</span><br><span class="line">neteasemusic \</span><br><span class="line">picgo \</span><br><span class="line">macdown \</span><br><span class="line">1password \</span><br><span class="line">drawio \</span><br><span class="line">microsoft-edge \</span><br><span class="line">mongodb-compass \</span><br><span class="line">chatbox \</span><br><span class="line">steam \</span><br><span class="line">google-chrome \</span><br><span class="line">notion \</span><br><span class="line">notion-calendar \</span><br><span class="line">tencent-meeting \</span><br><span class="line">josm \</span><br><span class="line">hbuilderx \</span><br><span class="line">font-jetbrains-mono \</span><br><span class="line">sublime-text \</span><br><span class="line">thunder \</span><br><span class="line">obsidian</span><br><span class="line"></span><br><span class="line"><span class="comment"># 新版</span></span><br><span class="line">brew install --cask \</span><br><span class="line">docker \</span><br><span class="line">proxyman \</span><br><span class="line">todesk \</span><br><span class="line">dingtalk \</span><br><span class="line">arc \</span><br><span class="line">obs \</span><br><span class="line"></span><br><span class="line"><span class="comment"># spotify \</span></span><br><span class="line"><span class="comment"># background-music \</span></span><br><span class="line"><span class="comment"># warp \</span></span><br><span class="line"><span class="comment"># youdaonote \</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="特殊版本软件"><a href="#特殊版本软件" class="headerlink" title="特殊版本软件"></a>特殊版本软件</h1><p>[[软件推荐]]</p>
+<h1 id="配置-git"><a href="#配置-git" class="headerlink" title="配置 git"></a>配置 git</h1><p>[[Git#git 基本配置]]</p>
+<h1 id="配置-vim"><a href="#配置-vim" class="headerlink" title="配置 vim"></a>配置 vim</h1><p>[[Vim配置文件]]</p>
+<h1 id="Nvm"><a href="#Nvm" class="headerlink" title="Nvm"></a>Nvm</h1><p>[[Nvm]]</p>
+<h1 id="Npm"><a href="#Npm" class="headerlink" title="Npm"></a>Npm</h1><p>[[配置]]</p>
+<h1 id="npm-global-package"><a href="#npm-global-package" class="headerlink" title="npm global package"></a>npm global package</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pnpm i -g git-open \</span><br><span class="line">yarn \</span><br><span class="line">serve \</span><br><span class="line">http-server \</span><br><span class="line">pnpm \</span><br><span class="line">nrm \</span><br><span class="line">ts-node</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>与 windows 同步 [[Windows系统装机配置指北#npm global package]]</p>
+</blockquote>
+<h1 id="配置-iterm2"><a href="#配置-iterm2" class="headerlink" title="配置 iterm2"></a>配置 iterm2</h1><p>分屏进入上一个目录</p>
+<p><img src="http://obsidian.easyhappy.top/avan/20230630210705.png"></p>
+<h1 id="配置-Alfred"><a href="#配置-Alfred" class="headerlink" title="配置 Alfred"></a>配置 Alfred</h1><p>[[Alfred 5]]</p>
+]]></content>
+      <categories>
+        <category>汇总</category>
+        <category>Mac系统</category>
+      </categories>
+      <tags>
+        <tag>汇总</tag>
+        <tag>mac</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Ubuntu 开启 ssh 连接</title>
+    <url>/2023/01/23/summary/Linux%E7%B3%BB%E7%BB%9F/Ubuntu/Ubuntu%20%E5%BC%80%E5%90%AF%20ssh%20%E8%BF%9E%E6%8E%A5/</url>
+    <content><![CDATA[<p>如果apt没有更新，先更新</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt-get update</span><br></pre></td></tr></table></figure>
+
+<p>安装ssh服务</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt-get install openssh-server</span><br></pre></td></tr></table></figure>
+
+<p>启动服务</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/etc/init.d/ssh start</span><br></pre></td></tr></table></figure>
+
+<p>查看是否启动成功</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">netstat -tlp</span><br><span class="line">ps -e | grep ssh</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>如果没有安装，先 sudo apt-get install net-tools</p>
+</blockquote>
+<p>开启root登录权限</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /etc/ssh/sshd_config</span><br></pre></td></tr></table></figure>
+
+<p>PermitRootLogin <strong>yes</strong></p>
+<p>PubkeyAuthentication yes # 支持公钥验证</p>
+<p>AuthorizedKeysFile .ssh&#x2F;authorized_keys # 公钥的文件路径</p>
+<blockquote>
+<p>如果没有安装，先 sudo apt-get install vim</p>
+</blockquote>
+<p>将需要远程连接的电脑的pub公钥放到服务器的 authorized_keys 中即可通过 ssh 连接。如果没有设置 ssh 密钥，也可以通过输入密码进入</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh [username]@[ipaddress]</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>如果失效可能是权限问题<br>chmod 700 ~&#x2F;.ssh<br>chmod 600 ~&#x2F;.ssh&#x2F;authorized_keys</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>汇总</category>
+        <category>Linux系统</category>
+        <category>Ubuntu</category>
+      </categories>
+      <tags>
+        <tag>ssh</tag>
+        <tag>汇总</tag>
+        <tag>linux</tag>
+        <tag>ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Ubuntu 系统装机配置指南</title>
+    <url>/2024/03/23/summary/Linux%E7%B3%BB%E7%BB%9F/Ubuntu/Ubuntu%20%E7%B3%BB%E7%BB%9F%E8%A3%85%E6%9C%BA%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/</url>
+    <content><![CDATA[<h1 id="创建用户并提供-sudo-权限"><a href="#创建用户并提供-sudo-权限" class="headerlink" title="创建用户并提供 sudo 权限"></a>创建用户并提供 sudo 权限</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">adduser avan</span><br><span class="line"></span><br><span class="line">usermod -aG <span class="built_in">sudo</span> avan</span><br></pre></td></tr></table></figure>
+
+<h1 id="安装-docker"><a href="#安装-docker" class="headerlink" title="安装 docker"></a>安装 docker</h1><p>官方参考地址: <a href="https://docs.docker.com/engine/install/ubuntu/">https://docs.docker.com/engine/install/ubuntu/</a></p>
+<p>使用 root 账号安装</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt-get update</span><br><span class="line">apt-get install ca-certificates curl gnupg</span><br><span class="line">install -m 0755 -d /etc/apt/keyrings</span><br><span class="line">curl -fsSL https://download.docker.com/linux/ubuntu/gpg | <span class="built_in">sudo</span> gpg --dearmor -o /etc/apt/keyrings/docker.gpg</span><br><span class="line"><span class="built_in">chmod</span> a+r /etc/apt/keyrings/docker.gpg</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> \</span><br><span class="line">  <span class="string">&quot;deb [arch=<span class="subst">$(dpkg --print-architecture)</span> signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \</span></span><br><span class="line"><span class="string">  <span class="subst">$(. /etc/os-release &amp;&amp; echo <span class="string">&quot;<span class="variable">$VERSION_CODENAME</span>&quot;</span>)</span> stable&quot;</span> | \</span><br><span class="line">  <span class="built_in">sudo</span> <span class="built_in">tee</span> /etc/apt/sources.list.d/docker.list &gt; /dev/null</span><br><span class="line"></span><br><span class="line">apt-get update</span><br><span class="line"></span><br><span class="line">apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin</span><br><span class="line"></span><br><span class="line">docker run hello-world</span><br></pre></td></tr></table></figure>
+
+<h1 id="安装-docker-compose"><a href="#安装-docker-compose" class="headerlink" title="安装 docker-compose"></a>安装 docker-compose</h1><p>[下载 docker-compose 包](![[Pasted image 20240117133420.png]])</p>
+<p>通过 scp 上传到服务器</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">scp docker-compose-linux-x86_64 用户名@服务器ip:/home/用户名</span><br></pre></td></tr></table></figure>
+
+<p>使用 root 账号进入服务器</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mv</span> /home/用户名/docker-compose-linux-x86_64 /usr/local/bin/docker-compose</span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> /usr/local/bin/docker-compose</span><br><span class="line"></span><br><span class="line"><span class="built_in">chmod</span> +x docker-compose</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>汇总</category>
+        <category>Linux系统</category>
+        <category>Ubuntu</category>
+      </categories>
+      <tags>
+        <tag>汇总</tag>
+        <tag>linux</tag>
+        <tag>ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Ubuntu 安装 docker</title>
+    <url>/2023/01/23/summary/Linux%E7%B3%BB%E7%BB%9F/Ubuntu/Ubuntu%20%E5%AE%89%E8%A3%85%20docker/</url>
+    <content><![CDATA[<p>卸载旧版</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt-get remove docker docker-engine docker.io containerd runc</span><br></pre></td></tr></table></figure>
+
+<p>安装依赖</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt-get update</span><br><span class="line"></span><br><span class="line"><span class="built_in">sudo</span> apt-get install apt-transport-https ca-certificates curl gnupg lsb-release</span><br></pre></td></tr></table></figure>
+
+<p>安装docker的gpg（阿里）</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -fsSL http://mirrors.aliyun.com/docker-ce/linux/ubuntu/gpg | <span class="built_in">sudo</span> apt-key add -</span><br></pre></td></tr></table></figure>
+
+<p>验证可用性</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt-key fingerprint 0EBFCD88</span><br></pre></td></tr></table></figure>
+
+<p>写入镜像源</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> add-apt-repository <span class="string">&quot;deb [arch=amd64] http://mirrors.aliyun.com/docker-ce/linux/ubuntu <span class="subst">$(lsb_release -cs)</span> stable&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>再次更新</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt-get update</span><br></pre></td></tr></table></figure>
+
+<p>安装docker</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt-get install docker-ce docker-ce-cli containerd.io</span><br></pre></td></tr></table></figure>
+
+<p>开启阿里镜像（最好自己创建一个账号）</p>
+<p><a href="https://cr.console.aliyun.com/cn-qingdao/instances/mirrors">https://cr.console.aliyun.com/cn-qingdao/instances/mirrors</a></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> <span class="built_in">mkdir</span> -p /etc/docker</span><br><span class="line"></span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">tee</span> /etc/docker/daemon.json &lt;&lt;-<span class="string">&#x27;EOF&#x27;</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;registry-mirrors&quot;</span>: [<span class="string">&quot;https://kolrntba.mirror.aliyuncs.com&quot;</span>]</span><br><span class="line">&#125;</span><br><span class="line">EOF</span><br><span class="line"></span><br><span class="line"><span class="built_in">sudo</span> systemctl daemon-reload</span><br><span class="line"><span class="built_in">sudo</span> systemctl restart docker</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>汇总</category>
+        <category>Linux系统</category>
+        <category>Ubuntu</category>
+      </categories>
+      <tags>
+        <tag>docker</tag>
+        <tag>汇总</tag>
+        <tag>linux</tag>
+        <tag>ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>获取 Chrome 各版本的下载地址</title>
+    <url>/2024/01/23/summary/Chrome%20%E5%90%84%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85/</url>
     <content><![CDATA[<p>历史版本：<a href="https://www.lanzout.com/b0khja5g">https://www.lanzout.com/b0khja5g</a></p>
+<blockquote>
 <p>Win7 最后支持版本 <code>Google Chrome v109.0.5414.120</code></p>
+</blockquote>
 ]]></content>
       <categories>
         <category>汇总</category>
@@ -4686,8 +4810,8 @@
       </tags>
   </entry>
   <entry>
-    <title>HHKB</title>
-    <url>/2025/06/30/summary/HHKB/</url>
+    <title>HHKB 使用相关</title>
+    <url>/2023/08/22/summary/HHKB%20%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3/</url>
     <content><![CDATA[<h1 id="蓝牙匹配"><a href="#蓝牙匹配" class="headerlink" title="蓝牙匹配"></a>蓝牙匹配</h1><p><code>FN</code> + <code>Q</code> 开启匹配模式 —— 此时开始闪烁蓝灯<br><code>FN</code> + <code>Control</code> + <code>1</code>~&#96;4&#96; 选择匹配的数字 —— 此时开始快速闪烁蓝灯</p>
 <h1 id="切换不同配置"><a href="#切换不同配置" class="headerlink" title="切换不同配置"></a>切换不同配置</h1><p><code>FN</code> + <code>Control</code> + <code>1</code>~&#96;4&#96; 切换不同的</p>
 ]]></content>
@@ -4700,8 +4824,635 @@
       </tags>
   </entry>
   <entry>
-    <title>Mapbox</title>
-    <url>/2025/06/30/summary/Mapbox/</url>
+    <title>Linux 命令行快捷键</title>
+    <url>/2023/01/23/summary/Linux%E7%B3%BB%E7%BB%9F/Linux%20%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%BF%AB%E6%8D%B7%E9%94%AE/</url>
+    <content><![CDATA[<p>Ctrl L —— 清屏  </p>
+<p>Ctrl M —— 等于回车  </p>
+<p>Ctrl C —— 中断执行程序  </p>
+<p>Ctrl P —— 上一条命令  </p>
+<p>Ctrl N —— 下一条命令  </p>
+<p>Ctrl R —— 根据字符串找历史命令</p>
+<p>Ctrl A —— 移动到首行</p>
+<p>Ctrl E —— 移动到末尾</p>
+<p>Ctrl B —— 光标后退</p>
+<p>Ctrl F —— 光标前进</p>
+<p>Alt F —— 前进一个单词</p>
+<p>Alt B —— 后退一个单词</p>
+<p>Ctrl H —— 删除前一个单词</p>
+<p>Ctrl D —— 删除当前光标的字符串</p>
+<p>Ctrl K —— 删除光标后的所有字符</p>
+<p>Ctrl U —— 清空当前输入的字符串</p>
+<p>Ctrl W —— 删除光标前的单词</p>
+<p>Ctrl Y —— 粘贴删除的内容</p>
+<p>Ctrl X Ctrl E —— 用默认编辑器编辑命令，保存则执行</p>
+<p>Ctrl Z —— 放到后台执行</p>
+<p>Shift Insert —— 粘贴</p>
+<p>Ctrl PackUp —— 向上翻页</p>
+<p>Ctrl PageDown —— 向下翻页</p>
+]]></content>
+      <categories>
+        <category>汇总</category>
+        <category>Linux系统</category>
+      </categories>
+      <tags>
+        <tag>汇总</tag>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>为了白嫖 https 的图床, 顺手写了个 Picgo 的插件</title>
+    <url>/2025/07/01/article/%E4%B8%BA%E4%BA%86%E7%99%BD%E5%AB%96%20https%20%E7%9A%84%E5%9B%BE%E5%BA%8A,%20%E9%A1%BA%E6%89%8B%E5%86%99%E4%BA%86%E4%B8%AA%20Picgo%20%E7%9A%84%E6%8F%92%E4%BB%B6/</url>
+    <content><![CDATA[<p><img src="https://i.111666.best/image/P3Q5LBTBJQQ6ZbU5b3c8f7.png" alt="image.png"></p>
+<h2 id="🧠-前言"><a href="#🧠-前言" class="headerlink" title="🧠 前言"></a><strong>🧠 前言</strong></h2><blockquote>
+<p>本文没有什么深奥的技术点，纯粹是个人使用 Obsidian + Hexo 搭博客 + 图片服务的折腾记录，顺便+1篇博客写作练习。</p>
+</blockquote>
+<hr>
+<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a><strong>背景</strong></h2><p>一直以来，我用 <strong>Obsidian</strong> 做“第二大脑”做知识沉淀。某天，「张三」想看我的一些笔记文章，于是我顺手用 <strong>Hexo</strong> 搭了个 <a href="https://blog.4van.top/">博客</a>，还加了 <strong>HTTPS</strong>。之前文章中插图都是用免费的 <strong>七牛云 HTTP 图床 + PicGo 上传</strong>，但是 HTTPS 的站点里图片全部挂了 🤣</p>
+<hr>
+<h2 id="初始方案：Nginx-反向代理七牛-HTTP-图床"><a href="#初始方案：Nginx-反向代理七牛-HTTP-图床" class="headerlink" title="初始方案：Nginx 反向代理七牛 HTTP 图床"></a><strong>初始方案：Nginx 反向代理七牛 HTTP 图床</strong></h2><p>我想走最简单的方式，用自己的服务器做 HTTPS 代理，流量转发给七牛。配置如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    listen 443 ssl http2;</span><br><span class="line">    server_name qiniussl.iamsb.top;</span><br><span class="line"></span><br><span class="line">    ssl_certificate     conf.d/cert/qiniussl.iamsb.top.pem;</span><br><span class="line">    ssl_certificate_key conf.d/cert/qiniussl.iamsb.top.key;</span><br><span class="line">    ssl_session_cache   shared:SSL:10m;</span><br><span class="line">    ssl_session_timeout  10m;</span><br><span class="line">    ssl_protocols        TLSv1.2 TLSv1.3;</span><br><span class="line">    ssl_prefer_server_ciphers on;</span><br><span class="line"></span><br><span class="line">    location / &#123;</span><br><span class="line">        proxy_pass       http://qiniu.iamsb.top;</span><br><span class="line">        proxy_set_header Host            qiniu.iamsb.top;</span><br><span class="line">        proxy_set_header X-Real-IP       $remote_addr;</span><br><span class="line">        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;</span><br><span class="line">        proxy_set_header X-Forwarded-Proto https;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="✅-优点"><a href="#✅-优点" class="headerlink" title="✅ 优点"></a><strong>✅ 优点</strong></h3><ul>
+<li>配置简单，不改 PicGo 上传逻辑；</li>
+<li>不需迁移已有图片。</li>
+</ul>
+<h3 id="❌-缺点"><a href="#❌-缺点" class="headerlink" title="❌ 缺点"></a><strong>❌ 缺点</strong></h3><ul>
+<li>我那台小鸡服务器，带宽和性能都拉满；</li>
+<li>加载一张图要等好几秒，非常影响浏览体验。</li>
+</ul>
+<hr>
+<h2 id="最终方案：找免费-HTTPS-图床-自定义-PicGo-插件"><a href="#最终方案：找免费-HTTPS-图床-自定义-PicGo-插件" class="headerlink" title="最终方案：找免费 HTTPS 图床 + 自定义 PicGo 插件"></a><strong>最终方案：找免费 HTTPS 图床 + 自定义 PicGo 插件</strong></h2><p>我转念一想：干脆省省事，找个<strong>免费又支持 HTTPS</strong>、<strong>API 无限制</strong>的图床，先临时把图托管上去, 后续在找找其他能安全存放图片的方案。后来找到了「<a href="https://111666.best/">16 图床</a>」，初印象还好那就它了。</p>
+<p>为了继续保留 PicGo 上传体验，就把 PicGo 稍微改造一下，写了个自定义插件将图片上传到 16图床 上</p>
+<p>插件源码地址：</p>
+<p>➡️ GitHub: <a href="https://github.com/Layouwen/picgo-plugin-custom-api-uploader">Layouwen&#x2F;picgo‑plugin‑custom‑api‑uploader</a></p>
+<hr>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a><strong>总结</strong></h2><table>
+<thead>
+<tr>
+<th><strong>阶段</strong></th>
+<th><strong>方案</strong></th>
+<th><strong>优点</strong></th>
+<th><strong>缺点</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>初期</td>
+<td>Nginx 反向代理七牛 HTTP 图床</td>
+<td>简单、迁移无痛</td>
+<td>服务器性能和带宽受限</td>
+</tr>
+<tr>
+<td>最终方案</td>
+<td>免费 HTTPS 图床（16 图床）+ PicGo</td>
+<td>上传体验一致，访问速度还行</td>
+<td>需要维护 PicGo 自定义插件, 也不知道靠不靠谱</td>
+</tr>
+</tbody></table>
+<p>若你也正考虑从 Obsidian 搭博客并处理图片问题，希望这篇记录能给你一些参考。欢迎留言讨论～</p>
+<h2 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h2><p><a href="https://github.com/layouwen">Github 主页</a></p>
+<p><a href="https://blog.4van.top/">上文提到到的博客</a></p>
+<p><a href="https://111666.best/">16图床</a></p>
+]]></content>
+      <categories>
+        <category>博客</category>
+        <category>图床</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
+        <tag>picgo</tag>
+        <tag>图床</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>系统常用命令</title>
+    <url>/2023/01/23/summary/Mac%E7%B3%BB%E7%BB%9F/%E7%B3%BB%E7%BB%9F%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<h1 id="提示应用文件已经损坏"><a href="#提示应用文件已经损坏" class="headerlink" title="提示应用文件已经损坏"></a>提示应用文件已经损坏</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> spctl --master-disable</span><br><span class="line"></span><br><span class="line"><span class="comment"># react-confettisudo xattr -cr 拖入文件</span></span><br><span class="line"><span class="built_in">sudo</span> xattr -r -d com.apple.quarantine 拖入文件</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>汇总</category>
+        <category>Mac系统</category>
+      </categories>
+      <tags>
+        <tag>汇总</tag>
+        <tag>mac</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MacOS 安装指定系统版本</title>
+    <url>/2025/01/23/summary/Mac%E7%B3%BB%E7%BB%9F/%E5%AE%89%E8%A3%85%E6%8C%87%E5%AE%9A%E7%89%88%E6%9C%AC/</url>
+    <content><![CDATA[<ol>
+<li>进入 Apple 官网查看相关版本的链接<br> <a href="https://support.apple.com/zh-cn/102662https://support.apple.com/zh-cn/102662">https://support.apple.com/zh-cn/102662https://support.apple.com/zh-cn/102662</a></li>
+<li>进入 App Store 下载对应系统并更新</li>
+</ol>
+]]></content>
+      <categories>
+        <category>汇总</category>
+        <category>Mac系统</category>
+      </categories>
+      <tags>
+        <tag>汇总</tag>
+        <tag>mac</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>timestamp 转 timestamptz 问题</title>
+    <url>/2024/09/12/article/timestamp%20%E8%BD%AC%20timestamptz%20%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<p>无时区转带时区的格式的时候, 使用 sync 他会将你原本的字段删除, 重新创建一个类型为 timestamptz 的字段, 数据会完全清空.</p>
+<p>建议新增一个 swaptime 字段, 将原本的 time 先转到 swaptime, 确认没问题后. 对服务器进行暂停维护, 然后开始将 time 的字段去掉, 然后将 swaptime 的名字改成 time. 重新开启服务.</p>
+]]></content>
+      <categories>
+        <category>博客</category>
+        <category>后端</category>
+      </categories>
+      <tags>
+        <tag>后端</tag>
+        <tag>postgres</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>当了 leader 后才发现的事情</title>
+    <url>/2024/02/03/article/%E5%BD%93%E4%BA%86%20leader%20%E5%90%8E%E6%89%8D%E5%8F%91%E7%8E%B0%E7%9A%84%E4%BA%8B%E6%83%85/</url>
+    <content><![CDATA[<h2 id="原则1"><a href="#原则1" class="headerlink" title="原则1"></a>原则1</h2><p>反馈，一定要反馈！</p>
+<p>我相信所有公司的 leader 基本上交代一个任务给下属的时候。他们内心都不放心的，因为如果下属做不好他们需要担责。所以我们就可以从这个点出发。</p>
+<ol>
+<li>打算怎么做</li>
+<li>不打算做什么</li>
+<li>做成什么样子</li>
+<li>有什么风险</li>
+</ol>
+<h2 id="原则2"><a href="#原则2" class="headerlink" title="原则2"></a>原则2</h2><p>确认目标</p>
+<ol>
+<li>理解上司目标</li>
+<li>表名自己目标</li>
+<li>时常沟通目标</li>
+</ol>
+<p>定风向，推目标一致者</p>
+<h2 id="原则3"><a href="#原则3" class="headerlink" title="原则3"></a>原则3</h2><p>强化人设</p>
+<ol>
+<li>在团队中的人设</li>
+<li>在会议中的人设</li>
+<li>在开发时的人设</li>
+</ol>
+<p>红脸与白脸<br>拆屋顶与开天窗</p>
+<h2 id="反原则1"><a href="#反原则1" class="headerlink" title="反原则1"></a>反原则1</h2><p>毫无反馈</p>
+<ol>
+<li>做一半返工</li>
+<li>还剩一天才求助</li>
+<li>遇到难题就搜索</li>
+</ol>
+<h2 id="反原则2"><a href="#反原则2" class="headerlink" title="反原则2"></a>反原则2</h2><p>你做你的<br>我做我的</p>
+<p>目标与团队不一致</p>
+<h2 id="反原则3"><a href="#反原则3" class="headerlink" title="反原则3"></a>反原则3</h2><ol>
+<li>讲一次不改</li>
+<li>讲两次不改</li>
+<li>讲三次还不改</li>
+</ol>
+<h2 id="反原则4"><a href="#反原则4" class="headerlink" title="反原则4"></a>反原则4</h2><ol>
+<li>昨天活跃，今天消沉</li>
+<li>上周加班，这周怠工</li>
+</ol>
+<p>事出反常必有妖<br>应该提前预警</p>
+]]></content>
+      <categories>
+        <category>博客</category>
+        <category>管理</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
+        <tag>管理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>docker 基础知识</title>
+    <url>/2022/01/23/summary/docker/docker%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</url>
+    <content><![CDATA[<h2 id="CMD"><a href="#CMD" class="headerlink" title="CMD"></a>CMD</h2><p>CMD 设定默认执行的命令</p>
+<figure class="highlight dockerfile"><table><tr><td class="code"><pre><span class="line"><span class="keyword">CMD</span><span class="language-bash"> [<span class="string">&quot;node&quot;</span>, <span class="string">&quot;dist/main.js&quot;</span>]</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="ENTRYPOINT"><a href="#ENTRYPOINT" class="headerlink" title="ENTRYPOINT"></a>ENTRYPOINT</h2><p>ENTRYPOINT 为 docker run 的时候执行的命令, docker run 后续的命令会跟在 ENTRYPOINT 后面</p>
+<figure class="highlight dockerfile"><table><tr><td class="code"><pre><span class="line"><span class="keyword">ENTRYPOINT</span><span class="language-bash"> [<span class="string">&quot;node&quot;</span>]</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run xxx -v</span><br><span class="line"><span class="comment"># node -v</span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>汇总</category>
+        <category>docker</category>
+      </categories>
+      <tags>
+        <tag>docker</tag>
+        <tag>汇总</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>docker 经常用的命令</title>
+    <url>/2022/01/23/summary/docker/docker%20%E7%BB%8F%E5%B8%B8%E7%94%A8%E7%9A%84%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<h1 id="Windows-启动容器"><a href="#Windows-启动容器" class="headerlink" title="Windows 启动容器"></a>Windows 启动容器</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">MSYS_NO_PATHCONV=1 docker run -it -p 1883:1883 -v $(<span class="built_in">pwd</span>)/mosquitto.conf:/mosquitto/config/mosquitto.conf eclipse-mosquitto</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>MSYS_NO_PATHCONV&#x3D;1 和 $(pwd) 是在 windows 中 gitbash 运行命令需要添加的参数，否则会识别不了路径</p>
+</blockquote>
+<h1 id="Windows-docker-启动-mysql-服务"><a href="#Windows-docker-启动-mysql-服务" class="headerlink" title="Windows docker 启动 mysql 服务"></a>Windows docker 启动 mysql 服务</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">MSYS_NO_PATHCONV=1 docker run --name MYSQL服务名字 -it -p 映射出来端口:3306 -v $(<span class="built_in">pwd</span>)/mysql/conf/my.conf:/etc/mysql/my.conf -v <span class="variable">$&#123;pwd&#125;</span>/mysql/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=数据库密码 mysql:5.7</span><br></pre></td></tr></table></figure>
+
+<h1 id="启动-nginx-服务"><a href="#启动-nginx-服务" class="headerlink" title="启动 nginx 服务"></a>启动 nginx 服务</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -d --name nginx nginx</span><br><span class="line"></span><br><span class="line">docker <span class="built_in">cp</span> nginx:/usr/share/nginx/html /Users/avan/services/nginx/html</span><br><span class="line">docker <span class="built_in">cp</span> nginx:/etc/nginx/conf.d /Users/avan/services/nginx/conf.d</span><br><span class="line">docker <span class="built_in">cp</span> nginx:/etc/nginx/nginx.conf /Users/avan/services/nginx/nginx.conf</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run --name main-nginx --<span class="built_in">rm</span> -p 80:80 -p 443:443 -v /Users/avan/services/nginx/html:/usr/share/nginx/html -v /Users/avan/services/nginx/conf.d:/etc/nginx/conf.d nginx</span><br></pre></td></tr></table></figure>
+
+<h2 id="转发-ws"><a href="#转发-ws" class="headerlink" title="转发 ws"></a>转发 ws</h2><figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line">   <span class="section">location</span><span class="regexp"> ^~</span> /videows &#123;</span><br><span class="line">    <span class="attribute">proxy_pass</span> http://192.168.10.11:9999;</span><br><span class="line"><span class="attribute">proxy_read_timeout</span> <span class="number">300s</span>;</span><br><span class="line">               <span class="attribute">proxy_send_timeout</span> <span class="number">300s</span>;</span><br><span class="line">               <span class="attribute">proxy_set_header</span>  Host <span class="variable">$http_host</span>;</span><br><span class="line">               <span class="attribute">proxy_set_header</span>  X-Real-IP  <span class="variable">$remote_addr</span>;</span><br><span class="line">               <span class="attribute">proxy_set_header</span>  X-Forwarded-For <span class="variable">$proxy_add_x_forwarded_for</span>;</span><br><span class="line">               <span class="attribute">proxy_set_header</span>  X-Forwarded-Proto <span class="variable">$scheme</span>;</span><br><span class="line">               <span class="attribute">proxy_http_version</span> <span class="number">1</span>.<span class="number">1</span>;</span><br><span class="line">               <span class="attribute">proxy_set_header</span> Upgrade <span class="variable">$http_upgrade</span>;</span><br><span class="line">               <span class="attribute">proxy_set_header</span> Connection <span class="variable">$connection_upgrade</span>;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="section">server</span> &#123;</span><br><span class="line">        <span class="attribute">listen</span> <span class="number">80</span>;</span><br><span class="line"></span><br><span class="line">        <span class="attribute">gzip</span> <span class="literal">on</span>;</span><br><span class="line">        <span class="attribute">gzip_min_length</span> <span class="number">1k</span>;</span><br><span class="line">        <span class="attribute">gzip_comp_level</span> <span class="number">9</span>;</span><br><span class="line">        <span class="attribute">gzip_types</span> text/plain application/javascript application/x-javascript text/css application/xml text/javascript application/x-httpd-php image/jpeg image/gif image/png;</span><br><span class="line">        <span class="attribute">gzip_vary</span> <span class="literal">on</span>;</span><br><span class="line">        <span class="attribute">gzip_disable</span> <span class="string">&quot;MSIE [1-6]\.&quot;</span>;</span><br><span class="line">        <span class="attribute">absolute_redirect</span> <span class="literal">off</span>;</span><br><span class="line">        <span class="attribute">client_max_body_size</span> <span class="number">50m</span>;</span><br><span class="line"></span><br><span class="line">        <span class="section">location</span> / &#123;</span><br><span class="line">                <span class="attribute">add_header</span> Access-Control-Allow-Origin *;</span><br><span class="line">                <span class="attribute">return</span> <span class="number">301</span> /web/unify;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="section">location</span><span class="regexp"> ^~</span> /web/unify &#123;</span><br><span class="line">                <span class="attribute">add_header</span> Access-Control-Allow-Origin *;</span><br><span class="line">                <span class="attribute">alias</span> /usr/share/nginx/html/unify;</span><br><span class="line">                <span class="attribute">try_files</span> <span class="variable">$uri</span> <span class="variable">$uri</span>/unify /web/unify/index.html;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="section">location</span><span class="regexp"> ^~</span> /web/station &#123;</span><br><span class="line">                <span class="attribute">add_header</span> Access-Control-Allow-Origin *;</span><br><span class="line">                <span class="attribute">alias</span> /usr/share/nginx/html/station;</span><br><span class="line">                <span class="attribute">try_files</span> <span class="variable">$uri</span> <span class="variable">$uri</span>/station /web/station/index.html;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="section">location</span><span class="regexp"> ^~</span> /web/mobile &#123;</span><br><span class="line">                <span class="attribute">add_header</span> Access-Control-Allow-Origin *;</span><br><span class="line">                <span class="attribute">proxy_pass</span> http://staging-flow-app:8080;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="section">location</span><span class="regexp"> ^~</span> /web/auth &#123;</span><br><span class="line">                <span class="attribute">add_header</span> Access-Control-Allow-Origin *;</span><br><span class="line">                <span class="attribute">alias</span> /usr/share/nginx/html/auth;</span><br><span class="line">                <span class="attribute">try_files</span> <span class="variable">$uri</span> <span class="variable">$uri</span>/auth /web/auth/index.html;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="section">location</span><span class="regexp"> ^~</span> /station/ &#123;</span><br><span class="line">                <span class="attribute">add_header</span> Access-Control-Allow-Origin *;</span><br><span class="line">            <span class="attribute">add_header</span> Access-Control-Allow-Methods *;</span><br><span class="line">            <span class="attribute">add_header</span> Access-Control-Allow-Headers *;</span><br><span class="line">            <span class="attribute">rewrite</span><span class="regexp"> ^/station/(.*)$</span> /<span class="variable">$1</span> <span class="literal">break</span>;</span><br><span class="line">            <span class="attribute">proxy_pass</span> http://staging-flow-station:8000;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="section">location</span><span class="regexp"> ^~</span> /flowtrace/socketio/ &#123;</span><br><span class="line">            <span class="attribute">add_header</span> backendIP <span class="variable">$upstream_addr</span>;</span><br><span class="line">            <span class="attribute">add_header</span> backendCode <span class="variable">$upstream_status</span>;</span><br><span class="line">           <span class="attribute">proxy_redirect</span> <span class="literal">off</span>;</span><br><span class="line">            <span class="attribute">proxy_connect_timeout</span> <span class="number">6000</span>;</span><br><span class="line">            <span class="attribute">proxy_read_timeout</span> <span class="number">6000</span>;</span><br><span class="line">            <span class="attribute">proxy_send_timeout</span> <span class="number">6000</span>;</span><br><span class="line">            <span class="attribute">proxy_set_header</span> Host staging-flow-flow:<span class="number">8008</span>;</span><br><span class="line">           <span class="attribute">proxy_pass</span> http://staging-flow-flow:8008/socket.io/;</span><br><span class="line">            <span class="attribute">proxy_http_version</span> <span class="number">1</span>.<span class="number">1</span>;</span><br><span class="line">            <span class="attribute">proxy_set_header</span> Upgrade <span class="variable">$http_upgrade</span>;</span><br><span class="line">            <span class="attribute">proxy_set_header</span> Connection <span class="string">&quot;upgrade&quot;</span>;</span><br><span class="line">-- <span class="attribute">VISUAL</span> LINE --                                                                                                                                     <span class="number">1</span>,<span class="number">1</span>           Top</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        location<span class="regexp"> ^~</span> /auth/ &#123;</span><br><span class="line">                <span class="attribute">add_header</span> Access-Control-Allow-Origin *;</span><br><span class="line">            <span class="attribute">add_header</span> Access-Control-Allow-Methods *;</span><br><span class="line">            <span class="attribute">add_header</span> Access-Control-Allow-Headers *;</span><br><span class="line">            <span class="attribute">rewrite</span><span class="regexp"> ^/auth/(.*)$</span> /<span class="variable">$1</span> <span class="literal">break</span>;</span><br><span class="line">            <span class="attribute">proxy_pass</span> http://staging-flow-auth:8001;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="section">location</span><span class="regexp"> ^~</span> /asset/socketio/ &#123;</span><br><span class="line">            <span class="attribute">add_header</span> backendIP <span class="variable">$upstream_addr</span>;</span><br><span class="line">            <span class="attribute">add_header</span> backendCode <span class="variable">$upstream_status</span>;</span><br><span class="line">            <span class="attribute">proxy_redirect</span> <span class="literal">off</span>;</span><br><span class="line">            <span class="attribute">proxy_connect_timeout</span> <span class="number">6000</span>;</span><br><span class="line">            <span class="attribute">proxy_read_timeout</span> <span class="number">6000</span>;</span><br><span class="line">            <span class="attribute">proxy_send_timeout</span> <span class="number">6000</span>;</span><br><span class="line">            <span class="attribute">proxy_set_header</span> Host staging-unify-asset:<span class="number">8009</span>;</span><br><span class="line">            <span class="attribute">proxy_pass</span> http://staging-unify-asset:8009/socket.io/;</span><br><span class="line">            <span class="attribute">proxy_http_version</span> <span class="number">1</span>.<span class="number">1</span>;</span><br><span class="line">            <span class="attribute">proxy_set_header</span> Upgrade <span class="variable">$http_upgrade</span>;</span><br><span class="line">            <span class="attribute">proxy_set_header</span> Connection <span class="string">&quot;upgrade&quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="section">location</span><span class="regexp"> ^~</span> /asset/ &#123;</span><br><span class="line">            <span class="attribute">rewrite</span><span class="regexp"> ^/asset/(.*)$</span> /<span class="variable">$1</span> <span class="literal">break</span>;</span><br><span class="line">            <span class="attribute">proxy_pass</span> http://staging-unify-asset:8009;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="section">location</span><span class="regexp"> ^~</span> /emergency/ &#123;</span><br><span class="line">            <span class="attribute">rewrite</span><span class="regexp"> ^/emergency/(.*)$</span> /<span class="variable">$1</span> <span class="literal">break</span>;</span><br><span class="line">            <span class="attribute">proxy_pass</span> http://staging-unify-emergency:8007;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="section">location</span><span class="regexp"> ^~</span> /station/socketio/ &#123;</span><br><span class="line">            <span class="attribute">add_header</span> backendIP <span class="variable">$upstream_addr</span>;</span><br><span class="line">            <span class="attribute">add_header</span> backendCode <span class="variable">$upstream_status</span>;</span><br><span class="line">            <span class="attribute">proxy_redirect</span> <span class="literal">off</span>;</span><br><span class="line">            <span class="attribute">proxy_connect_timeout</span> <span class="number">6000</span>;</span><br><span class="line">            <span class="attribute">proxy_read_timeout</span> <span class="number">6000</span>;</span><br><span class="line">            <span class="attribute">proxy_send_timeout</span> <span class="number">6000</span>;</span><br><span class="line">            <span class="attribute">proxy_set_header</span> Host staging-flow-station:<span class="number">8000</span>;</span><br><span class="line">            <span class="attribute">proxy_pass</span> http://staging-flow-station:8000/socket.io/;</span><br><span class="line">            <span class="attribute">proxy_http_version</span> <span class="number">1</span>.<span class="number">1</span>;</span><br><span class="line">            <span class="attribute">proxy_set_header</span> Upgrade <span class="variable">$http_upgrade</span>;</span><br><span class="line">            <span class="attribute">proxy_set_header</span> Connection <span class="string">&quot;upgrade&quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">#�~E代�~P~F�~K�~U使�~T�</span></span><br><span class="line">        <span class="comment"># location ^~ /agent &#123;</span></span><br><span class="line">            <span class="comment">#     add_header Access-Control-Allow-Origin *;</span></span><br><span class="line">        <span class="comment">#     add_header Access-Control-Allow-Methods *;</span></span><br><span class="line">        <span class="comment">#     add_header Access-Control-Allow-Headers *;</span></span><br><span class="line">        <span class="comment">#     rewrite ^/agent(.*)$ /$1 break;</span></span><br><span class="line">        <span class="comment">#     proxy_pass http://staging-flow-agent:6000;</span></span><br><span class="line">        <span class="comment"># &#125;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h1><h2 id="创建-mysql-服务"><a href="#创建-mysql-服务" class="headerlink" title="创建 mysql 服务"></a>创建 mysql 服务</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -itd --name mysql-server -v /Users/epath/data:/var/lib/mysql -v /etc/timezone:/etc/timezone -v /etc/localtime:/etc/localtime -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123123 mysql</span><br></pre></td></tr></table></figure>
+
+<h2 id="创建-mongo-服务"><a href="#创建-mongo-服务" class="headerlink" title="创建 mongo 服务"></a>创建 mongo 服务</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run \</span><br><span class="line">--name some-mongo \</span><br><span class="line">-v 本地db映射路径:/data/db \</span><br><span class="line">-d mongo</span><br></pre></td></tr></table></figure>
+
+<h2 id="创建-redis-服务"><a href="#创建-redis-服务" class="headerlink" title="创建 redis 服务"></a>创建 redis 服务</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run --name redis-server -p 6379:6379 -d redis</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>汇总</category>
+        <category>docker</category>
+      </categories>
+      <tags>
+        <tag>docker</tag>
+        <tag>汇总</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>docker-compose yml 样板</title>
+    <url>/2022/01/23/summary/docker/docker-compose%20yml%20%E6%A0%B7%E6%9D%BF/</url>
+    <content><![CDATA[<h1 id="启动-mongo"><a href="#启动-mongo" class="headerlink" title="启动 mongo"></a>启动 mongo</h1><figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">services:</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">mongo:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">mongo:7.0.5</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">27000</span><span class="string">:27017</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/home/avan/docker-compose/base-env/mongo/data/db:/data/db</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/home/avan/docker-compose/base-env/mongo/backup:/backup</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="attr">MONGO_INITDB_ROOT_USERNAME:</span> <span class="string">用户名</span></span><br><span class="line">      <span class="attr">MONGO_INITDB_ROOT_PASSWORD:</span> <span class="string">密码</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="启动-postgres"><a href="#启动-postgres" class="headerlink" title="启动 postgres"></a>启动 postgres</h1><figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">services:</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">postgres:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">postgres:16</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">27100</span><span class="string">:5432</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/home/avan/docker-compose/base-env/postgres/data:/var/lib/postgresql/data</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/home/avan/docker-compose/base-env/postgres/backup:/backup</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="attr">POSTGRES_PASSWORD:</span> <span class="string">密码</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="启动-nginx"><a href="#启动-nginx" class="headerlink" title="启动 nginx"></a>启动 nginx</h1><p>TODO</p>
+]]></content>
+      <categories>
+        <category>汇总</category>
+        <category>docker</category>
+      </categories>
+      <tags>
+        <tag>汇总</tag>
+        <tag>docker-compose</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Terminal 中的 GitBash 中文乱码</title>
+    <url>/2023/01/23/summary/Windows%E7%B3%BB%E7%BB%9F/Terminal%20%E4%B8%AD%E7%9A%84%20GitBash%20%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81/</url>
+    <content><![CDATA[<h1 id="打开-GitBash-设置-chartset"><a href="#打开-GitBash-设置-chartset" class="headerlink" title="打开 GitBash 设置 chartset"></a>打开 GitBash 设置 chartset</h1><p><img src="http://cdn.easyhappy.top/obsidian/20230123152200.png"></p>
+<h1 id="在-Terminal-中设置环境变量指定语言"><a href="#在-Terminal-中设置环境变量指定语言" class="headerlink" title="在 Terminal 中设置环境变量指定语言"></a>在 Terminal 中设置环境变量指定语言</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim ~/.bashrc</span><br></pre></td></tr></table></figure>
+
+<p>添加</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> LANG=<span class="string">&#x27;zh_CN.UTF-8&#x27;</span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>汇总</category>
+        <category>Windows系统</category>
+      </categories>
+      <tags>
+        <tag>windows</tag>
+        <tag>汇总</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Utools 配置</title>
+    <url>/2022/01/23/summary/Windows%E7%B3%BB%E7%BB%9F/Utools%20%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<h1 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h1><h2 id="窗口切换"><a href="#窗口切换" class="headerlink" title="窗口切换"></a>窗口切换</h2><p>关键字 —— winman</p>
+<h2 id="Hoppscotch"><a href="#Hoppscotch" class="headerlink" title="Hoppscotch"></a>Hoppscotch</h2><p>快捷调试工具</p>
+<h2 id="程序员手册"><a href="#程序员手册" class="headerlink" title="程序员手册"></a>程序员手册</h2><p>linxu命令 —— linux<br>js文档 —— jswd<br>jQuery文档 —— jq<br>docker文档 —— doc<br>uToolsApi —— uto</p>
+<h2 id="变量命令方式兼大小写转换"><a href="#变量命令方式兼大小写转换" class="headerlink" title="变量命令方式兼大小写转换"></a>变量命令方式兼大小写转换</h2><p>直接输入文字</p>
+<h2 id="tinypng压缩图片"><a href="#tinypng压缩图片" class="headerlink" title="tinypng压缩图片"></a>tinypng压缩图片</h2><p>关键字 —— tin</p>
+<h2 id="npm包实时搜索"><a href="#npm包实时搜索" class="headerlink" title="npm包实时搜索"></a>npm包实时搜索</h2><p>关键字 —— npm</p>
+<h2 id="emoji搜索"><a href="#emoji搜索" class="headerlink" title="emoji搜索"></a>emoji搜索</h2><p>关键字 —— em</p>
+<h2 id="hosts切换"><a href="#hosts切换" class="headerlink" title="hosts切换"></a>hosts切换</h2><p>关键字 —— host</p>
+<h2 id="Chrome历史记录搜索"><a href="#Chrome历史记录搜索" class="headerlink" title="Chrome历史记录搜索"></a>Chrome历史记录搜索</h2><p>关键字 —— ch</p>
+<h2 id="Github助手"><a href="#Github助手" class="headerlink" title="Github助手"></a>Github助手</h2><p>设置查询用户 —— gitu<br>查询用户的仓库 —— gith<br>查询用户的start —— gits<br>查询所有仓库 —— gitr</p>
+<h2 id="浏览器书签搜索"><a href="#浏览器书签搜索" class="headerlink" title="浏览器书签搜索"></a>浏览器书签搜索</h2><p>关键字 —— bo</p>
+<h2 id="批量重命名"><a href="#批量重命名" class="headerlink" title="批量重命名"></a>批量重命名</h2><p>选中文件鼠标中间</p>
+<h2 id="计算稿纸"><a href="#计算稿纸" class="headerlink" title="计算稿纸"></a>计算稿纸</h2><p>直接输入带运算符</p>
+<h2 id="OCR-图片转文字"><a href="#OCR-图片转文字" class="headerlink" title="OCR-图片转文字"></a>OCR-图片转文字</h2><p>鼠标中键</p>
+<h2 id="剪切板"><a href="#剪切板" class="headerlink" title="剪切板"></a>剪切板</h2><p>关键字 —— clip</p>
+<h2 id="聚合翻译"><a href="#聚合翻译" class="headerlink" title="聚合翻译"></a>聚合翻译</h2><p>关键字 —— fanyi</p>
+<h2 id="本地搜索"><a href="#本地搜索" class="headerlink" title="本地搜索"></a>本地搜索</h2><p>关键字 —— find</p>
+]]></content>
+      <categories>
+        <category>汇总</category>
+        <category>Windows系统</category>
+      </categories>
+      <tags>
+        <tag>汇总</tag>
+        <tag>utools</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Windows 系统相关配置</title>
+    <url>/2022/01/23/summary/Windows%E7%B3%BB%E7%BB%9F/Windows%20%E7%B3%BB%E7%BB%9F%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<h1 id="powershell-7"><a href="#powershell-7" class="headerlink" title="powershell 7"></a>powershell 7</h1><p>安装</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">winget search Microsoft.PowerShell</span><br><span class="line">winget install <span class="literal">--id</span> Microsoft.Powershell.Preview <span class="literal">--source</span> winget</span><br></pre></td></tr></table></figure>
+
+<p>在 store 安装 terminal preview</p>
+<p>将 powershell 7(pwsh) 设置为默认</p>
+<h1 id="键盘配置"><a href="#键盘配置" class="headerlink" title="键盘配置"></a>键盘配置</h1><p><img src="https://pic1.zhimg.com/80/v2-4ccb797ee77be7ab8ac6d82adc041650_1440w.png" alt="image"></p>
+<h1 id="PowerToys"><a href="#PowerToys" class="headerlink" title="PowerToys"></a>PowerToys</h1><p><img src="https://pic4.zhimg.com/80/v2-70373d883052a1b490cff1efe175c49b_1440w.png" alt="image"></p>
+<p><img src="https://pica.zhimg.com/80/v2-8228e137955ffe0ae189d95375c158b0_1440w.png" alt="image"></p>
+<h1 id="使用-WSL-方案"><a href="#使用-WSL-方案" class="headerlink" title="使用 WSL 方案"></a>使用 WSL 方案</h1><h2 id="Terminal"><a href="#Terminal" class="headerlink" title="Terminal"></a>Terminal</h2><h3 id="设置默认终端为-wsl-的-ubuntu"><a href="#设置默认终端为-wsl-的-ubuntu" class="headerlink" title="设置默认终端为 wsl 的 ubuntu"></a>设置默认终端为 wsl 的 ubuntu</h3><p>直接在 terminal 的 setting json 中找到对应 uuid 填入</p>
+<h3 id="在终端开启代理"><a href="#在终端开启代理" class="headerlink" title="在终端开启代理"></a>在终端开启代理</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~</span><br><span class="line"><span class="built_in">touch</span> openproxy.sh</span><br><span class="line">vim openproxy.sh</span><br></pre></td></tr></table></figure>
+
+<p>填入下面内容</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> http_proxy=<span class="string">&quot;http://127.0.0.1:10887&quot;</span></span><br><span class="line"><span class="built_in">export</span> https_proxy=<span class="string">&quot;http://127.0.0.1:10887&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;already open proxy with 127.0.0.1:10887</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>127.0.0.1 如果是在虚拟机，需要填入vpn开启的 ip 地址</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">touch</span> closeproxy.sh</span><br><span class="line">vim closeproxy.sh</span><br></pre></td></tr></table></figure>
+
+<p>填入</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">unset</span> http_proxy</span><br><span class="line"><span class="built_in">unset</span> https_proxy</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;already close proxy&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>添加别名，在 <code>.bashrc</code> <code>.zshrc</code> 你使用的终端添加</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim .bashrc</span><br></pre></td></tr></table></figure>
+
+<p>加入</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">alias</span> openproxy=<span class="string">&quot;source ~/.command/openproxy.sh&quot;</span></span><br><span class="line"><span class="built_in">alias</span> closeproxy=<span class="string">&quot;source ~/.command/closeproxy.sh&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>也可以直接</p>
+<p><strong>.zshrc</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">alias</span> openproxy=<span class="string">&quot;export http_proxy=&#x27;http://192.168.0.103:21882&#x27;; export https_proxy=&#x27;http://192.168.0.103:21882&#x27;&quot;</span></span><br><span class="line"><span class="built_in">alias</span> closeproxy=<span class="string">&quot;unset http_proxy; unset https_proxy&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>使用方法</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 开启</span></span><br><span class="line">openproxy</span><br><span class="line"><span class="comment"># 关闭</span></span><br><span class="line">closeproxy</span><br></pre></td></tr></table></figure>
+
+<h3 id="安装-zsh"><a href="#安装-zsh" class="headerlink" title="安装 zsh"></a>安装 zsh</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install zsh</span><br><span class="line">sh -c <span class="string">&quot;<span class="subst">$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)</span>&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>zplun 用于安装插件</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.zplug/init.zsh</span><br><span class="line"></span><br><span class="line">zplug <span class="string">&quot;zsh-users/zsh-syntax-highlighting&quot;</span>, defer:2</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> ! zplug check --verbose; <span class="keyword">then</span></span><br><span class="line">    <span class="built_in">printf</span> <span class="string">&quot;Install? [y/N]: &quot;</span></span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">read</span> -q; <span class="keyword">then</span></span><br><span class="line">        <span class="built_in">echo</span>; zplug install</span><br><span class="line">    <span class="keyword">fi</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line">zplug load --verbose</span><br></pre></td></tr></table></figure>
+
+<p>编辑 .zshrc 文件，参考 </p>
+<blockquote>
+<p>sudo apt install cowsay</p>
+</blockquote>
+<h3 id="安装-nvm"><a href="#安装-nvm" class="headerlink" title="安装 nvm"></a>安装 nvm</h3><figure class="highlight zsh"><table><tr><td class="code"><pre><span class="line">curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | zsh</span><br></pre></td></tr></table></figure>
+
+<h1 id="使用-Git-Bash-方案"><a href="#使用-Git-Bash-方案" class="headerlink" title="使用 Git Bash 方案"></a>使用 Git Bash 方案</h1><p>安装 Windows 包管理工具，打开 powershell <code>非管理员模式</code></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Set-ExecutionPolicy RemoteSigned -Scope CurrentUser</span><br><span class="line">irm get.scoop.sh | iex</span><br></pre></td></tr></table></figure>
+
+<p>安装常用包</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># lazygit</span></span><br><span class="line">scoop bucket add extras</span><br><span class="line">scoop install lazygit</span><br><span class="line"></span><br><span class="line"><span class="comment"># neofetch</span></span><br><span class="line">scoop install neofetch</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>汇总</category>
+        <category>Windows系统</category>
+      </categories>
+      <tags>
+        <tag>windows</tag>
+        <tag>汇总</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Windows 系统装机配置指北</title>
+    <url>/2023/01/23/summary/Windows%E7%B3%BB%E7%BB%9F/Windows%20%E7%B3%BB%E7%BB%9F%E8%A3%85%E6%9C%BA%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8C%97/</url>
+    <content><![CDATA[<h1 id="Scoop"><a href="#Scoop" class="headerlink" title="Scoop"></a>Scoop</h1><p>安装 scoop 包管理</p>
+<blockquote>
+<p>不在推荐改目录</p>
+</blockquote>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 修改目錄</span></span><br><span class="line"><span class="comment"># [environment]::setEnvironmentVariable(&#x27;SCOOP&#x27;,&#x27;d:\software\scoop&#x27;,&#x27;User&#x27;)</span></span><br><span class="line"><span class="comment"># $env:SCOOP=&#x27;d:\software\scoop&#x27;</span></span><br><span class="line"><span class="built_in">iex</span> (<span class="built_in">new-object</span> net.webclient).downloadstring(<span class="string">&#x27;https://get.scoop.sh&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>添加 bucket 源</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">scoop bucket add extras</span><br><span class="line">scoop bucket add main</span><br><span class="line">scoop bucket add versions</span><br><span class="line">scoop bucket add nonportable</span><br></pre></td></tr></table></figure>
+
+<p>安装命令行工具</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">scoop install `</span><br><span class="line">main/vim</span><br><span class="line"></span><br><span class="line"><span class="comment"># 暂时不使用</span></span><br><span class="line"><span class="comment"># main/nvm `</span></span><br><span class="line"><span class="comment"># pnpm `</span></span><br></pre></td></tr></table></figure>
+
+<p>安装软件</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">scoop install `</span><br><span class="line">extras/postman `</span><br><span class="line">extras/mqttx `</span><br><span class="line">versions/snipaste<span class="literal">-beta</span> `</span><br><span class="line">extras/sourcetree `</span><br><span class="line">extras/telegram `</span><br><span class="line">extras/qq `</span><br><span class="line">extras/discord `</span><br><span class="line">extras/vscode `</span><br><span class="line">extras/jetbrains<span class="literal">-toolbox</span> `</span><br><span class="line">extras/apifox `</span><br><span class="line">extras/soapui `</span><br><span class="line">extras/firefox `</span><br><span class="line">extras/googlechrome `</span><br><span class="line">extras/picgo `</span><br><span class="line">nonportable/grammarly<span class="literal">-np</span> `</span><br><span class="line">extras/mongosh `</span><br><span class="line">extras/powertoys `</span><br><span class="line"></span><br><span class="line"><span class="comment"># 暫時不使用</span></span><br><span class="line"><span class="comment"># extras/spotify `</span></span><br><span class="line"><span class="comment"># extras/wechat `</span></span><br><span class="line"><span class="comment"># extras/obsidian `</span></span><br><span class="line"><span class="comment"># extras/wpsoffice `</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="特殊版本"><a href="#特殊版本" class="headerlink" title="特殊版本"></a>特殊版本</h1><p>[[软件推荐]]</p>
+<h1 id="相关配置"><a href="#相关配置" class="headerlink" title="相关配置"></a>相关配置</h1><p>[[相关配置]]</p>
+<h1 id="配置-git"><a href="#配置-git" class="headerlink" title="配置 git"></a>配置 git</h1><p>[[开发小锦囊#git 基本配置]]</p>
+<h1 id="Nvm"><a href="#Nvm" class="headerlink" title="Nvm"></a>Nvm</h1><p>[[Nvm]]</p>
+<h1 id="fnm"><a href="#fnm" class="headerlink" title="fnm"></a>fnm</h1><h2 id="powershell"><a href="#powershell" class="headerlink" title="powershell"></a>powershell</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 安装 fnm</span></span><br><span class="line">winget install Schniz.fnm</span><br><span class="line"><span class="comment"># 创建配置文件</span></span><br><span class="line"><span class="keyword">if</span> (-not (Test-Path <span class="variable">$profile</span>)) &#123; New-Item <span class="variable">$profile</span> -Force &#125;</span><br><span class="line"><span class="comment"># 打开文件目录</span></span><br><span class="line">start &lt;目录&gt;</span><br></pre></td></tr></table></figure>
+
+<p>添加到配置文件中</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">fnm <span class="built_in">env</span> --use-on-cd --shell powershell | Out-String | Invoke-Expression</span><br></pre></td></tr></table></figure>
+
+<h2 id="wsl"><a href="#wsl" class="headerlink" title="wsl"></a>wsl</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -fsSL https://fnm.vercel.app/install | zsh</span><br></pre></td></tr></table></figure>
+
+<h1 id="配置-vim"><a href="#配置-vim" class="headerlink" title="配置 vim"></a>配置 vim</h1><p>[[Vim配置文件]]</p>
+<h1 id="npm-global-package"><a href="#npm-global-package" class="headerlink" title="npm global package"></a>npm global package</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm i -g `</span><br><span class="line">git-open `</span><br><span class="line">yarn `</span><br><span class="line">serve `</span><br><span class="line">http-server `</span><br><span class="line">pnpm `</span><br><span class="line">nrm `</span><br><span class="line">ts-node</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>与 mac 同步 [[Mac系统装机配置指北#Pnpm global package]]</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>汇总</category>
+        <category>Windows系统</category>
+      </categories>
+      <tags>
+        <tag>windows</tag>
+        <tag>汇总</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>从零实践webpack</title>
+    <url>/2023/06/30/summary/webpack/%E4%BB%8E%E9%9B%B6%E5%AE%9E%E8%B7%B5webpack/</url>
+    <content><![CDATA[<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> zero2one-webpack</span><br><span class="line"><span class="built_in">cd</span> zero2one-webpack</span><br><span class="line">pnpm init</span><br><span class="line">pnpm i -D webpack webpack-cli @types/node style-loader css-loader csv-loader xml-loader toml yamljs json5 html-webpack-plugin webpack-dev-server express webpack-dev-middleware webpack-hot-middleware webpack-visualizer-plugin bundle-stats-webpack-plugin</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pnpm i lodash</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npx webpack</span><br></pre></td></tr></table></figure>
+
+<h1 id="主要概念"><a href="#主要概念" class="headerlink" title="主要概念"></a>主要概念</h1><p>entry —— 入口文件，从这个位置开始分析引用<br>output —— 输出文件<br>module —— 模块中可以定义多组规则，规则里面使用对应的加载器<br>loader —— 加载器<br>plugin —— 插件，拓展功能<br>mode —— 开发环境不压缩代码，生产环境会压缩代码</p>
+<h1 id="Loader"><a href="#Loader" class="headerlink" title="Loader"></a>Loader</h1><p>loader 的加载顺序为从后往前。</p>
+<h2 id="加载-css"><a href="#加载-css" class="headerlink" title="加载 css"></a>加载 css</h2><p>通过 <code>css-loader</code> 获取 css 文件的内容，在通过 <code>style-loader</code> 将 css 放到 header 中显示出来。</p>
+<h2 id="加载图片-字体"><a href="#加载图片-字体" class="headerlink" title="加载图片&#x2F;字体"></a>加载图片&#x2F;字体</h2><p>webpack5 自带了 <code>asset/resource</code> loader 用来加载</p>
+<h2 id="加载数据"><a href="#加载数据" class="headerlink" title="加载数据"></a>加载数据</h2><p>使用 <code>csv-loader</code> 和 <code>xml-loader</code> 分别加载 csv&#x2F;tsv 和 xml 的文件。 </p>
+<blockquote>
+<p>JSON 在 webpack5 内置了 loader 进行加载</p>
+</blockquote>
+<h3 id="不使用加载器，使用解析器进行加载数据"><a href="#不使用加载器，使用解析器进行加载数据" class="headerlink" title="不使用加载器，使用解析器进行加载数据"></a>不使用加载器，使用解析器进行加载数据</h3><p>在 module 中，指定 type 为 json，接着使用对应的 parse 解析即可。</p>
+<blockquote>
+<p>toml yamljs json5</p>
+</blockquote>
+<h1 id="Plugin"><a href="#Plugin" class="headerlink" title="Plugin"></a>Plugin</h1><p>plugin 为一个数组，接收不同插件的实例。</p>
+<h2 id="html-webpack-plugin"><a href="#html-webpack-plugin" class="headerlink" title="html-webpack-plugin"></a>html-webpack-plugin</h2><p>自动创建 html 文件，如果更新出入口文件，自动生成对应的 script 标签引入。</p>
+<h1 id="Source-Map"><a href="#Source-Map" class="headerlink" title="Source Map"></a>Source Map</h1><p><code>devtool: &#39;inline-source-map&#39;</code></p>
+<p>开启 source map 可以生成一个映射表，方便在调试的时候对应实际的代码。在 mode 为开发模式的时候，代码虽然已经不压缩了，但是没有办法对应上实际的代码。</p>
+<h1 id="Watch-文件变化"><a href="#Watch-文件变化" class="headerlink" title="Watch 文件变化"></a>Watch 文件变化</h1><p>一种可以直接在 webpack 后面添加 –watch 进行监听文件变化自动重新编译。</p>
+<p>上面那种方式不会自动刷新浏览器，通过 <code>webpack-dev-server</code> 可以使用 websocket 通知浏览器自动刷新。</p>
+<p>配置 <code>wepback.config.js</code> 中的 devServer 和 optimzation 字段即可</p>
+<h2 id="使用-webpack-dev-middleware-配合-express-使用"><a href="#使用-webpack-dev-middleware-配合-express-使用" class="headerlink" title="使用 webpack-dev-middleware 配合 express 使用"></a>使用 webpack-dev-middleware 配合 express 使用</h2><p><code>webpack.config.js</code> 中配置 <code>output.publicPublic: &#39;/&#39;</code></p>
+<p>在 express 中使用 <code>webpack-dev-middleware</code> 中间件，并指定相同的 <code>publicPath</code> 即可</p>
+<blockquote>
+<p>目前只会重新编译不会刷新浏览器，需要搭配 webpack-hot-middleware<br>WebStorm 需关闭 safe save，新版好像没办法关闭这个</p>
+</blockquote>
+<h1 id="分割代码"><a href="#分割代码" class="headerlink" title="分割代码"></a>分割代码</h1><h2 id="直接-entry-分割"><a href="#直接-entry-分割" class="headerlink" title="直接 entry 分割"></a>直接 entry 分割</h2><p>这种方式会导致同一个内容被复制多份</p>
+<h2 id="分块并阻止复制"><a href="#分块并阻止复制" class="headerlink" title="分块并阻止复制"></a>分块并阻止复制</h2><h3 id="通过-dependOn-进行依赖选择"><a href="#通过-dependOn-进行依赖选择" class="headerlink" title="通过 dependOn 进行依赖选择"></a>通过 dependOn 进行依赖选择</h3><p>与 entry 分割基本一致，只是在 dependOn 中指定共享的 入口名</p>
+<h3 id="SplitChunksPluign-自动分块"><a href="#SplitChunksPluign-自动分块" class="headerlink" title="SplitChunksPluign 自动分块"></a>SplitChunksPluign 自动分块</h3><p>自动将文件中用到的通过 npm 包抽离成一个 chunk</p>
+<h2 id="动态导入"><a href="#动态导入" class="headerlink" title="动态导入"></a>动态导入</h2><p>使用 <code>import()</code> 动态导入，自动分块</p>
+<blockquote>
+<p>因为返回的是 <code>Promise</code> ，所以浏览器版本过低是需要使用垫片（promise-polyfill）</p>
+</blockquote>
+<h1 id="预请求-预加载"><a href="#预请求-预加载" class="headerlink" title="预请求&#x2F;预加载"></a>预请求&#x2F;预加载</h1><h2 id="preFetch-预请求"><a href="#preFetch-预请求" class="headerlink" title="preFetch 预请求"></a>preFetch 预请求</h2><p><code>import(/* webpackPrefetch: true */, &#39;./path/to/LoginModal.js&#39;)</code></p>
+<p>在浏览器空闲的时候去请求，当需要的时候可以立刻请求。</p>
+<blockquote>
+<p>上面这句话会在浏览器 header 中添加<br> <link rel="prefet" href = "login-mode-chunk.js"></p>
+</blockquote>
+<h2 id="preLoad-预加载"><a href="#preLoad-预加载" class="headerlink" title="preLoad 预加载"></a>preLoad 预加载</h2><p><code>import(/* webpackPreLoad: true */ &#39;echatLibray&#39;)</code></p>
+<p>预加载块会与父快并行加载，等父块加载完。马上进行加载。</p>
+<h1 id="缓存"><a href="#缓存" class="headerlink" title="缓存"></a>缓存</h1><h2 id="设置-hash-值"><a href="#设置-hash-值" class="headerlink" title="设置 hash 值"></a>设置 hash 值</h2><p>通过在 output 时指定 [contenthash] 来设置他的哈希值。</p>
+<h2 id="切割包-hash"><a href="#切割包-hash" class="headerlink" title="切割包 hash"></a>切割包 hash</h2><p>在 <code>splitChunks</code> 中定义 <code>cacheGroups</code> 字的的匹配规则和生成的包名</p>
+<blockquote>
+<p>其中一个依赖 bundle 发生改变，全部的 hash 值都发生了改变。<br>需要配置 <code>optimization.moduleIdls: deterministic</code> 这样只会改变修改了的文件 </p>
+</blockquote>
+<h1 id="CLI-参数"><a href="#CLI-参数" class="headerlink" title="CLI 参数"></a>CLI 参数</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npx webpack --config webpack.config.js</span><br></pre></td></tr></table></figure>
+
+<h1 id="bundle-分析"><a href="#bundle-分析" class="headerlink" title="bundle 分析"></a>bundle 分析</h1><h2 id="webpack-visualizer"><a href="#webpack-visualizer" class="headerlink" title="webpack-visualizer"></a><a href="https://chrisbateman.github.io/webpack-visualizer/">webpack-visualizer</a></h2><h2 id="Webpack-Chart"><a href="#Webpack-Chart" class="headerlink" title="Webpack Chart"></a><a href="https://alexkuz.github.io/webpack-chart/">Webpack Chart</a></h2><h2 id="推荐-webpack-bundle-anzlyer"><a href="#推荐-webpack-bundle-anzlyer" class="headerlink" title="推荐 webpack-bundle-anzlyer"></a><a href="https://github.com/webpack-contrib/webpack-bundle-analyzer">推荐 webpack-bundle-anzlyer</a></h2><h2 id="推荐-bundle-stats"><a href="#推荐-bundle-stats" class="headerlink" title="推荐 bundle-stats"></a><a href="https://github.com/relative-ci/bundle-stats/tree/master/packages/webpack-plugin">推荐 bundle-stats</a></h2><p>有个显示的 bug，需要将 tab 栏的 z-index 设置为 0</p>
+<h1 id="webpack-构建库"><a href="#webpack-构建库" class="headerlink" title="webpack 构建库"></a>webpack 构建库</h1><p>指定好 <code>output.library</code> 打包的类型和打包后的调用变量名<br>通过 <code>externals</code> 忽略不想纳入打包中的外部依赖，同时该依赖为 dev 依赖</p>
+<h1 id="设置环境变量"><a href="#设置环境变量" class="headerlink" title="设置环境变量"></a>设置环境变量</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npx webpack --<span class="built_in">env</span> name=avan --<span class="built_in">env</span> production</span><br><span class="line"><span class="comment"># &#123;</span></span><br><span class="line"><span class="comment">#   name: &#x27;avan&#x27;,</span></span><br><span class="line"><span class="comment">#   production: true</span></span><br><span class="line"><span class="comment"># &#125;</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>默认值为 true</p>
+</blockquote>
+<h1 id="优化构建性能"><a href="#优化构建性能" class="headerlink" title="优化构建性能"></a>优化构建性能</h1><ol>
+<li>按需使用开发模式和生产模式</li>
+<li>及时更新包管理工具的版本，提高解析速度</li>
+<li>使用最新版的webpack</li>
+<li>精确控制 loader 的匹配文件，test 关键字</li>
+<li>缩小 loader 的检索范围，include 关键字</li>
+<li>每个 lodaer 都有对应的启动时间，尽可能少的使用 loader</li>
+<li>如果不需要 npm link 的功能，关闭 <code>resolve.symlinks: false</code></li>
+<li>如果使用的 plugin 不依赖与上下文（context）则关闭 <code>resolve.cacheWithContext: false</code></li>
+<li>尽可能减少 <code>resolve.modules</code>、<code>resolve.extensions</code>、<code>resolve.mainFiles</code>、<code>resolve.descriptionFiles</code> 的项目数量，他们会增加文件系统的调用数量</li>
+<li>使用 <code>DllPlugin</code> 将改动小的代码单独编译，但会提高构建复杂性</li>
+<li>减小编译的总大小，如：更小的库、多页面使用 <code>SplitChunksPlugin</code> 、只编译开发的部分</li>
+<li>使用 <code>thread-loader</code> 将较大开销的内容放到线程池</li>
+<li>使用 webpack 的 <code>cache</code> 字段，并在依赖安装前删除缓存目录（<code>postinstall</code>）</li>
+<li>可以关闭不必要的插件，如：进度插件 <code>ProgressPlugin</code></li>
+<li>监听文件不要使用其他工具，使用 <code>watch</code> 模式。有些花费比较大的监听，可以设置 <code>watchOptions.poll</code> 增加轮询间隔。</li>
+<li>按需设置 <code>devtool</code> 的配置，大多情况下 <code>eval-cheap-module-source-map</code> 是最好选择</li>
+<li>开发模式不建议使用的插件 <code>TerserPlugin</code>、<code>AggressiveSplittingPlugin</code>、<code>AggressiveMergingPlugin</code>、<code>ModuleConcatenationPlugin</code></li>
+<li>开发模式不建议生成 <code>[fullhash]</code>&#x2F;<code>[chunkhash]</code>&#x2F;<code>[contenthash]</code>等关键字</li>
+<li>开启 <code>optimization.runtimeChunk: truo</code> </li>
+<li>项目庞大的时候，不要关闭 <code>optimization</code> 中的 <code>removeAvailableModules</code>、<code>removeEmptyChunks</code>、<code>splitChunks</code> 这些开销很大</li>
+<li>必要时关闭输出信息 <code>output.pathinfo: false</code></li>
+<li>不要使用 <code>8.9.10</code> ~ <code>9.11.1</code> 版本的 nodejs，Map 和 Set 存在性能回归</li>
+<li><code>ts-loader</code> 关闭类型检测 <code>options.transplieOnly: true</code>。使用 <code>fork-ts-checker-notifier-webpack-plugin</code> 和 <code>fork-ts-checker-webpack-plugin</code> 插件做检测。他会另开一个线程执行。</li>
+<li><code>babel</code> 尽可能减少预设或插件数量</li>
+<li><code>node-sass</code> 会阻塞线程，使用 <code>thread-loader</code> 设置 <code>workerParalleJobs: 2</code></li>
+</ol>
+<h1 id="不同框架的热刷新功能"><a href="#不同框架的热刷新功能" class="headerlink" title="不同框架的热刷新功能"></a>不同框架的热刷新功能</h1><p>vue —— <code>vue-loader</code> <code>vue-template-compiler</code><br>react —— <code>react-hot-loader</code></p>
+<h1 id="Tree-Shaking-摇树"><a href="#Tree-Shaking-摇树" class="headerlink" title="Tree Shaking 摇树"></a>Tree Shaking 摇树</h1><p>它虽然可以删除未使用到的 import 代码。但是因为有时候我们有些引入的代码是不需要而外引用的，比如：css样式，文件内部已经执行了代码等。</p>
+<p>所以我们需要标记副作用，告诉哪些文件是特殊的。</p>
+<p>kj如果确保全局都没有副作用，可以直接在 <code>package.json</code> 中配置 <code>&quot;sideEffectsk&quot;: false</code> 表示所有文件都没有副作用，可以安心删除<br>或者通过正则匹配指定文件 <code>&quot;sideEffects&quot;: [&quot;./src/some-side-effectful-file.js&quot;, &quot;*.css&quot;]</code> 存在副作用的文件</p>
+<h2 id="发挥摇树的优势"><a href="#发挥摇树的优势" class="headerlink" title="发挥摇树的优势"></a>发挥摇树的优势</h2><ol>
+<li>使用 <code>ES2015</code> 模块导入导出</li>
+<li>确保没有把代码编译为 <code>CommonJS</code> 模块（@babel&#x2F;preset-env）</li>
+<li>在 <code>package.json</code> 配置 <code>sideEffects</code></li>
+<li>开启 <code>production</code> 模式，以及相关判断减少包的大小</li>
+</ol>
+<h1 id="懒加载"><a href="#懒加载" class="headerlink" title="懒加载"></a>懒加载</h1><p><code>() =&gt; import(path)</code> 返回一个promise，如果需要使用，可以在 <code>.then</code> 中获取 <code>default</code> 的内容</p>
+<h1 id="使用-ts"><a href="#使用-ts" class="headerlink" title="使用 ts"></a>使用 ts</h1><p>使用 <code>ts-loader</code> 或者 <code>@babel/preset-typescript</code> 进行解析 ts 文件</p>
+<p>ts 中遇到 webpack 内置变量报错可以</p>
+<figure class="highlight ts"><table><tr><td class="code"><pre><span class="line"><span class="comment">/// &lt;reference types=&quot;webpack/module&quot; /&gt;</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">import</span>.<span class="property">meta</span>.<span class="property">webpack</span>);</span><br></pre></td></tr></table></figure>
+
+<h1 id="配置-images-资源输出位置"><a href="#配置-images-资源输出位置" class="headerlink" title="配置 images 资源输出位置"></a>配置 images 资源输出位置</h1><p><code>assetModuleFilename: &#39;images/[hash][ext][query]&#39;</code></p>
+<blockquote>
+<p>需要在 loader 的时候匹配到图片，并使用 <code>asset/resource</code> 进行加载</p>
+</blockquote>
+<h1 id="指定特定文件的输出位置"><a href="#指定特定文件的输出位置" class="headerlink" title="指定特定文件的输出位置"></a>指定特定文件的输出位置</h1><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="attr">output</span>: &#123; <span class="comment">// 输出文件</span></span><br><span class="line">  ...</span><br><span class="line">  <span class="attr">assetModuleFilename</span>: <span class="string">&#x27;images/[hash][ext][query]&#x27;</span> <span class="comment">// 指定 image 文件的输出位置</span></span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<h1 id="使用内联导入方式，获取相应-url"><a href="#使用内联导入方式，获取相应-url" class="headerlink" title="使用内联导入方式，获取相应 url"></a>使用内联导入方式，获取相应 url</h1><figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  test<span class="punctuation">:</span> /\.svg/<span class="punctuation">,</span></span><br><span class="line">  type<span class="punctuation">:</span> &#x27;asset/inline&#x27;</span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="css文件优化"><a href="#css文件优化" class="headerlink" title="css文件优化"></a>css文件优化</h1><p>生产模式下可以使用 <code>MiniCssExtractPlugin.loader</code> 替换 <code>style-loader</code>。通过环境变量控制</p>
+<h1 id="配置别名"><a href="#配置别名" class="headerlink" title="配置别名"></a>配置别名</h1><figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  alias<span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    &#x27;@&#x27;<span class="punctuation">:</span> path.resolve(&#x27;./src&#x27;)</span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>汇总</category>
+      </categories>
+      <tags>
+        <tag>webpack</tag>
+        <tag>汇总</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>npm 知识点</title>
+    <url>/2023/01/23/summary/npm/npm%20%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
+    <content><![CDATA[<h1 id="防止意外发布代码"><a href="#防止意外发布代码" class="headerlink" title="防止意外发布代码"></a>防止意外发布代码</h1><p><code>package.json</code> 中 <code>&quot;private&quot;: true</code> 可以防止意外发布代码 <code>npm public</code>。主要应用于一些业务代码，如前端、后端页面代码。</p>
+<h1 id="指定仓库源"><a href="#指定仓库源" class="headerlink" title="指定仓库源"></a>指定仓库源</h1><blockquote>
+<p>packages.aliyun.com&#x2F;6247b3d254d03ae1449d&#x2F;npm&#x2F;npm-registry&#x2F; 是仓库源地址</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">registry=https://packages.aliyun.com/6247b3d254d03ae1449d/npm/npm-registry/</span><br></pre></td></tr></table></figure>
+
+<h1 id="token"><a href="#token" class="headerlink" title="token"></a>token</h1><h2 id="创建token"><a href="#创建token" class="headerlink" title="创建token"></a>创建token</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm create token</span><br></pre></td></tr></table></figure>
+
+<h2 id="使用token授权"><a href="#使用token授权" class="headerlink" title="使用token授权"></a>使用token授权</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">//packages.aliyun.com/6247b3d254d03ae1449d/npm/npm-registry/:_authToken=b7a28d1d-f7f3-4383-b896-3e92616cd</span><br></pre></td></tr></table></figure>
+
+<h2 id="通过token进行login"><a href="#通过token进行login" class="headerlink" title="通过token进行login"></a>通过token进行login</h2><p>create token</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ nrm add 源名字 源地址</span><br><span class="line">$ nrm use 源名字</span><br><span class="line">$ npm login</span><br><span class="line">用户名</span><br><span class="line">密码</span><br><span class="line">邮箱</span><br><span class="line">$ npm token create</span><br><span class="line">密码</span><br></pre></td></tr></table></figure>
+
+<p>use token <code>.nrmrc</code></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//源域名/:_authToken=你创建的token</span><br><span class="line">registry = &quot;源地址/&quot;</span><br></pre></td></tr></table></figure>
+
+<h1 id="单独为某些依赖设置安装源"><a href="#单独为某些依赖设置安装源" class="headerlink" title="单独为某些依赖设置安装源"></a>单独为某些依赖设置安装源</h1><p>example：以@avan开头的依赖包，走<a href="https://npm.avan.com/">https://npm.avan.com</a></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm config <span class="built_in">set</span> @avan:registry=https://npm.avan.com</span><br></pre></td></tr></table></figure>
+
+<h1 id="新建用户"><a href="#新建用户" class="headerlink" title="新建用户"></a>新建用户</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm adduser --registry 需要注册的地址</span><br><span class="line">$ 账号名</span><br><span class="line">$ 密码</span><br><span class="line">$ 邮箱</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>汇总</category>
+        <category>npm</category>
+      </categories>
+      <tags>
+        <tag>npm</tag>
+        <tag>汇总</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>npm 配置</title>
+    <url>/2023/01/23/summary/npm/npm%20%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<h1 id="取消动态版本号"><a href="#取消动态版本号" class="headerlink" title="取消动态版本号"></a>取消动态版本号</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 取消新安装的包的 ^ 前缀</span></span><br><span class="line">npm config <span class="built_in">set</span> -g save-prefix=<span class="string">&#x27;&#x27;</span></span><br><span class="line">pnpm config <span class="built_in">set</span> -g save-prefix=<span class="string">&#x27;&#x27;</span></span><br><span class="line">yarn config <span class="built_in">set</span> save-prefix <span class="string">&quot;&quot;</span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>汇总</category>
+        <category>npm</category>
+      </categories>
+      <tags>
+        <tag>npm</tag>
+        <tag>汇总</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>搭建 npm 私服</title>
+    <url>/2024/06/30/summary/npm/%E6%90%AD%E5%BB%BA%20npm%20%E7%A7%81%E6%9C%8D/</url>
+    <content><![CDATA[<h1 id="启动-docker-服务"><a href="#启动-docker-服务" class="headerlink" title="启动 docker 服务"></a>启动 docker 服务</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">V_PATH=&lt;数据文件目录路径&gt;; docker run -it -u 1000 --name verdaccio \</span><br><span class="line">-p 4873:4873 \</span><br><span class="line">-v <span class="variable">$V_PATH</span>/conf:/verdaccio/conf \</span><br><span class="line">-v <span class="variable">$V_PATH</span>/storage:/verdaccio/storage \</span><br><span class="line">-v <span class="variable">$V_PATH</span>/plugins:/verdaccio/plugins \</span><br><span class="line">-e VERDACCIO_PUBLIC_URL=<span class="string">&#x27;协议://域名&#x27;</span> \</span><br><span class="line">verdaccio/verdaccio</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>-u 是对应用户的 uid</p>
+</blockquote>
+<p><strong>conf&#x2F;config.yaml</strong></p>
+<p><a href="https://github.com/verdaccio/verdaccio/tree/master/packages/config/src/conf">官方参考文件</a></p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 包存储的路径</span></span><br><span class="line"><span class="attr">storage:</span> <span class="string">/verdaccio/storage</span></span><br><span class="line"></span><br><span class="line"><span class="attr">auth:</span></span><br><span class="line">  <span class="attr">htpasswd:</span></span><br><span class="line">    <span class="attr">file:</span> <span class="string">/verdaccio/conf/htpasswd</span></span><br><span class="line">    <span class="comment"># -1 不允许注册</span></span><br><span class="line">    <span class="comment"># 不设置则不限制</span></span><br><span class="line">    <span class="attr">max_users:</span> <span class="number">-1</span></span><br><span class="line"><span class="attr">security:</span></span><br><span class="line">  <span class="attr">api:</span></span><br><span class="line">    <span class="attr">jwt:</span></span><br><span class="line">      <span class="attr">sign:</span></span><br><span class="line">        <span class="attr">expiresIn:</span> <span class="string">60d</span></span><br><span class="line">        <span class="attr">notBefore:</span> <span class="number">1</span></span><br><span class="line">  <span class="attr">web:</span></span><br><span class="line">    <span class="attr">sign:</span></span><br><span class="line">      <span class="attr">expiresIn:</span> <span class="string">7d</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 上传的包大小</span></span><br><span class="line"><span class="attr">max_body_size:</span> <span class="string">300mb</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 链接其他 npm 源</span></span><br><span class="line"><span class="attr">uplinks:</span></span><br><span class="line">  <span class="attr">npmjs:</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">https://registry.npmmirror.com/</span></span><br><span class="line"></span><br><span class="line"><span class="attr">packages:</span></span><br><span class="line">  <span class="attr">&#x27;@whalewave/*&#x27;:</span></span><br><span class="line">    <span class="attr">access:</span> <span class="string">$authenticated</span></span><br><span class="line">    <span class="attr">publish:</span> <span class="string">$authenticated</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">&#x27;@*/*&#x27;:</span></span><br><span class="line">    <span class="comment"># 范围限制的包</span></span><br><span class="line">    <span class="attr">access:</span> <span class="string">$all</span></span><br><span class="line">    <span class="attr">publish:</span> <span class="string">$authenticated</span></span><br><span class="line">    <span class="attr">proxy:</span> <span class="string">npmjs</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">&#x27;**&#x27;:</span></span><br><span class="line">    <span class="attr">access:</span> <span class="string">$all</span></span><br><span class="line">    <span class="attr">publish:</span> <span class="string">$authenticated</span></span><br><span class="line">    <span class="attr">proxy:</span> <span class="string">npmjs</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># To use `npm audit` uncomment the following section</span></span><br><span class="line"><span class="attr">middlewares:</span></span><br><span class="line">  <span class="attr">audit:</span></span><br><span class="line">    <span class="attr">enabled:</span> <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># log settings</span></span><br><span class="line"><span class="attr">log:</span></span><br><span class="line">  <span class="bullet">-</span> &#123; <span class="attr">type:</span> <span class="string">stdout</span>, <span class="attr">format:</span> <span class="string">pretty</span>, <span class="attr">level:</span> <span class="string">trace</span> &#125;</span><br><span class="line">  <span class="comment">#- &#123;type: file, path: verdaccio.log, level: info&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>conf&#x2F;htpasswd</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">admin:$2y$10$f3jh1gL0lcx2J6PwK0/4VOMBIQgOHxV3ZU/.vPSX1unZ4DL9F07da</span><br><span class="line">lzm:$2y$10$f3jh1gL0lcx2J6PwK0/4VOMBIQgOHxV3ZU/.vPSX1unZ4DL9F07da</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>账号: admin<br>密码: admin</p>
+</blockquote>
+<h1 id="htpasswd-注册账号"><a href="#htpasswd-注册账号" class="headerlink" title="htpasswd 注册账号"></a>htpasswd 注册账号</h1><p><a href="https://hostingcanada.org/htpasswd-generator/">https://hostingcanada.org/htpasswd-generator/</a></p>
+<h1 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> registry &lt;协议://域名&gt;</span><br><span class="line">npm login --registry &lt;协议://域名&gt;</span><br><span class="line">npm config <span class="built_in">set</span> always-auth <span class="literal">true</span></span><br><span class="line">npm i @whalewave/adm-ui</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight tsx"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">Button</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;@whalewave/adm-ui&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="title function_">default</span> () =&gt; &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">Button</span> <span class="attr">type</span>=<span class="string">&quot;lg&quot;</span>/&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">Button</span> <span class="attr">type</span>=<span class="string">&quot;sm&quot;</span>/&gt;</span></span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 查看配置文件</span></span><br><span class="line">npm config get registry</span><br><span class="line"><span class="comment"># 还原</span></span><br><span class="line">npm config <span class="built_in">set</span> registry https://registry.npmmirror.com/</span><br></pre></td></tr></table></figure>
+
+<h1 id="重启"><a href="#重启" class="headerlink" title="重启"></a>重启</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">VERDACCIO_PUBLIC_URL=<span class="string">&#x27;&lt;协议://域名&gt;&#x27;</span>; docker restart 容器<span class="built_in">id</span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>汇总</category>
+        <category>npm</category>
+      </categories>
+      <tags>
+        <tag>npm</tag>
+        <tag>汇总</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Mapbox 相关知识点</title>
+    <url>/2023/03/22/summary/Mapbox%20%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
     <content><![CDATA[<h1 id="1-表达式设置属性默认值"><a href="#1-表达式设置属性默认值" class="headerlink" title="1. 表达式设置属性默认值"></a>1. 表达式设置属性默认值</h1><figure class="highlight json"><table><tr><td class="code"><pre><span class="line">paint<span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;text-color&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">&quot;coalesce&quot;</span><span class="punctuation">,</span> <span class="punctuation">[</span><span class="string">&quot;get&quot;</span><span class="punctuation">,</span> <span class="string">&quot;text-color&quot;</span><span class="punctuation">]</span><span class="punctuation">,</span> <span class="string">&quot;#348238&quot;</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
 
 <blockquote>
@@ -4721,55 +5472,8 @@
       </tags>
   </entry>
   <entry>
-    <title>Vpn 推荐</title>
-    <url>/2025/06/30/summary/Vpn%20%E6%8E%A8%E8%8D%90/</url>
-    <content><![CDATA[<h1 id="EFCloud"><a href="#EFCloud" class="headerlink" title="EFCloud"></a>EFCloud</h1><p><a href="https://www.efcloud.cc/">https://www.efcloud.cc</a></p>
-<p><img src="http://cdn.easyhappy.top/obsidian/20230110104224.png"></p>
-<h1 id="最萌云"><a href="#最萌云" class="headerlink" title="最萌云"></a>最萌云</h1><p><a href="https://ure.best/">https://ure.best</a></p>
-<p><img src="http://cdn.easyhappy.top/obsidian/20230110145531.png"></p>
-<h1 id="HKSSNetwork"><a href="#HKSSNetwork" class="headerlink" title="HKSSNetwork"></a>HKSSNetwork</h1><p><a href="https://cn1.hkss-net.xyz/">https://cn1.hkss-net.xyz</a></p>
-<p><img src="http://cdn.easyhappy.top/obsidian/20230110104812.png"></p>
-<h1 id="西部世界-WestWorldss"><a href="#西部世界-WestWorldss" class="headerlink" title="西部世界 WestWorldss"></a>西部世界 WestWorldss</h1><p><a href="https://sjssr.fun/">https://sjssr.fun/</a></p>
-<p><a href="https://wwsj9688.xyz/">https://wwsj9688.xyz</a></p>
-<p><img src="http://cdn.easyhappy.top/obsidian/20230110103323.png"></p>
-<blockquote>
-<p>VIP优惠卷 50元<br>新用户优惠卷 20元</p>
-</blockquote>
-<h1 id="expressvpn"><a href="#expressvpn" class="headerlink" title="expressvpn"></a>expressvpn</h1><p><a href="https://www.expressvpn.com/">https://www.expressvpn.com</a></p>
-<p><img src="http://cdn.easyhappy.top/obsidian/20230110103510.png"></p>
-<blockquote>
-<p>巨贵</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>汇总</category>
-      </categories>
-      <tags>
-        <tag>汇总</tag>
-        <tag>vpn</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>css知识点</title>
-    <url>/2025/06/30/summary/css/</url>
-    <content><![CDATA[<h1 id="CssModule"><a href="#CssModule" class="headerlink" title="CssModule"></a>CssModule</h1><p>在 modules 中某个 class 不需要随机数</p>
-<figure class="highlight scss"><table><tr><td class="code"><pre><span class="line">:<span class="built_in">global</span>(.blue) &#123;</span><br><span class="line">  <span class="attribute">background</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h1 id="where-伪类"><a href="#where-伪类" class="headerlink" title=":where 伪类"></a>:where 伪类</h1><p>降低优先级为 0</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-pseudo">:where</span>(<span class="selector-class">.name</span>) &#123;</span><br><span class="line">  <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h1 id="水平和垂直滚动条交汇处样式调整"><a href="#水平和垂直滚动条交汇处样式调整" class="headerlink" title="水平和垂直滚动条交汇处样式调整"></a>水平和垂直滚动条交汇处样式调整</h1><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">::--webkit-scrollbar-corner &#123;</span><br><span class="line">  <span class="attribute">background</span>: transparent;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>汇总</category>
-      </categories>
-      <tags>
-        <tag>css</tag>
-        <tag>汇总</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Obsidian 配置</title>
-    <url>/2025/06/30/summary/Obsidian%20%E9%85%8D%E7%BD%AE/</url>
+    <url>/2024/06/30/summary/Obsidian%20%E9%85%8D%E7%BD%AE/</url>
     <content><![CDATA[<h1 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h1><table>
 <thead>
 <tr>
@@ -4861,8 +5565,55 @@
       </tags>
   </entry>
   <entry>
+    <title>Vpn 推荐</title>
+    <url>/2024/06/30/summary/Vpn%20%E6%8E%A8%E8%8D%90/</url>
+    <content><![CDATA[<h1 id="EFCloud"><a href="#EFCloud" class="headerlink" title="EFCloud"></a>EFCloud</h1><p><a href="https://www.efcloud.cc/">https://www.efcloud.cc</a></p>
+<p><img src="http://cdn.easyhappy.top/obsidian/20230110104224.png"></p>
+<h1 id="最萌云"><a href="#最萌云" class="headerlink" title="最萌云"></a>最萌云</h1><p><a href="https://ure.best/">https://ure.best</a></p>
+<p><img src="http://cdn.easyhappy.top/obsidian/20230110145531.png"></p>
+<h1 id="HKSSNetwork"><a href="#HKSSNetwork" class="headerlink" title="HKSSNetwork"></a>HKSSNetwork</h1><p><a href="https://cn1.hkss-net.xyz/">https://cn1.hkss-net.xyz</a></p>
+<p><img src="http://cdn.easyhappy.top/obsidian/20230110104812.png"></p>
+<h1 id="西部世界-WestWorldss"><a href="#西部世界-WestWorldss" class="headerlink" title="西部世界 WestWorldss"></a>西部世界 WestWorldss</h1><p><a href="https://sjssr.fun/">https://sjssr.fun/</a></p>
+<p><a href="https://wwsj9688.xyz/">https://wwsj9688.xyz</a></p>
+<p><img src="http://cdn.easyhappy.top/obsidian/20230110103323.png"></p>
+<blockquote>
+<p>VIP优惠卷 50元<br>新用户优惠卷 20元</p>
+</blockquote>
+<h1 id="expressvpn"><a href="#expressvpn" class="headerlink" title="expressvpn"></a>expressvpn</h1><p><a href="https://www.expressvpn.com/">https://www.expressvpn.com</a></p>
+<p><img src="http://cdn.easyhappy.top/obsidian/20230110103510.png"></p>
+<blockquote>
+<p>巨贵</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>汇总</category>
+      </categories>
+      <tags>
+        <tag>汇总</tag>
+        <tag>vpn</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>css 知识点</title>
+    <url>/2022/03/22/summary/css%20%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
+    <content><![CDATA[<h1 id="CssModule"><a href="#CssModule" class="headerlink" title="CssModule"></a>CssModule</h1><p>在 modules 中某个 class 不需要随机数</p>
+<figure class="highlight scss"><table><tr><td class="code"><pre><span class="line">:<span class="built_in">global</span>(.blue) &#123;</span><br><span class="line">  <span class="attribute">background</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="where-伪类"><a href="#where-伪类" class="headerlink" title=":where 伪类"></a>:where 伪类</h1><p>降低优先级为 0</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-pseudo">:where</span>(<span class="selector-class">.name</span>) &#123;</span><br><span class="line">  <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="水平和垂直滚动条交汇处样式调整"><a href="#水平和垂直滚动条交汇处样式调整" class="headerlink" title="水平和垂直滚动条交汇处样式调整"></a>水平和垂直滚动条交汇处样式调整</h1><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">::--webkit-scrollbar-corner &#123;</span><br><span class="line">  <span class="attribute">background</span>: transparent;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>汇总</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+        <tag>汇总</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>flutter 包</title>
-    <url>/2025/06/30/summary/flutter%20%E5%8C%85/</url>
+    <url>/2025/01/03/summary/flutter%20%E5%8C%85/</url>
     <content><![CDATA[<table>
 <thead>
 <tr>
@@ -4933,8 +5684,8 @@
       </tags>
   </entry>
   <entry>
-    <title>npm包</title>
-    <url>/2025/06/30/summary/npm%E5%8C%85/</url>
+    <title>npm 包推荐</title>
+    <url>/2024/03/22/summary/npm%20%E5%8C%85%E6%8E%A8%E8%8D%90/</url>
     <content><![CDATA[<h2 id="Node默认包"><a href="#Node默认包" class="headerlink" title="Node默认包"></a>Node默认包</h2><table>
 <thead>
 <tr>
@@ -6512,7 +7263,7 @@
   </entry>
   <entry>
     <title>内网映射</title>
-    <url>/2025/06/30/summary/%E5%86%85%E7%BD%91%E6%98%A0%E5%B0%84/</url>
+    <url>/2024/06/30/summary/%E5%86%85%E7%BD%91%E6%98%A0%E5%B0%84/</url>
     <content><![CDATA[<h2 id="Ngrok"><a href="#Ngrok" class="headerlink" title="Ngrok"></a>Ngrok</h2><p><a href="https://ngrok.com/">https://ngrok.com/</a></p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">./ngrok authtoken token密钥</span><br><span class="line">./ngrok http 端口</span><br></pre></td></tr></table></figure>
 
@@ -6570,8 +7321,8 @@
       </tags>
   </entry>
   <entry>
-    <title>在内网环境安装 PaddleSpeech 实现语音合成服务</title>
-    <url>/2025/06/30/summary/%E5%9C%A8%E5%86%85%E7%BD%91%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%20PaddleSpeech%20%E5%AE%9E%E7%8E%B0%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90%E6%9C%8D%E5%8A%A1/</url>
+    <title>在内网环境安装 PaddleSpeech 语音合成服务</title>
+    <url>/2024/06/30/summary/%E5%9C%A8%E5%86%85%E7%BD%91%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%20PaddleSpeech%20%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90%E6%9C%8D%E5%8A%A1/</url>
     <content><![CDATA[<h2 id="简单方式安装（失败）"><a href="#简单方式安装（失败）" class="headerlink" title="简单方式安装（失败）"></a>简单方式安装（失败）</h2><p>sudo apt install build-essential</p>
 <p>sudo apt install python3-pip</p>
 <p>pip install pytest-runner -i <a href="https://pypi.tuna.tsinghua.edu.cn/simple">https://pypi.tuna.tsinghua.edu.cn/simple</a></p>
@@ -7000,152 +7751,84 @@
       </tags>
   </entry>
   <entry>
-    <title>docker 基础知识</title>
-    <url>/2025/06/30/summary/docker/docker%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</url>
-    <content><![CDATA[<h2 id="CMD"><a href="#CMD" class="headerlink" title="CMD"></a>CMD</h2><p>CMD 设定默认执行的命令</p>
-<figure class="highlight dockerfile"><table><tr><td class="code"><pre><span class="line"><span class="keyword">CMD</span><span class="language-bash"> [<span class="string">&quot;node&quot;</span>, <span class="string">&quot;dist/main.js&quot;</span>]</span></span><br></pre></td></tr></table></figure>
+    <title>播放 rtsp 视频</title>
+    <url>/2024/06/30/summary/%E6%92%AD%E6%94%BE%20rtsp%20%E8%A7%86%E9%A2%91/</url>
+    <content><![CDATA[<h1 id="1-处理-创建-rtsp-流"><a href="#1-处理-创建-rtsp-流" class="headerlink" title="1. 处理&#x2F;创建 rtsp 流"></a>1. 处理&#x2F;创建 rtsp 流</h1><h2 id="rtsp-推-拉流中转服务"><a href="#rtsp-推-拉流中转服务" class="headerlink" title="rtsp 推&#x2F;拉流中转服务"></a>rtsp 推&#x2F;拉流中转服务</h2><h3 id="EasyDarwin-windows-版"><a href="#EasyDarwin-windows-版" class="headerlink" title="EasyDarwin - windows 版"></a>EasyDarwin - windows 版</h3><p><a href="https://github.com/EasyDarwin/EasyDarwin/releases">下载 EasyDarwin</a></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd EasyDarwin</span><br><span class="line">./easydarwin</span><br></pre></td></tr></table></figure>
 
-<h2 id="ENTRYPOINT"><a href="#ENTRYPOINT" class="headerlink" title="ENTRYPOINT"></a>ENTRYPOINT</h2><p>ENTRYPOINT 为 docker run 的时候执行的命令, docker run 后续的命令会跟在 ENTRYPOINT 后面</p>
-<figure class="highlight dockerfile"><table><tr><td class="code"><pre><span class="line"><span class="keyword">ENTRYPOINT</span><span class="language-bash"> [<span class="string">&quot;node&quot;</span>]</span></span><br></pre></td></tr></table></figure>
+<p>后台管理页面, 可以查看相关推流情况. <a href="http://localhost:10008/">http://localhost:10008</a> 默认用户&#x2F;密码(admin&#x2F;admin)</p>
+<h3 id="mediamtx"><a href="#mediamtx" class="headerlink" title="mediamtx"></a>mediamtx</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run --<span class="built_in">rm</span> -it -e MTX_PROTOCOLS=tcp -p 9554:8554 -p 1935:1935 -p 8888:8888 -p 8889:8889 -p 8890:8890/udp bluenviron/mediamtx</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run xxx -v</span><br><span class="line"><span class="comment"># node -v</span></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>汇总</category>
-        <category>docker</category>
-      </categories>
-      <tags>
-        <tag>docker</tag>
-        <tag>汇总</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>docker-compose yml 样板</title>
-    <url>/2025/06/30/summary/docker/docker-compose%20yml%20%E6%A0%B7%E6%9D%BF/</url>
-    <content><![CDATA[<h1 id="启动-mongo"><a href="#启动-mongo" class="headerlink" title="启动 mongo"></a>启动 mongo</h1><figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">services:</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">mongo:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">mongo:7.0.5</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">27000</span><span class="string">:27017</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/home/avan/docker-compose/base-env/mongo/data/db:/data/db</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/home/avan/docker-compose/base-env/mongo/backup:/backup</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="attr">MONGO_INITDB_ROOT_USERNAME:</span> <span class="string">用户名</span></span><br><span class="line">      <span class="attr">MONGO_INITDB_ROOT_PASSWORD:</span> <span class="string">密码</span></span><br></pre></td></tr></table></figure>
+<p>往 9554 端口推即可</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">rtsp://localhost:9554/&#123;streamName&#125;</span><br></pre></td></tr></table></figure>
 
-<h1 id="启动-postgres"><a href="#启动-postgres" class="headerlink" title="启动 postgres"></a>启动 postgres</h1><figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">services:</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">postgres:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">postgres:16</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">27100</span><span class="string">:5432</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/home/avan/docker-compose/base-env/postgres/data:/var/lib/postgresql/data</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/home/avan/docker-compose/base-env/postgres/backup:/backup</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="attr">POSTGRES_PASSWORD:</span> <span class="string">密码</span></span><br></pre></td></tr></table></figure>
+<h2 id="通过-ffmpeg-进行本地推流至-rtsp-推流服务"><a href="#通过-ffmpeg-进行本地推流至-rtsp-推流服务" class="headerlink" title="通过 ffmpeg 进行本地推流至 rtsp 推流服务"></a>通过 ffmpeg 进行本地推流至 rtsp 推流服务</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ffmpeg -re -i 推送的视频 -rtsp_transport tcp -vcodec h264 -f rtsp rtsp://&#123;easydarwin服务的ip&#125;/&#123;通道名&#125;</span><br></pre></td></tr></table></figure>
 
-<h1 id="启动-nginx"><a href="#启动-nginx" class="headerlink" title="启动 nginx"></a>启动 nginx</h1><p>TODO</p>
+<p>例如:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ffmpeg -re -i /Users/4van/Downloads/test.mp4 -rtsp_transport tcp -vcodec h264 -f rtsp rtsp://localhost/test1</span><br></pre></td></tr></table></figure>
+<h2 id="测试播放"><a href="#测试播放" class="headerlink" title="测试播放"></a>测试播放</h2><p><a href="https://www.videolan.org/vlc/">下载 VLC</a><br>打开 Network<br>访问: rtsp:&#x2F;&#x2F;10.211.55.4&#x2F;test1</p>
+<h1 id="2-rtsp-处理服务"><a href="#2-rtsp-处理服务" class="headerlink" title="2. rtsp 处理服务"></a>2. rtsp 处理服务</h1><h2 id="rtsptoweb-播放太卡"><a href="#rtsptoweb-播放太卡" class="headerlink" title="rtsptoweb - 播放太卡"></a>rtsptoweb - 播放太卡</h2><ul>
+<li>支持 rtsp 转 hls&#x2F;hlsll&#x2F;mse&#x2F;webrtc 等格式</li>
+<li>提供相应 api 创建&#x2F;删除流</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run --<span class="built_in">rm</span> -p 8083:8083 -p 5541:5541 ghcr.io/deepch/rtsptoweb:v2.4.3</span><br></pre></td></tr></table></figure>
+
+<p>后台页面 <a href="http://localhost:8083/">http://localhost:8083</a></p>
+<h2 id="rtsp-stream-仅支持-hls"><a href="#rtsp-stream-仅支持-hls" class="headerlink" title="rtsp-stream - 仅支持 hls"></a>rtsp-stream - 仅支持 hls</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -p 80:80 -p 8080:8080 roverr/rtsp-stream:2-management</span><br></pre></td></tr></table></figure>
+
+<p>查看所有流 </p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">curl --location --request GET &#x27;http://localhost:8080/list&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>添加流</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">curl --location --request POST &#x27;http://localhost:8080/start&#x27; --header &#x27;Content-Type: application/json&#x27; --data-raw &#x27;&#123; &quot;uri&quot;: &quot;rtsp://10.211.55.4/test1&quot; &#125;&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>删除流</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">curl --location --request POST &#x27;http://localhost:8080/stop&#x27; --header &#x27;Content-Type: application/json&#x27; --data-raw &#x27;&#123; &quot;id&quot;: &quot;4f081bf2-ed1d-4881-8ff9-32f6e5532bc9&quot;, &quot;remove&quot;: true &#125;&#x27;</span><br></pre></td></tr></table></figure>
+
+<h2 id="rtsp2web-仅支持-flv"><a href="#rtsp2web-仅支持-flv" class="headerlink" title="rtsp2web - 仅支持 flv"></a>rtsp2web - 仅支持 flv</h2><p>原仓库 (有水印): <a href="https://github.com/Neveryu/rtsp2web">https://github.com/Neveryu/rtsp2web</a><br>二次封装: <a href="https://github.com/Layouwen/code-example/tree/main/demos/rtsp-to-h264-flv-service">https://github.com/Layouwen/code-example/tree/main/demos/rtsp-to-h264-flv-service</a></p>
+<p>启动服务</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker build -t rtsp-to-h264-flv-service:1.0.0 .</span><br><span class="line">docker run --rm -p 9999:4384 -e AUDIO=true rtsp-to-h264-flv-service:1.0.0</span><br></pre></td></tr></table></figure>
+
+<p>前端直接传 rtsp 地址进行播放</p>
+<figure class="highlight tsx"><table><tr><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> <span class="title class_">Jsmpeg</span>: <span class="variable constant_">FC</span>&lt;&#123; <span class="attr">baseUrl</span>: <span class="built_in">string</span>; <span class="attr">rtsp</span>: <span class="built_in">string</span> &#125;&gt; = <span class="function">(<span class="params">&#123; baseUrl, rtsp &#125;</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> videoPlayerRef = useRef&lt;<span class="built_in">any</span>&gt;(<span class="literal">null</span>)</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> <span class="title function_">onPlay</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">    <span class="keyword">const</span> <span class="title class_">VideoPlayer</span> = (<span class="variable language_">window</span> <span class="keyword">as</span> <span class="built_in">any</span>).<span class="property">JSMpeg</span></span><br><span class="line"></span><br><span class="line">    videoPlayerRef.<span class="property">current</span> = <span class="keyword">new</span> <span class="title class_">VideoPlayer</span>.<span class="title class_">Player</span>(</span><br><span class="line">      <span class="string">`ws://localhost:9999/rtsp?url=`</span> +</span><br><span class="line">      <span class="title function_">btoa</span>(rtsp) + <span class="string">&#x27;&amp;brightness=0.2&amp;saturation=1.8&#x27;</span>,</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="attr">canvas</span>: <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;video-player&#x27;</span>),</span><br><span class="line">      &#125;</span><br><span class="line">    )</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;onPlay&#125;</span>&gt;</span>播放<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">canvas</span> <span class="attr">id</span>=<span class="string">&quot;video-player&quot;</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">  )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="zlmediakit"><a href="#zlmediakit" class="headerlink" title="zlmediakit"></a>zlmediakit</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker run --rm -p 2935:1935 -p 8080:80 -p 8443:443 -p 8554:554 -p 10000:10000 -p 10000:10000/udp -p 8000:8000/udp -p 9000:9000/udp zlmediakit/zlmediakit:master</span><br></pre></td></tr></table></figure>
+
+<p>示例 url:</p>
+<ul>
+<li><a href="http://127.0.0.1:8080/live/test1.live.flv?vhost=192.168.10.11">http://127.0.0.1:8080/live/test1.live.flv?vhost=192.168.10.11</a></li>
+<li>ws:&#x2F;&#x2F;127.0.0.1:8080&#x2F;live&#x2F;test1.live.flv?vhost&#x3D;192.168.10.11</li>
+<li><a href="https://tdev1.locnavi.com/live/test1.live.flv?vhost=192.168.10.11">https://tdev1.locnavi.com/live/test1.live.flv?vhost=192.168.10.11</a></li>
+</ul>
+<h1 id="3-相关资料"><a href="#3-相关资料" class="headerlink" title="3. 相关资料"></a>3. 相关资料</h1><p>rtsp h.264 to h.265</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ffmpeg -i &#123;rtsp转换前地址&#125; -c:v libx265 -c:a copy -f rtsp &#123;rtsp转换后地址&#125;</span><br></pre></td></tr></table></figure>
+
+<p>mp4 to rtsp h264</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ffmpeg -i &#123;视频文件&#125; -c:v libx264 -c:a copy -f rtsp &#123;rtsp转换后地址&#125;</span><br></pre></td></tr></table></figure>
+
+<p>mp4 to rtsp h265</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ffmpeg -i &#123;视频文件&#125; -c:v libx265 -c:a copy -f rtsp &#123;rtsp转换后地址&#125;</span><br></pre></td></tr></table></figure>
+
+<p>hls 测试地址</p>
+<p><a href="https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8">https:&#x2F;bitdash-a.akamaihd.net&#x2F;content&#x2F;sintel&#x2F;hls&#x2F;playlist.m3u8</a></p>
+<h1 id="4-其他库"><a href="#4-其他库" class="headerlink" title="4. 其他库"></a>4. 其他库</h1><h2 id="播放器"><a href="#播放器" class="headerlink" title="播放器"></a>播放器</h2><ul>
+<li>h265<ul>
+<li><a href="https://github.com/numberwolf/h265web.js">https://github.com/numberwolf/h265web.js</a></li>
+<li><a href="https://github.com/langhuihui/jessibuca">https://github.com/langhuihui/jessibuca</a></li>
+</ul>
+</li>
+<li>hls 播放库<ul>
+<li><a href="https://github.com/foxford/react-hls">https://github.com/foxford/react-hls</a></li>
+</ul>
+</li>
+</ul>
 ]]></content>
       <categories>
         <category>汇总</category>
-        <category>docker</category>
       </categories>
       <tags>
         <tag>汇总</tag>
-        <tag>docker-compose</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>经常用的命令</title>
-    <url>/2025/06/30/summary/docker/%E7%BB%8F%E5%B8%B8%E7%94%A8%E7%9A%84%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<h1 id="Windows-启动容器"><a href="#Windows-启动容器" class="headerlink" title="Windows 启动容器"></a>Windows 启动容器</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">MSYS_NO_PATHCONV=1 docker run -it -p 1883:1883 -v $(<span class="built_in">pwd</span>)/mosquitto.conf:/mosquitto/config/mosquitto.conf eclipse-mosquitto</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>MSYS_NO_PATHCONV&#x3D;1 和 $(pwd) 是在 windows 中 gitbash 运行命令需要添加的参数，否则会识别不了路径</p>
-</blockquote>
-<h1 id="Windows-docker-启动-mysql-服务"><a href="#Windows-docker-启动-mysql-服务" class="headerlink" title="Windows docker 启动 mysql 服务"></a>Windows docker 启动 mysql 服务</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">MSYS_NO_PATHCONV=1 docker run --name MYSQL服务名字 -it -p 映射出来端口:3306 -v $(<span class="built_in">pwd</span>)/mysql/conf/my.conf:/etc/mysql/my.conf -v <span class="variable">$&#123;pwd&#125;</span>/mysql/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=数据库密码 mysql:5.7</span><br></pre></td></tr></table></figure>
-
-<h1 id="启动-nginx-服务"><a href="#启动-nginx-服务" class="headerlink" title="启动 nginx 服务"></a>启动 nginx 服务</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -d --name nginx nginx</span><br><span class="line"></span><br><span class="line">docker <span class="built_in">cp</span> nginx:/usr/share/nginx/html /Users/avan/services/nginx/html</span><br><span class="line">docker <span class="built_in">cp</span> nginx:/etc/nginx/conf.d /Users/avan/services/nginx/conf.d</span><br><span class="line">docker <span class="built_in">cp</span> nginx:/etc/nginx/nginx.conf /Users/avan/services/nginx/nginx.conf</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run --name main-nginx --<span class="built_in">rm</span> -p 80:80 -p 443:443 -v /Users/avan/services/nginx/html:/usr/share/nginx/html -v /Users/avan/services/nginx/conf.d:/etc/nginx/conf.d nginx</span><br></pre></td></tr></table></figure>
-
-<h2 id="转发-ws"><a href="#转发-ws" class="headerlink" title="转发 ws"></a>转发 ws</h2><figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line">   <span class="section">location</span><span class="regexp"> ^~</span> /videows &#123;</span><br><span class="line">    <span class="attribute">proxy_pass</span> http://192.168.10.11:9999;</span><br><span class="line"><span class="attribute">proxy_read_timeout</span> <span class="number">300s</span>;</span><br><span class="line">               <span class="attribute">proxy_send_timeout</span> <span class="number">300s</span>;</span><br><span class="line">               <span class="attribute">proxy_set_header</span>  Host <span class="variable">$http_host</span>;</span><br><span class="line">               <span class="attribute">proxy_set_header</span>  X-Real-IP  <span class="variable">$remote_addr</span>;</span><br><span class="line">               <span class="attribute">proxy_set_header</span>  X-Forwarded-For <span class="variable">$proxy_add_x_forwarded_for</span>;</span><br><span class="line">               <span class="attribute">proxy_set_header</span>  X-Forwarded-Proto <span class="variable">$scheme</span>;</span><br><span class="line">               <span class="attribute">proxy_http_version</span> <span class="number">1</span>.<span class="number">1</span>;</span><br><span class="line">               <span class="attribute">proxy_set_header</span> Upgrade <span class="variable">$http_upgrade</span>;</span><br><span class="line">               <span class="attribute">proxy_set_header</span> Connection <span class="variable">$connection_upgrade</span>;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="section">server</span> &#123;</span><br><span class="line">        <span class="attribute">listen</span> <span class="number">80</span>;</span><br><span class="line"></span><br><span class="line">        <span class="attribute">gzip</span> <span class="literal">on</span>;</span><br><span class="line">        <span class="attribute">gzip_min_length</span> <span class="number">1k</span>;</span><br><span class="line">        <span class="attribute">gzip_comp_level</span> <span class="number">9</span>;</span><br><span class="line">        <span class="attribute">gzip_types</span> text/plain application/javascript application/x-javascript text/css application/xml text/javascript application/x-httpd-php image/jpeg image/gif image/png;</span><br><span class="line">        <span class="attribute">gzip_vary</span> <span class="literal">on</span>;</span><br><span class="line">        <span class="attribute">gzip_disable</span> <span class="string">&quot;MSIE [1-6]\.&quot;</span>;</span><br><span class="line">        <span class="attribute">absolute_redirect</span> <span class="literal">off</span>;</span><br><span class="line">        <span class="attribute">client_max_body_size</span> <span class="number">50m</span>;</span><br><span class="line"></span><br><span class="line">        <span class="section">location</span> / &#123;</span><br><span class="line">                <span class="attribute">add_header</span> Access-Control-Allow-Origin *;</span><br><span class="line">                <span class="attribute">return</span> <span class="number">301</span> /web/unify;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="section">location</span><span class="regexp"> ^~</span> /web/unify &#123;</span><br><span class="line">                <span class="attribute">add_header</span> Access-Control-Allow-Origin *;</span><br><span class="line">                <span class="attribute">alias</span> /usr/share/nginx/html/unify;</span><br><span class="line">                <span class="attribute">try_files</span> <span class="variable">$uri</span> <span class="variable">$uri</span>/unify /web/unify/index.html;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="section">location</span><span class="regexp"> ^~</span> /web/station &#123;</span><br><span class="line">                <span class="attribute">add_header</span> Access-Control-Allow-Origin *;</span><br><span class="line">                <span class="attribute">alias</span> /usr/share/nginx/html/station;</span><br><span class="line">                <span class="attribute">try_files</span> <span class="variable">$uri</span> <span class="variable">$uri</span>/station /web/station/index.html;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="section">location</span><span class="regexp"> ^~</span> /web/mobile &#123;</span><br><span class="line">                <span class="attribute">add_header</span> Access-Control-Allow-Origin *;</span><br><span class="line">                <span class="attribute">proxy_pass</span> http://staging-flow-app:8080;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="section">location</span><span class="regexp"> ^~</span> /web/auth &#123;</span><br><span class="line">                <span class="attribute">add_header</span> Access-Control-Allow-Origin *;</span><br><span class="line">                <span class="attribute">alias</span> /usr/share/nginx/html/auth;</span><br><span class="line">                <span class="attribute">try_files</span> <span class="variable">$uri</span> <span class="variable">$uri</span>/auth /web/auth/index.html;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="section">location</span><span class="regexp"> ^~</span> /station/ &#123;</span><br><span class="line">                <span class="attribute">add_header</span> Access-Control-Allow-Origin *;</span><br><span class="line">            <span class="attribute">add_header</span> Access-Control-Allow-Methods *;</span><br><span class="line">            <span class="attribute">add_header</span> Access-Control-Allow-Headers *;</span><br><span class="line">            <span class="attribute">rewrite</span><span class="regexp"> ^/station/(.*)$</span> /<span class="variable">$1</span> <span class="literal">break</span>;</span><br><span class="line">            <span class="attribute">proxy_pass</span> http://staging-flow-station:8000;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="section">location</span><span class="regexp"> ^~</span> /flowtrace/socketio/ &#123;</span><br><span class="line">            <span class="attribute">add_header</span> backendIP <span class="variable">$upstream_addr</span>;</span><br><span class="line">            <span class="attribute">add_header</span> backendCode <span class="variable">$upstream_status</span>;</span><br><span class="line">           <span class="attribute">proxy_redirect</span> <span class="literal">off</span>;</span><br><span class="line">            <span class="attribute">proxy_connect_timeout</span> <span class="number">6000</span>;</span><br><span class="line">            <span class="attribute">proxy_read_timeout</span> <span class="number">6000</span>;</span><br><span class="line">            <span class="attribute">proxy_send_timeout</span> <span class="number">6000</span>;</span><br><span class="line">            <span class="attribute">proxy_set_header</span> Host staging-flow-flow:<span class="number">8008</span>;</span><br><span class="line">           <span class="attribute">proxy_pass</span> http://staging-flow-flow:8008/socket.io/;</span><br><span class="line">            <span class="attribute">proxy_http_version</span> <span class="number">1</span>.<span class="number">1</span>;</span><br><span class="line">            <span class="attribute">proxy_set_header</span> Upgrade <span class="variable">$http_upgrade</span>;</span><br><span class="line">            <span class="attribute">proxy_set_header</span> Connection <span class="string">&quot;upgrade&quot;</span>;</span><br><span class="line">-- <span class="attribute">VISUAL</span> LINE --                                                                                                                                     <span class="number">1</span>,<span class="number">1</span>           Top</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        location<span class="regexp"> ^~</span> /auth/ &#123;</span><br><span class="line">                <span class="attribute">add_header</span> Access-Control-Allow-Origin *;</span><br><span class="line">            <span class="attribute">add_header</span> Access-Control-Allow-Methods *;</span><br><span class="line">            <span class="attribute">add_header</span> Access-Control-Allow-Headers *;</span><br><span class="line">            <span class="attribute">rewrite</span><span class="regexp"> ^/auth/(.*)$</span> /<span class="variable">$1</span> <span class="literal">break</span>;</span><br><span class="line">            <span class="attribute">proxy_pass</span> http://staging-flow-auth:8001;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="section">location</span><span class="regexp"> ^~</span> /asset/socketio/ &#123;</span><br><span class="line">            <span class="attribute">add_header</span> backendIP <span class="variable">$upstream_addr</span>;</span><br><span class="line">            <span class="attribute">add_header</span> backendCode <span class="variable">$upstream_status</span>;</span><br><span class="line">            <span class="attribute">proxy_redirect</span> <span class="literal">off</span>;</span><br><span class="line">            <span class="attribute">proxy_connect_timeout</span> <span class="number">6000</span>;</span><br><span class="line">            <span class="attribute">proxy_read_timeout</span> <span class="number">6000</span>;</span><br><span class="line">            <span class="attribute">proxy_send_timeout</span> <span class="number">6000</span>;</span><br><span class="line">            <span class="attribute">proxy_set_header</span> Host staging-unify-asset:<span class="number">8009</span>;</span><br><span class="line">            <span class="attribute">proxy_pass</span> http://staging-unify-asset:8009/socket.io/;</span><br><span class="line">            <span class="attribute">proxy_http_version</span> <span class="number">1</span>.<span class="number">1</span>;</span><br><span class="line">            <span class="attribute">proxy_set_header</span> Upgrade <span class="variable">$http_upgrade</span>;</span><br><span class="line">            <span class="attribute">proxy_set_header</span> Connection <span class="string">&quot;upgrade&quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="section">location</span><span class="regexp"> ^~</span> /asset/ &#123;</span><br><span class="line">            <span class="attribute">rewrite</span><span class="regexp"> ^/asset/(.*)$</span> /<span class="variable">$1</span> <span class="literal">break</span>;</span><br><span class="line">            <span class="attribute">proxy_pass</span> http://staging-unify-asset:8009;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="section">location</span><span class="regexp"> ^~</span> /emergency/ &#123;</span><br><span class="line">            <span class="attribute">rewrite</span><span class="regexp"> ^/emergency/(.*)$</span> /<span class="variable">$1</span> <span class="literal">break</span>;</span><br><span class="line">            <span class="attribute">proxy_pass</span> http://staging-unify-emergency:8007;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="section">location</span><span class="regexp"> ^~</span> /station/socketio/ &#123;</span><br><span class="line">            <span class="attribute">add_header</span> backendIP <span class="variable">$upstream_addr</span>;</span><br><span class="line">            <span class="attribute">add_header</span> backendCode <span class="variable">$upstream_status</span>;</span><br><span class="line">            <span class="attribute">proxy_redirect</span> <span class="literal">off</span>;</span><br><span class="line">            <span class="attribute">proxy_connect_timeout</span> <span class="number">6000</span>;</span><br><span class="line">            <span class="attribute">proxy_read_timeout</span> <span class="number">6000</span>;</span><br><span class="line">            <span class="attribute">proxy_send_timeout</span> <span class="number">6000</span>;</span><br><span class="line">            <span class="attribute">proxy_set_header</span> Host staging-flow-station:<span class="number">8000</span>;</span><br><span class="line">            <span class="attribute">proxy_pass</span> http://staging-flow-station:8000/socket.io/;</span><br><span class="line">            <span class="attribute">proxy_http_version</span> <span class="number">1</span>.<span class="number">1</span>;</span><br><span class="line">            <span class="attribute">proxy_set_header</span> Upgrade <span class="variable">$http_upgrade</span>;</span><br><span class="line">            <span class="attribute">proxy_set_header</span> Connection <span class="string">&quot;upgrade&quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">#�~E代�~P~F�~K�~U使�~T�</span></span><br><span class="line">        <span class="comment"># location ^~ /agent &#123;</span></span><br><span class="line">            <span class="comment">#     add_header Access-Control-Allow-Origin *;</span></span><br><span class="line">        <span class="comment">#     add_header Access-Control-Allow-Methods *;</span></span><br><span class="line">        <span class="comment">#     add_header Access-Control-Allow-Headers *;</span></span><br><span class="line">        <span class="comment">#     rewrite ^/agent(.*)$ /$1 break;</span></span><br><span class="line">        <span class="comment">#     proxy_pass http://staging-flow-agent:6000;</span></span><br><span class="line">        <span class="comment"># &#125;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-<h1 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h1><h2 id="创建-mysql-服务"><a href="#创建-mysql-服务" class="headerlink" title="创建 mysql 服务"></a>创建 mysql 服务</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -itd --name mysql-server -v /Users/epath/data:/var/lib/mysql -v /etc/timezone:/etc/timezone -v /etc/localtime:/etc/localtime -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123123 mysql</span><br></pre></td></tr></table></figure>
-
-<h2 id="创建-mongo-服务"><a href="#创建-mongo-服务" class="headerlink" title="创建 mongo 服务"></a>创建 mongo 服务</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run \</span><br><span class="line">--name some-mongo \</span><br><span class="line">-v 本地db映射路径:/data/db \</span><br><span class="line">-d mongo</span><br></pre></td></tr></table></figure>
-
-<h2 id="创建-redis-服务"><a href="#创建-redis-服务" class="headerlink" title="创建 redis 服务"></a>创建 redis 服务</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run --name redis-server -p 6379:6379 -d redis</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>汇总</category>
-        <category>docker</category>
-      </categories>
-      <tags>
-        <tag>docker</tag>
-        <tag>汇总</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>搭建npm私服</title>
-    <url>/2025/06/30/summary/npm/%E6%90%AD%E5%BB%BAnpm%E7%A7%81%E6%9C%8D/</url>
-    <content><![CDATA[<h1 id="启动-docker-服务"><a href="#启动-docker-服务" class="headerlink" title="启动 docker 服务"></a>启动 docker 服务</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">V_PATH=&lt;数据文件目录路径&gt;; docker run -it -u 1000 --name verdaccio \</span><br><span class="line">-p 4873:4873 \</span><br><span class="line">-v <span class="variable">$V_PATH</span>/conf:/verdaccio/conf \</span><br><span class="line">-v <span class="variable">$V_PATH</span>/storage:/verdaccio/storage \</span><br><span class="line">-v <span class="variable">$V_PATH</span>/plugins:/verdaccio/plugins \</span><br><span class="line">-e VERDACCIO_PUBLIC_URL=<span class="string">&#x27;协议://域名&#x27;</span> \</span><br><span class="line">verdaccio/verdaccio</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>-u 是对应用户的 uid</p>
-</blockquote>
-<p><strong>conf&#x2F;config.yaml</strong></p>
-<p><a href="https://github.com/verdaccio/verdaccio/tree/master/packages/config/src/conf">官方参考文件</a></p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 包存储的路径</span></span><br><span class="line"><span class="attr">storage:</span> <span class="string">/verdaccio/storage</span></span><br><span class="line"></span><br><span class="line"><span class="attr">auth:</span></span><br><span class="line">  <span class="attr">htpasswd:</span></span><br><span class="line">    <span class="attr">file:</span> <span class="string">/verdaccio/conf/htpasswd</span></span><br><span class="line">    <span class="comment"># -1 不允许注册</span></span><br><span class="line">    <span class="comment"># 不设置则不限制</span></span><br><span class="line">    <span class="attr">max_users:</span> <span class="number">-1</span></span><br><span class="line"><span class="attr">security:</span></span><br><span class="line">  <span class="attr">api:</span></span><br><span class="line">    <span class="attr">jwt:</span></span><br><span class="line">      <span class="attr">sign:</span></span><br><span class="line">        <span class="attr">expiresIn:</span> <span class="string">60d</span></span><br><span class="line">        <span class="attr">notBefore:</span> <span class="number">1</span></span><br><span class="line">  <span class="attr">web:</span></span><br><span class="line">    <span class="attr">sign:</span></span><br><span class="line">      <span class="attr">expiresIn:</span> <span class="string">7d</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 上传的包大小</span></span><br><span class="line"><span class="attr">max_body_size:</span> <span class="string">300mb</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 链接其他 npm 源</span></span><br><span class="line"><span class="attr">uplinks:</span></span><br><span class="line">  <span class="attr">npmjs:</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">https://registry.npmmirror.com/</span></span><br><span class="line"></span><br><span class="line"><span class="attr">packages:</span></span><br><span class="line">  <span class="attr">&#x27;@whalewave/*&#x27;:</span></span><br><span class="line">    <span class="attr">access:</span> <span class="string">$authenticated</span></span><br><span class="line">    <span class="attr">publish:</span> <span class="string">$authenticated</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">&#x27;@*/*&#x27;:</span></span><br><span class="line">    <span class="comment"># 范围限制的包</span></span><br><span class="line">    <span class="attr">access:</span> <span class="string">$all</span></span><br><span class="line">    <span class="attr">publish:</span> <span class="string">$authenticated</span></span><br><span class="line">    <span class="attr">proxy:</span> <span class="string">npmjs</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">&#x27;**&#x27;:</span></span><br><span class="line">    <span class="attr">access:</span> <span class="string">$all</span></span><br><span class="line">    <span class="attr">publish:</span> <span class="string">$authenticated</span></span><br><span class="line">    <span class="attr">proxy:</span> <span class="string">npmjs</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># To use `npm audit` uncomment the following section</span></span><br><span class="line"><span class="attr">middlewares:</span></span><br><span class="line">  <span class="attr">audit:</span></span><br><span class="line">    <span class="attr">enabled:</span> <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># log settings</span></span><br><span class="line"><span class="attr">log:</span></span><br><span class="line">  <span class="bullet">-</span> &#123; <span class="attr">type:</span> <span class="string">stdout</span>, <span class="attr">format:</span> <span class="string">pretty</span>, <span class="attr">level:</span> <span class="string">trace</span> &#125;</span><br><span class="line">  <span class="comment">#- &#123;type: file, path: verdaccio.log, level: info&#125;</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>conf&#x2F;htpasswd</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">admin:$2y$10$f3jh1gL0lcx2J6PwK0/4VOMBIQgOHxV3ZU/.vPSX1unZ4DL9F07da</span><br><span class="line">lzm:$2y$10$f3jh1gL0lcx2J6PwK0/4VOMBIQgOHxV3ZU/.vPSX1unZ4DL9F07da</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>账号: admin<br>密码: admin</p>
-</blockquote>
-<h1 id="htpasswd-注册账号"><a href="#htpasswd-注册账号" class="headerlink" title="htpasswd 注册账号"></a>htpasswd 注册账号</h1><p><a href="https://hostingcanada.org/htpasswd-generator/">https://hostingcanada.org/htpasswd-generator/</a></p>
-<h1 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> registry &lt;协议://域名&gt;</span><br><span class="line">npm login --registry &lt;协议://域名&gt;</span><br><span class="line">npm config <span class="built_in">set</span> always-auth <span class="literal">true</span></span><br><span class="line">npm i @whalewave/adm-ui</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight tsx"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">Button</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;@whalewave/adm-ui&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="title function_">default</span> () =&gt; &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">Button</span> <span class="attr">type</span>=<span class="string">&quot;lg&quot;</span>/&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">Button</span> <span class="attr">type</span>=<span class="string">&quot;sm&quot;</span>/&gt;</span></span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 查看配置文件</span></span><br><span class="line">npm config get registry</span><br><span class="line"><span class="comment"># 还原</span></span><br><span class="line">npm config <span class="built_in">set</span> registry https://registry.npmmirror.com/</span><br></pre></td></tr></table></figure>
-
-<h1 id="重启"><a href="#重启" class="headerlink" title="重启"></a>重启</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">VERDACCIO_PUBLIC_URL=<span class="string">&#x27;&lt;协议://域名&gt;&#x27;</span>; docker restart 容器<span class="built_in">id</span></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>汇总</category>
-        <category>npm</category>
-      </categories>
-      <tags>
-        <tag>npm</tag>
-        <tag>汇总</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>npm配置</title>
-    <url>/2025/06/30/summary/npm/%E9%85%8D%E7%BD%AE/</url>
-    <content><![CDATA[<h1 id="取消动态版本号"><a href="#取消动态版本号" class="headerlink" title="取消动态版本号"></a>取消动态版本号</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 取消新安装的包的 ^ 前缀</span></span><br><span class="line">npm config <span class="built_in">set</span> -g save-prefix=<span class="string">&#x27;&#x27;</span></span><br><span class="line">pnpm config <span class="built_in">set</span> -g save-prefix=<span class="string">&#x27;&#x27;</span></span><br><span class="line">yarn config <span class="built_in">set</span> save-prefix <span class="string">&quot;&quot;</span></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>汇总</category>
-        <category>npm</category>
-      </categories>
-      <tags>
-        <tag>npm</tag>
-        <tag>汇总</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>npm知识点</title>
-    <url>/2025/06/30/summary/npm/%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
-    <content><![CDATA[<h1 id="防止意外发布代码"><a href="#防止意外发布代码" class="headerlink" title="防止意外发布代码"></a>防止意外发布代码</h1><p><code>package.json</code> 中 <code>&quot;private&quot;: true</code> 可以防止意外发布代码 <code>npm public</code>。主要应用于一些业务代码，如前端、后端页面代码。</p>
-<h1 id="指定仓库源"><a href="#指定仓库源" class="headerlink" title="指定仓库源"></a>指定仓库源</h1><blockquote>
-<p>packages.aliyun.com&#x2F;6247b3d254d03ae1449d&#x2F;npm&#x2F;npm-registry&#x2F; 是仓库源地址</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">registry=https://packages.aliyun.com/6247b3d254d03ae1449d/npm/npm-registry/</span><br></pre></td></tr></table></figure>
-
-<h1 id="token"><a href="#token" class="headerlink" title="token"></a>token</h1><h2 id="创建token"><a href="#创建token" class="headerlink" title="创建token"></a>创建token</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm create token</span><br></pre></td></tr></table></figure>
-
-<h2 id="使用token授权"><a href="#使用token授权" class="headerlink" title="使用token授权"></a>使用token授权</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">//packages.aliyun.com/6247b3d254d03ae1449d/npm/npm-registry/:_authToken=b7a28d1d-f7f3-4383-b896-3e92616cd</span><br></pre></td></tr></table></figure>
-
-<h2 id="通过token进行login"><a href="#通过token进行login" class="headerlink" title="通过token进行login"></a>通过token进行login</h2><p>create token</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ nrm add 源名字 源地址</span><br><span class="line">$ nrm use 源名字</span><br><span class="line">$ npm login</span><br><span class="line">用户名</span><br><span class="line">密码</span><br><span class="line">邮箱</span><br><span class="line">$ npm token create</span><br><span class="line">密码</span><br></pre></td></tr></table></figure>
-
-<p>use token <code>.nrmrc</code></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//源域名/:_authToken=你创建的token</span><br><span class="line">registry = &quot;源地址/&quot;</span><br></pre></td></tr></table></figure>
-
-<h1 id="单独为某些依赖设置安装源"><a href="#单独为某些依赖设置安装源" class="headerlink" title="单独为某些依赖设置安装源"></a>单独为某些依赖设置安装源</h1><p>example：以@avan开头的依赖包，走<a href="https://npm.avan.com/">https://npm.avan.com</a></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm config <span class="built_in">set</span> @avan:registry=https://npm.avan.com</span><br></pre></td></tr></table></figure>
-
-<h1 id="新建用户"><a href="#新建用户" class="headerlink" title="新建用户"></a>新建用户</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm adduser --registry 需要注册的地址</span><br><span class="line">$ 账号名</span><br><span class="line">$ 密码</span><br><span class="line">$ 邮箱</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>汇总</category>
-        <category>npm</category>
-      </categories>
-      <tags>
-        <tag>npm</tag>
-        <tag>汇总</tag>
+        <tag>rtsp</tag>
       </tags>
   </entry>
 </search>
