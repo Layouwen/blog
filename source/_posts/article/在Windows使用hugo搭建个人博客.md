@@ -44,7 +44,7 @@ hugo version
 
 此电脑【右击】 --> 选择 属性 --> 高级系统设置 --> 环境变量 --> 系统变量 --> Path --> 编辑 --> 新建 --> 粘贴你的路径D:\Programme\hugo_0.64.0_Windows-64bit --> 确定
 
-![](https://qinius.easyhappy.top/avan/202506291645555.png)
+![](http://obsidian.easyhappy.top/avan/202506291645555.png)
 
 打开终端段输入
 
@@ -90,7 +90,7 @@ hugo new posts/第一篇博客的名称.md
 
 输入完后在你目录进入 content 文件夹，在进入 posts 文件夹，即可看到你刚刚创建的博客文章。编辑这个文件，将里面的“true”修改为“false”
 
-![](https://qinius.easyhappy.top/avan/202506291645307.png)
+![](http://obsidian.easyhappy.top/avan/202506291645307.png)
 
 保存关闭，回到终端。在根目录也就是“github用户名小写.github.io-creator”的目录，输入指令
 
@@ -105,13 +105,13 @@ hugo server -D
 ## 五、将本地博客上传到github
 在github新建一个仓库，名字为“用户名.github.io”，然后回到终端进入 public目录，将目录的文件上传到该仓库。下面以我的用户名为例：
 
-![image.png](https://qinius.easyhappy.top/avan/202506291646140.png)
+![image.png](http://obsidian.easyhappy.top/avan/202506291646140.png)
 
 输入完后点下面绿色的按钮就好了。我的创建过所以提示红色，你们直接点就好。
 
 点完后会跳转到另一个界面，点击SSH,然后复制下面的指令，回终端public目录输入即可
 
-![image.png](https://qinius.easyhappy.top/avan/202506291646720.png)
+![image.png](http://obsidian.easyhappy.top/avan/202506291646720.png)
 
 紧接着就是git的一些基础操作，回终端将public里的文件提交到这个仓库。下面提供一些基础指令做参考，具体去了解git的使用教程：
 
@@ -128,9 +128,9 @@ git commit -v
 
 提交完后，回到github在刚刚仓库上面点击Settings
 
-![image.png](https://qinius.easyhappy.top/avan/202506291646281.png)
+![image.png](http://obsidian.easyhappy.top/avan/202506291646281.png)
 
 往下拉找到GitHub Pages，下面显示的就是你的博客域名了，有买私人域名的可以自己绑定，这里就不说了。开始你的博客人生吧~
 
-![image.png](https://qinius.easyhappy.top/avan/202506291647827.png)
+![image.png](http://obsidian.easyhappy.top/avan/202506291647827.png)
 

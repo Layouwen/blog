@@ -54,7 +54,7 @@ git config --global core.autocrlf input
 
 
 以上六条命令运行后，输入 `git config --global --list` 查看配置有没有输错。  
-![image.png](https://qinius.easyhappy.top/avan/202506291903853.png)
+![image.png](http://obsidian.easyhappy.top/avan/202506291903853.png)
 
 
 

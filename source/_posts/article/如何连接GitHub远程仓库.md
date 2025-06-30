@@ -38,31 +38,31 @@ ssh-keygen -t rsa -b 4096 -C 你的邮箱地址
 
 
 输入完后一直敲回车键，知道出现类似泡泡的东西  
-![image.png](https://qinius.easyhappy.top/avan/202506291905909.png)
+![image.png](http://obsidian.easyhappy.top/avan/202506291905909.png)
 
 
 
 
 接着复制生成的路径，使用指令 `cd 路径` 和 `ls` 查看生成的两个文件  
-![image.png](https://qinius.easyhappy.top/avan/202506291906683.png)
+![image.png](http://obsidian.easyhappy.top/avan/202506291906683.png)
 
 
 
 
 其中 “id_rsa” 是私钥这个不要给别人看，“id_rsa.pub” 是公钥，我们需要查看这个文件的内容，可以使用 `cat id_rsa.pub` 指令查看该内容，回车后会出现一大串字符  
-![image.png](https://qinius.easyhappy.top/avan/202506291906687.png)
+![image.png](http://obsidian.easyhappy.top/avan/202506291906687.png)
 
 
 
 
 将上面的字符一字不漏的复制，打开GitHub的设置页面，找到 “SSH and GPG keys” 然后在又上放单击 “New SSH key”  
-![image.png](https://qinius.easyhappy.top/avan/202506291906546.png)
+![image.png](http://obsidian.easyhappy.top/avan/202506291906546.png)
 
 
 
 
 然后在 Title 中给秘钥起个名字，把刚刚复制的内容粘贴到 Key 文本框中，保存关闭即可  
-![image.png](https://qinius.easyhappy.top/avan/202506291906603.png)
+![image.png](http://obsidian.easyhappy.top/avan/202506291906603.png)
 
 
 
@@ -77,7 +77,7 @@ ssh -T git@github.com
 
 
 
-![image.png](https://qinius.easyhappy.top/avan/202506291907834.png)
+![image.png](http://obsidian.easyhappy.top/avan/202506291907834.png)
 
 
 
