@@ -20,28 +20,28 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"4van.top","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.23.1","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js" defer></script>
 
-    <meta name="description" content="启动 mongo12345678910111213services:  mongo:    image: mongo:7.0.5    restart: always    ports:      - 27000:27017    volumes:      - &#x2F;home&#x2F;avan&#x2F;docker-compose&#x2F;base-env&#x2F;mongo&#x2F;data&#x2F;db:&#x2F;data&#x2F;db      - &#x2F;ho">
+    <meta name="description" content="CMDCMD 设定默认执行的命令 1CMD [&quot;node&quot;, &quot;dist&#x2F;main.js&quot;]">
 <meta property="og:type" content="blog">
-<meta property="og:title" content="docker-compose yml 样板">
-<meta property="og:url" content="https://4van.top/2025/06/30/summary/docker-compose%20yml%20%E6%A0%B7%E6%9D%BF/index.html">
+<meta property="og:title" content="docker 基础知识">
+<meta property="og:url" content="https://4van.top/2025/06/30/summary/docker/docker%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/index.html">
 <meta property="og:site_name" content="Avan&#39;s Blog">
-<meta property="og:description" content="启动 mongo12345678910111213services:  mongo:    image: mongo:7.0.5    restart: always    ports:      - 27000:27017    volumes:      - &#x2F;home&#x2F;avan&#x2F;docker-compose&#x2F;base-env&#x2F;mongo&#x2F;data&#x2F;db:&#x2F;data&#x2F;db      - &#x2F;ho">
+<meta property="og:description" content="CMDCMD 设定默认执行的命令 1CMD [&quot;node&quot;, &quot;dist&#x2F;main.js&quot;]">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-06-30T09:18:57.408Z">
-<meta property="article:modified_time" content="2025-06-30T09:49:06.448Z">
+<meta property="article:published_time" content="2025-06-30T09:15:24.326Z">
+<meta property="article:modified_time" content="2025-06-30T12:33:00.830Z">
 <meta property="article:author" content="梁又文">
+<meta property="article:tag" content="docker">
 <meta property="article:tag" content="汇总">
-<meta property="article:tag" content="docker-compose">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://4van.top/2025/06/30/summary/docker-compose%20yml%20%E6%A0%B7%E6%9D%BF/">
+<link rel="canonical" href="https://4van.top/2025/06/30/summary/docker/docker%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://4van.top/2025/06/30/summary/docker-compose%20yml%20%E6%A0%B7%E6%9D%BF/","path":"2025/06/30/summary/docker-compose yml 样板/","title":"docker-compose yml 样板"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://4van.top/2025/06/30/summary/docker/docker%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/","path":"2025/06/30/summary/docker/docker 基础知识/","title":"docker 基础知识"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>docker-compose yml 样板 | Avan's Blog</title>
+<title>docker 基础知识 | Avan's Blog</title>
   
 
 
@@ -161,7 +161,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%90%AF%E5%8A%A8-mongo"><span class="nav-number">1.</span> <span class="nav-text">启动 mongo</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%90%AF%E5%8A%A8-postgres"><span class="nav-number">2.</span> <span class="nav-text">启动 postgres</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%90%AF%E5%8A%A8-nginx"><span class="nav-number">3.</span> <span class="nav-text">启动 nginx</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#CMD"><span class="nav-number">1.</span> <span class="nav-text">CMD</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ENTRYPOINT"><span class="nav-number">2.</span> <span class="nav-text">ENTRYPOINT</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -247,7 +247,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://4van.top/2025/06/30/summary/docker-compose%20yml%20%E6%A0%B7%E6%9D%BF/">
+    <link itemprop="mainEntityOfPage" href="https://4van.top/2025/06/30/summary/docker/docker%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/logo.png">
@@ -260,12 +260,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="docker-compose yml 样板 | Avan's Blog">
+      <meta itemprop="name" content="docker 基础知识 | Avan's Blog">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          docker-compose yml 样板<a href="https://github.com/layouwen/blog/edit/master/source/_posts/summary/docker-compose%20yml%20%E6%A0%B7%E6%9D%BF.md" class="post-edit-link" title="编辑" rel="noopener" target="_blank"><i class="fa fa-pen-nib"></i></a>
+          docker 基础知识<a href="https://github.com/layouwen/blog/edit/master/source/_posts/summary/docker/docker%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86.md" class="post-edit-link" title="编辑" rel="noopener" target="_blank"><i class="fa fa-pen-nib"></i></a>
         </h1>
 
         <div class="post-meta-container">
@@ -277,7 +277,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2025-06-30 17:18:57 / 修改时间：17:49:06" itemprop="dateCreated datePublished" datetime="2025-06-30T17:18:57+08:00">2025-06-30</time>
+      <time title="创建时间：2025-06-30 17:15:24 / 修改时间：20:33:00" itemprop="dateCreated datePublished" datetime="2025-06-30T17:15:24+08:00">2025-06-30</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -300,7 +300,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>87</span>
+      <span>52</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -317,12 +317,13 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h1 id="启动-mongo"><a href="#启动-mongo" class="headerlink" title="启动 mongo"></a>启动 mongo</h1><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">services:</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">mongo:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">mongo:7.0.5</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">27000</span><span class="string">:27017</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/home/avan/docker-compose/base-env/mongo/data/db:/data/db</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/home/avan/docker-compose/base-env/mongo/backup:/backup</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="attr">MONGO_INITDB_ROOT_USERNAME:</span> <span class="string">用户名</span></span><br><span class="line">      <span class="attr">MONGO_INITDB_ROOT_PASSWORD:</span> <span class="string">密码</span></span><br></pre></td></tr></table></figure>
+    <div class="post-body" itemprop="articleBody"><h2 id="CMD"><a href="#CMD" class="headerlink" title="CMD"></a>CMD</h2><p>CMD 设定默认执行的命令</p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CMD</span><span class="language-bash"> [<span class="string">&quot;node&quot;</span>, <span class="string">&quot;dist/main.js&quot;</span>]</span></span><br></pre></td></tr></table></figure>
 
-<h1 id="启动-postgres"><a href="#启动-postgres" class="headerlink" title="启动 postgres"></a>启动 postgres</h1><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">services:</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">postgres:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">postgres:16</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">27100</span><span class="string">:5432</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/home/avan/docker-compose/base-env/postgres/data:/var/lib/postgresql/data</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/home/avan/docker-compose/base-env/postgres/backup:/backup</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="attr">POSTGRES_PASSWORD:</span> <span class="string">密码</span></span><br></pre></td></tr></table></figure>
+<h2 id="ENTRYPOINT"><a href="#ENTRYPOINT" class="headerlink" title="ENTRYPOINT"></a>ENTRYPOINT</h2><p>ENTRYPOINT 为 docker run 的时候执行的命令, docker run 后续的命令会跟在 ENTRYPOINT 后面</p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ENTRYPOINT</span><span class="language-bash"> [<span class="string">&quot;node&quot;</span>]</span></span><br></pre></td></tr></table></figure>
 
-<h1 id="启动-nginx"><a href="#启动-nginx" class="headerlink" title="启动 nginx"></a>启动 nginx</h1><p>TODO</p>
-
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker run xxx -v</span><br><span class="line"><span class="comment"># node -v</span></span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -357,7 +358,7 @@
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://4van.top/2025/06/30/summary/docker-compose%20yml%20%E6%A0%B7%E6%9D%BF/" title="docker-compose yml 样板">https://4van.top/2025/06/30/summary/docker-compose yml 样板/</a>
+      <a href="https://4van.top/2025/06/30/summary/docker/docker%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" title="docker 基础知识">https://4van.top/2025/06/30/summary/docker/docker 基础知识/</a>
   </li>
   <li class="post-copyright-license">
       <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -415,8 +416,8 @@
 </div>
 
           <div class="post-tags">
+              <a href="/tags/docker/" rel="tag"><i class="fa fa-tag"></i> docker</a>
               <a href="/tags/%E6%B1%87%E6%80%BB/" rel="tag"><i class="fa fa-tag"></i> 汇总</a>
-              <a href="/tags/docker-compose/" rel="tag"><i class="fa fa-tag"></i> docker-compose</a>
           </div>
 
         
@@ -432,13 +433,13 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2025/06/30/summary/Obsidian%20%E9%85%8D%E7%BD%AE/" rel="prev" title="Obsidian 配置">
-                  <i class="fa fa-angle-left"></i> Obsidian 配置
+                <a href="/2025/06/11/article/Nuxt3%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20pnpm%20%E5%AE%89%E8%A3%85%E7%9A%84%20NuxtImg%20%E4%BD%BF%E7%94%A8%E4%BC%9A%E6%8F%90%E7%A4%BA%E6%89%BE%E4%B8%8D%E5%88%B0%E5%9B%BE%E7%89%87/" rel="prev" title="Nuxt3 中使用 pnpm 安装的 NuxtImg 使用会提示找不到图片">
+                  <i class="fa fa-angle-left"></i> Nuxt3 中使用 pnpm 安装的 NuxtImg 使用会提示找不到图片
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2025/06/30/summary/%E7%BB%8F%E5%B8%B8%E7%94%A8%E7%9A%84%E5%91%BD%E4%BB%A4/" rel="next" title="经常用的命令">
-                  经常用的命令 <i class="fa fa-angle-right"></i>
+                <a href="/2025/06/30/summary/%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/" rel="next" title="软件推荐">
+                  软件推荐 <i class="fa fa-angle-right"></i>
                 </a>
             </div>
           </div>
