@@ -1917,7 +1917,7 @@
   </entry>
   <entry>
     <title>postgres 中断数据库的所有链接, 并重命名数据库</title>
-    <url>/2024/11/16/postgres%E4%B8%AD%E6%96%AD%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E6%89%80%E6%9C%89%E9%93%BE%E6%8E%A5,%20%E5%B9%B6%E9%87%8D%E5%91%BD%E5%90%8D%E6%95%B0%E6%8D%AE%E5%BA%93/</url>
+    <url>/2023/05/16/postgres%E4%B8%AD%E6%96%AD%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E6%89%80%E6%9C%89%E9%93%BE%E6%8E%A5,%20%E5%B9%B6%E9%87%8D%E5%91%BD%E5%90%8D%E6%95%B0%E6%8D%AE%E5%BA%93/</url>
     <content><![CDATA[<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># docker 直接管理员进入</span></span><br><span class="line">psql -U postgres</span><br><span class="line"><span class="comment"># 查看连接数</span></span><br><span class="line">SELECT COUNT(*) AS connection_count</span><br><span class="line">FROM pg_stat_activity</span><br><span class="line">WHERE datname = <span class="string">&#x27;数据库名字&#x27;</span>;</span><br><span class="line"><span class="comment"># 删除所有连接</span></span><br><span class="line">SELECT pg_terminate_backend(pg_stat_activity.pid)</span><br><span class="line">FROM pg_stat_activity</span><br><span class="line">WHERE datname = <span class="string">&#x27;数据库名字&#x27;</span></span><br><span class="line">  AND pid &lt;&gt; pg_backend_pid();</span><br><span class="line"><span class="comment"># 重命名</span></span><br><span class="line">ALTER DATABASE <span class="string">&quot;原本名字&quot;</span> rename TO <span class="string">&quot;新名字&quot;</span>;</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>博客</category>
@@ -2133,7 +2133,7 @@
   </entry>
   <entry>
     <title>timestamp 转 timestamptz 问题</title>
-    <url>/2024/12/12/timestamp%20%E8%BD%AC%20timestamptz%20%E9%97%AE%E9%A2%98/</url>
+    <url>/2023/09/12/timestamp%20%E8%BD%AC%20timestamptz%20%E9%97%AE%E9%A2%98/</url>
     <content><![CDATA[<p>无时区转带时区的格式的时候, 使用 sync 他会将你原本的字段删除, 重新创建一个类型为 timestamptz 的字段, 数据会完全清空.</p>
 <p>建议新增一个 swaptime 字段, 将原本的 time 先转到 swaptime, 确认没问题后. 对服务器进行暂停维护, 然后开始将 time 的字段去掉, 然后将 swaptime 的名字改成 time. 重新开启服务.</p>
 ]]></content>
