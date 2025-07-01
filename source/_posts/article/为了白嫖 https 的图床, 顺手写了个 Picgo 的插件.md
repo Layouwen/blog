@@ -10,7 +10,7 @@ categories:
   - 图床
 ---
 
-![image.png](https://i.111666.best/image/P3Q5LBTBJQQ6ZbU5b3c8f7.png)
+![image.png](https://s2.loli.net/2025/07/01/xkyRgZGKVIqXev8.png)
 
 ## **🧠 前言**
 
@@ -99,4 +99,6 @@ server {
 
 [上文提到到的博客](https://blog.4van.top)
 
-[16图床](https://111666.best/)
+~~[16图床](https://111666.best/)~~ 国内无法访问!!!!
+
+[sm.ms](https://sm.ms/) YYDS!!!!!!!!!!!

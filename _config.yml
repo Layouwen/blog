@@ -7,7 +7,7 @@ language:
   - zh-CN
   # - en
 timezone: Asia/Shanghai
-url: https://4van.top
+url: https://blog.4van.top
 permalink: ':year/:month/:day/:title/'
 permalink_defaults: null
 pretty_urls:
