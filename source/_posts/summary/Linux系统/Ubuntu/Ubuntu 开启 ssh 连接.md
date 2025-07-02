@@ -1,6 +1,6 @@
 ---
 title: Ubuntu 开启 ssh 连接
-date: 2023-01-23 15:22:00
+date: 2023-01-18 15:22:00
 tags:
   - 汇总
   - ssh

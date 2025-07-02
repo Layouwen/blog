@@ -1,6 +1,6 @@
 ---
 title: Terminal 中的 GitBash 中文乱码
-date: 2023-01-23 15:22:00
+date: 2023-01-07 15:22:00
 tags:
   - 汇总
   - windows
