@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico">
+  <link rel="mask-icon" href="/images/favicon.ico" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha256-dABdfBfUoC8vJUBOwGVdm8L9qlMWaHTIfXt+7GnZCIo=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.4van.top","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.23.1","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="1. 处理&#x2F;创建 rtsp 流rtsp 推&#x2F;拉流中转服务EasyDarwin - windows 版">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="播放 rtsp 视频">
+<meta property="og:url" content="https://blog.4van.top/2024/05/12/summary/%E6%92%AD%E6%94%BE%20rtsp%20%E8%A7%86%E9%A2%91/index.html">
+<meta property="og:site_name" content="Avan&#39;s Blog">
+<meta property="og:description" content="1. 处理&#x2F;创建 rtsp 流rtsp 推&#x2F;拉流中转服务EasyDarwin - windows 版">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-05-12T09:18:54.000Z">
+<meta property="article:modified_time" content="2025-07-02T14:10:50.002Z">
+<meta property="article:author" content="梁又文">
+<meta property="article:tag" content="汇总">
+<meta property="article:tag" content="rtsp">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://blog.4van.top/2024/05/12/summary/%E6%92%AD%E6%94%BE%20rtsp%20%E8%A7%86%E9%A2%91/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://blog.4van.top/2024/05/12/summary/%E6%92%AD%E6%94%BE%20rtsp%20%E8%A7%86%E9%A2%91/","path":"2024/05/12/summary/播放 rtsp 视频/","title":"播放 rtsp 视频"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>播放 rtsp 视频 | Avan's Blog</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script><script src="/js/bookmark.js" defer></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous" defer></script>
+<script src="/js/third-party/search/local-search.js" defer></script>
+
+
+
+
+
+
+  <script src="/js/third-party/addtoany.js" defer></script>
+
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Avan's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Avan 的博客</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">134</span></a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">103</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">34</span></a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-%E5%A4%84%E7%90%86-%E5%88%9B%E5%BB%BA-rtsp-%E6%B5%81"><span class="nav-number">1.</span> <span class="nav-text">1. 处理&#x2F;创建 rtsp 流</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#rtsp-%E6%8E%A8-%E6%8B%89%E6%B5%81%E4%B8%AD%E8%BD%AC%E6%9C%8D%E5%8A%A1"><span class="nav-number">1.1.</span> <span class="nav-text">rtsp 推&#x2F;拉流中转服务</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#EasyDarwin-windows-%E7%89%88"><span class="nav-number">1.1.1.</span> <span class="nav-text">EasyDarwin - windows 版</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mediamtx"><span class="nav-number">1.1.2.</span> <span class="nav-text">mediamtx</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%9A%E8%BF%87-ffmpeg-%E8%BF%9B%E8%A1%8C%E6%9C%AC%E5%9C%B0%E6%8E%A8%E6%B5%81%E8%87%B3-rtsp-%E6%8E%A8%E6%B5%81%E6%9C%8D%E5%8A%A1"><span class="nav-number">1.2.</span> <span class="nav-text">通过 ffmpeg 进行本地推流至 rtsp 推流服务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%8B%E8%AF%95%E6%92%AD%E6%94%BE"><span class="nav-number">1.3.</span> <span class="nav-text">测试播放</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-rtsp-%E5%A4%84%E7%90%86%E6%9C%8D%E5%8A%A1"><span class="nav-number">2.</span> <span class="nav-text">2. rtsp 处理服务</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#rtsptoweb-%E6%92%AD%E6%94%BE%E5%A4%AA%E5%8D%A1"><span class="nav-number">2.1.</span> <span class="nav-text">rtsptoweb - 播放太卡</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#rtsp-stream-%E4%BB%85%E6%94%AF%E6%8C%81-hls"><span class="nav-number">2.2.</span> <span class="nav-text">rtsp-stream - 仅支持 hls</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#rtsp2web-%E4%BB%85%E6%94%AF%E6%8C%81-flv"><span class="nav-number">2.3.</span> <span class="nav-text">rtsp2web - 仅支持 flv</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#zlmediakit"><span class="nav-number">2.4.</span> <span class="nav-text">zlmediakit</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99"><span class="nav-number">3.</span> <span class="nav-text">3. 相关资料</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-%E5%85%B6%E4%BB%96%E5%BA%93"><span class="nav-number">4.</span> <span class="nav-text">4. 其他库</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%92%AD%E6%94%BE%E5%99%A8"><span class="nav-number">4.1.</span> <span class="nav-text">播放器</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="梁又文"
+      src="/images/logo.png">
+  <p class="site-author-name" itemprop="name">梁又文</p>
+  <div class="site-description" itemprop="description">记录自己的一些日记 & 技术文章 & 学习笔记等</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">134</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">34</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">103</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/layouwen" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;layouwen" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:layouwen@gmail.com" title="E-Mail → mailto:layouwen@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://x.com/coderavan" title="Twitter → https:&#x2F;&#x2F;x.com&#x2F;coderavan" rel="noopener me" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://t.me/coderavan" title="Telegram → https:&#x2F;&#x2F;t.me&#x2F;coderavan" rel="noopener me" target="_blank"><i class="fab fa-telegram fa-fw"></i>Telegram</a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/big/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+          链接
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <a href="https://github.com/whale-wave" title="https:&#x2F;&#x2F;github.com&#x2F;whale-wave" rel="noopener" target="_blank">Whale Wave</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.4van.top/2024/05/12/summary/%E6%92%AD%E6%94%BE%20rtsp%20%E8%A7%86%E9%A2%91/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/logo.png">
+      <meta itemprop="name" content="梁又文">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Avan's Blog">
+      <meta itemprop="description" content="记录自己的一些日记 & 技术文章 & 学习笔记等">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="播放 rtsp 视频 | Avan's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          播放 rtsp 视频<a href="https://github.com/layouwen/blog/edit/master/source/_posts/summary/%E6%92%AD%E6%94%BE%20rtsp%20%E8%A7%86%E9%A2%91.md" class="post-edit-link" title="编辑" rel="noopener" target="_blank"><i class="fa fa-pen-nib"></i></a>
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-05-12 17:18:54" itemprop="dateCreated datePublished" datetime="2024-05-12T17:18:54+08:00">2024-05-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-07-02 22:10:50" itemprop="dateModified" datetime="2025-07-02T22:10:50+08:00">2025-07-02</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%B1%87%E6%80%BB/" itemprop="url" rel="index"><span itemprop="name">汇总</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>605</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="1-处理-创建-rtsp-流"><a href="#1-处理-创建-rtsp-流" class="headerlink" title="1. 处理&#x2F;创建 rtsp 流"></a>1. 处理&#x2F;创建 rtsp 流</h1><h2 id="rtsp-推-拉流中转服务"><a href="#rtsp-推-拉流中转服务" class="headerlink" title="rtsp 推&#x2F;拉流中转服务"></a>rtsp 推&#x2F;拉流中转服务</h2><h3 id="EasyDarwin-windows-版"><a href="#EasyDarwin-windows-版" class="headerlink" title="EasyDarwin - windows 版"></a>EasyDarwin - windows 版</h3><p><a target="_blank" rel="noopener" href="https://github.com/EasyDarwin/EasyDarwin/releases">下载 EasyDarwin</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd EasyDarwin</span><br><span class="line">./easydarwin</span><br></pre></td></tr></table></figure>
+
+<p>后台管理页面, 可以查看相关推流情况. <a target="_blank" rel="noopener" href="http://localhost:10008/">http://localhost:10008</a> 默认用户&#x2F;密码(admin&#x2F;admin)</p>
+<h3 id="mediamtx"><a href="#mediamtx" class="headerlink" title="mediamtx"></a>mediamtx</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --<span class="built_in">rm</span> -it -e MTX_PROTOCOLS=tcp -p 9554:8554 -p 1935:1935 -p 8888:8888 -p 8889:8889 -p 8890:8890/udp bluenviron/mediamtx</span><br></pre></td></tr></table></figure>
+
+<p>往 9554 端口推即可</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rtsp://localhost:9554/&#123;streamName&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="通过-ffmpeg-进行本地推流至-rtsp-推流服务"><a href="#通过-ffmpeg-进行本地推流至-rtsp-推流服务" class="headerlink" title="通过 ffmpeg 进行本地推流至 rtsp 推流服务"></a>通过 ffmpeg 进行本地推流至 rtsp 推流服务</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -re -i 推送的视频 -rtsp_transport tcp -vcodec h264 -f rtsp rtsp://&#123;easydarwin服务的ip&#125;/&#123;通道名&#125;</span><br></pre></td></tr></table></figure>
+
+<p>例如:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -re -i /Users/4van/Downloads/test.mp4 -rtsp_transport tcp -vcodec h264 -f rtsp rtsp://localhost/test1</span><br></pre></td></tr></table></figure>
+<h2 id="测试播放"><a href="#测试播放" class="headerlink" title="测试播放"></a>测试播放</h2><p><a target="_blank" rel="noopener" href="https://www.videolan.org/vlc/">下载 VLC</a><br>打开 Network<br>访问: rtsp:&#x2F;&#x2F;10.211.55.4&#x2F;test1</p>
+<h1 id="2-rtsp-处理服务"><a href="#2-rtsp-处理服务" class="headerlink" title="2. rtsp 处理服务"></a>2. rtsp 处理服务</h1><h2 id="rtsptoweb-播放太卡"><a href="#rtsptoweb-播放太卡" class="headerlink" title="rtsptoweb - 播放太卡"></a>rtsptoweb - 播放太卡</h2><ul>
+<li>支持 rtsp 转 hls&#x2F;hlsll&#x2F;mse&#x2F;webrtc 等格式</li>
+<li>提供相应 api 创建&#x2F;删除流</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --<span class="built_in">rm</span> -p 8083:8083 -p 5541:5541 ghcr.io/deepch/rtsptoweb:v2.4.3</span><br></pre></td></tr></table></figure>
+
+<p>后台页面 <a target="_blank" rel="noopener" href="http://localhost:8083/">http://localhost:8083</a></p>
+<h2 id="rtsp-stream-仅支持-hls"><a href="#rtsp-stream-仅支持-hls" class="headerlink" title="rtsp-stream - 仅支持 hls"></a>rtsp-stream - 仅支持 hls</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -p 80:80 -p 8080:8080 roverr/rtsp-stream:2-management</span><br></pre></td></tr></table></figure>
+
+<p>查看所有流 </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl --location --request GET &#x27;http://localhost:8080/list&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>添加流</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl --location --request POST &#x27;http://localhost:8080/start&#x27; --header &#x27;Content-Type: application/json&#x27; --data-raw &#x27;&#123; &quot;uri&quot;: &quot;rtsp://10.211.55.4/test1&quot; &#125;&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>删除流</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl --location --request POST &#x27;http://localhost:8080/stop&#x27; --header &#x27;Content-Type: application/json&#x27; --data-raw &#x27;&#123; &quot;id&quot;: &quot;4f081bf2-ed1d-4881-8ff9-32f6e5532bc9&quot;, &quot;remove&quot;: true &#125;&#x27;</span><br></pre></td></tr></table></figure>
+
+<h2 id="rtsp2web-仅支持-flv"><a href="#rtsp2web-仅支持-flv" class="headerlink" title="rtsp2web - 仅支持 flv"></a>rtsp2web - 仅支持 flv</h2><p>原仓库 (有水印): <a target="_blank" rel="noopener" href="https://github.com/Neveryu/rtsp2web">https://github.com/Neveryu/rtsp2web</a><br>二次封装: <a target="_blank" rel="noopener" href="https://github.com/Layouwen/code-example/tree/main/demos/rtsp-to-h264-flv-service">https://github.com/Layouwen/code-example/tree/main/demos/rtsp-to-h264-flv-service</a></p>
+<p>启动服务</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker build -t rtsp-to-h264-flv-service:1.0.0 .</span><br><span class="line">docker run --rm -p 9999:4384 -e AUDIO=true rtsp-to-h264-flv-service:1.0.0</span><br></pre></td></tr></table></figure>
+
+<p>前端直接传 rtsp 地址进行播放</p>
+<figure class="highlight tsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> <span class="title class_">Jsmpeg</span>: <span class="variable constant_">FC</span>&lt;&#123; <span class="attr">baseUrl</span>: <span class="built_in">string</span>; <span class="attr">rtsp</span>: <span class="built_in">string</span> &#125;&gt; = <span class="function">(<span class="params">&#123; baseUrl, rtsp &#125;</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> videoPlayerRef = useRef&lt;<span class="built_in">any</span>&gt;(<span class="literal">null</span>)</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> <span class="title function_">onPlay</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">    <span class="keyword">const</span> <span class="title class_">VideoPlayer</span> = (<span class="variable language_">window</span> <span class="keyword">as</span> <span class="built_in">any</span>).<span class="property">JSMpeg</span></span><br><span class="line"></span><br><span class="line">    videoPlayerRef.<span class="property">current</span> = <span class="keyword">new</span> <span class="title class_">VideoPlayer</span>.<span class="title class_">Player</span>(</span><br><span class="line">      <span class="string">`ws://localhost:9999/rtsp?url=`</span> +</span><br><span class="line">      <span class="title function_">btoa</span>(rtsp) + <span class="string">&#x27;&amp;brightness=0.2&amp;saturation=1.8&#x27;</span>,</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="attr">canvas</span>: <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;video-player&#x27;</span>),</span><br><span class="line">      &#125;</span><br><span class="line">    )</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;onPlay&#125;</span>&gt;</span>播放<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">canvas</span> <span class="attr">id</span>=<span class="string">&quot;video-player&quot;</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">  )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="zlmediakit"><a href="#zlmediakit" class="headerlink" title="zlmediakit"></a>zlmediakit</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --rm -p 2935:1935 -p 8080:80 -p 8443:443 -p 8554:554 -p 10000:10000 -p 10000:10000/udp -p 8000:8000/udp -p 9000:9000/udp zlmediakit/zlmediakit:master</span><br></pre></td></tr></table></figure>
+
+<p>示例 url:</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="http://127.0.0.1:8080/live/test1.live.flv?vhost=192.168.10.11">http://127.0.0.1:8080/live/test1.live.flv?vhost=192.168.10.11</a></li>
+<li>ws:&#x2F;&#x2F;127.0.0.1:8080&#x2F;live&#x2F;test1.live.flv?vhost&#x3D;192.168.10.11</li>
+<li><a target="_blank" rel="noopener" href="https://tdev1.locnavi.com/live/test1.live.flv?vhost=192.168.10.11">https://tdev1.locnavi.com/live/test1.live.flv?vhost=192.168.10.11</a></li>
+</ul>
+<h1 id="3-相关资料"><a href="#3-相关资料" class="headerlink" title="3. 相关资料"></a>3. 相关资料</h1><p>rtsp h.264 to h.265</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i &#123;rtsp转换前地址&#125; -c:v libx265 -c:a copy -f rtsp &#123;rtsp转换后地址&#125;</span><br></pre></td></tr></table></figure>
+
+<p>mp4 to rtsp h264</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i &#123;视频文件&#125; -c:v libx264 -c:a copy -f rtsp &#123;rtsp转换后地址&#125;</span><br></pre></td></tr></table></figure>
+
+<p>mp4 to rtsp h265</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i &#123;视频文件&#125; -c:v libx265 -c:a copy -f rtsp &#123;rtsp转换后地址&#125;</span><br></pre></td></tr></table></figure>
+
+<p>hls 测试地址</p>
+<p><a target="_blank" rel="noopener" href="https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8">https:&#x2F;bitdash-a.akamaihd.net&#x2F;content&#x2F;sintel&#x2F;hls&#x2F;playlist.m3u8</a></p>
+<h1 id="4-其他库"><a href="#4-其他库" class="headerlink" title="4. 其他库"></a>4. 其他库</h1><h2 id="播放器"><a href="#播放器" class="headerlink" title="播放器"></a>播放器</h2><ul>
+<li>h265<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/numberwolf/h265web.js">https://github.com/numberwolf/h265web.js</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/langhuihui/jessibuca">https://github.com/langhuihui/jessibuca</a></li>
+</ul>
+</li>
+<li>hls 播放库<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/foxford/react-hls">https://github.com/foxford/react-hls</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.png" alt="梁又文 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.png" alt="梁又文 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>梁又文
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://blog.4van.top/2024/05/12/summary/%E6%92%AD%E6%94%BE%20rtsp%20%E8%A7%86%E9%A2%91/" title="播放 rtsp 视频">https://blog.4van.top/2024/05/12/summary/播放 rtsp 视频/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://twitter.com/avancoding">
+            <span class="icon">
+              <i class="fab fa-twitter"></i>
+            </span>
+
+            <span class="label">Twitter</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://t.me/coderavan">
+            <span class="icon">
+              <i class="fab fa-telegram"></i>
+            </span>
+
+            <span class="label">Telegram</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <span class="social-link">
+            <span class="icon">
+              <i class="fab fa-weixin"></i>
+            </span>
+
+            <span class="label">WeChat</span>
+          </span>
+
+          <img class="social-item-img" src="/images/wechat.png">
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://github.com/layouwen">
+            <span class="icon">
+              <i class="fab fa-github"></i>
+            </span>
+
+            <span class="label">GitHub</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E6%B1%87%E6%80%BB/" rel="tag"><i class="fa fa-tag"></i> 汇总</a>
+              <a href="/tags/rtsp/" rel="tag"><i class="fa fa-tag"></i> rtsp</a>
+          </div>
+
+        
+  <div class="social-like a2a_kit a2a_kit_size_32 a2a_default_style">
+    <a class="a2a_dd" target="_blank" rel="noopener" href="https://www.addtoany.com/share"></a>
+      <a class="a2a_button_facebook"></a>
+      <a class="a2a_button_twitter"></a>
+      <a class="a2a_button_wechat"></a>
+      <a class="a2a_button_x"></a>
+      <a class="a2a_button_email"></a>
+      <a class="a2a_button_linkedin"></a>
+  </div>
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2024/05/06/summary/Obsidian%20%E9%85%8D%E7%BD%AE/" rel="prev" title="Obsidian 配置">
+                  <i class="fa fa-angle-left"></i> Obsidian 配置
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2024/06/29/article/%E5%A6%82%E4%BD%95%22%E6%94%BE%E6%9D%BE%22%E7%9A%84%E5%8F%82%E4%B8%8E%E5%BC%80%E6%BA%90%E7%A4%BE%E5%8C%BA%E5%BB%BA%E8%AE%BE/" rel="next" title="如何&quot;放松&quot;的参与开源社区建设">
+                  如何"放松"的参与开源社区建设 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2020 – 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">梁又文</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">62k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">3:47</span>
+  </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+  <a href="https://github.com/layouwen" class="github-corner" title="在 GitHub 上关注我" aria-label="在 GitHub 上关注我" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>

@@ -53,7 +53,7 @@
   </entry>
   <entry>
     <title>Vpn 推荐</title>
-    <url>/2024/06/30/summary/Vpn%20%E6%8E%A8%E8%8D%90/</url>
+    <url>/2024/04/18/summary/Vpn%20%E6%8E%A8%E8%8D%90/</url>
     <content><![CDATA[<h1 id="EFCloud"><a href="#EFCloud" class="headerlink" title="EFCloud"></a>EFCloud</h1><p><a href="https://www.efcloud.cc/">https://www.efcloud.cc</a></p>
 <p><img src="http://cdn.easyhappy.top/obsidian/20230110104224.png"></p>
 <h1 id="最萌云"><a href="#最萌云" class="headerlink" title="最萌云"></a>最萌云</h1><p><a href="https://ure.best/">https://ure.best</a></p>
@@ -100,7 +100,7 @@
   </entry>
   <entry>
     <title>Obsidian 配置</title>
-    <url>/2024/06/30/summary/Obsidian%20%E9%85%8D%E7%BD%AE/</url>
+    <url>/2024/05/06/summary/Obsidian%20%E9%85%8D%E7%BD%AE/</url>
     <content><![CDATA[<h1 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h1><table>
 <thead>
 <tr>
@@ -1843,7 +1843,7 @@
   </entry>
   <entry>
     <title>内网映射</title>
-    <url>/2024/06/30/summary/%E5%86%85%E7%BD%91%E6%98%A0%E5%B0%84/</url>
+    <url>/2024/09/06/summary/%E5%86%85%E7%BD%91%E6%98%A0%E5%B0%84/</url>
     <content><![CDATA[<h2 id="Ngrok"><a href="#Ngrok" class="headerlink" title="Ngrok"></a>Ngrok</h2><p><a href="https://ngrok.com/">https://ngrok.com/</a></p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">./ngrok authtoken token密钥</span><br><span class="line">./ngrok http 端口</span><br></pre></td></tr></table></figure>
 
@@ -1902,7 +1902,7 @@
   </entry>
   <entry>
     <title>在内网环境安装 PaddleSpeech 语音合成服务</title>
-    <url>/2024/06/30/summary/%E5%9C%A8%E5%86%85%E7%BD%91%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%20PaddleSpeech%20%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90%E6%9C%8D%E5%8A%A1/</url>
+    <url>/2024/07/28/summary/%E5%9C%A8%E5%86%85%E7%BD%91%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%20PaddleSpeech%20%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90%E6%9C%8D%E5%8A%A1/</url>
     <content><![CDATA[<h2 id="简单方式安装（失败）"><a href="#简单方式安装（失败）" class="headerlink" title="简单方式安装（失败）"></a>简单方式安装（失败）</h2><p>sudo apt install build-essential</p>
 <p>sudo apt install python3-pip</p>
 <p>pip install pytest-runner -i <a href="https://pypi.tuna.tsinghua.edu.cn/simple">https://pypi.tuna.tsinghua.edu.cn/simple</a></p>
@@ -1946,7 +1946,7 @@
   </entry>
   <entry>
     <title>播放 rtsp 视频</title>
-    <url>/2024/06/30/summary/%E6%92%AD%E6%94%BE%20rtsp%20%E8%A7%86%E9%A2%91/</url>
+    <url>/2024/05/12/summary/%E6%92%AD%E6%94%BE%20rtsp%20%E8%A7%86%E9%A2%91/</url>
     <content><![CDATA[<h1 id="1-处理-创建-rtsp-流"><a href="#1-处理-创建-rtsp-流" class="headerlink" title="1. 处理&#x2F;创建 rtsp 流"></a>1. 处理&#x2F;创建 rtsp 流</h1><h2 id="rtsp-推-拉流中转服务"><a href="#rtsp-推-拉流中转服务" class="headerlink" title="rtsp 推&#x2F;拉流中转服务"></a>rtsp 推&#x2F;拉流中转服务</h2><h3 id="EasyDarwin-windows-版"><a href="#EasyDarwin-windows-版" class="headerlink" title="EasyDarwin - windows 版"></a>EasyDarwin - windows 版</h3><p><a href="https://github.com/EasyDarwin/EasyDarwin/releases">下载 EasyDarwin</a></p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd EasyDarwin</span><br><span class="line">./easydarwin</span><br></pre></td></tr></table></figure>
 
@@ -2027,7 +2027,7 @@
   </entry>
   <entry>
     <title>开源项目仓库推荐</title>
-    <url>/2025/01/28/summary/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E4%BB%93%E5%BA%93%E6%8E%A8%E8%8D%90/</url>
+    <url>/2024/01/28/summary/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E4%BB%93%E5%BA%93%E6%8E%A8%E8%8D%90/</url>
     <content><![CDATA[<h1 id="Plane"><a href="#Plane" class="headerlink" title="Plane"></a>Plane</h1><p><a href="https://github.com/makeplane/plane">https://github.com/makeplane/plane</a></p>
 <p>开源的项目管理站点, 管理项目进度工作安排等.</p>
 <h1 id="Formbricks"><a href="#Formbricks" class="headerlink" title="Formbricks"></a>Formbricks</h1><p><a href="https://github.com/formbricks/formbricks?tab=readme-ov-file">https://github.com/formbricks/formbricks?tab=readme-ov-file</a></p>
@@ -2055,7 +2055,7 @@
   </entry>
   <entry>
     <title>软件推荐</title>
-    <url>/2025/02/21/summary/%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/</url>
+    <url>/2025/02/26/summary/%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/</url>
     <content><![CDATA[<h1 id="通用"><a href="#通用" class="headerlink" title="通用"></a>通用</h1><h2 id="Browser-Extension"><a href="#Browser-Extension" class="headerlink" title="Browser Extension"></a>Browser Extension</h2><h3 id="1password"><a href="#1password" class="headerlink" title="1password"></a>1password</h3><h3 id="AdGuard-AdBlocker"><a href="#AdGuard-AdBlocker" class="headerlink" title="AdGuard AdBlocker"></a>AdGuard AdBlocker</h3><h3 id="AI-Subtitles-Immersive-Translate-Trancy"><a href="#AI-Subtitles-Immersive-Translate-Trancy" class="headerlink" title="AI Subtitles &amp; Immersive Translate - Trancy"></a>AI Subtitles &amp; Immersive Translate - Trancy</h3><p>下载地址: <a href="https://www.trancy.org/zh-cn">https://www.trancy.org/zh-cn</a></p>
 <p>功能:</p>
 <ul>
@@ -7297,7 +7297,7 @@
   </entry>
   <entry>
     <title>Terminal 中的 GitBash 中文乱码</title>
-    <url>/2023/01/23/summary/Windows%E7%B3%BB%E7%BB%9F/Terminal%20%E4%B8%AD%E7%9A%84%20GitBash%20%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81/</url>
+    <url>/2023/01/07/summary/Windows%E7%B3%BB%E7%BB%9F/Terminal%20%E4%B8%AD%E7%9A%84%20GitBash%20%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81/</url>
     <content><![CDATA[<h1 id="打开-GitBash-设置-chartset"><a href="#打开-GitBash-设置-chartset" class="headerlink" title="打开 GitBash 设置 chartset"></a>打开 GitBash 设置 chartset</h1><p><img src="http://cdn.easyhappy.top/obsidian/20230123152200.png"></p>
 <h1 id="在-Terminal-中设置环境变量指定语言"><a href="#在-Terminal-中设置环境变量指定语言" class="headerlink" title="在 Terminal 中设置环境变量指定语言"></a>在 Terminal 中设置环境变量指定语言</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim ~/.bashrc</span><br></pre></td></tr></table></figure>
 
@@ -7725,7 +7725,7 @@
   </entry>
   <entry>
     <title>Ubuntu 安装 docker</title>
-    <url>/2023/01/23/summary/Linux%E7%B3%BB%E7%BB%9F/Ubuntu/Ubuntu%20%E5%AE%89%E8%A3%85%20docker/</url>
+    <url>/2023/01/11/summary/Linux%E7%B3%BB%E7%BB%9F/Ubuntu/Ubuntu%20%E5%AE%89%E8%A3%85%20docker/</url>
     <content><![CDATA[<p>卸载旧版</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt-get remove docker docker-engine docker.io containerd runc</span><br></pre></td></tr></table></figure>
 
@@ -7764,7 +7764,7 @@
   </entry>
   <entry>
     <title>Ubuntu 开启 ssh 连接</title>
-    <url>/2023/01/23/summary/Linux%E7%B3%BB%E7%BB%9F/Ubuntu/Ubuntu%20%E5%BC%80%E5%90%AF%20ssh%20%E8%BF%9E%E6%8E%A5/</url>
+    <url>/2023/01/18/summary/Linux%E7%B3%BB%E7%BB%9F/Ubuntu/Ubuntu%20%E5%BC%80%E5%90%AF%20ssh%20%E8%BF%9E%E6%8E%A5/</url>
     <content><![CDATA[<p>如果apt没有更新，先更新</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt-get update</span><br></pre></td></tr></table></figure>
 
@@ -7835,8 +7835,8 @@
       </tags>
   </entry>
   <entry>
-    <title>服务托管平台</title>
-    <url>/2025/07/02/article/%E5%85%8D%E8%B4%B9%E7%9A%84%E9%83%A8%E7%BD%B2%E7%BD%91%E7%AB%99/</url>
+    <title>服务托管平台推荐</title>
+    <url>/2024/02/08/summary/%E6%9C%8D%E5%8A%A1%E6%89%98%E7%AE%A1%E5%B9%B3%E5%8F%B0%E6%8E%A8%E8%8D%90/</url>
     <content><![CDATA[<ul>
 <li><a href="https://www.netlify.com/">Netlify</a></li>
 <li><a href="https://vercel.com/">Vercel</a></li>
