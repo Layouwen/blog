@@ -1830,7 +1830,7 @@
   </entry>
   <entry>
     <title>免费数据库</title>
-    <url>/2025/06/30/summary/%E5%85%8D%E8%B4%B9%E6%95%B0%E6%8D%AE%E5%BA%93/</url>
+    <url>/2025/01/12/summary/%E5%85%8D%E8%B4%B9%E6%95%B0%E6%8D%AE%E5%BA%93/</url>
     <content><![CDATA[<p><a href="https://remotemysql.com/">remotemysql</a></p>
 ]]></content>
       <categories>
@@ -2027,7 +2027,7 @@
   </entry>
   <entry>
     <title>开源项目仓库推荐</title>
-    <url>/2025/06/30/summary/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E4%BB%93%E5%BA%93%E6%8E%A8%E8%8D%90/</url>
+    <url>/2025/01/28/summary/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E4%BB%93%E5%BA%93%E6%8E%A8%E8%8D%90/</url>
     <content><![CDATA[<h1 id="Plane"><a href="#Plane" class="headerlink" title="Plane"></a>Plane</h1><p><a href="https://github.com/makeplane/plane">https://github.com/makeplane/plane</a></p>
 <p>开源的项目管理站点, 管理项目进度工作安排等.</p>
 <h1 id="Formbricks"><a href="#Formbricks" class="headerlink" title="Formbricks"></a>Formbricks</h1><p><a href="https://github.com/formbricks/formbricks?tab=readme-ov-file">https://github.com/formbricks/formbricks?tab=readme-ov-file</a></p>
@@ -2055,7 +2055,7 @@
   </entry>
   <entry>
     <title>软件推荐</title>
-    <url>/2025/06/30/summary/%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/</url>
+    <url>/2025/02/21/summary/%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/</url>
     <content><![CDATA[<h1 id="通用"><a href="#通用" class="headerlink" title="通用"></a>通用</h1><h2 id="Browser-Extension"><a href="#Browser-Extension" class="headerlink" title="Browser Extension"></a>Browser Extension</h2><h3 id="1password"><a href="#1password" class="headerlink" title="1password"></a>1password</h3><h3 id="AdGuard-AdBlocker"><a href="#AdGuard-AdBlocker" class="headerlink" title="AdGuard AdBlocker"></a>AdGuard AdBlocker</h3><h3 id="AI-Subtitles-Immersive-Translate-Trancy"><a href="#AI-Subtitles-Immersive-Translate-Trancy" class="headerlink" title="AI Subtitles &amp; Immersive Translate - Trancy"></a>AI Subtitles &amp; Immersive Translate - Trancy</h3><p>下载地址: <a href="https://www.trancy.org/zh-cn">https://www.trancy.org/zh-cn</a></p>
 <p>功能:</p>
 <ul>
@@ -5201,7 +5201,9 @@
 <blockquote>
 <p>建议 19:00, 18:00 左右的时间容易存在争议</p>
 </blockquote>
-<h1 id="脚本"><a href="#脚本" class="headerlink" title="脚本"></a>脚本</h1><h2 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h2><h2 id="Uni"><a href="#Uni" class="headerlink" title="Uni"></a>Uni</h2>]]></content>
+<h1 id="脚本"><a href="#脚本" class="headerlink" title="脚本"></a>脚本</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 检测操作系统类型</span></span><br><span class="line"><span class="keyword">if</span> <span class="built_in">date</span> --version &gt;/dev/null 2&gt;&amp;1; <span class="keyword">then</span></span><br><span class="line">    <span class="comment"># GNU date (Linux)</span></span><br><span class="line">    DATE_CMD=<span class="string">&quot;gnu&quot;</span></span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">    <span class="comment"># BSD date (macOS)</span></span><br><span class="line">    DATE_CMD=<span class="string">&quot;bsd&quot;</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取今天的日期</span></span><br><span class="line">TODAY=$(<span class="built_in">date</span> +<span class="string">&quot;%Y-%m-%d&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取当天 19:00 的时间戳</span></span><br><span class="line"><span class="keyword">if</span> [ <span class="string">&quot;<span class="variable">$DATE_CMD</span>&quot;</span> = <span class="string">&quot;gnu&quot;</span> ]; <span class="keyword">then</span></span><br><span class="line">    <span class="comment"># Linux: 使用 GNU date 的 -d 参数</span></span><br><span class="line">    NINETEEN_TIME=$(<span class="built_in">date</span> -d <span class="string">&quot;<span class="variable">$&#123;TODAY&#125;</span> 19:00:00&quot;</span> <span class="string">&quot;+%s&quot;</span>)</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">    <span class="comment"># macOS: 使用 BSD date 的 -j 和 -f 参数</span></span><br><span class="line">    NINETEEN_TIME=$(<span class="built_in">date</span> -j -f <span class="string">&quot;%Y-%m-%d %H:%M:%S&quot;</span> <span class="string">&quot;<span class="variable">$&#123;TODAY&#125;</span> 19:00:00&quot;</span> <span class="string">&quot;+%s&quot;</span>)</span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取 Git 中的最后一次提交时间戳</span></span><br><span class="line">LAST_COMMIT_TIME=$(git <span class="built_in">log</span> -1 --format=<span class="string">&quot;%ct&quot;</span> 2&gt;/dev/null)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果没有提交记录，初始化 LAST_COMMIT_TIME 为 0</span></span><br><span class="line"><span class="keyword">if</span> [ -z <span class="string">&quot;<span class="variable">$LAST_COMMIT_TIME</span>&quot;</span> ]; <span class="keyword">then</span></span><br><span class="line">    LAST_COMMIT_TIME=0</span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 提交函数</span></span><br><span class="line"><span class="function"><span class="title">commit_with_adjusted_time</span></span>() &#123;</span><br><span class="line">    <span class="comment"># 获取当前时间戳</span></span><br><span class="line">    CURRENT_TIME=$(<span class="built_in">date</span> <span class="string">&quot;+%s&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 如果当前时间早于 19:00 或没有提交记录</span></span><br><span class="line">    <span class="keyword">if</span> [ <span class="string">&quot;<span class="variable">$CURRENT_TIME</span>&quot;</span> -lt <span class="string">&quot;<span class="variable">$NINETEEN_TIME</span>&quot;</span> ] &amp;&amp; [ <span class="string">&quot;<span class="variable">$LAST_COMMIT_TIME</span>&quot;</span> -lt <span class="string">&quot;<span class="variable">$NINETEEN_TIME</span>&quot;</span> ]; <span class="keyword">then</span></span><br><span class="line">        <span class="comment"># 使用当天 19:00 的时间作为基准</span></span><br><span class="line">        COMMIT_TIME=<span class="variable">$NINETEEN_TIME</span></span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="comment"># 基于上一次提交时间递增 1 秒</span></span><br><span class="line">        COMMIT_TIME=$((<span class="variable">$LAST_COMMIT_TIME</span> + <span class="number">1</span>))</span><br><span class="line">    <span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 更新最后一次提交的时间</span></span><br><span class="line">    LAST_COMMIT_TIME=<span class="variable">$COMMIT_TIME</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 格式化时间为 Git 可识别的格式</span></span><br><span class="line">    <span class="keyword">if</span> [ <span class="string">&quot;<span class="variable">$DATE_CMD</span>&quot;</span> = <span class="string">&quot;gnu&quot;</span> ]; <span class="keyword">then</span></span><br><span class="line">        <span class="comment"># Linux: 使用 GNU date 的 -d 参数</span></span><br><span class="line">        FORMATTED_TIME=$(<span class="built_in">date</span> -d <span class="string">&quot;@<span class="variable">$COMMIT_TIME</span>&quot;</span> <span class="string">&quot;+%Y-%m-%dT%H:%M:%S&quot;</span>)</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="comment"># macOS: 使用 BSD date 的 -j 和 -f 参数</span></span><br><span class="line">        FORMATTED_TIME=$(<span class="built_in">date</span> -j -f <span class="string">&quot;%s&quot;</span> <span class="string">&quot;<span class="variable">$COMMIT_TIME</span>&quot;</span> <span class="string">&quot;+%Y-%m-%dT%H:%M:%S&quot;</span>)</span><br><span class="line">    <span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 设置提交时间并提交代码</span></span><br><span class="line">    GIT_AUTHOR_DATE=<span class="variable">$FORMATTED_TIME</span> GIT_COMMITTER_DATE=<span class="variable">$FORMATTED_TIME</span> git commit -m <span class="string">&quot;<span class="variable">$1</span>&quot;</span> --<span class="built_in">date</span>=<span class="string">&quot;<span class="variable">$FORMATTED_TIME</span>&quot;</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">&quot;Commit created with time: <span class="variable">$FORMATTED_TIME</span>&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 检查参数是否传入提交信息</span></span><br><span class="line"><span class="keyword">if</span> [ -z <span class="string">&quot;<span class="variable">$1</span>&quot;</span> ]; <span class="keyword">then</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">&quot;Usage: <span class="variable">$0</span> &lt;commit-message&gt;&quot;</span></span><br><span class="line">    <span class="built_in">exit</span> 1</span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 调用提交函数</span></span><br><span class="line">commit_with_adjusted_time <span class="string">&quot;<span class="variable">$1</span>&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">chmod</span> +x commit.sh</span><br><span class="line">./commit.sh <span class="string">&quot;commit message&quot;</span></span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>博客</category>
         <category>后端</category>
@@ -7830,6 +7832,39 @@
         <tag>汇总</tag>
         <tag>linux</tag>
         <tag>ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>服务托管平台</title>
+    <url>/2025/07/02/article/%E5%85%8D%E8%B4%B9%E7%9A%84%E9%83%A8%E7%BD%B2%E7%BD%91%E7%AB%99/</url>
+    <content><![CDATA[<ul>
+<li><a href="https://www.netlify.com/">Netlify</a></li>
+<li><a href="https://vercel.com/">Vercel</a></li>
+<li><a href="https://pages.github.com/">github pages</a></li>
+<li><a href="https://cloud.google.com/compute">Google Compute Engine</a></li>
+<li><a href="https://cloud.google.com/functions">Google Cloud Functions</a></li>
+<li><a href="https://workers.cloudflare.com/">Cloudflare Workers</a></li>
+<li><a href="https://aws.amazon.com/lambda/">AWS Lambda</a></li>
+<li><a href="https://planetscale.com/">PlanetScale</a></li>
+<li><a href="https://supabase.com/">Supabase</a></li>
+<li><a href="https://www.sanity.io/">Sanity.io</a></li>
+<li><a href="https://appwrite.io/">Appwrite</a></li>
+<li><a href="https://cyclic.sh/">Cyclic.sh</a></li>
+<li><a href="https://deta.sh/">Deta.sh</a></li>
+<li><a href="https://fly.io/">Fly.io</a></li>
+<li><a href="https://glitch.com/">Glitch</a></li>
+<li><a href="https://render.com/">Render.com</a></li>
+<li><a href="https://stormkit.io/">Stormkit.io</a></li>
+<li><a href="https://railway.app/">Railway.app</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>博客</category>
+        <category>部署</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
+        <tag>部署</tag>
       </tags>
   </entry>
 </search>
