@@ -53,6 +53,7 @@ categories:
 | eventemitter3   | 比较老牌的eventbus                |
 | @novu/node      | node 端的消息(邮件/facebook...)通知库 |
 | release-it      | 发版工具                         |
+| react-scan      | react 性能扫描工具                 |
 
 ## 全端通用工具
 
@@ -80,8 +81,9 @@ categories:
 | core-js         | 各版本 js 实现, 垫片                    |
 | globby          | 更好的 glob 匹配                      |
 | web-worker      | 统一浏览器和nodejs的worker写法            |
-|jspdf | pdf 生成库|
-|docx| doc 文档生成|
+| jspdf           | pdf 生成库                          |
+| docx            | doc 文档生成                         |
+| dompurify       | 清理 html 字符串, 防止 XSS 攻击           |
 
 
 ## 浏览器工具
@@ -144,6 +146,7 @@ categories:
 | leader-line-new              | 动效引导线                                   |     |
 | jheat.js                     | 类似 github 的热力图                          |     |
 | JsBarcode                    | 条形码生成                                   |     |
+| lingo.dev                    | 基于 LLM 自动翻译网站                           |     |
 
 ## Node端工具
 
@@ -213,6 +216,9 @@ categories:
 | svg2pdf.js           | svg 转 pdf 文件               |
 | pdf2html             | pdf 文件转 html               |
 | ink                  | 用 react 编写 cli 界面          |
+| envalid              | 验证环境变量的校验库                 |
+| @upyo/core           | 适配 bun node deno 的邮件库      |
+| discord.js           | discord 的 api 库            |
 
 
 ### 代码规范相关
@@ -249,6 +255,12 @@ categories:
 | express                           | 后端框架                                                                                                    |
 | express-validator<br>             | express 请求入参校验                                                                                          |
 | ipstack                           | 各种工具 api 集成平台                                                                                           |
+
+#### Nest.js
+
+| 包名     | 描述               |
+| ------ | ---------------- |
+| necord | 配合 discord.js 的库 |
 
 #### Koa
 

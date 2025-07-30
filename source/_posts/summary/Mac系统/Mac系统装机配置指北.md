@@ -107,6 +107,8 @@ lolcat \
 fzf \
 figlet \
 tmux \
+graphicsmagick \
+cmatrix \
 ctop
 
 # ripgrep \
@@ -122,6 +124,8 @@ ctop
 - fzf 全局查看文件
 - figlet 输出字符英文画
 - lolcat 彩色输出管道
+- cmatrix 没什么用的终端屏保
+- graphicsmagick 图片处理工具转换压缩等
 - 10.15.x 支持不太友好
 	- tldr 更好的查看 -h
 	- bat 更好的 cat 替代
