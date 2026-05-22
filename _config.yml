@@ -63,7 +63,7 @@ ignore: null
 theme: next
 deploy:
   type: git
-  repo: https://github.com/Layouwen/blog
+  repo: git@github.com:Layouwen/blog.git
   branch: deploy
 
 # sitemap:
