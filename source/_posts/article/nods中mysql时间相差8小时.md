@@ -1,6 +1,6 @@
 ---
 title: nods中mysql时间相差8小时
-date: 2022-01-16 21:17
+date: '2022-01-16 21:17'
 tags:
   - 博客
   - 后端
@@ -10,6 +10,7 @@ categories:
   - 博客
   - 后端
   - nodejs
+uuid: 2b2b8f0b-729d-43fe-a4d1-78ead24e30fa
 ---
 
 ## 前言

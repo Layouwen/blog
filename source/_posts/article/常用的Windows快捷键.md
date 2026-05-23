@@ -1,12 +1,13 @@
 ---
 title: 常用的Windows快捷键
-date: 2020-02-12 16:31
+date: '2020-02-12 16:31'
 tags:
   - 博客
   - windows
 categories:
   - 博客
   - windows
+uuid: 8a505dbf-cc3e-42ec-bbf9-35a4c62b00ee
 ---
 
 

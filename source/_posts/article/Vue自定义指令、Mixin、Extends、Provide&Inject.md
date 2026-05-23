@@ -1,6 +1,6 @@
 ---
 title: Vue自定义指令、Mixin、Extends、Provide&Inject
-date: 2020-12-21 21:28
+date: '2020-12-21 21:28'
 tags:
   - 博客
   - 前端
@@ -8,6 +8,7 @@ tags:
 categories:
   - 博客
   - 前端
+uuid: 2653a20c-49af-416f-9fd3-38bb0aeb62cf
 ---
 
 ## 一、自定义指令

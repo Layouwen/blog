@@ -1,6 +1,6 @@
 ---
 title: 虚拟DOM 和 DOM diff
-date: 2020-09-13 23:41
+date: '2020-09-13 23:41'
 tags:
   - 博客
   - react
@@ -11,6 +11,7 @@ tags:
 categories:
   - 博客
   - 前端
+uuid: b71222ea-baed-47c1-8c41-3d3e4848932b
 ---
 
 ## 一、什么是虚拟DOM

@@ -1,6 +1,6 @@
 ---
 title: 通过JBTools设置命令行启动IDE
-date: 2022-02-14 11:13
+date: '2022-02-14 11:13'
 tags:
   - 博客
   - 工具
@@ -9,6 +9,7 @@ categories:
   - 博客
   - 工具
   - jetbrain
+uuid: d09de26e-1d12-480d-9edd-867cf22bc0fc
 ---
 
 ## 需求

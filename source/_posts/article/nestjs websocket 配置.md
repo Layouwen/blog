@@ -1,6 +1,6 @@
 ---
 title: nestjs websocket 配置
-date: 2023-09-16 17:18:54
+date: 2023-09-16T17:18:54.000Z
 tags:
   - nestjs
   - 后端
@@ -8,6 +8,7 @@ tags:
 categories:
   - 博客
   - 后端
+uuid: 8b4b9307-9d81-4a37-aad5-12a570a8900d
 ---
 
 **src/socket/socket.module.ts**

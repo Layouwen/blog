@@ -1,6 +1,6 @@
 ---
 title: 快速了解fiex布局
-date: 2020-12-25 18:15
+date: '2020-12-25 18:15'
 tags:
   - 博客
   - 前端
@@ -9,6 +9,7 @@ tags:
 categories:
   - 博客
   - 前端
+uuid: 3f119388-7e8e-4f66-a20b-1032b7ffb2bb
 ---
 
 ## 1、如何让元素使用flex布局

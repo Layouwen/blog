@@ -1,6 +1,6 @@
 ---
 title: 快速创建Vue项目
-date: 2020-07-14 23:15
+date: '2020-07-14 23:15'
 tags:
   - 博客
   - 前端
@@ -8,6 +8,7 @@ tags:
 categories:
   - 博客
   - 前端
+uuid: b688bc7f-431d-4acd-948a-8ae7148d134d
 ---
 
 ## 安装@vuecli

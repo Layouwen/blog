@@ -1,6 +1,6 @@
 ---
 title: Homebrew安装及配置
-date: 2020-07-11 13:42:09
+date: 2020-07-11T13:42:09.000Z
 tags:
   - 博客
   - homebrew
@@ -8,6 +8,7 @@ tags:
 categories:
   - 博客
   - macos
+uuid: 133b3c6c-951e-4c9f-a73b-4ddc4e976a9d
 ---
 
 

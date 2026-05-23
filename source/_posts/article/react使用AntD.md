@@ -1,6 +1,6 @@
 ---
 title: react使用AntD
-date: 2020-09-03 16:32
+date: '2020-09-03 16:32'
 tags:
   - 博客
   - react
@@ -9,6 +9,7 @@ tags:
 categories:
   - 博客
   - 前端
+uuid: 0f0970d3-23a9-4131-b886-137076ac5129
 ---
 
 ## 一、安装AntD

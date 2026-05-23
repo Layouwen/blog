@@ -1,12 +1,13 @@
 ---
 title: Mac微信多开以及防撤回方案
-date: 2022-04-18 19:16
+date: '2022-04-18 19:16'
 tags:
   - 博客
   - wechat
 categories:
   - 博客
   - wechat
+uuid: 8c191b1a-8dda-4370-8192-2e492d3c9cf4
 ---
 
 ## 前言

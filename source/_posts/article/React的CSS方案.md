@@ -1,6 +1,6 @@
 ---
 title: React的CSS方案
-date: 2020-09-01 16:23
+date: '2020-09-01 16:23'
 tags:
   - 博客
   - react
@@ -9,6 +9,7 @@ tags:
 categories:
   - 博客
   - 前端
+uuid: 542565f2-b71c-41e4-8d17-e1552f7729c2
 ---
 
 ## 一、方案选择

@@ -1,6 +1,6 @@
 ---
 title: 个人的 Obsidian 数据同步和文章预览方案
-date: 2026-05-03 02:11:36
+date: 2026-05-03T02:11:36.000Z
 tags:
   - 博客
   - electron
@@ -8,6 +8,7 @@ tags:
 categories:
   - 博客
   - 工具
+uuid: caca7bc0-6428-4a19-b653-0986cc982494
 ---
 
 原本想着是用 node 脚本实现 Obsidian 的文章复制到 blog 项目中, 在 deploy 到 github page 上. 脑子一热, 想着多此一举的用 electron 可视化页面操作. 干脆 Vibe Coding 一下, 发现效果似乎不错.

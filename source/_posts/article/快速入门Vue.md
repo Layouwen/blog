@@ -1,6 +1,6 @@
 ---
 title: 快速入门Vue
-date: 2020-07-15 02:03
+date: '2020-07-15 02:03'
 tags:
   - 博客
   - 前端
@@ -8,6 +8,7 @@ tags:
 categories:
   - 博客
   - 前端
+uuid: 2912799d-e4a1-4285-b367-25b33d8d1d5d
 ---
 
 ## Vue实例的options属性

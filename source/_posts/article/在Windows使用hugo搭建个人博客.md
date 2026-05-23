@@ -1,10 +1,11 @@
 ---
 title: 在Windows使用hugo搭建个人博客
-date: 2020-02-07 22:02:16
+date: 2020-02-07T22:02:16.000Z
 tags:
   - hugo
 categories:
   - 博客
+uuid: 2b801d39-a764-4532-aeb3-a4d8ba0323a0
 ---
 
 <!-- more -->

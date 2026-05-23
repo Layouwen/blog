@@ -1,12 +1,13 @@
 ---
 title: VScode中使用Cmder及一些简单命令
-date: 2020-02-12 16:43
+date: '2020-02-12 16:43'
 tags:
   - 博客
   - vscode
   - cmder
 categories:
   - 博客
+uuid: 60eea482-e5e2-442b-aa06-ab0f4acd6b5e
 ---
 
 # 前置条件

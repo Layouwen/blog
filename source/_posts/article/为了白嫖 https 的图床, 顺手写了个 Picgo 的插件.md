@@ -1,6 +1,6 @@
 ---
-title: 为了白嫖 https 的图床, 顺手写了个 Picgo 的插件
-date: 2025-07-01 17:18:54
+title: '为了白嫖 https 的图床, 顺手写了个 Picgo 的插件'
+date: 2025-07-01T17:18:54.000Z
 tags:
   - 博客
   - picgo
@@ -8,6 +8,7 @@ tags:
 categories:
   - 博客
   - 图床
+uuid: 013a5f5f-0222-4365-8ecf-54bded43fc69
 ---
 
 ![image.png](https://s2.loli.net/2025/07/01/xkyRgZGKVIqXev8.png)

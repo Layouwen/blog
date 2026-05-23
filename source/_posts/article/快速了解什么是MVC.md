@@ -1,11 +1,12 @@
 ---
 title: 快速了解什么是MVC
-date: 2020-03-15 16:34:23
+date: 2020-03-15T16:34:23.000Z
 tags:
   - 前端
 categories:
   - 博客
   - 前端
+uuid: 54850d93-9c9a-4b35-822a-873fbedecf22
 ---
 
 - MVC设计模式

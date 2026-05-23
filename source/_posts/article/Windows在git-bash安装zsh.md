@@ -1,6 +1,6 @@
 ---
 title: Windows在git-bash安装zsh
-date: 2022-07-22 10:00
+date: '2022-07-22 10:00'
 tags:
   - 博客
   - 工具
@@ -9,6 +9,7 @@ tags:
 categories:
   - 博客
   - 工具
+uuid: 1310fa7b-67b9-48ab-b2b3-285aae70841a
 ---
 
 # 前言

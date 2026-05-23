@@ -1,6 +1,6 @@
 ---
 title: mac系统下配置flutter环境
-date: 2020-07-14 09:11
+date: '2020-07-14 09:11'
 tags:
   - 博客
   - macos
@@ -8,6 +8,7 @@ tags:
 categories:
   - 博客
   - macos
+uuid: cbb6aabd-f8fb-429f-bbb0-eb7d914dc754
 ---
 
 ## 一、下载安装及配置

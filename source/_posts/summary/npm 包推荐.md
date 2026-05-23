@@ -1,11 +1,12 @@
 ---
 title: npm 包推荐
-date: 2024-03-22 23:11:34
+date: 2024-03-22T23:11:34.000Z
 tags:
   - 汇总
   - npm
 categories:
   - 汇总
+uuid: 8b82cdc2-57da-47ac-ac8d-c69597208347
 ---
 
 ## Node默认包

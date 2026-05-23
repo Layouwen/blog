@@ -1,12 +1,13 @@
 ---
 title: 快速上手Vim
-date: 2020-08-14 23:34
+date: '2020-08-14 23:34'
 tags:
   - 博客
   - vim
 categories:
   - 博客
   - vim
+uuid: 7c400719-85cf-4394-8dcf-08c6cd84642f
 ---
 
 ## 简单操作

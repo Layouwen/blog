@@ -1,12 +1,13 @@
 ---
 title: Obsidian 配置
-date: 2024-05-06 17:18:54
+date: 2024-05-06T17:18:54.000Z
 tags:
   - 汇总
   - obsidian
   - config
 categories:
   - 汇总
+uuid: 881d743c-3fee-4165-93ff-578e6f237e4b
 ---
 
 # 插件

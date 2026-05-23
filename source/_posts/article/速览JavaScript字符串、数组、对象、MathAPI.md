@@ -1,6 +1,6 @@
 ---
 title: 速览JavaScript字符串、数组、对象、MathAPI
-date: 2021-03-28 02:44
+date: '2021-03-28 02:44'
 tags:
   - 博客
   - 前端
@@ -8,6 +8,7 @@ tags:
 categories:
   - 博客
   - 前端
+uuid: 1d542d3e-96dc-4dfb-91a4-481dfcaacb30
 ---
 
 ## 1、字符串

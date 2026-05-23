@@ -1,6 +1,6 @@
 ---
 title: Mac/Windows下如何使用安卓模拟器开发UniApp
-date: 2021-07-31 22:54
+date: '2021-07-31 22:54'
 tags:
   - 博客
   - 前端
@@ -8,6 +8,7 @@ tags:
 categories:
   - 博客
   - 前端
+uuid: ace8de01-309b-4bf4-bfb6-43fedb879dc3
 ---
 
 ## 1、Mac篇

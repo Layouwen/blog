@@ -1,11 +1,12 @@
 ---
 title: 在内网环境安装 PaddleSpeech 语音合成服务
-date: 2024-07-28 17:18:54
+date: 2024-07-28T17:18:54.000Z
 tags:
   - 汇总
   - paddle-speech
 categories:
   - 汇总
+uuid: d0fe6476-ebcd-4009-8eec-258d2df5d05e
 ---
 
 ## 简单方式安装（失败）

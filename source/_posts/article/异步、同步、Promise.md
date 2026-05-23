@@ -1,6 +1,6 @@
 ---
 title: 异步、同步、Promise
-date: 2020-06-10 14:22
+date: '2020-06-10 14:22'
 tags:
   - 博客
   - 前端
@@ -8,6 +8,7 @@ tags:
 categories:
   - 博客
   - 前端
+uuid: 8a6a0fdc-ef0b-48a8-a794-0a7921a128c9
 ---
 
 ## 一、同步

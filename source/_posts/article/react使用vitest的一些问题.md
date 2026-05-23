@@ -1,6 +1,6 @@
 ---
 title: react使用vitest的一些问题
-date: 2022-01-08 17:59
+date: '2022-01-08 17:59'
 tags:
   - 博客
   - 前端
@@ -9,6 +9,7 @@ tags:
 categories:
   - 博客
   - 前端
+uuid: 28f6894d-6002-45e5-955c-f038c122c0d1
 ---
 
 ## 1、TypeError: __vite_ssr_import_0__.default is not a function

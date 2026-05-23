@@ -1,6 +1,6 @@
 ---
 title: 快速了解jQuery的使用方法
-date: 2020-02-29 19:38
+date: '2020-02-29 19:38'
 tags:
   - 博客
   - 前端
@@ -8,6 +8,7 @@ tags:
 categories:
   - 博客
   - 前端
+uuid: c681a037-41cf-403d-9d8a-0aa91ef9f268
 ---
 
 ## 目录

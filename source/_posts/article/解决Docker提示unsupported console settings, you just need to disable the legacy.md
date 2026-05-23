@@ -1,12 +1,13 @@
 ---
-title: 解决Docker提示unsupported console settings, you just need to disable the legacy
-date: 2022-06-29 22:09
+title: '解决Docker提示unsupported console settings, you just need to disable the legacy'
+date: '2022-06-29 22:09'
 tags:
   - 博客
   - docker
 categories:
   - 博客
   - docker
+uuid: 844c4c9e-db85-4b24-b218-7000cd748cd3
 ---
 
 第一步：`Win + R` 调出窗口

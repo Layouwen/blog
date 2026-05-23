@@ -1,6 +1,6 @@
 ---
 title: 如何在npm中发布自己的包
-date: 2020-07-14 07:46
+date: '2020-07-14 07:46'
 tags:
   - 博客
   - 前端
@@ -8,6 +8,7 @@ tags:
 categories:
   - 博客
   - 前端
+uuid: 3a1b2527-ceef-4b7d-bba1-4f6bb5fa4fb9
 ---
 
 ## 注册账号

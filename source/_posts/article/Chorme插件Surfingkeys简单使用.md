@@ -1,6 +1,6 @@
 ---
 title: Chorme插件Surfingkeys简单使用
-date: 2020-09-04 11:57
+date: '2020-09-04 11:57'
 tags:
   - 博客
   - chrome
@@ -9,6 +9,7 @@ tags:
 categories:
   - 博客
   - 前端
+uuid: 2e89b85e-6553-478f-91f5-a75cbb76ba5c
 ---
 
 ## 一、特点
