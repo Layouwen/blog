@@ -1,4 +1,5 @@
 ---
+uuid: 1b9131f1-56ac-11f1-96b5-bb245aa43788
 title: Ubuntu 安装 docker
 date: 2023-01-11 15:22:00
 tags:

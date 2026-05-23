@@ -1,4 +1,5 @@
 ---
+uuid: 1b9131e7-56ac-11f1-96b5-bb245aa43788
 title: Terminal 中的 GitBash 中文乱码
 date: 2023-01-07 15:22:00
 tags:

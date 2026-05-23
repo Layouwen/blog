@@ -1,4 +1,5 @@
 ---
+uuid: 1b9131f0-56ac-11f1-96b5-bb245aa43788
 title: 使用 verdaccio 搭建 npm 私服
 date: 2024-06-30 17:18:54
 tags:

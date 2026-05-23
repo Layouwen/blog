@@ -1,4 +1,5 @@
 ---
+uuid: 1b9131f2-56ac-11f1-96b5-bb245aa43788
 title: Ubuntu 开启 ssh 连接
 date: 2023-01-18 15:22:00
 tags:

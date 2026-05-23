@@ -1,4 +1,5 @@
 ---
+uuid: 1b9131ea-56ac-11f1-96b5-bb245aa43788
 title: docker 基础知识
 date: 2022-01-23 15:22:00
 tags:

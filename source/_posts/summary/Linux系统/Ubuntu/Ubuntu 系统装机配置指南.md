@@ -1,4 +1,5 @@
 ---
+uuid: 1b9131f3-56ac-11f1-96b5-bb245aa43788
 title: Ubuntu 系统装机配置指南
 date: 2024-03-23 15:22:00
 tags:

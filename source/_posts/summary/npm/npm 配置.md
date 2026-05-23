@@ -1,4 +1,5 @@
 ---
+uuid: 1b9131ef-56ac-11f1-96b5-bb245aa43788
 title: npm 配置
 date: 2023-01-23 15:22:00
 tags:

@@ -1,4 +1,5 @@
 ---
+uuid: 1b9131eb-56ac-11f1-96b5-bb245aa43788
 title: docker-compose yml 样板
 date: 2022-01-23 15:22:00
 tags:
