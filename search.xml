@@ -8219,4 +8219,1187 @@
         <tag>steam</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Docker 篇</title>
+    <url>/2024/06/08/summary/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/Docker%20%E7%AF%87/</url>
+    <content><![CDATA[<h2 id="windows"><a href="#windows" class="headerlink" title="windows"></a>windows</h2><p>下载地址 <a href="https://hub.docker.com/">https://hub.docker.com/</a></p>
+<blockquote>
+<p>需要登录后才可以下载</p>
+</blockquote>
+<p>下载后，双击安装。接着他会提示你重启。</p>
+<p>重启后，下载wsl2内核</p>
+<p>下载地址 <a href="https://docs.microsoft.com/zh-cn/windows/wsl/install-win10#step-4---download-the-linux-kernel-update-package">https://docs.microsoft.com/zh-cn/windows/wsl/install-win10#step-4---download-the-linux-kernel-update-package</a></p>
+<p>安装结束后，打开 Docker</p>
+<h3 id="安装desktop报错"><a href="#安装desktop报错" class="headerlink" title="安装desktop报错"></a>安装desktop报错</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">netsh winsock reset</span><br></pre></td></tr></table></figure>
+
+<h2 id="CentOS"><a href="#CentOS" class="headerlink" title="CentOS"></a>CentOS</h2><p>卸载旧版本</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo yum remove docker \</span><br><span class="line">docker-client \</span><br><span class="line">docker-client-latest \</span><br><span class="line">docker-common \</span><br><span class="line">docker-latest \</span><br><span class="line">docker-latest-logrotate \</span><br><span class="line">docker-logrotate \</span><br><span class="line">docker-engine</span><br></pre></td></tr></table></figure>
+
+<p>安装包管理</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo yum install -y yum-utils</span><br></pre></td></tr></table></figure>
+
+<p>设置镜像</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo mkdir -p /etc/docker</span><br><span class="line">sudo tee /etc/docker/daemon.json &lt;&lt;-&#x27;EOF&#x27;</span><br><span class="line">&#123;</span><br><span class="line">  &quot;registry-mirrors&quot;: [&quot;https://kolrntba.mirror.aliyuncs.com&quot;]</span><br><span class="line">&#125;</span><br><span class="line">EOF</span><br><span class="line">sudo systemctl daemon-reload</span><br><span class="line">sudo systemctl restart docker</span><br></pre></td></tr></table></figure>
+
+<p>更新软件包</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">yum makecache</span><br></pre></td></tr></table></figure>
+
+<p>安装引擎</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">yum install docker-ce docker-ce-cli containerd.io</span><br></pre></td></tr></table></figure>
+
+<p>启动docker</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">systemctl start docker</span><br></pre></td></tr></table></figure>
+
+<p>查看版本</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker version</span><br></pre></td></tr></table></figure>
+
+<p>运行 hello world</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker run hello-world</span><br></pre></td></tr></table></figure>
+
+<p>查看镜像</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker images</span><br></pre></td></tr></table></figure>
+
+<p>卸载 docker</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">yum remove docker-ce docker-ce-cli containerd.io</span><br><span class="line">rm -rf /var/lib/docker</span><br><span class="line">rm -rf /var/lib/containerd</span><br></pre></td></tr></table></figure>
+
+<h3 id="docker-images-镜像"><a href="#docker-images-镜像" class="headerlink" title="docker images 镜像"></a>docker images 镜像</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker images</span><br><span class="line">docker images -a # 所有镜像</span><br><span class="line">docker images -q # 只显示id</span><br><span class="line">docker images -aq</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>REPOSITORY 镜像的仓库源</li>
+<li>TAG 镜像的标签</li>
+<li>IMAGE ID 镜像的id</li>
+</ul>
+<h3 id="docker-search-搜索"><a href="#docker-search-搜索" class="headerlink" title="docker search 搜索"></a>docker search 搜索</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker search mysql</span><br><span class="line"></span><br><span class="line">docker search mysql --filter=STARS=3000</span><br></pre></td></tr></table></figure>
+
+<h3 id="docker-pull-下载"><a href="#docker-pull-下载" class="headerlink" title="docker pull 下载"></a>docker pull 下载</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker pull mysql</span><br><span class="line">docker pull mysql:版本号</span><br></pre></td></tr></table></figure>
+
+<h3 id="docker-rmi-删除"><a href="#docker-rmi-删除" class="headerlink" title="docker rmi 删除"></a>docker rmi 删除</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker rmi -f id/名字</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>删除全部 <code>docker rmi -f $&#123;docker images -aq&#125;</code></p>
+</blockquote>
+<h3 id="docker-pull-下载容器"><a href="#docker-pull-下载容器" class="headerlink" title="docker pull 下载容器"></a>docker pull 下载容器</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker pull centos</span><br></pre></td></tr></table></figure>
+
+<p>新建容器启动</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker run [可选参数] image</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>–name&#x3D;”Name” 容器名字</li>
+<li>-d    后台方式启动</li>
+<li>-it   交互方式进行</li>
+<li>-p    指定容器端口 8080:8080</li>
+<li>-P    随机执行端口</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker run -it centos /bin/bash</span><br></pre></td></tr></table></figure>
+
+<p>查看运行的容器</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker ps # 查看运行中</span><br><span class="line">docker ps -a # 查看运行过的</span><br></pre></td></tr></table></figure>
+
+<h3 id="退出容器"><a href="#退出容器" class="headerlink" title="退出容器"></a>退出容器</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">exit</span><br><span class="line">CTRL + P + Q</span><br></pre></td></tr></table></figure>
+
+<h3 id="删除容器"><a href="#删除容器" class="headerlink" title="删除容器"></a>删除容器</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker rm 容器id</span><br><span class="line">docker rm -f $&#123;docker ps -aq&#125;</span><br><span class="line">docker ps -a -q | xargs docker rm</span><br></pre></td></tr></table></figure>
+
+<h3 id="启动和停止"><a href="#启动和停止" class="headerlink" title="启动和停止"></a>启动和停止</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker start 容器id</span><br><span class="line">docker restart 容器id</span><br><span class="line">docker stop 容器id</span><br><span class="line">docker kill 容器id</span><br></pre></td></tr></table></figure>
+
+<h3 id="其他命令"><a href="#其他命令" class="headerlink" title="其他命令"></a>其他命令</h3><p>后台启动</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker run -d 镜像名字/id</span><br></pre></td></tr></table></figure>
+
+<p>查看日志</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker logs</span><br><span class="line">docker logs -tf --tail 查看日志的条数 容器</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>-t 显示日志</li>
+<li>-f 显示时间戳</li>
+<li>–tial 显示指定数量</li>
+</ul>
+<p>显示 docker 中的进程信息</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker top 容器id</span><br></pre></td></tr></table></figure>
+
+<p>查看容器内部信息</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker inspect 容器id</span><br></pre></td></tr></table></figure>
+
+<p>进入正在运行的容器</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker exec -it 容器id /bin/bash # 开启新的终端，可以进行操作</span><br><span class="line">docker attach 容器id # 进入正在执行的终端</span><br></pre></td></tr></table></figure>
+
+<h3 id="从容器拷贝文件到主机"><a href="#从容器拷贝文件到主机" class="headerlink" title="从容器拷贝文件到主机"></a>从容器拷贝文件到主机</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker cp 容器id:容器内路径 目的的主机路径</span><br></pre></td></tr></table></figure>
+
+<h3 id="可视化管理工具"><a href="#可视化管理工具" class="headerlink" title="可视化管理工具"></a>可视化管理工具</h3><h4 id="portainer"><a href="#portainer" class="headerlink" title="portainer"></a>portainer</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker run -d -p 8088:9000 \</span><br><span class="line">--restart=always -v /var/run/ddocker.sock:/var/run/docker.sock --privileged=true portainer/portainer</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker pull redis</span><br></pre></td></tr></table></figure>
+
+<h3 id="commit镜像"><a href="#commit镜像" class="headerlink" title="commit镜像"></a>commit镜像</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker commit -m=&quot;提交信息&quot; -a=&quot;作者&quot;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>汇总</category>
+        <category>开发环境</category>
+      </categories>
+      <tags>
+        <tag>汇总</tag>
+        <tag>docker</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>HBuilderX 篇</title>
+    <url>/2024/01/23/summary/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/HBuilderX%20%E7%AF%87/</url>
+    <content><![CDATA[<h1 id="配置默认终端"><a href="#配置默认终端" class="headerlink" title="配置默认终端"></a>配置默认终端</h1><p>编辑 <strong>HBuilderX</strong> 根目录下的 <code>HBuilderX\plugins\builtincef3terminal\script\main.js</code> 文件</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> shell</span><br><span class="line"><span class="keyword">if</span> (isWin) &#123;</span><br><span class="line">  shell = <span class="string">&#x27;D:\\cmder\\vendor\\git-for-windows\\bin\\bash.exe&#x27;</span></span><br><span class="line">  <span class="comment">// shell = &#x27;powershell.exe&#x27;</span></span><br><span class="line">  <span class="comment">// var osRelease = os.release();</span></span><br><span class="line">  <span class="comment">// var dotIndex = osRelease.indexOf(&#x27;.&#x27;);</span></span><br><span class="line">  <span class="comment">// if(dotIndex&gt;0)&#123;</span></span><br><span class="line">  <span class="comment">// 	var fv = osRelease.substring(0,dotIndex);</span></span><br><span class="line">  <span class="comment">// 	if(fv&gt;6)&#123;</span></span><br><span class="line">  <span class="comment">// 		shell = &#x27;powershell.exe&#x27;;</span></span><br><span class="line">  <span class="comment">// 	&#125;else&#123;</span></span><br><span class="line">  <span class="comment">// 		shell = &#x27;cmd.exe&#x27;;</span></span><br><span class="line">  <span class="comment">// 		var ov = osRelease.substring(dotIndex);</span></span><br><span class="line">  <span class="comment">// 		dotIndex = ov.indexOf(&#x27;.&#x27;);</span></span><br><span class="line">  <span class="comment">// 		if(dotIndex&gt;0)&#123;</span></span><br><span class="line">  <span class="comment">// 			var sv = ov.substring(0,dotIndex);</span></span><br><span class="line">  <span class="comment">// 			if(sv&gt;1)&#123;</span></span><br><span class="line">  <span class="comment">// 				shell = &#x27;powershell.exe&#x27;;</span></span><br><span class="line">  <span class="comment">// 			&#125;</span></span><br><span class="line">  <span class="comment">// 		&#125;</span></span><br><span class="line">  <span class="comment">// 	&#125;</span></span><br><span class="line">  <span class="comment">// &#125;</span></span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  shell = <span class="string">&#x27;bash&#x27;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>汇总</category>
+        <category>开发环境</category>
+      </categories>
+      <tags>
+        <tag>汇总</tag>
+        <tag>HBuilderX</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JetBrains 篇</title>
+    <url>/2024/01/23/summary/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/JetBrains%20%E7%AF%87/</url>
+    <content><![CDATA[<h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><h2 id="Color-Scheme"><a href="#Color-Scheme" class="headerlink" title="Color Scheme"></a>Color Scheme</h2><p>Material Darker</p>
+<h3 id="Color-Scheme-Font"><a href="#Color-Scheme-Font" class="headerlink" title="Color Scheme Font"></a>Color Scheme Font</h3><p>Font —— jetBrains Mono<br>Size —— 16.0</p>
+<h3 id="Console-Font"><a href="#Console-Font" class="headerlink" title="Console Font"></a>Console Font</h3><p>Font —— jetBrains Mono</p>
+<h3 id="Advanced-Settings"><a href="#Advanced-Settings" class="headerlink" title="Advanced Settings"></a>Advanced Settings</h3><p>选中 Disable double modifier key shortcuts </p>
+<h1 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h1><h2 id="通用"><a href="#通用" class="headerlink" title="通用"></a>通用</h2><p>Sweep AI - </p>
+<p>Junie - </p>
+<p>inlineError —— 内联显示 error 信息</p>
+<p>GitToolbox —— 更好的查看Git记录</p>
+<p>IdeaVim —— Vim模拟器</p>
+<p>IdeaVim-EasyMotion —— 模拟vim-easymotion</p>
+<p>IdeaVimExtension —— vim一些插件拓展</p>
+<p>AceJump —— 类似VIM的位置跳转</p>
+<p>Material Theme UI —— 主题</p>
+<p>Atom Material Icons —— 更好看的文件图标</p>
+<p>Key Promoter X —— 显示鼠标指向功能的快捷键</p>
+<p>String Manipulation —— 字符串命名格式转换</p>
+<p>Quick File Preview —— 快速文件预览</p>
+<p>Randomness —— 随机生成器</p>
+<p>GitHub Copilot —— Github代码自动提示</p>
+<p>CodeGlance3 —— 代码走廊</p>
+<p>WakaTime —— 记录代码时间</p>
+<p>LeetCode Editor —— LeetCode插件</p>
+<p>.ignore —— ignore插件</p>
+<p>Murphysec Code Scan —— 第三方依赖安全检测</p>
+<p>chatgpt —— chatgpt插件</p>
+<p>Codeium - 免费的 ai 补全</p>
+<p>Sourcegraph Cody - 免费的 ai 补全</p>
+<p>TONGYI Lingma - 阿里巴巴的通义免费 ai 补全</p>
+<p>Mintlify Doc Writer - 通过 ai 解释你的代码, 编写一些注释文档</p>
+<p>MarsCode:Al Coding Assistant - 字节跳动豆包出品的 ai 助手</p>
+<p>Continue - 上下文 ai 模型对话生成</p>
+<h2 id="部分有"><a href="#部分有" class="headerlink" title="部分有"></a>部分有</h2><p>AiXcoder Code Completer —— 代码补全和代码搜索工具</p>
+<h2 id="WebStrom"><a href="#WebStrom" class="headerlink" title="WebStrom"></a>WebStrom</h2><p>Cypress Support —— e2e测试框架</p>
+<p>Codota —— AI补全代码</p>
+<h2 id="自选"><a href="#自选" class="headerlink" title="自选"></a>自选</h2><p>Fig —— fig 命令行补全依赖插件</p>
+<p>Rainbow Brackets —— 彩虹括号</p>
+<p>Indent Rainbow —— 彩虹缩进</p>
+<p>Nyan Progress Bar —— 彩虹猫进度条</p>
+<p>IDE resset —— 重置激活时间  </p>
+<p>EditorConfig —— editor 统一项目成员的编辑器规范（新版自带）</p>
+<p>Makefile Language —— 语法提示（新版自带）</p>
+<p>Settings Repository —— 通过 repo 同步配置文件（2022.3 版本以上需要自行安装该插件）</p>
+<h3 id="个别需要补充的插件说明"><a href="#个别需要补充的插件说明" class="headerlink" title="个别需要补充的插件说明"></a>个别需要补充的插件说明</h3><h4 id="Github-Copilot"><a href="#Github-Copilot" class="headerlink" title="Github Copilot"></a>Github Copilot</h4><p>强制显示代码提示 <code>option + \</code></p>
+<p>向左切换建议 <code>option + [</code></p>
+<p>向右切换建议 <code>option + ]</code></p>
+<h4 id="Translation"><a href="#Translation" class="headerlink" title="Translation"></a>Translation</h4><p><code>ctrl + shift + Y</code> 翻译当前单词</p>
+<h4 id="AceJump"><a href="#AceJump" class="headerlink" title="AceJump"></a>AceJump</h4><p><code>ctrl + ;</code> 接着输入需要搜索的关键字</p>
+<p><code>backspace</code> 退格键清空搜索关键字，重新输入</p>
+<p><code>tab</code> 查看下一页的搜索结果</p>
+<p><code>ESC</code> 退出搜索状态</p>
+<p><code>enter</code> 跳转到下一个结果</p>
+<p><code>shift + enter</code> 跳转到上一个结果</p>
+<blockquote>
+<p>如果你是ideaVim用户可以设置以下配置<br>mac&#x2F;linux 编辑 .ideavimrc<br>windows 编辑 ._ideavimrc</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot; Press `f` to activate AceJump</span></span><br><span class="line"><span class="string">map f :action AceAction&lt;CR&gt;</span></span><br><span class="line"><span class="string">&quot;</span> Press `F` to activate Target Mode</span><br><span class="line">map F :action AceTargetAction&lt;CR&gt;</span><br><span class="line"><span class="string">&quot; Press `g` to activate Line Mode</span></span><br><span class="line"><span class="string">map g :action AceLineAction&lt;CR&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="String-Randomness"><a href="#String-Randomness" class="headerlink" title="String Randomness"></a>String Randomness</h4><p><code>alt + r</code> 启动随机生成器</p>
+<h1 id="特殊问题"><a href="#特殊问题" class="headerlink" title="特殊问题"></a>特殊问题</h1><h2 id="rpx报错问题"><a href="#rpx报错问题" class="headerlink" title="rpx报错问题"></a>rpx报错问题</h2><h3 id="方案1-使用sass函数"><a href="#方案1-使用sass函数" class="headerlink" title="方案1 使用sass函数"></a>方案1 使用sass函数</h3><p>取消勾选 propetry value &#x2F; element<br>Editor —— Inspetions —— CSS ——Invalid CSS propetry value 和 Invalid CSS element</p>
+<p>或者使用scss，创建一个fn.scss</p>
+<figure class="highlight scss"><table><tr><td class="code"><pre><span class="line"><span class="keyword">@function</span> rpx(<span class="variable">$value</span>) &#123;</span><br><span class="line">  <span class="keyword">@return</span> <span class="variable">$value</span> * <span class="number">1</span>rpx;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="方案2-使用file-watchers"><a href="#方案2-使用file-watchers" class="headerlink" title="方案2 使用file watchers"></a>方案2 使用file watchers</h3><p>添加新规则</p>
+<p>Name：css样式rpx空格处理<br>File type：Vue.js template 或者 Cascading Style Sheet<br>Scope：Project Files<br>Program：sed<br>Arguments：<code>-i &quot;&quot; s/&quot;\ rpx&quot;/rpx/g $FilePath$</code><br>Output paths to refresh：<code>$FilePath$</code></p>
+<blockquote>
+<p>如果是 Windows<br>Arguments 换成 <code>-i s/&quot;\ rpx&quot;/rpx/g $FilePath$</code><br>Program 需要填入 <code>sed</code> 的完整路径<br>下载地址：<a href="https://github.com/mbuilov/sed-windows">https://github.com/mbuilov/sed-windows</a></p>
+</blockquote>
+<h2 id="无法识别alias别名"><a href="#无法识别alias别名" class="headerlink" title="无法识别alias别名"></a>无法识别alias别名</h2><p>配置 webpack 导入 alias 的 config</p>
+<p>alias.config.js</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">resolve</span> = dir =&gt; <span class="built_in">require</span>(<span class="string">&#x27;path&#x27;</span>).<span class="title function_">join</span>(__dirname, dir)</span><br><span class="line"></span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">  <span class="attr">resolve</span>: &#123;</span><br><span class="line">    <span class="attr">alias</span>: &#123;</span><br><span class="line">      <span class="string">&#x27;@&#x27;</span>: <span class="title function_">resolve</span>(<span class="string">&#x27;src&#x27;</span>),</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="live-template"><a href="#live-template" class="headerlink" title="live template"></a>live template</h2><p><strong>rfch</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">React</span>, &#123; useEffect &#125; <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span>;</span><br><span class="line"></span><br><span class="line">interface $METHOD_NAME$Props &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="attr">$METHOD_NAME$</span>: <span class="title class_">React</span>.<span class="property">FC</span>&lt;$METHOD_NAME$Props&gt; = <span class="function">(<span class="params">props</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="title function_">useEffect</span>(<span class="function">() =&gt;</span> &#123;&#125;, []);</span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>$END$<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> $METHOD_NAME$;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>汇总</category>
+        <category>开发环境</category>
+      </categories>
+      <tags>
+        <tag>汇总</tag>
+        <tag>jetbrain</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Mysql 篇</title>
+    <url>/2024/01/23/summary/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/Mysql%20%E7%AF%87/</url>
+    <content><![CDATA[<h1 id="一、Window"><a href="#一、Window" class="headerlink" title="一、Window"></a>一、Window</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p><a href="https://dev.mysql.com/downloads/mysql/">Mysql下载地址</a></p>
+<p>配置环境变量，例如：<code>D:\mysql-8.0.27-winx64\bin</code></p>
+<p>创建 <code>mysql.ini</code> 配置文件</p>
+<figure class="highlight ini"><table><tr><td class="code"><pre><span class="line"><span class="section">[mysqld]</span></span><br><span class="line"><span class="comment"># 设置3306端口</span></span><br><span class="line"><span class="attr">port</span>=<span class="number">3306</span></span><br><span class="line"><span class="comment"># 设置mysql的安装目录</span></span><br><span class="line"><span class="attr">basedir</span>=D:\mysql-<span class="number">8.0</span>.<span class="number">27</span>-winx64</span><br><span class="line"><span class="comment"># 设置mysql数据库的数据存放目录</span></span><br><span class="line"><span class="attr">datadir</span>=D:\mysql-<span class="number">8.0</span>.<span class="number">27</span>-winx64\data</span><br><span class="line"><span class="comment"># 允许最大连接数</span></span><br><span class="line"><span class="attr">max_connections</span>=<span class="number">200</span></span><br><span class="line"><span class="comment"># 允许链接失败的次数</span></span><br><span class="line"><span class="attr">max_connect_errors</span>=<span class="number">10</span></span><br><span class="line"><span class="comment"># 服务端的字符集</span></span><br><span class="line"><span class="attr">character-set-server</span>=utf8</span><br><span class="line"><span class="comment"># 创建新表使用的存储引擎</span></span><br><span class="line"><span class="attr">default-storage-engine</span>=INNODB</span><br><span class="line"><span class="comment"># 默认使用&quot;mysql_native_password&quot;插件认证</span></span><br><span class="line"><span class="attr">default_authentication_plugin</span>=mysql_native_password</span><br><span class="line"><span class="section">[mysql]</span></span><br><span class="line"><span class="comment"># 设置mysql客户端默认字符集</span></span><br><span class="line"><span class="attr">default-character-set</span>=utf8</span><br><span class="line"><span class="section">[client]</span></span><br><span class="line"><span class="comment"># 设置mysql客户端连接服务器的默认端口</span></span><br><span class="line"><span class="attr">port</span>=<span class="number">3306</span></span><br><span class="line"><span class="attr">default-character-set</span>=utf8</span><br></pre></td></tr></table></figure>
+
+<p>打开bin文件夹，执行下面命令</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&gt; mysql --initialize --console</span><br></pre></td></tr></table></figure>
+
+<p>接下来基础输出的最后一行信息，包含账号和密码</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">2021-11-08T16:02:37.113703Z 0 [Warning] [MY-010918] [Server] <span class="string">&#x27;default_authentication_plugin&#x27;</span> is deprecated and will be removed <span class="keyword">in</span> a future release. Please use authentication_policy instead.</span><br><span class="line">2021-11-08T16:02:37.113725Z 0 [System] [MY-013169] [Server] D:\mysql-8.0.27-winx64\bin\mysqld.exe (mysqld 8.0.27) initializing of server <span class="keyword">in</span> progress as process 7092</span><br><span class="line">2021-11-08T16:02:37.114851Z 0 [Warning] [MY-013242] [Server] --character-set-server: <span class="string">&#x27;utf8&#x27;</span> is currently an <span class="built_in">alias</span> <span class="keyword">for</span> the character <span class="built_in">set</span> UTF8MB3, but will be an <span class="built_in">alias</span> <span class="keyword">for</span> UTF8MB4 <span class="keyword">in</span> a future release. Please consider using UTF8MB4 <span class="keyword">in</span> order to be unambiguous.</span><br><span class="line">2021-11-08T16:02:37.173348Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.</span><br><span class="line">2021-11-08T16:02:44.033460Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.</span><br><span class="line">2021-11-08T16:03:01.405311Z 0 [Warning] [MY-013746] [Server] A deprecated TLS version TLSv1 is enabled <span class="keyword">for</span> channel mysql_main</span><br><span class="line">2021-11-08T16:03:01.405983Z 0 [Warning] [MY-013746] [Server] A deprecated TLS version TLSv1.1 is enabled <span class="keyword">for</span> channel mysql_main</span><br><span class="line">2021-11-08T16:03:01.737008Z 6 [Note] [MY-010454] [Server] A temporary password is generated <span class="keyword">for</span> root@localhost: &lt;+woA1sid&lt;y!</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">root@localhost: &lt;+woA1sid&lt;y!</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>如果不记得也没关系，删掉 <code>data</code> 文件夹，重新执行命令可以重新重置数据库</p>
+</blockquote>
+<p>安装 <code>mysql</code> 服务</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&gt; mysqld --install </span><br></pre></td></tr></table></figure>
+
+<p>启动服务</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&gt; net start mysql</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">The MySQL service is starting..</span><br><span class="line">The MySQL service was started successfully.</span><br></pre></td></tr></table></figure>
+
+<p>停止服务</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&gt; net stop mysql</span><br></pre></td></tr></table></figure>
+
+<p>连接数据库，输入密码回车</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&gt; mysql -u root -p</span><br></pre></td></tr></table></figure>
+
+<p>修改密码</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">alter user <span class="string">&#x27;root&#x27;</span>@<span class="string">&#x27;localhost&#x27;</span> identified with mysql_native_password BY <span class="string">&#x27;密码&#x27;</span>;</span><br></pre></td></tr></table></figure>
+<p>例如：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">alter user <span class="string">&#x27;root&#x27;</span>@<span class="string">&#x27;localhost&#x27;</span> identified with mysql_native_password BY <span class="string">&#x27;123123&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<h2 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h2><p>停止服务</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">net stop mysql</span><br></pre></td></tr></table></figure>
+
+<p>删除mysql的服务</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sc delete mysql</span><br><span class="line">或者</span><br><span class="line">mysqld remove mysql</span><br></pre></td></tr></table></figure>
+
+<p>删除mysql的数据文件</p>
+<h1 id="二、Mac"><a href="#二、Mac" class="headerlink" title="二、Mac"></a>二、Mac</h1><p><a href="https://dev.mysql.com/downloads/mysql/">Mysql下载地址</a></p>
+<h1 id="三、Docker"><a href="#三、Docker" class="headerlink" title="三、Docker"></a>三、Docker</h1><p>安装镜像</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&gt; docker pull mysql:8.0.27</span><br></pre></td></tr></table></figure>
+
+<p>运行</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&gt; docker run -itd --name test_server -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123123 mysql:8.0.27</span><br></pre></td></tr></table></figure>
+
+<h1 id="四、常见命令"><a href="#四、常见命令" class="headerlink" title="四、常见命令"></a>四、常见命令</h1><h2 id="操作数据库"><a href="#操作数据库" class="headerlink" title="操作数据库"></a>操作数据库</h2><p>1、创建数据库<br>编码方式</p>
+<ul>
+<li>gb2312</li>
+<li>utf-8</li>
+<li>gbk</li>
+<li>iso-8859-1</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">create</span> database 数据库名;</span><br><span class="line"><span class="keyword">create</span> database 数据库名 <span class="keyword">character set</span> 编码方式;</span><br><span class="line"><span class="keyword">create</span> database 数据库名 <span class="keyword">character set</span> 编码方式 <span class="keyword">collate</span> 排序规则;</span><br></pre></td></tr></table></figure>
+
+<p>2、查看所有数据库</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">show</span> databases;</span><br><span class="line"># 查看数据定义信息</span><br><span class="line"><span class="keyword">show</span> <span class="keyword">create</span> database 数据库名;</span><br></pre></td></tr></table></figure>
+
+<p>3、修改数据库</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">alter</span> databse 数据库名 <span class="keyword">character set</span> 编码方式;</span><br></pre></td></tr></table></figure>
+
+<p>4、删除数据库</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">drop</span> database 数据库名;</span><br></pre></td></tr></table></figure>
+
+<p>5、其他操作</p>
+<p>查看当前使用的数据库</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> database();</span><br></pre></td></tr></table></figure>
+
+<p>切换数据库</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">use 数据库名;</span><br></pre></td></tr></table></figure>
+
+<h2 id="操作数据表"><a href="#操作数据表" class="headerlink" title="操作数据表"></a>操作数据表</h2><p>1、创建表</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">create table</span> student(</span><br><span class="line">  name <span class="type">varchar</span>(<span class="number">5</span>),</span><br><span class="line">  age <span class="type">int</span>,</span><br><span class="line">  sex <span class="type">char</span>(<span class="number">1</span>)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<p>2、查看所有表</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">show</span> tabals;</span><br></pre></td></tr></table></figure>
+
+<p>3、查看表字段信息</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">desc</span> student;</span><br></pre></td></tr></table></figure>
+
+<p>4、删除表</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">drop</span> <span class="keyword">table</span> student;</span><br></pre></td></tr></table></figure>
+
+<p>5、添加列</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"># <span class="keyword">alter table</span> 表名 <span class="keyword">add</span> 列名 数据类型;</span><br><span class="line"><span class="keyword">alter table</span> student <span class="keyword">add</span> image <span class="type">blob</span>;</span><br></pre></td></tr></table></figure>
+
+<p>6、修改列</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"># <span class="keyword">alter table</span> 表名 change 旧列名 新列名 新数据类型;</span><br><span class="line"><span class="keyword">alter table</span> student change name new_name <span class="type">varchar</span>(<span class="number">10</span>);</span><br></pre></td></tr></table></figure>
+
+<p>7、删除列</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">alter table</span> 表名 <span class="keyword">drop</span> 列名;</span><br></pre></td></tr></table></figure>
+
+<p>8、修改表名</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">alter table</span> 旧表名 rename 新表名;</span><br></pre></td></tr></table></figure>
+
+<p>9、查看表定义</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">show</span> <span class="keyword">create table</span> 表名;</span><br></pre></td></tr></table></figure>
+
+<p>10、修改表字符集</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">alter table</span> 表名 <span class="keyword">character set</span> 编码方式;</span><br></pre></td></tr></table></figure>
+
+<h2 id="DML操作"><a href="#DML操作" class="headerlink" title="DML操作"></a>DML操作</h2><p>插入数据</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">insert into</span> studnet(stuname, stuage, stusex, birthday) <span class="keyword">values</span>(<span class="string">&#x27;avan&#x27;</span>, <span class="number">21</span>, <span class="string">&#x27;g&#x27;</span>, <span class="string">&#x27;2000-1-1&#x27;</span>);</span><br><span class="line"># 可以同时添加多行</span><br><span class="line"><span class="keyword">insert into</span> studnet(stuname, stuage, stusex, birthday) <span class="keyword">values</span>(<span class="string">&#x27;avan&#x27;</span>, <span class="number">21</span>, <span class="string">&#x27;g&#x27;</span>, <span class="string">&#x27;2000-1-1&#x27;</span>), (<span class="string">&#x27;ljj&#x27;</span>, <span class="number">22</span>, <span class="string">&#x27;g&#x27;</span>, <span class="string">&#x27;2010-1-1&#x27;</span>);</span><br><span class="line"># 不指定字段，则需要全部添加</span><br><span class="line"><span class="keyword">insert into</span> studnet <span class="keyword">values</span>(<span class="string">&#x27;avan&#x27;</span>, <span class="number">21</span>, <span class="string">&#x27;g&#x27;</span>, <span class="string">&#x27;2000-1-1&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>查询数据</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> student;</span><br></pre></td></tr></table></figure>
+
+<p>更新数据</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">update</span> student <span class="keyword">set</span> stuname<span class="operator">=</span>&quot;lyw&quot;, stuage<span class="operator">=</span><span class="number">30</span> <span class="keyword">where</span> stuname<span class="operator">=</span>&quot;layouwen&quot;;</span><br></pre></td></tr></table></figure>
+
+<p>删除数据</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"># 删除所有数据</span><br><span class="line"><span class="keyword">delete</span> <span class="keyword">from</span> student;</span><br><span class="line"># 指定数据</span><br><span class="line"><span class="keyword">delete</span> <span class="keyword">from</span> student <span class="keyword">where</span> stuname<span class="operator">=</span><span class="string">&#x27;layouwen&#x27;</span>;</span><br><span class="line"># 删除<span class="keyword">drop</span>表重新创建一样的表，效率比<span class="keyword">delete</span>高，数据不能找回</span><br><span class="line">trunate <span class="keyword">table</span> student;</span><br></pre></td></tr></table></figure>
+
+<h2 id="DCL操作"><a href="#DCL操作" class="headerlink" title="DCL操作"></a>DCL操作</h2><p>创建用户</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">user</span> 用户名@指定ip identified <span class="keyword">by</span> 密码;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>% 表示任何人都可以访问</p>
+</blockquote>
+<p>权限授权</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">grant</span> 权限<span class="number">1</span>, 权限<span class="number">2</span> <span class="keyword">on</span> 数据库.表名 <span class="keyword">to</span> 用户名<span class="variable">@ip</span>;</span><br><span class="line"># 所有权限</span><br><span class="line"><span class="keyword">grant</span> <span class="keyword">all</span> <span class="keyword">on</span> <span class="operator">*</span>.<span class="operator">*</span> <span class="keyword">to</span> <span class="string">&#x27;root&#x27;</span>@<span class="string">&#x27;%&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>查询权限</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">show</span> grants <span class="keyword">for</span> 用户名<span class="variable">@ip</span>;</span><br></pre></td></tr></table></figure>
+
+<p>撤销用户权限</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">revoke</span> 权限<span class="number">1</span>, 权限<span class="number">2</span> <span class="keyword">on</span> <span class="operator">*</span>.<span class="operator">*</span> <span class="keyword">from</span> 用户名<span class="variable">@ip</span>;</span><br></pre></td></tr></table></figure>
+
+<p>删除用户</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">drop</span> <span class="keyword">user</span> 用户名<span class="variable">@ip</span>;</span><br></pre></td></tr></table></figure>
+
+<h2 id="DQL操作"><a href="#DQL操作" class="headerlink" title="DQL操作"></a>DQL操作</h2><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> 列名</span><br><span class="line"><span class="keyword">from</span> 表名</span><br><span class="line"><span class="keyword">where</span> 条件条件</span><br><span class="line"><span class="keyword">group</span> <span class="keyword">by</span> 组名</span><br><span class="line"><span class="keyword">having</span> 分组后的行条件</span><br><span class="line"><span class="keyword">order</span> <span class="keyword">by</span> 排序</span><br><span class="line">limit 开始, 结束</span><br></pre></td></tr></table></figure>
+
+<p>测试数据</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"># 创建表stu</span><br><span class="line"><span class="keyword">CREATE TABLE</span> stu (</span><br><span class="line">  sid <span class="type">CHAR</span>(<span class="number">6</span>),</span><br><span class="line">  sname <span class="type">VARCHAR</span>(<span class="number">50</span>),</span><br><span class="line">  age <span class="type">INT</span>,</span><br><span class="line">  gender <span class="type">VARCHAR</span>(<span class="number">50</span>)</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"># 添加数据 </span><br><span class="line"><span class="keyword">INSERT INTO</span></span><br><span class="line">  stu</span><br><span class="line"><span class="keyword">VALUES</span></span><br><span class="line">  (<span class="string">&#x27;S_1001&#x27;</span>, <span class="string">&#x27;liuYi&#x27;</span>, <span class="number">35</span>, <span class="string">&#x27;male&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">INSERT INTO</span></span><br><span class="line">  stu</span><br><span class="line"><span class="keyword">VALUES</span></span><br><span class="line">  (<span class="string">&#x27;S_1002&#x27;</span>, <span class="string">&#x27;chenEr&#x27;</span>, <span class="number">15</span>, <span class="string">&#x27;female&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">INSERT INTO</span></span><br><span class="line">  stu</span><br><span class="line"><span class="keyword">VALUES</span></span><br><span class="line">  (<span class="string">&#x27;S_1003&#x27;</span>, <span class="string">&#x27;zhangSan&#x27;</span>, <span class="number">95</span>, <span class="string">&#x27;male&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">INSERT INTO</span></span><br><span class="line">  stu</span><br><span class="line"><span class="keyword">VALUES</span></span><br><span class="line">  (<span class="string">&#x27;S_1004&#x27;</span>, <span class="string">&#x27;liSi&#x27;</span>, <span class="number">65</span>, <span class="string">&#x27;female&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">INSERT INTO</span></span><br><span class="line">  stu</span><br><span class="line"><span class="keyword">VALUES</span></span><br><span class="line">  (<span class="string">&#x27;S_1005&#x27;</span>, <span class="string">&#x27;wangWu&#x27;</span>, <span class="number">55</span>, <span class="string">&#x27;male&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">INSERT INTO</span></span><br><span class="line">  stu</span><br><span class="line"><span class="keyword">VALUES</span></span><br><span class="line">  (<span class="string">&#x27;S_1006&#x27;</span>, <span class="string">&#x27;zhaoLiu&#x27;</span>, <span class="number">75</span>, <span class="string">&#x27;female&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">INSERT INTO</span></span><br><span class="line">  stu</span><br><span class="line"><span class="keyword">VALUES</span></span><br><span class="line">  (<span class="string">&#x27;S_1007&#x27;</span>, <span class="string">&#x27;sunQi&#x27;</span>, <span class="number">25</span>, <span class="string">&#x27;male&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">INSERT INTO</span></span><br><span class="line">  stu</span><br><span class="line"><span class="keyword">VALUES</span></span><br><span class="line">  (<span class="string">&#x27;S_1008&#x27;</span>, <span class="string">&#x27;zhouBa&#x27;</span>, <span class="number">45</span>, <span class="string">&#x27;female&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">INSERT INTO</span></span><br><span class="line">  stu</span><br><span class="line"><span class="keyword">VALUES</span></span><br><span class="line">  (<span class="string">&#x27;S_1009&#x27;</span>, <span class="string">&#x27;wuJiu&#x27;</span>, <span class="number">85</span>, <span class="string">&#x27;male&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">INSERT INTO</span></span><br><span class="line">  stu</span><br><span class="line"><span class="keyword">VALUES</span></span><br><span class="line">  (<span class="string">&#x27;S_1010&#x27;</span>, <span class="string">&#x27;zhengShi&#x27;</span>, <span class="number">5</span>, <span class="string">&#x27;female&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">INSERT INTO</span></span><br><span class="line">  stu</span><br><span class="line"><span class="keyword">VALUES</span></span><br><span class="line">  (<span class="string">&#x27;S_1011&#x27;</span>, <span class="string">&#x27;xxx&#x27;</span>, <span class="keyword">NULL</span>, <span class="keyword">NULL</span>);</span><br><span class="line"></span><br><span class="line"># 创建雇员表并添加数据</span><br><span class="line"># 创建雇员表 </span><br><span class="line"><span class="keyword">CREATE TABLE</span> emp2(</span><br><span class="line">  empno <span class="type">INT</span>,</span><br><span class="line">  ename <span class="type">VARCHAR</span>(<span class="number">50</span>),</span><br><span class="line">  job <span class="type">VARCHAR</span>(<span class="number">50</span>),</span><br><span class="line">  mgr <span class="type">INT</span>,</span><br><span class="line">  hiredate <span class="type">DATE</span>,</span><br><span class="line">  sal <span class="type">DECIMAL</span>(<span class="number">7</span>, <span class="number">2</span>),</span><br><span class="line">  comm <span class="type">decimal</span>(<span class="number">7</span>, <span class="number">2</span>),</span><br><span class="line">  deptno <span class="type">INT</span></span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"># 添加数据</span><br><span class="line"><span class="keyword">INSERT INTO</span></span><br><span class="line">  emp2</span><br><span class="line"><span class="keyword">values</span></span><br><span class="line">  (</span><br><span class="line">    <span class="number">7369</span>,</span><br><span class="line">    <span class="string">&#x27;SMITH&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;CLERK&#x27;</span>,</span><br><span class="line">    <span class="number">7902</span>,</span><br><span class="line">    <span class="string">&#x27;1980-12-17&#x27;</span>,</span><br><span class="line">    <span class="number">800</span>,</span><br><span class="line">    <span class="keyword">NULL</span>,</span><br><span class="line">    <span class="number">20</span></span><br><span class="line">  );</span><br><span class="line"></span><br><span class="line"><span class="keyword">INSERT INTO</span></span><br><span class="line">  emp2</span><br><span class="line"><span class="keyword">values</span></span><br><span class="line">  (</span><br><span class="line">    <span class="number">7499</span>,</span><br><span class="line">    <span class="string">&#x27;ALLEN&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;SALESMAN&#x27;</span>,</span><br><span class="line">    <span class="number">7698</span>,</span><br><span class="line">    <span class="string">&#x27;1981-02-20&#x27;</span>,</span><br><span class="line">    <span class="number">1600</span>,</span><br><span class="line">    <span class="number">300</span>,</span><br><span class="line">    <span class="number">30</span></span><br><span class="line">  );</span><br><span class="line"></span><br><span class="line"><span class="keyword">INSERT INTO</span></span><br><span class="line">  emp2</span><br><span class="line"><span class="keyword">values</span></span><br><span class="line">  (</span><br><span class="line">    <span class="number">7521</span>,</span><br><span class="line">    <span class="string">&#x27;WARD&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;SALESMAN&#x27;</span>,</span><br><span class="line">    <span class="number">7698</span>,</span><br><span class="line">    <span class="string">&#x27;1981-02-22&#x27;</span>,</span><br><span class="line">    <span class="number">1250</span>,</span><br><span class="line">    <span class="number">500</span>,</span><br><span class="line">    <span class="number">30</span></span><br><span class="line">  );</span><br><span class="line"></span><br><span class="line"><span class="keyword">INSERT INTO</span></span><br><span class="line">  emp2</span><br><span class="line"><span class="keyword">values</span></span><br><span class="line">  (</span><br><span class="line">    <span class="number">7566</span>,</span><br><span class="line">    <span class="string">&#x27;JONES&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;MANAGER&#x27;</span>,</span><br><span class="line">    <span class="number">7839</span>,</span><br><span class="line">    <span class="string">&#x27;1981-04-02&#x27;</span>,</span><br><span class="line">    <span class="number">2975</span>,</span><br><span class="line">    <span class="keyword">NULL</span>,</span><br><span class="line">    <span class="number">20</span></span><br><span class="line">  );</span><br><span class="line"></span><br><span class="line"><span class="keyword">INSERT INTO</span></span><br><span class="line">  emp2</span><br><span class="line"><span class="keyword">values</span></span><br><span class="line">  (</span><br><span class="line">    <span class="number">7654</span>,</span><br><span class="line">    <span class="string">&#x27;MARTIN&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;SALESMAN&#x27;</span>,</span><br><span class="line">    <span class="number">7698</span>,</span><br><span class="line">    <span class="string">&#x27;1981-09- 28&#x27;</span>,</span><br><span class="line">    <span class="number">1250</span>,</span><br><span class="line">    <span class="number">1400</span>,</span><br><span class="line">    <span class="number">30</span></span><br><span class="line">  );</span><br><span class="line"></span><br><span class="line"><span class="keyword">INSERT INTO</span></span><br><span class="line">  emp2</span><br><span class="line"><span class="keyword">values</span></span><br><span class="line">  (</span><br><span class="line">    <span class="number">7698</span>,</span><br><span class="line">    <span class="string">&#x27;BLAKE&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;MANAGER&#x27;</span>,</span><br><span class="line">    <span class="number">7839</span>,</span><br><span class="line">    <span class="string">&#x27;1981-05-01&#x27;</span>,</span><br><span class="line">    <span class="number">2850</span>,</span><br><span class="line">    <span class="keyword">NULL</span>,</span><br><span class="line">    <span class="number">30</span></span><br><span class="line">  );</span><br><span class="line"></span><br><span class="line"><span class="keyword">INSERT INTO</span></span><br><span class="line">  emp2</span><br><span class="line"><span class="keyword">values</span></span><br><span class="line">  (</span><br><span class="line">    <span class="number">7782</span>,</span><br><span class="line">    <span class="string">&#x27;CLARK&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;MANAGER&#x27;</span>,</span><br><span class="line">    <span class="number">7839</span>,</span><br><span class="line">    <span class="string">&#x27;1981-06-09&#x27;</span>,</span><br><span class="line">    <span class="number">2450</span>,</span><br><span class="line">    <span class="keyword">NULL</span>,</span><br><span class="line">    <span class="number">10</span></span><br><span class="line">  );</span><br><span class="line"></span><br><span class="line"><span class="keyword">INSERT INTO</span></span><br><span class="line">  emp2</span><br><span class="line"><span class="keyword">values</span></span><br><span class="line">  (</span><br><span class="line">    <span class="number">7788</span>,</span><br><span class="line">    <span class="string">&#x27;SCOTT&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;ANALYST&#x27;</span>,</span><br><span class="line">    <span class="number">7566</span>,</span><br><span class="line">    <span class="string">&#x27;1987-04-19&#x27;</span>,</span><br><span class="line">    <span class="number">3000</span>,</span><br><span class="line">    <span class="keyword">NULL</span>,</span><br><span class="line">    <span class="number">20</span></span><br><span class="line">  );</span><br><span class="line"></span><br><span class="line"><span class="keyword">INSERT INTO</span></span><br><span class="line">  emp2</span><br><span class="line"><span class="keyword">values</span></span><br><span class="line">  (</span><br><span class="line">    <span class="number">7839</span>,</span><br><span class="line">    <span class="string">&#x27;KING&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;PRESIDENT&#x27;</span>,</span><br><span class="line">    <span class="keyword">NULL</span>,</span><br><span class="line">    <span class="string">&#x27;1981-11-17&#x27;</span>,</span><br><span class="line">    <span class="number">5000</span>,</span><br><span class="line">    <span class="keyword">NULL</span>,</span><br><span class="line">    <span class="number">10</span></span><br><span class="line">  );</span><br><span class="line"></span><br><span class="line"><span class="keyword">INSERT INTO</span></span><br><span class="line">  emp2</span><br><span class="line"><span class="keyword">values</span></span><br><span class="line">  (</span><br><span class="line">    <span class="number">7844</span>,</span><br><span class="line">    <span class="string">&#x27;TURNER&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;SALESMAN&#x27;</span>,</span><br><span class="line">    <span class="number">7698</span>,</span><br><span class="line">    <span class="string">&#x27;1981-09-08&#x27;</span>,</span><br><span class="line">    <span class="number">1500</span>,</span><br><span class="line">    <span class="number">0</span>,</span><br><span class="line">    <span class="number">30</span></span><br><span class="line">  );</span><br><span class="line"></span><br><span class="line"><span class="keyword">INSERT INTO</span></span><br><span class="line">  emp2</span><br><span class="line"><span class="keyword">values</span></span><br><span class="line">  (</span><br><span class="line">    <span class="number">7876</span>,</span><br><span class="line">    <span class="string">&#x27;ADAMS&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;CLERK&#x27;</span>,</span><br><span class="line">    <span class="number">7788</span>,</span><br><span class="line">    <span class="string">&#x27;1987-05-23&#x27;</span>,</span><br><span class="line">    <span class="number">1100</span>,</span><br><span class="line">    <span class="keyword">NULL</span>,</span><br><span class="line">    <span class="number">20</span></span><br><span class="line">  );</span><br><span class="line"></span><br><span class="line"># 创建部门表</span><br><span class="line"><span class="keyword">CREATE TABLE</span> dept(deptno <span class="type">INT</span>, dname <span class="type">varchar</span>(<span class="number">14</span>), loc <span class="type">varchar</span>(<span class="number">13</span>));</span><br><span class="line"></span><br><span class="line">#添加数据</span><br><span class="line"><span class="keyword">INSERT INTO</span></span><br><span class="line">  dept</span><br><span class="line"><span class="keyword">values</span></span><br><span class="line">(<span class="number">10</span>, <span class="string">&#x27;ACCOUNTING&#x27;</span>, <span class="string">&#x27;NEW YORK&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">INSERT INTO</span></span><br><span class="line">  dept</span><br><span class="line"><span class="keyword">values</span></span><br><span class="line">(<span class="number">20</span>, <span class="string">&#x27;RESEARCH&#x27;</span>, <span class="string">&#x27;DALLAS&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">INSERT INTO</span></span><br><span class="line">  dept</span><br><span class="line"><span class="keyword">values</span></span><br><span class="line">(<span class="number">30</span>, <span class="string">&#x27;SALES&#x27;</span>, <span class="string">&#x27;CHICAGO&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">INSERT INTO</span></span><br><span class="line">  dept</span><br><span class="line"><span class="keyword">values</span></span><br><span class="line">(<span class="number">40</span>, <span class="string">&#x27;OPERATIONS&#x27;</span>, <span class="string">&#x27;BOSTON&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>查询所有列</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> stu;</span><br></pre></td></tr></table></figure>
+
+<p>查询指定列</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> sid, sname, age <span class="keyword">from</span> stu;</span><br></pre></td></tr></table></figure>
+
+<p>条件查询</p>
+<blockquote>
+<p>&#x3D;、!&#x3D;、&lt;&gt;、&lt;、&lt;&#x3D;、&gt;、&gt;&#x3D;、between…and、in(set)、is null、and、or、not</p>
+</blockquote>
+<p>1、查询性别为女，并且年龄50以内的记录  </p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> stu <span class="keyword">WHERE</span> gender<span class="operator">=</span><span class="string">&#x27;female&#x27;</span> <span class="keyword">AND</span> age<span class="operator">&lt;</span><span class="number">50</span>;</span><br></pre></td></tr></table></figure>
+
+<p>2、查询学号为S_1001，或者姓名为liSi的记录  </p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> stu <span class="keyword">WHERE</span> sid <span class="operator">=</span><span class="string">&#x27;S_1001&#x27;</span> <span class="keyword">OR</span> sname<span class="operator">=</span><span class="string">&#x27;liSi&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>3、查询学号为S_1001，S_1002，S_1003的记录<br>列名 in (列值1,列值2)</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> stu <span class="keyword">WHERE</span> sid <span class="keyword">IN</span> (<span class="string">&#x27;S_1001&#x27;</span>,<span class="string">&#x27;S_1002&#x27;</span>,<span class="string">&#x27;S_1003&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>4、查询学号不是S_1001，S_1002，S_1003的记录  </p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> tab_student <span class="keyword">WHERE</span> sid <span class="keyword">NOT</span> <span class="keyword">IN</span>(<span class="string">&#x27;S1001&#x27;</span>,<span class="string">&#x27;S1002&#x27;</span>,<span class="string">&#x27;S_1003&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>5、查询年龄为null的记录</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> stu <span class="keyword">WHERE</span> age <span class="keyword">IS</span> <span class="keyword">NULL</span>;</span><br></pre></td></tr></table></figure>
+
+<p>6、查询年龄在20到40之间的学生记录</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> stu <span class="keyword">WHERE</span> age<span class="operator">&gt;=</span><span class="number">20</span> <span class="keyword">AND</span> age<span class="operator">&lt;=</span><span class="number">40</span>;</span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> stu <span class="keyword">WHERE</span> age <span class="keyword">BETWEEN</span> <span class="number">20</span> <span class="keyword">AND</span> <span class="number">40</span>;</span><br></pre></td></tr></table></figure>
+
+<p>7、查询性别非男的学生记录</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> stu <span class="keyword">WHERE</span> gender<span class="operator">!=</span><span class="string">&#x27;male&#x27;</span>;</span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> stu <span class="keyword">WHERE</span> gender<span class="operator">&lt;&gt;</span><span class="string">&#x27;male&#x27;</span>;</span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> stu <span class="keyword">WHERE</span> <span class="keyword">NOT</span> gender<span class="operator">=</span><span class="string">&#x27;male&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>8、查询姓名不为null的学生记录</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> stu <span class="keyword">WHERE</span> <span class="keyword">NOT</span> sname <span class="keyword">IS</span> <span class="keyword">NULL</span>;</span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> stu <span class="keyword">WHERE</span> sname <span class="keyword">IS</span> <span class="keyword">NOT NULL</span>;</span><br></pre></td></tr></table></figure>
+
+<p>模糊查询</p>
+<blockquote>
+<p>列名 like ‘表达式’<br>通配符<br>_: 任意一个字符<br>%：任意0~n个字符</p>
+</blockquote>
+<p>1、查询姓名由3个字构成的学生记录</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> stu <span class="keyword">WHERE</span> sname <span class="keyword">LIKE</span> <span class="string">&#x27;___&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>2、查询姓名由5个字母构成，并且第5个字母为“i”的学生记录</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> stu <span class="keyword">WHERE</span> sname <span class="keyword">LIKE</span> <span class="string">&#x27;____i&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>3、查询姓名以“z”开头的学生记录</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> stu <span class="keyword">WHERE</span> sname <span class="keyword">LIKE</span> <span class="string">&#x27;z%&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>4、查询姓名中第2个字母为“i”的学生记录</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> stu <span class="keyword">WHERE</span> sname <span class="keyword">LIKE</span> <span class="string">&#x27;_i%&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>5、查询姓名中包含“a”字母的学生记录</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> stu <span class="keyword">WHERE</span> sname <span class="keyword">LIKE</span> <span class="string">&#x27;%a%&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>字段控制查询</p>
+<p>排序</p>
+<p>聚合函数</p>
+<p>分组查询</p>
+<p>limit</p>
+<h2 id="数据完整性"><a href="#数据完整性" class="headerlink" title="数据完整性"></a>数据完整性</h2><p>引用完整性</p>
+<ul>
+<li>primary key</li>
+<li>unique [key]</li>
+<li>not null</li>
+<li>default</li>
+<li>auto_increment</li>
+<li>foregin key</li>
+</ul>
+]]></content>
+      <categories>
+        <category>汇总</category>
+        <category>开发环境</category>
+      </categories>
+      <tags>
+        <tag>汇总</tag>
+        <tag>mysql</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Tomcat 篇</title>
+    <url>/2024/01/23/summary/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/Tomcat%20%E7%AF%87/</url>
+    <content><![CDATA[<h1 id="请求处理"><a href="#请求处理" class="headerlink" title="请求处理"></a>请求处理</h1><p>在java中创建class<br><strong>java&#x2F;web&#x2F;TestServlet.class</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> web;</span><br><span class="line"></span><br><span class="line">...</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">TestServlet</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line">  <span class="meta">@Override</span></span><br><span class="line">  <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest req, HttpServletResponse resp)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;get&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="meta">@Override</span></span><br><span class="line">  <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doPost</span><span class="params">(HttpServletRequest req, HttpServletResponse resp)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;post&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>web.xml</strong></p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span>?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">web-app</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://xmlns.jcp.org/xml/ns/javaee&quot;</span></span></span><br><span class="line"><span class="tag">         <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span></span><br><span class="line"><span class="tag">         <span class="attr">xsi:schemaLocation</span>=<span class="string">&quot;http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd&quot;</span></span></span><br><span class="line"><span class="tag">         <span class="attr">version</span>=<span class="string">&quot;4.0&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">servlet</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">servlet-name</span>&gt;</span>test<span class="tag">&lt;/<span class="name">servlet-name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">servlet-class</span>&gt;</span>web.TestServlet<span class="tag">&lt;/<span class="name">servlet-class</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">servlet</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">servlet-mapping</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">servlet-name</span>&gt;</span>test<span class="tag">&lt;/<span class="name">servlet-name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">url-pattern</span>&gt;</span>/test<span class="tag">&lt;/<span class="name">url-pattern</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">servlet-mapping</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">web-app</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>访问 <a href="http://localhost:8080/test">http://localhost:8080/test</a></p>
+<p>通过注解方式</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@WebServlet(urlPatterns = &quot;/user&quot;, name = &quot;user&quot;, initParams = &#123;</span></span><br><span class="line"><span class="meta">  @WebInitParam(name = &quot;name&quot;, value = &quot;wangyu&quot;)</span></span><br><span class="line"><span class="meta">&#125;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">UserServlet</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line">  <span class="meta">@Override</span></span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">init</span><span class="params">(ServletConfig config)</span> <span class="keyword">throws</span> ServletException &#123;</span><br><span class="line">    System.out.println(config.getInitParameter(<span class="string">&quot;name&quot;</span>));</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="meta">@Override</span></span><br><span class="line">  <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest req, HttpServletResponse resp)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;get&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h1 id="初始化配置"><a href="#初始化配置" class="headerlink" title="初始化配置"></a>初始化配置</h1><p><strong>web.xml</strong></p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 全局配置 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">context-param</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">param-name</span>&gt;</span>age<span class="tag">&lt;/<span class="name">param-name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">param-value</span>&gt;</span>21<span class="tag">&lt;/<span class="name">param-value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">context-param</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">servlet</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">servlet-name</span>&gt;</span>test<span class="tag">&lt;/<span class="name">servlet-name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">servlet-class</span>&gt;</span>web.TestServlet<span class="tag">&lt;/<span class="name">servlet-class</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 局部配置 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">init-param</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">param-name</span>&gt;</span>name<span class="tag">&lt;/<span class="name">param-name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">param-value</span>&gt;</span>layouwen<span class="tag">&lt;/<span class="name">param-value</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">init-param</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">servlet</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="常见配置"><a href="#常见配置" class="headerlink" title="常见配置"></a>常见配置</h1><h2 id="修改端口号"><a href="#修改端口号" class="headerlink" title="修改端口号"></a>修改端口号</h2><p>修改 port 的值即可</p>
+<p><strong>conf&#x2F;server.xml</strong></p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Connector</span> <span class="attr">port</span>=<span class="string">&quot;9999&quot;</span> <span class="attr">protocol</span>=<span class="string">&quot;HTTP/1.1&quot;</span> <span class="attr">connectionTimeout</span>=<span class="string">&quot;20000&quot;</span> <span class="attr">redirectPort</span>=<span class="string">&quot;8443&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="JSP内置对象"><a href="#JSP内置对象" class="headerlink" title="JSP内置对象"></a>JSP内置对象</h1>]]></content>
+      <categories>
+        <category>汇总</category>
+        <category>开发环境</category>
+      </categories>
+      <tags>
+        <tag>汇总</tag>
+        <tag>tomcat</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>VSCode 篇</title>
+    <url>/2024/02/12/summary/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/VSCode%20%E7%AF%87/</url>
+    <content><![CDATA[<h2 id="1、使用-jetbrains-快捷键需删除以下快捷键防止冲突"><a href="#1、使用-jetbrains-快捷键需删除以下快捷键防止冲突" class="headerlink" title="1、使用 jetbrains 快捷键需删除以下快捷键防止冲突"></a>1、使用 jetbrains 快捷键需删除以下快捷键防止冲突</h2><ul>
+<li>Debug:Start Without Debugging —— Control-D —— 弹出 Debug</li>
+</ul>
+<h2 id="2、VSCode-推荐的插件"><a href="#2、VSCode-推荐的插件" class="headerlink" title="2、VSCode 推荐的插件"></a>2、VSCode 推荐的插件</h2><table>
+<thead>
+<tr>
+<th>插件名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>.NET Install Tool</td>
+<td></td>
+</tr>
+<tr>
+<td>Amazon Q</td>
+<td>Amazon ai 代码提示生成</td>
+</tr>
+<tr>
+<td>antd Design Token</td>
+<td>antd 的 token 插件</td>
+</tr>
+<tr>
+<td>any-rule</td>
+<td>正则大全</td>
+</tr>
+<tr>
+<td>Apc Customize UI++</td>
+<td>vscode 页面定制</td>
+</tr>
+<tr>
+<td>Auto Close Tag</td>
+<td>自定闭合标签</td>
+</tr>
+<tr>
+<td>Auto Import</td>
+<td>自动导入</td>
+</tr>
+<tr>
+<td>Auto Rename Tag</td>
+<td>同步修改标签名</td>
+</tr>
+<tr>
+<td>Biome</td>
+<td>开箱即用的校验&amp;格式化&amp;排序一体插件</td>
+</tr>
+<tr>
+<td>Bito AI Code Reviews</td>
+<td></td>
+</tr>
+<tr>
+<td>Bracket Lens</td>
+<td>代码块提示</td>
+</tr>
+<tr>
+<td>C&#x2F;C++</td>
+<td></td>
+</tr>
+<tr>
+<td>c#</td>
+<td></td>
+</tr>
+<tr>
+<td>Clang-Format</td>
+<td></td>
+</tr>
+<tr>
+<td>Cline</td>
+<td>AI 编程助手</td>
+</tr>
+<tr>
+<td>code runner</td>
+<td>代码执行</td>
+</tr>
+<tr>
+<td>Code Spell Checker</td>
+<td>拼写检测</td>
+</tr>
+<tr>
+<td>CodeRabbit</td>
+<td>PR Review 工具</td>
+</tr>
+<tr>
+<td>CodeSnap</td>
+<td>代码截图</td>
+</tr>
+<tr>
+<td>Codex – OpenAI’s coding agent</td>
+<td></td>
+</tr>
+<tr>
+<td>Cody: AI Code Assistant</td>
+<td>AI 编程助手</td>
+</tr>
+<tr>
+<td>Color Highlight</td>
+<td>代码高亮</td>
+</tr>
+<tr>
+<td>Console Ninja</td>
+<td>console vscode 管理工具</td>
+</tr>
+<tr>
+<td>Container Tools</td>
+<td>微软官方的容器工具集</td>
+</tr>
+<tr>
+<td>Continue</td>
+<td>代码补全助手, 并有类似 Cursor 核心的行内编辑功能</td>
+</tr>
+<tr>
+<td>CSS Peek</td>
+<td>css 索引调整</td>
+</tr>
+<tr>
+<td>Deploy</td>
+<td>部署脚本执行</td>
+</tr>
+<tr>
+<td>Dev Containers</td>
+<td>将 docker 容器作为开发环境</td>
+</tr>
+<tr>
+<td>Docker</td>
+<td>docker 管理</td>
+</tr>
+<tr>
+<td>Docker Explorer</td>
+<td>docker 管理工具包括 Azure 容器仓库</td>
+</tr>
+<tr>
+<td>DotENV</td>
+<td>env 高亮</td>
+</tr>
+<tr>
+<td>Draw.io Integration</td>
+<td>drawio 集成</td>
+</tr>
+<tr>
+<td>EditorConfig</td>
+<td>editorconfig 配置高亮</td>
+</tr>
+<tr>
+<td>ENV</td>
+<td>ENV 格式化工具</td>
+</tr>
+<tr>
+<td>Error Lens</td>
+<td></td>
+</tr>
+<tr>
+<td>ES7+ React&#x2F;Redux&#x2F;React-Native snippets</td>
+<td>react 代码片段</td>
+</tr>
+<tr>
+<td>ESLint</td>
+<td></td>
+</tr>
+<tr>
+<td>filesize</td>
+<td></td>
+</tr>
+<tr>
+<td>Git History</td>
+<td></td>
+</tr>
+<tr>
+<td>GitHub Actions</td>
+<td></td>
+</tr>
+<tr>
+<td>GitHub Pull Requests</td>
+<td></td>
+</tr>
+<tr>
+<td>GitHub Repositories</td>
+<td>github 仓库管理</td>
+</tr>
+<tr>
+<td>GitLens - Git supercharged</td>
+<td></td>
+</tr>
+<tr>
+<td>glTF Tools</td>
+<td>gltf 模型预览插件</td>
+</tr>
+<tr>
+<td>GraphQL</td>
+<td>graphql 语法支持</td>
+</tr>
+<tr>
+<td>Graphviz (dot) language support for Visual Studio Code</td>
+<td>图可视化语法支持</td>
+</tr>
+<tr>
+<td>Graphviz Preview</td>
+<td>图可视化预览</td>
+</tr>
+<tr>
+<td>Hex Editor</td>
+<td>二进制预览</td>
+</tr>
+<tr>
+<td>Image preview</td>
+<td>图片预览</td>
+</tr>
+<tr>
+<td>Import Cost</td>
+<td>导包的大小</td>
+</tr>
+<tr>
+<td>indent-rainbow</td>
+<td>彩色缩进</td>
+</tr>
+<tr>
+<td>IntelliJ IDEA Keybindings</td>
+<td>idea 键盘映射</td>
+</tr>
+<tr>
+<td>JavaScript (ES6) code snippets</td>
+<td>es6 代码片段</td>
+</tr>
+<tr>
+<td>JavaScript standardjs styled snippets</td>
+<td>js 代码片段</td>
+</tr>
+<tr>
+<td>Jest</td>
+<td></td>
+</tr>
+<tr>
+<td>Jest Snippets</td>
+<td>jest 代码片段</td>
+</tr>
+<tr>
+<td>Jinno</td>
+<td>实时预览组件, 通过 ai 创建独立环境和填入组件参数</td>
+</tr>
+<tr>
+<td>JS CodeFormer: Javascript Refactoring &amp; Code Automation</td>
+<td>代码重构和生成</td>
+</tr>
+<tr>
+<td>JSON Crack</td>
+<td>json 层级解析预览</td>
+</tr>
+<tr>
+<td>Jump To Alias File</td>
+<td>文件别名跳转</td>
+</tr>
+<tr>
+<td>Kubernetes</td>
+<td></td>
+</tr>
+<tr>
+<td>Language Support for Java(TM) by Red Hat</td>
+<td>java 语法支持</td>
+</tr>
+<tr>
+<td>learn-markdown</td>
+<td>markdown 的工具集</td>
+</tr>
+<tr>
+<td>learn-preview</td>
+<td>markdown 预览</td>
+</tr>
+<tr>
+<td>LeetCode</td>
+<td></td>
+</tr>
+<tr>
+<td>Lingma</td>
+<td>通义 ai 代码提示生成</td>
+</tr>
+<tr>
+<td>Live Server</td>
+<td>静态服务</td>
+</tr>
+<tr>
+<td>Live Share</td>
+<td>实时分享编辑</td>
+</tr>
+<tr>
+<td>Markdown All in One</td>
+<td>markdown 语法和预览</td>
+</tr>
+<tr>
+<td>Markdown Preview Enhanced</td>
+<td>markdown 预览增强</td>
+</tr>
+<tr>
+<td>Material Icon Theme</td>
+<td>vscode 文件夹的 icon 图标</td>
+</tr>
+<tr>
+<td>MDX</td>
+<td>mdx 语法高亮</td>
+</tr>
+<tr>
+<td>Mermaid Editor</td>
+<td>流程图预览</td>
+</tr>
+<tr>
+<td>Mintlify Doc Writer for Python, JavaScript, TypeScript, C++, PHP, Java</td>
+<td>文档生成</td>
+</tr>
+<tr>
+<td>Nuxtr</td>
+<td>nuxt 插件</td>
+</tr>
+<tr>
+<td>Paste JSON as Code</td>
+<td>json 转各种类型声明</td>
+</tr>
+<tr>
+<td>Path Autocomplete</td>
+<td>路径补全</td>
+</tr>
+<tr>
+<td>Path Intellisense</td>
+<td>path 补全</td>
+</tr>
+<tr>
+<td>Peacock</td>
+<td>给不同窗口配置各自的颜色</td>
+</tr>
+<tr>
+<td>PHP Debug</td>
+<td></td>
+</tr>
+<tr>
+<td>Prettier - Code formatter</td>
+<td></td>
+</tr>
+<tr>
+<td>Prisma</td>
+<td></td>
+</tr>
+<tr>
+<td>Project Manager</td>
+<td></td>
+</tr>
+<tr>
+<td>quick open lazygit</td>
+<td>快速打开 lazygit</td>
+</tr>
+<tr>
+<td>Quokka.js</td>
+<td>在 vscode 中的显示计算结果</td>
+</tr>
+<tr>
+<td>React Style Helper</td>
+<td>react style module 补全提示</td>
+</tr>
+<tr>
+<td>react-intl-linter</td>
+<td>react i18 替换</td>
+</tr>
+<tr>
+<td>React-Native&#x2F;React&#x2F;Redux snippets for es6&#x2F;es7</td>
+<td>react 代码片段</td>
+</tr>
+<tr>
+<td>React&#x2F;Redux&#x2F;react-router Snippets</td>
+<td>react 代码片段</td>
+</tr>
+<tr>
+<td>ReactTree</td>
+<td>显示 react 的树节点</td>
+</tr>
+<tr>
+<td>Regex Previewer</td>
+<td>正则匹配测试</td>
+</tr>
+<tr>
+<td>Remote - SSH</td>
+<td>ssh 远程开发</td>
+</tr>
+<tr>
+<td>Remote - SSH: Editing Configuration Files</td>
+<td>ssh 配置文件高亮</td>
+</tr>
+<tr>
+<td>Remote Explorer</td>
+<td>ssh 远程资源管理</td>
+</tr>
+<tr>
+<td>Remote Repositories</td>
+<td>ssh 远程 git 仓库控制</td>
+</tr>
+<tr>
+<td>Rome</td>
+<td>Rome 格式化工具</td>
+</tr>
+<tr>
+<td>Roo Code</td>
+<td>AI 编程助手</td>
+</tr>
+<tr>
+<td>rust-analyzer</td>
+<td>rust 语法支持</td>
+</tr>
+<tr>
+<td>Sass (.sass only)</td>
+<td>sass 语法高亮</td>
+</tr>
+<tr>
+<td>SCSS Formatter</td>
+<td>sass 格式化工具</td>
+</tr>
+<tr>
+<td>Simple React Snippets</td>
+<td>react 代码片段</td>
+</tr>
+<tr>
+<td>SQL Formatter</td>
+<td></td>
+</tr>
+<tr>
+<td>stylus</td>
+<td>stylus 语法高亮</td>
+</tr>
+<tr>
+<td>Svg Preview</td>
+<td>预览 svg 的图案</td>
+</tr>
+<tr>
+<td>Tailwind CSS IntelliSense</td>
+<td>tailwind 高亮</td>
+</tr>
+<tr>
+<td>TODO Highlight</td>
+<td></td>
+</tr>
+<tr>
+<td>Todo Tree</td>
+<td></td>
+</tr>
+<tr>
+<td>TRAE AI: Coding Assistant</td>
+<td>自动补全工具</td>
+</tr>
+<tr>
+<td>uni-app-schemas</td>
+<td></td>
+</tr>
+<tr>
+<td>uni-app-snippets</td>
+<td></td>
+</tr>
+<tr>
+<td>uni-cloud-snippets</td>
+<td></td>
+</tr>
+<tr>
+<td>uni-create-view</td>
+<td></td>
+</tr>
+<tr>
+<td>uni-helper</td>
+<td></td>
+</tr>
+<tr>
+<td>uni-highlight</td>
+<td></td>
+</tr>
+<tr>
+<td>uni-ui-snippets</td>
+<td></td>
+</tr>
+<tr>
+<td>Version Lens</td>
+<td>package 版本显示</td>
+</tr>
+<tr>
+<td>Vim</td>
+<td></td>
+</tr>
+<tr>
+<td>Vira Theme</td>
+<td>material 的主题废弃更新版</td>
+</tr>
+<tr>
+<td>Vite</td>
+<td></td>
+</tr>
+<tr>
+<td>vscode-random</td>
+<td>随机数据生成</td>
+</tr>
+<tr>
+<td>Vue (Official)</td>
+<td></td>
+</tr>
+<tr>
+<td>Vue 3 Snippets</td>
+<td></td>
+</tr>
+<tr>
+<td>Vue 3 Support - All In One</td>
+<td></td>
+</tr>
+<tr>
+<td>Vue Extension Box</td>
+<td>vue 拓展套餐</td>
+</tr>
+<tr>
+<td>Vue Peek</td>
+<td></td>
+</tr>
+<tr>
+<td>Vue VSCode Snippets</td>
+<td></td>
+</tr>
+<tr>
+<td>vue-helper</td>
+<td>Element-Ul, Element Plus, Ant Desigin Vue 文档增强</td>
+</tr>
+<tr>
+<td>WakaTime</td>
+<td></td>
+</tr>
+<tr>
+<td>Wallaby.js</td>
+<td>实时测试结果</td>
+</tr>
+<tr>
+<td>WebGL GLSL Editor</td>
+<td></td>
+</tr>
+<tr>
+<td>WSL</td>
+<td></td>
+</tr>
+<tr>
+<td>WXML - Language Service</td>
+<td>微信 wxml 语法支持</td>
+</tr>
+<tr>
+<td>XML Formatter</td>
+<td></td>
+</tr>
+<tr>
+<td>YAML</td>
+<td></td>
+</tr>
+<tr>
+<td>GitHub Copilot</td>
+<td></td>
+</tr>
+<tr>
+<td>GitHub Copilot Chat</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="3、其他"><a href="#3、其他" class="headerlink" title="3、其他"></a>3、其他</h2><h3 id="3-1-使用-WSL-的-Linux-终端"><a href="#3-1-使用-WSL-的-Linux-终端" class="headerlink" title="3.1 使用 WSL 的 Linux 终端"></a>3.1 使用 WSL 的 Linux 终端</h3><ol>
+<li>安装 Remote - WSL 插件</li>
+<li>打开终端，选择 WSL Bash</li>
+</ol>
+<p><img src="https://i.loli.net/2021/08/18/vyurg269BjshneE.png" alt="1.png"></p>
+<p><img src="https://i.loli.net/2021/08/18/UDyI6unFreac43v.png" alt="2.png"></p>
+<h4 id="3-1-1-Windows-访问-Ubuntu-的文件系统"><a href="#3-1-1-Windows-访问-Ubuntu-的文件系统" class="headerlink" title="3.1.1 Windows 访问 Ubuntu 的文件系统"></a>3.1.1 Windows 访问 Ubuntu 的文件系统</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">C:\Users\xxx\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState\rootfs\home\xxx</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-1-2-Ubuntu-访问-Windows-的-home-目录"><a href="#3-1-2-Ubuntu-访问-Windows-的-home-目录" class="headerlink" title="3.1.2 Ubuntu 访问 Windows 的 home 目录"></a>3.1.2 Ubuntu 访问 Windows 的 home 目录</h4><p>创建链接</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">ln</span> -s /mnt/c/User/用户名 ~/win10</span><br></pre></td></tr></table></figure>
+
+<p>使用链接 cd 进入 home 目录</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/win10</span><br></pre></td></tr></table></figure>
+
+<h2 id="4、插件使用技巧"><a href="#4、插件使用技巧" class="headerlink" title="4、插件使用技巧"></a>4、插件使用技巧</h2><h3 id="JavaScript-standardjs-styled-snippets"><a href="#JavaScript-standardjs-styled-snippets" class="headerlink" title="JavaScript standardjs styled snippets"></a>JavaScript standardjs styled snippets</h3><p>cd - const x &#x3D; await x<br>cf - const 箭头函数<br>te - 三元表达式<br>i - if 语句<br>ife - if else 语句<br>tc - try catch<br>tcf - try catch finally<br>fn - function 函数<br>asf - async function 函数<br>aiife - async 立即执行函数</p>
+<h3 id="JavaScript-ES6-code-snippets"><a href="#JavaScript-ES6-code-snippets" class="headerlink" title="JavaScript (ES6) code snippets"></a>JavaScript (ES6) code snippets</h3><h4 id="class"><a href="#class" class="headerlink" title="class"></a>class</h4><p>con - 生成构造函数<br>met - 类中生成方法<br>pge - get 函数<br>pse - set 函数</p>
+<h4 id="基本"><a href="#基本" class="headerlink" title="基本"></a>基本</h4><p>fof - for…of 方法<br>fin - for…in 方法<br>nfn - const 箭头函数<br>sti - setInterval 定时器<br>sto - setTimeout 定时器<br>prom - return new Promise<br>ec —— 导出 const 变量<br>ef —— 导出函数</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">function</span> <span class="title function_">name</span> (<span class="params"><span class="variable language_">arguments</span></span>) &#123;&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="log-类"><a href="#log-类" class="headerlink" title="log 类"></a>log 类</h4><p>cer - console.error<br>clg - console.log</p>
+<h4 id="导出"><a href="#导出" class="headerlink" title="导出"></a>导出</h4><p>ecl —— 默认导出类</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">class</span> <span class="title class_">ClassName</span> &#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Simple-React-Snippets"><a href="#Simple-React-Snippets" class="headerlink" title="Simple React Snippets"></a>Simple React Snippets</h3><p>uef</p>
+<figure class="highlight tsx"><table><tr><td class="code"><pre><span class="line"><span class="title function_">useEffect</span>(<span class="function">()=&gt;</span>&#123;&#125;,[])</span><br></pre></td></tr></table></figure>
+
+<p>ucb</p>
+<figure class="highlight tsx"><table><tr><td class="code"><pre><span class="line"><span class="title function_">useCallback</span>(<span class="function">(<span class="params">val</span>)=&gt;</span>&#123;&#125;,[])</span><br></pre></td></tr></table></figure>
+
+<p>usf</p>
+<figure class="highlight tsx"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> [,set] = <span class="title function_">useState</span>()</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="keybindings"><a href="#keybindings" class="headerlink" title="keybindings"></a>keybindings</h3><ul>
+<li>上移窗口</li>
+<li>下移窗口</li>
+<li>左移窗口</li>
+<li>右移窗口</li>
+<li>上下分割窗口</li>
+<li>左右分割窗口</li>
+<li>创建文件</li>
+<li>关闭编辑区</li>
+<li>取消高亮</li>
+<li>重命名</li>
+<li>格式化</li>
+<li>折叠代码</li>
+<li>回到开头</li>
+<li>回到结尾</li>
+<li>合并下一行</li>
+<li>向下5行</li>
+<li>向上5行</li>
+</ul>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* mac start */</span></span><br><span class="line"><span class="comment">// 向上移动窗口</span></span><br><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;key&quot;</span><span class="punctuation">:</span> <span class="string">&quot;shift+up&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;command&quot;</span><span class="punctuation">:</span> <span class="string">&quot;vim.remap&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;when&quot;</span><span class="punctuation">:</span> <span class="string">&quot;vim.mode == &#x27;Normal&#x27;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;args&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;after&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">      <span class="string">&quot;&lt;c-w&gt;&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;k&quot;</span></span><br><span class="line">    <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line"><span class="comment">// 向下移动窗口</span></span><br><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;key&quot;</span><span class="punctuation">:</span> <span class="string">&quot;shift+down&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;command&quot;</span><span class="punctuation">:</span> <span class="string">&quot;vim.remap&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;when&quot;</span><span class="punctuation">:</span> <span class="string">&quot;vim.mode == &#x27;Normal&#x27;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;args&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;after&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">      <span class="string">&quot;&lt;c-w&gt;&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;j&quot;</span></span><br><span class="line">    <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line"><span class="comment">// 向左移动窗口</span></span><br><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;key&quot;</span><span class="punctuation">:</span> <span class="string">&quot;shift+left&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;command&quot;</span><span class="punctuation">:</span> <span class="string">&quot;vim.remap&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;when&quot;</span><span class="punctuation">:</span> <span class="string">&quot;vim.mode == &#x27;Normal&#x27;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;args&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;after&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">      <span class="string">&quot;&lt;c-w&gt;&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;h&quot;</span></span><br><span class="line">    <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line"><span class="comment">// 向右移动窗口</span></span><br><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;key&quot;</span><span class="punctuation">:</span> <span class="string">&quot;shift+right&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;command&quot;</span><span class="punctuation">:</span> <span class="string">&quot;vim.remap&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;when&quot;</span><span class="punctuation">:</span> <span class="string">&quot;vim.mode == &#x27;Normal&#x27;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;args&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;after&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">      <span class="string">&quot;&lt;c-w&gt;&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;l&quot;</span></span><br><span class="line">    <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line"><span class="comment">// 上下切分窗口</span></span><br><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;key&quot;</span><span class="punctuation">:</span> <span class="string">&quot;ctrl+cmd+\\&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;command&quot;</span><span class="punctuation">:</span> <span class="string">&quot;workbench.action.splitEditorUp&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line"><span class="comment">/* mac end */</span></span><br></pre></td></tr></table></figure>
+
+<p>通过 vim 快速删除 import 中的其中一个模块</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="attr">&quot;vim.argumentObjectOpeningDelimiters&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">  <span class="string">&quot;(&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="string">&quot;[&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="string">&quot;&#123;&quot;</span><span class="punctuation">,</span></span><br><span class="line"><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line"><span class="attr">&quot;vim.argumentObjectClosingDelimiters&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">  <span class="string">&quot;)&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="string">&quot;]&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="string">&quot;&#125;&quot;</span></span><br><span class="line"><span class="punctuation">]</span><span class="punctuation">,</span></span><br></pre></td></tr></table></figure>
+
+<p>快捷键 <code>daa</code> 删除, 可以应用在数组, 对象, 函数参数中</p>
+<h1 id="代码片段"><a href="#代码片段" class="headerlink" title="代码片段"></a>代码片段</h1><figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;Print to console&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;scope&quot;</span><span class="punctuation">:</span> <span class="string">&quot;javascript,typescript&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;prefix&quot;</span><span class="punctuation">:</span> <span class="string">&quot;tuq&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;body&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">      <span class="string">&quot;import &#123; useQuery &#125; from &#x27;@tanstack/react-query&#x27;;&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;import &#123; useMemo &#125; from &#x27;react&#x27;;&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;import &#123; $2 &#125; from &#x27;@/api&#x27;;&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;import &#123; isSuccessApi &#125; from &#x27;@/utils&#x27;;&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;export const $&#123;TM_FILENAME_BASE&#125;QueryKey = &#x27;$TM_FILENAME_BASE&#x27;;&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;export function $&#123;TM_FILENAME_BASE&#125;(options$&#123;3|?|&#125;: &#123;&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;  params$&#123;3|?|&#125;: $&#123;4|any;|&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;  options?: &#123;&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;    enabled?: boolean;&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;  &#125;;&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;&#125;) &#123;&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;  const &#123; data: response, ...rest &#125; = useQuery(&#123;&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;    queryFn: () =&gt; $2($&#123;6&#125;),&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;    queryKey: [$&#123;TM_FILENAME_BASE&#125;QueryKey$&#123;5&#125;] as const,&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;    ...options$&#123;3|?|&#125;.options,&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;  &#125;);&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;  const data = useMemo(() =&gt; &#123;&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;    if (!isSuccessApi(response))&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;      return;&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;    return response.data;&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;  &#125;, [response]);&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;  return &#123;&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;    data,&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;    response,&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;    ...rest,&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;  &#125;;&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;&#125;&quot;</span></span><br><span class="line">    <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;description&quot;</span><span class="punctuation">:</span> <span class="string">&quot;创建 tanstack query hook&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">	<span class="attr">&quot;tum&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">		<span class="attr">&quot;scope&quot;</span><span class="punctuation">:</span> <span class="string">&quot;javascript,typescript&quot;</span><span class="punctuation">,</span> </span><br><span class="line">		<span class="attr">&quot;prefix&quot;</span><span class="punctuation">:</span> <span class="string">&quot;tum&quot;</span><span class="punctuation">,</span></span><br><span class="line">		<span class="attr">&quot;body&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">			<span class="string">&quot;import &#123; useMutation &#125; from &#x27;@tanstack/react-query&#x27;;&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;import &#123; $2 &#125; from &#x27;@/api&#x27;;&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;import &#123; queryClient &#125; from &#x27;@/main&#x27;;&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;import &#123; $&#123;1|useXxxQuery|&#125;QueryKey &#125; from &#x27;@/hooks/query/$&#123;1|useXxxQuery|&#125;&#x27;;&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;export function $TM_FILENAME_BASE() &#123;&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;  const &#123; mutateAsync, ...rest &#125; = useMutation(&#123;&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;    mutationFn: (params: $&#123;3|any|&#125;) =&gt; $2(params),&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;    onSuccess: () =&gt; &#123;&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;      const queryKeys = [$&#123;1|useXxxQuery|&#125;QueryKey];&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;      Promise.all(queryKeys.map(key =&gt; queryClient.invalidateQueries(&#123;&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;        queryKey: [key],&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;      &#125;)));&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;    &#125;,&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;  &#125;);&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;  return [&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;    mutateAsync,&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;    &#123;&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;      ...rest,&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;    &#125;,&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;  ] as const;&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;&#125;&quot;</span></span><br><span class="line">		<span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">		<span class="attr">&quot;description&quot;</span><span class="punctuation">:</span> <span class="string">&quot;tum&quot;</span></span><br><span class="line">	<span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>汇总</category>
+        <category>开发环境</category>
+      </categories>
+      <tags>
+        <tag>汇总</tag>
+        <tag>vscode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Webstorm 篇</title>
+    <url>/2024/01/28/summary/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/Webstorm%20%E7%AF%87/</url>
+    <content><![CDATA[<h1 id="Live-Templates"><a href="#Live-Templates" class="headerlink" title="Live Templates"></a>Live Templates</h1><h2 id="React"><a href="#React" class="headerlink" title="React"></a>React</h2><p>禁用 <code>con</code><br>禁用 <code>fsc</code><br>禁用 <code>fsf</code><br>禁用 <code>props</code><br>禁用 <code>rcc</code><br>禁用 <code>rccp</code><br>禁用 <code>rcfc</code><br>禁用 <code>rsc</code><br>禁用 <code>rscp</code><br>禁用 <code>rsf</code><br>禁用 <code>rsfp</code><br>禁用 <code>rsi</code><br>禁用 <code>state</code></p>
+<p>rfch - 默认导出 const 函数组件</p>
+<h2 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h2><p>arf - const 箭头函数</p>
+<p>Abbreviation: <code>edaf</code><br>Description: <code>export &#123; default as $COMPONENT_NAME$ &#125; from &quot;./$COMPONENT_NAME$.tsx&quot;;</code><br>scope: <code>JavaScript/Top level statement</code> &amp; <code>TypeScript/Top level statement</code></p>
+<figure class="highlight ts"><table><tr><td class="code"><pre><span class="line"><span class="keyword">export</span> &#123; <span class="keyword">default</span> <span class="keyword">as</span> $COMPONENT_NAME$ &#125; <span class="keyword">from</span> <span class="string">&quot;./$COMPONENT_NAME$.tsx&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Zustand"><a href="#Zustand" class="headerlink" title="Zustand"></a>Zustand</h2><p>Abbreviation: <code>zus</code><br>Description: <code>zustand useStore 模板</code><br>scope: <code>JavaScript/Top level statement</code> &amp; <code>TypeScript/Top level statement</code></p>
+<figure class="highlight ts"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; create &#125; <span class="keyword">from</span> <span class="string">&#x27;zustand&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> <span class="title class_">State</span> = &#123;</span><br><span class="line">  <span class="attr">$KEY$</span>: $KEY_TYPE$;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> <span class="title class_">Actions</span> = &#123;</span><br><span class="line">  <span class="attr">set$KEY_CASE$</span>: <span class="function">(<span class="params"><span class="attr">d</span>: $KEY_TYPE$</span>) =&gt;</span> <span class="built_in">void</span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> use$STORE_NAME$Store = create&lt;<span class="title class_">State</span> &amp; <span class="title class_">Actions</span>&gt;(<span class="function">(<span class="params">set, get</span>) =&gt;</span> (&#123;</span><br><span class="line">  <span class="attr">$KEY$</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">  <span class="attr">set$KEY_CASE$</span>: <span class="function"><span class="params">data</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">get</span>().<span class="property">$KEY$</span>)</span><br><span class="line">    <span class="title function_">set</span>(&#123; <span class="attr">$KEY$</span>: data &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;));</span><br></pre></td></tr></table></figure>
+
+<h2 id="tanstack-react-query"><a href="#tanstack-react-query" class="headerlink" title="@tanstack&#x2F;react-query"></a>@tanstack&#x2F;react-query</h2><p>Abbreviation: <code>tuq</code><br>Description: <code>useQuery 模板</code><br>scope: <code>JavaScript/Top level statement</code> &amp; <code>TypeScript/Top level statement</code></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Expression</th>
+<th>Default value</th>
+<th>Skip if defined</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>API_NAME</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>API_NAME_CASE</td>
+<td>capitalize(API_NAME)</td>
+<td></td>
+<td>x</td>
+</tr>
+</tbody></table>
+<figure class="highlight ts"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; useQuery &#125; <span class="keyword">from</span> <span class="string">&#x27;@tanstack/react-query&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; useMemo &#125; <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="keyword">type</span> &#123; $API_NAME_CASE$ApiParams &#125; <span class="keyword">from</span> <span class="string">&#x27;@/api&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; $API_NAME$Api &#125; <span class="keyword">from</span> <span class="string">&#x27;@/api&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; isSuccessApi &#125; <span class="keyword">from</span> <span class="string">&#x27;@/utils&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> use$API_NAME_CASE$QueryQueryKey = <span class="string">&#x27;use$API_NAME_CASE$Query&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">function</span> <span class="title function_">use$API_NAME_CASE$Query</span>(<span class="params"><span class="attr">options</span>?: &#123;</span></span><br><span class="line"><span class="params">  params?: $API_NAME_CASE$ApiParams;</span></span><br><span class="line"><span class="params">  options?: &#123;</span></span><br><span class="line"><span class="params">    enabled?: <span class="built_in">boolean</span>;</span></span><br><span class="line"><span class="params">  &#125;;</span></span><br><span class="line"><span class="params">&#125;</span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> &#123; <span class="attr">data</span>: response, ...rest &#125; = <span class="title function_">useQuery</span>(&#123;</span><br><span class="line">    <span class="attr">queryFn</span>: <span class="function">(<span class="params">&#123; queryKey &#125;</span>) =&gt;</span> $API_NAME$Api(queryKey[<span class="number">1</span>]),</span><br><span class="line">    <span class="attr">queryKey</span>: [use$API_NAME_CASE$QueryQueryKey, options?.<span class="property">params</span>] <span class="keyword">as</span> <span class="keyword">const</span>,</span><br><span class="line">    ...options?.<span class="property">options</span>,</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> data = <span class="title function_">useMemo</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (!<span class="title function_">isSuccessApi</span>(response)) <span class="keyword">return</span>;</span><br><span class="line">    <span class="keyword">return</span> response.<span class="property">data</span>;</span><br><span class="line">  &#125;, [response]);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    data,</span><br><span class="line">    response,</span><br><span class="line">    ...rest,</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>Abbreviation: <code>tum</code><br>Description: <code>useMutation 模板</code><br>scope: <code>JavaScript/Top level statement</code> &amp; <code>TypeScript/Top level statement</code></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Expression</th>
+<th>Default value</th>
+<th>Skip if defined</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>API_NAME</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>API_NAME_CASE</td>
+<td>capitalize(API_NAME)</td>
+<td></td>
+<td>x</td>
+</tr>
+<tr>
+<td>GET_API_NAME</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>GET_API_NAME_CASE</td>
+<td>capitalize(GET_API_NAME)</td>
+<td></td>
+<td>x</td>
+</tr>
+</tbody></table>
+<figure class="highlight ts"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; useMutation &#125; <span class="keyword">from</span> <span class="string">&#x27;@tanstack/react-query&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; $API_NAME$Api &#125; <span class="keyword">from</span> <span class="string">&#x27;@/api&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; queryClient &#125; <span class="keyword">from</span> <span class="string">&#x27;@/main&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; useGet$GET_API_NAME$QueryQueryKey &#125; <span class="keyword">from</span> <span class="string">&#x27;@/hooks/useGet$GET_API_NAME_CASE$Query&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> <span class="title function_">use$API_NAME_CASE$Mutation</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> &#123; mutateAsync, ...rest &#125; = <span class="title function_">useMutation</span>(&#123;</span><br><span class="line">    <span class="attr">mutationFn</span>: $API_NAME$Api,</span><br><span class="line">    <span class="attr">onSuccess</span>: <span class="function">() =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">void</span> queryClient.<span class="title function_">invalidateQueries</span>(&#123;</span><br><span class="line">        <span class="attr">queryKey</span>: [useGet$GET_API_NAME_CASE$QueryQueryKey],</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> [</span><br><span class="line">    mutateAsync,</span><br><span class="line">    &#123;</span><br><span class="line">      ...rest,</span><br><span class="line">    &#125;,</span><br><span class="line">  ] <span class="keyword">as</span> <span class="keyword">const</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>汇总</category>
+        <category>开发环境</category>
+      </categories>
+      <tags>
+        <tag>汇总</tag>
+        <tag>webstorm</tag>
+      </tags>
+  </entry>
 </search>

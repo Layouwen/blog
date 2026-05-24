@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="../../../../../../images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../../../../../images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../../../../../images/favicon.ico">
+  <link rel="mask-icon" href="../../../../../../images/favicon.ico" color="#222">
+
+<link rel="stylesheet" href="../../../../../../css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha256-dABdfBfUoC8vJUBOwGVdm8L9qlMWaHTIfXt+7GnZCIo=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.4van.top","root":"/","images":"../../../../../../images","scheme":"Gemini","darkmode":true,"version":"8.23.1","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"../../../../../../search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="../../../../../../js/config.js" defer></script>
+
+    <meta name="description" content="1、使用 jetbrains 快捷键需删除以下快捷键防止冲突 Debug:Start Without Debugging —— Control-D —— 弹出 Debug  2、VSCode 推荐的插件">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="VSCode 篇">
+<meta property="og:url" content="https://blog.4van.top/2024/02/12/summary/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/VSCode%20%E7%AF%87/index.html">
+<meta property="og:site_name" content="Avan&#39;s Blog">
+<meta property="og:description" content="1、使用 jetbrains 快捷键需删除以下快捷键防止冲突 Debug:Start Without Debugging —— Control-D —— 弹出 Debug  2、VSCode 推荐的插件">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2021/08/18/vyurg269BjshneE.png">
+<meta property="og:image" content="https://i.loli.net/2021/08/18/UDyI6unFreac43v.png">
+<meta property="article:published_time" content="2024-02-12T07:22:00.000Z">
+<meta property="article:modified_time" content="2026-05-24T10:46:12.710Z">
+<meta property="article:author" content="梁又文">
+<meta property="article:tag" content="汇总">
+<meta property="article:tag" content="vscode">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/08/18/vyurg269BjshneE.png">
+
+
+<link rel="canonical" href="https://blog.4van.top/2024/02/12/summary/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/VSCode%20%E7%AF%87/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://blog.4van.top/2024/02/12/summary/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/VSCode%20%E7%AF%87/","path":"2024/02/12/summary/开发环境搭建/VSCode 篇/","title":"VSCode 篇"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>VSCode 篇 | Avan's Blog</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="../../../../../../js/utils.js" defer></script><script src="../../../../../../js/motion.js" defer></script><script src="../../../../../../js/sidebar.js" defer></script><script src="../../../../../../js/next-boot.js" defer></script><script src="../../../../../../js/bookmark.js" defer></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous" defer></script>
+<script src="../../../../../../js/third-party/search/local-search.js" defer></script>
+
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":{"light":"default","dark":"dark"},"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.5.0/mermaid.min.js","integrity":"sha256-2obLuIPcceEhkE3G09G33hBdmE55ivVcZUlcKcGNHjU="}}</script>
+  <script src="../../../../../../js/third-party/tags/mermaid.js" defer></script>
+
+
+
+
+  <script src="../../../../../../js/third-party/addtoany.js" defer></script>
+
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="../../../../../../css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Avan's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Avan 的博客</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="../../../../../../index.html" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-archives"><a href="../../../../../../archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">151</span></a></li><li class="menu-item menu-item-tags"><a href="../../../../../../tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">117</span></a></li><li class="menu-item menu-item-categories"><a href="../../../../../../categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">41</span></a></li><li class="menu-item menu-item-about"><a href="../../../../../../about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-links"><a href="../../../../../../links/" rel="section"><i class="fa fa-link fa-fw"></i>links</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81%E4%BD%BF%E7%94%A8-jetbrains-%E5%BF%AB%E6%8D%B7%E9%94%AE%E9%9C%80%E5%88%A0%E9%99%A4%E4%BB%A5%E4%B8%8B%E5%BF%AB%E6%8D%B7%E9%94%AE%E9%98%B2%E6%AD%A2%E5%86%B2%E7%AA%81"><span class="nav-number">1.</span> <span class="nav-text">1、使用 jetbrains 快捷键需删除以下快捷键防止冲突</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%E3%80%81VSCode-%E6%8E%A8%E8%8D%90%E7%9A%84%E6%8F%92%E4%BB%B6"><span class="nav-number">2.</span> <span class="nav-text">2、VSCode 推荐的插件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3%E3%80%81%E5%85%B6%E4%BB%96"><span class="nav-number">3.</span> <span class="nav-text">3、其他</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-%E4%BD%BF%E7%94%A8-WSL-%E7%9A%84-Linux-%E7%BB%88%E7%AB%AF"><span class="nav-number">3.1.</span> <span class="nav-text">3.1 使用 WSL 的 Linux 终端</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-1-Windows-%E8%AE%BF%E9%97%AE-Ubuntu-%E7%9A%84%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F"><span class="nav-number">3.1.1.</span> <span class="nav-text">3.1.1 Windows 访问 Ubuntu 的文件系统</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-2-Ubuntu-%E8%AE%BF%E9%97%AE-Windows-%E7%9A%84-home-%E7%9B%AE%E5%BD%95"><span class="nav-number">3.1.2.</span> <span class="nav-text">3.1.2 Ubuntu 访问 Windows 的 home 目录</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4%E3%80%81%E6%8F%92%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7"><span class="nav-number">4.</span> <span class="nav-text">4、插件使用技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#JavaScript-standardjs-styled-snippets"><span class="nav-number">4.1.</span> <span class="nav-text">JavaScript standardjs styled snippets</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JavaScript-ES6-code-snippets"><span class="nav-number">4.2.</span> <span class="nav-text">JavaScript (ES6) code snippets</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#class"><span class="nav-number">4.2.1.</span> <span class="nav-text">class</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC"><span class="nav-number">4.2.2.</span> <span class="nav-text">基本</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#log-%E7%B1%BB"><span class="nav-number">4.2.3.</span> <span class="nav-text">log 类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AF%BC%E5%87%BA"><span class="nav-number">4.2.4.</span> <span class="nav-text">导出</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Simple-React-Snippets"><span class="nav-number">4.3.</span> <span class="nav-text">Simple React Snippets</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#keybindings"><span class="nav-number">4.4.</span> <span class="nav-text">keybindings</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5"><span class="nav-number"></span> <span class="nav-text">代码片段</span></a></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="梁又文"
+      src="../../../../../../images/logo.png">
+  <p class="site-author-name" itemprop="name">梁又文</p>
+  <div class="site-description" itemprop="description">记录自己的一些日记 & 技术文章 & 学习笔记等</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="../../../../../../archives/">
+          <span class="site-state-item-count">151</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="../../../../../../categories/">
+        <span class="site-state-item-count">41</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="../../../../../../tags/">
+        <span class="site-state-item-count">117</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/layouwen" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;layouwen" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="../../../../../../mailto:layouwen@gmail.com" title="E-Mail → mailto:layouwen@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://x.com/avancoding" title="Twitter → https:&#x2F;&#x2F;x.com&#x2F;avancoding" rel="noopener me" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://t.me/coderavan" title="Telegram → https:&#x2F;&#x2F;t.me&#x2F;coderavan" rel="noopener me" target="_blank"><i class="fab fa-telegram fa-fw"></i>Telegram</a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/big/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+          链接
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <a href="https://github.com/whale-wave" title="https:&#x2F;&#x2F;github.com&#x2F;whale-wave" rel="noopener" target="_blank">Whale Wave</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.4van.top/2024/02/12/summary/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/VSCode%20%E7%AF%87/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="../../../../../../images/logo.png">
+      <meta itemprop="name" content="梁又文">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Avan's Blog">
+      <meta itemprop="description" content="记录自己的一些日记 & 技术文章 & 学习笔记等">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="VSCode 篇 | Avan's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          VSCode 篇<a href="https://github.com/layouwen/blog/edit/master/source/_posts/summary/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/VSCode%20%E7%AF%87.md" class="post-edit-link" title="编辑" rel="noopener" target="_blank"><i class="fa fa-pen-nib"></i></a>
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-02-12 15:22:00" itemprop="dateCreated datePublished" datetime="2024-02-12T15:22:00+08:00">2024-02-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-05-24 18:46:12" itemprop="dateModified" datetime="2026-05-24T18:46:12+08:00">2026-05-24</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="../../../../../../categories/%E6%B1%87%E6%80%BB/" itemprop="url" rel="index"><span itemprop="name">汇总</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="../../../../../../categories/%E6%B1%87%E6%80%BB/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/" itemprop="url" rel="index"><span itemprop="name">开发环境</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.5k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>6 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h2 id="1、使用-jetbrains-快捷键需删除以下快捷键防止冲突"><a href="#1、使用-jetbrains-快捷键需删除以下快捷键防止冲突" class="headerlink" title="1、使用 jetbrains 快捷键需删除以下快捷键防止冲突"></a>1、使用 jetbrains 快捷键需删除以下快捷键防止冲突</h2><ul>
+<li>Debug:Start Without Debugging —— Control-D —— 弹出 Debug</li>
+</ul>
+<h2 id="2、VSCode-推荐的插件"><a href="#2、VSCode-推荐的插件" class="headerlink" title="2、VSCode 推荐的插件"></a>2、VSCode 推荐的插件</h2><table>
+<thead>
+<tr>
+<th>插件名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>.NET Install Tool</td>
+<td></td>
+</tr>
+<tr>
+<td>Amazon Q</td>
+<td>Amazon ai 代码提示生成</td>
+</tr>
+<tr>
+<td>antd Design Token</td>
+<td>antd 的 token 插件</td>
+</tr>
+<tr>
+<td>any-rule</td>
+<td>正则大全</td>
+</tr>
+<tr>
+<td>Apc Customize UI++</td>
+<td>vscode 页面定制</td>
+</tr>
+<tr>
+<td>Auto Close Tag</td>
+<td>自定闭合标签</td>
+</tr>
+<tr>
+<td>Auto Import</td>
+<td>自动导入</td>
+</tr>
+<tr>
+<td>Auto Rename Tag</td>
+<td>同步修改标签名</td>
+</tr>
+<tr>
+<td>Biome</td>
+<td>开箱即用的校验&amp;格式化&amp;排序一体插件</td>
+</tr>
+<tr>
+<td>Bito AI Code Reviews</td>
+<td></td>
+</tr>
+<tr>
+<td>Bracket Lens</td>
+<td>代码块提示</td>
+</tr>
+<tr>
+<td>C&#x2F;C++</td>
+<td></td>
+</tr>
+<tr>
+<td>c#</td>
+<td></td>
+</tr>
+<tr>
+<td>Clang-Format</td>
+<td></td>
+</tr>
+<tr>
+<td>Cline</td>
+<td>AI 编程助手</td>
+</tr>
+<tr>
+<td>code runner</td>
+<td>代码执行</td>
+</tr>
+<tr>
+<td>Code Spell Checker</td>
+<td>拼写检测</td>
+</tr>
+<tr>
+<td>CodeRabbit</td>
+<td>PR Review 工具</td>
+</tr>
+<tr>
+<td>CodeSnap</td>
+<td>代码截图</td>
+</tr>
+<tr>
+<td>Codex – OpenAI’s coding agent</td>
+<td></td>
+</tr>
+<tr>
+<td>Cody: AI Code Assistant</td>
+<td>AI 编程助手</td>
+</tr>
+<tr>
+<td>Color Highlight</td>
+<td>代码高亮</td>
+</tr>
+<tr>
+<td>Console Ninja</td>
+<td>console vscode 管理工具</td>
+</tr>
+<tr>
+<td>Container Tools</td>
+<td>微软官方的容器工具集</td>
+</tr>
+<tr>
+<td>Continue</td>
+<td>代码补全助手, 并有类似 Cursor 核心的行内编辑功能</td>
+</tr>
+<tr>
+<td>CSS Peek</td>
+<td>css 索引调整</td>
+</tr>
+<tr>
+<td>Deploy</td>
+<td>部署脚本执行</td>
+</tr>
+<tr>
+<td>Dev Containers</td>
+<td>将 docker 容器作为开发环境</td>
+</tr>
+<tr>
+<td>Docker</td>
+<td>docker 管理</td>
+</tr>
+<tr>
+<td>Docker Explorer</td>
+<td>docker 管理工具包括 Azure 容器仓库</td>
+</tr>
+<tr>
+<td>DotENV</td>
+<td>env 高亮</td>
+</tr>
+<tr>
+<td>Draw.io Integration</td>
+<td>drawio 集成</td>
+</tr>
+<tr>
+<td>EditorConfig</td>
+<td>editorconfig 配置高亮</td>
+</tr>
+<tr>
+<td>ENV</td>
+<td>ENV 格式化工具</td>
+</tr>
+<tr>
+<td>Error Lens</td>
+<td></td>
+</tr>
+<tr>
+<td>ES7+ React&#x2F;Redux&#x2F;React-Native snippets</td>
+<td>react 代码片段</td>
+</tr>
+<tr>
+<td>ESLint</td>
+<td></td>
+</tr>
+<tr>
+<td>filesize</td>
+<td></td>
+</tr>
+<tr>
+<td>Git History</td>
+<td></td>
+</tr>
+<tr>
+<td>GitHub Actions</td>
+<td></td>
+</tr>
+<tr>
+<td>GitHub Pull Requests</td>
+<td></td>
+</tr>
+<tr>
+<td>GitHub Repositories</td>
+<td>github 仓库管理</td>
+</tr>
+<tr>
+<td>GitLens - Git supercharged</td>
+<td></td>
+</tr>
+<tr>
+<td>glTF Tools</td>
+<td>gltf 模型预览插件</td>
+</tr>
+<tr>
+<td>GraphQL</td>
+<td>graphql 语法支持</td>
+</tr>
+<tr>
+<td>Graphviz (dot) language support for Visual Studio Code</td>
+<td>图可视化语法支持</td>
+</tr>
+<tr>
+<td>Graphviz Preview</td>
+<td>图可视化预览</td>
+</tr>
+<tr>
+<td>Hex Editor</td>
+<td>二进制预览</td>
+</tr>
+<tr>
+<td>Image preview</td>
+<td>图片预览</td>
+</tr>
+<tr>
+<td>Import Cost</td>
+<td>导包的大小</td>
+</tr>
+<tr>
+<td>indent-rainbow</td>
+<td>彩色缩进</td>
+</tr>
+<tr>
+<td>IntelliJ IDEA Keybindings</td>
+<td>idea 键盘映射</td>
+</tr>
+<tr>
+<td>JavaScript (ES6) code snippets</td>
+<td>es6 代码片段</td>
+</tr>
+<tr>
+<td>JavaScript standardjs styled snippets</td>
+<td>js 代码片段</td>
+</tr>
+<tr>
+<td>Jest</td>
+<td></td>
+</tr>
+<tr>
+<td>Jest Snippets</td>
+<td>jest 代码片段</td>
+</tr>
+<tr>
+<td>Jinno</td>
+<td>实时预览组件, 通过 ai 创建独立环境和填入组件参数</td>
+</tr>
+<tr>
+<td>JS CodeFormer: Javascript Refactoring &amp; Code Automation</td>
+<td>代码重构和生成</td>
+</tr>
+<tr>
+<td>JSON Crack</td>
+<td>json 层级解析预览</td>
+</tr>
+<tr>
+<td>Jump To Alias File</td>
+<td>文件别名跳转</td>
+</tr>
+<tr>
+<td>Kubernetes</td>
+<td></td>
+</tr>
+<tr>
+<td>Language Support for Java(TM) by Red Hat</td>
+<td>java 语法支持</td>
+</tr>
+<tr>
+<td>learn-markdown</td>
+<td>markdown 的工具集</td>
+</tr>
+<tr>
+<td>learn-preview</td>
+<td>markdown 预览</td>
+</tr>
+<tr>
+<td>LeetCode</td>
+<td></td>
+</tr>
+<tr>
+<td>Lingma</td>
+<td>通义 ai 代码提示生成</td>
+</tr>
+<tr>
+<td>Live Server</td>
+<td>静态服务</td>
+</tr>
+<tr>
+<td>Live Share</td>
+<td>实时分享编辑</td>
+</tr>
+<tr>
+<td>Markdown All in One</td>
+<td>markdown 语法和预览</td>
+</tr>
+<tr>
+<td>Markdown Preview Enhanced</td>
+<td>markdown 预览增强</td>
+</tr>
+<tr>
+<td>Material Icon Theme</td>
+<td>vscode 文件夹的 icon 图标</td>
+</tr>
+<tr>
+<td>MDX</td>
+<td>mdx 语法高亮</td>
+</tr>
+<tr>
+<td>Mermaid Editor</td>
+<td>流程图预览</td>
+</tr>
+<tr>
+<td>Mintlify Doc Writer for Python, JavaScript, TypeScript, C++, PHP, Java</td>
+<td>文档生成</td>
+</tr>
+<tr>
+<td>Nuxtr</td>
+<td>nuxt 插件</td>
+</tr>
+<tr>
+<td>Paste JSON as Code</td>
+<td>json 转各种类型声明</td>
+</tr>
+<tr>
+<td>Path Autocomplete</td>
+<td>路径补全</td>
+</tr>
+<tr>
+<td>Path Intellisense</td>
+<td>path 补全</td>
+</tr>
+<tr>
+<td>Peacock</td>
+<td>给不同窗口配置各自的颜色</td>
+</tr>
+<tr>
+<td>PHP Debug</td>
+<td></td>
+</tr>
+<tr>
+<td>Prettier - Code formatter</td>
+<td></td>
+</tr>
+<tr>
+<td>Prisma</td>
+<td></td>
+</tr>
+<tr>
+<td>Project Manager</td>
+<td></td>
+</tr>
+<tr>
+<td>quick open lazygit</td>
+<td>快速打开 lazygit</td>
+</tr>
+<tr>
+<td>Quokka.js</td>
+<td>在 vscode 中的显示计算结果</td>
+</tr>
+<tr>
+<td>React Style Helper</td>
+<td>react style module 补全提示</td>
+</tr>
+<tr>
+<td>react-intl-linter</td>
+<td>react i18 替换</td>
+</tr>
+<tr>
+<td>React-Native&#x2F;React&#x2F;Redux snippets for es6&#x2F;es7</td>
+<td>react 代码片段</td>
+</tr>
+<tr>
+<td>React&#x2F;Redux&#x2F;react-router Snippets</td>
+<td>react 代码片段</td>
+</tr>
+<tr>
+<td>ReactTree</td>
+<td>显示 react 的树节点</td>
+</tr>
+<tr>
+<td>Regex Previewer</td>
+<td>正则匹配测试</td>
+</tr>
+<tr>
+<td>Remote - SSH</td>
+<td>ssh 远程开发</td>
+</tr>
+<tr>
+<td>Remote - SSH: Editing Configuration Files</td>
+<td>ssh 配置文件高亮</td>
+</tr>
+<tr>
+<td>Remote Explorer</td>
+<td>ssh 远程资源管理</td>
+</tr>
+<tr>
+<td>Remote Repositories</td>
+<td>ssh 远程 git 仓库控制</td>
+</tr>
+<tr>
+<td>Rome</td>
+<td>Rome 格式化工具</td>
+</tr>
+<tr>
+<td>Roo Code</td>
+<td>AI 编程助手</td>
+</tr>
+<tr>
+<td>rust-analyzer</td>
+<td>rust 语法支持</td>
+</tr>
+<tr>
+<td>Sass (.sass only)</td>
+<td>sass 语法高亮</td>
+</tr>
+<tr>
+<td>SCSS Formatter</td>
+<td>sass 格式化工具</td>
+</tr>
+<tr>
+<td>Simple React Snippets</td>
+<td>react 代码片段</td>
+</tr>
+<tr>
+<td>SQL Formatter</td>
+<td></td>
+</tr>
+<tr>
+<td>stylus</td>
+<td>stylus 语法高亮</td>
+</tr>
+<tr>
+<td>Svg Preview</td>
+<td>预览 svg 的图案</td>
+</tr>
+<tr>
+<td>Tailwind CSS IntelliSense</td>
+<td>tailwind 高亮</td>
+</tr>
+<tr>
+<td>TODO Highlight</td>
+<td></td>
+</tr>
+<tr>
+<td>Todo Tree</td>
+<td></td>
+</tr>
+<tr>
+<td>TRAE AI: Coding Assistant</td>
+<td>自动补全工具</td>
+</tr>
+<tr>
+<td>uni-app-schemas</td>
+<td></td>
+</tr>
+<tr>
+<td>uni-app-snippets</td>
+<td></td>
+</tr>
+<tr>
+<td>uni-cloud-snippets</td>
+<td></td>
+</tr>
+<tr>
+<td>uni-create-view</td>
+<td></td>
+</tr>
+<tr>
+<td>uni-helper</td>
+<td></td>
+</tr>
+<tr>
+<td>uni-highlight</td>
+<td></td>
+</tr>
+<tr>
+<td>uni-ui-snippets</td>
+<td></td>
+</tr>
+<tr>
+<td>Version Lens</td>
+<td>package 版本显示</td>
+</tr>
+<tr>
+<td>Vim</td>
+<td></td>
+</tr>
+<tr>
+<td>Vira Theme</td>
+<td>material 的主题废弃更新版</td>
+</tr>
+<tr>
+<td>Vite</td>
+<td></td>
+</tr>
+<tr>
+<td>vscode-random</td>
+<td>随机数据生成</td>
+</tr>
+<tr>
+<td>Vue (Official)</td>
+<td></td>
+</tr>
+<tr>
+<td>Vue 3 Snippets</td>
+<td></td>
+</tr>
+<tr>
+<td>Vue 3 Support - All In One</td>
+<td></td>
+</tr>
+<tr>
+<td>Vue Extension Box</td>
+<td>vue 拓展套餐</td>
+</tr>
+<tr>
+<td>Vue Peek</td>
+<td></td>
+</tr>
+<tr>
+<td>Vue VSCode Snippets</td>
+<td></td>
+</tr>
+<tr>
+<td>vue-helper</td>
+<td>Element-Ul, Element Plus, Ant Desigin Vue 文档增强</td>
+</tr>
+<tr>
+<td>WakaTime</td>
+<td></td>
+</tr>
+<tr>
+<td>Wallaby.js</td>
+<td>实时测试结果</td>
+</tr>
+<tr>
+<td>WebGL GLSL Editor</td>
+<td></td>
+</tr>
+<tr>
+<td>WSL</td>
+<td></td>
+</tr>
+<tr>
+<td>WXML - Language Service</td>
+<td>微信 wxml 语法支持</td>
+</tr>
+<tr>
+<td>XML Formatter</td>
+<td></td>
+</tr>
+<tr>
+<td>YAML</td>
+<td></td>
+</tr>
+<tr>
+<td>GitHub Copilot</td>
+<td></td>
+</tr>
+<tr>
+<td>GitHub Copilot Chat</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="3、其他"><a href="#3、其他" class="headerlink" title="3、其他"></a>3、其他</h2><h3 id="3-1-使用-WSL-的-Linux-终端"><a href="#3-1-使用-WSL-的-Linux-终端" class="headerlink" title="3.1 使用 WSL 的 Linux 终端"></a>3.1 使用 WSL 的 Linux 终端</h3><ol>
+<li>安装 Remote - WSL 插件</li>
+<li>打开终端，选择 WSL Bash</li>
+</ol>
+<p><img src="https://i.loli.net/2021/08/18/vyurg269BjshneE.png" alt="1.png"></p>
+<p><img src="https://i.loli.net/2021/08/18/UDyI6unFreac43v.png" alt="2.png"></p>
+<h4 id="3-1-1-Windows-访问-Ubuntu-的文件系统"><a href="#3-1-1-Windows-访问-Ubuntu-的文件系统" class="headerlink" title="3.1.1 Windows 访问 Ubuntu 的文件系统"></a>3.1.1 Windows 访问 Ubuntu 的文件系统</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\xxx\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState\rootfs\home\xxx</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-1-2-Ubuntu-访问-Windows-的-home-目录"><a href="#3-1-2-Ubuntu-访问-Windows-的-home-目录" class="headerlink" title="3.1.2 Ubuntu 访问 Windows 的 home 目录"></a>3.1.2 Ubuntu 访问 Windows 的 home 目录</h4><p>创建链接</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ln</span> -s /mnt/c/User/用户名 ~/win10</span><br></pre></td></tr></table></figure>
+
+<p>使用链接 cd 进入 home 目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/win10</span><br></pre></td></tr></table></figure>
+
+<h2 id="4、插件使用技巧"><a href="#4、插件使用技巧" class="headerlink" title="4、插件使用技巧"></a>4、插件使用技巧</h2><h3 id="JavaScript-standardjs-styled-snippets"><a href="#JavaScript-standardjs-styled-snippets" class="headerlink" title="JavaScript standardjs styled snippets"></a>JavaScript standardjs styled snippets</h3><p>cd - const x &#x3D; await x<br>cf - const 箭头函数<br>te - 三元表达式<br>i - if 语句<br>ife - if else 语句<br>tc - try catch<br>tcf - try catch finally<br>fn - function 函数<br>asf - async function 函数<br>aiife - async 立即执行函数</p>
+<h3 id="JavaScript-ES6-code-snippets"><a href="#JavaScript-ES6-code-snippets" class="headerlink" title="JavaScript (ES6) code snippets"></a>JavaScript (ES6) code snippets</h3><h4 id="class"><a href="#class" class="headerlink" title="class"></a>class</h4><p>con - 生成构造函数<br>met - 类中生成方法<br>pge - get 函数<br>pse - set 函数</p>
+<h4 id="基本"><a href="#基本" class="headerlink" title="基本"></a>基本</h4><p>fof - for…of 方法<br>fin - for…in 方法<br>nfn - const 箭头函数<br>sti - setInterval 定时器<br>sto - setTimeout 定时器<br>prom - return new Promise<br>ec —— 导出 const 变量<br>ef —— 导出函数</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">function</span> <span class="title function_">name</span> (<span class="params"><span class="variable language_">arguments</span></span>) &#123;&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="log-类"><a href="#log-类" class="headerlink" title="log 类"></a>log 类</h4><p>cer - console.error<br>clg - console.log</p>
+<h4 id="导出"><a href="#导出" class="headerlink" title="导出"></a>导出</h4><p>ecl —— 默认导出类</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">class</span> <span class="title class_">ClassName</span> &#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Simple-React-Snippets"><a href="#Simple-React-Snippets" class="headerlink" title="Simple React Snippets"></a>Simple React Snippets</h3><p>uef</p>
+<figure class="highlight tsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">useEffect</span>(<span class="function">()=&gt;</span>&#123;&#125;,[])</span><br></pre></td></tr></table></figure>
+
+<p>ucb</p>
+<figure class="highlight tsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">useCallback</span>(<span class="function">(<span class="params">val</span>)=&gt;</span>&#123;&#125;,[])</span><br></pre></td></tr></table></figure>
+
+<p>usf</p>
+<figure class="highlight tsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> [,set] = <span class="title function_">useState</span>()</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="keybindings"><a href="#keybindings" class="headerlink" title="keybindings"></a>keybindings</h3><ul>
+<li>上移窗口</li>
+<li>下移窗口</li>
+<li>左移窗口</li>
+<li>右移窗口</li>
+<li>上下分割窗口</li>
+<li>左右分割窗口</li>
+<li>创建文件</li>
+<li>关闭编辑区</li>
+<li>取消高亮</li>
+<li>重命名</li>
+<li>格式化</li>
+<li>折叠代码</li>
+<li>回到开头</li>
+<li>回到结尾</li>
+<li>合并下一行</li>
+<li>向下5行</li>
+<li>向上5行</li>
+</ul>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* mac start */</span></span><br><span class="line"><span class="comment">// 向上移动窗口</span></span><br><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;key&quot;</span><span class="punctuation">:</span> <span class="string">&quot;shift+up&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;command&quot;</span><span class="punctuation">:</span> <span class="string">&quot;vim.remap&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;when&quot;</span><span class="punctuation">:</span> <span class="string">&quot;vim.mode == &#x27;Normal&#x27;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;args&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;after&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">      <span class="string">&quot;&lt;c-w&gt;&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;k&quot;</span></span><br><span class="line">    <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line"><span class="comment">// 向下移动窗口</span></span><br><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;key&quot;</span><span class="punctuation">:</span> <span class="string">&quot;shift+down&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;command&quot;</span><span class="punctuation">:</span> <span class="string">&quot;vim.remap&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;when&quot;</span><span class="punctuation">:</span> <span class="string">&quot;vim.mode == &#x27;Normal&#x27;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;args&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;after&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">      <span class="string">&quot;&lt;c-w&gt;&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;j&quot;</span></span><br><span class="line">    <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line"><span class="comment">// 向左移动窗口</span></span><br><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;key&quot;</span><span class="punctuation">:</span> <span class="string">&quot;shift+left&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;command&quot;</span><span class="punctuation">:</span> <span class="string">&quot;vim.remap&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;when&quot;</span><span class="punctuation">:</span> <span class="string">&quot;vim.mode == &#x27;Normal&#x27;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;args&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;after&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">      <span class="string">&quot;&lt;c-w&gt;&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;h&quot;</span></span><br><span class="line">    <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line"><span class="comment">// 向右移动窗口</span></span><br><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;key&quot;</span><span class="punctuation">:</span> <span class="string">&quot;shift+right&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;command&quot;</span><span class="punctuation">:</span> <span class="string">&quot;vim.remap&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;when&quot;</span><span class="punctuation">:</span> <span class="string">&quot;vim.mode == &#x27;Normal&#x27;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;args&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;after&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">      <span class="string">&quot;&lt;c-w&gt;&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;l&quot;</span></span><br><span class="line">    <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line"><span class="comment">// 上下切分窗口</span></span><br><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;key&quot;</span><span class="punctuation">:</span> <span class="string">&quot;ctrl+cmd+\\&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;command&quot;</span><span class="punctuation">:</span> <span class="string">&quot;workbench.action.splitEditorUp&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line"><span class="comment">/* mac end */</span></span><br></pre></td></tr></table></figure>
+
+<p>通过 vim 快速删除 import 中的其中一个模块</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">&quot;vim.argumentObjectOpeningDelimiters&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">  <span class="string">&quot;(&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="string">&quot;[&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="string">&quot;&#123;&quot;</span><span class="punctuation">,</span></span><br><span class="line"><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line"><span class="attr">&quot;vim.argumentObjectClosingDelimiters&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">  <span class="string">&quot;)&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="string">&quot;]&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="string">&quot;&#125;&quot;</span></span><br><span class="line"><span class="punctuation">]</span><span class="punctuation">,</span></span><br></pre></td></tr></table></figure>
+
+<p>快捷键 <code>daa</code> 删除, 可以应用在数组, 对象, 函数参数中</p>
+<h1 id="代码片段"><a href="#代码片段" class="headerlink" title="代码片段"></a>代码片段</h1><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;Print to console&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;scope&quot;</span><span class="punctuation">:</span> <span class="string">&quot;javascript,typescript&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;prefix&quot;</span><span class="punctuation">:</span> <span class="string">&quot;tuq&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;body&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">      <span class="string">&quot;import &#123; useQuery &#125; from &#x27;@tanstack/react-query&#x27;;&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;import &#123; useMemo &#125; from &#x27;react&#x27;;&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;import &#123; $2 &#125; from &#x27;@/api&#x27;;&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;import &#123; isSuccessApi &#125; from &#x27;@/utils&#x27;;&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;export const $&#123;TM_FILENAME_BASE&#125;QueryKey = &#x27;$TM_FILENAME_BASE&#x27;;&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;export function $&#123;TM_FILENAME_BASE&#125;(options$&#123;3|?|&#125;: &#123;&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;  params$&#123;3|?|&#125;: $&#123;4|any;|&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;  options?: &#123;&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;    enabled?: boolean;&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;  &#125;;&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;&#125;) &#123;&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;  const &#123; data: response, ...rest &#125; = useQuery(&#123;&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;    queryFn: () =&gt; $2($&#123;6&#125;),&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;    queryKey: [$&#123;TM_FILENAME_BASE&#125;QueryKey$&#123;5&#125;] as const,&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;    ...options$&#123;3|?|&#125;.options,&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;  &#125;);&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;  const data = useMemo(() =&gt; &#123;&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;    if (!isSuccessApi(response))&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;      return;&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;    return response.data;&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;  &#125;, [response]);&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;  return &#123;&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;    data,&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;    response,&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;    ...rest,&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;  &#125;;&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;&#125;&quot;</span></span><br><span class="line">    <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;description&quot;</span><span class="punctuation">:</span> <span class="string">&quot;创建 tanstack query hook&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">	<span class="attr">&quot;tum&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">		<span class="attr">&quot;scope&quot;</span><span class="punctuation">:</span> <span class="string">&quot;javascript,typescript&quot;</span><span class="punctuation">,</span> </span><br><span class="line">		<span class="attr">&quot;prefix&quot;</span><span class="punctuation">:</span> <span class="string">&quot;tum&quot;</span><span class="punctuation">,</span></span><br><span class="line">		<span class="attr">&quot;body&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">			<span class="string">&quot;import &#123; useMutation &#125; from &#x27;@tanstack/react-query&#x27;;&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;import &#123; $2 &#125; from &#x27;@/api&#x27;;&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;import &#123; queryClient &#125; from &#x27;@/main&#x27;;&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;import &#123; $&#123;1|useXxxQuery|&#125;QueryKey &#125; from &#x27;@/hooks/query/$&#123;1|useXxxQuery|&#125;&#x27;;&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;export function $TM_FILENAME_BASE() &#123;&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;  const &#123; mutateAsync, ...rest &#125; = useMutation(&#123;&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;    mutationFn: (params: $&#123;3|any|&#125;) =&gt; $2(params),&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;    onSuccess: () =&gt; &#123;&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;      const queryKeys = [$&#123;1|useXxxQuery|&#125;QueryKey];&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;      Promise.all(queryKeys.map(key =&gt; queryClient.invalidateQueries(&#123;&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;        queryKey: [key],&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;      &#125;)));&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;    &#125;,&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;  &#125;);&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;  return [&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;    mutateAsync,&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;    &#123;&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;      ...rest,&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;    &#125;,&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;  ] as const;&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;&#125;&quot;</span></span><br><span class="line">		<span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">		<span class="attr">&quot;description&quot;</span><span class="punctuation">:</span> <span class="string">&quot;tum&quot;</span></span><br><span class="line">	<span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="../../../../../../images/wechatpay.png" alt="梁又文 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="../../../../../../images/alipay.png" alt="梁又文 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>梁又文
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://blog.4van.top/2024/02/12/summary/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/VSCode%20%E7%AF%87/" title="VSCode 篇">https://blog.4van.top/2024/02/12/summary/开发环境搭建/VSCode 篇/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://twitter.com/avancoding">
+            <span class="icon">
+              <i class="fab fa-twitter"></i>
+            </span>
+
+            <span class="label">Twitter</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://t.me/coderavan">
+            <span class="icon">
+              <i class="fab fa-telegram"></i>
+            </span>
+
+            <span class="label">Telegram</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <span class="social-link">
+            <span class="icon">
+              <i class="fab fa-weixin"></i>
+            </span>
+
+            <span class="label">WeChat</span>
+          </span>
+
+          <img class="social-item-img" src="../../../../../../images/wechat.png">
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://github.com/layouwen">
+            <span class="icon">
+              <i class="fab fa-github"></i>
+            </span>
+
+            <span class="label">GitHub</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="../../../../../../tags/%E6%B1%87%E6%80%BB/" rel="tag"><i class="fa fa-tag"></i> 汇总</a>
+              <a href="../../../../../../tags/vscode/" rel="tag"><i class="fa fa-tag"></i> vscode</a>
+          </div>
+
+        
+  <div class="social-like a2a_kit a2a_kit_size_32 a2a_default_style">
+    <a class="a2a_dd" target="_blank" rel="noopener" href="https://www.addtoany.com/share"></a>
+      <a class="a2a_button_facebook"></a>
+      <a class="a2a_button_twitter"></a>
+      <a class="a2a_button_wechat"></a>
+      <a class="a2a_button_x"></a>
+      <a class="a2a_button_email"></a>
+      <a class="a2a_button_linkedin"></a>
+  </div>
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="../../../../08/summary/%E6%9C%8D%E5%8A%A1%E6%89%98%E7%AE%A1%E5%B9%B3%E5%8F%B0%E6%8E%A8%E8%8D%90/" rel="prev" title="服务托管平台推荐">
+                  <i class="fa fa-angle-left"></i> 服务托管平台推荐
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="../../../../../03/22/summary/npm%20%E5%8C%85%E6%8E%A8%E8%8D%90/" rel="next" title="npm 包推荐">
+                  npm 包推荐 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2020 – 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">梁又文</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">70k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">4:14</span>
+  </span>
+</div><div style="display: flex; justify-content: center;">
+    <a style="display: inline-flex; align-items: center;" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank"><span>本站由</span> <img style="height: 30px; margin: 0 10px 0;" src="/images/upyun-logo.png"/> <span>提供CDN加速/云存储服务</span></a>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+  <a href="https://github.com/layouwen" class="github-corner" title="在 GitHub 上关注我" aria-label="在 GitHub 上关注我" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>
