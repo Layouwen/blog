@@ -1,6 +1,6 @@
 ---
 title: hoc实现表单组件的设计思路
-date: 2021-08-20 10:03
+date: '2021-08-20 10:03'
 tags:
   - 博客
   - 前端
@@ -8,6 +8,7 @@ tags:
 categories:
   - 博客
   - 前端
+uuid: ea42160b-e4db-436b-9c6f-52cffa7be8db
 ---
 
 ## 前言

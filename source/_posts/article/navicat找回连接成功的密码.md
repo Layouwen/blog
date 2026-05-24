@@ -1,6 +1,6 @@
 ---
 title: navicat找回连接成功的密码
-date: 2021-06-15 16:26
+date: '2021-06-15 16:26'
 tags:
   - 博客
   - 工具
@@ -8,6 +8,7 @@ tags:
 categories:
   - 博客
   - 工具
+uuid: 6a0f6640-f809-447a-9cc5-24c87701c9f3
 ---
 
 ## Setp 1 导出connections

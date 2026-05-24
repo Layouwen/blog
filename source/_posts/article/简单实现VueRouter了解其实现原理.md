@@ -1,6 +1,6 @@
 ---
 title: 简单实现VueRouter了解其实现原理
-date: 2021-07-12 11:58
+date: '2021-07-12 11:58'
 tags:
   - 博客
   - 前端
@@ -9,6 +9,7 @@ tags:
 categories:
   - 博客
   - 前端
+uuid: 510ca73b-b53d-4867-8037-26ded92cefe4
 ---
 
 ## 1、前言

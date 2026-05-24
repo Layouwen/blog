@@ -1,12 +1,13 @@
 ---
 title: npm 配置
-date: 2023-01-23 15:22:00
+date: 2023-01-23T15:22:00.000Z
 tags:
   - 汇总
   - npm
 categories:
   - 汇总
   - npm
+uuid: ae22e575-d217-4f78-8de9-d690515dda3b
 ---
 
 # 取消动态版本号

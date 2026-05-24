@@ -1,12 +1,13 @@
 ---
 title: docker-compose yml 样板
-date: 2022-01-23 15:22:00
+date: 2022-01-23T15:22:00.000Z
 tags:
   - 汇总
   - docker-compose
 categories:
   - 汇总
   - docker
+uuid: 26f9f180-5cc3-4397-b0b6-311b559894aa
 ---
 
 # 启动 mongo

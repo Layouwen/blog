@@ -1,6 +1,6 @@
 ---
 title: Vue简化版真实DOM转虚拟DOM
-date: 2021-03-18 11:15
+date: '2021-03-18 11:15'
 tags:
   - 博客
   - 前端
@@ -9,6 +9,7 @@ tags:
 categories:
   - 博客
   - 前端
+uuid: da309897-bde1-44c0-8907-ac98d093adc3
 ---
 
 ## 1、大致思路

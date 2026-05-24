@@ -1,12 +1,13 @@
 ---
 title: Linux 命令行快捷键
-date: 2023-01-23 15:22:00
+date: 2023-01-23T15:22:00.000Z
 tags:
   - 汇总
   - linux
 categories:
   - 汇总
   - Linux系统
+uuid: 12ce66c7-67dd-4d81-a1a8-b64ce760398b
 ---
 
 Ctrl L —— 清屏  

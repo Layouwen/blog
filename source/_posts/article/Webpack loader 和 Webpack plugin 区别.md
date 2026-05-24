@@ -1,6 +1,6 @@
 ---
 title: Webpack loader 和 Webpack plugin 区别
-date: 2020-03-17 23:08
+date: '2020-03-17 23:08'
 tags:
   - 博客
   - 前端
@@ -8,6 +8,7 @@ tags:
 categories:
   - 博客
   - 前端
+uuid: 0268960e-7be5-4d63-a3c0-84c29612ec17
 ---
 
 + 思路

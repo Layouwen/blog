@@ -1,6 +1,6 @@
 ---
 title: Windows 下安装Node.js和yarn
-date: 2020-02-12 16:55
+date: '2020-02-12 16:55'
 tags:
   - 博客
   - node
@@ -8,6 +8,7 @@ tags:
 categories:
   - 博客
   - windows
+uuid: 54193d75-f72f-48cd-b9e0-bb3f979bb2a6
 ---
 
 # 一、Node.js部分

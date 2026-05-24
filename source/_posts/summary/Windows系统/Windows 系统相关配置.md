@@ -1,12 +1,13 @@
 ---
 title: Windows 系统相关配置
-date: 2022-01-23 15:22:00
+date: 2022-01-23T15:22:00.000Z
 tags:
   - 汇总
   - windows
 categories:
   - 汇总
   - Windows系统
+uuid: ccdc7aef-0074-442e-bff5-d675b894a540
 ---
 
 # powershell 7

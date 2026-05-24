@@ -1,12 +1,13 @@
 ---
 title: npm 知识点
-date: 2023-01-23 15:22:00
+date: 2023-01-23T15:22:00.000Z
 tags:
   - 汇总
   - npm
 categories:
   - 汇总
   - npm
+uuid: bd5b1c80-d17c-4eb2-b45c-5d625385b3f1
 ---
 
 # 防止意外发布代码

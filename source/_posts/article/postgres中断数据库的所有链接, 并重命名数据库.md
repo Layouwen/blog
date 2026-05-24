@@ -1,6 +1,6 @@
 ---
-title: postgres 中断数据库的所有链接, 并重命名数据库
-date: 2023-05-16 17:18:54
+title: 'postgres 中断数据库的所有链接, 并重命名数据库'
+date: 2023-05-16T17:18:54.000Z
 tags:
   - 博客
   - postgres
@@ -8,6 +8,7 @@ tags:
 categories:
   - 博客
   - 后端
+uuid: 3e7997bf-a90a-4081-a3ab-a6ed5b22582e
 ---
 
 ```bash

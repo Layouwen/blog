@@ -1,6 +1,6 @@
 ---
 title: 跨域CORS、JSONP、服务器中转
-date: 2020-06-11 18:14
+date: '2020-06-11 18:14'
 tags:
   - 博客
   - 后端
@@ -8,6 +8,7 @@ tags:
 categories:
   - 博客
   - 后端
+uuid: 131fec93-f4ba-40fd-8323-b204a6ead417
 ---
 
 ## 1、同源策略

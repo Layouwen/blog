@@ -1,6 +1,6 @@
 ---
 title: React的mobx使用方式
-date: 2020-09-03 17:22
+date: '2020-09-03 17:22'
 tags:
   - 博客
   - react
@@ -9,6 +9,7 @@ tags:
 categories:
   - 博客
   - 前端
+uuid: 011146f7-c461-49ee-a1f0-6df65e115d18
 ---
 
 ## 一、创建文件

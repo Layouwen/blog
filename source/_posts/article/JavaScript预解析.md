@@ -1,6 +1,6 @@
 ---
 title: JavaScript预解析
-date: 2020-05-15 11:14
+date: '2020-05-15 11:14'
 tags:
   - 博客
   - 前端
@@ -8,6 +8,7 @@ tags:
 categories:
   - 博客
   - 前端
+uuid: bbce3f43-c314-4621-a3f6-21f2d64c210d
 ---
 
 ## 预解析

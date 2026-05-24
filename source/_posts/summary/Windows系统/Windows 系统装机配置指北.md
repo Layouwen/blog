@@ -1,12 +1,13 @@
 ---
 title: Windows 系统装机配置指北
-date: 2023-01-23 15:22:00
+date: 2023-01-23T15:22:00.000Z
 tags:
   - 汇总
   - windows
 categories:
   - 汇总
   - Windows系统
+uuid: 5715d0c5-fded-4c69-8d2e-faa3bf36e81a
 ---
 
 # Scoop
@@ -116,7 +117,7 @@ curl -fsSL https://fnm.vercel.app/install | zsh
 
 # 配置 vim
 
-[[Vim配置文件]]
+[[Vim 配置文件]]
 
 # npm global package
 

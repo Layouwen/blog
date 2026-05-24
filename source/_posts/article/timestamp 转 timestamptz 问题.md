@@ -1,12 +1,13 @@
 ---
 title: timestamp 转 timestamptz 问题
-date: 2024-09-12 21:13:54
+date: 2024-09-12T21:13:54.000Z
 tags:
   - 后端
   - postgres
 categories:
   - 博客
   - 后端
+uuid: 21850d10-0740-4c70-a4a1-91b041254d77
 ---
 
 

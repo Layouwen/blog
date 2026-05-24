@@ -1,12 +1,13 @@
 ---
 title: docker 基础知识
-date: 2022-01-23 15:22:00
+date: 2022-01-23T15:22:00.000Z
 tags:
   - 汇总
   - docker
 categories:
   - 汇总
   - docker
+uuid: 3c1eb364-069d-4376-9e40-d95734e1b175
 ---
 
 ## CMD

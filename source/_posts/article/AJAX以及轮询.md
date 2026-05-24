@@ -1,6 +1,6 @@
 ---
 title: AJAX以及轮询
-date: 2021-01-30 17:02
+date: '2021-01-30 17:02'
 tags:
   - 博客
   - 前端
@@ -9,6 +9,7 @@ tags:
 categories:
   - 博客
   - 前端
+uuid: a59ee70f-a985-4c52-8bab-232413f132ba
 ---
 
 ## 1. 传统表单提交与AJAX比较

@@ -1,6 +1,6 @@
 ---
 title: IDEA的ideaVim插件配置
-date: 2020-08-30 15:35
+date: '2020-08-30 15:35'
 tags:
   - 博客
   - idea
@@ -8,6 +8,7 @@ tags:
 categories:
   - 博客
   - 前端
+uuid: a8902a0b-8fd2-4ac4-b617-31a76c748eee
 ---
 
 ## 进入/创建ideaVim的配置文件

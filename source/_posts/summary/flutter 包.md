@@ -1,11 +1,12 @@
 ---
 title: flutter 包
-date: 2025-01-03 23:11:34
+date: 2025-01-03T23:11:34.000Z
 tags:
   - 汇总
   - flutter
 categories:
   - 汇总
+uuid: 5d179a1c-de98-488c-8548-3bc795dfcd6f
 ---
 
 | 包名                            | 描述                   |

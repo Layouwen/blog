@@ -1,6 +1,6 @@
 ---
 title: VSCode的Beautify插件格式化ES6语法出现换行
-date: 2020-08-17 11:08
+date: '2020-08-17 11:08'
 tags:
   - 博客
   - vscode
@@ -8,6 +8,7 @@ tags:
 categories:
   - 博客
   - 前端
+uuid: 8838ec23-c0dc-483c-97f3-b4849e617da6
 ---
 
 在settings(JSON)中添加此配置即刻，之前换行的需要手动删除回车

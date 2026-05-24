@@ -1,11 +1,12 @@
 ---
 title: 播放 rtsp 视频
-date: 2024-05-12 17:18:54
+date: 2024-05-12T17:18:54.000Z
 tags:
   - 汇总
   - rtsp
 categories:
   - 汇总
+uuid: 20260dca-7ec6-4db3-9be5-b90681aa82b7
 ---
 
 # 1. 处理/创建 rtsp 流

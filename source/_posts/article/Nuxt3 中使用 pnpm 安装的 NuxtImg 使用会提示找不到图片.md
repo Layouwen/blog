@@ -1,6 +1,6 @@
 ---
 title: Nuxt3 中使用 pnpm 安装的 NuxtImg 使用会提示找不到图片
-date: 2025-06-11 17:18:54
+date: 2025-06-11T17:18:54.000Z
 tags:
   - 博客
   - nuxt
@@ -9,6 +9,7 @@ categories:
   - 博客
   - 前端
   - nuxt
+uuid: 4a7dbf27-2500-4f32-b62b-9ce337f86214
 ---
 
 ![image.png](http://obsidian.easyhappy.top/avan/202506111712538.png)

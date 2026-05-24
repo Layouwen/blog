@@ -1,6 +1,6 @@
 ---
 title: JS函数setTimeout的小细节
-date: 2020-03-19 22:32
+date: '2020-03-19 22:32'
 tags:
   - 博客
   - 前端
@@ -8,6 +8,7 @@ tags:
 categories:
   - 博客
   - 前端
+uuid: 569b22c6-9d44-472d-b22f-387928fa6fb8
 ---
 
 首先看一个代码

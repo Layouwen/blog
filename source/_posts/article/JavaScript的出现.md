@@ -1,6 +1,6 @@
 ---
 title: JavaScript的出现
-date: 2020-05-12 22:52
+date: '2020-05-12 22:52'
 tags:
   - 博客
   - 前端
@@ -8,6 +8,7 @@ tags:
 categories:
   - 博客
   - 前端
+uuid: 52693e6a-0cea-42aa-ab86-42d37f4a1c1e
 ---
 
 ## 一、JavaScript的简述

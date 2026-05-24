@@ -1,6 +1,6 @@
 ---
 title: 如何连接GitHub远程仓库
-date: 2020-02-12 16:57
+date: '2020-02-12 16:57'
 tags:
   - 博客
   - github
@@ -9,6 +9,7 @@ tags:
 categories:
   - 博客
   - ssh
+uuid: 62ea8cf8-4ac1-477d-a592-0ffc526a4f87
 ---
 
 

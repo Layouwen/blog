@@ -1,6 +1,6 @@
 ---
 title: Vue3初体验（1）
-date: 2020-10-05 22:13
+date: '2020-10-05 22:13'
 tags:
   - 博客
   - vue
@@ -8,6 +8,7 @@ tags:
 categories:
   - 博客
   - 前端
+uuid: e252a1f3-af42-4314-8a58-dda72a6e9eb2
 ---
 
 ## 1、Vite简单操作

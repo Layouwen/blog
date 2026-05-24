@@ -1,6 +1,6 @@
 ---
 title: 了解defineProperty，实现一个简单的vue数据响应式
-date: 2021-04-21 23:34
+date: '2021-04-21 23:34'
 tags:
   - 博客
   - 前端
@@ -9,6 +9,7 @@ tags:
 categories:
   - 博客
   - 前端
+uuid: 29008e28-4ee7-4a67-9588-6cd180b99dde
 ---
 
 ## 1、前言

@@ -1,12 +1,13 @@
 ---
 title: Utools 配置
-date: 2022-01-23 15:22:00
+date: 2022-01-23T15:22:00.000Z
 tags:
   - 汇总
   - utools
 categories:
   - 汇总
   - Windows系统
+uuid: a2d29cfb-bb64-4ca2-9401-84e5ca70eeab
 ---
 
 # 插件

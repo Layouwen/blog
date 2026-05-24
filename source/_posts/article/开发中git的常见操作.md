@@ -1,6 +1,6 @@
 ---
 title: 开发中git的常见操作
-date: 2020-08-04 10:28
+date: '2020-08-04 10:28'
 tags:
   - 博客
   - git
@@ -8,6 +8,7 @@ tags:
 categories:
   - 博客
   - 前端
+uuid: 0d4d9abc-da62-4afb-9ef6-4528cb6c37e7
 ---
 
 ## 设置了HTTPS需要切换为SSH

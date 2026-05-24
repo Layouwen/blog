@@ -1,6 +1,6 @@
 ---
 title: 简单了解 URL
-date: 2020-05-11 11:27
+date: '2020-05-11 11:27'
 tags:
   - 博客
   - 前端
@@ -8,6 +8,7 @@ tags:
 categories:
   - 博客
   - 前端
+uuid: 3b373a9e-e83d-4dc0-b0ee-7b563fea7328
 ---
 
 ## 一、URL

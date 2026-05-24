@@ -1,6 +1,6 @@
 ---
 title: VScode的Git本地仓库的配置
-date: 2020-02-12 16:56
+date: '2020-02-12 16:56'
 tags:
   - 博客
   - vscode
@@ -8,6 +8,7 @@ tags:
 categories:
   - 博客
   - vscode
+uuid: 0503e3eb-7a88-41bc-a85d-68969cf261c1
 ---
 
 + 前置条件

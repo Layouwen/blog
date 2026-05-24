@@ -1,6 +1,6 @@
 ---
 title: Windows 下安装Cmder及配置&设置系统右键菜单
-date: 2020-02-12 16:40
+date: '2020-02-12 16:40'
 tags:
   - 博客
   - windows
@@ -8,6 +8,7 @@ tags:
 categories:
   - 博客
   - windows
+uuid: 4875fd3b-6dab-4366-b1c2-002592532618
 ---
 
 # 下载Cmder

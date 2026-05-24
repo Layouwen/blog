@@ -1,6 +1,6 @@
 ---
 title: 你不知道的WebComponent
-date: 2021-04-02 02:39
+date: '2021-04-02 02:39'
 tags:
   - 博客
   - 前端
@@ -8,6 +8,7 @@ tags:
 categories:
   - 博客
   - 前端
+uuid: 69216b34-4eea-4ba3-b6e3-0cadfd0bbeba
 ---
 
 ## 1、原生也有组件？

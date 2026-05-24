@@ -1,12 +1,13 @@
 ---
 title: 简单配置VScode及常用快捷键
-date: 2020-02-12 16:34
+date: '2020-02-12 16:34'
 tags:
   - 博客
   - vscode
 categories:
   - 博客
   - vscode
+uuid: 166be54a-0a20-4d90-ac4c-7efe1470317d
 ---
 
 # 下载VScode

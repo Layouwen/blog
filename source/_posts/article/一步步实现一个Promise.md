@@ -1,6 +1,6 @@
 ---
 title: 一步步实现一个Promise
-date: 2021-04-19 03:35
+date: '2021-04-19 03:35'
 tags:
   - 博客
   - 前端
@@ -9,6 +9,7 @@ tags:
 categories:
   - 博客
   - 前端
+uuid: 56b6bacc-fb02-4e95-bc42-dd9bcde175c6
 ---
 
 ## 1、前言

@@ -1,6 +1,6 @@
 ---
 title: 使用Node.js和JSON搭建简单的动态服务器
-date: 2020-06-14 10:30
+date: '2020-06-14 10:30'
 tags:
   - 博客
   - 后端
@@ -8,6 +8,7 @@ tags:
 categories:
   - 博客
   - 后端
+uuid: 5730f90c-3005-4f9a-81fb-7c3ac286c85a
 ---
 
 ## 一、创建html页面

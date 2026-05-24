@@ -1,12 +1,13 @@
 ---
 title: Web安全常见基本知识
-date: 2022-03-08 22:18
+date: '2022-03-08 22:18'
 tags:
   - 博客
   - web安全
 categories:
   - 博客
   - web安全
+uuid: 16afe0b4-9692-4e3b-a6bc-ed4865d5c475
 ---
 
 ## 1、XSS

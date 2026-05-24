@@ -1,6 +1,6 @@
 ---
 title: React使用context进行组件通信
-date: 2021-07-07 10:51
+date: '2021-07-07 10:51'
 tags:
   - 博客
   - 前端
@@ -8,6 +8,7 @@ tags:
 categories:
   - 博客
   - 前端
+uuid: cf95d929-9506-4de7-b76f-e81616b15717
 ---
 
 ## 1、介绍

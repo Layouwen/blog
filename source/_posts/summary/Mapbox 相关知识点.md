@@ -1,11 +1,12 @@
 ---
 title: Mapbox 相关知识点
-date: 2023-03-22 23:11:34
+date: 2023-03-22T23:11:34.000Z
 tags:
   - 汇总
   - mapbox
 categories:
   - 汇总
+uuid: b27a89a6-e014-456b-8846-888b618fb351
 ---
 
 # 1. 表达式设置属性默认值

@@ -1,6 +1,6 @@
 ---
 title: Mac安装微信小助手实现多开及反撤回
-date: 2020-07-11 14:39
+date: '2020-07-11 14:39'
 tags:
   - 博客
   - macos
@@ -8,6 +8,7 @@ tags:
 categories:
   - 博客
   - macos
+uuid: bef61c8e-bc2f-4f57-b73a-cd2799ede323
 ---
 
 使用终端输入

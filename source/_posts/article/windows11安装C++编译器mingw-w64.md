@@ -1,6 +1,6 @@
 ---
 title: windows11安装C++编译器mingw-w64
-date: 2021-07-07 09:38
+date: '2021-07-07 09:38'
 tags:
   - 博客
   - c++
@@ -8,6 +8,7 @@ tags:
 categories:
   - 博客
   - c++
+uuid: f86d38ce-15bb-4a35-938a-794ebdf17a6d
 ---
 
 ## 1、下载压缩包

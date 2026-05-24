@@ -1,12 +1,13 @@
 ---
 title: 快速学会Mackdown语法
-date: 2020-12-25 17:49
+date: '2020-12-25 17:49'
 tags:
   - 博客
   - markdown
 categories:
   - 博客
   - markdown
+uuid: 4b1a592e-3ddf-47e9-9e92-bcd69181a89e
 ---
 
 ## 1、命令

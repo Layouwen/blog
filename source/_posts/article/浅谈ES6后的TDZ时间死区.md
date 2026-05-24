@@ -1,6 +1,6 @@
 ---
 title: 浅谈ES6后的TDZ时间死区
-date: 2021-01-27 09:45
+date: '2021-01-27 09:45'
 tags:
   - 博客
   - 前端
@@ -9,6 +9,7 @@ tags:
 categories:
   - 博客
   - 前端
+uuid: f6a4900f-81b1-40e7-bcdf-043eeba39346
 ---
 
 ## 1、const、let和var
