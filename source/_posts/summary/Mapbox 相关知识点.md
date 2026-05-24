@@ -6,7 +6,7 @@ tags:
   - mapbox
 categories:
   - 汇总
-uuid: b27a89a6-e014-456b-8846-888b618fb351
+uuid: 24144222-1a03-486c-9079-d2f23e11ce0a
 ---
 
 # 1. 表达式设置属性默认值
