@@ -1,7 +1,6 @@
 ---
-uuid: 1b9131f2-56ac-11f1-96b5-bb245aa43788
 title: Ubuntu 开启 ssh 连接
-date: 2023-01-18 15:22:00
+date: 2023-01-18T15:22:00.000Z
 tags:
   - 汇总
   - ssh
@@ -11,6 +10,7 @@ categories:
   - 汇总
   - Linux系统
   - Ubuntu
+uuid: 31649775-bd96-4600-b78b-3b7b8bc665ef
 ---
 
 如果apt没有更新，先更新

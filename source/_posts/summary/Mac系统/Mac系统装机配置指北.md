@@ -1,13 +1,13 @@
 ---
-uuid: 1b9131e3-56ac-11f1-96b5-bb245aa43788
 title: Mac 系统装机配置指北
-date: 2024-12-11 15:22:00
+date: 2024-12-11T15:22:00.000Z
 tags:
   - 汇总
   - mac
 categories:
   - 汇总
   - Mac系统
+uuid: 4e955826-a7f6-491a-b414-bd65a6e0d935
 ---
 
 # 前置条件
@@ -44,6 +44,12 @@ ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/the
 
 ```
 curl -fsSL https://bun.sh/install | bash
+```
+
+安装 Code Rabbit CLI 
+
+```bash
+curl -fsSL https://cli.coderabbit.ai/install.sh | sh
 ```
 
 下载 brew
@@ -208,7 +214,7 @@ obs \
 
 # 配置 vim
 
-[[Vim配置文件]]
+[[Vim 配置文件]]
 
 # Nvm
 

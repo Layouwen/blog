@@ -1,7 +1,6 @@
 ---
-uuid: 1b9131f3-56ac-11f1-96b5-bb245aa43788
 title: Ubuntu 系统装机配置指南
-date: 2024-03-23 15:22:00
+date: 2024-03-23T15:22:00.000Z
 tags:
   - 汇总
   - linux
@@ -10,6 +9,7 @@ categories:
   - 汇总
   - Linux系统
   - Ubuntu
+uuid: d9c8b969-e53e-4f9f-b551-3278cd3bc105
 ---
 
 # 创建用户并提供 sudo 权限

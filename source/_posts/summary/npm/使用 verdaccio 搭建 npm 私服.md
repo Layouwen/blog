@@ -1,13 +1,13 @@
 ---
-uuid: 1b9131f0-56ac-11f1-96b5-bb245aa43788
 title: 使用 verdaccio 搭建 npm 私服
-date: 2024-06-30 17:18:54
+date: 2024-06-30T17:18:54.000Z
 tags:
   - 汇总
   - npm
 categories:
   - 汇总
   - npm
+uuid: b9bab65e-8e89-49cf-9c4b-5d9b78e43460
 ---
 
 # 启动 docker 服务

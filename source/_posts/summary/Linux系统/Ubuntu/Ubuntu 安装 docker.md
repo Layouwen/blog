@@ -1,7 +1,6 @@
 ---
-uuid: 1b9131f1-56ac-11f1-96b5-bb245aa43788
 title: Ubuntu 安装 docker
-date: 2023-01-11 15:22:00
+date: 2023-01-11T15:22:00.000Z
 tags:
   - 汇总
   - docker
@@ -11,6 +10,7 @@ categories:
   - 汇总
   - Linux系统
   - Ubuntu
+uuid: a664440c-0705-4b34-9c84-3ef2c8ad1c0f
 ---
 
 卸载旧版

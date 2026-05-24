@@ -1,13 +1,13 @@
 ---
-uuid: 1b9131e9-56ac-11f1-96b5-bb245aa43788
 title: docker 经常用的命令
-date: 2022-01-23 15:22:00
+date: 2022-01-23T15:22:00.000Z
 tags:
   - 汇总
   - docker
 categories:
   - 汇总
   - docker
+uuid: 8c918bcc-4694-42b3-94bd-9a1772d7ce43
 ---
 
 # Windows 启动容器

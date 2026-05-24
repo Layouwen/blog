@@ -1,12 +1,12 @@
 ---
-uuid: 1b9131ee-56ac-11f1-96b5-bb245aa43788
 title: 从零实践webpack
-date: 2023-06-30 17:18:54
+date: 2023-06-30T17:18:54.000Z
 tags:
   - 汇总
   - webpack
 categories:
   - 汇总
+uuid: 34ea4d8a-bebc-45df-9a75-cf340cf5f08e
 ---
 
 ```bash
