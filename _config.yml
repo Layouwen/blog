@@ -31,10 +31,12 @@ external_link:
 filename_case: 0
 render_drafts: false
 post_asset_folder: false
-relative_link: false
+relative_link: true
 future: true
 syntax_highlighter: highlight.js
 highlight:
+  exclude_languages:
+    - mermaid
   line_number: true
   auto_detect: false
   tab_replace: ''
@@ -46,7 +48,7 @@ prismjs:
   tab_replace: ''
 index_generator:
   path: ''
-  per_page: 30
+  per_page: 10
   order_by: '-date'
 default_category: uncategorized
 category_map: null
@@ -63,7 +65,7 @@ ignore: null
 theme: next
 deploy:
   type: git
-  repo: https://github.com/Layouwen/blog
+  repo: git@github.com:Layouwen/blog.git
   branch: deploy
 
 # sitemap:
