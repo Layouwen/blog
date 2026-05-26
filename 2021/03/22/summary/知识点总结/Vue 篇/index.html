@@ -28,7 +28,7 @@
 <meta property="og:description" content="Vue2前言这里是我总结一些与Vue2.x相关的一些面试题。本文章基于2.x进行总结。在3.0中可能会有不同。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-03-22T15:48:34.000Z">
-<meta property="article:modified_time" content="2026-05-24T22:57:07.559Z">
+<meta property="article:modified_time" content="2026-05-26T05:44:03.633Z">
 <meta property="article:author" content="梁又文">
 <meta property="article:tag" content="汇总">
 <meta property="article:tag" content="vue">
@@ -113,7 +113,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="../../../../../../index.html" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-archives"><a href="../../../../../../archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">158</span></a></li><li class="menu-item menu-item-tags"><a href="../../../../../../tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">118</span></a></li><li class="menu-item menu-item-categories"><a href="../../../../../../categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">42</span></a></li><li class="menu-item menu-item-about"><a href="../../../../../../about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-links"><a href="../../../../../../links/" rel="section"><i class="fa fa-link fa-fw"></i>links</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="../../../../../../index.html" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-archives"><a href="../../../../../../archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">160</span></a></li><li class="menu-item menu-item-tags"><a href="../../../../../../tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">120</span></a></li><li class="menu-item menu-item-categories"><a href="../../../../../../categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">43</span></a></li><li class="menu-item menu-item-about"><a href="../../../../../../about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-links"><a href="../../../../../../links/" rel="section"><i class="fa fa-link fa-fw"></i>links</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -164,7 +164,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Vue2"><span class="nav-number">1.</span> <span class="nav-text">Vue2</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81v-if%E5%92%8Cv-for%E4%BC%98%E5%85%88%E7%BA%A7%EF%BC%9F%E5%90%8C%E6%97%B6%E4%BD%BF%E7%94%A8%E6%80%8E%E4%B9%88%E4%BC%98%E5%8C%96%EF%BC%9F"><span class="nav-number">1.2.</span> <span class="nav-text">1、v-if和v-for优先级？同时使用怎么优化？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%E3%80%81%E7%BB%84%E4%BB%B6%E4%B8%AD%E7%9A%84data%E4%B8%BA%E4%BB%80%E4%B9%88%E5%BF%85%E9%A1%BB%E6%98%AF%E5%87%BD%E6%95%B0%EF%BC%9F"><span class="nav-number">1.3.</span> <span class="nav-text">2、组件中的data为什么必须是函数？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3%E3%80%81key%E7%9A%84%E4%BD%9C%E7%94%A8%E5%92%8C%E5%8E%9F%E7%90%86%EF%BC%9F"><span class="nav-number">1.4.</span> <span class="nav-text">3、key的作用和原理？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4%E3%80%81%E4%BB%80%E4%B9%88%E6%98%AFdiff%E7%AE%97%E6%B3%95"><span class="nav-number">1.5.</span> <span class="nav-text">4、什么是diff算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5%E3%80%81vue%E7%BB%84%E4%BB%B6%E5%8C%96"><span class="nav-number">1.6.</span> <span class="nav-text">5、vue组件化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6%E3%80%81vue%E8%AE%BE%E8%AE%A1%E5%8E%9F%E7%90%86"><span class="nav-number">1.7.</span> <span class="nav-text">6、vue设计原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7%E3%80%81MVC%E3%80%81MVP%E5%92%8CMVVM%E7%9A%84%E7%90%86%E8%A7%A3%EF%BC%9F"><span class="nav-number">1.8.</span> <span class="nav-text">7、MVC、MVP和MVVM的理解？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8%E3%80%81%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%EF%BC%9F"><span class="nav-number">1.9.</span> <span class="nav-text">8、性能优化？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9%E3%80%81%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1%E7%9A%84%E6%96%B9%E5%BC%8F"><span class="nav-number">1.10.</span> <span class="nav-text">9、组件通信的方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10%E3%80%81%E6%9C%89%E6%B2%A1%E6%9C%89%E4%BD%BF%E7%94%A8%E8%BF%87Vuex%EF%BC%9F"><span class="nav-number">1.11.</span> <span class="nav-text">10、有没有使用过Vuex？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11%E3%80%81VueRouter%E6%9C%89%E4%BB%80%E4%B9%88%E9%92%A9%E5%AD%90%EF%BC%9F"><span class="nav-number">1.12.</span> <span class="nav-text">11、VueRouter有什么钩子？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#12%E3%80%81%E9%80%92%E5%BD%92%E7%BB%84%E4%BB%B6"><span class="nav-number">1.13.</span> <span class="nav-text">12、递归组件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#13%E3%80%81Vue%E7%9A%84%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86"><span class="nav-number">1.14.</span> <span class="nav-text">13、Vue的响应式原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#14%E3%80%81%E6%80%8E%E4%B9%88%E6%8B%93%E5%B1%95%E7%8E%B0%E6%9C%89%E7%BB%84%E4%BB%B6"><span class="nav-number">1.15.</span> <span class="nav-text">14、怎么拓展现有组件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#15%E3%80%81watch%E5%92%8Ccomputed%E4%BA%86%E8%A7%A3%E5%A4%9A%E5%B0%91"><span class="nav-number">1.16.</span> <span class="nav-text">15、watch和computed了解多少</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#16%E3%80%81%E6%9C%89%E6%B2%A1%E6%9C%89%E4%BA%86%E8%A7%A3%E8%BF%87nextTick%EF%BC%9F"><span class="nav-number">1.17.</span> <span class="nav-text">16、有没有了解过nextTick？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#17%E3%80%81Vue%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F"><span class="nav-number">1.18.</span> <span class="nav-text">17、Vue的生命周期</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#18%E3%80%81DOM%E5%9C%A8%E5%93%AA%E4%B8%AA%E5%91%A8%E6%9C%9F%E5%AE%8C%E6%88%90%EF%BC%8C%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E5%8F%AF%E4%BB%A5%E6%93%8D%E4%BD%9CDOM%EF%BC%9F"><span class="nav-number">1.19.</span> <span class="nav-text">18、DOM在哪个周期完成，什么时候可以操作DOM？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#19%E3%80%81%E5%8D%95%E5%90%91%E7%BB%91%E5%AE%9A%E5%92%8C%E5%8F%8C%E5%90%91%E7%BB%91%E5%AE%9A%E7%9A%84demo"><span class="nav-number">1.20.</span> <span class="nav-text">19、单向绑定和双向绑定的demo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#20%E3%80%81v-model%E8%A7%A6%E5%8F%91%E4%BA%86%E5%93%AA%E4%BA%9B%E8%AF%AD%E6%B3%95%E7%B3%96"><span class="nav-number">1.21.</span> <span class="nav-text">20、v-model触发了哪些语法糖</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#21%E3%80%81router%E5%92%8Croute%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">1.22.</span> <span class="nav-text">21、router和route的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#21-1-%E5%8C%BA%E5%88%AB"><span class="nav-number">1.22.1.</span> <span class="nav-text">21.1 区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#21-2-router%E5%AF%B9%E8%B1%A1%E5%B1%9E%E6%80%A7"><span class="nav-number">1.22.2.</span> <span class="nav-text">21.2 $router对象属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#21-3-route%E5%AF%B9%E8%B1%A1%E5%B1%9E%E6%80%A7"><span class="nav-number">1.22.3.</span> <span class="nav-text">21.3 $route对象属性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#22%E3%80%81router%E7%9A%84%E4%B8%89%E7%A7%8D%E6%A8%A1%E5%BC%8F"><span class="nav-number">1.23.</span> <span class="nav-text">22、router的三种模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#22-1-hash%E6%A8%A1%E5%BC%8F"><span class="nav-number">1.23.1.</span> <span class="nav-text">22.1 hash模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#22-2-history%E6%A8%A1%E5%BC%8F"><span class="nav-number">1.23.2.</span> <span class="nav-text">22.2 history模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#22-3-abstract%E6%A8%A1%E5%BC%8F"><span class="nav-number">1.23.3.</span> <span class="nav-text">22.3 abstract模式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#23%E3%80%81vue-router%E5%92%8Clocation-href"><span class="nav-number">1.24.</span> <span class="nav-text">23、vue-router和location.href</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#24%E3%80%81new-Vue%E5%81%9A%E4%BA%86%E4%BB%80%E4%B9%88"><span class="nav-number">1.25.</span> <span class="nav-text">24、new Vue做了什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#25%E3%80%81%E5%A6%82%E4%BD%95%E6%8A%8A%E7%9C%9F%E5%AE%9EDOM%E8%BD%AC%E5%8F%98%E8%99%9A%E6%8B%9FDOM"><span class="nav-number">1.26.</span> <span class="nav-text">25、如何把真实DOM转变虚拟DOM</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#26%E3%80%81vm-set-%E4%B8%BA%E4%BB%80%E4%B9%88%E5%8F%AF%E4%BB%A5%E8%A7%A3%E5%86%B3%E6%96%B0%E5%A2%9E%E5%B1%9E%E6%80%A7%E4%B8%8D%E8%83%BD%E5%93%8D%E5%BA%94%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-number">1.27.</span> <span class="nav-text">26、vm.$set()为什么可以解决新增属性不能响应的问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#27%E3%80%81Template%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%80%9D%E8%B7%AF"><span class="nav-number">1.28.</span> <span class="nav-text">27、Template的实现思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#28%E3%80%81Vue%E5%88%9D%E5%A7%8B%E5%8C%96%E6%B5%81%E7%A8%8B"><span class="nav-number">1.29.</span> <span class="nav-text">28、Vue初始化流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#29%E3%80%81%E5%AF%B9Vue3%E6%96%B0%E7%89%B9%E6%80%A7%E6%9C%89%E6%B2%A1%E6%9C%89%E4%BA%86%E8%A7%A3%EF%BC%9F"><span class="nav-number">1.30.</span> <span class="nav-text">29、对Vue3新特性有没有了解？</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Vue3"><span class="nav-number">2.</span> <span class="nav-text">Vue3</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#vue3-%E6%AF%94-vue2-%E6%9C%89%E5%93%AA%E4%BA%9B%E4%BC%98%E5%8A%BF"><span class="nav-number">2.1.</span> <span class="nav-text">vue3 比 vue2 有哪些优势</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vue3-%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E7%9A%84%E5%8C%BA%E5%88%AB%E5%92%8C%E6%94%B9%E5%8A%A8"><span class="nav-number">2.2.</span> <span class="nav-text">Vue3 生命周期的区别和改动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3-ref-toRef-toRefs"><span class="nav-number">2.3.</span> <span class="nav-text">如何理解 ref toRef toRefs</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Proxy-%E5%92%8C-defineProperty-%E5%8C%BA%E5%88%AB"><span class="nav-number">2.4.</span> <span class="nav-text">Proxy 和 defineProperty 区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#v-model-%E7%9A%84%E6%94%B9%E5%8F%98"><span class="nav-number">2.5.</span> <span class="nav-text">v-model 的改变</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#reactive-%E5%92%8C-ref-%E7%9A%84%E5%8C%BA%E5%88%AB%E5%92%8C%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-number">2.6.</span> <span class="nav-text">reactive 和 ref 的区别和使用场景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#watch-%E5%92%8C-watchEffect-%E5%8C%BA%E5%88%AB"><span class="nav-number">2.7.</span> <span class="nav-text">watch 和 watchEffect 区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#setup-%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96%E7%BB%84%E4%BB%B6%E5%AE%9E%E4%BE%8B"><span class="nav-number">2.8.</span> <span class="nav-text">setup 如何获取组件实例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88-vue3-%E6%AF%94-vue2-%E5%BF%AB"><span class="nav-number">2.9.</span> <span class="nav-text">为什么 vue3 比 vue2 快</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vite-%E4%B8%BA%E4%BB%80%E4%B9%88%E5%BF%AB"><span class="nav-number">2.10.</span> <span class="nav-text">Vite 为什么快</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Composition-API-%E5%92%8C-React-Hooks-%E5%AF%B9%E6%AF%94"><span class="nav-number">2.11.</span> <span class="nav-text">Composition API 和 React Hooks 对比</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Vue2"><span class="nav-number">1.</span> <span class="nav-text">Vue2</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81v-if%E5%92%8Cv-for%E4%BC%98%E5%85%88%E7%BA%A7%EF%BC%9F%E5%90%8C%E6%97%B6%E4%BD%BF%E7%94%A8%E6%80%8E%E4%B9%88%E4%BC%98%E5%8C%96%EF%BC%9F"><span class="nav-number">1.2.</span> <span class="nav-text">1、v-if和v-for优先级？同时使用怎么优化？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%E3%80%81%E7%BB%84%E4%BB%B6%E4%B8%AD%E7%9A%84data%E4%B8%BA%E4%BB%80%E4%B9%88%E5%BF%85%E9%A1%BB%E6%98%AF%E5%87%BD%E6%95%B0%EF%BC%9F"><span class="nav-number">1.3.</span> <span class="nav-text">2、组件中的data为什么必须是函数？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3%E3%80%81key%E7%9A%84%E4%BD%9C%E7%94%A8%E5%92%8C%E5%8E%9F%E7%90%86%EF%BC%9F"><span class="nav-number">1.4.</span> <span class="nav-text">3、key的作用和原理？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4%E3%80%81%E4%BB%80%E4%B9%88%E6%98%AFdiff%E7%AE%97%E6%B3%95"><span class="nav-number">1.5.</span> <span class="nav-text">4、什么是diff算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5%E3%80%81vue%E7%BB%84%E4%BB%B6%E5%8C%96"><span class="nav-number">1.6.</span> <span class="nav-text">5、vue组件化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6%E3%80%81vue%E8%AE%BE%E8%AE%A1%E5%8E%9F%E7%90%86"><span class="nav-number">1.7.</span> <span class="nav-text">6、vue设计原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7%E3%80%81MVC%E3%80%81MVP%E5%92%8CMVVM%E7%9A%84%E7%90%86%E8%A7%A3%EF%BC%9F"><span class="nav-number">1.8.</span> <span class="nav-text">7、MVC、MVP和MVVM的理解？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8%E3%80%81%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%EF%BC%9F"><span class="nav-number">1.9.</span> <span class="nav-text">8、性能优化？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9%E3%80%81%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1%E7%9A%84%E6%96%B9%E5%BC%8F"><span class="nav-number">1.10.</span> <span class="nav-text">9、组件通信的方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10%E3%80%81%E6%9C%89%E6%B2%A1%E6%9C%89%E4%BD%BF%E7%94%A8%E8%BF%87Vuex%EF%BC%9F"><span class="nav-number">1.11.</span> <span class="nav-text">10、有没有使用过Vuex？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11%E3%80%81VueRouter%E6%9C%89%E4%BB%80%E4%B9%88%E9%92%A9%E5%AD%90%EF%BC%9F"><span class="nav-number">1.12.</span> <span class="nav-text">11、VueRouter有什么钩子？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#12%E3%80%81%E9%80%92%E5%BD%92%E7%BB%84%E4%BB%B6"><span class="nav-number">1.13.</span> <span class="nav-text">12、递归组件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#13%E3%80%81Vue%E7%9A%84%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86"><span class="nav-number">1.14.</span> <span class="nav-text">13、Vue的响应式原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#14%E3%80%81%E6%80%8E%E4%B9%88%E6%8B%93%E5%B1%95%E7%8E%B0%E6%9C%89%E7%BB%84%E4%BB%B6"><span class="nav-number">1.15.</span> <span class="nav-text">14、怎么拓展现有组件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#15%E3%80%81watch%E5%92%8Ccomputed%E4%BA%86%E8%A7%A3%E5%A4%9A%E5%B0%91"><span class="nav-number">1.16.</span> <span class="nav-text">15、watch和computed了解多少</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#16%E3%80%81%E6%9C%89%E6%B2%A1%E6%9C%89%E4%BA%86%E8%A7%A3%E8%BF%87nextTick%EF%BC%9F"><span class="nav-number">1.17.</span> <span class="nav-text">16、有没有了解过nextTick？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#17%E3%80%81Vue%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F"><span class="nav-number">1.18.</span> <span class="nav-text">17、Vue的生命周期</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#18%E3%80%81DOM%E5%9C%A8%E5%93%AA%E4%B8%AA%E5%91%A8%E6%9C%9F%E5%AE%8C%E6%88%90%EF%BC%8C%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E5%8F%AF%E4%BB%A5%E6%93%8D%E4%BD%9CDOM%EF%BC%9F"><span class="nav-number">1.19.</span> <span class="nav-text">18、DOM在哪个周期完成，什么时候可以操作DOM？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#19%E3%80%81%E5%8D%95%E5%90%91%E7%BB%91%E5%AE%9A%E5%92%8C%E5%8F%8C%E5%90%91%E7%BB%91%E5%AE%9A%E7%9A%84demo"><span class="nav-number">1.20.</span> <span class="nav-text">19、单向绑定和双向绑定的demo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#20%E3%80%81v-model%E8%A7%A6%E5%8F%91%E4%BA%86%E5%93%AA%E4%BA%9B%E8%AF%AD%E6%B3%95%E7%B3%96"><span class="nav-number">1.21.</span> <span class="nav-text">20、v-model触发了哪些语法糖</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#21%E3%80%81router%E5%92%8Croute%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">1.22.</span> <span class="nav-text">21、router和route的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#21-1-%E5%8C%BA%E5%88%AB"><span class="nav-number">1.22.1.</span> <span class="nav-text">21.1 区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#21-2-router%E5%AF%B9%E8%B1%A1%E5%B1%9E%E6%80%A7"><span class="nav-number">1.22.2.</span> <span class="nav-text">21.2 $router对象属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#21-3-route%E5%AF%B9%E8%B1%A1%E5%B1%9E%E6%80%A7"><span class="nav-number">1.22.3.</span> <span class="nav-text">21.3 $route对象属性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#22%E3%80%81router%E7%9A%84%E4%B8%89%E7%A7%8D%E6%A8%A1%E5%BC%8F"><span class="nav-number">1.23.</span> <span class="nav-text">22、router的三种模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#22-1-hash%E6%A8%A1%E5%BC%8F"><span class="nav-number">1.23.1.</span> <span class="nav-text">22.1 hash模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#22-2-history%E6%A8%A1%E5%BC%8F"><span class="nav-number">1.23.2.</span> <span class="nav-text">22.2 history模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#22-3-abstract%E6%A8%A1%E5%BC%8F"><span class="nav-number">1.23.3.</span> <span class="nav-text">22.3 abstract模式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#23%E3%80%81vue-router%E5%92%8Clocation-href"><span class="nav-number">1.24.</span> <span class="nav-text">23、vue-router和location.href</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#24%E3%80%81new-Vue%E5%81%9A%E4%BA%86%E4%BB%80%E4%B9%88"><span class="nav-number">1.25.</span> <span class="nav-text">24、new Vue做了什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#25%E3%80%81%E5%A6%82%E4%BD%95%E6%8A%8A%E7%9C%9F%E5%AE%9EDOM%E8%BD%AC%E5%8F%98%E8%99%9A%E6%8B%9FDOM"><span class="nav-number">1.26.</span> <span class="nav-text">25、如何把真实DOM转变虚拟DOM</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#26%E3%80%81vm-set-%E4%B8%BA%E4%BB%80%E4%B9%88%E5%8F%AF%E4%BB%A5%E8%A7%A3%E5%86%B3%E6%96%B0%E5%A2%9E%E5%B1%9E%E6%80%A7%E4%B8%8D%E8%83%BD%E5%93%8D%E5%BA%94%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-number">1.27.</span> <span class="nav-text">26、vm.$set()为什么可以解决新增属性不能响应的问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#27%E3%80%81Template%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%80%9D%E8%B7%AF"><span class="nav-number">1.28.</span> <span class="nav-text">27、Template的实现思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#28%E3%80%81Vue%E5%88%9D%E5%A7%8B%E5%8C%96%E6%B5%81%E7%A8%8B"><span class="nav-number">1.29.</span> <span class="nav-text">28、Vue初始化流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#29%E3%80%81%E5%AF%B9Vue3%E6%96%B0%E7%89%B9%E6%80%A7%E6%9C%89%E6%B2%A1%E6%9C%89%E4%BA%86%E8%A7%A3%EF%BC%9F"><span class="nav-number">1.30.</span> <span class="nav-text">29、对Vue3新特性有没有了解？</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Vue3"><span class="nav-number">2.</span> <span class="nav-text">Vue3</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#vue3-%E6%AF%94-vue2-%E6%9C%89%E5%93%AA%E4%BA%9B%E4%BC%98%E5%8A%BF"><span class="nav-number">2.1.</span> <span class="nav-text">vue3 比 vue2 有哪些优势</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vue3-%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E7%9A%84%E5%8C%BA%E5%88%AB%E5%92%8C%E6%94%B9%E5%8A%A8"><span class="nav-number">2.2.</span> <span class="nav-text">Vue3 生命周期的区别和改动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3-ref-toRef-toRefs"><span class="nav-number">2.3.</span> <span class="nav-text">如何理解 ref toRef toRefs</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Proxy-%E5%92%8C-defineProperty-%E5%8C%BA%E5%88%AB"><span class="nav-number">2.4.</span> <span class="nav-text">Proxy 和 defineProperty 区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#v-model-%E7%9A%84%E6%94%B9%E5%8F%98"><span class="nav-number">2.5.</span> <span class="nav-text">v-model 的改变</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#reactive-%E5%92%8C-ref-%E7%9A%84%E5%8C%BA%E5%88%AB%E5%92%8C%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-number">2.6.</span> <span class="nav-text">reactive 和 ref 的区别和使用场景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#watch-%E5%92%8C-watchEffect-%E5%8C%BA%E5%88%AB"><span class="nav-number">2.7.</span> <span class="nav-text">watch 和 watchEffect 区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#setup-%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96%E7%BB%84%E4%BB%B6%E5%AE%9E%E4%BE%8B"><span class="nav-number">2.8.</span> <span class="nav-text">setup 如何获取组件实例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88-vue3-%E6%AF%94-vue2-%E5%BF%AB"><span class="nav-number">2.9.</span> <span class="nav-text">为什么 vue3 比 vue2 快</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vite-%E4%B8%BA%E4%BB%80%E4%B9%88%E5%BF%AB"><span class="nav-number">2.10.</span> <span class="nav-text">Vite 为什么快</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Composition-API-%E5%92%8C-React-Hooks-%E5%AF%B9%E6%AF%94"><span class="nav-number">2.11.</span> <span class="nav-text">Composition API 和 React Hooks 对比</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vue3-%E5%93%8D%E5%BA%94%E5%BC%8F%E6%A0%B8%E5%BF%83"><span class="nav-number">2.12.</span> <span class="nav-text">vue3 响应式核心</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vue-%E4%B8%BB%E7%BA%BF"><span class="nav-number">2.13.</span> <span class="nav-text">Vue 主线</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#vue2-%E5%92%8C-vue3-%E6%97%B6%E6%9C%9F-vue-router-%E5%92%8C-vuex-pinia-%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">3.</span> <span class="nav-text">vue2 和 vue3 时期 vue-router 和 vuex&#x2F;pinia 的区别</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -179,18 +179,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="../../../../../../archives/">
-          <span class="site-state-item-count">158</span>
+          <span class="site-state-item-count">160</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="../../../../../../categories/">
-        <span class="site-state-item-count">42</span>
+        <span class="site-state-item-count">43</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="../../../../../../tags/">
-        <span class="site-state-item-count">118</span>
+        <span class="site-state-item-count">120</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -286,7 +286,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-05-25 06:57:07" itemprop="dateModified" datetime="2026-05-25T06:57:07+08:00">2026-05-25</time>
+      <time title="修改时间：2026-05-26 13:44:03" itemprop="dateModified" datetime="2026-05-26T13:44:03+08:00">2026-05-26</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -309,14 +309,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>4.5k</span>
+      <span>4.8k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>16 分钟</span>
+      <span>17 分钟</span>
     </span>
 </div>
 
@@ -327,10 +327,15 @@
     
     
     <div class="post-body" itemprop="articleBody"><h1 id="Vue2"><a href="#Vue2" class="headerlink" title="Vue2"></a>Vue2</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这里是我总结一些与Vue2.x相关的一些面试题。本文章基于2.x进行总结。在3.0中可能会有不同。</p>
-<h2 id="1、v-if和v-for优先级？同时使用怎么优化？"><a href="#1、v-if和v-for优先级？同时使用怎么优化？" class="headerlink" title="1、v-if和v-for优先级？同时使用怎么优化？"></a>1、v-if和v-for优先级？同时使用怎么优化？</h2><ul>
+<h2 id="1、v-if和v-for优先级？同时使用怎么优化？"><a href="#1、v-if和v-for优先级？同时使用怎么优化？" class="headerlink" title="1、v-if和v-for优先级？同时使用怎么优化？"></a>1、v-if和v-for优先级？同时使用怎么优化？</h2><p>vue2</p>
+<ul>
 <li>根据测试，同时使用v-if和v-for时，v-for优先级更高。</li>
 <li>同时使用v-for会必然执行，为了不浪费性能，可以在外面嵌套template使用v-if，内部使用v-for。</li>
 <li>如果条件在v-for内部，可以通过计算属性过滤掉不需要显示的内容。</li>
+</ul>
+<p>vue3</p>
+<ul>
+<li>v-if 比 v-for 优先</li>
 </ul>
 <h2 id="2、组件中的data为什么必须是函数？"><a href="#2、组件中的data为什么必须是函数？" class="headerlink" title="2、组件中的data为什么必须是函数？"></a>2、组件中的data为什么必须是函数？</h2><ul>
 <li>组件可能存在多个实例，使用对象形式则会共用一个data对象，从而造成污染。</li>
@@ -346,10 +351,22 @@
 </ul>
 <h2 id="4、什么是diff算法"><a href="#4、什么是diff算法" class="headerlink" title="4、什么是diff算法"></a>4、什么是diff算法</h2><ul>
 <li>diff算法是虚拟DOM的必然产物，通过与旧的虚拟DOM做比较，将变化的更新在真实DOM中。</li>
-<li>在 Vue2.x 中，因为 Wathcer 的颗粒度降低，一个实例对应一个 Watcher 所以无法像 Vue1中一样精确的更新对应的Dom元素。当数据发生改变时，数据响应式会触发 set，set会触发update，在update中，通过观察者模式，会触发对应的Watcher实例。此时我们的Watcher会进行render函数的渲染，所以我们会触发diff算法，找出发生改变的节点，进行局部更新。</li>
+<li>在 Vue2.x 中，一个实例对应一个 Watcher 所以无法像 Vue1中一样精确的更新对应的Dom元素。当数据发生改变时，数据响应式会触发 set，set会触发update，在update中，通过观察者模式，会触发对应的Watcher实例。此时我们的Watcher会进行render函数的渲染，所以我们会触发diff算法，找出发生改变的节点，进行局部更新。</li>
 <li>diff执行时，它将新的虚拟DOM与之前旧的虚拟DOM做比较（patch）。</li>
 <li>diff比较时，会判断本身和首尾子节点是否一样，如果没有执行遍历对比直至处理剩下的所有节点。使用key可以对这个过程进行加快。</li>
 </ul>
+<p>概括</p>
+<ul>
+<li>同层级 diff, 不跨层 diff</li>
+<li>双端比较(头尾指针)<ul>
+<li>旧头新头</li>
+<li>旧尾新尾</li>
+<li>旧头新尾</li>
+<li>旧尾新头</li>
+</ul>
+</li>
+</ul>
+<p>减少 DOM 移动, key 用于提高复用准确率</p>
 <h2 id="5、vue组件化"><a href="#5、vue组件化" class="headerlink" title="5、vue组件化"></a>5、vue组件化</h2><ul>
 <li>组件有独立和复用性作用，可以大幅提高开发效率。</li>
 <li>组件使用按分类有：页面组件、业务组件、通用组件，合理的划分组件，有助于提升应用性能。</li>
@@ -428,7 +445,10 @@
 </ul>
 <ol>
 <li>props（父子传值）</li>
-<li>EventBus或$emit&#x2F;$on（全局或父子通信）</li>
+<li>EventBus或$emit&#x2F;$on（全局或父子通信）<ol>
+<li>vue3 后基本用 mitt 构建</li>
+</ol>
+</li>
 <li>ref 与 $parent &#x2F; $children（父子组件通信）</li>
 <li>vuex（全局）<ul>
 <li>state：存放数据</li>
@@ -718,6 +738,13 @@
 </ul>
 </li>
 </ul>
+<p>Proxy 响应式**<br>避免：</p>
+<ul>
+<li>深层递归</li>
+<li>数组 hack</li>
+<li>属性新增问题</li>
+</ul>
+<p>编译时优化（最核心)<br>包括：<br><strong>PatchFlag</strong><br>只更新动态节点。<br><strong>静态提升（hoistStatic）</strong><br>静态节点只创建一次。<br><strong>事件缓存（cacheHandler）</strong><br>避免重复创建函数。<br><strong>BlockTree</strong><br>只跟踪动态节点树。<br><strong>更好的 diff</strong><br>静态节点跳过比较。  <br><strong>Tree-Shaking</strong><br>按需引入减少体积。</p>
 <h2 id="Vite-为什么快"><a href="#Vite-为什么快" class="headerlink" title="Vite 为什么快"></a>Vite 为什么快</h2><ul>
 <li>开发环境启动快, 使用 ES6 Module 不需要打包</li>
 </ul>
@@ -727,6 +754,66 @@
 <li>前者无需关心顺序, 后则组要保证顺序</li>
 <li>reactive + ref 的概念比 useState 要繁琐一点</li>
 </ul>
+<h2 id="vue3-响应式核心"><a href="#vue3-响应式核心" class="headerlink" title="vue3 响应式核心"></a>vue3 响应式核心</h2><p>TODO: 补充完整</p>
+<ul>
+<li>reactive 对象代理</li>
+<li>ref 值代理</li>
+<li>track 依赖收集</li>
+<li>trigger 派发更新</li>
+<li>effect 副作用函数</li>
+</ul>
+<p><strong>Proxy 优势</strong><br>可以直接拦截：</p>
+<ul>
+<li>get</li>
+<li>set</li>
+<li>deleteProperty</li>
+<li>has</li>
+<li>ownKeys</li>
+</ul>
+<p>无需深度初始化。</p>
+<h2 id="Vue-主线"><a href="#Vue-主线" class="headerlink" title="Vue 主线"></a>Vue 主线</h2><p><strong>1. 响应式</strong></p>
+<p>Vue2：</p>
+<ul>
+<li>defineProperty</li>
+<li>Dep</li>
+<li>Watcher</li>
+</ul>
+<p>Vue3：</p>
+<ul>
+<li>Proxy</li>
+<li>effect</li>
+<li>track&#x2F;trigger</li>
+</ul>
+<p><strong>2. 编译</strong></p>
+<p>template：<br>→ AST<br>→ render<br>→ vnode</p>
+<p><strong>3. 渲染</strong></p>
+<ul>
+<li>patch</li>
+<li>diff</li>
+<li>patchFlag</li>
+<li>blockTree</li>
+</ul>
+<p><strong>4. 组件化</strong></p>
+<ul>
+<li>props</li>
+<li>emit</li>
+<li>provide</li>
+<li>slot</li>
+</ul>
+<p><strong>5. 工程化</strong></p>
+<ul>
+<li>vite</li>
+<li>tree-shaking</li>
+<li>按需加载</li>
+</ul>
+<p><strong>6. 性能</strong></p>
+<ul>
+<li>keepAlive</li>
+<li>虚拟列表</li>
+<li>SSR</li>
+<li>懒加载</li>
+</ul>
+<h1 id="vue2-和-vue3-时期-vue-router-和-vuex-pinia-的区别"><a href="#vue2-和-vue3-时期-vue-router-和-vuex-pinia-的区别" class="headerlink" title="vue2 和 vue3 时期 vue-router 和 vuex&#x2F;pinia 的区别"></a>vue2 和 vue3 时期 vue-router 和 vuex&#x2F;pinia 的区别</h1><p>vue2: 生态库通过 new Vue 借用响应式<br>vue3: 生态库直接使用 reactive&#x2F;ref&#x2F;effect 构建响应式系统</p>
 
     </div>
 
@@ -876,13 +963,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">84k</span>
+    <span title="站点总字数">86k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">5:04</span>
+    <span title="站点阅读时长">5:11</span>
   </span>
 </div><div style="display: flex; justify-content: center;">
     <a style="display: inline-flex; align-items: center;" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank"><span>本站由</span> <img style="height: 30px; margin: 0 10px 0;" src="/images/upyun-logo.png"/> <span>提供CDN加速/云存储服务</span></a>
