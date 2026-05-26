@@ -10,7 +10,6 @@ categories:
   - 知识点总结
 uuid: 8a59ab73-6116-4644-b6ab-8e9f3e03e802
 ---
-
 # Vue2
 
 ## 前言
@@ -19,9 +18,15 @@ uuid: 8a59ab73-6116-4644-b6ab-8e9f3e03e802
 
 ## 1、v-if和v-for优先级？同时使用怎么优化？
 
+vue2
+
 - 根据测试，同时使用v-if和v-for时，v-for优先级更高。
 - 同时使用v-for会必然执行，为了不浪费性能，可以在外面嵌套template使用v-if，内部使用v-for。
 - 如果条件在v-for内部，可以通过计算属性过滤掉不需要显示的内容。
+
+vue3
+
+- v-if 比 v-for 优先
 
 ## 2、组件中的data为什么必须是函数？
 
@@ -42,10 +47,19 @@ updateChildren 中通过 patchVnode函数，他会对比新旧两个节点是否
 ## 4、什么是diff算法
 
 - diff算法是虚拟DOM的必然产物，通过与旧的虚拟DOM做比较，将变化的更新在真实DOM中。
-- 在 Vue2.x 中，因为 Wathcer 的颗粒度降低，一个实例对应一个 Watcher 所以无法像 Vue1中一样精确的更新对应的Dom元素。当数据发生改变时，数据响应式会触发 set，set会触发update，在update中，通过观察者模式，会触发对应的Watcher实例。此时我们的Watcher会进行render函数的渲染，所以我们会触发diff算法，找出发生改变的节点，进行局部更新。
+- 在 Vue2.x 中，一个实例对应一个 Watcher 所以无法像 Vue1中一样精确的更新对应的Dom元素。当数据发生改变时，数据响应式会触发 set，set会触发update，在update中，通过观察者模式，会触发对应的Watcher实例。此时我们的Watcher会进行render函数的渲染，所以我们会触发diff算法，找出发生改变的节点，进行局部更新。
 - diff执行时，它将新的虚拟DOM与之前旧的虚拟DOM做比较（patch）。
 - diff比较时，会判断本身和首尾子节点是否一样，如果没有执行遍历对比直至处理剩下的所有节点。使用key可以对这个过程进行加快。
 
+概括
+- 同层级 diff, 不跨层 diff
+- 双端比较(头尾指针)
+	- 旧头新头
+	- 旧尾新尾
+	- 旧头新尾
+	- 旧尾新头
+
+减少 DOM 移动, key 用于提高复用准确率
 ## 5、vue组件化
 
 - 组件有独立和复用性作用，可以大幅提高开发效率。
@@ -184,6 +198,7 @@ beforeDestroy() {
 - 三种场景：父子、兄弟、跨组件
 1. props（父子传值）
 2. EventBus或\$emit/$on（全局或父子通信）
+	1. vue3 后基本用 mitt 构建
 3. ref 与 $parent / $children（父子组件通信）
 4. vuex（全局）
     - state：存放数据
@@ -574,6 +589,26 @@ git clone git@github.com:vuejs/vue.git
 - tree-shaking
 	- 模板编译的时候, 按使用情况引入相关的库
 
+Proxy 响应式**
+避免：
+- 深层递归
+- 数组 hack
+- 属性新增问题
+
+编译时优化（最核心)
+包括：
+**PatchFlag**
+只更新动态节点。
+**静态提升（hoistStatic）**
+静态节点只创建一次。
+**事件缓存（cacheHandler）**
+避免重复创建函数。
+**BlockTree**
+只跟踪动态节点树。
+**更好的 diff**
+静态节点跳过比较。  
+**Tree-Shaking**
+按需引入减少体积。
 ## Vite 为什么快
 
 - 开发环境启动快, 使用 ES6 Module 不需要打包
@@ -584,3 +619,77 @@ git clone git@github.com:vuejs/vue.git
 - 前者无需关心 useMemo useCallback, 后者每次执行需要考虑缓存问题
 - 前者无需关心顺序, 后则组要保证顺序
 - reactive + ref 的概念比 useState 要繁琐一点
+
+## vue3 响应式核心
+
+TODO: 补充完整
+
+- reactive 对象代理
+- ref 值代理
+- track 依赖收集
+- trigger 派发更新
+- effect 副作用函数
+
+**Proxy 优势**
+可以直接拦截：
+- get
+- set
+- deleteProperty
+- has
+- ownKeys
+
+无需深度初始化。
+
+## Vue 主线
+
+**1. 响应式**
+
+Vue2：
+- defineProperty
+- Dep
+- Watcher
+
+Vue3：
+- Proxy
+- effect
+- track/trigger
+
+**2. 编译**
+
+template：
+→ AST
+→ render
+→ vnode
+
+**3. 渲染**
+
+- patch
+- diff
+- patchFlag
+- blockTree
+
+
+**4. 组件化**
+
+- props
+- emit
+- provide
+- slot
+
+**5. 工程化**
+
+- vite
+- tree-shaking
+- 按需加载
+
+**6. 性能**
+
+- keepAlive
+- 虚拟列表
+- SSR
+- 懒加载
+
+# vue2 和 vue3 时期 vue-router 和 vuex/pinia 的区别
+
+vue2: 生态库通过 new Vue 借用响应式
+vue3: 生态库直接使用 reactive/ref/effect 构建响应式系统

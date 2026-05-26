@@ -10,12 +10,11 @@ categories:
   - 知识点总结
 uuid: 6adaa889-3d04-434d-b084-628886887eb6
 ---
-
-## 1、使用过哪些ES6语法
+## 使用过哪些ES6语法
 
 let、const、箭头函数、计算属性名、拓展运算符、解构赋值、export、import、export default、Promise、Reflect
 
-### 1.1 Promise
+### 1 Promise
 
 表示异步操作最终完成或失败，及其结果
 成功调用resolve、失败reject
@@ -28,7 +27,7 @@ let、const、箭头函数、计算属性名、拓展运算符、解构赋值、
 - promise.any 接受一个promise集合，当其中一个成功，就返回那个成功的promise值
 - promise.race 其中一个成功或失败，则返回该成功或失败的值
 
-#### 1.1.1 实现简易Promise
+#### 1.1 实现简易Promise
 
 ```js
 class Promise2 {
@@ -70,7 +69,7 @@ p1 = new Promise2((resolve, reject) => {
 p1.then(res=>console.log(res), err=>console.log(err))
 ```
 
-#### 1.1.2 实现 Promise.allSettled
+#### 1.2 实现 Promise.allSettled
 
 ```js
 const p1 = new Promise((resolve, reject)=>{
@@ -116,15 +115,19 @@ myAllSettled([p1,p2]).then(res=>{
 })
 ```
 
-### 1.2 Reflect
+### 2 Reflect
 
 - Reflect.has(对象名, 属性名) 查看指定对象是否含有该属性
 - Reflect.ownKeys(对象名) 列出该对象所有属性
 - Reflect.set(对象名, 属性名, 值) 设置该对象的属性和值
 
-## 2、防抖和节流
+### 3. Proxy
 
-### 2.1 节流
+TODO: 补充完整
+
+## 防抖和节流
+
+### 1 节流
 
 相当于有冷却时间，冷却时间到了才允许执行下一次操作
 
@@ -148,7 +151,7 @@ function throttle(fn, delay){
 }
 ```
 
-### 2.2 防抖
+### 2 防抖
 
 如果短时间执行多次，那么我们带着上一个内容一起执行
 
@@ -174,7 +177,7 @@ function debounce(fn, delay){
 }
 ```
 
-## 3、手写AJAX
+## 手写AJAX
 
 ```js
 // 详细版
@@ -194,7 +197,7 @@ request.onload = ()=> console.log(request.responseText)
 request.send()
 ```
 
-## 4、this指向问题
+## this指向问题
 
 - fn() —— windows
 - obj.fn() —— obj
@@ -204,18 +207,16 @@ request.send()
 - new Fn() —— new出来后的对象
 - fn = ()=>{} —— 箭头函数外的一层
 
-## 5、什么是闭包,它有什么作用
+## 什么是闭包,它有什么作用
 
 外层函数调用后，外层作用域对象被内层函数的作用域引用，无法释放。
 作用：
 隐藏变量，私有变量
 闭包可以使其不会被垃圾回收。
-缺点：
-在IE中使用过多会造成内存泄露
 清除闭包：
 将引用着作用域链的变量设置为 null
 
-## 6、什么是立即执行函数
+## 什么是立即执行函数
 
 声明一个匿名函数，接着马上执行它
 
@@ -233,111 +234,13 @@ new function(){console.log(8)}()
 作用：
 创建一个局部的作用域，外面访问不到防止变量污染
 
-## 7、JSONP/CORS/跨域
+## async/await
 
-因为浏览器不允许两个源不相同的互相请求。
-源=协议+域名+端口号
-只要有一样不相同就是不同源。
+async 本质是 Promise 语法糖
+await 会暂停 async 函数
+await 后面的代码会进入微任务队列
 
-### 7.1 CORS
-
-CORS跨源资源共享，它可以解决两个不同源相互访问。
-使用方法也很简单，在后端提前设置好Access-Control-Allow-Origin即可。
-如果为 * 号则表示可以任何人访问。
-如果需要指定源访问，可以在后面接上允许的源地址。
-比如：Access-Control-Allow-Origin：http://foo.example
-
-### 7.2 JSONP
-
-JSONP也是一种跨域解决方案，由于IE之前的版本不支持CORS进行跨域。所以我们需要想别的解决思路，就出现了JSONP。它与JSON没有关系，之所以这样叫是因为最初里面数据写的格式大多为JSON格式。
-使用方法
-
-### 7.3 sessionStorage和localstorage能跨域拿到吗？
-
-localstorage只有在同源的情况下可以获取数据
-sessionStorage不同页面和标签页面无法共享数据
-
-#### 7.3.1 localStorage跨域二级域名共享方法
-
-挂载一个隐藏的iframe加载顶级域名的代理页面，统一在顶级域名里操作localStorage，其他二级或n及域名读取或设置localStorage通过此ifarme来操作
-
-顶级域名的html
-```html
-<script>
-    document.domain = 'lyw.com' // 设置顶级域名
-    const setItem = (key, data) => localStorage.setItem(key, data)
-    const getItem = key => localStorage.getItem(key)
-</script>
-```
-
-其他二级或n级域名
-```html
-<iframe style="display:none;" id="ifrStorageProxy" src="http://www.lyw.com/storageproxy.html"></iframe>
-<script>
-  document.domain = 'lyw.com'
-  const winifrStorageProxy = document.getElementById('ifrStorageProxy').contentWindow
-  winifrStorageProxy.onload = () => {
-    winifrStorageProxy.setItem('showbo', 'test-' + newDate().toLocaleString()
-    alert(winifrStorageProxy.setItem('showbo'))
-  }
-</script>
-```
-
-#### 7.3.2 sessioniStorage和localStorage跨顶级域名共享方法
-
-与二级域名类似，任选一个域名挂载iframe代理页面，数据存处在此顶级域名下，其他顶级域名通过此代理读取localStorage和sessionStorage的数据
-
-代理的html
-```html
-<script>
-  window.addEventListener('message', e =>{
-    if (e.source !== parent) return // 如果不是父页面发送的信息就返回
-    let data = JSON.parse(e.data)
-    switch (data.action) {
-      case 'setItem':
-        localStorage.setItem(data.key, data.data)
-        break
-      case 'getItem':
-        data = localStorage.getItem(data.key)
-        parent.postMessage(data, '*')
-        break
-    }
-  }, false)
-<script>
-```
-
-其他顶级域名页面
-```html
-<iframe style="display: none;" if="ifrStorageProxy" src="http://www.lyw.com/storageproxy.html"></iframe>
-<script>
-  let winifrStorageProxy = document.getElementById('ifrStorageProxy')
-  window.addEventListener('message', e => {
-    if (e.soure !== winifrStorageProxy.contentWindow) return // 不是我们自己iframe发送的信息就返回
-    alert(e.data)
-  }, false)
-  // 要在加载完毕后进行操作，不然onmessage为注册
-  winifrStorageProxy.onload = () => {
-    // 发送存储指令
-    winifrStorageProxy.contentWindow.postMessage(
-      JSON.stringify(
-        { 
-          action: 'setItem', 
-          key: 'showbo', 
-          data: new Date().toLocaleString()
-        }
-    ), '*')
-    // 发送读取指令
-    winifrStorageProxy.contentWindow.postMessage(JSON.stringify({
-      action: 'getItem',
-      key: 'showbo'
-    }), '*')
-  }
-</script>
-```
-
-## 8、async/await
-
-## 9、深拷贝
+## 深拷贝
 
 - 递归
 - 判断类型
@@ -359,7 +262,7 @@ function deepClone(obj = {}) {
 }
 ```
 
-## 10、使用正则实现trim方法
+## 使用正则实现trim方法
 
 ```js
 function trim(str){
@@ -367,9 +270,9 @@ function trim(str){
 }
 ```
 
-## 11、继承
+## 继承
 
-### 11.1 原型方法
+### 1 原型方法
 
 ```js
 function People(name, age){
@@ -391,7 +294,7 @@ User.prototype.say = function(){
 }
 ```
 
-### 11.2 class方法
+### 2 class方法
 
 ```js
 class People{
@@ -411,19 +314,21 @@ class User extends People {
 }
 ```
 
-## 12、数组去重
+## 数组去重
 
-### 12.1 计数排序变形
+### 1 计数排序变形
 
-### 12.2 set去重
+### 2 set去重
 
 ```js
 function unique(arr){
   return Array.from(new Set(arr))
 }
+
+[...new Set(arr)]
 ```
 
-### 12.3 for循环使用splice去重
+### 3 for循环使用splice去重
 ```js
 function unique (arr){
   for (let i=0; i < arr.length; i++) {
@@ -438,13 +343,7 @@ function unique (arr){
 }
 ```
 
-### 12.4 new Set去重
-
-```js
-[...new Set(arr)]
-```
-
-### 12.5 Map
+### 4 Map
 
 ```js
 function unique (arr) {
@@ -453,7 +352,7 @@ function unique (arr) {
 }
 ```
 
-## 13、原型与原型链的理解
+## 原型与原型链的理解
 
 每个实例都有其__proto__，他对应其构造函数的prototype。
 在js中，没有java中类的说法。js为了模拟new使用了原型来实现。
@@ -469,13 +368,13 @@ demo1.__proto__ === Demo1.prototype
 demo1.__proto__.constructor === Demo1
 ```
 
-### 13.1 __proto__ 与 prototype 的区别
+### 1 __proto__ 与 prototype 的区别
 
 - __proto__为隐式原型，prototype为显示原型。
 - 每个对象都有他的__proto__指向其构造函数的原型对象。
 - 每个方法除了有__proto__外，还会有prototype指向其方法的原型对象。
 
-### 13.2 公式
+### 2 公式
 
 xxx的原型===其构造函数的prototype
 ```js
@@ -492,9 +391,9 @@ Object.prototype原型是null
 Object.prototype.__proto__ === null
 ```
 
-## 14、如何实现类
+## 如何实现类
 
-## ### 方法一：构造函数法
+### 方法一：构造函数法
 
 ```js
 function Cat() {
@@ -602,9 +501,9 @@ cat2.showShare()
 console.log(Cat.shareData)
 ```
 
-## 15、Js基本类型和复杂类型
+## Js 基本类型和复杂类型
 
-### 15.1 区别
+### 1 区别
 
 1. 内存分配不同
     - 基本数据类型存储在栈中
@@ -619,7 +518,7 @@ console.log(Cat.shareData)
     - 基本数据类型：把对应的值传递
     - 复杂数据类型：把内存引用地址传递
 
-### 15.2 基本数据类型
+### 2 基本数据类型
 
 - string
 - number
@@ -629,7 +528,7 @@ console.log(Cat.shareData)
 - undefined
 - null
 
-### 15.3 复杂数据类型
+### 3 复杂数据类型
 
 - Object
     - Array
@@ -638,18 +537,18 @@ console.log(Cat.shareData)
     - Math
     - Function
 
-## 16、数组方法
+## 数组方法
 
 - pop() 弹出最后一个值，并返回出来
 - push() 在最后面添加一个或多个值
 - shift() 弹出第一个值，并返回出来
 - unshift() 在最前面添加一个或多个值
 
-### 16.1 改变原数组
+### 1 改变原数组
 
 pop、push、reverse、shift、sort、splice、unshift
 
-### 16.2 不改变原数组
+### 2 不改变原数组
 
 concat、join、slice
 
@@ -697,21 +596,20 @@ function b () {
 b.bind2(a, 1, 2, 3, 4)()
 ```
 
-## 18、同步和异步
+## 同步和异步
 
 同步和异步是一种消息通知机制
 
 - 同步阻塞：需要等待上一个代码执行完毕，下一个代码才可执行
 - 异步非阻塞：在上一个代码执行后，不需要等待其返回结果。可以继续往后执行，回头在获得该结果。
 
-## 19、回调的问题
+## 回调的问题
 
 回调就是函数指针的调用，可以简单理解为一个回头调用的函数。
 
 回调容易造成回调地狱，造成代码维护性差。可以使用观察者模式、promise、async/await来处理。
 
-
-## 20、如何中断ajax请求
+## 如何中断 ajax 请求
 
 使用 `XMLHttpRequest` 对象的 `abort` 方法中断ajax请求。
 
@@ -733,21 +631,27 @@ stopBtn.onclick = ()=>{
 }
 ```
 
-## 21、模块化
+## 模块化
 
-CommonJs、AMD、CMD、ES6
+CommonJs、AMD、CMD、ESM
 
-- CommonJS是执行时编译
-- ES6是静态编译
+- CommonJS 是执行时编译
+- ESM 是静态编译
 
-### 21.1 好处
+TODO: 重点补充
+- ESM
+- CommonJS
+- Tree-Shaking
+- Vite
+
+### 1 好处
 
 - 避免命名冲突(减少命名空间污染)
 - 更好的分离, 按需加载
 - 更高复用性
 - 高可维护性
 
-## 22、简单实现EventHub
+## 简单实现EventHub
 
 ```js
 /**
@@ -876,4 +780,31 @@ const quickSort = (arr) => {
 - 可读性强
 - 可以缓存，通过缓存
 
-## JSONP原理
+## Map/WeakMap/Set/WeakSet
+
+TODO: 补充
+
+**WeakMap 为什么不会造成内存泄漏**?
+
+## 手写 Promise.all
+
+## 手写并发控制
+
+## 手写 compose
+
+## 手写 once/off
+
+## 手写 LRU Cache
+
+## 垃圾回收(GC)
+
+- 引用计数
+	- 记录每个引用的次数
+	- 遇到循环引用会出现无法回收的问题
+- 标记清除
+	- 从根节点出发, window -> 全局变量 -> 当前调用栈
+	- 找到则标记存活, 反之直接回收
+- V8 分代回收
+	- 扫描成本大, 所以分为长时间与短时间的批次
+	- 创建长时间的引用, 扫描频率低
+	- 短时间的引用, 扫描频率高

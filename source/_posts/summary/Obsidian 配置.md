@@ -12,23 +12,25 @@ uuid: 881d743c-3fee-4165-93ff-578e6f237e4b
 
 # 插件
 
-| 插件名                          | 描述  |
-| ---------------------------- | --- |
-| Advanced Tables              |     |
-| Better Command Palette       |     |
-| Better Word Count            |     |
-| Commander                    |     |
-| File Explorer++              |     |
-| File Tree Alternative |     |
-| Highlightr                   |     |
-| Iconize                      |     |
-| Image auto upload Plugin     |     |
-| Mind Map                     |     |
-| git                 |     |
-| Pandoc                |     |
-| PDF++                        |     |
-| Recent Files                 |     |
-| Tag Wrangler                 |     |
-| Theme Picker                 |     |
-| Various Complements          |     |
-| Vimrc Support                |     |
+| 插件名                      | 描述  |
+| ------------------------ | --- |
+| Advanced Tables          |     |
+| Better Command Palette   |     |
+| Better Word Count        |     |
+| Commander                |     |
+| File Explorer++          |     |
+| File Tree Alternative    |     |
+| Highlightr               |     |
+| Iconize                  |     |
+| Image auto upload Plugin |     |
+| Mind Map                 |     |
+| git                      |     |
+| Pandoc                   |     |
+| PDF++                    |     |
+| Recent Files             |     |
+| Tag Wrangler             |     |
+| Theme Picker             |     |
+| Various Complements      |     |
+| Vimrc Support            |     |
+| Agent Client             |     |
+| Smart Environment        |     |
