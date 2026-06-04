@@ -55,92 +55,119 @@
   <entry>
     <title>Obsidian 配置</title>
     <url>/2024/05/06/summary/Obsidian%20%E9%85%8D%E7%BD%AE/</url>
-    <content><![CDATA[<h1 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h1><table>
+    <content><![CDATA[<h1 id="obsidian"><a href="#obsidian" class="headerlink" title=".obsidian"></a>.obsidian</h1><p>settings</p>
+<ul>
+<li>files and links<ul>
+<li>advanced <ul>
+<li>override config folder<ul>
+<li>win 用 <code>.obsidian</code></li>
+<li>mac 用 <code>.obsidian.mac</code></li>
+<li>配置完后点输入框旁边的 <code>reload</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h1><table>
 <thead>
 <tr>
-<th>插件名</th>
-<th>描述</th>
+<th align="center">插件名</th>
+<th align="center">描述</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>Advanced Tables</td>
-<td></td>
+<td align="center">copilot</td>
+<td align="center"></td>
 </tr>
 <tr>
-<td>Better Command Palette</td>
-<td></td>
+<td align="center">Advanced Tables</td>
+<td align="center"></td>
 </tr>
 <tr>
-<td>Better Word Count</td>
-<td></td>
+<td align="center">agent client</td>
+<td align="center"></td>
 </tr>
 <tr>
-<td>Commander</td>
-<td></td>
+<td align="center">banners</td>
+<td align="center"></td>
 </tr>
 <tr>
-<td>File Explorer++</td>
-<td></td>
+<td align="center">Better Command Palette</td>
+<td align="center"></td>
 </tr>
 <tr>
-<td>File Tree Alternative</td>
-<td></td>
+<td align="center">Better Word Count</td>
+<td align="center"></td>
 </tr>
 <tr>
-<td>Highlightr</td>
-<td></td>
+<td align="center">Commander</td>
+<td align="center"></td>
 </tr>
 <tr>
-<td>Iconize</td>
-<td></td>
+<td align="center">File Explorer++</td>
+<td align="center"></td>
 </tr>
 <tr>
-<td>Image auto upload Plugin</td>
-<td></td>
+<td align="center">File Tree Alternative</td>
+<td align="center"></td>
 </tr>
 <tr>
-<td>Mind Map</td>
-<td></td>
+<td align="center">Highlightr</td>
+<td align="center"></td>
 </tr>
 <tr>
-<td>git</td>
-<td></td>
+<td align="center">Iconize</td>
+<td align="center"></td>
 </tr>
 <tr>
-<td>Pandoc</td>
-<td></td>
+<td align="center">Image auto upload Plugin</td>
+<td align="center"></td>
 </tr>
 <tr>
-<td>PDF++</td>
-<td></td>
+<td align="center">Mind Map</td>
+<td align="center"></td>
 </tr>
 <tr>
-<td>Recent Files</td>
-<td></td>
+<td align="center">git</td>
+<td align="center"></td>
 </tr>
 <tr>
-<td>Tag Wrangler</td>
-<td></td>
+<td align="center">Pandoc</td>
+<td align="center"></td>
 </tr>
 <tr>
-<td>Theme Picker</td>
-<td></td>
+<td align="center">PDF++</td>
+<td align="center"></td>
 </tr>
 <tr>
-<td>Various Complements</td>
-<td></td>
+<td align="center">Recent Files</td>
+<td align="center"></td>
 </tr>
 <tr>
-<td>Vimrc Support</td>
-<td></td>
+<td align="center">Tag Wrangler</td>
+<td align="center"></td>
 </tr>
 <tr>
-<td>Agent Client</td>
-<td></td>
+<td align="center">Theme Picker</td>
+<td align="center"></td>
 </tr>
 <tr>
-<td>Smart Environment</td>
-<td></td>
+<td align="center">Various Complements</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Vimrc Support</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Agent Client</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Smart Environment</td>
+<td align="center"></td>
 </tr>
 </tbody></table>
 ]]></content>
@@ -2265,7 +2292,9 @@
 <p><img src="https://cdn.nlark.com/yuque/0/2022/png/815906/1656525594451-d2f7ccb2-f1ae-4d4a-a0ee-8d70a7499dbc.png?x-oss-process=image/resize,w_1500,limit_0" alt="image"></p>
 <h2 id="scoop-直装"><a href="#scoop-直装" class="headerlink" title="scoop 直装"></a>scoop 直装</h2><h3 id="Grammarly"><a href="#Grammarly" class="headerlink" title="Grammarly"></a>Grammarly</h3><p><a href="https://www.grammarly.com/">https://www.grammarly.com/</a></p>
 <p><img src="http://obsidian.easyhappy.top/avan/20230924102114.png" alt="image.png"></p>
-<h2 id="未分类"><a href="#未分类" class="headerlink" title="未分类"></a>未分类</h2><h3 id="keyviz"><a href="#keyviz" class="headerlink" title="keyviz"></a>keyviz</h3><p>官方: <a href="https://keyviz.org/">https://keyviz.org/</a></p>
+<h2 id="未分类"><a href="#未分类" class="headerlink" title="未分类"></a>未分类</h2><h3 id="opencode"><a href="#opencode" class="headerlink" title="opencode"></a>opencode</h3><p>开源的 agent 工具</p>
+<h3 id="tailscale"><a href="#tailscale" class="headerlink" title="tailscale"></a>tailscale</h3><p>内网组网</p>
+<h3 id="keyviz"><a href="#keyviz" class="headerlink" title="keyviz"></a>keyviz</h3><p>官方: <a href="https://keyviz.org/">https://keyviz.org/</a></p>
 <h3 id="ollama"><a href="#ollama" class="headerlink" title="ollama"></a>ollama</h3><p>官网: <a href="https://ollama.com/">https://ollama.com/</a></p>
 <p><img src="https://s2.loli.net/2025/07/23/FWJxyIP1GHqp6Rw.png" alt="image.png"></p>
 <h3 id="OpenHands"><a href="#OpenHands" class="headerlink" title="OpenHands"></a>OpenHands</h3><p>基于 LLM 模型进行一系列自动化操作</p>
@@ -2392,8 +2421,9 @@
 <p><img src="https://cdn.nlark.com/yuque/0/2022/png/815906/1642992120712-c8613b24-6ae6-4dd0-b702-6ae1ab2c076d.png?x-oss-process=image/resize,w_1308,limit_0" alt="image"></p>
 <h3 id="iterm2"><a href="#iterm2" class="headerlink" title="iterm2"></a>iterm2</h3><p>下载地址：<a href="https://iterm2.com/">https://iterm2.com/</a></p>
 <p><img src="https://cdn.nlark.com/yuque/0/2021/png/815906/1621468923987-59a6d288-5b21-43a9-a300-eeada2cd26e2.png?x-oss-process=image/resize,w_1500,limit_0" alt="image"></p>
-<h3 id="Amazon-Q"><a href="#Amazon-Q" class="headerlink" title="Amazon Q"></a>Amazon Q</h3><p>原 Fig</p>
-<p>下载地址: <a href="https://docs.aws.amazon.com/codewhisperer/latest/userguide/command-line-getting-started-installing.html">https://docs.aws.amazon.com/codewhisperer/latest/userguide/command-line-getting-started-installing.html</a></p>
+<h3 id="Kiro-CLI"><a href="#Kiro-CLI" class="headerlink" title="Kiro CLI"></a>Kiro CLI</h3><p>原 Amazon Q<br>原 Fig</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -fsSL https://cli.kiro.dev/install | bash</span><br></pre></td></tr></table></figure>
+
 <p><img src="https://cdn.nlark.com/yuque/0/2022/png/815906/1654746726366-9ada18ee-23dd-4f04-9201-9d50359d96d4.png?x-oss-process=image/resize,w_1465,limit_0" alt="image"></p>
 <h3 id="IINA"><a href="#IINA" class="headerlink" title="IINA"></a>IINA</h3><p>下载地址：<a href="https://iina.io/">https://iina.io/</a></p>
 <p><img src="https://cdn.nlark.com/yuque/0/2021/png/815906/1625449507063-51757d49-2a91-438a-bfc8-e50f4b96f611.png?x-oss-process=image/resize,w_1500,limit_0" alt="image"></p>
@@ -7322,18 +7352,63 @@
 
 <p>如果需要使用清华国内源，先设置环境变量，在 <code>brew update</code></p>
 <p>设置按键时长</p>
-<p><img src="http://obsidian.easyhappy.top/avan/20230301005456.png"></p>
+<ul>
+<li>keyboard</li>
+<li>Key repeat rate 和 Delay until repeat 全部向右拉到 fast</li>
+</ul>
 <p>设置三脂拖拽</p>
-<p><img src="http://obsidian.easyhappy.top/obsidian/20230617133802.png"></p>
+<ul>
+<li>Accessibility</li>
+<li>Pointer Control</li>
+<li>Use trackpad for dragging</li>
+</ul>
 <p>开启轻点触发</p>
-<p><img src="http://obsidian.easyhappy.top/obsidian/20230617133842.png"></p>
+<ul>
+<li>Trackpad</li>
+<li>勾选 Tap to click</li>
+</ul>
 <p>设置 F1-F12 为默认键</p>
-<p><img src="http://obsidian.easyhappy.top/obsidian/20230617204437.png"></p>
+<ul>
+<li>keyboard</li>
+<li>Keyboard Shortcuts.</li>
+<li>Function Keys</li>
+<li>打钩 ‘Use F1,F2…’</li>
+</ul>
 <p>设置显示秒</p>
-<p><img src="http://obsidian.easyhappy.top/obsidian/20230618082251.png"></p>
-<h2 id="无法按住持续连按"><a href="#无法按住持续连按" class="headerlink" title="无法按住持续连按"></a>无法按住持续连按</h2><h3 id="关闭-ApplePressAndHoldEnabled"><a href="#关闭-ApplePressAndHoldEnabled" class="headerlink" title="关闭 ApplePressAndHoldEnabled"></a>关闭 ApplePressAndHoldEnabled</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">defaults write com.jetbrains.WebStorm ApplePressAndHoldEnabled -bool <span class="literal">false</span> <span class="comment"># webstorm</span></span><br><span class="line">defaults write com.jetbrains.intellij ApplePressAndHoldEnabled -bool <span class="literal">false</span> <span class="comment"># idea</span></span><br><span class="line">defaults write com.runningwithcrayons.Alfred ApplePressAndHoldEnabled -bool <span class="literal">false</span> <span class="comment"># Alfred</span></span><br><span class="line"></span><br><span class="line">defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool <span class="literal">false</span>              <span class="comment"># For VS Code</span></span><br><span class="line">defaults write com.microsoft.VSCodeInsiders ApplePressAndHoldEnabled -bool <span class="literal">false</span>      <span class="comment"># For VS Code Insider</span></span><br><span class="line">defaults write com.visualstudio.code.oss ApplePressAndHoldEnabled -bool <span class="literal">false</span>         <span class="comment"># For VS Codium</span></span><br><span class="line">defaults write com.microsoft.VSCodeExploration ApplePressAndHoldEnabled -bool <span class="literal">false</span>   <span class="comment"># For VS Codium Exploration users</span></span><br><span class="line"></span><br><span class="line">defaults write -g ApplePressAndHoldEnabled -bool <span class="literal">false</span> <span class="comment"># 全局设置</span></span><br><span class="line"></span><br><span class="line">defaults delete -g ApplePressAndHoldEnabled                                           <span class="comment"># If necessary, reset global default</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>Control Center</li>
+<li>Display the time with seconds</li>
+</ul>
+<p>关闭默认快捷启动栏使用 alfred 替换</p>
+<ul>
+<li>keyboard</li>
+<li>Keyboard Shortcuts.</li>
+<li>取消 Show Spotlight search 和 Show Finder search window</li>
+<li>配置 alfred 快捷键</li>
+</ul>
+<h2 id="无法按住持续连按"><a href="#无法按住持续连按" class="headerlink" title="无法按住持续连按"></a>无法按住持续连按</h2><h3 id="关闭-ApplePressAndHoldEnabled"><a href="#关闭-ApplePressAndHoldEnabled" class="headerlink" title="关闭 ApplePressAndHoldEnabled"></a>关闭 ApplePressAndHoldEnabled</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># obsidian</span></span><br><span class="line">defaults write md.obsidian ApplePressAndHoldEnabled -bool <span class="literal">false</span></span><br></pre></td></tr></table></figure>
 
-<h1 id="brew相关"><a href="#brew相关" class="headerlink" title="brew相关"></a>brew相关</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">brew install \</span><br><span class="line">cowsay \</span><br><span class="line">zplug \</span><br><span class="line">trash \</span><br><span class="line">neofetch \</span><br><span class="line">scc \</span><br><span class="line">duf \</span><br><span class="line">diff-so-fancy \</span><br><span class="line">lolcat \</span><br><span class="line">fzf \</span><br><span class="line">figlet \</span><br><span class="line">tmux \</span><br><span class="line">graphicsmagick \</span><br><span class="line">cmatrix \</span><br><span class="line">ctop</span><br><span class="line"></span><br><span class="line"><span class="comment"># ripgrep \</span></span><br><span class="line"><span class="comment"># bat \</span></span><br><span class="line"><span class="comment"># tldr \</span></span><br><span class="line"><span class="comment"># thefuck \</span></span><br><span class="line"><span class="comment"># nvm \</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># For cursor</span></span><br><span class="line">defaults write com.todesktop.230313mzl4w4u92 ApplePressAndHoldEnabled -bool <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># webstorm</span></span><br><span class="line">defaults write com.jetbrains.WebStorm ApplePressAndHoldEnabled -bool <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># idea</span></span><br><span class="line">defaults write com.jetbrains.intellij ApplePressAndHoldEnabled -bool <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Alfred</span></span><br><span class="line">defaults write com.runningwithcrayons.Alfred ApplePressAndHoldEnabled -bool <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># For VS Code</span></span><br><span class="line">defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># For VS Code Insider</span></span><br><span class="line">defaults write com.microsoft.VSCodeInsiders ApplePressAndHoldEnabled -bool <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># For VS Codium</span></span><br><span class="line">defaults write com.visualstudio.code.oss ApplePressAndHoldEnabled -bool <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># For VS Codium Exploration users</span></span><br><span class="line">defaults write com.microsoft.VSCodeExploration ApplePressAndHoldEnabled -bool <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 全局设置</span></span><br><span class="line">defaults write -g ApplePressAndHoldEnabled -bool <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># If necessary, reset global default</span></span><br><span class="line">defaults delete -g ApplePressAndHoldEnabled</span><br></pre></td></tr></table></figure>
+
+<h1 id="brew相关"><a href="#brew相关" class="headerlink" title="brew相关"></a>brew相关</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">brew install webp</span><br><span class="line">brew install pandoc</span><br><span class="line">brew install cowsay</span><br><span class="line">brew install zplug</span><br><span class="line">brew install trash</span><br><span class="line">brew install scc</span><br><span class="line">brew install duf</span><br><span class="line">brew install diff-so-fancy</span><br><span class="line">brew install lolcat</span><br><span class="line">brew install fzf</span><br><span class="line">brew install figlet</span><br><span class="line">brew install tmux</span><br><span class="line">brew install graphicsmagick</span><br><span class="line">brew install cmatrix</span><br><span class="line">brew install ctop</span><br><span class="line">brew install fastfetch</span><br><span class="line"></span><br><span class="line"><span class="comment"># ripgrep \</span></span><br><span class="line"><span class="comment"># bat \</span></span><br><span class="line"><span class="comment"># tldr \</span></span><br><span class="line"><span class="comment"># thefuck \</span></span><br><span class="line"><span class="comment"># nvm \</span></span><br></pre></td></tr></table></figure>
 
 <ul>
 <li>scc 更好的统计代码量</li>
@@ -7352,7 +7427,7 @@
 </li>
 </ul>
 <h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><p>nvm 安装完后，需要创建 <code>~/.nvm</code> 以及更新 <code>~/.zshrc</code> 的配置</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">brew install --cask \</span><br><span class="line">iterm2 \</span><br><span class="line">bob \</span><br><span class="line">mqttx \</span><br><span class="line">firefox \</span><br><span class="line">postman \</span><br><span class="line">nutstore \</span><br><span class="line">soapui \</span><br><span class="line">jetbrains-toolbox \</span><br><span class="line">iina \</span><br><span class="line">adrive \</span><br><span class="line">baidunetdisk \</span><br><span class="line">apifox \</span><br><span class="line">wechatwebdevtools \</span><br><span class="line">visual-studio-code \</span><br><span class="line">ticktick \</span><br><span class="line">snipaste \</span><br><span class="line">wechat \</span><br><span class="line">qq \</span><br><span class="line">telegram \</span><br><span class="line">sourcetree \</span><br><span class="line">sunloginclient \</span><br><span class="line">wechatwork \</span><br><span class="line">feishu \</span><br><span class="line">discord \</span><br><span class="line">tencent-lemon \</span><br><span class="line">neteasemusic \</span><br><span class="line">picgo \</span><br><span class="line">macdown \</span><br><span class="line">1password \</span><br><span class="line">drawio \</span><br><span class="line">microsoft-edge \</span><br><span class="line">mongodb-compass \</span><br><span class="line">chatbox \</span><br><span class="line">steam \</span><br><span class="line">google-chrome \</span><br><span class="line">notion \</span><br><span class="line">notion-calendar \</span><br><span class="line">tencent-meeting \</span><br><span class="line">josm \</span><br><span class="line">hbuilderx \</span><br><span class="line">font-jetbrains-mono \</span><br><span class="line">sublime-text \</span><br><span class="line">thunder \</span><br><span class="line">obsidian</span><br><span class="line"></span><br><span class="line"><span class="comment"># 新版</span></span><br><span class="line">brew install --cask \</span><br><span class="line">docker \</span><br><span class="line">proxyman \</span><br><span class="line">todesk \</span><br><span class="line">dingtalk \</span><br><span class="line">arc \</span><br><span class="line">obs \</span><br><span class="line"></span><br><span class="line"><span class="comment"># spotify \</span></span><br><span class="line"><span class="comment"># background-music \</span></span><br><span class="line"><span class="comment"># warp \</span></span><br><span class="line"><span class="comment"># youdaonote \</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">brew install --cask mqttx</span><br><span class="line">brew install --cask firefox</span><br><span class="line">brew install --cask postman</span><br><span class="line">brew install --cask nutstore</span><br><span class="line">brew install --cask soapui</span><br><span class="line">brew install --cask jetbrains-toolbox</span><br><span class="line">brew install --cask iina</span><br><span class="line">brew install --cask adrive</span><br><span class="line">brew install --cask baidunetdisk</span><br><span class="line">brew install --cask wechatwebdevtools</span><br><span class="line">brew install --cask visual-studio-code</span><br><span class="line">brew install --cask ticktick</span><br><span class="line">brew install --cask snipaste</span><br><span class="line">brew install --cask sourcetree</span><br><span class="line">brew install --cask sunloginclient</span><br><span class="line">brew install --cask feishu</span><br><span class="line">brew install --cask discord</span><br><span class="line">brew install --cask tencent-lemon</span><br><span class="line">brew install --cask neteasemusic</span><br><span class="line">brew install --cask picgo</span><br><span class="line">brew install --cask macdown</span><br><span class="line">brew install --cask drawio</span><br><span class="line">brew install --cask microsoft-edge</span><br><span class="line">brew install --cask mongodb-compass</span><br><span class="line">brew install --cask chatbox</span><br><span class="line">brew install --cask steam</span><br><span class="line">brew install --cask tencent-meeting</span><br><span class="line">brew install --cask josm</span><br><span class="line">brew install --cask hbuilderx</span><br><span class="line">brew install --cask sublime-text</span><br><span class="line">brew install --cask thunder</span><br><span class="line">brew install --cask notion</span><br><span class="line">brew install --cask 1password</span><br><span class="line">brew install --cask bob</span><br><span class="line">brew install --cask apifox</span><br><span class="line">brew install --cask telegram</span><br><span class="line">brew install --cask wechat</span><br><span class="line">brew install --cask qq</span><br><span class="line">brew install --cask wechatwork</span><br><span class="line">brew install --cask google-chrome</span><br><span class="line">brew install --cask font-jetbrains-mono</span><br><span class="line">brew install --cask iterm2</span><br><span class="line">brew install --cask obsidian</span><br><span class="line">brew install --cask chatgpt</span><br><span class="line"></span><br><span class="line"><span class="comment"># 新版 mac 系统[]</span></span><br><span class="line">brew install --cask docker</span><br><span class="line">brew install --cask proxyman</span><br><span class="line">brew install --cask dingtalk</span><br><span class="line">brew install --cask obs</span><br><span class="line"></span><br><span class="line"><span class="comment"># 不可用</span></span><br><span class="line"><span class="comment"># todesk \</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 不常用</span></span><br><span class="line"><span class="comment"># arc \</span></span><br><span class="line"><span class="comment"># spotify \</span></span><br><span class="line"><span class="comment"># background-music \</span></span><br><span class="line"><span class="comment"># warp \</span></span><br><span class="line"><span class="comment"># youdaonote \</span></span><br></pre></td></tr></table></figure>
 
 <h1 id="特殊版本软件"><a href="#特殊版本软件" class="headerlink" title="特殊版本软件"></a>特殊版本软件</h1><p>[[软件推荐]]</p>
 <h1 id="配置-git"><a href="#配置-git" class="headerlink" title="配置 git"></a>配置 git</h1><p>[[Git#git 基本配置]]</p>
@@ -8702,7 +8777,7 @@
     <content><![CDATA[<h2 id="1、使用-jetbrains-快捷键需删除以下快捷键防止冲突"><a href="#1、使用-jetbrains-快捷键需删除以下快捷键防止冲突" class="headerlink" title="1、使用 jetbrains 快捷键需删除以下快捷键防止冲突"></a>1、使用 jetbrains 快捷键需删除以下快捷键防止冲突</h2><ul>
 <li>Debug:Start Without Debugging —— Control-D —— 弹出 Debug</li>
 </ul>
-<h2 id="2、VSCode-推荐的插件"><a href="#2、VSCode-推荐的插件" class="headerlink" title="2、VSCode 推荐的插件"></a>2、VSCode 推荐的插件</h2><table>
+<h2 id="2、VSCode-推荐的插件"><a href="#2、VSCode-推荐的插件" class="headerlink" title="2、VSCode 推荐的插件"></a>2、VSCode 推荐的插件</h2><h3 id="常用"><a href="#常用" class="headerlink" title="常用"></a>常用</h3><table>
 <thead>
 <tr>
 <th>插件名</th>
@@ -8710,14 +8785,6 @@
 </tr>
 </thead>
 <tbody><tr>
-<td>.NET Install Tool</td>
-<td></td>
-</tr>
-<tr>
-<td>Amazon Q</td>
-<td>Amazon ai 代码提示生成</td>
-</tr>
-<tr>
 <td>antd Design Token</td>
 <td>antd 的 token 插件</td>
 </tr>
@@ -8742,32 +8809,8 @@
 <td>同步修改标签名</td>
 </tr>
 <tr>
-<td>Biome</td>
-<td>开箱即用的校验&amp;格式化&amp;排序一体插件</td>
-</tr>
-<tr>
-<td>Bito AI Code Reviews</td>
-<td></td>
-</tr>
-<tr>
 <td>Bracket Lens</td>
 <td>代码块提示</td>
-</tr>
-<tr>
-<td>C&#x2F;C++</td>
-<td></td>
-</tr>
-<tr>
-<td>c#</td>
-<td></td>
-</tr>
-<tr>
-<td>Clang-Format</td>
-<td></td>
-</tr>
-<tr>
-<td>Cline</td>
-<td>AI 编程助手</td>
 </tr>
 <tr>
 <td>code runner</td>
@@ -8790,10 +8833,6 @@
 <td></td>
 </tr>
 <tr>
-<td>Cody: AI Code Assistant</td>
-<td>AI 编程助手</td>
-</tr>
-<tr>
 <td>Color Highlight</td>
 <td>代码高亮</td>
 </tr>
@@ -8804,10 +8843,6 @@
 <tr>
 <td>Container Tools</td>
 <td>微软官方的容器工具集</td>
-</tr>
-<tr>
-<td>Continue</td>
-<td>代码补全助手, 并有类似 Cursor 核心的行内编辑功能</td>
 </tr>
 <tr>
 <td>CSS Peek</td>
@@ -8826,8 +8861,8 @@
 <td>docker 管理</td>
 </tr>
 <tr>
-<td>Docker Explorer</td>
-<td>docker 管理工具包括 Azure 容器仓库</td>
+<td>Docker DX</td>
+<td></td>
 </tr>
 <tr>
 <td>DotENV</td>
@@ -8902,10 +8937,6 @@
 <td>二进制预览</td>
 </tr>
 <tr>
-<td>Image preview</td>
-<td>图片预览</td>
-</tr>
-<tr>
 <td>Import Cost</td>
 <td>导包的大小</td>
 </tr>
@@ -8958,20 +8989,8 @@
 <td>java 语法支持</td>
 </tr>
 <tr>
-<td>learn-markdown</td>
-<td>markdown 的工具集</td>
-</tr>
-<tr>
-<td>learn-preview</td>
-<td>markdown 预览</td>
-</tr>
-<tr>
 <td>LeetCode</td>
 <td></td>
-</tr>
-<tr>
-<td>Lingma</td>
-<td>通义 ai 代码提示生成</td>
 </tr>
 <tr>
 <td>Live Server</td>
@@ -8998,8 +9017,16 @@
 <td>mdx 语法高亮</td>
 </tr>
 <tr>
+<td>Mermaid</td>
+<td></td>
+</tr>
+<tr>
 <td>Mermaid Editor</td>
 <td>流程图预览</td>
+</tr>
+<tr>
+<td>Mermaid Markdown Syntax Highlighting</td>
+<td></td>
 </tr>
 <tr>
 <td>Mintlify Doc Writer for Python, JavaScript, TypeScript, C++, PHP, Java</td>
@@ -9026,10 +9053,6 @@
 <td>给不同窗口配置各自的颜色</td>
 </tr>
 <tr>
-<td>PHP Debug</td>
-<td></td>
-</tr>
-<tr>
 <td>Prettier - Code formatter</td>
 <td></td>
 </tr>
@@ -9040,10 +9063,6 @@
 <tr>
 <td>Project Manager</td>
 <td></td>
-</tr>
-<tr>
-<td>quick open lazygit</td>
-<td>快速打开 lazygit</td>
 </tr>
 <tr>
 <td>Quokka.js</td>
@@ -9066,10 +9085,6 @@
 <td>react 代码片段</td>
 </tr>
 <tr>
-<td>ReactTree</td>
-<td>显示 react 的树节点</td>
-</tr>
-<tr>
 <td>Regex Previewer</td>
 <td>正则匹配测试</td>
 </tr>
@@ -9090,24 +9105,12 @@
 <td>ssh 远程 git 仓库控制</td>
 </tr>
 <tr>
-<td>Rome</td>
-<td>Rome 格式化工具</td>
-</tr>
-<tr>
-<td>Roo Code</td>
-<td>AI 编程助手</td>
-</tr>
-<tr>
-<td>rust-analyzer</td>
-<td>rust 语法支持</td>
-</tr>
-<tr>
 <td>Sass (.sass only)</td>
 <td>sass 语法高亮</td>
 </tr>
 <tr>
 <td>SCSS Formatter</td>
-<td>sass 格式化工具</td>
+<td>Vue Extension Box 包里面包含</td>
 </tr>
 <tr>
 <td>Simple React Snippets</td>
@@ -9138,40 +9141,8 @@
 <td></td>
 </tr>
 <tr>
-<td>TRAE AI: Coding Assistant</td>
-<td>自动补全工具</td>
-</tr>
-<tr>
-<td>uni-app-schemas</td>
-<td></td>
-</tr>
-<tr>
-<td>uni-app-snippets</td>
-<td></td>
-</tr>
-<tr>
-<td>uni-cloud-snippets</td>
-<td></td>
-</tr>
-<tr>
-<td>uni-create-view</td>
-<td></td>
-</tr>
-<tr>
-<td>uni-helper</td>
-<td></td>
-</tr>
-<tr>
-<td>uni-highlight</td>
-<td></td>
-</tr>
-<tr>
-<td>uni-ui-snippets</td>
-<td></td>
-</tr>
-<tr>
 <td>Version Lens</td>
-<td>package 版本显示</td>
+<td></td>
 </tr>
 <tr>
 <td>Vim</td>
@@ -9183,6 +9154,10 @@
 </tr>
 <tr>
 <td>Vite</td>
+<td></td>
+</tr>
+<tr>
+<td>vscode-pdf</td>
 <td></td>
 </tr>
 <tr>
@@ -9203,7 +9178,7 @@
 </tr>
 <tr>
 <td>Vue Extension Box</td>
-<td>vue 拓展套餐</td>
+<td>vue 扩展插件打包安装</td>
 </tr>
 <tr>
 <td>Vue Peek</td>
@@ -9245,13 +9220,133 @@
 <td>YAML</td>
 <td></td>
 </tr>
+</tbody></table>
+<h2 id="不显示"><a href="#不显示" class="headerlink" title="不显示"></a>不显示</h2><table>
+<thead>
 <tr>
+<th>插件名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
 <td>GitHub Copilot</td>
 <td></td>
 </tr>
 <tr>
 <td>GitHub Copilot Chat</td>
 <td></td>
+</tr>
+</tbody></table>
+<h3 id="不常用"><a href="#不常用" class="headerlink" title="不常用"></a>不常用</h3><table>
+<thead>
+<tr>
+<th>插件名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Amazon Q</td>
+<td></td>
+</tr>
+<tr>
+<td>Biome</td>
+<td>开箱即用的校验&amp;格式化&amp;排序一体插件</td>
+</tr>
+<tr>
+<td>Bito AI Code Reviews</td>
+<td></td>
+</tr>
+<tr>
+<td>Cline</td>
+<td></td>
+</tr>
+<tr>
+<td>Cody: AI Code Assistant</td>
+<td>AI 编程助手</td>
+</tr>
+<tr>
+<td>Continue</td>
+<td>代码补全助手, 并有类似 Cursor 核心的行内编辑功能</td>
+</tr>
+<tr>
+<td>Qoder CN (Formerly Lingma)</td>
+<td>通义 ai 代码提示生成</td>
+</tr>
+<tr>
+<td>Rome</td>
+<td>Rome 格式化工具</td>
+</tr>
+<tr>
+<td>Roo Code</td>
+<td></td>
+</tr>
+<tr>
+<td>TRAE AI: Coding Assistant</td>
+<td>自动补全工具</td>
+</tr>
+<tr>
+<td>uni-app-schemas</td>
+<td></td>
+</tr>
+<tr>
+<td>uni-app-snippets</td>
+<td></td>
+</tr>
+<tr>
+<td>uni-cloud-snippets</td>
+<td></td>
+</tr>
+<tr>
+<td>uni-helper</td>
+<td></td>
+</tr>
+<tr>
+<td>uni-highlight</td>
+<td></td>
+</tr>
+<tr>
+<td>uni-ui-snippets</td>
+<td></td>
+</tr>
+<tr>
+<td>MarsCode: AI Coding Assistant</td>
+<td>Trae 豆包旗下的编程助手</td>
+</tr>
+<tr>
+<td>augment</td>
+<td>类似 cursor 和 Claude code 的 compose 插件</td>
+</tr>
+</tbody></table>
+<h3 id="禁用"><a href="#禁用" class="headerlink" title="禁用"></a>禁用</h3><table>
+<thead>
+<tr>
+<th>插件名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>.NET Install Tool</td>
+<td></td>
+</tr>
+<tr>
+<td>C&#x2F;C++</td>
+<td></td>
+</tr>
+<tr>
+<td>c#</td>
+<td></td>
+</tr>
+<tr>
+<td>Clang-Format</td>
+<td>c 语言格式化</td>
+</tr>
+<tr>
+<td>PHP Debug</td>
+<td></td>
+</tr>
+<tr>
+<td>rust-analyzer</td>
+<td>rust 语法支持</td>
 </tr>
 </tbody></table>
 <h2 id="3、其他"><a href="#3、其他" class="headerlink" title="3、其他"></a>3、其他</h2><h3 id="3-1-使用-WSL-的-Linux-终端"><a href="#3-1-使用-WSL-的-Linux-终端" class="headerlink" title="3.1 使用 WSL 的 Linux 终端"></a>3.1 使用 WSL 的 Linux 终端</h3><ol>
