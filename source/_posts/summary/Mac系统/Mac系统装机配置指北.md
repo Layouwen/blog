@@ -61,62 +61,112 @@ curl -fsSL https://cli.coderabbit.ai/install.sh | sh
 如果需要使用清华国内源，先设置环境变量，在 `brew update`
 
 设置按键时长
-
-![](http://obsidian.easyhappy.top/avan/20230301005456.png)
+- keyboard
+- Key repeat rate 和 Delay until repeat 全部向右拉到 fast
 
 设置三脂拖拽
-
-![](http://obsidian.easyhappy.top/obsidian/20230617133802.png)
+- Accessibility
+- Pointer Control
+- Use trackpad for dragging
 
 开启轻点触发
-
-![](http://obsidian.easyhappy.top/obsidian/20230617133842.png)
+- Trackpad
+- 勾选 Tap to click
 
 设置 F1-F12 为默认键
-
-![](http://obsidian.easyhappy.top/obsidian/20230617204437.png)
+- keyboard
+- Keyboard Shortcuts.
+- Function Keys
+- 打钩 'Use F1,F2...'
 
 设置显示秒
+- Control Center
+- Display the time with seconds
 
-![](http://obsidian.easyhappy.top/obsidian/20230618082251.png)
+关闭默认快捷启动栏使用 alfred 替换
+- keyboard
+- Keyboard Shortcuts.
+- 取消 Show Spotlight search 和 Show Finder search window
+- 配置 alfred 快捷键
 
 ## 无法按住持续连按
 
 ### 关闭 ApplePressAndHoldEnabled
 
 ```bash
-defaults write com.jetbrains.WebStorm ApplePressAndHoldEnabled -bool false # webstorm
-defaults write com.jetbrains.intellij ApplePressAndHoldEnabled -bool false # idea
-defaults write com.runningwithcrayons.Alfred ApplePressAndHoldEnabled -bool false # Alfred
+# obsidian
+defaults write md.obsidian ApplePressAndHoldEnabled -bool false
+```
 
-defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false              # For VS Code
-defaults write com.microsoft.VSCodeInsiders ApplePressAndHoldEnabled -bool false      # For VS Code Insider
-defaults write com.visualstudio.code.oss ApplePressAndHoldEnabled -bool false         # For VS Codium
-defaults write com.microsoft.VSCodeExploration ApplePressAndHoldEnabled -bool false   # For VS Codium Exploration users
+```bash
+# For cursor
+defaults write com.todesktop.230313mzl4w4u92 ApplePressAndHoldEnabled -bool false
+```
 
-defaults write -g ApplePressAndHoldEnabled -bool false # 全局设置
+```bash
+# webstorm
+defaults write com.jetbrains.WebStorm ApplePressAndHoldEnabled -bool false
+```
 
-defaults delete -g ApplePressAndHoldEnabled                                           # If necessary, reset global default
+```bash
+# idea
+defaults write com.jetbrains.intellij ApplePressAndHoldEnabled -bool false
+```
+
+```bash
+# Alfred
+defaults write com.runningwithcrayons.Alfred ApplePressAndHoldEnabled -bool false
+```
+
+```bash
+# For VS Code
+defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
+```
+
+```bash
+# For VS Code Insider
+defaults write com.microsoft.VSCodeInsiders ApplePressAndHoldEnabled -bool false
+```
+
+```bash
+# For VS Codium
+defaults write com.visualstudio.code.oss ApplePressAndHoldEnabled -bool false
+```
+
+```bash
+# For VS Codium Exploration users
+defaults write com.microsoft.VSCodeExploration ApplePressAndHoldEnabled -bool false
+```
+
+```bash
+# 全局设置
+defaults write -g ApplePressAndHoldEnabled -bool false
+```
+
+```bash
+# If necessary, reset global default
+defaults delete -g ApplePressAndHoldEnabled
 ```
 
 # brew相关
 
 ```bash
-brew install \
-cowsay \
-zplug \
-trash \
-neofetch \
-scc \
-duf \
-diff-so-fancy \
-lolcat \
-fzf \
-figlet \
-tmux \
-graphicsmagick \
-cmatrix \
-ctop
+brew install webp
+brew install pandoc
+brew install cowsay
+brew install zplug
+brew install trash
+brew install scc
+brew install duf
+brew install diff-so-fancy
+brew install lolcat
+brew install fzf
+brew install figlet
+brew install tmux
+brew install graphicsmagick
+brew install cmatrix
+brew install ctop
+brew install fastfetch
 
 # ripgrep \
 # bat \
@@ -143,61 +193,62 @@ ctop
 nvm 安装完后，需要创建 `~/.nvm` 以及更新 `~/.zshrc` 的配置
 
 ```bash
-brew install --cask \
-iterm2 \
-bob \
-mqttx \
-firefox \
-postman \
-nutstore \
-soapui \
-jetbrains-toolbox \
-iina \
-adrive \
-baidunetdisk \
-apifox \
-wechatwebdevtools \
-visual-studio-code \
-ticktick \
-snipaste \
-wechat \
-qq \
-telegram \
-sourcetree \
-sunloginclient \
-wechatwork \
-feishu \
-discord \
-tencent-lemon \
-neteasemusic \
-picgo \
-macdown \
-1password \
-drawio \
-microsoft-edge \
-mongodb-compass \
-chatbox \
-steam \
-google-chrome \
-notion \
-notion-calendar \
-tencent-meeting \
-josm \
-hbuilderx \
-font-jetbrains-mono \
-sublime-text \
-thunder \
-obsidian
+brew install --cask mqttx
+brew install --cask firefox
+brew install --cask postman
+brew install --cask nutstore
+brew install --cask soapui
+brew install --cask jetbrains-toolbox
+brew install --cask iina
+brew install --cask adrive
+brew install --cask baidunetdisk
+brew install --cask wechatwebdevtools
+brew install --cask visual-studio-code
+brew install --cask ticktick
+brew install --cask snipaste
+brew install --cask sourcetree
+brew install --cask sunloginclient
+brew install --cask feishu
+brew install --cask discord
+brew install --cask tencent-lemon
+brew install --cask neteasemusic
+brew install --cask picgo
+brew install --cask macdown
+brew install --cask drawio
+brew install --cask microsoft-edge
+brew install --cask mongodb-compass
+brew install --cask chatbox
+brew install --cask steam
+brew install --cask tencent-meeting
+brew install --cask josm
+brew install --cask hbuilderx
+brew install --cask sublime-text
+brew install --cask thunder
+brew install --cask notion
+brew install --cask 1password
+brew install --cask bob
+brew install --cask apifox
+brew install --cask telegram
+brew install --cask wechat
+brew install --cask qq
+brew install --cask wechatwork
+brew install --cask google-chrome
+brew install --cask font-jetbrains-mono
+brew install --cask iterm2
+brew install --cask obsidian
+brew install --cask chatgpt
 
-# 新版
-brew install --cask \
-docker \
-proxyman \
-todesk \
-dingtalk \
-arc \
-obs \
+# 新版 mac 系统[]
+brew install --cask docker
+brew install --cask proxyman
+brew install --cask dingtalk
+brew install --cask obs
 
+# 不可用
+# todesk \
+
+# 不常用
+# arc \
 # spotify \
 # background-music \
 # warp \

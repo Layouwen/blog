@@ -16,38 +16,30 @@ uuid: 67cfc7ae-b4bb-4152-9441-2f0d3866e7f8
 
 ## 2、VSCode 推荐的插件
 
+### 常用
+
 | 插件名                                                                    | 描述                                             |
 | ---------------------------------------------------------------------- | ---------------------------------------------- |
-| .NET Install Tool                                                      |                                                |
-| Amazon Q                                                               | Amazon ai 代码提示生成                               |
 | antd Design Token                                                      | antd 的 token 插件                                |
 | any-rule                                                               | 正则大全                                           |
 | Apc Customize UI++                                                     | vscode 页面定制                                    |
 | Auto Close Tag                                                         | 自定闭合标签                                         |
 | Auto Import                                                            | 自动导入                                           |
 | Auto Rename Tag                                                        | 同步修改标签名                                        |
-| Biome                                                                  | 开箱即用的校验&格式化&排序一体插件                             |
-| Bito AI Code Reviews                                                   |                                                |
 | Bracket Lens                                                           | 代码块提示                                          |
-| C/C++                                                                  |                                                |
-| c#                                                                     |                                                |
-| Clang-Format                                                           |                                                |
-| Cline                                                                  | AI 编程助手                                        |
 | code runner                                                            | 代码执行                                           |
 | Code Spell Checker                                                     | 拼写检测                                           |
 | CodeRabbit                                                             | PR Review 工具                                   |
 | CodeSnap                                                               | 代码截图                                           |
 | Codex – OpenAI’s coding agent                                          |                                                |
-| Cody: AI Code Assistant                                                | AI 编程助手                                        |
 | Color Highlight                                                        | 代码高亮                                           |
 | Console Ninja                                                          | console vscode 管理工具                            |
 | Container Tools                                                        | 微软官方的容器工具集                                     |
-| Continue                                                               | 代码补全助手, 并有类似 Cursor 核心的行内编辑功能                  |
 | CSS Peek                                                               | css 索引调整                                       |
 | Deploy                                                                 | 部署脚本执行                                         |
 | Dev Containers                                                         | 将 docker 容器作为开发环境                              |
 | Docker                                                                 | docker 管理                                      |
-| Docker Explorer                                                        | docker 管理工具包括 Azure 容器仓库                       |
+| Docker DX                                                              |                                                |
 | DotENV                                                                 | env 高亮                                         |
 | Draw.io Integration                                                    | drawio 集成                                      |
 | EditorConfig                                                           | editorconfig 配置高亮                              |
@@ -66,7 +58,6 @@ uuid: 67cfc7ae-b4bb-4152-9441-2f0d3866e7f8
 | Graphviz (dot) language support for Visual Studio Code                 | 图可视化语法支持                                       |
 | Graphviz Preview                                                       | 图可视化预览                                         |
 | Hex Editor                                                             | 二进制预览                                          |
-| Image preview                                                          | 图片预览                                           |
 | Import Cost                                                            | 导包的大小                                          |
 | indent-rainbow                                                         | 彩色缩进                                           |
 | IntelliJ IDEA Keybindings                                              | idea 键盘映射                                      |
@@ -80,44 +71,37 @@ uuid: 67cfc7ae-b4bb-4152-9441-2f0d3866e7f8
 | Jump To Alias File                                                     | 文件别名跳转                                         |
 | Kubernetes                                                             |                                                |
 | Language Support for Java(TM) by Red Hat                               | java 语法支持                                      |
-| learn-markdown                                                         | markdown 的工具集                                  |
-| learn-preview                                                          | markdown 预览                                    |
 | LeetCode                                                               |                                                |
-| Lingma                                                                 | 通义 ai 代码提示生成                                   |
 | Live Server                                                            | 静态服务                                           |
 | Live Share                                                             | 实时分享编辑                                         |
 | Markdown All in One                                                    | markdown 语法和预览                                 |
 | Markdown Preview Enhanced                                              | markdown 预览增强                                  |
 | Material Icon Theme                                                    | vscode 文件夹的 icon 图标                            |
 | MDX                                                                    | mdx 语法高亮                                       |
+| Mermaid                                                                |                                                |
 | Mermaid Editor                                                         | 流程图预览                                          |
+| Mermaid Markdown Syntax Highlighting                                   |                                                |
 | Mintlify Doc Writer for Python, JavaScript, TypeScript, C++, PHP, Java | 文档生成                                           |
 | Nuxtr                                                                  | nuxt 插件                                        |
 | Paste JSON as Code                                                     | json 转各种类型声明                                   |
 | Path Autocomplete                                                      | 路径补全                                           |
 | Path Intellisense                                                      | path 补全                                        |
 | Peacock                                                                | 给不同窗口配置各自的颜色                                   |
-| PHP Debug                                                              |                                                |
 | Prettier - Code formatter                                              |                                                |
 | Prisma                                                                 |                                                |
 | Project Manager                                                        |                                                |
-| quick open lazygit                                                     | 快速打开 lazygit                                   |
 | Quokka.js                                                              | 在 vscode 中的显示计算结果                              |
 | React Style Helper                                                     | react style module 补全提示                        |
 | react-intl-linter                                                      | react i18 替换                                   |
 | React-Native/React/Redux snippets for es6/es7                          | react 代码片段                                     |
 | React/Redux/react-router Snippets                                      | react 代码片段                                     |
-| ReactTree                                                              | 显示 react 的树节点                                  |
 | Regex Previewer                                                        | 正则匹配测试                                         |
 | Remote - SSH                                                           | ssh 远程开发                                       |
 | Remote - SSH: Editing Configuration Files                              | ssh 配置文件高亮                                     |
 | Remote Explorer                                                        | ssh 远程资源管理                                     |
 | Remote Repositories                                                    | ssh 远程 git 仓库控制                                |
-| Rome                                                                   | Rome 格式化工具                                     |
-| Roo Code                                                               | AI 编程助手                                        |
-| rust-analyzer                                                          | rust 语法支持                                      |
 | Sass (.sass only)                                                      | sass 语法高亮                                      |
-| SCSS Formatter                                                         | sass 格式化工具                                     |
+| SCSS Formatter                                                         | Vue Extension Box 包里面包含                        |
 | Simple React Snippets                                                  | react 代码片段                                     |
 | SQL Formatter                                                          |                                                |
 | stylus                                                                 | stylus 语法高亮                                    |
@@ -125,23 +109,16 @@ uuid: 67cfc7ae-b4bb-4152-9441-2f0d3866e7f8
 | Tailwind CSS IntelliSense                                              | tailwind 高亮                                    |
 | TODO Highlight                                                         |                                                |
 | Todo Tree                                                              |                                                |
-| TRAE AI: Coding Assistant                                              | 自动补全工具                                         |
-| uni-app-schemas                                                        |                                                |
-| uni-app-snippets                                                       |                                                |
-| uni-cloud-snippets                                                     |                                                |
-| uni-create-view                                                        |                                                |
-| uni-helper                                                             |                                                |
-| uni-highlight                                                          |                                                |
-| uni-ui-snippets                                                        |                                                |
-| Version Lens                                                           | package 版本显示                                   |
+| Version Lens                                                           |                                                |
 | Vim                                                                    |                                                |
 | Vira Theme                                                             | material 的主题废弃更新版                              |
 | Vite                                                                   |                                                |
+| vscode-pdf                                                             |                                                |
 | vscode-random                                                          | 随机数据生成                                         |
 | Vue (Official)                                                         |                                                |
 | Vue 3 Snippets                                                         |                                                |
 | Vue 3 Support - All In One                                             |                                                |
-| Vue Extension Box                                                      | vue 拓展套餐                                       |
+| Vue Extension Box                                                      | vue 扩展插件打包安装                                   |
 | Vue Peek                                                               |                                                |
 | Vue VSCode Snippets                                                    |                                                |
 | vue-helper                                                             | Element-Ul, Element Plus, Ant Desigin Vue 文档增强 |
@@ -152,8 +129,49 @@ uuid: 67cfc7ae-b4bb-4152-9441-2f0d3866e7f8
 | WXML - Language Service                                                | 微信 wxml 语法支持                                   |
 | XML Formatter                                                          |                                                |
 | YAML                                                                   |                                                |
-| GitHub Copilot                                                         |                                                |
-| GitHub Copilot Chat                                                    |                                                |
+
+## 不显示
+
+| 插件名                 | 描述  |
+| ------------------- | --- |
+| GitHub Copilot      |     |
+| GitHub Copilot Chat |     |
+
+### 不常用
+
+| 插件名                           | 描述                                   |
+| ----------------------------- | ------------------------------------ |
+| Amazon Q                      |                                      |
+| Biome                         | 开箱即用的校验&格式化&排序一体插件                   |
+| Bito AI Code Reviews          |                                      |
+| Cline                         |                                      |
+| Cody: AI Code Assistant       | AI 编程助手                              |
+| Continue                      | 代码补全助手, 并有类似 Cursor 核心的行内编辑功能        |
+| Qoder CN (Formerly Lingma)    | 通义 ai 代码提示生成                         |
+| Rome                          | Rome 格式化工具                           |
+| Roo Code                      |                                      |
+| TRAE AI: Coding Assistant     | 自动补全工具                               |
+| uni-app-schemas               |                                      |
+| uni-app-snippets              |                                      |
+| uni-cloud-snippets            |                                      |
+| uni-helper                    |                                      |
+| uni-highlight                 |                                      |
+| uni-ui-snippets               |                                      |
+| MarsCode: AI Coding Assistant | Trae 豆包旗下的编程助手                       |
+| augment                       | 类似 cursor 和 Claude code 的 compose 插件 |
+
+
+### 禁用
+
+| 插件名               | 描述          |
+| ----------------- | ----------- |
+| .NET Install Tool |             |
+| C/C++             |             |
+| c#                |             |
+| Clang-Format      | c 语言格式化     |
+| PHP Debug         |             |
+| rust-analyzer     | rust 语法支持   |
+
 
 ## 3、其他
 
