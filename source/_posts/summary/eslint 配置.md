@@ -1,5 +1,12 @@
 ---
 uuid: f1e580af-84c6-4b97-961a-986dd3edd5d5
+title: eslint 配置
+date: 2020-02-12 16:40
+categories:
+  - 汇总
+tags:
+  - eslint
+  - 汇总
 ---
 配置默认值
 
