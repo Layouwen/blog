@@ -268,8 +268,8 @@
       </tags>
   </entry>
   <entry>
-    <title></title>
-    <url>/2026/06/05/summary/eslint%20%E9%85%8D%E7%BD%AE/</url>
+    <title>eslint 配置</title>
+    <url>/2020/02/12/summary/eslint%20%E9%85%8D%E7%BD%AE/</url>
     <content><![CDATA[<p>配置默认值</p>
 <figure class="highlight ts"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123;</span><br><span class="line">  <span class="attr">angular</span>: enableAngular = <span class="literal">false</span>,</span><br><span class="line">  <span class="attr">astro</span>: enableAstro = <span class="literal">false</span>,</span><br><span class="line">  autoRenamePlugins = <span class="literal">true</span>,</span><br><span class="line">  componentExts = [],</span><br><span class="line">  <span class="attr">e18e</span>: enableE18e = <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">gitignore</span>: enableGitignore = <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">ignores</span>: userIgnores = [],</span><br><span class="line">  <span class="attr">imports</span>: enableImports = <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">jsdoc</span>: enableJsdoc = <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">jsx</span>: enableJsx = <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">nextjs</span>: enableNextjs = <span class="literal">false</span>,</span><br><span class="line">  <span class="attr">node</span>: enableNode = <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">perfectionist</span>: enablePerfectionist = <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">pnpm</span>: enableCatalogs = !!<span class="title function_">findUpSync</span>(<span class="string">&#x27;pnpm-workspace.yaml&#x27;</span>),</span><br><span class="line">  <span class="attr">react</span>: enableReact = <span class="literal">false</span>,</span><br><span class="line">  <span class="attr">regexp</span>: enableRegexp = <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">solid</span>: enableSolid = <span class="literal">false</span>,</span><br><span class="line">  <span class="attr">svelte</span>: enableSvelte = <span class="literal">false</span>,</span><br><span class="line">  <span class="attr">type</span>: appType = <span class="string">&#x27;app&#x27;</span>,</span><br><span class="line">  <span class="attr">typescript</span>: enableTypeScript = <span class="title function_">isPackageExists</span>(<span class="string">&#x27;typescript&#x27;</span>) || <span class="title function_">isPackageExists</span>(<span class="string">&#x27;@typescript/native-preview&#x27;</span>),</span><br><span class="line">  <span class="attr">unicorn</span>: enableUnicorn = <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">unocss</span>: enableUnoCSS = <span class="literal">false</span>,</span><br><span class="line">  <span class="attr">vue</span>: enableVue = <span class="title class_">VuePackages</span>.<span class="title function_">some</span>(<span class="function"><span class="params">i</span> =&gt;</span> <span class="title function_">isPackageExists</span>(i)),</span><br><span class="line">&#125; = options</span><br></pre></td></tr></table></figure>
 
@@ -279,6 +279,13 @@
 <p>react 安装</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm i -D @eslint-react/eslint-plugin eslint-plugin-react-refresh</span><br></pre></td></tr></table></figure>
 ]]></content>
+      <categories>
+        <category>汇总</category>
+      </categories>
+      <tags>
+        <tag>汇总</tag>
+        <tag>eslint</tag>
+      </tags>
   </entry>
   <entry>
     <title>flutter 包</title>
