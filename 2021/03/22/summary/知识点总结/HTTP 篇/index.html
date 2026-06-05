@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="../../../../../../images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../../../../../images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../../../../../images/favicon.ico">
+  <link rel="mask-icon" href="../../../../../../images/favicon.ico" color="#222">
+
+<link rel="stylesheet" href="../../../../../../css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha256-dABdfBfUoC8vJUBOwGVdm8L9qlMWaHTIfXt+7GnZCIo=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.4van.top","root":"/","images":"../../../../../../images","scheme":"Gemini","darkmode":true,"version":"8.23.2","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"../../../../../../search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="../../../../../../js/config.js" defer></script>
+
+    <meta name="description" content="HTTP状态码2XX 成功 200 OK，客户端的请求被正确处理 204 No content，请求成功，响应报文不含实体的主体部分 205 Reset Content，请求成功，响应报文不含实体的主体部分，但是需要请求方重置内容 206 Partial Content，进行范围请求">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="HTTP 篇">
+<meta property="og:url" content="https://blog.4van.top/2021/03/22/summary/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/HTTP%20%E7%AF%87/index.html">
+<meta property="og:site_name" content="Avan&#39;s Blog">
+<meta property="og:description" content="HTTP状态码2XX 成功 200 OK，客户端的请求被正确处理 204 No content，请求成功，响应报文不含实体的主体部分 205 Reset Content，请求成功，响应报文不含实体的主体部分，但是需要请求方重置内容 206 Partial Content，进行范围请求">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2021/09/07/uVDHOBMexGhbFQd.png">
+<meta property="article:published_time" content="2021-03-22T14:11:34.000Z">
+<meta property="article:modified_time" content="2026-06-05T11:34:24.432Z">
+<meta property="article:author" content="梁又文">
+<meta property="article:tag" content="汇总">
+<meta property="article:tag" content="http">
+<meta property="article:tag" content="知识点总结">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/09/07/uVDHOBMexGhbFQd.png">
+
+
+<link rel="canonical" href="https://blog.4van.top/2021/03/22/summary/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/HTTP%20%E7%AF%87/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://blog.4van.top/2021/03/22/summary/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/HTTP%20%E7%AF%87/","path":"2021/03/22/summary/知识点总结/HTTP 篇/","title":"HTTP 篇"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>HTTP 篇 | Avan's Blog</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="../../../../../../js/utils.js" defer></script><script src="../../../../../../js/motion.js" defer></script><script src="../../../../../../js/sidebar.js" defer></script><script src="../../../../../../js/next-boot.js" defer></script><script src="../../../../../../js/bookmark.js" defer></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.5.0/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
+<script src="../../../../../../js/third-party/search/local-search.js" defer></script>
+
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":{"light":"default","dark":"dark"},"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.7.0/mermaid.min.js","integrity":"sha256-4+IKDqhZ/sXjc8Wtl2/MsxI4e0s1KpEVdbEP7V/Lz8U="}}</script>
+  <script src="../../../../../../js/third-party/tags/mermaid.js" defer></script>
+
+
+
+
+  <script src="../../../../../../js/third-party/addtoany.js" defer></script>
+
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="../../../../../../css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Avan's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Avan 的博客</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="../../../../../../index.html" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-archives"><a href="../../../../../../archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">162</span></a></li><li class="menu-item menu-item-tags"><a href="../../../../../../tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">121</span></a></li><li class="menu-item menu-item-categories"><a href="../../../../../../categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">43</span></a></li><li class="menu-item menu-item-about"><a href="../../../../../../about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-links"><a href="../../../../../../links/" rel="section"><i class="fa fa-link fa-fw"></i>links</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTP%E7%8A%B6%E6%80%81%E7%A0%81"><span class="nav-number">1.</span> <span class="nav-text">HTTP状态码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2XX-%E6%88%90%E5%8A%9F"><span class="nav-number">1.1.</span> <span class="nav-text">2XX 成功</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3XX-%E9%87%8D%E5%AE%9A%E5%90%91"><span class="nav-number">1.2.</span> <span class="nav-text">3XX 重定向</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4XX-%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%94%99%E8%AF%AF"><span class="nav-number">1.3.</span> <span class="nav-text">4XX 客户端错误</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5XX-%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%94%99%E8%AF%AF"><span class="nav-number">1.4.</span> <span class="nav-text">5XX 服务器错误</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">1.5.</span> <span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTP%E7%BC%93%E5%AD%98"><span class="nav-number">2.</span> <span class="nav-text">HTTP缓存</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%BA%E7%BC%93%E5%AD%98"><span class="nav-number">2.1.</span> <span class="nav-text">强缓存</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%8F%E5%95%86%E7%BC%93%E5%AD%98"><span class="nav-number">2.2.</span> <span class="nav-text">协商缓存</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%BB%E7%BB%93-1"><span class="nav-number">2.3.</span> <span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GET%E5%92%8CPOST%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">3.</span> <span class="nav-text">GET和POST的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Cookie-%E5%92%8C-LocalStorage-%E5%92%8C-SessionStorage-%E5%92%8CSession-%E5%92%8C-IndexedDB"><span class="nav-number">4.</span> <span class="nav-text">Cookie 和 LocalStorage 和 SessionStorage 和Session 和 IndexedDB</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTP%E8%AF%B7%E6%B1%82%E7%BB%84%E6%88%90"><span class="nav-number">5.</span> <span class="nav-text">HTTP请求组成</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%8C%E6%BA%90%E7%AD%96%E7%95%A5"><span class="nav-number">6.</span> <span class="nav-text">同源策略</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B7%A8%E5%9F%9F"><span class="nav-number">7.</span> <span class="nav-text">跨域</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSRF-%E9%98%B2%E5%BE%A1"><span class="nav-number">8.</span> <span class="nav-text">CSRF 防御</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CORS%E7%AE%80%E5%8D%95%E8%AF%B7%E6%B1%82%E5%92%8C%E5%A4%8D%E6%9D%82%E8%AF%B7%E6%B1%82%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">9.</span> <span class="nav-text">CORS简单请求和复杂请求的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#http1"><span class="nav-number">10.</span> <span class="nav-text">http1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#http2"><span class="nav-number">11.</span> <span class="nav-text">http2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#http3"><span class="nav-number">12.</span> <span class="nav-text">http3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JSONP-CORS-%E8%B7%A8%E5%9F%9F"><span class="nav-number">13.</span> <span class="nav-text">JSONP&#x2F;CORS&#x2F;跨域</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-CORS"><span class="nav-number">13.1.</span> <span class="nav-text">1 CORS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-JSONP"><span class="nav-number">13.2.</span> <span class="nav-text">2 JSONP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-sessionStorage%E5%92%8Clocalstorage%E8%83%BD%E8%B7%A8%E5%9F%9F%E6%8B%BF%E5%88%B0%E5%90%97%EF%BC%9F"><span class="nav-number">13.3.</span> <span class="nav-text">3 sessionStorage和localstorage能跨域拿到吗？</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-localStorage%E8%B7%A8%E5%9F%9F%E4%BA%8C%E7%BA%A7%E5%9F%9F%E5%90%8D%E5%85%B1%E4%BA%AB%E6%96%B9%E6%B3%95"><span class="nav-number">13.3.1.</span> <span class="nav-text">3.1 localStorage跨域二级域名共享方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-sessioniStorage%E5%92%8ClocalStorage%E8%B7%A8%E9%A1%B6%E7%BA%A7%E5%9F%9F%E5%90%8D%E5%85%B1%E4%BA%AB%E6%96%B9%E6%B3%95"><span class="nav-number">13.3.2.</span> <span class="nav-text">3.2 sessioniStorage和localStorage跨顶级域名共享方法</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="梁又文"
+      src="../../../../../../images/logo.png">
+  <p class="site-author-name" itemprop="name">梁又文</p>
+  <div class="site-description" itemprop="description">记录自己的一些日记 & 技术文章 & 学习笔记等</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="../../../../../../archives/">
+          <span class="site-state-item-count">162</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="../../../../../../categories/">
+        <span class="site-state-item-count">43</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="../../../../../../tags/">
+        <span class="site-state-item-count">121</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/layouwen" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;layouwen" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="../../../../../../mailto:layouwen@gmail.com" title="E-Mail → mailto:layouwen@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://x.com/avancoding" title="Twitter → https:&#x2F;&#x2F;x.com&#x2F;avancoding" rel="noopener me" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://t.me/coderavan" title="Telegram → https:&#x2F;&#x2F;t.me&#x2F;coderavan" rel="noopener me" target="_blank"><i class="fab fa-telegram fa-fw"></i>Telegram</a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/big/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+          链接
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <a href="https://github.com/whale-wave" title="https:&#x2F;&#x2F;github.com&#x2F;whale-wave" rel="noopener" target="_blank">Whale Wave</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.4van.top/2021/03/22/summary/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/HTTP%20%E7%AF%87/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="../../../../../../images/logo.png">
+      <meta itemprop="name" content="梁又文">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Avan's Blog">
+      <meta itemprop="description" content="记录自己的一些日记 & 技术文章 & 学习笔记等">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="HTTP 篇 | Avan's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          HTTP 篇<a href="https://github.com/layouwen/blog/edit/master/source/_posts/summary/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/HTTP%20%E7%AF%87.md" class="post-edit-link" title="编辑" rel="noopener" target="_blank"><i class="fa fa-pen-nib"></i></a>
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-22 22:11:34" itemprop="dateCreated datePublished" datetime="2021-03-22T22:11:34+08:00">2021-03-22</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-06-05 19:34:24" itemprop="dateModified" datetime="2026-06-05T19:34:24+08:00">2026-06-05</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="../../../../../../categories/%E6%B1%87%E6%80%BB/" itemprop="url" rel="index"><span itemprop="name">汇总</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="../../../../../../categories/%E6%B1%87%E6%80%BB/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/" itemprop="url" rel="index"><span itemprop="name">知识点总结</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.6k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>9 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h2 id="HTTP状态码"><a href="#HTTP状态码" class="headerlink" title="HTTP状态码"></a>HTTP状态码</h2><h3 id="2XX-成功"><a href="#2XX-成功" class="headerlink" title="2XX 成功"></a>2XX 成功</h3><ul>
+<li>200 OK，客户端的请求被正确处理</li>
+<li>204 No content，请求成功，响应报文不含实体的主体部分</li>
+<li>205 Reset Content，请求成功，响应报文不含实体的主体部分，但是需要请求方重置内容</li>
+<li>206 Partial Content，进行范围请求</li>
+</ul>
+<h3 id="3XX-重定向"><a href="#3XX-重定向" class="headerlink" title="3XX 重定向"></a>3XX 重定向</h3><ul>
+<li>301 moved permanently，永久性重定向，资源已分配新的URL</li>
+<li>302 found，临时性重定向，资源临时分配新的URL</li>
+<li>303 see other，资源存在另一个URL，应使用GET方法获取资源</li>
+<li>304 not modified，协商缓存命中，服务器返回 304，浏览器继续使用本地缓存</li>
+<li>307 temporary redirect，临时重定向，保持请求方法不变，向新地址发送请求</li>
+</ul>
+<h3 id="4XX-客户端错误"><a href="#4XX-客户端错误" class="headerlink" title="4XX 客户端错误"></a>4XX 客户端错误</h3><ul>
+<li>400 bad request，请求报文存在语法错误</li>
+<li>401 unauthorized，需认证, 如 未登录&#x2F;token 失效</li>
+<li>403 forbidden，拒绝访问, 如 登录了没权限</li>
+<li>404 not found，服务器没有找到请求资源</li>
+</ul>
+<h3 id="5XX-服务器错误"><a href="#5XX-服务器错误" class="headerlink" title="5XX 服务器错误"></a>5XX 服务器错误</h3><ul>
+<li>500 internal sever error，服务端执行请求时发生错误</li>
+<li>501 Not Implemented，服务器不支持当前请求所需要的某个功能</li>
+<li>502 Bad Gateway 网关错误, 比较多的就是 nginx 连接不上上游</li>
+<li>503 service unavailable，服务器处于超负荷或停机维护，无法处理请求</li>
+</ul>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>2xx 表示成功<br>3xx 重定向，表示进一步操作<br>4xx 浏览器错误<br>5xx 服务器错误</p>
+<h2 id="HTTP缓存"><a href="#HTTP缓存" class="headerlink" title="HTTP缓存"></a>HTTP缓存</h2><h3 id="强缓存"><a href="#强缓存" class="headerlink" title="强缓存"></a>强缓存</h3><p>服务端通知客户端一个缓存时间，在时间内，请求直接使用缓存。不在时间内，则执行比较缓存策略。  </p>
+<p>Cache-control（相对值）&#x2F; Expries（绝对值）  </p>
+<p>Expires 是http1.0的标准</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> nowTime = <span class="keyword">new</span> <span class="title class_">Date</span>()</span><br><span class="line">nowTime.<span class="title function_">setTime</span>(<span class="keyword">new</span> <span class="title class_">Date</span>().<span class="title function_">getTime</span>() + <span class="number">3600</span>*<span class="number">1000</span>)</span><br><span class="line">ctx.<span class="title function_">set</span>(<span class="string">&quot;Expires&quot;</span>, nowTime.<span class="title function_">toUTCString</span>())</span><br></pre></td></tr></table></figure>
+
+<p>HTTP&#x2F;1.1，Expire 被 Cache-control 替代</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ctx.<span class="title function_">set</span>(<span class="string">&quot;Cache-Control&quot;</span>, <span class="string">&quot;max-age=3600&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>public：所有内容都被保存（客户端和代理服务器都可缓存）</li>
+<li>private：所有内容只有客户端可以缓存（默认值）</li>
+<li>no-cache：客户端缓存内容，是否使用缓存需要经过协商缓存来验证决定</li>
+<li>no-store：所有内容不会被缓存</li>
+<li>max-age&#x3D;xxx：缓存内容将在xxx秒后失效</li>
+</ol>
+<p>Cache-Control 优先级比 Expires 高<br>from memory cache表示内存中缓存，from disk cache表示硬盘中缓存，读取顺序 memory -&gt; disk</p>
+<h3 id="协商缓存"><a href="#协商缓存" class="headerlink" title="协商缓存"></a>协商缓存</h3><p>命中缓存则返回304状态码，浏览器自动读取缓存内容。如果未命中，则直接返回数据。</p>
+<p>Last-Modified&#x2F;If-Modified-Since：一般设置最后修改时间用于判断<br>ETag&#x2F;if-None-Match：一般设置hash值，如果hash值不一样就返回新的内容  </p>
+<h3 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h3><p><img src="https://i.loli.net/2021/09/07/uVDHOBMexGhbFQd.png" alt="Image.png"></p>
+<ol>
+<li>ETag 比较浏览器和服务器资源特征值（如MD5）来决定是否发送数据。如果相同则发送304（not modified）</li>
+<li>Expires 设置过期时间（绝对时间）如果用户本地时间错乱，会有BUG</li>
+<li>CacheControl max-age &#x3D; 3600 设置过期时间（相对时间），与本地时间无关</li>
+<li>ETag 优先级高于 Last-Modified, 且 ETag 比 Last-Modified 准, 前者基于内容生存唯一标识, 后则时间只能精确到秒.</li>
+</ol>
+<p>浏览器先检查强缓存：</p>
+<p>Cache-Control &#x2F; Expires</p>
+<p>如果命中直接读取缓存。</p>
+<p>未命中则进入协商缓存：</p>
+<p>ETag &#x2F; If-None-Match<br>Last-Modified &#x2F; If-Modified-Since</p>
+<p>如果资源未变化返回304。</p>
+<h2 id="GET和POST的区别"><a href="#GET和POST的区别" class="headerlink" title="GET和POST的区别"></a>GET和POST的区别</h2><ol>
+<li>get 是幂等的, 用来获取资源，post 通常不是幂等, 用来提交资源.</li>
+<li>get 在回退时不会重新提交，post每次都会重新请求</li>
+<li>get 在url地址中的长度有限制(取决浏览器&#x2F;服务器)，post基本上没有限制</li>
+<li>get 暴露在地址栏中，post在请求体中. 安全度一样, 只是成本更低, 实际安全依赖 https</li>
+</ol>
+<h2 id="Cookie-和-LocalStorage-和-SessionStorage-和Session-和-IndexedDB"><a href="#Cookie-和-LocalStorage-和-SessionStorage-和Session-和-IndexedDB" class="headerlink" title="Cookie 和 LocalStorage 和 SessionStorage 和Session 和 IndexedDB"></a>Cookie 和 LocalStorage 和 SessionStorage 和Session 和 IndexedDB</h2><ul>
+<li>cookie 最大4k，保存在浏览器，请求时自动发送给服务器</li>
+<li>session 用于服务端保存会话数据, 通过 cookie 带回来.</li>
+<li>localstorage 容量大 5M 甚至更多，只有在清理浏览器缓存时才会消失。不会被发送到服务器. 只能存字符串, 并作为同步 api 大量读写会堵塞主线程.</li>
+<li>sessionStorage tab 级的存储, 关闭标签页清楚. 刷新页面不会丢失, 不同 tab 不共享.</li>
+<li>IndexedDB WebBrower 内置的 NoSQL 结构化数据库系统, 异步 API 支持检索和事务, 可存对象, 离合离线应用大数据缓存. 一般用封装好的库.</li>
+</ul>
+<h2 id="HTTP请求组成"><a href="#HTTP请求组成" class="headerlink" title="HTTP请求组成"></a>HTTP请求组成</h2><ul>
+<li>请求行（request line）<ul>
+<li>请求方法</li>
+<li>URL</li>
+<li>协议版本</li>
+</ul>
+</li>
+<li>请求头部（header）<ul>
+<li>头部字段名</li>
+<li>值</li>
+</ul>
+</li>
+<li>空行</li>
+<li>请求数据</li>
+</ul>
+<h2 id="同源策略"><a href="#同源策略" class="headerlink" title="同源策略"></a>同源策略</h2><p>协议、域名、端口 全部一致</p>
+<p>限制部分:</p>
+<ol>
+<li>限制 iframe dom 操作</li>
+<li>cookie&#x2F;localstorage&#x2F;indexeddb 无法互相读取</li>
+<li>ajax&#x2F;fetch 请求浏览器默认拦截</li>
+<li>跨域 cookie 不会自动携带<br>不限制部分:</li>
+</ol>
+<ul>
+<li>image</li>
+<li>script</li>
+<li>link</li>
+<li>video&#x2F;audio</li>
+</ul>
+<p>主要用于防止恶意数据读取, 不过只防君子不防小人, 这是浏览器限制服务端不受限制. 服务器已经返回了, 只是浏览器不让 js 读取</p>
+<h2 id="跨域"><a href="#跨域" class="headerlink" title="跨域"></a>跨域</h2><ul>
+<li>cors</li>
+<li>jsonp</li>
+<li>反向代理</li>
+<li>postmessage</li>
+</ul>
+<h2 id="CSRF-防御"><a href="#CSRF-防御" class="headerlink" title="CSRF 防御"></a>CSRF 防御</h2><ul>
+<li>SameSite Cookie</li>
+<li>CSRF Token</li>
+<li>Referer 校验</li>
+</ul>
+<h2 id="CORS简单请求和复杂请求的区别"><a href="#CORS简单请求和复杂请求的区别" class="headerlink" title="CORS简单请求和复杂请求的区别"></a>CORS简单请求和复杂请求的区别</h2><p>Access-Control-Allow-Origin 允许共享给那些域<br>Access-Control-Allow-Credentials 凭证标记为true时，是否响应该请求<br>Access-Control-Allow-Headers 对预请求响应中，可以使用那些HTTP头<br>Access-Control-Allow-Methods 预请求的响应中，那些HTTP方法允许访问资源<br>Access-Control-Max-Age 预请求的结果能被缓存多久<br>Access-Control-Request-Method 用于发起一个预请求，告知服务器正式请求使用哪一种 HTTP 请求方法<br>Origin 指示获取资源的要求是从什么域发起的  </p>
+<p>复杂请求会造成两次的请求。<br>简单请求满足以下条件：<br>HTTP方法属于其中之一：HEAD、GET、POST<br>HTTP头信息不超出以下几种字段：</p>
+<ul>
+<li>Accept</li>
+<li>Accept-Language</li>
+<li>Content-Language</li>
+<li>Last-Event-ID</li>
+<li>Content-Type（只能是以下这些）：application&#x2F;x-www-form-urlencoded、multipart&#x2F;form-data、text&#x2F;plain</li>
+</ul>
+<h2 id="http1"><a href="#http1" class="headerlink" title="http1"></a>http1</h2><p>http1 慢的原因</p>
+<ul>
+<li>队头堵塞, 一个 TCP 只处理一个请求, 会堵塞后面请求.</li>
+<li>TCP 连接多, 为了提高效率一般最多同时 6 个</li>
+<li>Header 重复, 不进行压缩. cookie&#x2F;token 之类一直重复发送</li>
+<li>文本解析低效, 基于文本协议. 服务端需要解析字符串和换行, 低于二进制协议.</li>
+</ul>
+<h2 id="http2"><a href="#http2" class="headerlink" title="http2"></a>http2</h2><ul>
+<li>二进制分帧, 解析速度快<br>http1.1请求时需要不断读入字符串，直到遇到换行（CRLF），http2基于帧协议，每一帧都有表示长度的字段。</li>
+<li>多路复用<br>http1.1发送多个请求需要建立多个TCP连接。<br>http2多个请求共用一个TCP连接，同一个请求和响应用一个流表示，有自己唯一的id表示。所以支持乱序发送，到目的地后通过id重新组建。</li>
+<li>首部压缩</li>
+<li>http2 虽然解决了队头堵塞, 但 TCP 层仍有队头阻塞, 后续数据仍要等待重传</li>
+</ul>
+<p>核心是: <strong>高并发资源调度能力</strong></p>
+<h2 id="http3"><a href="#http3" class="headerlink" title="http3"></a>http3</h2><ul>
+<li>http2 依旧基于 TCP, http3 基于 QUIC(UDP + TLS + 多路复用)</li>
+<li>更快建立连接</li>
+<li>真正解决队头堵塞</li>
+<li>更适合弱网移动端</li>
+</ul>
+<p>HTTP3&#x2F;QUIC<br>本质不是 换了个协议<br>本质是 针对现代移动互联网高延迟、高丢包场景重新设计传输层。</p>
+<h2 id="JSONP-CORS-跨域"><a href="#JSONP-CORS-跨域" class="headerlink" title="JSONP&#x2F;CORS&#x2F;跨域"></a>JSONP&#x2F;CORS&#x2F;跨域</h2><p>因为浏览器不允许两个源不相同的互相请求。<br>源&#x3D;协议+域名+端口号<br>只要有一样不相同就是不同源。</p>
+<h3 id="1-CORS"><a href="#1-CORS" class="headerlink" title="1 CORS"></a>1 CORS</h3><p>CORS跨源资源共享，它可以解决两个不同源相互访问。<br>使用方法也很简单，在后端提前设置好Access-Control-Allow-Origin即可。<br>如果为 * 号则表示可以任何人访问。<br>如果需要指定源访问，可以在后面接上允许的源地址。<br>比如：Access-Control-Allow-Origin：<a target="_blank" rel="noopener" href="http://foo.example/">http://foo.example</a></p>
+<h3 id="2-JSONP"><a href="#2-JSONP" class="headerlink" title="2 JSONP"></a>2 JSONP</h3><p>JSONP也是一种跨域解决方案，由于IE之前的版本不支持CORS进行跨域。所以我们需要想别的解决思路，就出现了JSONP。它与JSON没有关系，之所以这样叫是因为最初里面数据写的格式大多为JSON格式。</p>
+<p>JSONP原理</p>
+<p><code>&lt;script src=&quot;&quot;&gt;</code> 不受同源策略限制.<br>核心是动态 script 注入.</p>
+<ol>
+<li>前端定义一个 callback 函数</li>
+<li>通过 script 请求, 并等后端返回基于 callback 函数的拼接.</li>
+<li>前端获取返回后执行该函数, 获取数据</li>
+</ol>
+<ul>
+<li>返回可执行 js 容易 xss 风险</li>
+<li>错误处理能力差</li>
+</ul>
+<h3 id="3-sessionStorage和localstorage能跨域拿到吗？"><a href="#3-sessionStorage和localstorage能跨域拿到吗？" class="headerlink" title="3 sessionStorage和localstorage能跨域拿到吗？"></a>3 sessionStorage和localstorage能跨域拿到吗？</h3><p>localstorage只有在同源的情况下可以获取数据<br>sessionStorage不同页面和标签页面无法共享数据</p>
+<h4 id="3-1-localStorage跨域二级域名共享方法"><a href="#3-1-localStorage跨域二级域名共享方法" class="headerlink" title="3.1 localStorage跨域二级域名共享方法"></a>3.1 localStorage跨域二级域名共享方法</h4><p>挂载一个隐藏的iframe加载顶级域名的代理页面，统一在顶级域名里操作localStorage，其他二级或n及域名读取或设置localStorage通过此ifarme来操作</p>
+<p>顶级域名的html</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">document</span>.<span class="property">domain</span> = <span class="string">&#x27;lyw.com&#x27;</span> <span class="comment">// 设置顶级域名</span></span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">const</span> <span class="title function_">setItem</span> = (<span class="params">key, data</span>) =&gt; <span class="variable language_">localStorage</span>.<span class="title function_">setItem</span>(key, data)</span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">const</span> <span class="title function_">getItem</span> = key =&gt; <span class="variable language_">localStorage</span>.<span class="title function_">getItem</span>(key)</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>其他二级或n级域名</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">style</span>=<span class="string">&quot;display:none;&quot;</span> <span class="attr">id</span>=<span class="string">&quot;ifrStorageProxy&quot;</span> <span class="attr">src</span>=<span class="string">&quot;http://www.lyw.com/storageproxy.html&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">  <span class="variable language_">document</span>.<span class="property">domain</span> = <span class="string">&#x27;lyw.com&#x27;</span></span></span><br><span class="line"><span class="language-javascript">  <span class="keyword">const</span> winifrStorageProxy = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;ifrStorageProxy&#x27;</span>).<span class="property">contentWindow</span></span></span><br><span class="line"><span class="language-javascript">  winifrStorageProxy.<span class="property">onload</span> = <span class="function">() =&gt;</span> &#123;</span></span><br><span class="line"><span class="language-javascript">    winifrStorageProxy.<span class="title function_">setItem</span>(<span class="string">&#x27;showbo&#x27;</span>, <span class="string">&#x27;test-&#x27;</span> + <span class="title function_">newDate</span>().<span class="title function_">toLocaleString</span>()</span></span><br><span class="line"><span class="language-javascript">    <span class="title function_">alert</span>(winifrStorageProxy.<span class="title function_">setItem</span>(<span class="string">&#x27;showbo&#x27;</span>))</span></span><br><span class="line"><span class="language-javascript">  &#125;</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="3-2-sessioniStorage和localStorage跨顶级域名共享方法"><a href="#3-2-sessioniStorage和localStorage跨顶级域名共享方法" class="headerlink" title="3.2 sessioniStorage和localStorage跨顶级域名共享方法"></a>3.2 sessioniStorage和localStorage跨顶级域名共享方法</h4><p>与二级域名类似，任选一个域名挂载iframe代理页面，数据存处在此顶级域名下，其他顶级域名通过此代理读取localStorage和sessionStorage的数据</p>
+<p>代理的html</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">  <span class="variable language_">window</span>.<span class="title function_">addEventListener</span>(<span class="string">&#x27;message&#x27;</span>, <span class="function"><span class="params">e</span> =&gt;</span>&#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">if</span> (e.<span class="property">source</span> !== parent) <span class="keyword">return</span> <span class="comment">// 如果不是父页面发送的信息就返回</span></span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">let</span> data = <span class="title class_">JSON</span>.<span class="title function_">parse</span>(e.<span class="property">data</span>)</span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">switch</span> (data.<span class="property">action</span>) &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="keyword">case</span> <span class="string">&#x27;setItem&#x27;</span>:</span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">localStorage</span>.<span class="title function_">setItem</span>(data.<span class="property">key</span>, data.<span class="property">data</span>)</span></span><br><span class="line"><span class="language-javascript">        <span class="keyword">break</span></span></span><br><span class="line"><span class="language-javascript">      <span class="keyword">case</span> <span class="string">&#x27;getItem&#x27;</span>:</span></span><br><span class="line"><span class="language-javascript">        data = <span class="variable language_">localStorage</span>.<span class="title function_">getItem</span>(data.<span class="property">key</span>)</span></span><br><span class="line"><span class="language-javascript">        parent.<span class="title function_">postMessage</span>(data, <span class="string">&#x27;*&#x27;</span>)</span></span><br><span class="line"><span class="language-javascript">        <span class="keyword">break</span></span></span><br><span class="line"><span class="language-javascript">    &#125;</span></span><br><span class="line"><span class="language-javascript">  &#125;, <span class="literal">false</span>)</span></span><br><span class="line"><span class="language-javascript">&lt;script&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>其他顶级域名页面</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">style</span>=<span class="string">&quot;display: none;&quot;</span> <span class="attr">if</span>=<span class="string">&quot;ifrStorageProxy&quot;</span> <span class="attr">src</span>=<span class="string">&quot;http://www.lyw.com/storageproxy.html&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">  <span class="keyword">let</span> winifrStorageProxy = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;ifrStorageProxy&#x27;</span>)</span></span><br><span class="line"><span class="language-javascript">  <span class="variable language_">window</span>.<span class="title function_">addEventListener</span>(<span class="string">&#x27;message&#x27;</span>, <span class="function"><span class="params">e</span> =&gt;</span> &#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">if</span> (e.<span class="property">soure</span> !== winifrStorageProxy.<span class="property">contentWindow</span>) <span class="keyword">return</span> <span class="comment">// 不是我们自己iframe发送的信息就返回</span></span></span><br><span class="line"><span class="language-javascript">    <span class="title function_">alert</span>(e.<span class="property">data</span>)</span></span><br><span class="line"><span class="language-javascript">  &#125;, <span class="literal">false</span>)</span></span><br><span class="line"><span class="language-javascript">  <span class="comment">// 要在加载完毕后进行操作，不然onmessage为注册</span></span></span><br><span class="line"><span class="language-javascript">  winifrStorageProxy.<span class="property">onload</span> = <span class="function">() =&gt;</span> &#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="comment">// 发送存储指令</span></span></span><br><span class="line"><span class="language-javascript">    winifrStorageProxy.<span class="property">contentWindow</span>.<span class="title function_">postMessage</span>(</span></span><br><span class="line"><span class="language-javascript">      <span class="title class_">JSON</span>.<span class="title function_">stringify</span>(</span></span><br><span class="line"><span class="language-javascript">        &#123; </span></span><br><span class="line"><span class="language-javascript">          <span class="attr">action</span>: <span class="string">&#x27;setItem&#x27;</span>, </span></span><br><span class="line"><span class="language-javascript">          <span class="attr">key</span>: <span class="string">&#x27;showbo&#x27;</span>, </span></span><br><span class="line"><span class="language-javascript">          <span class="attr">data</span>: <span class="keyword">new</span> <span class="title class_">Date</span>().<span class="title function_">toLocaleString</span>()</span></span><br><span class="line"><span class="language-javascript">        &#125;</span></span><br><span class="line"><span class="language-javascript">    ), <span class="string">&#x27;*&#x27;</span>)</span></span><br><span class="line"><span class="language-javascript">    <span class="comment">// 发送读取指令</span></span></span><br><span class="line"><span class="language-javascript">    winifrStorageProxy.<span class="property">contentWindow</span>.<span class="title function_">postMessage</span>(<span class="title class_">JSON</span>.<span class="title function_">stringify</span>(&#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">action</span>: <span class="string">&#x27;getItem&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">key</span>: <span class="string">&#x27;showbo&#x27;</span></span></span><br><span class="line"><span class="language-javascript">    &#125;), <span class="string">&#x27;*&#x27;</span>)</span></span><br><span class="line"><span class="language-javascript">  &#125;</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="../../../../../../images/wechatpay.png" alt="梁又文 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="../../../../../../images/alipay.png" alt="梁又文 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>梁又文
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://blog.4van.top/2021/03/22/summary/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/HTTP%20%E7%AF%87/" title="HTTP 篇">https://blog.4van.top/2021/03/22/summary/知识点总结/HTTP 篇/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://twitter.com/avancoding">
+            <span class="icon">
+              <i class="fab fa-twitter"></i>
+            </span>
+
+            <span class="label">Twitter</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://t.me/coderavan">
+            <span class="icon">
+              <i class="fab fa-telegram"></i>
+            </span>
+
+            <span class="label">Telegram</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <span class="social-link">
+            <span class="icon">
+              <i class="fab fa-weixin"></i>
+            </span>
+
+            <span class="label">WeChat</span>
+          </span>
+
+          <img class="social-item-img" src="../../../../../../images/wechat.png">
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://github.com/layouwen">
+            <span class="icon">
+              <i class="fab fa-github"></i>
+            </span>
+
+            <span class="label">GitHub</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="../../../../../../tags/%E6%B1%87%E6%80%BB/" rel="tag"><i class="fa fa-tag"></i> 汇总</a>
+              <a href="../../../../../../tags/http/" rel="tag"><i class="fa fa-tag"></i> http</a>
+              <a href="../../../../../../tags/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/" rel="tag"><i class="fa fa-tag"></i> 知识点总结</a>
+          </div>
+
+        
+  <div class="social-like a2a_kit a2a_kit_size_32 a2a_default_style">
+    <a class="a2a_dd" target="_blank" rel="noopener" href="https://www.addtoany.com/share"></a>
+      <a class="a2a_button_facebook"></a>
+      <a class="a2a_button_twitter"></a>
+      <a class="a2a_button_wechat"></a>
+      <a class="a2a_button_x"></a>
+      <a class="a2a_button_email"></a>
+      <a class="a2a_button_linkedin"></a>
+  </div>
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="../React%20%E7%AF%87/" rel="prev" title="React 篇">
+                  <i class="fa fa-angle-left"></i> React 篇
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="../CSS%20%E7%AF%87/" rel="next" title="CSS 篇">
+                  CSS 篇 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2020 – 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">梁又文</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">86k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">5:13</span>
+  </span>
+</div><div style="display: flex; justify-content: center;">
+    <a style="display: inline-flex; align-items: center;" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank"><span>本站由</span> <img style="height: 30px; margin: 0 10px 0;" src="/images/upyun-logo.png"/> <span>提供CDN加速/云存储服务</span></a>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+  <a href="https://github.com/layouwen" class="github-corner" title="在 GitHub 上关注我" aria-label="在 GitHub 上关注我" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>

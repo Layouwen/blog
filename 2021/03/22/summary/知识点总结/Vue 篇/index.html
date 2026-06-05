@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="../../../../../../images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../../../../../images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../../../../../images/favicon.ico">
+  <link rel="mask-icon" href="../../../../../../images/favicon.ico" color="#222">
+
+<link rel="stylesheet" href="../../../../../../css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha256-dABdfBfUoC8vJUBOwGVdm8L9qlMWaHTIfXt+7GnZCIo=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.4van.top","root":"/","images":"../../../../../../images","scheme":"Gemini","darkmode":true,"version":"8.23.2","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"../../../../../../search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="../../../../../../js/config.js" defer></script>
+
+    <meta name="description" content="Vue2前言这里是我总结一些与Vue2.x相关的一些面试题。本文章基于2.x进行总结。在3.0中可能会有不同。">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="Vue 篇">
+<meta property="og:url" content="https://blog.4van.top/2021/03/22/summary/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/Vue%20%E7%AF%87/index.html">
+<meta property="og:site_name" content="Avan&#39;s Blog">
+<meta property="og:description" content="Vue2前言这里是我总结一些与Vue2.x相关的一些面试题。本文章基于2.x进行总结。在3.0中可能会有不同。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-03-22T15:48:34.000Z">
+<meta property="article:modified_time" content="2026-06-05T11:34:24.436Z">
+<meta property="article:author" content="梁又文">
+<meta property="article:tag" content="汇总">
+<meta property="article:tag" content="vue">
+<meta property="article:tag" content="知识点总结">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://blog.4van.top/2021/03/22/summary/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/Vue%20%E7%AF%87/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://blog.4van.top/2021/03/22/summary/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/Vue%20%E7%AF%87/","path":"2021/03/22/summary/知识点总结/Vue 篇/","title":"Vue 篇"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Vue 篇 | Avan's Blog</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="../../../../../../js/utils.js" defer></script><script src="../../../../../../js/motion.js" defer></script><script src="../../../../../../js/sidebar.js" defer></script><script src="../../../../../../js/next-boot.js" defer></script><script src="../../../../../../js/bookmark.js" defer></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.5.0/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
+<script src="../../../../../../js/third-party/search/local-search.js" defer></script>
+
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":{"light":"default","dark":"dark"},"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.7.0/mermaid.min.js","integrity":"sha256-4+IKDqhZ/sXjc8Wtl2/MsxI4e0s1KpEVdbEP7V/Lz8U="}}</script>
+  <script src="../../../../../../js/third-party/tags/mermaid.js" defer></script>
+
+
+
+
+  <script src="../../../../../../js/third-party/addtoany.js" defer></script>
+
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="../../../../../../css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Avan's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Avan 的博客</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="../../../../../../index.html" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-archives"><a href="../../../../../../archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">162</span></a></li><li class="menu-item menu-item-tags"><a href="../../../../../../tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">121</span></a></li><li class="menu-item menu-item-categories"><a href="../../../../../../categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">43</span></a></li><li class="menu-item menu-item-about"><a href="../../../../../../about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-links"><a href="../../../../../../links/" rel="section"><i class="fa fa-link fa-fw"></i>links</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Vue2"><span class="nav-number">1.</span> <span class="nav-text">Vue2</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81v-if%E5%92%8Cv-for%E4%BC%98%E5%85%88%E7%BA%A7%EF%BC%9F%E5%90%8C%E6%97%B6%E4%BD%BF%E7%94%A8%E6%80%8E%E4%B9%88%E4%BC%98%E5%8C%96%EF%BC%9F"><span class="nav-number">1.2.</span> <span class="nav-text">1、v-if和v-for优先级？同时使用怎么优化？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%E3%80%81%E7%BB%84%E4%BB%B6%E4%B8%AD%E7%9A%84data%E4%B8%BA%E4%BB%80%E4%B9%88%E5%BF%85%E9%A1%BB%E6%98%AF%E5%87%BD%E6%95%B0%EF%BC%9F"><span class="nav-number">1.3.</span> <span class="nav-text">2、组件中的data为什么必须是函数？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3%E3%80%81key%E7%9A%84%E4%BD%9C%E7%94%A8%E5%92%8C%E5%8E%9F%E7%90%86%EF%BC%9F"><span class="nav-number">1.4.</span> <span class="nav-text">3、key的作用和原理？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4%E3%80%81%E4%BB%80%E4%B9%88%E6%98%AFdiff%E7%AE%97%E6%B3%95"><span class="nav-number">1.5.</span> <span class="nav-text">4、什么是diff算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5%E3%80%81vue%E7%BB%84%E4%BB%B6%E5%8C%96"><span class="nav-number">1.6.</span> <span class="nav-text">5、vue组件化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6%E3%80%81vue%E8%AE%BE%E8%AE%A1%E5%8E%9F%E7%90%86"><span class="nav-number">1.7.</span> <span class="nav-text">6、vue设计原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7%E3%80%81MVC%E3%80%81MVP%E5%92%8CMVVM%E7%9A%84%E7%90%86%E8%A7%A3%EF%BC%9F"><span class="nav-number">1.8.</span> <span class="nav-text">7、MVC、MVP和MVVM的理解？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8%E3%80%81%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%EF%BC%9F"><span class="nav-number">1.9.</span> <span class="nav-text">8、性能优化？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9%E3%80%81%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1%E7%9A%84%E6%96%B9%E5%BC%8F"><span class="nav-number">1.10.</span> <span class="nav-text">9、组件通信的方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10%E3%80%81%E6%9C%89%E6%B2%A1%E6%9C%89%E4%BD%BF%E7%94%A8%E8%BF%87Vuex%EF%BC%9F"><span class="nav-number">1.11.</span> <span class="nav-text">10、有没有使用过Vuex？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11%E3%80%81VueRouter%E6%9C%89%E4%BB%80%E4%B9%88%E9%92%A9%E5%AD%90%EF%BC%9F"><span class="nav-number">1.12.</span> <span class="nav-text">11、VueRouter有什么钩子？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#12%E3%80%81%E9%80%92%E5%BD%92%E7%BB%84%E4%BB%B6"><span class="nav-number">1.13.</span> <span class="nav-text">12、递归组件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#13%E3%80%81Vue%E7%9A%84%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86"><span class="nav-number">1.14.</span> <span class="nav-text">13、Vue的响应式原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#14%E3%80%81%E6%80%8E%E4%B9%88%E6%8B%93%E5%B1%95%E7%8E%B0%E6%9C%89%E7%BB%84%E4%BB%B6"><span class="nav-number">1.15.</span> <span class="nav-text">14、怎么拓展现有组件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#15%E3%80%81watch%E5%92%8Ccomputed%E4%BA%86%E8%A7%A3%E5%A4%9A%E5%B0%91"><span class="nav-number">1.16.</span> <span class="nav-text">15、watch和computed了解多少</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#16%E3%80%81%E6%9C%89%E6%B2%A1%E6%9C%89%E4%BA%86%E8%A7%A3%E8%BF%87nextTick%EF%BC%9F"><span class="nav-number">1.17.</span> <span class="nav-text">16、有没有了解过nextTick？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#17%E3%80%81Vue%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F"><span class="nav-number">1.18.</span> <span class="nav-text">17、Vue的生命周期</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#18%E3%80%81DOM%E5%9C%A8%E5%93%AA%E4%B8%AA%E5%91%A8%E6%9C%9F%E5%AE%8C%E6%88%90%EF%BC%8C%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E5%8F%AF%E4%BB%A5%E6%93%8D%E4%BD%9CDOM%EF%BC%9F"><span class="nav-number">1.19.</span> <span class="nav-text">18、DOM在哪个周期完成，什么时候可以操作DOM？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#19%E3%80%81%E5%8D%95%E5%90%91%E7%BB%91%E5%AE%9A%E5%92%8C%E5%8F%8C%E5%90%91%E7%BB%91%E5%AE%9A%E7%9A%84demo"><span class="nav-number">1.20.</span> <span class="nav-text">19、单向绑定和双向绑定的demo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#20%E3%80%81v-model%E8%A7%A6%E5%8F%91%E4%BA%86%E5%93%AA%E4%BA%9B%E8%AF%AD%E6%B3%95%E7%B3%96"><span class="nav-number">1.21.</span> <span class="nav-text">20、v-model触发了哪些语法糖</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#21%E3%80%81router%E5%92%8Croute%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">1.22.</span> <span class="nav-text">21、router和route的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#21-1-%E5%8C%BA%E5%88%AB"><span class="nav-number">1.22.1.</span> <span class="nav-text">21.1 区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#21-2-router%E5%AF%B9%E8%B1%A1%E5%B1%9E%E6%80%A7"><span class="nav-number">1.22.2.</span> <span class="nav-text">21.2 $router对象属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#21-3-route%E5%AF%B9%E8%B1%A1%E5%B1%9E%E6%80%A7"><span class="nav-number">1.22.3.</span> <span class="nav-text">21.3 $route对象属性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#22%E3%80%81router%E7%9A%84%E4%B8%89%E7%A7%8D%E6%A8%A1%E5%BC%8F"><span class="nav-number">1.23.</span> <span class="nav-text">22、router的三种模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#22-1-hash%E6%A8%A1%E5%BC%8F"><span class="nav-number">1.23.1.</span> <span class="nav-text">22.1 hash模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#22-2-history%E6%A8%A1%E5%BC%8F"><span class="nav-number">1.23.2.</span> <span class="nav-text">22.2 history模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#22-3-abstract%E6%A8%A1%E5%BC%8F"><span class="nav-number">1.23.3.</span> <span class="nav-text">22.3 abstract模式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#23%E3%80%81vue-router%E5%92%8Clocation-href"><span class="nav-number">1.24.</span> <span class="nav-text">23、vue-router和location.href</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#24%E3%80%81new-Vue%E5%81%9A%E4%BA%86%E4%BB%80%E4%B9%88"><span class="nav-number">1.25.</span> <span class="nav-text">24、new Vue做了什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#25%E3%80%81%E5%A6%82%E4%BD%95%E6%8A%8A%E7%9C%9F%E5%AE%9EDOM%E8%BD%AC%E5%8F%98%E8%99%9A%E6%8B%9FDOM"><span class="nav-number">1.26.</span> <span class="nav-text">25、如何把真实DOM转变虚拟DOM</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#26%E3%80%81vm-set-%E4%B8%BA%E4%BB%80%E4%B9%88%E5%8F%AF%E4%BB%A5%E8%A7%A3%E5%86%B3%E6%96%B0%E5%A2%9E%E5%B1%9E%E6%80%A7%E4%B8%8D%E8%83%BD%E5%93%8D%E5%BA%94%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-number">1.27.</span> <span class="nav-text">26、vm.$set()为什么可以解决新增属性不能响应的问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#27%E3%80%81Template%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%80%9D%E8%B7%AF"><span class="nav-number">1.28.</span> <span class="nav-text">27、Template的实现思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#28%E3%80%81Vue%E5%88%9D%E5%A7%8B%E5%8C%96%E6%B5%81%E7%A8%8B"><span class="nav-number">1.29.</span> <span class="nav-text">28、Vue初始化流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#29%E3%80%81%E5%AF%B9Vue3%E6%96%B0%E7%89%B9%E6%80%A7%E6%9C%89%E6%B2%A1%E6%9C%89%E4%BA%86%E8%A7%A3%EF%BC%9F"><span class="nav-number">1.30.</span> <span class="nav-text">29、对Vue3新特性有没有了解？</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Vue3"><span class="nav-number">2.</span> <span class="nav-text">Vue3</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#vue3-%E6%AF%94-vue2-%E6%9C%89%E5%93%AA%E4%BA%9B%E4%BC%98%E5%8A%BF"><span class="nav-number">2.1.</span> <span class="nav-text">vue3 比 vue2 有哪些优势</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vue3-%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E7%9A%84%E5%8C%BA%E5%88%AB%E5%92%8C%E6%94%B9%E5%8A%A8"><span class="nav-number">2.2.</span> <span class="nav-text">Vue3 生命周期的区别和改动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3-ref-toRef-toRefs"><span class="nav-number">2.3.</span> <span class="nav-text">如何理解 ref toRef toRefs</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Proxy-%E5%92%8C-defineProperty-%E5%8C%BA%E5%88%AB"><span class="nav-number">2.4.</span> <span class="nav-text">Proxy 和 defineProperty 区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#v-model-%E7%9A%84%E6%94%B9%E5%8F%98"><span class="nav-number">2.5.</span> <span class="nav-text">v-model 的改变</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#reactive-%E5%92%8C-ref-%E7%9A%84%E5%8C%BA%E5%88%AB%E5%92%8C%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-number">2.6.</span> <span class="nav-text">reactive 和 ref 的区别和使用场景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#watch-%E5%92%8C-watchEffect-%E5%8C%BA%E5%88%AB"><span class="nav-number">2.7.</span> <span class="nav-text">watch 和 watchEffect 区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#setup-%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96%E7%BB%84%E4%BB%B6%E5%AE%9E%E4%BE%8B"><span class="nav-number">2.8.</span> <span class="nav-text">setup 如何获取组件实例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88-vue3-%E6%AF%94-vue2-%E5%BF%AB"><span class="nav-number">2.9.</span> <span class="nav-text">为什么 vue3 比 vue2 快</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vite-%E4%B8%BA%E4%BB%80%E4%B9%88%E5%BF%AB"><span class="nav-number">2.10.</span> <span class="nav-text">Vite 为什么快</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Composition-API-%E5%92%8C-React-Hooks-%E5%AF%B9%E6%AF%94"><span class="nav-number">2.11.</span> <span class="nav-text">Composition API 和 React Hooks 对比</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vue3-%E5%93%8D%E5%BA%94%E5%BC%8F%E6%A0%B8%E5%BF%83"><span class="nav-number">2.12.</span> <span class="nav-text">vue3 响应式核心</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vue-%E4%B8%BB%E7%BA%BF"><span class="nav-number">2.13.</span> <span class="nav-text">Vue 主线</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#vue2-%E5%92%8C-vue3-%E6%97%B6%E6%9C%9F-vue-router-%E5%92%8C-vuex-pinia-%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">3.</span> <span class="nav-text">vue2 和 vue3 时期 vue-router 和 vuex&#x2F;pinia 的区别</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="梁又文"
+      src="../../../../../../images/logo.png">
+  <p class="site-author-name" itemprop="name">梁又文</p>
+  <div class="site-description" itemprop="description">记录自己的一些日记 & 技术文章 & 学习笔记等</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="../../../../../../archives/">
+          <span class="site-state-item-count">162</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="../../../../../../categories/">
+        <span class="site-state-item-count">43</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="../../../../../../tags/">
+        <span class="site-state-item-count">121</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/layouwen" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;layouwen" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="../../../../../../mailto:layouwen@gmail.com" title="E-Mail → mailto:layouwen@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://x.com/avancoding" title="Twitter → https:&#x2F;&#x2F;x.com&#x2F;avancoding" rel="noopener me" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://t.me/coderavan" title="Telegram → https:&#x2F;&#x2F;t.me&#x2F;coderavan" rel="noopener me" target="_blank"><i class="fab fa-telegram fa-fw"></i>Telegram</a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/big/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+          链接
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <a href="https://github.com/whale-wave" title="https:&#x2F;&#x2F;github.com&#x2F;whale-wave" rel="noopener" target="_blank">Whale Wave</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.4van.top/2021/03/22/summary/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/Vue%20%E7%AF%87/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="../../../../../../images/logo.png">
+      <meta itemprop="name" content="梁又文">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Avan's Blog">
+      <meta itemprop="description" content="记录自己的一些日记 & 技术文章 & 学习笔记等">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Vue 篇 | Avan's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Vue 篇<a href="https://github.com/layouwen/blog/edit/master/source/_posts/summary/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/Vue%20%E7%AF%87.md" class="post-edit-link" title="编辑" rel="noopener" target="_blank"><i class="fa fa-pen-nib"></i></a>
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-22 23:48:34" itemprop="dateCreated datePublished" datetime="2021-03-22T23:48:34+08:00">2021-03-22</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-06-05 19:34:24" itemprop="dateModified" datetime="2026-06-05T19:34:24+08:00">2026-06-05</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="../../../../../../categories/%E6%B1%87%E6%80%BB/" itemprop="url" rel="index"><span itemprop="name">汇总</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="../../../../../../categories/%E6%B1%87%E6%80%BB/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/" itemprop="url" rel="index"><span itemprop="name">知识点总结</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>4.8k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>17 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="Vue2"><a href="#Vue2" class="headerlink" title="Vue2"></a>Vue2</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这里是我总结一些与Vue2.x相关的一些面试题。本文章基于2.x进行总结。在3.0中可能会有不同。</p>
+<h2 id="1、v-if和v-for优先级？同时使用怎么优化？"><a href="#1、v-if和v-for优先级？同时使用怎么优化？" class="headerlink" title="1、v-if和v-for优先级？同时使用怎么优化？"></a>1、v-if和v-for优先级？同时使用怎么优化？</h2><p>vue2</p>
+<ul>
+<li>根据测试，同时使用v-if和v-for时，v-for优先级更高。</li>
+<li>同时使用v-for会必然执行，为了不浪费性能，可以在外面嵌套template使用v-if，内部使用v-for。</li>
+<li>如果条件在v-for内部，可以通过计算属性过滤掉不需要显示的内容。</li>
+</ul>
+<p>vue3</p>
+<ul>
+<li>v-if 比 v-for 优先</li>
+</ul>
+<h2 id="2、组件中的data为什么必须是函数？"><a href="#2、组件中的data为什么必须是函数？" class="headerlink" title="2、组件中的data为什么必须是函数？"></a>2、组件中的data为什么必须是函数？</h2><ul>
+<li>组件可能存在多个实例，使用对象形式则会共用一个data对象，从而造成污染。</li>
+<li>使用函数形式，在源码中 initState 中的 initData 方法过程中会将data的函数执行一遍获取函数的返回值，再将函数的返回值作为组件的数据，避免状态污染。</li>
+<li>之所以Vue根实例没有限制，是因为正常每个项目只有一个根实例，我们不会 new 多个Vue出来，所以不担心被污染。在源码中，mergeOption 时，我们如果是为根实例会传第三个此参数也就是 vm 的引用，此时我跳过了 data 的判断，在 comp 中我们是不会传vm参数，则进入到 data 类型的判断。</li>
+</ul>
+<h2 id="3、key的作用和原理？"><a href="#3、key的作用和原理？" class="headerlink" title="3、key的作用和原理？"></a>3、key的作用和原理？</h2><p>updateChildren 中通过 patchVnode函数，他会对比新旧两个节点是否一致从而进行一个更新。如果不传key的时候，默认值为undefined，因为undefined与undefined比较为ture，则默认这个相同的节点，从而不进行更新。因此会触发很多bug。</p>
+<ul>
+<li>key的作用使用来提高虚拟DOM效率。</li>
+<li>key在DOMdiff中可以判断两个节点是不是一个节点，避免不必要的更新。</li>
+<li>如果不设置key会有潜在的bug。比如：没更新到input的value值，更新了不该更新的内容。</li>
+<li>具体比较为首尾对比</li>
+</ul>
+<h2 id="4、什么是diff算法"><a href="#4、什么是diff算法" class="headerlink" title="4、什么是diff算法"></a>4、什么是diff算法</h2><ul>
+<li>diff算法是虚拟DOM的必然产物，通过与旧的虚拟DOM做比较，将变化的更新在真实DOM中。</li>
+<li>在 Vue2.x 中，一个实例对应一个 Watcher 所以无法像 Vue1中一样精确的更新对应的Dom元素。当数据发生改变时，数据响应式会触发 set，set会触发update，在update中，通过观察者模式，会触发对应的Watcher实例。此时我们的Watcher会进行render函数的渲染，所以我们会触发diff算法，找出发生改变的节点，进行局部更新。</li>
+<li>diff执行时，它将新的虚拟DOM与之前旧的虚拟DOM做比较（patch）。</li>
+<li>diff比较时，会判断本身和首尾子节点是否一样，如果没有执行遍历对比直至处理剩下的所有节点。使用key可以对这个过程进行加快。</li>
+</ul>
+<p>概括</p>
+<ul>
+<li>同层级 diff, 不跨层 diff</li>
+<li>双端比较(头尾指针)<ul>
+<li>旧头新头</li>
+<li>旧尾新尾</li>
+<li>旧头新尾</li>
+<li>旧尾新头</li>
+</ul>
+</li>
+</ul>
+<p>减少 DOM 移动, key 用于提高复用准确率</p>
+<h2 id="5、vue组件化"><a href="#5、vue组件化" class="headerlink" title="5、vue组件化"></a>5、vue组件化</h2><ul>
+<li>组件有独立和复用性作用，可以大幅提高开发效率。</li>
+<li>组件使用按分类有：页面组件、业务组件、通用组件，合理的划分组件，有助于提升应用性能。</li>
+<li>常见的组件化技术有：属性prop，自定义事件，插槽等，它们主要用于组件通信、扩展等。</li>
+</ul>
+<h2 id="6、vue设计原理"><a href="#6、vue设计原理" class="headerlink" title="6、vue设计原理"></a>6、vue设计原理</h2><ul>
+<li>它是一个渐进式js框架。它自底向上逐层应用。</li>
+<li>Vue核心库只关心视图层，易于上手并便于与第三方库整合。</li>
+</ul>
+<h2 id="7、MVC、MVP和MVVM的理解？"><a href="#7、MVC、MVP和MVVM的理解？" class="headerlink" title="7、MVC、MVP和MVVM的理解？"></a>7、MVC、MVP和MVVM的理解？</h2><ul>
+<li>这些都是框架模式，为了解决Model和View的耦合度。实现model层和view层分层管理。</li>
+<li>MVC最早应用在后端。优点是分层清晰，缺点是数据流混乱。Model扶着保存应用数据，与后端进行同步。Controller负责业务逻辑，根据行为对Model的数据进行修改。View负责视图展示，装model的数据进行可视化。</li>
+<li>MVP是MVC的升级版。Presenter作为中间层负责MV通信。但负责内容太多，导致臃肿难以维护。</li>
+<li>MVVM在前端广泛应用。将两者优点相结合。</li>
+</ul>
+<h2 id="8、性能优化？"><a href="#8、性能优化？" class="headerlink" title="8、性能优化？"></a>8、性能优化？</h2><ul>
+<li><p>ssr 可以改善首屏渲染, 但是考验服务端的性能</p>
+</li>
+<li><p>不要在生产环境区编译模板</p>
+</li>
+<li><p>data 层级不要太深, 因为是一次性进行递归监听</p>
+</li>
+<li><p>合理使用 computed 缓存数据</p>
+</li>
+<li><p>路由懒加载</p>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> router = <span class="keyword">new</span> <span class="title class_">VueRouter</span>(&#123;</span><br><span class="line">  <span class="attr">routes</span>: [</span><br><span class="line"> 	 &#123; <span class="attr">path</span>: <span class="string">&#x27;/foo&#x27;</span>, <span class="attr">component</span>: <span class="function">() =&gt;</span> <span class="keyword">import</span>(<span class="string">&#x27;./Foo.vue&#x27;</span>) &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>keep-alive缓存页面</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div id=&quot;app&quot;&gt;</span><br><span class="line">    &lt;keep-alive&gt;</span><br><span class="line">      &lt;router-view/&gt;</span><br><span class="line">    &lt;/keep-alive&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>v-show复用DOM</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div class=&quot;cell&quot;&gt;</span><br><span class="line">    &lt;!--这种情况用v-show复用DOM，比v-if效果好--&gt;</span><br><span class="line">    &lt;div v-show=&quot;value&quot; class=&quot;on&quot;&gt;</span><br><span class="line">      &lt;Heavy :n=&quot;10000&quot;/&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;section v-show=&quot;!value&quot; class=&quot;off&quot;&gt;</span><br><span class="line">      &lt;Heavy :n=&quot;10000&quot;/&gt;</span><br><span class="line">    &lt;/section&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>v-for避免使用v-if</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;ul&gt;</span><br><span class="line">    &lt;li v-for=&quot;user in activeUsers&quot; :key=&quot;user.id&quot;&gt;</span><br><span class="line">      &#123;&#123; user.name &#125;&#125;</span><br><span class="line">    &lt;/li&gt;</span><br><span class="line">  &lt;/ul&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">  computed: &#123;</span><br><span class="line">    activeUsers: function () &#123;</span><br><span class="line">      return this.users.filter(function (user) &#123;</span><br><span class="line">        return user.isActive</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>长列表性能优化</li>
+</ul>
+<ol>
+<li>如果列表是纯粹的数据展示，不会有任何变化，就不需要做响应化</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  <span class="attr">data</span>: <span class="function">() =&gt;</span> (&#123;</span><br><span class="line">    <span class="attr">users</span>: []</span><br><span class="line">  &#125;),</span><br><span class="line">  <span class="keyword">async</span> <span class="title function_">created</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> users = <span class="keyword">await</span> axios.<span class="title function_">get</span>(<span class="string">&quot;/api/users&quot;</span>);</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">users</span> = <span class="title class_">Object</span>.<span class="title function_">freeze</span>(users);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>如果是大数据长列表，可采用虚拟滚动，只渲染少部分区域的内容</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;recycle-scroller class=&quot;items&quot; :items=&quot;items&quot; :item-size=&quot;24&quot;&gt;</span><br><span class="line">  &lt;template v-slot=&quot;&#123; item &#125;&quot;&gt;</span><br><span class="line">    &lt;FetchItemView:item=&quot;item&quot; @vote=&quot;voteItem(item)&quot;/&gt;</span><br><span class="line">  &lt;/template&gt;</span><br><span class="line">&lt;/recycle-scroller&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>事件销毁</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">created</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">timer</span> = <span class="built_in">setInterval</span>(<span class="variable language_">this</span>.<span class="property">refresh</span>, <span class="number">2000</span>)</span><br><span class="line">&#125;,</span><br><span class="line"><span class="title function_">beforeDestroy</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="built_in">clearInterval</span>(<span class="variable language_">this</span>.<span class="property">timer</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>图片懒加载</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img v-lazy=&quot;/static/img/1.png&quot;&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>第三方库按需引入<br>  像element-ui这样的第三方组件库可以按需引入避免体积太大。</p>
+</li>
+<li><p>如果组件是一个无状态的组件，只是接收数据并渲染出来，可以设置为函数组件</p>
+</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span> <span class="attr">functional</span>&gt;</span></span><br><span class="line">  // ...</span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="9、组件通信的方式"><a href="#9、组件通信的方式" class="headerlink" title="9、组件通信的方式"></a>9、组件通信的方式</h2><ul>
+<li>三种场景：父子、兄弟、跨组件</li>
+</ul>
+<ol>
+<li>props（父子传值）</li>
+<li>EventBus或$emit&#x2F;$on（全局或父子通信）<ol>
+<li>vue3 后基本用 mitt 构建</li>
+</ol>
+</li>
+<li>ref 与 $parent &#x2F; $children（父子组件通信）</li>
+<li>vuex（全局）<ul>
+<li>state：存放数据</li>
+<li>getter：对数据进行处理，并返回数据</li>
+<li>mutations：更改state的数据。接收state作为第一个参数，payload为第二个参数。</li>
+<li>action：调用mutaltion对数据进行处理，它可以进行异步操作。触发方式：store.dispatch，mutation通过store.commit提交</li>
+</ul>
+</li>
+<li>$attrs&#x2F;$listeners（隔代组件通信）<ul>
+<li>$attrs：包含所有父组件未使用props标注的值</li>
+<li>$listeners：包含所有父组件v-on的事件监听器</li>
+</ul>
+</li>
+<li>provide&#x2F;inject（隔代组件通信）</li>
+</ol>
+<h2 id="10、有没有使用过Vuex？"><a href="#10、有没有使用过Vuex？" class="headerlink" title="10、有没有使用过Vuex？"></a>10、有没有使用过Vuex？</h2><ul>
+<li>它是vue的全局状态管理（登录验证、购物车、播放器）</li>
+<li>它是单项数据流，用State存放数据，通过Mutation修改数据。如果需要用到异步可以使用Action。但是Action无法直接修改数据，需要调用Mutation来修改State的数据</li>
+<li>虽然Vuex的数据是响应式的，但是并不会保存起来。需要使用Storage进行保存。在读取出来替换State的数据</li>
+</ul>
+<h2 id="11、VueRouter有什么钩子？"><a href="#11、VueRouter有什么钩子？" class="headerlink" title="11、VueRouter有什么钩子？"></a>11、VueRouter有什么钩子？</h2><ol>
+<li>全局钩子<ul>
+<li>beforeEach(to, from, next)——路由改变前调用<ul>
+<li>常用验证用户权限</li>
+<li>参数to：即将进入目标路由的对象<ul>
+<li>from：正要离开的路由对象next：路由控制参数</li>
+<li>next()：一切正常，则进入下一个钩子</li>
+<li>next(false)：取消导航（不改变）</li>
+<li>next(‘&#x2F;login’)：中断导航，进入新的导航</li>
+<li>next(error)：终止导航，传递参数给 router.onError()</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>afterEach(to, from)——路由改变后调用<ul>
+<li>常用返回页面顶端</li>
+<li>用法类似，但少了next参数</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>路由配置中的钩子<ul>
+<li>beforeEnter(to, from, next)</li>
+</ul>
+</li>
+<li>组件内的钩子<ul>
+<li>beforeRouteEnter(to, from, next)<ul>
+<li>组件被comfirm前调用</li>
+<li>比vue实例化快，所以无法使用this</li>
+</ul>
+</li>
+<li>beforeRouteUpdate(to, from, next)<ul>
+<li>路由改变后，组件被复用时调用</li>
+<li>在vue实例化后，可以使用this</li>
+</ul>
+</li>
+<li>beforeRouteLeave(to, from, next)<ul>
+<li>离开组件对应路由时调用</li>
+<li>可以访问this</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>路由监测变化<ul>
+<li>监听到路由变化，对齐进行操作</li>
+<li>路由钩子：全局、组件、路由配置</li>
+<li>使用watch对$route监听</li>
+</ul>
+</li>
+</ol>
+<h2 id="12、递归组件"><a href="#12、递归组件" class="headerlink" title="12、递归组件"></a>12、递归组件</h2><p>问的不多，我当时没答上来。可以了解一下Vue实现的收缩框和多级菜单</p>
+<h2 id="13、Vue的响应式原理"><a href="#13、Vue的响应式原理" class="headerlink" title="13、Vue的响应式原理"></a>13、Vue的响应式原理</h2><ul>
+<li>将data使用观察者模式Observer对数据转换成getter和setter进行监听<ul>
+<li>监听数据变化</li>
+<li>收集依赖到的数据</li>
+<li>当他变化时，通知视图层进行更新</li>
+</ul>
+</li>
+</ul>
+<h2 id="14、怎么拓展现有组件"><a href="#14、怎么拓展现有组件" class="headerlink" title="14、怎么拓展现有组件"></a>14、怎么拓展现有组件</h2><ul>
+<li>使用mixin全局混入</li>
+<li>使用slot拓展</li>
+</ul>
+<h2 id="15、watch和computed了解多少"><a href="#15、watch和computed了解多少" class="headerlink" title="15、watch和computed了解多少"></a>15、watch和computed了解多少</h2><ul>
+<li>watch监听属性，computed计算属性</li>
+<li>watch更为通用，计算属性有缓存功能</li>
+<li>有限使用computed，如果需要监听数值变化后与后端交互使用watch</li>
+<li>watch：执行异步或开销较大的操作时使用。如：搜索功能</li>
+<li>computed：复杂逻辑或一个属性影响多个属性变化时执行。如：购物车结算</li>
+</ul>
+<h2 id="16、有没有了解过nextTick？"><a href="#16、有没有了解过nextTick？" class="headerlink" title="16、有没有了解过nextTick？"></a>16、有没有了解过nextTick？</h2><ul>
+<li>在DOM更新完毕后执行回调，获取更新后的DOM</li>
+<li>Vue的DOM更新是异步的，只要监听到数据变化，就会开启一个队列。缓冲同一时间循环中的数据变更。如果同一个watcher被多次触发，他会进行一个去重，避免不必要的DOM操作。nextTick会在队列中添加一个回调，在前面的DOM操作结束后调用</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">vm.<span class="property">msg</span> = <span class="string">&#x27;Hello&#x27;</span></span><br><span class="line"><span class="comment">// DOM 还没有更新</span></span><br><span class="line"><span class="title class_">Vue</span>.<span class="title function_">nextTick</span>(<span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;DOM 更新了&#x27;</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h2 id="17、Vue的生命周期"><a href="#17、Vue的生命周期" class="headerlink" title="17、Vue的生命周期"></a>17、Vue的生命周期</h2><p>没什么好说的。单词翻译过来就知道了，按顺序排列</p>
+<ul>
+<li>beforeCreate：this不能使用，data和methods以及wather的事件还不能获取</li>
+<li>created：可以操作vue的数据和方法，还不能操作dom</li>
+<li>beforeMount：render函数首次被调用</li>
+<li>mounted：可以操作dom</li>
+<li>beforeUdata：data数据更新完毕，页面视图没有响应更改</li>
+<li>updated：数据和视图更新完毕</li>
+<li>beforeDestory：在销毁之前</li>
+<li>destoryed：数据、指令全部销毁</li>
+</ul>
+<h2 id="18、DOM在哪个周期完成，什么时候可以操作DOM？"><a href="#18、DOM在哪个周期完成，什么时候可以操作DOM？" class="headerlink" title="18、DOM在哪个周期完成，什么时候可以操作DOM？"></a>18、DOM在哪个周期完成，什么时候可以操作DOM？</h2><p>在Munted时已经渲染完成，渲染完成后即可操作DOM节点</p>
+<h2 id="19、单向绑定和双向绑定的demo"><a href="#19、单向绑定和双向绑定的demo" class="headerlink" title="19、单向绑定和双向绑定的demo"></a>19、单向绑定和双向绑定的demo</h2><p>单向绑定</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt; </span><br><span class="line">  &lt;div&gt;&#123;&#123;value&#125;&#125;&lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">new Vue(</span><br><span class="line">  data()&#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      value: 10    </span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>双向绑定</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;  </span><br><span class="line">  &lt;div&gt;    </span><br><span class="line">    &lt;input type=&quot;text&quot; v-model=&quot;value&quot;/&gt;    </span><br><span class="line">    &lt;div&gt;&#123;&#123;value&#125;&#125;&lt;/div&gt;  </span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">new Vue(</span><br><span class="line">  return &#123;</span><br><span class="line">    value: &#x27;&#x27;  </span><br><span class="line">  &#125;</span><br><span class="line">)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="20、v-model触发了哪些语法糖"><a href="#20、v-model触发了哪些语法糖" class="headerlink" title="20、v-model触发了哪些语法糖"></a>20、v-model触发了哪些语法糖</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;input :value=&quot;test&quot; @input=&quot;test = $event.target.value&quot; /&gt;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>触发了v-bind和v-on的语法糖</p>
+</blockquote>
+<h2 id="21、router和route的区别"><a href="#21、router和route的区别" class="headerlink" title="21、router和route的区别"></a>21、router和route的区别</h2><h3 id="21-1-区别"><a href="#21-1-区别" class="headerlink" title="21.1 区别"></a>21.1 区别</h3><p><code>$router</code> 访问路由实例<br><code>$route</code> 获取当前激活路由的状态信息</p>
+<blockquote>
+<p><code>$router</code> 为一个容器，管理一组 <code>$route</code></p>
+</blockquote>
+<h3 id="21-2-router对象属性"><a href="#21-2-router对象属性" class="headerlink" title="21.2 $router对象属性"></a>21.2 $router对象属性</h3><ul>
+<li>$router.app：配置了 <code>router</code> 的 <code>Vue</code> 跟根实例</li>
+<li>$router.mode：路由使用的模式</li>
+<li>$router.currentRoute：当前路由对应的路由信息对象</li>
+</ul>
+<h3 id="21-3-route对象属性"><a href="#21-3-route对象属性" class="headerlink" title="21.3 $route对象属性"></a>21.3 $route对象属性</h3><ul>
+<li>$route.path：返回当前路由的路径</li>
+<li>$route.params：返回路由参数 <code>key-value</code> 对象，如果没有路由参数，返回空对象</li>
+<li>$route.query：返回查询参数 <code>key-value</code> 对象</li>
+<li>$route.hash：返回路由中带#的hash值，没有则为空字符串</li>
+<li>$route.fullPath：返回解析后的 <code>url</code> ，包含了查询参数和当前路由名称</li>
+<li>$route.name：返回当前路由名称</li>
+<li>$route.redirectedFrom：如果存在重定向，则返回重定向之前的名字</li>
+</ul>
+<h2 id="22、router的三种模式"><a href="#22、router的三种模式" class="headerlink" title="22、router的三种模式"></a>22、router的三种模式</h2><h3 id="22-1-hash模式"><a href="#22-1-hash模式" class="headerlink" title="22.1 hash模式"></a>22.1 hash模式</h3><p>使用url中的hash模拟一个完整的url，页面改变的时候，页面不会重新加载</p>
+<h3 id="22-2-history模式"><a href="#22-2-history模式" class="headerlink" title="22.2 history模式"></a>22.2 history模式</h3><p>利用history.pushState的api完成url跳转，但是这个方法需要后端进行相应的配置，不然访问一些路由以外的路径会导致404</p>
+<h3 id="22-3-abstract模式"><a href="#22-3-abstract模式" class="headerlink" title="22.3 abstract模式"></a>22.3 abstract模式</h3><p>如果检测到没有浏览器api，会自动进入这个模式</p>
+<h2 id="23、vue-router和location-href"><a href="#23、vue-router和location-href" class="headerlink" title="23、vue-router和location.href"></a>23、vue-router和location.href</h2><ul>
+<li>vue-router使用pushState进行路由更新，静态跳转，页面不会重新加载。</li>
+<li>location.href触发浏览器跳转，页面会重新加载一次</li>
+<li>vue-router是路由跳转或者同页面跳转</li>
+<li>location.href是不同页面的跳转</li>
+<li>vue-router是异步加载，可以使用this.$nextTick(()&#x3D;&gt;{获取url})</li>
+<li>location.href是同步加载</li>
+</ul>
+<h2 id="24、new-Vue做了什么"><a href="#24、new-Vue做了什么" class="headerlink" title="24、new Vue做了什么"></a>24、new Vue做了什么</h2><ol>
+<li>创建了Vue实例，内部执行了根实例的初始化过程</li>
+<li>具体包括以下<ol>
+<li>选项合并</li>
+<li>$children&#x2F;$refs&#x2F;$slots&#x2F;$createElement等实例属性和方法的初始化</li>
+<li>自定义事件的处理</li>
+<li>数据响应式处理</li>
+<li>生命周期钩子调用</li>
+<li>可能的挂载</li>
+</ol>
+</li>
+<li>总结：new Vue()创建了根实例并准备好数据和方法，未来执行挂载时，此过程还会递归的应用它的子组件上，最终形成一个有紧密关系的组件示例树</li>
+</ol>
+<h2 id="25、如何把真实DOM转变虚拟DOM"><a href="#25、如何把真实DOM转变虚拟DOM" class="headerlink" title="25、如何把真实DOM转变虚拟DOM"></a>25、如何把真实DOM转变虚拟DOM</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Vue</span> &#123;</span><br><span class="line">  <span class="title function_">constructor</span>(<span class="params">option</span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">obj</span> = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(option.<span class="property">el</span>)</span><br><span class="line">    <span class="keyword">let</span> <span class="variable constant_">AST</span> = <span class="title function_">vDom</span>(<span class="variable language_">this</span>.<span class="property">obj</span>)</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable constant_">AST</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">VNode</span> &#123;</span><br><span class="line">  <span class="title function_">constructor</span>(<span class="params">option</span>) &#123;</span><br><span class="line">    <span class="title class_">Object</span>.<span class="title function_">assign</span>(<span class="variable language_">this</span>, option)</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">children</span> = []</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="title function_">appendChild</span>(<span class="params">node</span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">children</span>.<span class="title function_">push</span>(node)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">vDom</span>(<span class="params">node</span>) &#123;</span><br><span class="line">  <span class="keyword">let</span> nodeType = node.<span class="property">nodeType</span></span><br><span class="line">  <span class="keyword">let</span> _vnode = <span class="literal">null</span></span><br><span class="line">  <span class="keyword">if</span> (nodeType === <span class="number">1</span>) &#123; <span class="comment">// 元素节点</span></span><br><span class="line">    <span class="keyword">let</span> props = node.<span class="property">attributes</span> <span class="comment">// 获取元素的属性</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> property = &#123;&#125; <span class="comment">// 定义一个空的对象，用于保存精简后的属性</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; props.<span class="property">length</span>; i++) &#123; <span class="comment">// 处理属性</span></span><br><span class="line">      property[props[i].<span class="property">name</span>] = props[i].<span class="property">nodeValue</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 将处理好的数据，创建虚拟DOM</span></span><br><span class="line">    _vnode = <span class="keyword">new</span> <span class="title class_">VNode</span>(&#123;</span><br><span class="line">      <span class="attr">tagName</span>: node.<span class="property">nodeName</span>,</span><br><span class="line">      <span class="attr">props</span>: property,</span><br><span class="line">      <span class="attr">type</span>: nodeType</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> children = node.<span class="property">childNodes</span> <span class="comment">// 获取所有子节点</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; children.<span class="property">length</span>; i++) &#123;</span><br><span class="line">      <span class="comment">// 遍历循环子节点，只对 元素节点 和 长度大于 1 的节点进行处理</span></span><br><span class="line">      <span class="keyword">if</span> (children[i].<span class="property">nodeType</span> === <span class="number">1</span> || children[i].<span class="property">length</span> &gt; <span class="number">1</span>) &#123;</span><br><span class="line">        _vnode.<span class="title function_">appendChild</span>(<span class="title function_">vDom</span>(children[i]))</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> (nodeType === <span class="number">3</span>) &#123; <span class="comment">// 文本节点</span></span><br><span class="line">    _vnode = <span class="keyword">new</span> <span class="title class_">VNode</span>(&#123;</span><br><span class="line">      <span class="attr">type</span>: nodeType,</span><br><span class="line">      <span class="attr">value</span>: node.<span class="property">nodeValue</span>.<span class="title function_">trim</span>()</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> _vnode</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> <span class="title class_">Vue</span>(&#123;</span><br><span class="line">  <span class="attr">el</span>: <span class="string">&#x27;#app&#x27;</span>,</span><br><span class="line">  <span class="attr">data</span>: &#123;&#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h2 id="26、vm-set-为什么可以解决新增属性不能响应的问题"><a href="#26、vm-set-为什么可以解决新增属性不能响应的问题" class="headerlink" title="26、vm.$set()为什么可以解决新增属性不能响应的问题"></a>26、vm.$set()为什么可以解决新增属性不能响应的问题</h2><ol>
+<li>Vue使用Object.defineProperty实现双向数据绑定</li>
+<li>在初始化示例时对属性进行 getter&#x2F;setter 转化</li>
+<li>属性必须在data对象上存在才能让Vue转化响应式（导致新增对象的属性Vue无法检测到）</li>
+</ol>
+<blockquote>
+<p>所以Vue提供了 Vue.set(Object, propertyName, value) &#x2F; vm.$set(object, propertyName, value)</p>
+</blockquote>
+<h2 id="27、Template的实现思路"><a href="#27、Template的实现思路" class="headerlink" title="27、Template的实现思路"></a>27、Template的实现思路</h2><ol>
+<li>将模板字符串转化为 element ASTs（解析器）（abstract syntax tree，抽象语法树）</li>
+<li>对 AST 进行静态节点标记，主要用于虚拟DOM的渲染优化（优化器）</li>
+<li>使用 element ASTs 生成 render 函数代码字符串（代码生成器）</li>
+</ol>
+<h2 id="28、Vue初始化流程"><a href="#28、Vue初始化流程" class="headerlink" title="28、Vue初始化流程"></a>28、Vue初始化流程</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone git@github.com:vuejs/vue.git</span><br></pre></td></tr></table></figure>
+
+<h2 id="29、对Vue3新特性有没有了解？"><a href="#29、对Vue3新特性有没有了解？" class="headerlink" title="29、对Vue3新特性有没有了解？"></a>29、对Vue3新特性有没有了解？</h2><ul>
+<li>更快<ul>
+<li>虚拟DOM重写</li>
+<li>优化slots的生成</li>
+<li>静态树提升</li>
+<li>静态属性提升</li>
+<li>基于Proxy的响应式系统</li>
+</ul>
+</li>
+<li>更小：通过摇树优化核心库的体积</li>
+<li>更好的维护：TypeScript + 模块化</li>
+<li>更加友好：<ul>
+<li>跨平台：编译器核心和运行时核心与平台无关</li>
+</ul>
+</li>
+<li>更容易使用<ul>
+<li>提供强有力的类型检查和错误警告</li>
+<li>独立的响应式模块</li>
+<li>Comosition API</li>
+</ul>
+</li>
+</ul>
+<h1 id="Vue3"><a href="#Vue3" class="headerlink" title="Vue3"></a>Vue3</h1><h2 id="vue3-比-vue2-有哪些优势"><a href="#vue3-比-vue2-有哪些优势" class="headerlink" title="vue3 比 vue2 有哪些优势"></a>vue3 比 vue2 有哪些优势</h2><ul>
+<li>性能更好</li>
+<li>更好的逻辑组织和抽离<ul>
+<li>composition</li>
+</ul>
+</li>
+<li>对 ts 更好的支持<ul>
+<li>vue2 需要额外的库和额外的写法去编写</li>
+</ul>
+</li>
+<li>体积更小</li>
+</ul>
+<h2 id="Vue3-生命周期的区别和改动"><a href="#Vue3-生命周期的区别和改动" class="headerlink" title="Vue3 生命周期的区别和改动"></a>Vue3 生命周期的区别和改动</h2><ul>
+<li>option api<ul>
+<li>beforeDestroy 改为了 beforeUnmount</li>
+<li>destroyed 改为 unmounted</li>
+<li>其他沿用原本</li>
+</ul>
+</li>
+<li>composition api<ul>
+<li>声明周期<ul>
+<li>setup 等价于 beforeCreate 和 created</li>
+<li>onBeforeMount</li>
+<li>onMounted</li>
+<li>onBeforeUpdate</li>
+<li>onUpdated</li>
+<li>onBeforeUnmount</li>
+<li>onUnmounted</li>
+<li>onActivated</li>
+<li>onDeactivated</li>
+<li>onErrorCaptured</li>
+<li>onRenderTracked</li>
+<li>onRenderTriggered</li>
+<li>onServerPrefetch</li>
+</ul>
+</li>
+<li>带来了什么<ul>
+<li>更好的代码组织和逻辑复用</li>
+<li>更好的类型推导</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="如何理解-ref-toRef-toRefs"><a href="#如何理解-ref-toRef-toRefs" class="headerlink" title="如何理解 ref toRef toRefs"></a>如何理解 ref toRef toRefs</h2><ul>
+<li>ref 声明一个响应式值</li>
+<li>toRef 将 reactive 中的属性变成响应式 ref 值</li>
+<li>toRefs 因为 reactive 声明的响应式对象, 如果进行解构里面的属性将失去响应式, 所以需要 toRefs 进行包裹, 使其属性变成响应式值</li>
+<li>toRefs 也常用于 composition 返回值通过解构的时候取值</li>
+<li>toRef 和 toRefs 都是为了延续响应式</li>
+</ul>
+<h2 id="Proxy-和-defineProperty-区别"><a href="#Proxy-和-defineProperty-区别" class="headerlink" title="Proxy 和 defineProperty 区别"></a>Proxy 和 defineProperty 区别</h2><ul>
+<li>proxy 无法兼容所有浏览器, 无法 ployfill</li>
+<li>proxy 无需想 defineProperty 一样做新增属性和删除属性的额外处理, 以及对数组 api 的额外处理</li>
+<li>proxy 不需要一次性递归监听所有属性</li>
+</ul>
+<h2 id="v-model-的改变"><a href="#v-model-的改变" class="headerlink" title="v-model 的改变"></a>v-model 的改变</h2><p>父组件对属性使用 <code>v-model</code> 的时候传值的同时, 传递一个 <code>update:值</code> 的事件用于更新值, 实现双向绑定<br>子组件可以通过触发 <code>emit(&#39;update:值&#39;)</code> 来更新传递的值</p>
+<h2 id="reactive-和-ref-的区别和使用场景"><a href="#reactive-和-ref-的区别和使用场景" class="headerlink" title="reactive 和 ref 的区别和使用场景"></a>reactive 和 ref 的区别和使用场景</h2><h2 id="watch-和-watchEffect-区别"><a href="#watch-和-watchEffect-区别" class="headerlink" title="watch 和 watchEffect 区别"></a>watch 和 watchEffect 区别</h2><ul>
+<li>他们都是用于监听 data 属性的变化</li>
+<li>watch 需要明确监听哪个属性, 可以通过 immediate true 立马触发监听执行, 以及通过 deep true 进行深度监听</li>
+<li>watchEffect 会自动监听依赖的数据变化, 初始化就会直接执行一次</li>
+</ul>
+<h2 id="setup-如何获取组件实例"><a href="#setup-如何获取组件实例" class="headerlink" title="setup 如何获取组件实例"></a>setup 如何获取组件实例</h2><p>通过 <code>getCurrentInstance</code> 获取组件实例</p>
+<h2 id="为什么-vue3-比-vue2-快"><a href="#为什么-vue3-比-vue2-快" class="headerlink" title="为什么 vue3 比 vue2 快"></a>为什么 vue3 比 vue2 快</h2><ul>
+<li>使用 proxy 响应式</li>
+<li>PatchFlag<ul>
+<li>编译模板的时候, 为不同节点做标记</li>
+<li>通过分析模板代码, 在 createVNode 的第四个参数, 会给一个数子以及一个注释表示哪一种标记, 如果含有 props, 会在第五个参数表示用到了哪些 props</li>
+<li>为 diff 算法的时候, 可以区分不同节点, 并跳过静态节点</li>
+</ul>
+</li>
+<li>hoistSatic<ul>
+<li>将静态节点定义, 提升到父作用域缓存, 使用空间换时间策略</li>
+<li>多个相邻静态节点, 合并起来. 在编译的时候做优化, 参考很多编译器提前算好结果也一样.</li>
+</ul>
+</li>
+<li>cacheHandler<ul>
+<li>将事件函数缓存起来, 不需要每次都创建一个函数</li>
+</ul>
+</li>
+<li>SSR 优化<ul>
+<li>静态节点直接输出编译好的内容, 在拼接动态内容</li>
+</ul>
+</li>
+<li>tree-shaking<ul>
+<li>模板编译的时候, 按使用情况引入相关的库</li>
+</ul>
+</li>
+</ul>
+<p>Proxy 响应式**<br>避免：</p>
+<ul>
+<li>深层递归</li>
+<li>数组 hack</li>
+<li>属性新增问题</li>
+</ul>
+<p>编译时优化（最核心)<br>包括：<br><strong>PatchFlag</strong><br>只更新动态节点。<br><strong>静态提升（hoistStatic）</strong><br>静态节点只创建一次。<br><strong>事件缓存（cacheHandler）</strong><br>避免重复创建函数。<br><strong>BlockTree</strong><br>只跟踪动态节点树。<br><strong>更好的 diff</strong><br>静态节点跳过比较。  <br><strong>Tree-Shaking</strong><br>按需引入减少体积。</p>
+<h2 id="Vite-为什么快"><a href="#Vite-为什么快" class="headerlink" title="Vite 为什么快"></a>Vite 为什么快</h2><ul>
+<li>开发环境启动快, 使用 ES6 Module 不需要打包</li>
+</ul>
+<h2 id="Composition-API-和-React-Hooks-对比"><a href="#Composition-API-和-React-Hooks-对比" class="headerlink" title="Composition API 和 React Hooks 对比"></a>Composition API 和 React Hooks 对比</h2><ul>
+<li>前者 setup 只执行一次, 后者每次都会调用执行</li>
+<li>前者无需关心 useMemo useCallback, 后者每次执行需要考虑缓存问题</li>
+<li>前者无需关心顺序, 后则组要保证顺序</li>
+<li>reactive + ref 的概念比 useState 要繁琐一点</li>
+</ul>
+<h2 id="vue3-响应式核心"><a href="#vue3-响应式核心" class="headerlink" title="vue3 响应式核心"></a>vue3 响应式核心</h2><p>TODO: 补充完整</p>
+<ul>
+<li>reactive 对象代理</li>
+<li>ref 值代理</li>
+<li>track 依赖收集</li>
+<li>trigger 派发更新</li>
+<li>effect 副作用函数</li>
+</ul>
+<p><strong>Proxy 优势</strong><br>可以直接拦截：</p>
+<ul>
+<li>get</li>
+<li>set</li>
+<li>deleteProperty</li>
+<li>has</li>
+<li>ownKeys</li>
+</ul>
+<p>无需深度初始化。</p>
+<h2 id="Vue-主线"><a href="#Vue-主线" class="headerlink" title="Vue 主线"></a>Vue 主线</h2><p><strong>1. 响应式</strong></p>
+<p>Vue2：</p>
+<ul>
+<li>defineProperty</li>
+<li>Dep</li>
+<li>Watcher</li>
+</ul>
+<p>Vue3：</p>
+<ul>
+<li>Proxy</li>
+<li>effect</li>
+<li>track&#x2F;trigger</li>
+</ul>
+<p><strong>2. 编译</strong></p>
+<p>template：<br>→ AST<br>→ render<br>→ vnode</p>
+<p><strong>3. 渲染</strong></p>
+<ul>
+<li>patch</li>
+<li>diff</li>
+<li>patchFlag</li>
+<li>blockTree</li>
+</ul>
+<p><strong>4. 组件化</strong></p>
+<ul>
+<li>props</li>
+<li>emit</li>
+<li>provide</li>
+<li>slot</li>
+</ul>
+<p><strong>5. 工程化</strong></p>
+<ul>
+<li>vite</li>
+<li>tree-shaking</li>
+<li>按需加载</li>
+</ul>
+<p><strong>6. 性能</strong></p>
+<ul>
+<li>keepAlive</li>
+<li>虚拟列表</li>
+<li>SSR</li>
+<li>懒加载</li>
+</ul>
+<h1 id="vue2-和-vue3-时期-vue-router-和-vuex-pinia-的区别"><a href="#vue2-和-vue3-时期-vue-router-和-vuex-pinia-的区别" class="headerlink" title="vue2 和 vue3 时期 vue-router 和 vuex&#x2F;pinia 的区别"></a>vue2 和 vue3 时期 vue-router 和 vuex&#x2F;pinia 的区别</h1><p>vue2: 生态库通过 new Vue 借用响应式<br>vue3: 生态库直接使用 reactive&#x2F;ref&#x2F;effect 构建响应式系统</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="../../../../../../images/wechatpay.png" alt="梁又文 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="../../../../../../images/alipay.png" alt="梁又文 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>梁又文
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://blog.4van.top/2021/03/22/summary/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/Vue%20%E7%AF%87/" title="Vue 篇">https://blog.4van.top/2021/03/22/summary/知识点总结/Vue 篇/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://twitter.com/avancoding">
+            <span class="icon">
+              <i class="fab fa-twitter"></i>
+            </span>
+
+            <span class="label">Twitter</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://t.me/coderavan">
+            <span class="icon">
+              <i class="fab fa-telegram"></i>
+            </span>
+
+            <span class="label">Telegram</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <span class="social-link">
+            <span class="icon">
+              <i class="fab fa-weixin"></i>
+            </span>
+
+            <span class="label">WeChat</span>
+          </span>
+
+          <img class="social-item-img" src="../../../../../../images/wechat.png">
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://github.com/layouwen">
+            <span class="icon">
+              <i class="fab fa-github"></i>
+            </span>
+
+            <span class="label">GitHub</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="../../../../../../tags/%E6%B1%87%E6%80%BB/" rel="tag"><i class="fa fa-tag"></i> 汇总</a>
+              <a href="../../../../../../tags/vue/" rel="tag"><i class="fa fa-tag"></i> vue</a>
+              <a href="../../../../../../tags/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/" rel="tag"><i class="fa fa-tag"></i> 知识点总结</a>
+          </div>
+
+        
+  <div class="social-like a2a_kit a2a_kit_size_32 a2a_default_style">
+    <a class="a2a_dd" target="_blank" rel="noopener" href="https://www.addtoany.com/share"></a>
+      <a class="a2a_button_facebook"></a>
+      <a class="a2a_button_twitter"></a>
+      <a class="a2a_button_wechat"></a>
+      <a class="a2a_button_x"></a>
+      <a class="a2a_button_email"></a>
+      <a class="a2a_button_linkedin"></a>
+  </div>
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="../%E4%BB%A3%E7%A0%81%E5%AE%9E%E8%B7%B5%E7%AF%87/" rel="prev" title="代码实践篇">
+                  <i class="fa fa-angle-left"></i> 代码实践篇
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="../../../../28/article/%E9%80%9F%E8%A7%88JavaScript%E5%AD%97%E7%AC%A6%E4%B8%B2%E3%80%81%E6%95%B0%E7%BB%84%E3%80%81%E5%AF%B9%E8%B1%A1%E3%80%81MathAPI/" rel="next" title="速览JavaScript字符串、数组、对象、MathAPI">
+                  速览JavaScript字符串、数组、对象、MathAPI <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2020 – 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">梁又文</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">86k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">5:13</span>
+  </span>
+</div><div style="display: flex; justify-content: center;">
+    <a style="display: inline-flex; align-items: center;" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank"><span>本站由</span> <img style="height: 30px; margin: 0 10px 0;" src="/images/upyun-logo.png"/> <span>提供CDN加速/云存储服务</span></a>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+  <a href="https://github.com/layouwen" class="github-corner" title="在 GitHub 上关注我" aria-label="在 GitHub 上关注我" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>
