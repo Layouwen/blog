@@ -8,6 +8,13 @@ tags:
   - eslint
   - 汇总
 ---
+
+安装 eslint
+
+```bash
+pnpm i -D @antfu/eslint-config eslint@9.x.x
+```
+
 配置默认值
 
 ``` ts
@@ -36,6 +43,12 @@ tags:
     unocss: enableUnoCSS = false,
     vue: enableVue = VuePackages.some(i => isPackageExists(i)),
   } = options
+```
+
+安装 prettier 格式化普通文件
+
+```bash
+pnpm i -D eslint-plugin-format
 ```
 
 eslint.config.mjs

@@ -151,75 +151,76 @@ uuid: 8b82cdc2-57da-47ac-ac8d-c69597208347
 
 ## Node端工具
 
-| 包名                   | 描述                         |
-| -------------------- | -------------------------- |
-| dotenv               | 读取 .env 文件                 |
-| mstts-js             | 文字转语音                      |
-| node-schedule        | 定时器工具                      |
-| async-validator      | 校验库                        |
-| md5                  | md5 加密                     |
-| spark-md5            | 提供更多的 md5 方式               |
-| glob                 | 通过通配符匹配路径                  |
-| yargs-parser         | 获取 cmd 参数                  |
-| chalk                | cmd 信息样式设置                 |
-| cli-progress         | node 进度条                   |
-| inquirer             | 命令行选项                      |
-| commander            | 定制命令行界面                    |
-| clear                | 清空控制台                      |
-| figlet               | 打印字符文字                     |
-| download-git-repo    | 下载 git 仓库                  |
-| ora                  | 命令行加载动画                    |
-| iconv-lite           | 解决编码问题                     |
-| cheerio              | 可以理解为 node 下的 jQuery       |
-| request              | 用于在 Node 端发送请求             |
-| nodemailer           | 发送邮件                       |
-| fs-extra             | 文件操作（移动文件等）                |
-| uuid                 | uuid 库                     |
-| ogr2ogr              | 文件格式转换，例如 dxf              |
-| dxf                  | dxf 解析工具，可以转 svg           |
-| gh-pages             | github page部署库             |
-| decompress           | 解压压缩包                      |
-| compress-images      | 图片压缩                       |
-| imagemin             | 图片压缩                       |
-| picocolors           | 输入颜色字符                     |
-| log4js               | 生成日志文件                     |
-| @trpc/server         | trpc 统一前后端的 typescript 类型  |
-| sharp                | 图像处理库                      |
-| morgan               | http 日志记录库                 |
-| zlib                 | gzip 压缩解压缩库                |
-| oxlint               | 替代 eslint 的库               |
-| @antfu/eslint-config | antfu 推荐的 eslint config    |
-| @trpc/server         | trpc 服务端                   |
-| consul               | 微服务注册关联管理库                 |
-| npmlog               | 在 cli 中的 log 工具            |
-| semver               | 比较版本号大小                    |
-| colors               | 颜色库                        |
-| root-check           | 降级 sudo 权限, 避免权限造成的影响      |
-| user-home            | 获取用户主目录路径                  |
-| path-exists          | 判断文件 path 是否存在             |
-| minimist             | 命令行参数解析                    |
-| url-join             | url 的自动拼接                  |
-| npminstall           | cnpm 中通过代码 install 的库      |
-| rimraf               | rm 多系统删除库                  |
-| simple-git           | 代码进行 git 管理                |
-| bcrypt               | 加密库                        |
-| figlet               | FIG 字符, 终端绘制字符画            |
-| lru-cache            | lru 缓存算法的实现库               |
-| workerpool           | worker 封装库                 |
-| node-html-parser     | html 的解析库                  |
-| docusaurus           | 文档自动生成工具                   |
-| hpp                  | 参数脏数据清理                    |
-| http-status          | http 状态的枚举定义库              |
-| ioredis              | node-redis 的改良版            |
-| @apollo/server       | graphql 的实现标准, 支持多个 web 框架 |
-| fast-folder-size     | 快速获取文件夹的大小                 |
-| passport             | 身份验证库                      |
-| svg2pdf.js           | svg 转 pdf 文件               |
-| pdf2html             | pdf 文件转 html               |
-| ink                  | 用 react 编写 cli 界面          |
-| envalid              | 验证环境变量的校验库                 |
-| @upyo/core           | 适配 bun node deno 的邮件库      |
-| discord.js           | discord 的 api 库            |
+| 包名                   | 描述                                |
+| -------------------- | --------------------------------- |
+| dotenv               | 读取 .env 文件                        |
+| mstts-js             | 文字转语音                             |
+| node-schedule        | 定时器工具                             |
+| async-validator      | 校验库                               |
+| md5                  | md5 加密                            |
+| spark-md5            | 提供更多的 md5 方式                      |
+| glob                 | 通过通配符匹配路径                         |
+| yargs-parser         | 获取 cmd 参数                         |
+| chalk                | cmd 信息样式设置                        |
+| cli-progress         | node 进度条                          |
+| inquirer             | 命令行选项                             |
+| commander            | 定制命令行界面                           |
+| clear                | 清空控制台                             |
+| figlet               | 打印字符文字                            |
+| download-git-repo    | 下载 git 仓库                         |
+| ora                  | 命令行加载动画                           |
+| iconv-lite           | 解决编码问题                            |
+| cheerio              | 可以理解为 node 下的 jQuery              |
+| request              | 用于在 Node 端发送请求                    |
+| nodemailer           | 发送邮件                              |
+| fs-extra             | 文件操作（移动文件等）                       |
+| uuid                 | uuid 库                            |
+| nanoid               | 与 uuid 类似同样生成唯一 key, 但是 url 访问更友好 |
+| ogr2ogr              | 文件格式转换，例如 dxf                     |
+| dxf                  | dxf 解析工具，可以转 svg                  |
+| gh-pages             | github page部署库                    |
+| decompress           | 解压压缩包                             |
+| compress-images      | 图片压缩                              |
+| imagemin             | 图片压缩                              |
+| picocolors           | 输入颜色字符                            |
+| log4js               | 生成日志文件                            |
+| @trpc/server         | trpc 统一前后端的 typescript 类型         |
+| sharp                | 图像处理库                             |
+| morgan               | http 日志记录库                        |
+| zlib                 | gzip 压缩解压缩库                       |
+| oxlint               | 替代 eslint 的库                      |
+| @antfu/eslint-config | antfu 推荐的 eslint config           |
+| @trpc/server         | trpc 服务端                          |
+| consul               | 微服务注册关联管理库                        |
+| npmlog               | 在 cli 中的 log 工具                   |
+| semver               | 比较版本号大小                           |
+| colors               | 颜色库                               |
+| root-check           | 降级 sudo 权限, 避免权限造成的影响             |
+| user-home            | 获取用户主目录路径                         |
+| path-exists          | 判断文件 path 是否存在                    |
+| minimist             | 命令行参数解析                           |
+| url-join             | url 的自动拼接                         |
+| npminstall           | cnpm 中通过代码 install 的库             |
+| rimraf               | rm 多系统删除库                         |
+| simple-git           | 代码进行 git 管理                       |
+| bcrypt               | 加密库                               |
+| figlet               | FIG 字符, 终端绘制字符画                   |
+| lru-cache            | lru 缓存算法的实现库                      |
+| workerpool           | worker 封装库                        |
+| node-html-parser     | html 的解析库                         |
+| docusaurus           | 文档自动生成工具                          |
+| hpp                  | 参数脏数据清理                           |
+| http-status          | http 状态的枚举定义库                     |
+| ioredis              | node-redis 的改良版                   |
+| @apollo/server       | graphql 的实现标准, 支持多个 web 框架        |
+| fast-folder-size     | 快速获取文件夹的大小                        |
+| passport             | 身份验证库                             |
+| svg2pdf.js           | svg 转 pdf 文件                      |
+| pdf2html             | pdf 文件转 html                      |
+| ink                  | 用 react 编写 cli 界面                 |
+| envalid              | 验证环境变量的校验库                        |
+| @upyo/core           | 适配 bun node deno 的邮件库             |
+| discord.js           | discord 的 api 库                   |
 
 
 ### 代码规范相关
@@ -407,12 +408,17 @@ uuid: 8b82cdc2-57da-47ac-ac8d-c69597208347
 
 ## UI 库
 
-| 包名            | 描述                      |
-| ------------- | ----------------------- |
-| @mui/material | mui 谷歌风格的 material 组件库            |
-|@mui/joy|mui 自己设计的组件库|
-| Mantine       | Mantine UI 库            |
-| shadcn/ui     | 使用 tailwindcss 编写, 本地组件 |
+| 包名                | 描述                            |
+| ----------------- | ----------------------------- |
+| @mui/material     | (React)mui 谷歌风格的 material 组件库 |
+| @mui/joy          | (React)mui 自己设计的组件库           |
+| Mantine           | Mantine UI 库                  |
+| shadcn/ui         | 使用 tailwindcss 编写, 本地组件       |
+| naive             | vue3 清新的组件库                   |
+| @douyinfe/semi-ui | 抖音开发的 React 中后台设计与前端基础组件      |
+| reka-ui           | 模仿 shadcn 的 vue 实现版本          |
+| @nuxt/ui          | 支持 Vue 和 Nuxt                 |
+| shadcn-vue        | shadcn 的 vue 实现版本             |
 
 ## Vue 类
 

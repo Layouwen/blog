@@ -89,6 +89,12 @@ curl -fsSL https://cli.coderabbit.ai/install.sh | sh
 - 取消 Show Spotlight search 和 Show Finder search window
 - 配置 alfred 快捷键
 
+开启时钟秒
+- settings
+- menu bar
+- clock options
+- 勾选 Display the time with seconds
+
 ## 无法按住持续连按
 
 ### 关闭 ApplePressAndHoldEnabled
@@ -151,6 +157,9 @@ defaults delete -g ApplePressAndHoldEnabled
 # brew相关
 
 ```bash
+brew install ffmpeg
+brew install exiftool
+brew install imagemagick
 brew install webp
 brew install pandoc
 brew install cowsay
@@ -167,6 +176,7 @@ brew install graphicsmagick
 brew install cmatrix
 brew install ctop
 brew install fastfetch
+brew install opencode
 
 # ripgrep \
 # bat \
@@ -193,6 +203,12 @@ brew install fastfetch
 nvm 安装完后，需要创建 `~/.nvm` 以及更新 `~/.zshrc` 的配置
 
 ```bash
+brew tap farion1231/ccswitch
+brew trust --formula farion1231/ccswitch/cc-switch
+brew install --cask cc-switch
+
+brew install --cask claude-code
+brew install --cask opencode-desktop
 brew install --cask mqttx
 brew install --cask firefox
 brew install --cask postman
@@ -207,7 +223,6 @@ brew install --cask visual-studio-code
 brew install --cask ticktick
 brew install --cask snipaste
 brew install --cask sourcetree
-brew install --cask sunloginclient
 brew install --cask feishu
 brew install --cask discord
 brew install --cask tencent-lemon
@@ -248,6 +263,7 @@ brew install --cask obs
 # todesk \
 
 # 不常用
+# brew install --cask sunloginclient
 # arc \
 # spotify \
 # background-music \
