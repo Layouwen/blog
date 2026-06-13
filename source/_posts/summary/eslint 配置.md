@@ -8,7 +8,6 @@ tags:
   - eslint
   - 汇总
 ---
-
 安装 eslint
 
 ```bash
