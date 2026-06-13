@@ -953,6 +953,10 @@
 <td>uuid 库</td>
 </tr>
 <tr>
+<td>nanoid</td>
+<td>与 uuid 类似同样生成唯一 key, 但是 url 访问更友好</td>
+</tr>
+<tr>
 <td>ogr2ogr</td>
 <td>文件格式转换，例如 dxf</td>
 </tr>
@@ -1694,11 +1698,11 @@
 </thead>
 <tbody><tr>
 <td>@mui&#x2F;material</td>
-<td>mui 谷歌风格的 material 组件库</td>
+<td>(React)mui 谷歌风格的 material 组件库</td>
 </tr>
 <tr>
 <td>@mui&#x2F;joy</td>
-<td>mui 自己设计的组件库</td>
+<td>(React)mui 自己设计的组件库</td>
 </tr>
 <tr>
 <td>Mantine</td>
@@ -1707,6 +1711,26 @@
 <tr>
 <td>shadcn&#x2F;ui</td>
 <td>使用 tailwindcss 编写, 本地组件</td>
+</tr>
+<tr>
+<td>naive</td>
+<td>vue3 清新的组件库</td>
+</tr>
+<tr>
+<td>@douyinfe&#x2F;semi-ui</td>
+<td>抖音开发的 React 中后台设计与前端基础组件</td>
+</tr>
+<tr>
+<td>reka-ui</td>
+<td>模仿 shadcn 的 vue 实现版本</td>
+</tr>
+<tr>
+<td>@nuxt&#x2F;ui</td>
+<td>支持 Vue 和 Nuxt</td>
+</tr>
+<tr>
+<td>shadcn-vue</td>
+<td>shadcn 的 vue 实现版本</td>
 </tr>
 </tbody></table>
 <h2 id="Vue-类"><a href="#Vue-类" class="headerlink" title="Vue 类"></a>Vue 类</h2><table>
@@ -2163,66 +2187,13 @@
   <entry>
     <title>软件推荐</title>
     <url>/2025/02/26/summary/%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/</url>
-    <content><![CDATA[<h1 id="通用"><a href="#通用" class="headerlink" title="通用"></a>通用</h1><h2 id="Browser-Extension"><a href="#Browser-Extension" class="headerlink" title="Browser Extension"></a>Browser Extension</h2><h3 id="1password"><a href="#1password" class="headerlink" title="1password"></a>1password</h3><h3 id="AdGuard-AdBlocker"><a href="#AdGuard-AdBlocker" class="headerlink" title="AdGuard AdBlocker"></a>AdGuard AdBlocker</h3><h3 id="AI-Subtitles-Immersive-Translate-Trancy"><a href="#AI-Subtitles-Immersive-Translate-Trancy" class="headerlink" title="AI Subtitles &amp; Immersive Translate - Trancy"></a>AI Subtitles &amp; Immersive Translate - Trancy</h3><p>下载地址: <a href="https://www.trancy.org/zh-cn">https://www.trancy.org/zh-cn</a></p>
-<p>功能:</p>
-<ul>
-<li>沉浸式翻译</li>
-<li>YouTube &#x2F; Netflix 双语字幕</li>
-<li>单词跟踪学习</li>
-</ul>
-<p><img src="http://obsidian.easyhappy.top/avan/202308091120980.png"></p>
-<h3 id="Ajax-Modifier"><a href="#Ajax-Modifier" class="headerlink" title="Ajax Modifier"></a>Ajax Modifier</h3><h3 id="Dark-Reader"><a href="#Dark-Reader" class="headerlink" title="Dark Reader"></a>Dark Reader</h3><p>下载地址: <a href="https://darkreader.org/https://darkreader.org/">https://darkreader.org/https://darkreader.org/</a></p>
-<p><img src="http://obsidian.easyhappy.top/avan/202308091112178.png"></p>
-<h3 id="Eightify-AI-YouTube-Summarizer"><a href="#Eightify-AI-YouTube-Summarizer" class="headerlink" title="Eightify: AI YouTube Summarizer"></a>Eightify: AI YouTube Summarizer</h3><p>下载地址: <a href="https://eightify.app/">https://eightify.app/</a></p>
-<p>介绍: 总结 youtube 的视频内容</p>
-<p><img src="http://obsidian.easyhappy.top/avan/202308091133360.png"></p>
-<h3 id="Fonts-Ninja"><a href="#Fonts-Ninja" class="headerlink" title="Fonts Ninja"></a>Fonts Ninja</h3><h3 id="GoFullPage-Full-Page-Screen-Capture"><a href="#GoFullPage-Full-Page-Screen-Capture" class="headerlink" title="GoFullPage - Full Page Screen Capture"></a>GoFullPage - Full Page Screen Capture</h3><h3 id="Grammarly-AI-Writing-and-Grammar-Checker-App"><a href="#Grammarly-AI-Writing-and-Grammar-Checker-App" class="headerlink" title="Grammarly: AI Writing and Grammar Checker App"></a>Grammarly: AI Writing and Grammar Checker App</h3><h3 id="Image-Downloader"><a href="#Image-Downloader" class="headerlink" title="Image Downloader"></a>Image Downloader</h3><p><img src="http://obsidian.easyhappy.top/avan/202409251000844.png" alt="image.png"></p>
-<h3 id="Immersive-Translate-Translate-Web-PDF"><a href="#Immersive-Translate-Translate-Web-PDF" class="headerlink" title="Immersive Translate - Translate Web &amp; PDF"></a>Immersive Translate - Translate Web &amp; PDF</h3><p>下载地址: <a href="https://immersivetranslate.com/">https://immersivetranslate.com/</a></p>
-<p><img src="http://obsidian.easyhappy.top/avan/202308091107349.png"></p>
-<h3 id="JSON-Viewer"><a href="#JSON-Viewer" class="headerlink" title="JSON Viewer"></a>JSON Viewer</h3><h3 id="Live-Stream-Dwonloader"><a href="#Live-Stream-Dwonloader" class="headerlink" title="Live Stream Dwonloader"></a>Live Stream Dwonloader</h3><p>下载地址: <a href="https://webextension.org/listing/hls-downloader.html">https://webextension.org/listing/hls-downloader.html</a></p>
-<p><img src="http://obsidian.easyhappy.top/avan/202308091110711.png"></p>
-<h3 id="Merlin-Ask-AI-to-Research-Write-Review"><a href="#Merlin-Ask-AI-to-Research-Write-Review" class="headerlink" title="Merlin - Ask AI to Research, Write &amp; Review"></a>Merlin - Ask AI to Research, Write &amp; Review</h3><p>下载地址: <a href="https://merlin.foyer.work/zh-CN/">https://merlin.foyer.work/zh-CN/</a></p>
-<p>介绍:<br>网页插件版本的快捷 chatgpt 聊天</p>
-<p>功能:</p>
-<ul>
-<li>支持自定义 apikey</li>
-<li>总结网页</li>
-<li>总结 YouTube</li>
-<li>总结 gmail 邮件</li>
-<li>协助 linked 和 twitter 快捷回复</li>
-</ul>
-<p><img src="http://obsidian.easyhappy.top/avan/202308091048322.png"></p>
-<h3 id="Perplexity-AI-Companion"><a href="#Perplexity-AI-Companion" class="headerlink" title="Perplexity - AI Companion"></a>Perplexity - AI Companion</h3><h3 id="Proxy-SwitchyOmega"><a href="#Proxy-SwitchyOmega" class="headerlink" title="Proxy SwitchyOmega"></a>Proxy SwitchyOmega</h3><h3 id="React-Developer-Tools"><a href="#React-Developer-Tools" class="headerlink" title="React Developer Tools"></a>React Developer Tools</h3><h3 id="Relingo-Master-Words-Bilingual-Subtitles-Immersive-Translate-Free"><a href="#Relingo-Master-Words-Bilingual-Subtitles-Immersive-Translate-Free" class="headerlink" title="Relingo - Master Words | Bilingual Subtitles | Immersive Translate | Free"></a>Relingo - Master Words | Bilingual Subtitles | Immersive Translate | Free</h3><p>下载地址: <a href="https://relingo.net/en/index">https://relingo.net/en/index</a></p>
-<p>功能:</p>
-<ul>
-<li>生词标注</li>
-<li>快捷翻译</li>
-<li>视频字慕</li>
-</ul>
-<p><img src="http://obsidian.easyhappy.top/avan/202308091030727.png"></p>
-<h3 id="SteamDB"><a href="#SteamDB" class="headerlink" title="SteamDB"></a>SteamDB</h3><h3 id="Tampermonkey"><a href="#Tampermonkey" class="headerlink" title="Tampermonkey"></a>Tampermonkey</h3><h3 id="Tweet-Hunter-X-Sidebar-for-Twitter"><a href="#Tweet-Hunter-X-Sidebar-for-Twitter" class="headerlink" title="Tweet Hunter X: Sidebar for Twitter"></a>Tweet Hunter X: Sidebar for Twitter</h3><h3 id="X-Twitter-Video-Downloader"><a href="#X-Twitter-Video-Downloader" class="headerlink" title="X (Twitter) Video Downloader"></a>X (Twitter) Video Downloader</h3><h3 id="Vimium-C-All-by-Keyboard"><a href="#Vimium-C-All-by-Keyboard" class="headerlink" title="Vimium C - All by Keyboard"></a>Vimium C - All by Keyboard</h3><h3 id="Vue-js-devtools"><a href="#Vue-js-devtools" class="headerlink" title="Vue.js devtools"></a>Vue.js devtools</h3><h3 id="Wappalyzer-Technology-profiler"><a href="#Wappalyzer-Technology-profiler" class="headerlink" title="Wappalyzer - Technology profiler"></a>Wappalyzer - Technology profiler</h3><p>下载地址: <a href="https://www.wappalyzer.com/">https://www.wappalyzer.com</a></p>
-<p><img src="http://obsidian.easyhappy.top/avan/202308091032339.png"></p>
-<h3 id="XSwitch"><a href="#XSwitch" class="headerlink" title="XSwitch"></a>XSwitch</h3><h3 id="WuCai-Web-Highlighter"><a href="#WuCai-Web-Highlighter" class="headerlink" title="WuCai Web Highlighter"></a>WuCai Web Highlighter</h3><p>下载地址: <a href="https://www.dotalk.cn/">https://www.dotalk.cn/</a></p>
-<p><img src="http://obsidian.easyhappy.top/avan/202406211112948.png" alt="image.png"></p>
-<h3 id="豆包-AI-助手"><a href="#豆包-AI-助手" class="headerlink" title="豆包 AI 助手"></a>豆包 AI 助手</h3><p>下载地址: <a href="https://www.doubao.com/browser-extension/landing">https://www.doubao.com/browser-extension/landing</a></p>
-<p><img src="http://obsidian.easyhappy.top/avan/202407290859367.png" alt="image.png"></p>
-<h3 id="Gimli-Tailwind"><a href="#Gimli-Tailwind" class="headerlink" title="Gimli Tailwind"></a>Gimli Tailwind</h3><h3 id="Hackertab"><a href="#Hackertab" class="headerlink" title="Hackertab"></a>Hackertab</h3><h3 id="Responsive-Viewer"><a href="#Responsive-Viewer" class="headerlink" title="Responsive Viewer"></a>Responsive Viewer</h3><h3 id="RSS-Feed-Reader"><a href="#RSS-Feed-Reader" class="headerlink" title="RSS Feed Reader"></a>RSS Feed Reader</h3><h3 id="Side-Space"><a href="#Side-Space" class="headerlink" title="Side Space"></a>Side Space</h3><h3 id="Video-Speed-Controller"><a href="#Video-Speed-Controller" class="headerlink" title="Video Speed Controller"></a>Video Speed Controller</h3><h3 id="WhatFont"><a href="#WhatFont" class="headerlink" title="WhatFont"></a>WhatFont</h3><h3 id="Web3"><a href="#Web3" class="headerlink" title="Web3"></a>Web3</h3><h4 id="MetaMask"><a href="#MetaMask" class="headerlink" title="MetaMask"></a>MetaMask</h4><h4 id="OKX-Wallet"><a href="#OKX-Wallet" class="headerlink" title="OKX Wallet"></a>OKX Wallet</h4><h3 id="不常用"><a href="#不常用" class="headerlink" title="不常用"></a>不常用</h3><h4 id="Separate-Window"><a href="#Separate-Window" class="headerlink" title="Separate Window"></a>Separate Window</h4><h4 id="Komodo-Screen-Recorder-SOP"><a href="#Komodo-Screen-Recorder-SOP" class="headerlink" title="Komodo Screen Recorder &amp; SOP"></a>Komodo Screen Recorder &amp; SOP</h4><p>自动录制相关操作</p>
-<h4 id="Glitter-AI"><a href="#Glitter-AI" class="headerlink" title="Glitter AI"></a>Glitter AI</h4><p>自动录制相关操作</p>
-<h4 id="Scribe-AI-Documentation-SOPs-Screenshots"><a href="#Scribe-AI-Documentation-SOPs-Screenshots" class="headerlink" title="Scribe: AI Documentation, SOPs &amp; Screenshots"></a>Scribe: AI Documentation, SOPs &amp; Screenshots</h4><p>自动录制相关操作</p>
-<h4 id="Little-Rat"><a href="#Little-Rat" class="headerlink" title="Little Rat"></a>Little Rat</h4><p>监控浏览器其他插件的的请求调用并阻止调用</p>
-<h4 id="Lingocloud-Web-Translation-Extension"><a href="#Lingocloud-Web-Translation-Extension" class="headerlink" title="Lingocloud - Web Translation Extension"></a>Lingocloud - Web Translation Extension</h4><h4 id="Bitwarden-Password-Manager"><a href="#Bitwarden-Password-Manager" class="headerlink" title="Bitwarden Password Manager"></a>Bitwarden Password Manager</h4><h4 id="FinalScout-ChatGPT-Driven-LikedIn-Emails"><a href="#FinalScout-ChatGPT-Driven-LikedIn-Emails" class="headerlink" title="FinalScout - ChatGPT-Driven LikedIn Emails"></a>FinalScout - ChatGPT-Driven LikedIn Emails</h4><p>下载地址: <a href="https://finalscout.com/">https://finalscout.com</a></p>
-<p>介绍: 提取 linked 的有效邮箱, 通过 openai 编写邮件, 快捷发送 gmail</p>
-<p><img src="http://obsidian.easyhappy.top/avan/202308091141951.png"></p>
-<h2 id="brew-和-scoop-直装"><a href="#brew-和-scoop-直装" class="headerlink" title="brew 和 scoop 直装"></a>brew 和 scoop 直装</h2><h3 id="Postman"><a href="#Postman" class="headerlink" title="Postman"></a>Postman</h3><p>下载地址: <a href="https://www.postman.com/">https://www.postman.com/</a></p>
-<p><img src="http://obsidian.easyhappy.top/avan/202306051508795.png"></p>
+    <content><![CDATA[<h1 id="通用"><a href="#通用" class="headerlink" title="通用"></a>通用</h1><h2 id="brew-直装"><a href="#brew-直装" class="headerlink" title="brew 直装"></a>brew 直装</h2><h3 id="Postman"><a href="#Postman" class="headerlink" title="Postman"></a>Postman</h3><p>下载地址: <a href="https://www.postman.com/">https://www.postman.com/</a></p>
 <h3 id="MQTTX"><a href="#MQTTX" class="headerlink" title="MQTTX"></a>MQTTX</h3><p>下载地址: <a href="https://mqttx.app/downloads">https://mqttx.app/downloads</a></p>
-<p><img src="http://obsidian.easyhappy.top/avan/202306051504996.png"></p>
 <h3 id="Snipaste"><a href="#Snipaste" class="headerlink" title="Snipaste"></a>Snipaste</h3><p>下载地址：<a href="https://www.snipaste.com/">https://www.snipaste.com/</a></p>
 <p><img src="https://cdn.nlark.com/yuque/0/2022/png/815906/1642990376361-df1fa78f-d34d-4535-8c50-963694f4b534.png?x-oss-process=image/resize,w_750,limit_0" alt="image"></p>
 <h3 id="SourceTree"><a href="#SourceTree" class="headerlink" title="SourceTree"></a>SourceTree</h3><p>下载地址：<a href="https://www.sourcetreeapp.com/">https://www.sourcetreeapp.com/</a></p>
 <p><img src="https://cdn.nlark.com/yuque/0/2022/png/815906/1643089613150-bc6325a4-ff2c-4d1f-9510-ec0df0c8b8da.png?x-oss-process=image/resize,w_1349,limit_0" alt="image"></p>
 <h3 id="Telegram"><a href="#Telegram" class="headerlink" title="Telegram"></a>Telegram</h3><p>下载地址：<a href="https://desktop.telegram.org/">https://desktop.telegram.org/</a></p>
-<p><img src="http://obsidian.easyhappy.top/avan/202506301450139.png" alt="image.png"></p>
 <h3 id="QQ"><a href="#QQ" class="headerlink" title="QQ"></a>QQ</h3><p>下载地址：<a href="https://im.qq.com/download">https://im.qq.com/download</a></p>
 <p><img src="https://cdn.nlark.com/yuque/0/2022/png/815906/1654748932151-ee9cd41f-dbf6-4568-937a-3008fbd2e486.png?x-oss-process=image/resize,w_1192,limit_0" alt="image"></p>
 <h3 id="微信"><a href="#微信" class="headerlink" title="微信"></a>微信</h3><p>下载地址：<a href="https://weixin.qq.com/">https://weixin.qq.com/</a></p>
@@ -2238,12 +2209,9 @@
 <h3 id="Apifox"><a href="#Apifox" class="headerlink" title="Apifox"></a>Apifox</h3><p>下载地址：<a href="https://www.apifox.cn/">https://www.apifox.cn/</a></p>
 <p><img src="https://cdn.nlark.com/yuque/0/2022/png/815906/1656557564846-a971e29c-275e-4b82-9c21-9a7f8b3e89bd.png?x-oss-process=image/resize,w_1500,limit_0" alt="image"></p>
 <h3 id="SoapUI"><a href="#SoapUI" class="headerlink" title="SoapUI"></a>SoapUI</h3><p>下载地址：<a href="https://www.soapui.org/">https://www.soapui.org</a></p>
-<p><img src="http://obsidian.easyhappy.top/avan/202302231448534.png"></p>
-<h3 id="Firefox"><a href="#Firefox" class="headerlink" title="Firefox"></a>Firefox</h3><p><img src="http://obsidian.easyhappy.top/avan/20230603142844.png"></p>
-<h3 id="Chrome"><a href="#Chrome" class="headerlink" title="Chrome"></a>Chrome</h3><p><img src="https://cdn.nlark.com/yuque/0/2020/png/815906/1601457600899-94a845ab-6799-4f18-92d0-c0a32cd3e6e7.png" alt="image"></p>
+<h3 id="Firefox"><a href="#Firefox" class="headerlink" title="Firefox"></a>Firefox</h3><h3 id="Chrome"><a href="#Chrome" class="headerlink" title="Chrome"></a>Chrome</h3><p><img src="https://cdn.nlark.com/yuque/0/2020/png/815906/1601457600899-94a845ab-6799-4f18-92d0-c0a32cd3e6e7.png" alt="image"></p>
 <h3 id="Picgo"><a href="#Picgo" class="headerlink" title="Picgo"></a>Picgo</h3><p>下载地址: <a href="https://github.com/Molunerfinn/PicGo/releases">https://github.com/Molunerfinn/PicGo/releases</a></p>
-<p><img src="http://obsidian.easyhappy.top/avan/20230228214410.png"></p>
-<h2 id="brew-直装"><a href="#brew-直装" class="headerlink" title="brew 直装"></a>brew 直装</h2><h3 id="Edge"><a href="#Edge" class="headerlink" title="Edge"></a>Edge</h3><p>下载地址：<a href="https://www.microsoft.com/en-us/edge">https://www.microsoft.com/en-us/edge</a></p>
+<h3 id="Edge"><a href="#Edge" class="headerlink" title="Edge"></a>Edge</h3><p>下载地址：<a href="https://www.microsoft.com/en-us/edge">https://www.microsoft.com/en-us/edge</a></p>
 <p><img src="https://cdn.nlark.com/yuque/0/2020/png/815906/1601457951454-0eeaada3-6bd9-4fa7-8189-c44302368631.png?x-oss-process=image/resize,w_1125,limit_0" alt="image"></p>
 <h3 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h3><p>下载地址：<a href="https://www.docker.com/">https://www.docker.com/</a></p>
 <p><img src="https://cdn.nlark.com/yuque/0/2022/png/815906/1656530796303-64377299-f15d-4b0a-b1d5-5f8af02b08ce.png" alt="image"></p>
@@ -2252,10 +2220,8 @@
 <p><img src="https://s2.loli.net/2025/07/24/VvwNK1AO3rQqJZG.png" alt="image.png"></p>
 <h3 id="1Password"><a href="#1Password" class="headerlink" title="1Password"></a>1Password</h3><p>下载地址：<a href="https://1password.com/">https://1password.com/</a></p>
 <p><img src="https://cdn.nlark.com/yuque/0/2020/png/815906/1601458719846-91776dbe-1452-4c72-bcfb-f39f3ac3fea2.png?x-oss-process=image/resize,w_1125,limit_0" alt="image"></p>
-<h3 id="ToDesk"><a href="#ToDesk" class="headerlink" title="ToDesk"></a>ToDesk</h3><p>下载地址：<a href="https://www.todesk.com/">https://www.todesk.com/</a></p>
-<p><img src="https://cdn.nlark.com/yuque/0/2022/png/815906/1654748810245-3799b34b-2d04-49d0-a32a-183ba06397f5.png?x-oss-process=image/resize,w_1385,limit_0" alt="image"></p>
-<h3 id="向日葵"><a href="#向日葵" class="headerlink" title="向日葵"></a>向日葵</h3><p>下载地址：<a href="https://sunlogin.oray.com/">https://sunlogin.oray.com/</a></p>
-<p><img src="https://cdn.nlark.com/yuque/0/2022/png/815906/1654748757675-4d078eda-ed59-4909-9b0c-81113998540c.png?x-oss-process=image/resize,w_1500,limit_0" alt="image"></p>
+<h3 id="UU远程"><a href="#UU远程" class="headerlink" title="UU远程"></a>UU远程</h3><p>下载地址: <a href="https://uuyc.163.com/">https://uuyc.163.com/</a></p>
+<p><img src="https://upyun-assets.4van.top/avan/20260611225031003.png" alt="image.png"></p>
 <h3 id="企业微信"><a href="#企业微信" class="headerlink" title="企业微信"></a>企业微信</h3><p>下载地址：<a href="https://work.weixin.qq.com/#indexDownload">https://work.weixin.qq.com/#indexDownload</a></p>
 <p><img src="https://cdn.nlark.com/yuque/0/2022/png/815906/1656573945855-955cac30-f6b0-4382-a195-3d185031c64c.png?x-oss-process=image/resize,w_1500,limit_0" alt="image"></p>
 <h3 id="飞书"><a href="#飞书" class="headerlink" title="飞书"></a>飞书</h3><p>下载地址：<a href="https://www.feishu.cn/download">https://www.feishu.cn/download</a></p>
@@ -2265,7 +2231,6 @@
 <h3 id="百度网盘"><a href="#百度网盘" class="headerlink" title="百度网盘"></a>百度网盘</h3><p>下载地址：<a href="https://pan.baidu.com/download#pan">https://pan.baidu.com/download#pan</a></p>
 <p><img src="https://cdn.nlark.com/yuque/0/2022/png/815906/1656555212089-ccad789c-854b-4dbd-986b-8f34db888486.png?x-oss-process=image/resize,w_1500,limit_0" alt="image"></p>
 <h3 id="腾讯会议"><a href="#腾讯会议" class="headerlink" title="腾讯会议"></a>腾讯会议</h3><p>下载地址: <a href="https://meeting.tencent.com/download/">https://meeting.tencent.com/download/</a></p>
-<p><img src="http://obsidian.easyhappy.top/avan/202408081137740.png" alt="CleanShot 2024-08-08 at 11.37.12.png"></p>
 <h3 id="微信开发者工具"><a href="#微信开发者工具" class="headerlink" title="微信开发者工具"></a>微信开发者工具</h3><p>下载地址：<a href="https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html">https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html</a></p>
 <p><img src="https://cdn.nlark.com/yuque/0/2020/png/815906/1602307651556-69edac30-c6b3-4922-95dd-58e855d19bd1.png" alt="image"></p>
 <h3 id="滴答清单"><a href="#滴答清单" class="headerlink" title="滴答清单"></a>滴答清单</h3><p>下载地址：<a href="https://dida365.com/">https://dida365.com/</a></p>
@@ -2273,99 +2238,146 @@
 <h3 id="网易云音乐"><a href="#网易云音乐" class="headerlink" title="网易云音乐"></a>网易云音乐</h3><p>下载地址：<a href="https://music.163.com/">https://music.163.com/</a></p>
 <p><img src="https://cdn.nlark.com/yuque/0/2021/png/815906/1627539745899-443d29ca-be9c-48e4-b872-83c31b0a371f.png?x-oss-process=image/resize,w_1125,limit_0" alt="image"></p>
 <h3 id="MongoDB-Compass"><a href="#MongoDB-Compass" class="headerlink" title="MongoDB Compass"></a>MongoDB Compass</h3><p>下载地址: <a href="https://www.mongodb.com/products/tools/compass">https://www.mongodb.com/products/tools/compass</a></p>
-<p><img src="http://obsidian.easyhappy.top/avan/202408081018540.png" alt="CleanShot 2024-08-08 at 10.18.42.png"></p>
 <h3 id="JOSM"><a href="#JOSM" class="headerlink" title="JOSM"></a>JOSM</h3><p>下载地址: <a href="https://josm.openstreetmap.de/wiki/Download">https://josm.openstreetmap.de/wiki/Download</a></p>
-<p><img src="http://obsidian.easyhappy.top/avan/202408081012104.png" alt="CleanShot 2024-08-08 at 10.12.47.png"></p>
 <h3 id="HBuilderX"><a href="#HBuilderX" class="headerlink" title="HBuilderX"></a>HBuilderX</h3><p>下载地址: <a href="https://www.dcloud.io/hbuilderx.html">https://www.dcloud.io/hbuilderx.html</a></p>
-<p><img src="http://obsidian.easyhappy.top/avan/202408081009974.png" alt="CleanShot 2024-08-08 at 10.09.39.png"></p>
 <h3 id="JetBrains-Mono"><a href="#JetBrains-Mono" class="headerlink" title="JetBrains Mono"></a>JetBrains Mono</h3><p>下载地址：<a href="https://www.jetbrains.com/lp/mono/">https://www.jetbrains.com/lp/mono/</a></p>
 <p><img src="https://cdn.nlark.com/yuque/0/2021/png/815906/1625153216897-b724e773-d113-4a16-839a-f79dd0ba6cd8.png?x-oss-process=image/resize,w_1125,limit_0" alt="image"></p>
 <h3 id="Sublime-Text"><a href="#Sublime-Text" class="headerlink" title="Sublime Text"></a>Sublime Text</h3><p>下载地址: <a href="https://www.sublimetext.com/">https://www.sublimetext.com/</a></p>
-<p><img src="http://obsidian.easyhappy.top/avan/202407300932611.png" alt="image.png"></p>
 <h3 id="钉钉"><a href="#钉钉" class="headerlink" title="钉钉"></a>钉钉</h3><p><a href="https://www.dingtalk.com/">https://www.dingtalk.com</a></p>
-<p><img src="http://obsidian.easyhappy.top/obsidian/202407122125473.png"></p>
 <h3 id="Notion"><a href="#Notion" class="headerlink" title="Notion"></a>Notion</h3><p>下载地址: <a href="https://www.notion.so/product">官网</a></p>
-<p><img src="http://obsidian.easyhappy.top/avan/202407301034111.png" alt="image.png"></p>
 <h3 id="阿里云盘"><a href="#阿里云盘" class="headerlink" title="阿里云盘"></a>阿里云盘</h3><p>下载地址：<a href="https://www.aliyundrive.com/download">https://www.aliyundrive.com/download</a></p>
 <p><img src="https://pic2.zhimg.com/80/v2-84652b0871e75e6c5f5e049f69ddfd01_720w.png" alt="image"></p>
 <h3 id="迅雷"><a href="#迅雷" class="headerlink" title="迅雷"></a>迅雷</h3><p>下载地址：<a href="https://www.xunlei.com/">https://www.xunlei.com</a></p>
 <p><img src="https://cdn.nlark.com/yuque/0/2022/png/815906/1656525594451-d2f7ccb2-f1ae-4d4a-a0ee-8d70a7499dbc.png?x-oss-process=image/resize,w_1500,limit_0" alt="image"></p>
-<h2 id="scoop-直装"><a href="#scoop-直装" class="headerlink" title="scoop 直装"></a>scoop 直装</h2><h3 id="Grammarly"><a href="#Grammarly" class="headerlink" title="Grammarly"></a>Grammarly</h3><p><a href="https://www.grammarly.com/">https://www.grammarly.com/</a></p>
-<p><img src="http://obsidian.easyhappy.top/avan/20230924102114.png" alt="image.png"></p>
-<h2 id="未分类"><a href="#未分类" class="headerlink" title="未分类"></a>未分类</h2><h3 id="opencode"><a href="#opencode" class="headerlink" title="opencode"></a>opencode</h3><p>开源的 agent 工具</p>
+<h2 id="未分类"><a href="#未分类" class="headerlink" title="未分类"></a>未分类</h2><h3 id="Grammarly"><a href="#Grammarly" class="headerlink" title="Grammarly"></a>Grammarly</h3><p>下载地址: <a href="https://www.grammarly.com/">https://www.grammarly.com/</a></p>
+<h3 id="raycast"><a href="#raycast" class="headerlink" title="raycast"></a>raycast</h3><p>替代 alfred 启动栏菜单</p>
+<p>下载地址: <a href="https://www.raycast.com/">https://www.raycast.com/</a></p>
+<h3 id="opencode"><a href="#opencode" class="headerlink" title="opencode"></a>opencode</h3><p>开源的 agent 工具</p>
+<p>下载地址: <a href="https://opencode.ai/">https://opencode.ai/</a></p>
+<p><img src="http://upyun-assets.4van.top/avan/20260611231049160.png" alt="image.png"></p>
 <h3 id="tailscale"><a href="#tailscale" class="headerlink" title="tailscale"></a>tailscale</h3><p>内网组网</p>
-<h3 id="keyviz"><a href="#keyviz" class="headerlink" title="keyviz"></a>keyviz</h3><p>官方: <a href="https://keyviz.org/">https://keyviz.org/</a></p>
-<h3 id="ollama"><a href="#ollama" class="headerlink" title="ollama"></a>ollama</h3><p>官网: <a href="https://ollama.com/">https://ollama.com/</a></p>
+<p>下载地址: <a href="https://tailscale.com/">https://tailscale.com/</a></p>
+<p><img src="http://upyun-assets.4van.top/avan/20260611232103529.png" alt="image.png"></p>
+<h3 id="keyviz"><a href="#keyviz" class="headerlink" title="keyviz"></a>keyviz</h3><p>下载地址: <a href="https://keyviz.org/">https://keyviz.org/</a></p>
+<p><img src="http://upyun-assets.4van.top/avan/20260611232429226.png" alt="image.png"></p>
+<h3 id="ollama"><a href="#ollama" class="headerlink" title="ollama"></a>ollama</h3><p>本地开源的大模型</p>
+<p>官网: <a href="https://ollama.com/">https://ollama.com/</a></p>
 <p><img src="https://s2.loli.net/2025/07/23/FWJxyIP1GHqp6Rw.png" alt="image.png"></p>
 <h3 id="OpenHands"><a href="#OpenHands" class="headerlink" title="OpenHands"></a>OpenHands</h3><p>基于 LLM 模型进行一系列自动化操作</p>
 <p>官网: <a href="https://www.all-hands.dev/">https://www.all-hands.dev/</a></p>
-<p><img src="http://obsidian.easyhappy.top/avan/202506240058243.png" alt="image.png"></p>
-<h3 id="nocodb"><a href="#nocodb" class="headerlink" title="nocodb"></a>nocodb</h3><p>数据库可视化管理</p>
-<p>官网: <a href="https://nocodb.com/">https://nocodb.com/</a></p>
-<p><img src="http://obsidian.easyhappy.top/avan/202506240038426.png" alt="image.png"></p>
 <h3 id="zed"><a href="#zed" class="headerlink" title="zed"></a>zed</h3><p>代码编辑器</p>
 <p>下载地址: <a href="https://zed.dev/">https://zed.dev/</a></p>
-<p><img src="http://obsidian.easyhappy.top/avan/202506240021777.png"></p>
 <h3 id="coolify"><a href="#coolify" class="headerlink" title="coolify"></a>coolify</h3><p>开源替代 vercel 之类的托管服务</p>
 <p>官网: <a href="https://coolify.io/">https://coolify.io/</a></p>
-<p><img src="http://obsidian.easyhappy.top/avan/202506240010029.png" alt="image.png"></p>
-<h3 id="hoppscotch"><a href="#hoppscotch" class="headerlink" title="hoppscotch"></a>hoppscotch</h3><p>替代 postman 的开源免费软件</p>
-<p>下载地址: <a href="https://hoppscotch.com/download?platform=macOS">https://hoppscotch.com/download?platform=macOS</a></p>
-<p><img src="http://obsidian.easyhappy.top/avan/202506240004709.png" alt="image.png"></p>
 <h3 id="tabby"><a href="#tabby" class="headerlink" title="tabby"></a>tabby</h3><p>本地化的 ai 工具, 类似 github copilot</p>
-<p>下载地址: [<a href="https://www.tabbyml.com/)[https://www.tabbyml.com/]">https://www.tabbyml.com/)[https://www.tabbyml.com/]</a></p>
-<p><img src="http://obsidian.easyhappy.top/avan/202506231308893.png" alt="image.png"></p>
+<p>下载地址: <a href="https://www.tabbyml.com/">https://www.tabbyml.com/</a></p>
 <h3 id="Void"><a href="#Void" class="headerlink" title="Void"></a>Void</h3><p>替代 Cursor 的开源版本</p>
 <p>下载地址: <a href="https://voideditor.com/">https://voideditor.com/</a></p>
-<p><img src="http://obsidian.easyhappy.top/avan/202506152325410.png" alt="image.png"></p>
 <h3 id="cherry-studio"><a href="#cherry-studio" class="headerlink" title="cherry-studio"></a>cherry-studio</h3><p>下载地址: <a href="https://github.com/CherryHQ/cherry-studio/releases">https://github.com/CherryHQ/cherry-studio/releases</a></p>
-<p><img src="http://obsidian.easyhappy.top/avan/202502132011445.png"></p>
-<h3 id="GitKraken-Desktop"><a href="#GitKraken-Desktop" class="headerlink" title="GitKraken Desktop"></a>GitKraken Desktop</h3><p>下载地址: <a href="https://www.gitkraken.com/">https://www.gitkraken.com/</a></p>
-<p><img src="http://obsidian.easyhappy.top/avan/202501190032275.png"></p>
+<h3 id="antigravity"><a href="#antigravity" class="headerlink" title="antigravity"></a>antigravity</h3><p>对标 cursor 的 google 开发的编辑器</p>
+<p>下载地址: <a href="https://antigravity.google/">https://antigravity.google/</a></p>
+<p><img src="http://upyun-assets.4van.top/avan/20260611233104510.png" alt="image.png"></p>
 <h3 id="Cursor"><a href="#Cursor" class="headerlink" title="Cursor"></a>Cursor</h3><p>下载地址: <a href="https://www.cursor.com/">https://www.cursor.com/</a></p>
-<p><img src="http://obsidian.easyhappy.top/avan/202408301724390.png" alt="CleanShot 2024-08-30 at 17.22.57.png"></p>
 <h3 id="Responsively-App"><a href="#Responsively-App" class="headerlink" title="Responsively App"></a>Responsively App</h3><p>同时展示不同分辨率下的网页效果</p>
 <p>下载地址: <a href="https://responsively.app/">https://responsively.app/</a></p>
-<p><img src="http://obsidian.easyhappy.top/obsidian/202412152156492.png"></p>
 <h3 id="AICoin"><a href="#AICoin" class="headerlink" title="AICoin"></a>AICoin</h3><p>下载地址: <a href="https://www.aicoin.com/en">https://www.aicoin.com/en</a></p>
-<p><img src="http://obsidian.easyhappy.top/avan/202411291723624.png" alt="image.png"></p>
-<h3 id="UGit"><a href="#UGit" class="headerlink" title="UGit"></a>UGit</h3><p>下载地址: <a href="https://ugit.qq.com/en/">https://ugit.qq.com/en/</a></p>
-<p><img src="http://obsidian.easyhappy.top/avan/202409110848077.png" alt="image.png"></p>
 <h3 id="WPS-Office"><a href="#WPS-Office" class="headerlink" title="WPS Office"></a>WPS Office</h3><p>下载地址：<a href="https://platform.wps.cn/">https://platform.wps.cn/</a></p>
 <p><img src="https://pic2.zhimg.com/80/v2-f23652776e0890f7b4a1bee8aad78e97_1440w.png" alt="image"></p>
 <h3 id="Bitwarden"><a href="#Bitwarden" class="headerlink" title="Bitwarden"></a>Bitwarden</h3><p>下载地址: <a href="https://bitwarden.com/download/">https://bitwarden.com/download/</a></p>
-<p><img src="http://obsidian.easyhappy.top/avan/202408261207388.png" alt="CleanShot 2024-08-26 at 12.07.01@2x.png"></p>
 <h3 id="Sidoc-内网穿透"><a href="#Sidoc-内网穿透" class="headerlink" title="Sidoc 内网穿透"></a>Sidoc 内网穿透</h3><p>下载地址: <a href="https://frp.sidoc.cn/">https://frp.sidoc.cn/</a></p>
-<p><img src="http://obsidian.easyhappy.top/avan/202408081020583.png" alt="CleanShot 2024-08-08 at 10.20.53.png"></p>
 <h3 id="阿里旺旺"><a href="#阿里旺旺" class="headerlink" title="阿里旺旺"></a>阿里旺旺</h3><p>下载地址: <a href="https://wangwang.taobao.com/">https://wangwang.taobao.com/</a></p>
-<p><img src="http://obsidian.easyhappy.top/avan/202408081016648.png" alt="CleanShot 2024-08-08 at 10.16.06.png"></p>
 <h3 id="krpano-Tools"><a href="#krpano-Tools" class="headerlink" title="krpano Tools"></a>krpano Tools</h3><p>下载地址：<a href="https://krpano.com/download">https://krpano.com/download</a></p>
 <p><img src="https://cdn.nlark.com/yuque/0/2022/png/815906/1655101168197-179f401a-749f-4632-89c9-6e366078a053.png" alt="image"></p>
 <h3 id="豆包"><a href="#豆包" class="headerlink" title="豆包"></a>豆包</h3><p>下载地址: <a href="https://www.doubao.com/download/desktop">https://www.doubao.com/download/desktop</a></p>
-<p><img src="http://obsidian.easyhappy.top/obsidian/202407280036588.png"></p>
 <h3 id="搜狗输入法"><a href="#搜狗输入法" class="headerlink" title="搜狗输入法"></a>搜狗输入法</h3><p>下载地址：<a href="https://pinyin.sogou.com/">https://pinyin.sogou.com/</a></p>
 <p><img src="https://cdn.nlark.com/yuque/0/2020/png/815906/1602240061596-cca34b94-1140-4efc-83e0-18a3443a5f80.png?x-oss-process=image/resize,w_1125,limit_0" alt="image"></p>
 <h3 id="360压缩"><a href="#360压缩" class="headerlink" title="360压缩"></a>360压缩</h3><p>下载地址：<a href="https://yasuo.360.cn/">https://yasuo.360.cn/</a></p>
 <p><img src="https://cdn.nlark.com/yuque/0/2020/png/815906/1602240136788-65a03a87-1da2-4348-9457-daf1904f0982.png?x-oss-process=image/resize,w_1125,limit_0" alt="image"></p>
 <h3 id="Node"><a href="#Node" class="headerlink" title="Node"></a>Node</h3><p>下载地址：<a href="https://nodejs.org/en/">https://nodejs.org/en/</a></p>
 <p><img src="https://cdn.nlark.com/yuque/0/2020/png/815906/1601464243188-8b9c33ee-39ff-440b-a327-f0a66bbab4b6.png?x-oss-process=image/resize,w_1125,limit_0" alt="image"></p>
-<h3 id="mihomo-party-org"><a href="#mihomo-party-org" class="headerlink" title="mihomo-party-org"></a>mihomo-party-org</h3><p>下载地址: <a href="https://github.com/mihomo-party-org/mihomo-party/releases">https://github.com/mihomo-party-org/mihomo-party/releases</a></p>
-<p><img src="http://obsidian.easyhappy.top/avan/202501090001865.png"></p>
+<h3 id="Clash-Verge"><a href="#Clash-Verge" class="headerlink" title="Clash Verge"></a>Clash Verge</h3><p>下载地址: <a href="https://github.com/clash-verge-rev/clash-verge-rev">https://github.com/clash-verge-rev/clash-verge-rev</a></p>
+<p><img src="http://upyun-assets.4van.top/avan/20260611235438610.png" alt="image.png"></p>
 <h3 id="Cos-Browser"><a href="#Cos-Browser" class="headerlink" title="Cos Browser"></a>Cos Browser</h3><p>下载地址: <a href="https://cosbrowser.cloud.tencent.com/">https://cosbrowser.cloud.tencent.com/</a></p>
-<p><img src="http://obsidian.easyhappy.top/obsidian/20240627085610.png" alt="image.png"></p>
 <h3 id="Kodo-Browser"><a href="#Kodo-Browser" class="headerlink" title="Kodo Browser"></a>Kodo Browser</h3><p>下载地址：<a href="https://developer.qiniu.com/kodo/5972/kodo-browser">https://developer.qiniu.com/kodo/5972/kodo-browser</a></p>
-<p><img src="http://obsidian.easyhappy.top/avan/202506301453288.png" alt="image.png"></p>
 <h2 id="特殊软件"><a href="#特殊软件" class="headerlink" title="特殊软件"></a>特殊软件</h2><h3 id="Navicat-Premium-16"><a href="#Navicat-Premium-16" class="headerlink" title="Navicat Premium 16"></a>Navicat Premium 16</h3><p>下载地址：<a href="https://macwk.com/soft/navicat-premium">https://macwk.com/soft/navicat-premium</a></p>
-<p><img src="http://obsidian.easyhappy.top/avan/202506301455766.png" alt="image (1).png"></p>
 <h3 id="Xmind"><a href="#Xmind" class="headerlink" title="Xmind"></a>Xmind</h3><p>下载地址：百度网盘</p>
-<p><img src="http://obsidian.easyhappy.top/avan/202506301455554.png" alt="image (2).png"></p>
+<h1 id="Mac"><a href="#Mac" class="headerlink" title="Mac"></a>Mac</h1><h2 id="付费"><a href="#付费" class="headerlink" title="付费"></a>付费</h2><h3 id="ChatGPT"><a href="#ChatGPT" class="headerlink" title="ChatGPT"></a>ChatGPT</h3><p>下载地址: <a href="https://chatgpt.com/">https://chatgpt.com</a></p>
+<h3 id="klack"><a href="#klack" class="headerlink" title="klack"></a>klack</h3><h2 id="brew-直装-1"><a href="#brew-直装-1" class="headerlink" title="brew 直装"></a>brew 直装</h2><h3 id="Royal-tsx"><a href="#Royal-tsx" class="headerlink" title="Royal tsx"></a>Royal tsx</h3><h3 id="tmux"><a href="#tmux" class="headerlink" title="tmux"></a>tmux</h3><p>下载地址：brew install tmux</p>
+<h3 id="Warp"><a href="#Warp" class="headerlink" title="Warp"></a>Warp</h3><p>下载地址：<a href="https://www.warp.dev/">https://www.warp.dev/</a></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/815906/1654746757127-463667da-99da-42ae-b034-124310ca9e1e.png?x-oss-process=image/resize,w_1404,limit_0" alt="image"></p>
+<h3 id="Proxyman"><a href="#Proxyman" class="headerlink" title="Proxyman"></a>Proxyman</h3><p>下载地址：<a href="https://proxyman.io/">https://proxyman.io/</a></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/815906/1642990649515-1852230f-791b-4ab0-89bf-7766dbe5a621.png" alt="image"></p>
+<h3 id="MacDown"><a href="#MacDown" class="headerlink" title="MacDown"></a>MacDown</h3><p>下载地址：<a href="https://macdown.uranusjr.com/">https://macdown.uranusjr.com/</a></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/815906/1642992120712-c8613b24-6ae6-4dd0-b702-6ae1ab2c076d.png?x-oss-process=image/resize,w_1308,limit_0" alt="image"></p>
+<h3 id="iterm2"><a href="#iterm2" class="headerlink" title="iterm2"></a>iterm2</h3><p>下载地址：<a href="https://iterm2.com/">https://iterm2.com/</a></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/815906/1621468923987-59a6d288-5b21-43a9-a300-eeada2cd26e2.png?x-oss-process=image/resize,w_1500,limit_0" alt="image"></p>
+<h3 id="Kiro-CLI"><a href="#Kiro-CLI" class="headerlink" title="Kiro CLI"></a>Kiro CLI</h3><p>原 Amazon Q<br>原 Fig</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -fsSL https://cli.kiro.dev/install | bash</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/815906/1654746726366-9ada18ee-23dd-4f04-9201-9d50359d96d4.png?x-oss-process=image/resize,w_1465,limit_0" alt="image"></p>
+<h3 id="IINA"><a href="#IINA" class="headerlink" title="IINA"></a>IINA</h3><p>下载地址：<a href="https://iina.io/">https://iina.io/</a></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/815906/1625449507063-51757d49-2a91-438a-bfc8-e50f4b96f611.png?x-oss-process=image/resize,w_1500,limit_0" alt="image"></p>
+<h3 id="柠檬"><a href="#柠檬" class="headerlink" title="柠檬"></a>柠檬</h3><p>下载地址：<a href="https://lemon.qq.com/">https://lemon.qq.com/</a></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/815906/1656532851228-f19eb86f-3c49-423a-a7f9-5f07ef395538.png?x-oss-process=image/resize,w_1500,limit_0" alt="image"></p>
+<h3 id="bob"><a href="#bob" class="headerlink" title="bob"></a>bob</h3><p><img src="https://cdn.nlark.com/yuque/0/2021/png/815906/1627008186827-a773ae4c-b263-49aa-a263-77d740b39718.png" alt="image"></p>
+<h2 id="特殊软件-1"><a href="#特殊软件-1" class="headerlink" title="特殊软件"></a>特殊软件</h2><h3 id="Lungo"><a href="#Lungo" class="headerlink" title="Lungo"></a>Lungo</h3><p>下载地址: 百度网盘</p>
+<h3 id="QuitAll"><a href="#QuitAll" class="headerlink" title="QuitAll"></a>QuitAll</h3><p>下载地址: 百度网盘</p>
+<h3 id="Mission-Control-Plus"><a href="#Mission-Control-Plus" class="headerlink" title="Mission Control Plus"></a>Mission Control Plus</h3><p>下载地址: 百度网盘</p>
+<h3 id="HazeOver"><a href="#HazeOver" class="headerlink" title="HazeOver"></a>HazeOver</h3><p>高亮当前页面, 将其其他页面的亮度</p>
+<p>下载地址: 百度网盘</p>
+<h3 id="Keysmith"><a href="#Keysmith" class="headerlink" title="Keysmith"></a>Keysmith</h3><p>将一些操作配置成自动化, 通过快捷键执行一系列行动</p>
 <blockquote>
-<p>如果提示损坏<br>sudo xattr -d com.apple.quarantine &#x2F;Applications&#x2F;XMind.app</p>
+<p>会跟 item2 的 shift+command+enter 快捷键冲突</p>
 </blockquote>
+<p>下载地址: 百度网盘</p>
+<h3 id="iRightMouse-Pro"><a href="#iRightMouse-Pro" class="headerlink" title="iRightMouse Pro"></a>iRightMouse Pro</h3><p>下载地址: 百度网盘</p>
+<h3 id="Homerow"><a href="#Homerow" class="headerlink" title="Homerow"></a>Homerow</h3><p>下载地址: 百度网盘</p>
+<h3 id="Screen-Studio"><a href="#Screen-Studio" class="headerlink" title="Screen Studio"></a>Screen Studio</h3><p>下载地址: 百度网盘</p>
+<h3 id="iStat-Menus"><a href="#iStat-Menus" class="headerlink" title="iStat Menus"></a>iStat Menus</h3><h3 id="AlDente"><a href="#AlDente" class="headerlink" title="AlDente"></a>AlDente</h3><p>下载地址: <a href="https://apphousekitchen.com/">https://apphousekitchen.com/</a></p>
+<h3 id="CleanShotX"><a href="#CleanShotX" class="headerlink" title="CleanShotX"></a>CleanShotX</h3><p>下载地址: 百度网盘</p>
+<h3 id="4K-Video-Downloader"><a href="#4K-Video-Downloader" class="headerlink" title="4K Video Downloader"></a>4K Video Downloader</h3><p>视频下载工具</p>
+<h3 id="Dowine-4"><a href="#Dowine-4" class="headerlink" title="Dowine 4"></a>Dowine 4</h3><p><img src="https://cdn.nlark.com/yuque/0/2022/png/815906/1645891265147-a943f460-26e9-416a-b4a3-acbdb3e172d7.png?x-oss-process=image/resize,w_1500,limit_0" alt="image"><br>下载地址: 百度网盘</p>
+<h3 id="Manico"><a href="#Manico" class="headerlink" title="Manico"></a>Manico</h3><p>[[Manico]]</p>
+<p><img src="https://pica.zhimg.com/80/v2-74383257974e007edb28e958faeda970_1440w.png" alt="image"></p>
+<h3 id="Karabiner-Elements"><a href="#Karabiner-Elements" class="headerlink" title="Karabiner-Elements"></a>Karabiner-Elements</h3><p>[[Karabiner-Elements]]</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/815906/1654003101279-1014a49c-190c-49b8-a81a-ca66d0e0f811.png?x-oss-process=image/resize,w_1500,limit_0" alt="image"></p>
+<h3 id="Alfred"><a href="#Alfred" class="headerlink" title="Alfred"></a>Alfred</h3><p>下载链接：<a href="https://www.alfredapp.com/">https://www.alfredapp.com/</a></p>
+<p>[[44 - Alfred 操作]]</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/815906/1603344975371-3ca9d227-2ef2-443a-b6f5-e17de72e2c5a.png?x-oss-process=image/resize,w_1500,limit_0" alt="image"></p>
+<h3 id="Dash"><a href="#Dash" class="headerlink" title="Dash"></a>Dash</h3><p>下载地址：<a href="https://macwk.com/soft/dash">https://macwk.com/soft/dash</a></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/815906/1643082623942-a8b8af1c-a9cb-4f96-9761-0dad6db88f80.png" alt="image"></p>
+<h3 id="CheatSheet"><a href="#CheatSheet" class="headerlink" title="CheatSheet"></a>CheatSheet</h3><p>下载地址：<a href="https://macwk.com/soft/cheatsheet">https://macwk.com/soft/cheatsheet</a></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/815906/1643082514806-32e56886-b950-4d87-9252-f698e3ec9f16.png?x-oss-process=image/resize,w_1500,limit_0" alt="image"></p>
+<h3 id="Bartender"><a href="#Bartender" class="headerlink" title="Bartender"></a>Bartender</h3><p>下载地址：<a href="https://www.macbartender.com/">https://www.macbartender.com/</a></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/815906/1654756992267-707c1e7b-4ff8-4d26-a3ed-e5d79e4b45cc.png?x-oss-process=image/resize,w_1500,limit_0" alt="image"></p>
+<h3 id="Parallels-Desktop"><a href="#Parallels-Desktop" class="headerlink" title="Parallels Desktop"></a>Parallels Desktop</h3><p>下载地址：<a href="https://www.parallels.cn/">https://www.parallels.cn/</a><br>无限试用工具：<a href="https://macwk.com/soft/pd-runner">https://macwk.com/soft/pd-runner</a></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/815906/1643180998090-5ba08e1b-41a8-4680-b5a6-b624d954857c.png?x-oss-process=image/resize,w_1452,limit_0" alt="image"></p>
+<h3 id="Folx-Pro"><a href="#Folx-Pro" class="headerlink" title="Folx Pro"></a>Folx Pro</h3><p>下载地址：<a href="https://macwk.com/soft/folx">https://macwk.com/soft/folx</a></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/815906/1656557538264-74e076a9-63f0-4768-8314-58e54f05b54b.png" alt="image"></p>
+<h3 id="Magnet"><a href="#Magnet" class="headerlink" title="Magnet"></a>Magnet</h3><p>下载地址：<a href="https://www.macwk.com/soft/magnet">https://www.macwk.com/soft/magnet</a></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/815906/1621555911383-a12d316d-58c0-4d15-8ac9-8c985338f997.png?x-oss-process=image/resize,w_1500,limit_0" alt="image"></p>
+<h2 id="App-Store"><a href="#App-Store" class="headerlink" title="App Store"></a>App Store</h2><h3 id="Endel"><a href="#Endel" class="headerlink" title="Endel"></a>Endel</h3><h3 id="pixea"><a href="#pixea" class="headerlink" title="pixea"></a>pixea</h3><p><img src="http://upyun-assets.4van.top/avan/20260610103612775.png" alt="image.png"></p>
+<h2 id="未分类-1"><a href="#未分类-1" class="headerlink" title="未分类"></a>未分类</h2><h3 id="Keka"><a href="#Keka" class="headerlink" title="Keka"></a>Keka</h3><p>下载地址: <a href="https://www.keka.io/en/">https://www.keka.io/en/</a></p>
+<h3 id="Macs-Fan-Control"><a href="#Macs-Fan-Control" class="headerlink" title="Macs Fan Control"></a>Macs Fan Control</h3><p>下载地址: <a href="https://crystalidea.com/macs-fan-control">https://crystalidea.com/macs-fan-control</a><br>下载地址: 百度网盘</p>
+<h3 id="Perplexity"><a href="#Perplexity" class="headerlink" title="Perplexity"></a>Perplexity</h3><p>下载地址: <a href="https://www.perplexity.ai/">https://www.perplexity.ai/</a></p>
+<h3 id="Script-Kit"><a href="#Script-Kit" class="headerlink" title="Script Kit"></a>Script Kit</h3><p>可以理解为 alfred &#x2F; raycast 的变体</p>
+<p>下载地址: <a href="https://www.scriptkit.com/">https://www.scriptkit.com/</a></p>
+<h3 id="Xcodes"><a href="#Xcodes" class="headerlink" title="Xcodes"></a>Xcodes</h3><p>下载地址: <a href="https://www.xcodes.app/">https://www.xcodes.app/</a></p>
+<h3 id="keycastr"><a href="#keycastr" class="headerlink" title="keycastr"></a>keycastr</h3><p>推荐用 <a href="#keyviz">keyviz</a> 支持 win&amp;mac</p>
+<p>下载地址: <a href="https://github.com/keycastr/keycastr">https://github.com/keycastr/keycastr</a></p>
+<h3 id="Loopback"><a href="#Loopback" class="headerlink" title="Loopback"></a>Loopback</h3><p>下载地址：<a href="https://rogueamoeba.com/loopback/">https://rogueamoeba.com/loopback/</a></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/815906/1657596852523-5b77188a-a840-453a-8a12-e629da3094c2.png?x-oss-process=image/resize,w_1500,limit_0" alt="image"></p>
+<h3 id="File-Juicer"><a href="#File-Juicer" class="headerlink" title="File Juicer"></a>File Juicer</h3><p>下载地址：<a href="https://macwk.com/soft/file-juicer">https://macwk.com/soft/file-juicer</a></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/815906/1642996810614-abcca434-5570-45de-85b1-8b304400045a.png?x-oss-process=image/resize,w_842,limit_0" alt="image"></p>
+<h3 id="Better-Touch-Tool"><a href="#Better-Touch-Tool" class="headerlink" title="Better Touch Tool"></a>Better Touch Tool</h3><p>下载地址：<a href="https://folivora.ai/">https://folivora.ai/</a></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/815906/1654747351732-ed4bf4c2-300e-4c48-b8b2-0dbdc7d97fc1.png" alt="image"></p>
+<h3 id="Gatekeeper-Toggler"><a href="#Gatekeeper-Toggler" class="headerlink" title="Gatekeeper Toggler"></a>Gatekeeper Toggler</h3><p>下载地址：<a href="https://macdownload.informer.com/gatekeeper-toggler/3.0/">https://macdownload.informer.com/gatekeeper-toggler/3.0/</a></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/815906/1654750175004-eefe3886-6d01-470f-ba9a-77efb625acd6.png?x-oss-process=image/resize,w_1487,limit_0" alt="image"></p>
+<h3 id="HomeBrew"><a href="#HomeBrew" class="headerlink" title="HomeBrew"></a>HomeBrew</h3><p>下载地址：<a href="https://brew.sh/index_zh-cn">https://brew.sh/index_zh-cn</a></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/815906/1621467695923-3c3926ce-1b83-447a-9b7d-693b4b36cc72.png?x-oss-process=image/resize,w_1500,limit_0" alt="image"></p>
 <h1 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h1><h2 id="astral"><a href="#astral" class="headerlink" title="astral"></a>astral</h2><p>局域网联机工具</p>
 <p>下载地址: <a href="https://github.com/ldoubil/astral/">https://github.com/ldoubil/astral/</a></p>
 <h2 id="Fiddler"><a href="#Fiddler" class="headerlink" title="Fiddler"></a>Fiddler</h2><p>下载地址: <a href="https://www.telerik.com/fiddler/fiddler-classic">https://www.telerik.com/fiddler/fiddler-classic</a></p>
-<p><img src="http://obsidian.easyhappy.top/avan/202411130957898.png" alt="image.png"></p>
 <h2 id="TrafficMonitor"><a href="#TrafficMonitor" class="headerlink" title="TrafficMonitor"></a>TrafficMonitor</h2><p>下载地址: <a href="https://github.com/zhongyang219/TrafficMonitor">https://github.com/zhongyang219/TrafficMonitor</a></p>
 <p><img src="http://obsidian.easyhappy.top/obsidian/202402152350819.png"></p>
 <h2 id="pianoteq-pro"><a href="#pianoteq-pro" class="headerlink" title="pianoteq pro"></a>pianoteq pro</h2><p>罗兰钢琴内录</p>
@@ -2402,116 +2414,47 @@
 <p><img src="https://cdn.nlark.com/yuque/0/2021/png/815906/1620828912946-8c4bef24-9094-451f-a1f5-f05789e668ad.png?x-oss-process=image/resize,w_1125,limit_0" alt="image"></p>
 <h2 id="Eveything"><a href="#Eveything" class="headerlink" title="Eveything"></a>Eveything</h2><p>下载地址：<a href="https://www.voidtools.com/zh-cn/">https://www.voidtools.com/zh-cn/</a></p>
 <p><img src="https://cdn.nlark.com/yuque/0/2020/png/815906/1601458361142-f6b7be54-0df3-4fef-b6d6-b73961fc4d96.png?x-oss-process=image/resize,w_1087,limit_0" alt="image"></p>
-<h3 id="Draw-io"><a href="#Draw-io" class="headerlink" title="Draw.io"></a>Draw.io</h3><p>下载地址: <a href="https://www.drawio.com/">https://www.drawio.com/</a></p>
-<p><img src="http://obsidian.easyhappy.top/avan/202408081040718.png" alt="CleanShot 2024-08-08 at 10.40.28.png"></p>
+<h2 id="Draw-io"><a href="#Draw-io" class="headerlink" title="Draw.io"></a>Draw.io</h2><p>下载地址: <a href="https://www.drawio.com/">https://www.drawio.com/</a></p>
 <h2 id="KeyTweak"><a href="#KeyTweak" class="headerlink" title="KeyTweak"></a>KeyTweak</h2><p>下载地址：<a href="https://keytweak.softonic.cn/">https://keytweak.en.softonic.com/</a></p>
 <p><img src="https://cdn.nlark.com/yuque/0/2021/png/815906/1610586976996-effc94b7-a838-40e3-8749-0b68d9e2e52a.png" alt="image"></p>
-<h3 id="IDM"><a href="#IDM" class="headerlink" title="IDM"></a>IDM</h3><p>下载地址：<a href="https://www.internetdownloadmanager.com/">https://www.internetdownloadmanager.com/</a></p>
+<h2 id="IDM"><a href="#IDM" class="headerlink" title="IDM"></a>IDM</h2><p>下载地址：<a href="https://www.internetdownloadmanager.com/">https://www.internetdownloadmanager.com/</a></p>
 <p><img src="https://cdn.nlark.com/yuque/0/2020/png/815906/1602299812821-a32a681b-668f-4e3a-b9a4-4270a6effdc6.png?x-oss-process=image/resize,w_1125,limit_0" alt="image"></p>
-<h1 id="Mac"><a href="#Mac" class="headerlink" title="Mac"></a>Mac</h1><h2 id="付费"><a href="#付费" class="headerlink" title="付费"></a>付费</h2><h3 id="ChatGPT"><a href="#ChatGPT" class="headerlink" title="ChatGPT"></a>ChatGPT</h3><p>下载地址: <a href="https://chatgpt.com/">https://chatgpt.com</a></p>
-<p><img src="http://obsidian.easyhappy.top/avan/202408081034750.png" alt="CleanShot 2024-08-08 at 10.34.28.png"></p>
-<h3 id="klack"><a href="#klack" class="headerlink" title="klack"></a>klack</h3><p><img src="http://obsidian.easyhappy.top/avan/202310311725921.png" alt="image.png"></p>
-<h2 id="brew-直装-1"><a href="#brew-直装-1" class="headerlink" title="brew 直装"></a>brew 直装</h2><h3 id="Royal-tsx"><a href="#Royal-tsx" class="headerlink" title="Royal tsx"></a>Royal tsx</h3><p><img src="http://obsidian.easyhappy.top/avan/202303141002651.png"></p>
-<h3 id="tmux"><a href="#tmux" class="headerlink" title="tmux"></a>tmux</h3><p>下载地址：brew install tmux</p>
-<h3 id="Warp"><a href="#Warp" class="headerlink" title="Warp"></a>Warp</h3><p>下载地址：<a href="https://www.warp.dev/">https://www.warp.dev/</a></p>
-<p><img src="https://cdn.nlark.com/yuque/0/2022/png/815906/1654746757127-463667da-99da-42ae-b034-124310ca9e1e.png?x-oss-process=image/resize,w_1404,limit_0" alt="image"></p>
-<h3 id="Proxyman"><a href="#Proxyman" class="headerlink" title="Proxyman"></a>Proxyman</h3><p>下载地址：<a href="https://proxyman.io/">https://proxyman.io/</a></p>
-<p><img src="https://cdn.nlark.com/yuque/0/2022/png/815906/1642990649515-1852230f-791b-4ab0-89bf-7766dbe5a621.png" alt="image"></p>
-<h3 id="MacDown"><a href="#MacDown" class="headerlink" title="MacDown"></a>MacDown</h3><p>下载地址：<a href="https://macdown.uranusjr.com/">https://macdown.uranusjr.com/</a></p>
-<p><img src="https://cdn.nlark.com/yuque/0/2022/png/815906/1642992120712-c8613b24-6ae6-4dd0-b702-6ae1ab2c076d.png?x-oss-process=image/resize,w_1308,limit_0" alt="image"></p>
-<h3 id="iterm2"><a href="#iterm2" class="headerlink" title="iterm2"></a>iterm2</h3><p>下载地址：<a href="https://iterm2.com/">https://iterm2.com/</a></p>
-<p><img src="https://cdn.nlark.com/yuque/0/2021/png/815906/1621468923987-59a6d288-5b21-43a9-a300-eeada2cd26e2.png?x-oss-process=image/resize,w_1500,limit_0" alt="image"></p>
-<h3 id="Kiro-CLI"><a href="#Kiro-CLI" class="headerlink" title="Kiro CLI"></a>Kiro CLI</h3><p>原 Amazon Q<br>原 Fig</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -fsSL https://cli.kiro.dev/install | bash</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://cdn.nlark.com/yuque/0/2022/png/815906/1654746726366-9ada18ee-23dd-4f04-9201-9d50359d96d4.png?x-oss-process=image/resize,w_1465,limit_0" alt="image"></p>
-<h3 id="IINA"><a href="#IINA" class="headerlink" title="IINA"></a>IINA</h3><p>下载地址：<a href="https://iina.io/">https://iina.io/</a></p>
-<p><img src="https://cdn.nlark.com/yuque/0/2021/png/815906/1625449507063-51757d49-2a91-438a-bfc8-e50f4b96f611.png?x-oss-process=image/resize,w_1500,limit_0" alt="image"></p>
-<h3 id="柠檬"><a href="#柠檬" class="headerlink" title="柠檬"></a>柠檬</h3><p>下载地址：<a href="https://lemon.qq.com/">https://lemon.qq.com/</a></p>
-<p><img src="https://cdn.nlark.com/yuque/0/2022/png/815906/1656532851228-f19eb86f-3c49-423a-a7f9-5f07ef395538.png?x-oss-process=image/resize,w_1500,limit_0" alt="image"></p>
-<h3 id="bob"><a href="#bob" class="headerlink" title="bob"></a>bob</h3><p><img src="https://cdn.nlark.com/yuque/0/2021/png/815906/1627008186827-a773ae4c-b263-49aa-a263-77d740b39718.png" alt="image"></p>
-<h2 id="特殊软件-1"><a href="#特殊软件-1" class="headerlink" title="特殊软件"></a>特殊软件</h2><h3 id="Qbserve"><a href="#Qbserve" class="headerlink" title="Qbserve"></a>Qbserve</h3><p>下载地址: 百度网盘</p>
-<p><img src="http://obsidian.easyhappy.top/avan/202412181116632.png" alt="image.png"></p>
-<h3 id="Lungo"><a href="#Lungo" class="headerlink" title="Lungo"></a>Lungo</h3><p>下载地址: 百度网盘</p>
-<p><img src="http://obsidian.easyhappy.top/avan/202412181005923.png" alt="image.png"></p>
-<h3 id="QuitAll"><a href="#QuitAll" class="headerlink" title="QuitAll"></a>QuitAll</h3><p>下载地址: 百度网盘</p>
-<p><img src="http://obsidian.easyhappy.top/avan/202412181004189.png" alt="image.png"></p>
-<h3 id="Mission-Control-Plus"><a href="#Mission-Control-Plus" class="headerlink" title="Mission Control Plus"></a>Mission Control Plus</h3><p>下载地址: 百度网盘</p>
-<p><img src="http://obsidian.easyhappy.top/avan/202412181003905.png" alt="image.png"></p>
-<h3 id="HazeOver"><a href="#HazeOver" class="headerlink" title="HazeOver"></a>HazeOver</h3><p>下载地址: 百度网盘</p>
-<p><img src="http://obsidian.easyhappy.top/avan/202412161540798.png" alt="image.png"></p>
-<h3 id="Keysmith"><a href="#Keysmith" class="headerlink" title="Keysmith"></a>Keysmith</h3><p>下载地址: 百度网盘</p>
-<p><img src="http://obsidian.easyhappy.top/avan/202412091032376.png" alt="image.png"></p>
-<h3 id="iRightMouse-Pro"><a href="#iRightMouse-Pro" class="headerlink" title="iRightMouse Pro"></a>iRightMouse Pro</h3><p>下载地址: 百度网盘</p>
-<p><img src="http://obsidian.easyhappy.top/avan/202409110847230.png" alt="image.png"></p>
-<h3 id="Homerow"><a href="#Homerow" class="headerlink" title="Homerow"></a>Homerow</h3><p>下载地址: 百度网盘</p>
-<p><img src="http://obsidian.easyhappy.top/avan/202408261205539.png" alt="image.png"></p>
-<h3 id="Screen-Studio"><a href="#Screen-Studio" class="headerlink" title="Screen Studio"></a>Screen Studio</h3><p>下载地址: 百度网盘</p>
-<p><img src="http://obsidian.easyhappy.top/avan/202408080950338.png" alt="CleanShot 2024-08-08 at 09.50.05.png"></p>
-<h3 id="iStat-Menus"><a href="#iStat-Menus" class="headerlink" title="iStat Menus"></a>iStat Menus</h3><p><img src="http://obsidian.easyhappy.top/obsidian/CleanShot%202024-08-07%20at%2000.46.08@2x.png" alt="CleanShot 2024-08-07 at 00.46.08@2x.png"></p>
-<h3 id="AlDente"><a href="#AlDente" class="headerlink" title="AlDente"></a>AlDente</h3><p>下载地址: <a href="https://apphousekitchen.com/">https://apphousekitchen.com/</a></p>
-<p><img src="http://obsidian.easyhappy.top/avan/202407251024726.png" alt="image.png"></p>
-<h3 id="TextSniper"><a href="#TextSniper" class="headerlink" title="TextSniper"></a>TextSniper</h3><p>下载地址: 百度网盘</p>
-<p><img src="http://obsidian.easyhappy.top/avan/202407251134774.png" alt="image.png"></p>
-<h3 id="CleanShotX"><a href="#CleanShotX" class="headerlink" title="CleanShotX"></a>CleanShotX</h3><p>下载地址: 百度网盘</p>
-<p><img src="http://obsidian.easyhappy.top/avan/202407251134114.png" alt="image.png"></p>
-<h3 id="4K-Video-Downloader"><a href="#4K-Video-Downloader" class="headerlink" title="4K Video Downloader"></a>4K Video Downloader</h3><p>下载地址: 百度网盘</p>
-<p><img src="http://obsidian.easyhappy.top/avan/20230809214802.png"></p>
-<h3 id="Manico"><a href="#Manico" class="headerlink" title="Manico"></a>Manico</h3><p>[[Manico]]</p>
-<p><img src="https://pica.zhimg.com/80/v2-74383257974e007edb28e958faeda970_1440w.png" alt="image"></p>
-<h3 id="Karabiner-Elements"><a href="#Karabiner-Elements" class="headerlink" title="Karabiner-Elements"></a>Karabiner-Elements</h3><p>[[Karabiner-Elements]]</p>
-<p><img src="https://cdn.nlark.com/yuque/0/2022/png/815906/1654003101279-1014a49c-190c-49b8-a81a-ca66d0e0f811.png?x-oss-process=image/resize,w_1500,limit_0" alt="image"></p>
-<h3 id="Dowine-4"><a href="#Dowine-4" class="headerlink" title="Dowine 4"></a>Dowine 4</h3><p><img src="https://cdn.nlark.com/yuque/0/2022/png/815906/1645891265147-a943f460-26e9-416a-b4a3-acbdb3e172d7.png?x-oss-process=image/resize,w_1500,limit_0" alt="image"></p>
-<h3 id="Alfred"><a href="#Alfred" class="headerlink" title="Alfred"></a>Alfred</h3><p>下载链接：<a href="https://www.alfredapp.com/">https://www.alfredapp.com/</a><br>资料：<br>[[44 - Alfred 操作]]</p>
-<p><img src="https://cdn.nlark.com/yuque/0/2020/png/815906/1603344975371-3ca9d227-2ef2-443a-b6f5-e17de72e2c5a.png?x-oss-process=image/resize,w_1500,limit_0" alt="image"></p>
-<h3 id="Dash"><a href="#Dash" class="headerlink" title="Dash"></a>Dash</h3><p>下载地址：<a href="https://macwk.com/soft/dash">https://macwk.com/soft/dash</a></p>
-<p><img src="https://cdn.nlark.com/yuque/0/2022/png/815906/1643082623942-a8b8af1c-a9cb-4f96-9761-0dad6db88f80.png" alt="image"></p>
-<h3 id="CheatSheet"><a href="#CheatSheet" class="headerlink" title="CheatSheet"></a>CheatSheet</h3><p>下载地址：<a href="https://macwk.com/soft/cheatsheet">https://macwk.com/soft/cheatsheet</a></p>
-<p><img src="https://cdn.nlark.com/yuque/0/2022/png/815906/1643082514806-32e56886-b950-4d87-9252-f698e3ec9f16.png?x-oss-process=image/resize,w_1500,limit_0" alt="image"></p>
-<h3 id="Bartender"><a href="#Bartender" class="headerlink" title="Bartender"></a>Bartender</h3><p>下载地址：<a href="https://www.macbartender.com/">https://www.macbartender.com/</a></p>
-<p><img src="https://cdn.nlark.com/yuque/0/2022/png/815906/1654756992267-707c1e7b-4ff8-4d26-a3ed-e5d79e4b45cc.png?x-oss-process=image/resize,w_1500,limit_0" alt="image"></p>
-<h3 id="Parallels-Desktop"><a href="#Parallels-Desktop" class="headerlink" title="Parallels Desktop"></a>Parallels Desktop</h3><p>下载地址：<a href="https://www.parallels.cn/">https://www.parallels.cn/</a><br>无限试用工具：<a href="https://macwk.com/soft/pd-runner">https://macwk.com/soft/pd-runner</a></p>
-<p><img src="https://cdn.nlark.com/yuque/0/2022/png/815906/1643180998090-5ba08e1b-41a8-4680-b5a6-b624d954857c.png?x-oss-process=image/resize,w_1452,limit_0" alt="image"></p>
-<h3 id="Folx-Pro"><a href="#Folx-Pro" class="headerlink" title="Folx Pro"></a>Folx Pro</h3><p>下载地址：<a href="https://macwk.com/soft/folx">https://macwk.com/soft/folx</a></p>
-<p><img src="https://cdn.nlark.com/yuque/0/2022/png/815906/1656557538264-74e076a9-63f0-4768-8314-58e54f05b54b.png" alt="image"></p>
-<h3 id="Magnet"><a href="#Magnet" class="headerlink" title="Magnet"></a>Magnet</h3><p>下载地址：<a href="https://www.macwk.com/soft/magnet">https://www.macwk.com/soft/magnet</a></p>
-<p><img src="https://cdn.nlark.com/yuque/0/2021/png/815906/1621555911383-a12d316d-58c0-4d15-8ac9-8c985338f997.png?x-oss-process=image/resize,w_1500,limit_0" alt="image"></p>
-<h2 id="App-Store"><a href="#App-Store" class="headerlink" title="App Store"></a>App Store</h2><h3 id="Endel"><a href="#Endel" class="headerlink" title="Endel"></a>Endel</h3><p><img src="http://obsidian.easyhappy.top/avan/202405101009231.png" alt="image.png"></p>
-<h3 id="Just-Focus"><a href="#Just-Focus" class="headerlink" title="Just Focus"></a>Just Focus</h3><p><img src="http://obsidian.easyhappy.top/avan/202309121040979.png"></p>
-<h2 id="未分类-1"><a href="#未分类-1" class="headerlink" title="未分类"></a>未分类</h2><h3 id="Keka"><a href="#Keka" class="headerlink" title="Keka"></a>Keka</h3><p>下载地址: <a href="https://www.keka.io/en/">https://www.keka.io/en/</a></p>
-<p><img src="http://obsidian.easyhappy.top/avan/202411291006725.png" alt="image.png"></p>
-<h3 id="Macs-Fan-Control"><a href="#Macs-Fan-Control" class="headerlink" title="Macs Fan Control"></a>Macs Fan Control</h3><p>下载地址: <a href="https://crystalidea.com/macs-fan-control">https://crystalidea.com/macs-fan-control</a><br>下载地址: 百度网盘</p>
-<p><img src="http://obsidian.easyhappy.top/avan/202408081038998.png" alt="CleanShot 2024-08-08 at 10.38.27.png"></p>
-<h3 id="Perplexity"><a href="#Perplexity" class="headerlink" title="Perplexity"></a>Perplexity</h3><p>下载地址: <a href="https://www.perplexity.ai/">https://www.perplexity.ai/</a></p>
-<p><img src="http://obsidian.easyhappy.top/avan/202401021605706.png" alt="image.png"></p>
-<h3 id="Artifact"><a href="#Artifact" class="headerlink" title="Artifact"></a>Artifact</h3><p>下载地址: <a href="https://artifact.news/">https://artifact.news/</a></p>
-<p><img src="http://obsidian.easyhappy.top/avan/202401021604360.png" alt="image.png"></p>
-<h3 id="Multi"><a href="#Multi" class="headerlink" title="Multi"></a>Multi</h3><p>下载地址: <a href="https://multi.app/">https://multi.app/</a></p>
-<p><img src="http://obsidian.easyhappy.top/avan/202308161043993.png"></p>
-<h3 id="Script-Kit"><a href="#Script-Kit" class="headerlink" title="Script Kit"></a>Script Kit</h3><p>下载地址: <a href="https://www.scriptkit.com/">https://www.scriptkit.com/</a></p>
-<p><img src="http://obsidian.easyhappy.top/avan/202308161044057.png"></p>
-<h3 id="Xcodes"><a href="#Xcodes" class="headerlink" title="Xcodes"></a>Xcodes</h3><p>下载地址: <a href="https://www.xcodes.app/">https://www.xcodes.app/</a></p>
-<p><img src="http://obsidian.easyhappy.top/avan/202308151435352.png"></p>
-<h3 id="Arc"><a href="#Arc" class="headerlink" title="Arc"></a>Arc</h3><p>下载地址: <a href="https://arc.net/">https://arc.net/</a></p>
-<p><img src="http://obsidian.easyhappy.top/avan/20230813083601.png"></p>
-<h3 id="Hand-Mirror"><a href="#Hand-Mirror" class="headerlink" title="Hand Mirror"></a>Hand Mirror</h3><p>下载地址: <a href="https://handmirror.app/">https://handmirror.app/</a></p>
-<p>介绍: 可以随时随地看摄像头</p>
-<p><img src="http://obsidian.easyhappy.top/avan/202308091504522.png"></p>
-<h3 id="CatchMouse"><a href="#CatchMouse" class="headerlink" title="CatchMouse"></a>CatchMouse</h3><p>下载地址: <a href="https://macdownload.informer.com/catchmouse/">https://macdownload.informer.com/catchmouse/</a></p>
-<p><img src="http://obsidian.easyhappy.top/avan/202305291641661.png"></p>
-<h3 id="keycastr"><a href="#keycastr" class="headerlink" title="keycastr"></a>keycastr</h3><p>下载地址: <a href="https://github.com/keycastr/keycastr">https://github.com/keycastr/keycastr</a></p>
-<p><img src="http://obsidian.easyhappy.top/avan/202305291623699.png"></p>
-<h3 id="Loopback"><a href="#Loopback" class="headerlink" title="Loopback"></a>Loopback</h3><p>下载地址：<a href="https://rogueamoeba.com/loopback/">https://rogueamoeba.com/loopback/</a></p>
-<p><img src="https://cdn.nlark.com/yuque/0/2022/png/815906/1657596852523-5b77188a-a840-453a-8a12-e629da3094c2.png?x-oss-process=image/resize,w_1500,limit_0" alt="image"></p>
-<h3 id="File-Juicer"><a href="#File-Juicer" class="headerlink" title="File Juicer"></a>File Juicer</h3><p>下载地址：<a href="https://macwk.com/soft/file-juicer">https://macwk.com/soft/file-juicer</a></p>
-<p><img src="https://cdn.nlark.com/yuque/0/2022/png/815906/1642996810614-abcca434-5570-45de-85b1-8b304400045a.png?x-oss-process=image/resize,w_842,limit_0" alt="image"></p>
-<h3 id="Better-Touch-Tool"><a href="#Better-Touch-Tool" class="headerlink" title="Better Touch Tool"></a>Better Touch Tool</h3><p>下载地址：<a href="https://folivora.ai/">https://folivora.ai/</a></p>
-<p><img src="https://cdn.nlark.com/yuque/0/2022/png/815906/1654747351732-ed4bf4c2-300e-4c48-b8b2-0dbdc7d97fc1.png" alt="image"></p>
-<h3 id="Gatekeeper-Toggler"><a href="#Gatekeeper-Toggler" class="headerlink" title="Gatekeeper Toggler"></a>Gatekeeper Toggler</h3><p>下载地址：<a href="https://macdownload.informer.com/gatekeeper-toggler/3.0/">https://macdownload.informer.com/gatekeeper-toggler/3.0/</a></p>
-<p><img src="https://cdn.nlark.com/yuque/0/2022/png/815906/1654750175004-eefe3886-6d01-470f-ba9a-77efb625acd6.png?x-oss-process=image/resize,w_1487,limit_0" alt="image"></p>
-<h3 id="HomeBrew"><a href="#HomeBrew" class="headerlink" title="HomeBrew"></a>HomeBrew</h3><p>下载地址：<a href="https://brew.sh/index_zh-cn">https://brew.sh/index_zh-cn</a></p>
-<p><img src="https://cdn.nlark.com/yuque/0/2021/png/815906/1621467695923-3c3926ce-1b83-447a-9b7d-693b4b36cc72.png?x-oss-process=image/resize,w_1500,limit_0" alt="image"></p>
-]]></content>
+<h1 id="浏览器插件"><a href="#浏览器插件" class="headerlink" title="浏览器插件"></a>浏览器插件</h1><h3 id="1password"><a href="#1password" class="headerlink" title="1password"></a>1password</h3><h3 id="AdGuard-AdBlocker"><a href="#AdGuard-AdBlocker" class="headerlink" title="AdGuard AdBlocker"></a>AdGuard AdBlocker</h3><h3 id="AI-Subtitles-Immersive-Translate-Trancy"><a href="#AI-Subtitles-Immersive-Translate-Trancy" class="headerlink" title="AI Subtitles &amp; Immersive Translate - Trancy"></a>AI Subtitles &amp; Immersive Translate - Trancy</h3><p>下载地址: <a href="https://www.trancy.org/zh-cn">https://www.trancy.org/zh-cn</a></p>
+<p>功能:</p>
+<ul>
+<li>沉浸式翻译</li>
+<li>YouTube &#x2F; Netflix 双语字幕</li>
+<li>单词跟踪学习</li>
+</ul>
+<p><img src="http://obsidian.easyhappy.top/avan/202308091120980.png"></p>
+<h3 id="Ajax-Modifier"><a href="#Ajax-Modifier" class="headerlink" title="Ajax Modifier"></a>Ajax Modifier</h3><h3 id="Dark-Reader"><a href="#Dark-Reader" class="headerlink" title="Dark Reader"></a>Dark Reader</h3><p>下载地址: <a href="https://darkreader.org/https://darkreader.org/">https://darkreader.org/https://darkreader.org/</a></p>
+<p><img src="http://obsidian.easyhappy.top/avan/202308091112178.png"></p>
+<h3 id="Eightify-AI-YouTube-Summarizer"><a href="#Eightify-AI-YouTube-Summarizer" class="headerlink" title="Eightify: AI YouTube Summarizer"></a>Eightify: AI YouTube Summarizer</h3><p>下载地址: <a href="https://eightify.app/">https://eightify.app/</a></p>
+<p>介绍: 总结 youtube 的视频内容</p>
+<h3 id="Fonts-Ninja"><a href="#Fonts-Ninja" class="headerlink" title="Fonts Ninja"></a>Fonts Ninja</h3><h3 id="GoFullPage-Full-Page-Screen-Capture"><a href="#GoFullPage-Full-Page-Screen-Capture" class="headerlink" title="GoFullPage - Full Page Screen Capture"></a>GoFullPage - Full Page Screen Capture</h3><h3 id="Grammarly-AI-Writing-and-Grammar-Checker-App"><a href="#Grammarly-AI-Writing-and-Grammar-Checker-App" class="headerlink" title="Grammarly: AI Writing and Grammar Checker App"></a>Grammarly: AI Writing and Grammar Checker App</h3><h3 id="Image-Downloader"><a href="#Image-Downloader" class="headerlink" title="Image Downloader"></a>Image Downloader</h3><h3 id="Immersive-Translate-Translate-Web-PDF"><a href="#Immersive-Translate-Translate-Web-PDF" class="headerlink" title="Immersive Translate - Translate Web &amp; PDF"></a>Immersive Translate - Translate Web &amp; PDF</h3><p>下载地址: <a href="https://immersivetranslate.com/">https://immersivetranslate.com/</a></p>
+<h3 id="JSON-Viewer"><a href="#JSON-Viewer" class="headerlink" title="JSON Viewer"></a>JSON Viewer</h3><h3 id="Live-Stream-Dwonloader"><a href="#Live-Stream-Dwonloader" class="headerlink" title="Live Stream Dwonloader"></a>Live Stream Dwonloader</h3><p>下载地址: <a href="https://webextension.org/listing/hls-downloader.html">https://webextension.org/listing/hls-downloader.html</a></p>
+<h3 id="Merlin-Ask-AI-to-Research-Write-Review"><a href="#Merlin-Ask-AI-to-Research-Write-Review" class="headerlink" title="Merlin - Ask AI to Research, Write &amp; Review"></a>Merlin - Ask AI to Research, Write &amp; Review</h3><p>下载地址: <a href="https://merlin.foyer.work/zh-CN/">https://merlin.foyer.work/zh-CN/</a></p>
+<p>介绍:<br>网页插件版本的快捷 chatgpt 聊天</p>
+<p>功能:</p>
+<ul>
+<li>支持自定义 apikey</li>
+<li>总结网页</li>
+<li>总结 YouTube</li>
+<li>总结 gmail 邮件</li>
+<li>协助 linked 和 twitter 快捷回复</li>
+</ul>
+<h3 id="Perplexity-AI-Companion"><a href="#Perplexity-AI-Companion" class="headerlink" title="Perplexity - AI Companion"></a>Perplexity - AI Companion</h3><h3 id="Proxy-SwitchyOmega"><a href="#Proxy-SwitchyOmega" class="headerlink" title="Proxy SwitchyOmega"></a>Proxy SwitchyOmega</h3><h3 id="React-Developer-Tools"><a href="#React-Developer-Tools" class="headerlink" title="React Developer Tools"></a>React Developer Tools</h3><h3 id="Relingo-Master-Words-Bilingual-Subtitles-Immersive-Translate-Free"><a href="#Relingo-Master-Words-Bilingual-Subtitles-Immersive-Translate-Free" class="headerlink" title="Relingo - Master Words | Bilingual Subtitles | Immersive Translate | Free"></a>Relingo - Master Words | Bilingual Subtitles | Immersive Translate | Free</h3><p>下载地址: <a href="https://relingo.net/en/index">https://relingo.net/en/index</a></p>
+<p>功能:</p>
+<ul>
+<li>生词标注</li>
+<li>快捷翻译</li>
+<li>视频字慕</li>
+</ul>
+<h3 id="SteamDB"><a href="#SteamDB" class="headerlink" title="SteamDB"></a>SteamDB</h3><h3 id="Tampermonkey"><a href="#Tampermonkey" class="headerlink" title="Tampermonkey"></a>Tampermonkey</h3><h3 id="Tweet-Hunter-X-Sidebar-for-Twitter"><a href="#Tweet-Hunter-X-Sidebar-for-Twitter" class="headerlink" title="Tweet Hunter X: Sidebar for Twitter"></a>Tweet Hunter X: Sidebar for Twitter</h3><h3 id="X-Twitter-Video-Downloader"><a href="#X-Twitter-Video-Downloader" class="headerlink" title="X (Twitter) Video Downloader"></a>X (Twitter) Video Downloader</h3><h3 id="Vimium-C-All-by-Keyboard"><a href="#Vimium-C-All-by-Keyboard" class="headerlink" title="Vimium C - All by Keyboard"></a>Vimium C - All by Keyboard</h3><h3 id="Vue-js-devtools"><a href="#Vue-js-devtools" class="headerlink" title="Vue.js devtools"></a>Vue.js devtools</h3><h3 id="Wappalyzer-Technology-profiler"><a href="#Wappalyzer-Technology-profiler" class="headerlink" title="Wappalyzer - Technology profiler"></a>Wappalyzer - Technology profiler</h3><p>下载地址: <a href="https://www.wappalyzer.com/">https://www.wappalyzer.com</a></p>
+<h3 id="WuCai-Web-Highlighter"><a href="#WuCai-Web-Highlighter" class="headerlink" title="WuCai Web Highlighter"></a>WuCai Web Highlighter</h3><p>下载地址: <a href="https://www.dotalk.cn/">https://www.dotalk.cn/</a></p>
+<h3 id="豆包-AI-助手"><a href="#豆包-AI-助手" class="headerlink" title="豆包 AI 助手"></a>豆包 AI 助手</h3><p>下载地址: <a href="https://www.doubao.com/browser-extension/landing">https://www.doubao.com/browser-extension/landing</a></p>
+<h3 id="Gimli-Tailwind"><a href="#Gimli-Tailwind" class="headerlink" title="Gimli Tailwind"></a>Gimli Tailwind</h3><h3 id="Hackertab"><a href="#Hackertab" class="headerlink" title="Hackertab"></a>Hackertab</h3><h3 id="Responsive-Viewer"><a href="#Responsive-Viewer" class="headerlink" title="Responsive Viewer"></a>Responsive Viewer</h3><h3 id="RSS-Feed-Reader"><a href="#RSS-Feed-Reader" class="headerlink" title="RSS Feed Reader"></a>RSS Feed Reader</h3><h3 id="Video-Speed-Controller"><a href="#Video-Speed-Controller" class="headerlink" title="Video Speed Controller"></a>Video Speed Controller</h3><h3 id="WhatFont"><a href="#WhatFont" class="headerlink" title="WhatFont"></a>WhatFont</h3><h3 id="Web3"><a href="#Web3" class="headerlink" title="Web3"></a>Web3</h3><h4 id="MetaMask"><a href="#MetaMask" class="headerlink" title="MetaMask"></a>MetaMask</h4><h4 id="OKX-Wallet"><a href="#OKX-Wallet" class="headerlink" title="OKX Wallet"></a>OKX Wallet</h4><h3 id="不常用"><a href="#不常用" class="headerlink" title="不常用"></a>不常用</h3><h4 id="Lingocloud-Web-Translation-Extension"><a href="#Lingocloud-Web-Translation-Extension" class="headerlink" title="Lingocloud - Web Translation Extension"></a>Lingocloud - Web Translation Extension</h4><p>彩云翻译</p>
+<h4 id="Bitwarden-Password-Manager"><a href="#Bitwarden-Password-Manager" class="headerlink" title="Bitwarden Password Manager"></a>Bitwarden Password Manager</h4>]]></content>
       <categories>
         <category>汇总</category>
       </categories>
@@ -5361,28 +5304,6 @@
       </tags>
   </entry>
   <entry>
-    <title>如何&quot;放松&quot;的参与开源社区建设</title>
-    <url>/2024/06/29/article/%E5%A6%82%E4%BD%95%22%E6%94%BE%E6%9D%BE%22%E7%9A%84%E5%8F%82%E4%B8%8E%E5%BC%80%E6%BA%90%E7%A4%BE%E5%8C%BA%E5%BB%BA%E8%AE%BE/</url>
-    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>如果你是在因为害怕 github 的 commit 提交时间是在某个时间段, 并害怕被某些人发现.</p>
-<p>恭喜你, 你可能跟我考虑的是一个问题.</p>
-<p>通过下面的脚本(ChatGPT 提供), 将 commit 的时间调整至(18:00&#x2F;19:00) 后.</p>
-<blockquote>
-<p>建议 19:00, 18:00 左右的时间容易存在争议</p>
-</blockquote>
-<h1 id="脚本"><a href="#脚本" class="headerlink" title="脚本"></a>脚本</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 检测操作系统类型</span></span><br><span class="line"><span class="keyword">if</span> <span class="built_in">date</span> --version &gt;/dev/null 2&gt;&amp;1; <span class="keyword">then</span></span><br><span class="line">    <span class="comment"># GNU date (Linux)</span></span><br><span class="line">    DATE_CMD=<span class="string">&quot;gnu&quot;</span></span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">    <span class="comment"># BSD date (macOS)</span></span><br><span class="line">    DATE_CMD=<span class="string">&quot;bsd&quot;</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取今天的日期</span></span><br><span class="line">TODAY=$(<span class="built_in">date</span> +<span class="string">&quot;%Y-%m-%d&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取当天 19:00 的时间戳</span></span><br><span class="line"><span class="keyword">if</span> [ <span class="string">&quot;<span class="variable">$DATE_CMD</span>&quot;</span> = <span class="string">&quot;gnu&quot;</span> ]; <span class="keyword">then</span></span><br><span class="line">    <span class="comment"># Linux: 使用 GNU date 的 -d 参数</span></span><br><span class="line">    NINETEEN_TIME=$(<span class="built_in">date</span> -d <span class="string">&quot;<span class="variable">$&#123;TODAY&#125;</span> 19:00:00&quot;</span> <span class="string">&quot;+%s&quot;</span>)</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">    <span class="comment"># macOS: 使用 BSD date 的 -j 和 -f 参数</span></span><br><span class="line">    NINETEEN_TIME=$(<span class="built_in">date</span> -j -f <span class="string">&quot;%Y-%m-%d %H:%M:%S&quot;</span> <span class="string">&quot;<span class="variable">$&#123;TODAY&#125;</span> 19:00:00&quot;</span> <span class="string">&quot;+%s&quot;</span>)</span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取 Git 中的最后一次提交时间戳</span></span><br><span class="line">LAST_COMMIT_TIME=$(git <span class="built_in">log</span> -1 --format=<span class="string">&quot;%ct&quot;</span> 2&gt;/dev/null)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果没有提交记录，初始化 LAST_COMMIT_TIME 为 0</span></span><br><span class="line"><span class="keyword">if</span> [ -z <span class="string">&quot;<span class="variable">$LAST_COMMIT_TIME</span>&quot;</span> ]; <span class="keyword">then</span></span><br><span class="line">    LAST_COMMIT_TIME=0</span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 提交函数</span></span><br><span class="line"><span class="function"><span class="title">commit_with_adjusted_time</span></span>() &#123;</span><br><span class="line">    <span class="comment"># 获取当前时间戳</span></span><br><span class="line">    CURRENT_TIME=$(<span class="built_in">date</span> <span class="string">&quot;+%s&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 如果当前时间早于 19:00 或没有提交记录</span></span><br><span class="line">    <span class="keyword">if</span> [ <span class="string">&quot;<span class="variable">$CURRENT_TIME</span>&quot;</span> -lt <span class="string">&quot;<span class="variable">$NINETEEN_TIME</span>&quot;</span> ] &amp;&amp; [ <span class="string">&quot;<span class="variable">$LAST_COMMIT_TIME</span>&quot;</span> -lt <span class="string">&quot;<span class="variable">$NINETEEN_TIME</span>&quot;</span> ]; <span class="keyword">then</span></span><br><span class="line">        <span class="comment"># 使用当天 19:00 的时间作为基准</span></span><br><span class="line">        COMMIT_TIME=<span class="variable">$NINETEEN_TIME</span></span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="comment"># 基于上一次提交时间递增 1 秒</span></span><br><span class="line">        COMMIT_TIME=$((<span class="variable">$LAST_COMMIT_TIME</span> + <span class="number">1</span>))</span><br><span class="line">    <span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 更新最后一次提交的时间</span></span><br><span class="line">    LAST_COMMIT_TIME=<span class="variable">$COMMIT_TIME</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 格式化时间为 Git 可识别的格式</span></span><br><span class="line">    <span class="keyword">if</span> [ <span class="string">&quot;<span class="variable">$DATE_CMD</span>&quot;</span> = <span class="string">&quot;gnu&quot;</span> ]; <span class="keyword">then</span></span><br><span class="line">        <span class="comment"># Linux: 使用 GNU date 的 -d 参数</span></span><br><span class="line">        FORMATTED_TIME=$(<span class="built_in">date</span> -d <span class="string">&quot;@<span class="variable">$COMMIT_TIME</span>&quot;</span> <span class="string">&quot;+%Y-%m-%dT%H:%M:%S&quot;</span>)</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="comment"># macOS: 使用 BSD date 的 -j 和 -f 参数</span></span><br><span class="line">        FORMATTED_TIME=$(<span class="built_in">date</span> -j -f <span class="string">&quot;%s&quot;</span> <span class="string">&quot;<span class="variable">$COMMIT_TIME</span>&quot;</span> <span class="string">&quot;+%Y-%m-%dT%H:%M:%S&quot;</span>)</span><br><span class="line">    <span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 设置提交时间并提交代码</span></span><br><span class="line">    GIT_AUTHOR_DATE=<span class="variable">$FORMATTED_TIME</span> GIT_COMMITTER_DATE=<span class="variable">$FORMATTED_TIME</span> git commit -m <span class="string">&quot;<span class="variable">$1</span>&quot;</span> --<span class="built_in">date</span>=<span class="string">&quot;<span class="variable">$FORMATTED_TIME</span>&quot;</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">&quot;Commit created with time: <span class="variable">$FORMATTED_TIME</span>&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 检查参数是否传入提交信息</span></span><br><span class="line"><span class="keyword">if</span> [ -z <span class="string">&quot;<span class="variable">$1</span>&quot;</span> ]; <span class="keyword">then</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">&quot;Usage: <span class="variable">$0</span> &lt;commit-message&gt;&quot;</span></span><br><span class="line">    <span class="built_in">exit</span> 1</span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 调用提交函数</span></span><br><span class="line">commit_with_adjusted_time <span class="string">&quot;<span class="variable">$1</span>&quot;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">chmod</span> +x commit.sh</span><br><span class="line">./commit.sh <span class="string">&quot;commit message&quot;</span></span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>博客</category>
-        <category>后端</category>
-      </categories>
-      <tags>
-        <tag>后端</tag>
-        <tag>开源</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>如何连接GitHub远程仓库</title>
     <url>/2020/02/12/article/%E5%A6%82%E4%BD%95%E8%BF%9E%E6%8E%A5GitHub%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/</url>
     <content><![CDATA[<h1 id="前置条件"><a href="#前置条件" class="headerlink" title="前置条件"></a>前置条件</h1><ol>
@@ -7386,6 +7307,13 @@
 <li>取消 Show Spotlight search 和 Show Finder search window</li>
 <li>配置 alfred 快捷键</li>
 </ul>
+<p>开启时钟秒</p>
+<ul>
+<li>settings</li>
+<li>menu bar</li>
+<li>clock options</li>
+<li>勾选 Display the time with seconds</li>
+</ul>
 <h2 id="无法按住持续连按"><a href="#无法按住持续连按" class="headerlink" title="无法按住持续连按"></a>无法按住持续连按</h2><h3 id="关闭-ApplePressAndHoldEnabled"><a href="#关闭-ApplePressAndHoldEnabled" class="headerlink" title="关闭 ApplePressAndHoldEnabled"></a>关闭 ApplePressAndHoldEnabled</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># obsidian</span></span><br><span class="line">defaults write md.obsidian ApplePressAndHoldEnabled -bool <span class="literal">false</span></span><br></pre></td></tr></table></figure>
 
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># For cursor</span></span><br><span class="line">defaults write com.todesktop.230313mzl4w4u92 ApplePressAndHoldEnabled -bool <span class="literal">false</span></span><br></pre></td></tr></table></figure>
@@ -7408,7 +7336,7 @@
 
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># If necessary, reset global default</span></span><br><span class="line">defaults delete -g ApplePressAndHoldEnabled</span><br></pre></td></tr></table></figure>
 
-<h1 id="brew相关"><a href="#brew相关" class="headerlink" title="brew相关"></a>brew相关</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">brew install webp</span><br><span class="line">brew install pandoc</span><br><span class="line">brew install cowsay</span><br><span class="line">brew install zplug</span><br><span class="line">brew install trash</span><br><span class="line">brew install scc</span><br><span class="line">brew install duf</span><br><span class="line">brew install diff-so-fancy</span><br><span class="line">brew install lolcat</span><br><span class="line">brew install fzf</span><br><span class="line">brew install figlet</span><br><span class="line">brew install tmux</span><br><span class="line">brew install graphicsmagick</span><br><span class="line">brew install cmatrix</span><br><span class="line">brew install ctop</span><br><span class="line">brew install fastfetch</span><br><span class="line"></span><br><span class="line"><span class="comment"># ripgrep \</span></span><br><span class="line"><span class="comment"># bat \</span></span><br><span class="line"><span class="comment"># tldr \</span></span><br><span class="line"><span class="comment"># thefuck \</span></span><br><span class="line"><span class="comment"># nvm \</span></span><br></pre></td></tr></table></figure>
+<h1 id="brew相关"><a href="#brew相关" class="headerlink" title="brew相关"></a>brew相关</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">brew install ffmpeg</span><br><span class="line">brew install exiftool</span><br><span class="line">brew install imagemagick</span><br><span class="line">brew install webp</span><br><span class="line">brew install pandoc</span><br><span class="line">brew install cowsay</span><br><span class="line">brew install zplug</span><br><span class="line">brew install trash</span><br><span class="line">brew install scc</span><br><span class="line">brew install duf</span><br><span class="line">brew install diff-so-fancy</span><br><span class="line">brew install lolcat</span><br><span class="line">brew install fzf</span><br><span class="line">brew install figlet</span><br><span class="line">brew install tmux</span><br><span class="line">brew install graphicsmagick</span><br><span class="line">brew install cmatrix</span><br><span class="line">brew install ctop</span><br><span class="line">brew install fastfetch</span><br><span class="line">brew install opencode</span><br><span class="line"></span><br><span class="line"><span class="comment"># ripgrep \</span></span><br><span class="line"><span class="comment"># bat \</span></span><br><span class="line"><span class="comment"># tldr \</span></span><br><span class="line"><span class="comment"># thefuck \</span></span><br><span class="line"><span class="comment"># nvm \</span></span><br></pre></td></tr></table></figure>
 
 <ul>
 <li>scc 更好的统计代码量</li>
@@ -7427,7 +7355,7 @@
 </li>
 </ul>
 <h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><p>nvm 安装完后，需要创建 <code>~/.nvm</code> 以及更新 <code>~/.zshrc</code> 的配置</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">brew install --cask mqttx</span><br><span class="line">brew install --cask firefox</span><br><span class="line">brew install --cask postman</span><br><span class="line">brew install --cask nutstore</span><br><span class="line">brew install --cask soapui</span><br><span class="line">brew install --cask jetbrains-toolbox</span><br><span class="line">brew install --cask iina</span><br><span class="line">brew install --cask adrive</span><br><span class="line">brew install --cask baidunetdisk</span><br><span class="line">brew install --cask wechatwebdevtools</span><br><span class="line">brew install --cask visual-studio-code</span><br><span class="line">brew install --cask ticktick</span><br><span class="line">brew install --cask snipaste</span><br><span class="line">brew install --cask sourcetree</span><br><span class="line">brew install --cask sunloginclient</span><br><span class="line">brew install --cask feishu</span><br><span class="line">brew install --cask discord</span><br><span class="line">brew install --cask tencent-lemon</span><br><span class="line">brew install --cask neteasemusic</span><br><span class="line">brew install --cask picgo</span><br><span class="line">brew install --cask macdown</span><br><span class="line">brew install --cask drawio</span><br><span class="line">brew install --cask microsoft-edge</span><br><span class="line">brew install --cask mongodb-compass</span><br><span class="line">brew install --cask chatbox</span><br><span class="line">brew install --cask steam</span><br><span class="line">brew install --cask tencent-meeting</span><br><span class="line">brew install --cask josm</span><br><span class="line">brew install --cask hbuilderx</span><br><span class="line">brew install --cask sublime-text</span><br><span class="line">brew install --cask thunder</span><br><span class="line">brew install --cask notion</span><br><span class="line">brew install --cask 1password</span><br><span class="line">brew install --cask bob</span><br><span class="line">brew install --cask apifox</span><br><span class="line">brew install --cask telegram</span><br><span class="line">brew install --cask wechat</span><br><span class="line">brew install --cask qq</span><br><span class="line">brew install --cask wechatwork</span><br><span class="line">brew install --cask google-chrome</span><br><span class="line">brew install --cask font-jetbrains-mono</span><br><span class="line">brew install --cask iterm2</span><br><span class="line">brew install --cask obsidian</span><br><span class="line">brew install --cask chatgpt</span><br><span class="line"></span><br><span class="line"><span class="comment"># 新版 mac 系统[]</span></span><br><span class="line">brew install --cask docker</span><br><span class="line">brew install --cask proxyman</span><br><span class="line">brew install --cask dingtalk</span><br><span class="line">brew install --cask obs</span><br><span class="line"></span><br><span class="line"><span class="comment"># 不可用</span></span><br><span class="line"><span class="comment"># todesk \</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 不常用</span></span><br><span class="line"><span class="comment"># arc \</span></span><br><span class="line"><span class="comment"># spotify \</span></span><br><span class="line"><span class="comment"># background-music \</span></span><br><span class="line"><span class="comment"># warp \</span></span><br><span class="line"><span class="comment"># youdaonote \</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">brew tap farion1231/ccswitch</span><br><span class="line">brew trust --formula farion1231/ccswitch/cc-switch</span><br><span class="line">brew install --cask cc-switch</span><br><span class="line"></span><br><span class="line">brew install --cask claude-code</span><br><span class="line">brew install --cask opencode-desktop</span><br><span class="line">brew install --cask mqttx</span><br><span class="line">brew install --cask firefox</span><br><span class="line">brew install --cask postman</span><br><span class="line">brew install --cask nutstore</span><br><span class="line">brew install --cask soapui</span><br><span class="line">brew install --cask jetbrains-toolbox</span><br><span class="line">brew install --cask iina</span><br><span class="line">brew install --cask adrive</span><br><span class="line">brew install --cask baidunetdisk</span><br><span class="line">brew install --cask wechatwebdevtools</span><br><span class="line">brew install --cask visual-studio-code</span><br><span class="line">brew install --cask ticktick</span><br><span class="line">brew install --cask snipaste</span><br><span class="line">brew install --cask sourcetree</span><br><span class="line">brew install --cask feishu</span><br><span class="line">brew install --cask discord</span><br><span class="line">brew install --cask tencent-lemon</span><br><span class="line">brew install --cask neteasemusic</span><br><span class="line">brew install --cask picgo</span><br><span class="line">brew install --cask macdown</span><br><span class="line">brew install --cask drawio</span><br><span class="line">brew install --cask microsoft-edge</span><br><span class="line">brew install --cask mongodb-compass</span><br><span class="line">brew install --cask chatbox</span><br><span class="line">brew install --cask steam</span><br><span class="line">brew install --cask tencent-meeting</span><br><span class="line">brew install --cask josm</span><br><span class="line">brew install --cask hbuilderx</span><br><span class="line">brew install --cask sublime-text</span><br><span class="line">brew install --cask thunder</span><br><span class="line">brew install --cask notion</span><br><span class="line">brew install --cask 1password</span><br><span class="line">brew install --cask bob</span><br><span class="line">brew install --cask apifox</span><br><span class="line">brew install --cask telegram</span><br><span class="line">brew install --cask wechat</span><br><span class="line">brew install --cask qq</span><br><span class="line">brew install --cask wechatwork</span><br><span class="line">brew install --cask google-chrome</span><br><span class="line">brew install --cask font-jetbrains-mono</span><br><span class="line">brew install --cask iterm2</span><br><span class="line">brew install --cask obsidian</span><br><span class="line">brew install --cask chatgpt</span><br><span class="line"></span><br><span class="line"><span class="comment"># 新版 mac 系统[]</span></span><br><span class="line">brew install --cask docker</span><br><span class="line">brew install --cask proxyman</span><br><span class="line">brew install --cask dingtalk</span><br><span class="line">brew install --cask obs</span><br><span class="line"></span><br><span class="line"><span class="comment"># 不可用</span></span><br><span class="line"><span class="comment"># todesk \</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 不常用</span></span><br><span class="line"><span class="comment"># brew install --cask sunloginclient</span></span><br><span class="line"><span class="comment"># arc \</span></span><br><span class="line"><span class="comment"># spotify \</span></span><br><span class="line"><span class="comment"># background-music \</span></span><br><span class="line"><span class="comment"># warp \</span></span><br><span class="line"><span class="comment"># youdaonote \</span></span><br></pre></td></tr></table></figure>
 
 <h1 id="特殊版本软件"><a href="#特殊版本软件" class="headerlink" title="特殊版本软件"></a>特殊版本软件</h1><p>[[软件推荐]]</p>
 <h1 id="配置-git"><a href="#配置-git" class="headerlink" title="配置 git"></a>配置 git</h1><p>[[Git#git 基本配置]]</p>
@@ -7472,7 +7400,7 @@
   <entry>
     <title>系统常用命令</title>
     <url>/2023/01/23/summary/Mac%E7%B3%BB%E7%BB%9F/%E7%B3%BB%E7%BB%9F%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<h1 id="提示应用文件已经损坏"><a href="#提示应用文件已经损坏" class="headerlink" title="提示应用文件已经损坏"></a>提示应用文件已经损坏</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> spctl --master-disable</span><br><span class="line"></span><br><span class="line"><span class="comment"># react-confettisudo xattr -cr 拖入文件</span></span><br><span class="line"><span class="built_in">sudo</span> xattr -r -d com.apple.quarantine 拖入文件</span><br></pre></td></tr></table></figure>
+    <content><![CDATA[<h1 id="提示应用文件已经损坏"><a href="#提示应用文件已经损坏" class="headerlink" title="提示应用文件已经损坏"></a>提示应用文件已经损坏</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 开启 任何来源</span></span><br><span class="line"><span class="built_in">sudo</span> spctl --master-disable</span><br><span class="line"></span><br><span class="line"><span class="comment"># 绕过公证</span></span><br><span class="line"><span class="built_in">sudo</span> xattr -rd com.apple.quarantine (拖入文件)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 应用签名</span></span><br><span class="line"><span class="comment"># 安装 xcode</span></span><br><span class="line">xcode-select --install</span><br><span class="line"><span class="comment"># 签名, 显示 &quot;/文件位置 : replacing existing signature&quot;</span></span><br><span class="line"><span class="built_in">sudo</span> codesign --force --deep --sign - (应用路径)</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>汇总</category>
@@ -11160,6 +11088,126 @@ ollama rm qwen3:8b
       <tags>
         <tag>汇总</tag>
         <tag>ollama</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>eslint 配置</title>
+    <url>/2020/02/12/summary/eslint%20%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<p>安装 eslint</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pnpm i -D @antfu/eslint-config eslint@9.x.x</span><br></pre></td></tr></table></figure>
+
+<p>配置默认值</p>
+<figure class="highlight ts"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123;</span><br><span class="line">  <span class="attr">angular</span>: enableAngular = <span class="literal">false</span>,</span><br><span class="line">  <span class="attr">astro</span>: enableAstro = <span class="literal">false</span>,</span><br><span class="line">  autoRenamePlugins = <span class="literal">true</span>,</span><br><span class="line">  componentExts = [],</span><br><span class="line">  <span class="attr">e18e</span>: enableE18e = <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">gitignore</span>: enableGitignore = <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">ignores</span>: userIgnores = [],</span><br><span class="line">  <span class="attr">imports</span>: enableImports = <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">jsdoc</span>: enableJsdoc = <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">jsx</span>: enableJsx = <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">nextjs</span>: enableNextjs = <span class="literal">false</span>,</span><br><span class="line">  <span class="attr">node</span>: enableNode = <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">perfectionist</span>: enablePerfectionist = <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">pnpm</span>: enableCatalogs = !!<span class="title function_">findUpSync</span>(<span class="string">&#x27;pnpm-workspace.yaml&#x27;</span>),</span><br><span class="line">  <span class="attr">react</span>: enableReact = <span class="literal">false</span>,</span><br><span class="line">  <span class="attr">regexp</span>: enableRegexp = <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">solid</span>: enableSolid = <span class="literal">false</span>,</span><br><span class="line">  <span class="attr">svelte</span>: enableSvelte = <span class="literal">false</span>,</span><br><span class="line">  <span class="attr">type</span>: appType = <span class="string">&#x27;app&#x27;</span>,</span><br><span class="line">  <span class="attr">typescript</span>: enableTypeScript = <span class="title function_">isPackageExists</span>(<span class="string">&#x27;typescript&#x27;</span>) || <span class="title function_">isPackageExists</span>(<span class="string">&#x27;@typescript/native-preview&#x27;</span>),</span><br><span class="line">  <span class="attr">unicorn</span>: enableUnicorn = <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">unocss</span>: enableUnoCSS = <span class="literal">false</span>,</span><br><span class="line">  <span class="attr">vue</span>: enableVue = <span class="title class_">VuePackages</span>.<span class="title function_">some</span>(<span class="function"><span class="params">i</span> =&gt;</span> <span class="title function_">isPackageExists</span>(i)),</span><br><span class="line">&#125; = options</span><br></pre></td></tr></table></figure>
+
+<p>安装 prettier 格式化普通文件</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pnpm i -D eslint-plugin-format</span><br></pre></td></tr></table></figure>
+
+<p>eslint.config.mjs</p>
+<figure class="highlight ts"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> antfu <span class="keyword">from</span> <span class="string">&#x27;@antfu/eslint-config&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="title function_">antfu</span>(&#123;</span><br><span class="line">  <span class="attr">stylistic</span>: &#123;</span><br><span class="line">    <span class="attr">semi</span>: <span class="literal">true</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// react: true, // 手动开启</span></span><br><span class="line">  <span class="attr">formatters</span>: <span class="literal">true</span>,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>react 安装</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm i -D @eslint-react/eslint-plugin eslint-plugin-react-refresh</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>汇总</category>
+      </categories>
+      <tags>
+        <tag>汇总</tag>
+        <tag>eslint</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>去除图片中的元数据</title>
+    <url>/2026/06/10/article/%E5%8E%BB%E9%99%A4%E5%9B%BE%E7%89%87%E4%B8%AD%E7%9A%84%E5%85%83%E6%95%B0%E6%8D%AE/</url>
+    <content><![CDATA[<p>安装 imagemagick</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">brew install imagemagick</span><br></pre></td></tr></table></figure>
+
+<p>安装 exiftool</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">brew install exiftool</span><br></pre></td></tr></table></figure>
+
+<p>重新生成图</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">magick input.jpg -resize 95% -resize 105.26% output.jpg</span><br><span class="line">magick input.jpg temp.png</span><br><span class="line">magick temp.png output.jpg</span><br><span class="line">magick input.jpg -blur 0x0.5 output.jpg</span><br><span class="line">magick input.jpg -noise Reduce output.jpg</span><br><span class="line">magick input.jpg -quality 85 output.jpg</span><br><span class="line">magick input.jpg -strip -quality 100 output.jpg</span><br></pre></td></tr></table></figure>
+
+<p>查看修改图的元数据</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">exiftool output.jpg</span><br></pre></td></tr></table></figure>
+
+<p>或者重新编码</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ffmpeg -i input.jpg output.jpg</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>博客</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
+        <tag>ai</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>如何&quot;放松&quot;的参与开源社区建设</title>
+    <url>/2024/06/29/article/%E5%A6%82%E4%BD%95%20%E6%94%BE%E6%9D%BE%20%E7%9A%84%E5%8F%82%E4%B8%8E%E5%BC%80%E6%BA%90%E7%A4%BE%E5%8C%BA%E5%BB%BA%E8%AE%BE/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>如果你是在因为害怕 github 的 commit 提交时间是在某个时间段, 并害怕被某些人发现.</p>
+<p>恭喜你, 你可能跟我考虑的是一个问题.</p>
+<p>通过下面的脚本(ChatGPT 提供), 将 commit 的时间调整至(18:00&#x2F;19:00) 后.</p>
+<blockquote>
+<p>建议 19:00, 18:00 左右的时间容易存在争议</p>
+</blockquote>
+<h1 id="脚本"><a href="#脚本" class="headerlink" title="脚本"></a>脚本</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 检测操作系统类型</span></span><br><span class="line"><span class="keyword">if</span> <span class="built_in">date</span> --version &gt;/dev/null 2&gt;&amp;1; <span class="keyword">then</span></span><br><span class="line">    <span class="comment"># GNU date (Linux)</span></span><br><span class="line">    DATE_CMD=<span class="string">&quot;gnu&quot;</span></span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">    <span class="comment"># BSD date (macOS)</span></span><br><span class="line">    DATE_CMD=<span class="string">&quot;bsd&quot;</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取今天的日期</span></span><br><span class="line">TODAY=$(<span class="built_in">date</span> +<span class="string">&quot;%Y-%m-%d&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取当天 19:00 的时间戳</span></span><br><span class="line"><span class="keyword">if</span> [ <span class="string">&quot;<span class="variable">$DATE_CMD</span>&quot;</span> = <span class="string">&quot;gnu&quot;</span> ]; <span class="keyword">then</span></span><br><span class="line">    <span class="comment"># Linux: 使用 GNU date 的 -d 参数</span></span><br><span class="line">    NINETEEN_TIME=$(<span class="built_in">date</span> -d <span class="string">&quot;<span class="variable">$&#123;TODAY&#125;</span> 19:00:00&quot;</span> <span class="string">&quot;+%s&quot;</span>)</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">    <span class="comment"># macOS: 使用 BSD date 的 -j 和 -f 参数</span></span><br><span class="line">    NINETEEN_TIME=$(<span class="built_in">date</span> -j -f <span class="string">&quot;%Y-%m-%d %H:%M:%S&quot;</span> <span class="string">&quot;<span class="variable">$&#123;TODAY&#125;</span> 19:00:00&quot;</span> <span class="string">&quot;+%s&quot;</span>)</span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取 Git 中的最后一次提交时间戳</span></span><br><span class="line">LAST_COMMIT_TIME=$(git <span class="built_in">log</span> -1 --format=<span class="string">&quot;%ct&quot;</span> 2&gt;/dev/null)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果没有提交记录，初始化 LAST_COMMIT_TIME 为 0</span></span><br><span class="line"><span class="keyword">if</span> [ -z <span class="string">&quot;<span class="variable">$LAST_COMMIT_TIME</span>&quot;</span> ]; <span class="keyword">then</span></span><br><span class="line">    LAST_COMMIT_TIME=0</span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 提交函数</span></span><br><span class="line"><span class="function"><span class="title">commit_with_adjusted_time</span></span>() &#123;</span><br><span class="line">    <span class="comment"># 获取当前时间戳</span></span><br><span class="line">    CURRENT_TIME=$(<span class="built_in">date</span> <span class="string">&quot;+%s&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 如果当前时间早于 19:00 或没有提交记录</span></span><br><span class="line">    <span class="keyword">if</span> [ <span class="string">&quot;<span class="variable">$CURRENT_TIME</span>&quot;</span> -lt <span class="string">&quot;<span class="variable">$NINETEEN_TIME</span>&quot;</span> ] &amp;&amp; [ <span class="string">&quot;<span class="variable">$LAST_COMMIT_TIME</span>&quot;</span> -lt <span class="string">&quot;<span class="variable">$NINETEEN_TIME</span>&quot;</span> ]; <span class="keyword">then</span></span><br><span class="line">        <span class="comment"># 使用当天 19:00 的时间作为基准</span></span><br><span class="line">        COMMIT_TIME=<span class="variable">$NINETEEN_TIME</span></span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="comment"># 基于上一次提交时间递增 1 秒</span></span><br><span class="line">        COMMIT_TIME=$((<span class="variable">$LAST_COMMIT_TIME</span> + <span class="number">1</span>))</span><br><span class="line">    <span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 更新最后一次提交的时间</span></span><br><span class="line">    LAST_COMMIT_TIME=<span class="variable">$COMMIT_TIME</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 格式化时间为 Git 可识别的格式</span></span><br><span class="line">    <span class="keyword">if</span> [ <span class="string">&quot;<span class="variable">$DATE_CMD</span>&quot;</span> = <span class="string">&quot;gnu&quot;</span> ]; <span class="keyword">then</span></span><br><span class="line">        <span class="comment"># Linux: 使用 GNU date 的 -d 参数</span></span><br><span class="line">        FORMATTED_TIME=$(<span class="built_in">date</span> -d <span class="string">&quot;@<span class="variable">$COMMIT_TIME</span>&quot;</span> <span class="string">&quot;+%Y-%m-%dT%H:%M:%S&quot;</span>)</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="comment"># macOS: 使用 BSD date 的 -j 和 -f 参数</span></span><br><span class="line">        FORMATTED_TIME=$(<span class="built_in">date</span> -j -f <span class="string">&quot;%s&quot;</span> <span class="string">&quot;<span class="variable">$COMMIT_TIME</span>&quot;</span> <span class="string">&quot;+%Y-%m-%dT%H:%M:%S&quot;</span>)</span><br><span class="line">    <span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 设置提交时间并提交代码</span></span><br><span class="line">    GIT_AUTHOR_DATE=<span class="variable">$FORMATTED_TIME</span> GIT_COMMITTER_DATE=<span class="variable">$FORMATTED_TIME</span> git commit -m <span class="string">&quot;<span class="variable">$1</span>&quot;</span> --<span class="built_in">date</span>=<span class="string">&quot;<span class="variable">$FORMATTED_TIME</span>&quot;</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">&quot;Commit created with time: <span class="variable">$FORMATTED_TIME</span>&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 检查参数是否传入提交信息</span></span><br><span class="line"><span class="keyword">if</span> [ -z <span class="string">&quot;<span class="variable">$1</span>&quot;</span> ]; <span class="keyword">then</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">&quot;Usage: <span class="variable">$0</span> &lt;commit-message&gt;&quot;</span></span><br><span class="line">    <span class="built_in">exit</span> 1</span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 调用提交函数</span></span><br><span class="line">commit_with_adjusted_time <span class="string">&quot;<span class="variable">$1</span>&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">chmod</span> +x commit.sh</span><br><span class="line">./commit.sh <span class="string">&quot;commit message&quot;</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>博客</category>
+        <category>后端</category>
+      </categories>
+      <tags>
+        <tag>后端</tag>
+        <tag>开源</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>agent 偏</title>
+    <url>/2026/06/05/summary/ai/agent%20%E7%AF%87/</url>
+    <content><![CDATA[<h1 id="Skill"><a href="#Skill" class="headerlink" title="Skill"></a>Skill</h1><h2 id="find-skills"><a href="#find-skills" class="headerlink" title="find-skills"></a>find-skills</h2><h2 id="high-end-visual-design"><a href="#high-end-visual-design" class="headerlink" title="high-end-visual-design"></a>high-end-visual-design</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npx skills add https://github.com/leonxlnx/taste-skill --skill high-end-visual-design</span><br></pre></td></tr></table></figure>
+
+<h2 id="stitch-design-taste"><a href="#stitch-design-taste" class="headerlink" title="stitch-design-taste"></a>stitch-design-taste</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npx skills add https://github.com/leonxlnx/taste-skill --skill stitch-design-taste</span><br></pre></td></tr></table></figure>
+
+<h2 id="design-an-interface"><a href="#design-an-interface" class="headerlink" title="design-an-interface"></a>design-an-interface</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npx skills add https://github.com/mattpocock/skills --skill design-an-interface</span><br></pre></td></tr></table></figure>
+
+<h2 id="web-design-guidelines"><a href="#web-design-guidelines" class="headerlink" title="web-design-guidelines"></a>web-design-guidelines</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npx skills add https://github.com/vercel-labs/agent-skills --skill web-design-guidelines</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npx skills add https://github.com/antfu/skills --skill web-design-guidelines</span><br></pre></td></tr></table></figure>
+
+<h2 id="vue-router-best-practices"><a href="#vue-router-best-practices" class="headerlink" title="vue-router-best-practices"></a>vue-router-best-practices</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npx skills add https://github.com/antfu/skills --skill vue-router-best-practices</span><br></pre></td></tr></table></figure>
+
+<h2 id="vue-best-practices"><a href="#vue-best-practices" class="headerlink" title="vue-best-practices"></a>vue-best-practices</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npx skills add https://github.com/antfu/skills --skill vue-best-practices</span><br></pre></td></tr></table></figure>
+
+<h2 id="vue-testing-best-practices"><a href="#vue-testing-best-practices" class="headerlink" title="vue-testing-best-practices"></a>vue-testing-best-practices</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npx skills add https://github.com/antfu/skills --skill vue-testing-best-practices</span><br></pre></td></tr></table></figure>
+
+<h2 id="frontend-design"><a href="#frontend-design" class="headerlink" title="frontend-design"></a>frontend-design</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npx skills add https://github.com/anthropics/skills --skill frontend-design</span><br></pre></td></tr></table></figure>
+
+<h2 id="Superpowers"><a href="#Superpowers" class="headerlink" title="Superpowers"></a>Superpowers</h2><h3 id="codex-app"><a href="#codex-app" class="headerlink" title="codex app"></a>codex app</h3><ul>
+<li>plugins</li>
+<li>search <code>superpowers</code></li>
+<li>add</li>
+</ul>
+<h3 id="opencode"><a href="#opencode" class="headerlink" title="opencode"></a>opencode</h3><p>tell opencode <code>Fetch and follow instructions from https://raw.githubusercontent.com/obra/superpowers/refs/heads/main/.opencode/INSTALL.md</code></p>
+<h3 id="cursor"><a href="#cursor" class="headerlink" title="cursor"></a>cursor</h3><ul>
+<li>In Cursor Agent chat, install from marketplace:<br> <code>/add-plugin superpowers</code></li>
+<li>Or search for “superpowers” in the plugin marketplace.</li>
+</ul>
+<h1 id="MCP"><a href="#MCP" class="headerlink" title="MCP"></a>MCP</h1><h2 id="context7"><a href="#context7" class="headerlink" title="context7"></a>context7</h2><p>执行</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npx ctx7 setup</span><br></pre></td></tr></table></figure>
+
+<p>选择对应的 agent 工具进行安装</p>
+<h2 id="figma"><a href="#figma" class="headerlink" title="figma"></a>figma</h2><p>mcp 地址: <code>https://mcp.figma.com/mcp</code></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">claude plugin install figma@claude-plugins-official</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>汇总</category>
+        <category>ai</category>
+      </categories>
+      <tags>
+        <tag>汇总</tag>
+        <tag>agent</tag>
       </tags>
   </entry>
 </search>
