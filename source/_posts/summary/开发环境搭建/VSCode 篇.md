@@ -20,8 +20,6 @@ uuid: 67cfc7ae-b4bb-4152-9441-2f0d3866e7f8
 
 | 插件名                                                                    | 描述                                             |
 | ---------------------------------------------------------------------- | ---------------------------------------------- |
-| antd Design Token                                                      | antd 的 token 插件                                |
-| any-rule                                                               | 正则大全                                           |
 | Apc Customize UI++                                                     | vscode 页面定制                                    |
 | Auto Close Tag                                                         | 自定闭合标签                                         |
 | Auto Import                                                            | 自动导入                                           |
@@ -37,7 +35,6 @@ uuid: 67cfc7ae-b4bb-4152-9441-2f0d3866e7f8
 | Container Tools                                                        | 微软官方的容器工具集                                     |
 | CSS Peek                                                               | css 索引调整                                       |
 | Deploy                                                                 | 部署脚本执行                                         |
-| Dev Containers                                                         | 将 docker 容器作为开发环境                              |
 | Docker                                                                 | docker 管理                                      |
 | Docker DX                                                              |                                                |
 | DotENV                                                                 | env 高亮                                         |
@@ -52,7 +49,6 @@ uuid: 67cfc7ae-b4bb-4152-9441-2f0d3866e7f8
 | GitHub Actions                                                         |                                                |
 | GitHub Pull Requests                                                   |                                                |
 | GitHub Repositories                                                    | github 仓库管理                                    |
-| GitLens - Git supercharged                                             |                                                |
 | glTF Tools                                                             | gltf 模型预览插件                                    |
 | GraphQL                                                                | graphql 语法支持                                   |
 | Graphviz (dot) language support for Visual Studio Code                 | 图可视化语法支持                                       |
@@ -96,7 +92,6 @@ uuid: 67cfc7ae-b4bb-4152-9441-2f0d3866e7f8
 | React-Native/React/Redux snippets for es6/es7                          | react 代码片段                                     |
 | React/Redux/react-router Snippets                                      | react 代码片段                                     |
 | Regex Previewer                                                        | 正则匹配测试                                         |
-| Remote - SSH                                                           | ssh 远程开发                                       |
 | Remote - SSH: Editing Configuration Files                              | ssh 配置文件高亮                                     |
 | Remote Explorer                                                        | ssh 远程资源管理                                     |
 | Remote Repositories                                                    | ssh 远程 git 仓库控制                                |
@@ -125,10 +120,24 @@ uuid: 67cfc7ae-b4bb-4152-9441-2f0d3866e7f8
 | WakaTime                                                               |                                                |
 | Wallaby.js                                                             | 实时测试结果                                         |
 | WebGL GLSL Editor                                                      |                                                |
-| WSL                                                                    |                                                |
 | WXML - Language Service                                                | 微信 wxml 语法支持                                   |
-| XML Formatter                                                          |                                                |
 | YAML                                                                   |                                                |
+
+## 定制插件
+
+| 插件                         | 描述  |
+| -------------------------- | --- |
+| GitLens - Git supercharged |     |
+
+## VSCode 独装
+
+| 插件名               | 描述                |
+| ----------------- | ----------------- |
+| antd Design Token | antd 的 token 插件   |
+| any-rule          | 正则大全              |
+| Remote - SSH      | ssh 远程开发          |
+| WSL               |                   |
+| Dev Containers    | 将 docker 容器作为开发环境 |
 
 ## 不显示
 
@@ -160,7 +169,6 @@ uuid: 67cfc7ae-b4bb-4152-9441-2f0d3866e7f8
 | MarsCode: AI Coding Assistant | Trae 豆包旗下的编程助手                       |
 | augment                       | 类似 cursor 和 Claude code 的 compose 插件 |
 
-
 ### 禁用
 
 | 插件名               | 描述          |
@@ -171,7 +179,6 @@ uuid: 67cfc7ae-b4bb-4152-9441-2f0d3866e7f8
 | Clang-Format      | c 语言格式化     |
 | PHP Debug         |             |
 | rust-analyzer     | rust 语法支持   |
-
 
 ## 3、其他
 

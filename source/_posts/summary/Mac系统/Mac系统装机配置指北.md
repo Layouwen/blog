@@ -9,7 +9,6 @@ categories:
   - Mac系统
 uuid: 4e955826-a7f6-491a-b414-bd65a6e0d935
 ---
-
 # 前置条件
 
 允许任何来源
@@ -207,6 +206,7 @@ brew tap farion1231/ccswitch
 brew trust --formula farion1231/ccswitch/cc-switch
 brew install --cask cc-switch
 
+brew install --cask wpsoffice-cn
 brew install --cask claude-code
 brew install --cask opencode-desktop
 brew install --cask mqttx
@@ -252,6 +252,7 @@ brew install --cask font-jetbrains-mono
 brew install --cask iterm2
 brew install --cask obsidian
 brew install --cask chatgpt
+brew install --cask scroll-reverser
 
 # 新版 mac 系统[]
 brew install --cask docker
@@ -283,9 +284,11 @@ brew install --cask obs
 
 [[Vim 配置文件]]
 
-# Nvm
+# fnm
 
-[[Nvm]]
+```bash
+curl -fsSL https://fnm.vercel.app/install | bash
+```
 
 # Npm
 
@@ -309,7 +312,7 @@ ts-node
 
 分屏进入上一个目录
 
-![](http://obsidian.easyhappy.top/avan/20230630210705.png)
+[[iterm]]
 
 # 配置 Alfred
 

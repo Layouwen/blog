@@ -13,6 +13,12 @@ categories:
 
 ## find-skills
 
+## shadcn-vue
+
+```bash
+npx skills add unovue/shadcn-vue
+```
+
 ## high-end-visual-design
 
 ```bash
@@ -85,6 +91,16 @@ tell opencode `Fetch and follow instructions from https://raw.githubusercontent.
 
 # MCP
 
+## shadcn-vue
+
+```bash
+npx shadcn-vue@latest mcp init --client codex
+npx shadcn-vue@latest mcp init --client opencode
+npx shadcn-vue@latest mcp init --client cursor
+npx shadcn-vue@latest mcp init --client vscode
+npx shadcn-vue@latest mcp init --client claude
+```
+
 ## context7
 
 执行
@@ -102,3 +118,7 @@ mcp 地址: `https://mcp.figma.com/mcp`
 ```bash
 claude plugin install figma@claude-plugins-official
 ```
+
+# DESIGN.md
+
+[awesome-design-md](https://github.com/VoltAgent/awesome-design-md/tree/main)
