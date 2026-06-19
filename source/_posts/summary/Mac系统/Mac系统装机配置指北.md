@@ -259,6 +259,7 @@ brew install --cask docker
 brew install --cask proxyman
 brew install --cask dingtalk
 brew install --cask obs
+brew install --cask siddharthvaddem/openscreen/openscreen
 
 # 不可用
 # todesk \
