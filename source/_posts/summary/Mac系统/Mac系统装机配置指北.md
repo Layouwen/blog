@@ -176,6 +176,7 @@ brew install cmatrix
 brew install ctop
 brew install fastfetch
 brew install opencode
+brew install pyenv
 
 # ripgrep \
 # bat \
@@ -318,3 +319,59 @@ ts-node
 # 配置 Alfred
 
 [[Alfred 5]]
+
+# python
+
+安装 uv
+
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+安装 pyenv
+
+```bash
+brew install pyenv
+```
+
+```bash
+pyenv install 3.14
+pyenv global 3.14
+```
+
+配置环境变量
+
+```bash
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d "$PYENV_ROOT/bin" ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - zsh)"
+```
+
+```bash
+python --version
+pip --version
+```
+
+安装 miniforge
+
+```bash
+curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
+```
+
+```bash
+bash Miniforge3-$(uname)-$(uname -m).sh
+```
+
+全程回车, 选 yes 即可
+
+安装完后删除脚本
+
+```bash
+rm Miniforge3-$(uname)-$(uname -m).sh
+```
+
+关闭自动 base
+
+```bash
+conda config --set auto_activate_base false
+```

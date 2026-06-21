@@ -16,135 +16,118 @@ uuid: 67cfc7ae-b4bb-4152-9441-2f0d3866e7f8
 
 ## 2、VSCode 推荐的插件
 
-### 常用
+### 共同
 
-| 插件名                                                                    | 描述                                             |
-| ---------------------------------------------------------------------- | ---------------------------------------------- |
-| Apc Customize UI++                                                     | vscode 页面定制                                    |
-| Auto Close Tag                                                         | 自定闭合标签                                         |
-| Auto Import                                                            | 自动导入                                           |
-| Auto Rename Tag                                                        | 同步修改标签名                                        |
-| Bracket Lens                                                           | 代码块提示                                          |
-| code runner                                                            | 代码执行                                           |
-| Code Spell Checker                                                     | 拼写检测                                           |
-| CodeRabbit                                                             | PR Review 工具                                   |
-| CodeSnap                                                               | 代码截图                                           |
-| Codex – OpenAI’s coding agent                                          |                                                |
-| Color Highlight                                                        | 代码高亮                                           |
-| Console Ninja                                                          | console vscode 管理工具                            |
-| Container Tools                                                        | 微软官方的容器工具集                                     |
-| CSS Peek                                                               | css 索引调整                                       |
-| Deploy                                                                 | 部署脚本执行                                         |
-| Docker                                                                 | docker 管理                                      |
-| Docker DX                                                              |                                                |
-| DotENV                                                                 | env 高亮                                         |
-| Draw.io Integration                                                    | drawio 集成                                      |
-| EditorConfig                                                           | editorconfig 配置高亮                              |
-| ENV                                                                    | ENV 格式化工具                                      |
-| Error Lens                                                             |                                                |
-| ES7+ React/Redux/React-Native snippets                                 | react 代码片段                                     |
-| ESLint                                                                 |                                                |
-| filesize                                                               |                                                |
-| Git History                                                            |                                                |
-| GitHub Actions                                                         |                                                |
-| GitHub Pull Requests                                                   |                                                |
-| GitHub Repositories                                                    | github 仓库管理                                    |
-| glTF Tools                                                             | gltf 模型预览插件                                    |
-| GraphQL                                                                | graphql 语法支持                                   |
-| Graphviz (dot) language support for Visual Studio Code                 | 图可视化语法支持                                       |
-| Graphviz Preview                                                       | 图可视化预览                                         |
-| Hex Editor                                                             | 二进制预览                                          |
-| Import Cost                                                            | 导包的大小                                          |
-| indent-rainbow                                                         | 彩色缩进                                           |
-| IntelliJ IDEA Keybindings                                              | idea 键盘映射                                      |
-| JavaScript (ES6) code snippets                                         | es6 代码片段                                       |
-| JavaScript standardjs styled snippets                                  | js 代码片段                                        |
-| Jest                                                                   |                                                |
-| Jest Snippets                                                          | jest 代码片段                                      |
-| Jinno                                                                  | 实时预览组件, 通过 ai 创建独立环境和填入组件参数                    |
-| JS CodeFormer: Javascript Refactoring & Code Automation                | 代码重构和生成                                        |
-| JSON Crack                                                             | json 层级解析预览                                    |
-| Jump To Alias File                                                     | 文件别名跳转                                         |
-| Kubernetes                                                             |                                                |
-| Language Support for Java(TM) by Red Hat                               | java 语法支持                                      |
-| LeetCode                                                               |                                                |
-| Live Server                                                            | 静态服务                                           |
-| Live Share                                                             | 实时分享编辑                                         |
-| Markdown All in One                                                    | markdown 语法和预览                                 |
-| Markdown Preview Enhanced                                              | markdown 预览增强                                  |
-| Material Icon Theme                                                    | vscode 文件夹的 icon 图标                            |
-| MDX                                                                    | mdx 语法高亮                                       |
-| Mermaid                                                                |                                                |
-| Mermaid Editor                                                         | 流程图预览                                          |
-| Mermaid Markdown Syntax Highlighting                                   |                                                |
-| Mintlify Doc Writer for Python, JavaScript, TypeScript, C++, PHP, Java | 文档生成                                           |
-| Nuxtr                                                                  | nuxt 插件                                        |
-| Paste JSON as Code                                                     | json 转各种类型声明                                   |
-| Path Autocomplete                                                      | 路径补全                                           |
-| Path Intellisense                                                      | path 补全                                        |
-| Peacock                                                                | 给不同窗口配置各自的颜色                                   |
-| Prettier - Code formatter                                              |                                                |
-| Prisma                                                                 |                                                |
-| Project Manager                                                        |                                                |
-| Quokka.js                                                              | 在 vscode 中的显示计算结果                              |
-| React Style Helper                                                     | react style module 补全提示                        |
-| react-intl-linter                                                      | react i18 替换                                   |
-| React-Native/React/Redux snippets for es6/es7                          | react 代码片段                                     |
-| React/Redux/react-router Snippets                                      | react 代码片段                                     |
-| Regex Previewer                                                        | 正则匹配测试                                         |
-| Remote - SSH: Editing Configuration Files                              | ssh 配置文件高亮                                     |
-| Remote Explorer                                                        | ssh 远程资源管理                                     |
-| Remote Repositories                                                    | ssh 远程 git 仓库控制                                |
-| Sass (.sass only)                                                      | sass 语法高亮                                      |
-| SCSS Formatter                                                         | Vue Extension Box 包里面包含                        |
-| Simple React Snippets                                                  | react 代码片段                                     |
-| SQL Formatter                                                          |                                                |
-| stylus                                                                 | stylus 语法高亮                                    |
-| Svg Preview                                                            | 预览 svg 的图案                                     |
-| Tailwind CSS IntelliSense                                              | tailwind 高亮                                    |
-| TODO Highlight                                                         |                                                |
-| Todo Tree                                                              |                                                |
-| Version Lens                                                           |                                                |
-| Vim                                                                    |                                                |
-| Vira Theme                                                             | material 的主题废弃更新版                              |
-| Vite                                                                   |                                                |
-| vscode-pdf                                                             |                                                |
-| vscode-random                                                          | 随机数据生成                                         |
-| Vue (Official)                                                         |                                                |
-| Vue 3 Snippets                                                         |                                                |
-| Vue 3 Support - All In One                                             |                                                |
-| Vue Extension Box                                                      | vue 扩展插件打包安装                                   |
-| Vue Peek                                                               |                                                |
-| Vue VSCode Snippets                                                    |                                                |
-| vue-helper                                                             | Element-Ul, Element Plus, Ant Desigin Vue 文档增强 |
-| WakaTime                                                               |                                                |
-| Wallaby.js                                                             | 实时测试结果                                         |
-| WebGL GLSL Editor                                                      |                                                |
-| WXML - Language Service                                                | 微信 wxml 语法支持                                   |
-| YAML                                                                   |                                                |
+|序号|插件 id|插件名|插件备注|
+|----|----|----|----|
+|1|ms-dotnettools.vscode-dotnet-runtime|.NET Install Tool|dotnet 语言支持|
+|2|shezhangzhang.antd-design-token|antd Design Token|antd token 插件|
+|3|drcika.apc-extension|Apc Customize UI++|自定义页面 UI|
+|4|formulahendry.auto-close-tag|Auto Close Tag|自动闭合标签|
+|5|steoates.autoimport|Auto Import|自动 import 导入|
+|6|formulahendry.auto-rename-tag|Auto Rename Tag|同步重命名标签|
+|7|wraith13.bracket-lens|Bracket Lens|闭合标签位置展示当前块信息|
+|8|ms-vscode.cpptools|C/C++|c/c++ 语言支持|
+|9|ms-dotnettools.csharp|C#|C# 语言支持|
+|10|xaver.clang-format|Clang-Format|c 语言格式化|
+|11|formulahendry.code-runner|Code Runner|运行代码文件|
+|12|streetsidesoftware.code-spell-checker|Code Spell Checker|单词拼接检测|
+|13|coderabbit.coderabbit-vscode|CodeRabbit|代码 review|
+|14|adpyke.codesnap|CodeSnap|美化代码块截图|
+|15|openai.chatgpt|Codex – OpenAI’s coding agent|codex 插件|
+|16|naumovs.color-highlight|Color Highlight|直观看到颜色编码的对应颜色|
+|17|wallabyjs.console-ninja|Console Ninja|console 管理工具|
+|18|ms-azuretools.vscode-containers|Container Tools|docker 工具, 配置代码补全, 容器管理等|
+|19|pranaygp.vscode-css-peek|CSS Peek|快速跳转到 css 定义位置|
+|20|mkloubert.vs-deploy|Deploy|通过配置同时部署多个服务器|
+|21|ms-vscode-remote.remote-containers|Dev Containers|通过进入 docker 统一系统环境|
+|22|ms-azuretools.vscode-docker|Docker|docker 扩展|
+|23|docker.docker|Docker DX|dockerfile 语法高亮和容器管理|
+|24|mikestead.dotenv|DotENV|env 语法支持|
+|25|hediet.vscode-drawio|Draw.io Integration|draw.io 集成|
+|26|editorconfig.editorconfig|EditorConfig|.editorconfig 配置文件|
+|27|irongeek.vscode-env|ENV|.env 高亮和格式化|
+|28|usernamehw.errorlens|Error Lens|error 信息行内显示|
+|29|dbaeumer.vscode-eslint|ESLint|eslint 校验|
+|30|mkxml.vscode-filesize|filesize|底部状态栏显示文件大小|
+|31|donjayamanne.githistory|Git History|git 历史记录|
+|32|github.vscode-github-actions|GitHub Actions|github actions 管理|
+|33|github.vscode-pull-request-github|GitHub Pull Requests|pr 管理|
+|34|github.remotehub|GitHub Repositories|远程 git 仓库|
+|35|avanlan.gitlenss|GitLenss for AvanLan|gitlen 调整版本|
+|36|cesium.gltf-vscode|glTF Tools|模型预览工具|
+|37|mquandalle.graphql|GraphQL|.gql 或 graphaql 语法高亮|
+|38|stephanvs.dot|Graphviz (dot) language support for Visual Studio Code|GraphViz (dot) 语法支持|
+|39|efanzh.graphviz-preview|Graphviz Preview|Graphviz 预览|
+|40|ms-vscode.hexeditor|Hex Editor|二进制编辑器|
+|41|kisstkondoros.vscode-gutter-preview|Image preview|图片预览|
+|42|wix.vscode-import-cost|Import Cost|显示包的体积|
+|43|oderwat.indent-rainbow|indent-rainbow|彩色缩进|
+|44|k--kato.intellij-idea-keybindings|IntelliJ IDEA Keybindings|idea 风格的快捷键|
+|45|firsttris.vscode-jest-runner|Jest / Vitest Runner|单元测试扩展辅助|
+|46|andys8.jest-snippets|Jest Snippets|jest 代码片段|
+|47|jinno.codelens-sample|Jinno: Live Preview React components with AI. For React, NextJS and Javascript to develop better design systems.|预览 react 组件|
+|48|cmstead.js-codeformer|JS CodeFormer: Javascript Refactoring & Code Automation|重构 js 代码|
+|49|aykutsarac.jsoncrack-vscode|JSON Crack|json 文件可视化|
+|50|wanfu.jump-to-alias-file|Jump To Alias File|别名跳转|
+|51|ms-kubernetes-tools.vscode-kubernetes-tools|Kubernetes|k8s 插件|
+|52|redhat.java|Language Support for Java(TM) by Red Hat|java 语言支持|
+|53|leetcode.vscode-leetcode|LeetCode|leetcode 刷题|
+|54|ritwickdey.liveserver|Live Server|本地预览服务器|
+|55|ms-vsliveshare.vsliveshare|Live Share|实时分享|
+|56|yzhang.markdown-all-in-one|Markdown All in One|增强预览 目录 等|
+|57|shd101wyy.markdown-preview-enhanced|Markdown Preview Enhanced|支持导出 md 文件为 pdf 等|
+|58|pkief.material-icon-theme|Material Icon Theme|图标主题|
+|59|unifiedjs.vscode-mdx|MDX|mdx 语法支持|
+|60|tomoyukim.vscode-mermaid-editor|Mermaid Editor|Mermaid 编辑|
+|61|bpruitt-goddard.mermaid-markdown-syntax-highlighting|Mermaid Markdown Syntax Highlighting|语法高亮|
+|62|nuxtr.nuxtr-vscode|Nuxtr|Nuxt 项目的“脚手架/命令/项目管理工具”|
+|63|quicktype.quicktype|Paste JSON as Code|将 json 转 ts 类型|
+|64|christian-kohler.path-intellisense|Path Intellisense|path 路径补全优化|
+|65|mathematic.vscode-pdf|PDF Viewer|pdf 预览|
+|66|johnpapa.vscode-peacock|Peacock|配置不同的窗口栏颜色|
+|67|xdebug.php-debug|PHP Debug|PHP debug|
+|68|esbenp.prettier-vscode|Prettier - Code formatter|pretter 插件|
+|69|prisma.prisma|Prisma|Prisma 数据库语法支持及扩展|
+|70|alefragnani.project-manager|Project Manager|多项目管理工具|
+|71|wallabyjs.quokka-vscode|Quokka.js|实时运行代码, 行内显示结果|
+|72|iceworks-team.iceworks-style-helper|React Style Helper|react style 组件语法支持|
+|73|styx11.react-intl-linter|react-intl-linter|react 国际化未翻译中文识别及翻译插件|
+|74|chrmarti.regex|Regex Previewer|正则可视化预览|
+|75|ms-vscode-remote.remote-ssh|Remote - SSH|把远程主机当成开发环境|
+|76|ms-vscode-remote.remote-ssh-edit|Remote - SSH: Editing Configuration Files|remote ssh 语法高亮及补全|
+|77|ms-vscode.remote-explorer|Remote Explorer|侧边栏展示远程列表|
+|78|ms-vscode.remote-repositories|Remote Repositories|不用 clone 即可快速插件 github 的代码和小修改文件|
+|79|rust-lang.rust-analyzer|rust-analyzer|rust 语法高亮|
+|80|syler.sass-indented|Sass (.sass only)|sass 语法支持|
+|81|renesaarsoo.sql-formatter-vsc|SQL Formatter VSCode|sql 语法相关的格式化工具|
+|82|sysoev.language-stylus|stylus|Stylus .styl 语法高亮、补全、symbols、颜色预览|
+|83|simonsiefke.svg-preview|Svg Preview|svg 预览|
+|84|bradlc.vscode-tailwindcss|Tailwind CSS IntelliSense|Tailwind CSS 官方智能提示、hover、lint、语法高亮|
+|85|wayou.vscode-todo-highlight|TODO Highlight|todo 注释高亮|
+|86|gruntfuggly.todo-tree|Todo Tree|列出 todo 的列表|
+|87|pflannery.vscode-versionlens|Version Lens|package 版本信息显示|
+|88|vscodevim.vim|Vim|vim 支持|
+|89|antfu.vite|Vite|vite 插件|
+|90|vue.volar|Vue (Official)|vue 官方插件|
+|91|misterj.vue-volar-extention-pack|Vue Extension Box|vue 相关的组合包, 同时安装多个插件, 卸载也会同时卸载|
+|92|wakatime.vscode-wakatime|WakaTime|coding 时间记录|
+|93|wallabyjs.wallaby-vscode|Wallaby.js|改代码时自动跑受影响的测试|
+|94|raczzalan.webgl-glsl-editor|WebGL GLSL Editor|glsl 文件编辑|
+|95|ms-vscode-remote.remote-wsl|WSL|Windows 上用 VS Code 进入 WSL/Linux 环境开发|
+|96|qiu8310.minapp-vscode|WXML - Language Service|微信小程序 WXML/WXSS 语言支持、补全等|
+|97|redhat.vscode-xml|XML|完整 XML 语言支持：格式化、校验、补全、自动闭合标签、outline、folding、DTD/XSD、schema 支持等|
+|98|redhat.vscode-yaml|YAML|YAML 语言服务：校验、补全、schema、Kubernetes 支持|
 
-## 定制插件
+### VSCode
 
-| 插件                         | 描述  |
-| -------------------------- | --- |
-| GitLens - Git supercharged |     |
+暂无
 
-## VSCode 独装
+### Cursor
 
-| 插件名               | 描述                |
-| ----------------- | ----------------- |
-| antd Design Token | antd 的 token 插件   |
-| any-rule          | 正则大全              |
-| Remote - SSH      | ssh 远程开发          |
-| WSL               |                   |
-| Dev Containers    | 将 docker 容器作为开发环境 |
-
-## 不显示
-
-| 插件名                 | 描述  |
-| ------------------- | --- |
-| GitHub Copilot      |     |
-| GitHub Copilot Chat |     |
+|序号|插件 id|插件名|插件备注|
+|----|----|----|----|
+|1|keg1255.cursorpool|Cursor激活|cursor 第三方激活工具|
 
 ### 不常用
 
@@ -168,17 +151,6 @@ uuid: 67cfc7ae-b4bb-4152-9441-2f0d3866e7f8
 | uni-ui-snippets               |                                      |
 | MarsCode: AI Coding Assistant | Trae 豆包旗下的编程助手                       |
 | augment                       | 类似 cursor 和 Claude code 的 compose 插件 |
-
-### 禁用
-
-| 插件名               | 描述          |
-| ----------------- | ----------- |
-| .NET Install Tool |             |
-| C/C++             |             |
-| c#                |             |
-| Clang-Format      | c 语言格式化     |
-| PHP Debug         |             |
-| rust-analyzer     | rust 语法支持   |
 
 ## 3、其他
 

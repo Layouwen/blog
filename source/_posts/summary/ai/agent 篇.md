@@ -13,6 +13,44 @@ categories:
 
 ## find-skills
 
+## nextlevelbuilder/ui-ux-pro-max-skill
+
+它的用途：
+给 AI 提供 UI/UX 设计指导，覆盖 React、Next.js、Vue、Svelte、Tailwind、shadcn/ui、React Native、Flutter 等栈
+内置大量设计资料：UI 风格、色板、字体搭配、产品类型规则、图表类型、交互/布局/可访问性建议
+可以按关键词搜索设计建议，比如 dashboard、glassmorphism、form validation
+可以生成项目级 design system，比如 SaaS、fintech、spa、美容、dashboard 等场景
+可用于 UI 审查、改进、重构、可访问性检查、响应式优化、配色/字体建议
+
+```bash
+npx skills add nextlevelbuilder/ui-ux-pro-max-skill
+```
+
+## pbakaus/impeccable
+
+它的主要用途是让 Codex、Claude Code、Cursor、Gemini CLI 这类工具在做界面时少生成“AI 味”很重的设计，比如默认 Inter 字体、紫蓝渐变、卡片套卡片、低对比度灰字等。它提供设计上下文、设计原则、反模式检查，以及一组命令来指导 AI 做更好的 UI/UX。
+
+常见用途包括：
+/impeccable init：初始化项目设计上下文，生成 PRODUCT.md / DESIGN.md
+/impeccable shape：写代码前先规划界面结构和交互
+/impeccable audit：检查 UI 质量、可访问性、响应式等问题
+/impeccable critique：做 UX/视觉设计评审
+/impeccable polish：上线前细节打磨
+/impeccable animate：加入更有目的的动效
+/impeccable colorize / typeset / layout：分别改善颜色、字体、布局
+
+```bash
+npx skills add pbakaus/impeccable
+```
+
+### DavidHDev/react-bits
+
+React 动效组件库
+
+```bash
+npx skills add DavidHDev/react-bits
+```
+
 ## shadcn-vue
 
 ```bash
