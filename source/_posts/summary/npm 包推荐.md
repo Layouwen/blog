@@ -21,16 +21,16 @@ uuid: 8b82cdc2-57da-47ac-ac8d-c69597208347
 
 ## 2. 语言、运行环境与脚本
 
-| 包名 | 描述 |
-| --- | --- |
-| `typescript` | TypeScript 语言工具链，提供类型检查和编译能力。 |
-| `ts-node` | 直接运行 TypeScript 文件，适合脚本和开发调试。 |
-| `ts-node-dev` | 监听 TypeScript 文件变化并自动重启进程，可替代早期 Node 监听重启工具。 |
-| `node-dev` | 监听 Node.js 程序文件变化并自动重启。 |
-| `nodemon` | 通用进程监听重启工具，常用于 Node 服务开发，可替代早期的进程监听工具。 |
-| `tsx` | 运行 TypeScript / ESM 脚本的轻量工具，可作为 `ts-node` 的现代替代方案。 |
-| `zx` | 使用 JavaScript 编写 shell 脚本，适合自动化任务。 |
-| `civet` | 类 CoffeeScript 的 TypeScript 方言，提供更简洁的语法。 |
+| 包名            | 描述                                                 |
+| ------------- | -------------------------------------------------- |
+| `typescript`  | TypeScript 语言工具链，提供类型检查和编译能力。                      |
+| `ts-node`     | 直接运行 TypeScript 文件，适合脚本和开发调试。                      |
+| `ts-node-dev` | 监听 TypeScript 文件变化并自动重启进程，可替代早期 Node 监听重启工具。       |
+| `node-dev`    | 监听 Node.js 程序文件变化并自动重启。                            |
+| `nodemon`     | 通用进程监听重启工具，常用于 Node 服务开发，可替代早期的进程监听工具。             |
+| `tsx`         | 运行 TypeScript / ESM 脚本的轻量工具，可作为 `ts-node` 的现代替代方案。 |
+| `zx`          | 使用 JavaScript 编写 shell 脚本，适合自动化任务。                 |
+| `civet`       | 类 CoffeeScript 的 TypeScript 方言，提供更简洁的语法。           |
 
 ## 3. 脚手架、命令行与开发辅助
 
@@ -49,14 +49,14 @@ uuid: 8b82cdc2-57da-47ac-ac8d-c69597208347
 
 ## 4. 本地服务与 Mock
 
-| 包名 | 描述 |
-| --- | --- |
-| `http-server` | 快速启动静态文件服务器。 |
-| `anywhere` | 简单易用的静态资源服务器。 |
-| `serve` | 常用静态服务工具，适合预览构建产物。 |
-| `json-server` | 基于 JSON 文件快速生成 REST API Mock 服务。 |
-| `msw` | Mock Service Worker，可在浏览器或 Node 环境拦截请求并模拟接口。 |
-| `parcel` | 零配置打包工具，也可用于快速启动本地开发服务。 |
+| 包名            | 描述                                           |
+| ------------- | -------------------------------------------- |
+| `http-server` | 快速启动静态文件服务器。                                 |
+| `anywhere`    | 简单易用的静态资源服务器。                                |
+| `serve`       | 常用静态服务工具，适合预览构建产物。                           |
+| `json-server` | 基于 JSON 文件快速生成 REST API Mock 服务。             |
+| `msw`         | Mock Service Worker，可在浏览器或 Node 环境拦截请求并模拟接口。 |
+| `parcel`      | 零配置打包工具，也可用于快速启动本地开发服务。                      |
 
 ## 5. 代码质量、格式化与工程规范
 
@@ -372,26 +372,27 @@ uuid: 8b82cdc2-57da-47ac-ac8d-c69597208347
 
 ### 组件、反馈与体验
 
-| 包名 | 描述 |
-| --- | --- |
-| `sonner` | 现代 toast 消息提示组件。 |
-| `react-hot-toast` | React toast 消息提示组件。 |
-| `react-error-boundary` | React 错误边界组件。 |
-| `@welldone-software/why-did-you-render` | 分析 React 组件重复渲染原因。 |
-| `react-helmet` | 管理页面 `<head>` 内容，常用于标题和 meta。 |
-| `react-slick` | React 轮播组件。 |
-| `swiper` | 现代轮播/滑动组件库，支持多框架。 |
-| `react-typewriter` | React 打字机效果组件。 |
-| `react-joyride` | React 用户引导流程组件。 |
-| `react-top-loading-bar` | React 顶部加载条组件。 |
-| `react-confetti` | 礼花/纸屑动画组件。 |
-| `react-lazy-load-image-component` | React 图片懒加载组件。 |
-| `react-window` | React 虚拟滚动库。 |
-| `react-window-infinite-loader` | 配合 `react-window` 实现无限加载。 |
-| `react-image-cropper` | React 图片裁剪组件。 |
-| `@react-pdf/renderer` | 使用 React 组件生成 PDF。 |
-| `react-email` | 使用 React 编写邮件模板。 |
-| `wouter` | 轻量 React 路由库。 |
+| 包名                                      | 描述                            |
+| --------------------------------------- | ----------------------------- |
+| `sonner`                                | 现代 toast 消息提示组件。              |
+| `react-hot-toast`                       | React toast 消息提示组件。           |
+| `react-error-boundary`                  | React 错误边界组件。                 |
+| `@welldone-software/why-did-you-render` | 分析 React 组件重复渲染原因。            |
+| `react-helmet`                          | 管理页面 `<head>` 内容，常用于标题和 meta。 |
+| `react-slick`                           | React 轮播组件。                   |
+| `swiper`                                | 现代轮播/滑动组件库，支持多框架。             |
+| `react-typewriter`                      | React 打字机效果组件。                |
+| `react-joyride`                         | React 用户引导流程组件。               |
+| `react-top-loading-bar`                 | React 顶部加载条组件。                |
+| `react-confetti`                        | 礼花/纸屑动画组件。                    |
+| `react-lazy-load-image-component`       | React 图片懒加载组件。                |
+| `react-window`                          | React 虚拟滚动库。                  |
+| `react-window-infinite-loader`          | 配合 `react-window` 实现无限加载。     |
+| `react-image-cropper`                   | React 图片裁剪组件。                 |
+| `@react-pdf/renderer`                   | 使用 React 组件生成 PDF。            |
+| `react-email`                           | 使用 React 编写邮件模板。              |
+| `wouter`                                | 轻量 React 路由库。                 |
+| react-bits                              | react bit 动效组件库               |
 
 ## 21. Next.js 生态
 

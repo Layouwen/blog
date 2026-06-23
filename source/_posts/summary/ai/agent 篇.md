@@ -13,6 +13,24 @@ categories:
 
 ## find-skills
 
+## ponyo-cover-anchor-system 小红书封面图
+
+```bash
+npx skills add https://github.com/ponyodong2026/ponyo-cover-anchor-system.git
+```
+
+## obsidian-skills
+
+```bash
+npx skills add https://github.com/kepano/obsidian-skills
+```
+
+## Humanizer-zh
+
+```bash
+npx skills add https://github.com/op7418/Humanizer-zh.git
+```
+
 ## nextlevelbuilder/ui-ux-pro-max-skill
 
 它的用途：
@@ -155,6 +173,16 @@ mcp 地址: `https://mcp.figma.com/mcp`
 
 ```bash
 claude plugin install figma@claude-plugins-official
+```
+
+## cowart 无限画布
+
+```bash
+请从 https://github.com/zhongerxin/cowart.git 安装 Cowart Codex 插件。
+请 clone 仓库到 ~/plugins/cowart，确认 .codex-plugin/plugin.json 存在，
+把插件加入 personal marketplace，先运行 codex plugin marketplace add ~，
+再运行 codex plugin add cowart@personal。
+安装后请校验插件，并告诉我是否需要开启一个新对话来加载新技能和 MCP 工具。
 ```
 
 # DESIGN.md
