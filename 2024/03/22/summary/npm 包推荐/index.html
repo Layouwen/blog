@@ -20,15 +20,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"blog.4van.top","root":"/","images":"../../../../../images","scheme":"Gemini","darkmode":true,"version":"8.23.2","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"../../../../../search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="../../../../../js/config.js" defer></script>
 
-    <meta name="description" content="Node默认包   包名 描述    util 有 promisify 等工具   fs 文件读写库，可以.promises 获取 promise 版本   child_process 创建子进程   readline 检测命令行回车事件   events 订阅发布库   prettier 代码格式化工具   prettier-plugin-tailwindcss Tailwindcss 的 pr">
+    <meta name="description" content="1. Node.js 内置模块   包名 描述    fs 文件系统模块，用于读写文件、目录操作；推荐优先使用 fs&#x2F;promises 或 fs.promises。   util Node 工具模块，常用能力包括 promisify、inspect、类型判断等。   child_process 创建和管理子进程，用于执行 shell 命令、启动外部程序等。   readline 逐行读取输入流，常">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="npm 包推荐">
 <meta property="og:url" content="https://blog.4van.top/2024/03/22/summary/npm%20%E5%8C%85%E6%8E%A8%E8%8D%90/index.html">
 <meta property="og:site_name" content="Avan&#39;s Blog">
-<meta property="og:description" content="Node默认包   包名 描述    util 有 promisify 等工具   fs 文件读写库，可以.promises 获取 promise 版本   child_process 创建子进程   readline 检测命令行回车事件   events 订阅发布库   prettier 代码格式化工具   prettier-plugin-tailwindcss Tailwindcss 的 pr">
+<meta property="og:description" content="1. Node.js 内置模块   包名 描述    fs 文件系统模块，用于读写文件、目录操作；推荐优先使用 fs&#x2F;promises 或 fs.promises。   util Node 工具模块，常用能力包括 promisify、inspect、类型判断等。   child_process 创建和管理子进程，用于执行 shell 命令、启动外部程序等。   readline 逐行读取输入流，常">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-03-22T15:11:34.000Z">
-<meta property="article:modified_time" content="2026-06-05T11:34:24.418Z">
+<meta property="article:modified_time" content="2026-06-23T10:43:10.707Z">
 <meta property="article:author" content="梁又文">
 <meta property="article:tag" content="汇总">
 <meta property="article:tag" content="npm">
@@ -112,7 +112,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="../../../../../index.html" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-archives"><a href="../../../../../archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">162</span></a></li><li class="menu-item menu-item-tags"><a href="../../../../../tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">122</span></a></li><li class="menu-item menu-item-categories"><a href="../../../../../categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">43</span></a></li><li class="menu-item menu-item-about"><a href="../../../../../about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-links"><a href="../../../../../links/" rel="section"><i class="fa fa-link fa-fw"></i>links</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="../../../../../index.html" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-archives"><a href="../../../../../archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">164</span></a></li><li class="menu-item menu-item-tags"><a href="../../../../../tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">123</span></a></li><li class="menu-item menu-item-categories"><a href="../../../../../categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">43</span></a></li><li class="menu-item menu-item-about"><a href="../../../../../about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-links"><a href="../../../../../links/" rel="section"><i class="fa fa-link fa-fw"></i>links</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -163,7 +163,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Node%E9%BB%98%E8%AE%A4%E5%8C%85"><span class="nav-number">1.</span> <span class="nav-text">Node默认包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%9F%E8%83%BD%E7%B1%BB"><span class="nav-number">2.</span> <span class="nav-text">功能类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7"><span class="nav-number">3.</span> <span class="nav-text">命令行工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%A8%E7%AB%AF%E9%80%9A%E7%94%A8%E5%B7%A5%E5%85%B7"><span class="nav-number">4.</span> <span class="nav-text">全端通用工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E5%B7%A5%E5%85%B7"><span class="nav-number">5.</span> <span class="nav-text">浏览器工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Node%E7%AB%AF%E5%B7%A5%E5%85%B7"><span class="nav-number">6.</span> <span class="nav-text">Node端工具</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83%E7%9B%B8%E5%85%B3"><span class="nav-number">6.1.</span> <span class="nav-text">代码规范相关</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%8D%E5%8A%A1%E7%AB%AF%E7%9B%B8%E5%85%B3"><span class="nav-number">6.2.</span> <span class="nav-text">服务端相关</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Nest-js"><span class="nav-number">6.2.1.</span> <span class="nav-text">Nest.js</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Koa"><span class="nav-number">6.2.2.</span> <span class="nav-text">Koa</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#babel%E7%9B%B8%E5%85%B3"><span class="nav-number">6.3.</span> <span class="nav-text">babel相关</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Webpack%E7%9B%B8%E5%85%B3"><span class="nav-number">6.4.</span> <span class="nav-text">Webpack相关</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B7%A5%E5%85%B7"><span class="nav-number">6.4.1.</span> <span class="nav-text">工具</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#loader"><span class="nav-number">6.4.2.</span> <span class="nav-text">loader</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#plugin"><span class="nav-number">6.4.3.</span> <span class="nav-text">plugin</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#React-%E7%B1%BB"><span class="nav-number">7.</span> <span class="nav-text">React 类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8D%E5%86%8D%E6%8E%A8%E8%8D%90"><span class="nav-number">7.1.</span> <span class="nav-text">不再推荐</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B7%A5%E5%85%B7-1"><span class="nav-number">7.2.</span> <span class="nav-text">工具</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ReactNative"><span class="nav-number">8.</span> <span class="nav-text">ReactNative</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Next-js-%E7%B1%BB"><span class="nav-number">9.</span> <span class="nav-text">Next.js 类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Next-js-%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5%E6%A1%86%E6%9E%B6"><span class="nav-number">9.1.</span> <span class="nav-text">Next.js 最佳实践框架</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#UI-%E5%BA%93"><span class="nav-number">10.</span> <span class="nav-text">UI 库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vue-%E7%B1%BB"><span class="nav-number">11.</span> <span class="nav-text">Vue 类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B7%A5%E5%85%B7-2"><span class="nav-number">11.1.</span> <span class="nav-text">工具</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83%E7%B1%BB"><span class="nav-number">12.</span> <span class="nav-text">环境类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9E%84%E5%BB%BA%E4%BC%98%E5%8C%96"><span class="nav-number">13.</span> <span class="nav-text">构建优化</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Mock-%E6%9C%8D%E5%8A%A1"><span class="nav-number"></span> <span class="nav-text">Mock 服务</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B5%8B%E8%AF%95"><span class="nav-number"></span> <span class="nav-text">测试</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E5%BA%93"><span class="nav-number">1.</span> <span class="nav-text">基础库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#E2E"><span class="nav-number">2.</span> <span class="nav-text">E2E</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%8E%E7%AB%AF"><span class="nav-number">3.</span> <span class="nav-text">后端</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B0%8F%E7%A8%8B%E5%BA%8F"><span class="nav-number"></span> <span class="nav-text">小程序</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%A8%E6%A0%88%E6%A1%86%E6%9E%B6"><span class="nav-number"></span> <span class="nav-text">全栈框架</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%87%E6%A1%A3%E6%9E%84%E5%BB%BA"><span class="nav-number"></span> <span class="nav-text">文档构建</span></a></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Node-js-%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97"><span class="nav-number">1.</span> <span class="nav-text">1. Node.js 内置模块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E8%AF%AD%E8%A8%80%E3%80%81%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83%E4%B8%8E%E8%84%9A%E6%9C%AC"><span class="nav-number">2.</span> <span class="nav-text">2. 语言、运行环境与脚本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E8%84%9A%E6%89%8B%E6%9E%B6%E3%80%81%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%B8%8E%E5%BC%80%E5%8F%91%E8%BE%85%E5%8A%A9"><span class="nav-number">3.</span> <span class="nav-text">3. 脚手架、命令行与开发辅助</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E6%9C%AC%E5%9C%B0%E6%9C%8D%E5%8A%A1%E4%B8%8E-Mock"><span class="nav-number">4.</span> <span class="nav-text">4. 本地服务与 Mock</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E4%BB%A3%E7%A0%81%E8%B4%A8%E9%87%8F%E3%80%81%E6%A0%BC%E5%BC%8F%E5%8C%96%E4%B8%8E%E5%B7%A5%E7%A8%8B%E8%A7%84%E8%8C%83"><span class="nav-number">5.</span> <span class="nav-text">5. 代码质量、格式化与工程规范</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-%E9%80%9A%E7%94%A8%E5%B7%A5%E5%85%B7%E5%BA%93"><span class="nav-number">6.</span> <span class="nav-text">6. 通用工具库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-%E6%97%A5%E6%9C%9F%E3%80%81%E6%97%B6%E9%97%B4%E4%B8%8E%E5%9B%BD%E9%99%85%E5%8C%96"><span class="nav-number">7.</span> <span class="nav-text">7. 日期、时间与国际化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-%E6%95%B0%E6%8D%AE%E6%A0%A1%E9%AA%8C%E3%80%81Schema-%E4%B8%8E%E7%B1%BB%E5%9E%8B%E5%AE%89%E5%85%A8"><span class="nav-number">8.</span> <span class="nav-text">8. 数据校验、Schema 与类型安全</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E3%80%81API-%E4%B8%8E%E5%85%A8%E6%A0%88%E7%B1%BB%E5%9E%8B"><span class="nav-number">9.</span> <span class="nav-text">9. 网络请求、API 与全栈类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-%E5%AE%89%E5%85%A8%E3%80%81%E5%8A%A0%E5%AF%86%E4%B8%8E%E8%BA%AB%E4%BB%BD%E8%AE%A4%E8%AF%81"><span class="nav-number">10.</span> <span class="nav-text">10. 安全、加密与身份认证</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11-%E6%96%87%E4%BB%B6%E3%80%81%E6%96%87%E6%A1%A3%E3%80%81%E5%9B%BE%E7%89%87%E4%B8%8E%E5%A4%9A%E5%AA%92%E4%BD%93%E5%A4%84%E7%90%86"><span class="nav-number">11.</span> <span class="nav-text">11. 文件、文档、图片与多媒体处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#12-%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%BA%A4%E4%BA%92%E4%B8%8E%E6%97%A5%E5%BF%97"><span class="nav-number">12.</span> <span class="nav-text">12. 命令行交互与日志</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#13-%E5%90%8E%E7%AB%AF%E6%A1%86%E6%9E%B6%E4%B8%8E%E4%B8%AD%E9%97%B4%E4%BB%B6"><span class="nav-number">13.</span> <span class="nav-text">13. 后端框架与中间件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#14-%E6%95%B0%E6%8D%AE%E5%BA%93%E3%80%81ORM-%E4%B8%8E%E6%9C%8D%E5%8A%A1%E5%8F%91%E7%8E%B0"><span class="nav-number">14.</span> <span class="nav-text">14. 数据库、ORM 与服务发现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#15-%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7%E3%80%81Babel-%E4%B8%8E-Webpack"><span class="nav-number">15.</span> <span class="nav-text">15. 构建工具、Babel 与 Webpack</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Babel"><span class="nav-number">15.1.</span> <span class="nav-text">Babel</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Webpack"><span class="nav-number">15.2.</span> <span class="nav-text">Webpack</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9E%84%E5%BB%BA%E4%BC%98%E5%8C%96"><span class="nav-number">15.3.</span> <span class="nav-text">构建优化</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#16-%E6%B5%8F%E8%A7%88%E5%99%A8%E5%9F%BA%E7%A1%80%E8%83%BD%E5%8A%9B%E4%B8%8E%E4%BA%A4%E4%BA%92"><span class="nav-number">16.</span> <span class="nav-text">16. 浏览器基础能力与交互</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#17-%E5%8A%A8%E7%94%BB%E3%80%81%E6%8B%96%E6%8B%BD%E3%80%81%E5%9B%BE%E5%BD%A2%E4%B8%8E%E5%8F%AF%E8%A7%86%E5%8C%96"><span class="nav-number">17.</span> <span class="nav-text">17. 动画、拖拽、图形与可视化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#18-%E7%BC%96%E8%BE%91%E5%99%A8%E3%80%81Markdown%E3%80%81%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE%E4%B8%8E%E5%86%85%E5%AE%B9%E5%B1%95%E7%A4%BA"><span class="nav-number">18.</span> <span class="nav-text">18. 编辑器、Markdown、代码高亮与内容展示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#19-%E6%9D%A1%E7%A0%81%E3%80%81%E4%BA%8C%E7%BB%B4%E7%A0%81%E4%B8%8E%E6%A0%87%E8%AF%86"><span class="nav-number">19.</span> <span class="nav-text">19. 条码、二维码与标识</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#20-React-%E7%94%9F%E6%80%81"><span class="nav-number">20.</span> <span class="nav-text">20. React 生态</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A1%A8%E5%8D%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E8%AF%B7%E6%B1%82"><span class="nav-number">20.1.</span> <span class="nav-text">表单与数据请求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86"><span class="nav-number">20.2.</span> <span class="nav-text">状态管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B7%E5%BC%8F%E4%B8%8E-UI-%E8%BE%85%E5%8A%A9"><span class="nav-number">20.3.</span> <span class="nav-text">样式与 UI 辅助</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%A8%E7%94%BB%E3%80%81%E6%8B%96%E6%8B%BD%E4%B8%8E%E5%B8%83%E5%B1%80"><span class="nav-number">20.4.</span> <span class="nav-text">动画、拖拽与布局</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%84%E4%BB%B6%E3%80%81%E5%8F%8D%E9%A6%88%E4%B8%8E%E4%BD%93%E9%AA%8C"><span class="nav-number">20.5.</span> <span class="nav-text">组件、反馈与体验</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#21-Next-js-%E7%94%9F%E6%80%81"><span class="nav-number">21.</span> <span class="nav-text">21. Next.js 生态</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#22-Vue-Nuxt-%E7%94%9F%E6%80%81"><span class="nav-number">22.</span> <span class="nav-text">22. Vue &#x2F; Nuxt 生态</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#23-React-Native-%E4%B8%8E%E5%B0%8F%E7%A8%8B%E5%BA%8F"><span class="nav-number">23.</span> <span class="nav-text">23. React Native 与小程序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#24-UI-%E7%BB%84%E4%BB%B6%E5%BA%93"><span class="nav-number">24.</span> <span class="nav-text">24. UI 组件库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#25-%E5%85%A8%E6%A0%88%E6%A1%86%E6%9E%B6%E4%B8%8E%E6%96%87%E6%A1%A3%E7%AB%99"><span class="nav-number">25.</span> <span class="nav-text">25. 全栈框架与文档站</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#26-%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7"><span class="nav-number">26.</span> <span class="nav-text">26. 测试工具</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -178,7 +178,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="../../../../../archives/">
-          <span class="site-state-item-count">162</span>
+          <span class="site-state-item-count">164</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -189,7 +189,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="../../../../../tags/">
-        <span class="site-state-item-count">122</span>
+        <span class="site-state-item-count">123</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -285,7 +285,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-06-05 19:34:24" itemprop="dateModified" datetime="2026-06-05T19:34:24+08:00">2026-06-05</time>
+      <time title="修改时间：2026-06-23 18:43:10" itemprop="dateModified" datetime="2026-06-23T18:43:10+08:00">2026-06-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -304,14 +304,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>3.1k</span>
+      <span>4.4k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>11 分钟</span>
+      <span>16 分钟</span>
     </span>
 </div>
 
@@ -321,7 +321,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h2 id="Node默认包"><a href="#Node默认包" class="headerlink" title="Node默认包"></a>Node默认包</h2><table>
+    <div class="post-body" itemprop="articleBody"><h2 id="1-Node-js-内置模块"><a href="#1-Node-js-内置模块" class="headerlink" title="1. Node.js 内置模块"></a>1. Node.js 内置模块</h2><table>
 <thead>
 <tr>
 <th>包名</th>
@@ -329,35 +329,31 @@
 </tr>
 </thead>
 <tbody><tr>
-<td>util</td>
-<td>有 promisify 等工具</td>
+<td><code>fs</code></td>
+<td>文件系统模块，用于读写文件、目录操作；推荐优先使用 <code>fs/promises</code> 或 <code>fs.promises</code>。</td>
 </tr>
 <tr>
-<td>fs</td>
-<td>文件读写库，可以.promises 获取 promise 版本</td>
+<td><code>util</code></td>
+<td>Node 工具模块，常用能力包括 <code>promisify</code>、<code>inspect</code>、类型判断等。</td>
 </tr>
 <tr>
-<td>child_process</td>
-<td>创建子进程</td>
+<td><code>child_process</code></td>
+<td>创建和管理子进程，用于执行 shell 命令、启动外部程序等。</td>
 </tr>
 <tr>
-<td>readline</td>
-<td>检测命令行回车事件</td>
+<td><code>readline</code></td>
+<td>逐行读取输入流，常用于命令行交互和处理大文件。</td>
 </tr>
 <tr>
-<td>events</td>
-<td>订阅发布库</td>
+<td><code>events</code></td>
+<td>事件发布订阅基础模块，提供 <code>EventEmitter</code>。</td>
 </tr>
 <tr>
-<td>prettier</td>
-<td>代码格式化工具</td>
-</tr>
-<tr>
-<td>prettier-plugin-tailwindcss</td>
-<td>Tailwindcss 的 prettier 插件</td>
+<td><code>zlib</code></td>
+<td>压缩和解压模块，支持 gzip、deflate、brotli 等格式。</td>
 </tr>
 </tbody></table>
-<h2 id="功能类"><a href="#功能类" class="headerlink" title="功能类"></a>功能类</h2><table>
+<h2 id="2-语言、运行环境与脚本"><a href="#2-语言、运行环境与脚本" class="headerlink" title="2. 语言、运行环境与脚本"></a>2. 语言、运行环境与脚本</h2><table>
 <thead>
 <tr>
 <th>包名</th>
@@ -365,15 +361,39 @@
 </tr>
 </thead>
 <tbody><tr>
-<td>@locator&#x2F;runtime</td>
-<td>从浏览器快速定位到编辑器</td>
+<td><code>typescript</code></td>
+<td>TypeScript 语言工具链，提供类型检查和编译能力。</td>
 </tr>
 <tr>
-<td></td>
-<td></td>
+<td><code>ts-node</code></td>
+<td>直接运行 TypeScript 文件，适合脚本和开发调试。</td>
+</tr>
+<tr>
+<td><code>ts-node-dev</code></td>
+<td>监听 TypeScript 文件变化并自动重启进程，可替代早期 Node 监听重启工具。</td>
+</tr>
+<tr>
+<td><code>node-dev</code></td>
+<td>监听 Node.js 程序文件变化并自动重启。</td>
+</tr>
+<tr>
+<td><code>nodemon</code></td>
+<td>通用进程监听重启工具，常用于 Node 服务开发，可替代早期的进程监听工具。</td>
+</tr>
+<tr>
+<td><code>tsx</code></td>
+<td>运行 TypeScript &#x2F; ESM 脚本的轻量工具，可作为 <code>ts-node</code> 的现代替代方案。</td>
+</tr>
+<tr>
+<td><code>zx</code></td>
+<td>使用 JavaScript 编写 shell 脚本，适合自动化任务。</td>
+</tr>
+<tr>
+<td><code>civet</code></td>
+<td>类 CoffeeScript 的 TypeScript 方言，提供更简洁的语法。</td>
 </tr>
 </tbody></table>
-<h2 id="命令行工具"><a href="#命令行工具" class="headerlink" title="命令行工具"></a>命令行工具</h2><table>
+<h2 id="3-脚手架、命令行与开发辅助"><a href="#3-脚手架、命令行与开发辅助" class="headerlink" title="3. 脚手架、命令行与开发辅助"></a>3. 脚手架、命令行与开发辅助</h2><table>
 <thead>
 <tr>
 <th>包名</th>
@@ -381,99 +401,47 @@
 </tr>
 </thead>
 <tbody><tr>
-<td>concurrently</td>
-<td>windows 同时执行两个命令</td>
+<td><code>create-next-app</code></td>
+<td>Next.js 官方脚手架，用于快速创建 Next 项目。</td>
 </tr>
 <tr>
-<td>create-next-app</td>
-<td>构建next脚手架</td>
+<td><code>yo</code></td>
+<td>Yeoman 脚手架平台，可自定义 generator 生成项目模板。</td>
 </tr>
 <tr>
-<td>yo</td>
-<td>自定义脚手架平台，可自定义模版和下载指定模版</td>
+<td><code>concurrently</code></td>
+<td>并行执行多个命令，适合同时启动前后端或多个开发服务。</td>
 </tr>
 <tr>
-<td>anywhere</td>
-<td>万金油服务器启动</td>
+<td><code>cross-env</code></td>
+<td>跨平台设置环境变量，解决 Windows&#x2F;macOS&#x2F;Linux 命令差异。</td>
 </tr>
 <tr>
-<td>ts-node</td>
-<td>执行 ts 程序</td>
+<td><code>release-it</code></td>
+<td>自动化发版工具，支持版本号、tag、changelog、npm 发布等流程。</td>
 </tr>
 <tr>
-<td>node-dev</td>
-<td>监听 node 程序</td>
+<td><code>cloc</code></td>
+<td>统计代码行数和语言分布。</td>
 </tr>
 <tr>
-<td>ts-node-dev</td>
-<td>监听 ts 程序，更新自动重启</td>
+<td><code>git-open</code></td>
+<td>从命令行快速打开当前 Git 仓库的远程页面。</td>
 </tr>
 <tr>
-<td>nodemon</td>
-<td>js 文件变动重新运行</td>
+<td><code>gh-pages</code></td>
+<td>将构建产物发布到 GitHub Pages。</td>
 </tr>
 <tr>
-<td>supervisor</td>
-<td>监听 node 程序</td>
+<td><code>@locator/runtime</code></td>
+<td>在浏览器中定位页面元素对应的源码位置，辅助前端调试。</td>
 </tr>
 <tr>
-<td>tsc</td>
-<td>编译 ts 为 js 文件</td>
-</tr>
-<tr>
-<td>cloc</td>
-<td>统计代码行数</td>
-</tr>
-<tr>
-<td>parcel</td>
-<td>轻量打包工具，启动本地服务</td>
-</tr>
-<tr>
-<td>http-server</td>
-<td>本地服务</td>
-</tr>
-<tr>
-<td>server</td>
-<td>本地服务</td>
-</tr>
-<tr>
-<td>git-open</td>
-<td>快速打开 git 仓库</td>
-</tr>
-<tr>
-<td>json-server</td>
-<td>基于 rest 规则生成服务器</td>
-</tr>
-<tr>
-<td>cross-env</td>
-<td>跨平台设置环境变量</td>
-</tr>
-<tr>
-<td>gh-pages</td>
-<td>自动部署github page</td>
-</tr>
-<tr>
-<td>mitt</td>
-<td>Vue3推荐使用的eventbus</td>
-</tr>
-<tr>
-<td>eventemitter3</td>
-<td>比较老牌的eventbus</td>
-</tr>
-<tr>
-<td>@novu&#x2F;node</td>
-<td>node 端的消息(邮件&#x2F;facebook…)通知库</td>
-</tr>
-<tr>
-<td>release-it</td>
-<td>发版工具</td>
-</tr>
-<tr>
-<td>react-scan</td>
-<td>react 性能扫描工具</td>
+<td><code>react-scan</code></td>
+<td>React 渲染性能扫描和分析工具。</td>
 </tr>
 </tbody></table>
-<h2 id="全端通用工具"><a href="#全端通用工具" class="headerlink" title="全端通用工具"></a>全端通用工具</h2><table>
+<h2 id="4-本地服务与-Mock"><a href="#4-本地服务与-Mock" class="headerlink" title="4. 本地服务与 Mock"></a>4. 本地服务与 Mock</h2><table>
 <thead>
 <tr>
 <th>包名</th>
@@ -481,401 +449,71 @@
 </tr>
 </thead>
 <tbody><tr>
-<td>@faker-js&#x2F;faker</td>
-<td>比较新的 mock 数据库</td>
+<td><code>http-server</code></td>
+<td>快速启动静态文件服务器。</td>
 </tr>
 <tr>
-<td>mathjs</td>
-<td>计算库，包含大数值和小数计算问题解决方案</td>
+<td><code>anywhere</code></td>
+<td>简单易用的静态资源服务器。</td>
 </tr>
 <tr>
-<td>crypto-js</td>
-<td>加密库（md5、对称加密等）</td>
+<td><code>serve</code></td>
+<td>常用静态服务工具，适合预览构建产物。</td>
 </tr>
 <tr>
-<td>qs</td>
-<td>处理 url 路径 search 参数为对象</td>
+<td><code>json-server</code></td>
+<td>基于 JSON 文件快速生成 REST API Mock 服务。</td>
 </tr>
 <tr>
-<td>flyio</td>
-<td>http 请求库</td>
+<td><code>msw</code></td>
+<td>Mock Service Worker，可在浏览器或 Node 环境拦截请求并模拟接口。</td>
 </tr>
 <tr>
-<td>moment</td>
-<td>格式化时间</td>
-</tr>
-<tr>
-<td>dayjs</td>
-<td>格式化时间</td>
-</tr>
-<tr>
-<td>date-fns</td>
-<td>比 dayjs 更新的时间工具</td>
-</tr>
-<tr>
-<td>date-fns-tz</td>
-<td>兼容性较强的, 指定时区格式化</td>
-</tr>
-<tr>
-<td>async</td>
-<td>异步库</td>
-</tr>
-<tr>
-<td>civet</td>
-<td>结合 typescript 和 coffescript 的新框架</td>
-</tr>
-<tr>
-<td>lodash-es</td>
-<td>工具集 lodash 的 es 版本</td>
-</tr>
-<tr>
-<td>radash</td>
-<td>lodash 的替代品</td>
-</tr>
-<tr>
-<td>zod</td>
-<td>数据验证的工具</td>
-</tr>
-<tr>
-<td>zod-i18n-map</td>
-<td>zod 的国际化版本</td>
-</tr>
-<tr>
-<td>yup</td>
-<td>数据验证工具</td>
-</tr>
-<tr>
-<td>valibot</td>
-<td>比 zod 更新的数据验证工具</td>
-</tr>
-<tr>
-<td>fast-xml-parse</td>
-<td>全端通用的 xml parse 库</td>
-</tr>
-<tr>
-<td>p-limit</td>
-<td>并发控制库</td>
-</tr>
-<tr>
-<td>core-js</td>
-<td>各版本 js 实现, 垫片</td>
-</tr>
-<tr>
-<td>globby</td>
-<td>更好的 glob 匹配</td>
-</tr>
-<tr>
-<td>web-worker</td>
-<td>统一浏览器和nodejs的worker写法</td>
-</tr>
-<tr>
-<td>jspdf</td>
-<td>pdf 生成库</td>
-</tr>
-<tr>
-<td>docx</td>
-<td>doc 文档生成</td>
-</tr>
-<tr>
-<td>dompurify</td>
-<td>清理 html 字符串, 防止 XSS 攻击</td>
+<td><code>parcel</code></td>
+<td>零配置打包工具，也可用于快速启动本地开发服务。</td>
 </tr>
 </tbody></table>
-<h2 id="浏览器工具"><a href="#浏览器工具" class="headerlink" title="浏览器工具"></a>浏览器工具</h2><table>
+<h2 id="5-代码质量、格式化与工程规范"><a href="#5-代码质量、格式化与工程规范" class="headerlink" title="5. 代码质量、格式化与工程规范"></a>5. 代码质量、格式化与工程规范</h2><table>
 <thead>
 <tr>
 <th>包名</th>
 <th>描述</th>
-<th></th>
 </tr>
 </thead>
 <tbody><tr>
-<td>nanoid</td>
-<td>生成随机id</td>
-<td></td>
+<td><code>prettier</code></td>
+<td>代码格式化工具，统一代码风格。</td>
 </tr>
 <tr>
-<td>@fingerprintjs&#x2F;fingerprintjs</td>
-<td>获取浏览器唯一指纹</td>
-<td></td>
+<td><code>eslint</code></td>
+<td>JavaScript &#x2F; TypeScript 代码检查工具。</td>
 </tr>
 <tr>
-<td>mixpanel-browser</td>
-<td>埋点数据分析库客户端</td>
-<td></td>
+<td><code>oxlint</code></td>
+<td>Rust 编写的高性能 JavaScript &#x2F; TypeScript linter。</td>
 </tr>
 <tr>
-<td>@neodrag&#x2F;vanilla</td>
-<td>js轻量拖拽库</td>
-<td></td>
+<td><code>@antfu/eslint-config</code></td>
+<td>Anthony Fu 维护的 ESLint 配置预设，适合现代前端项目。</td>
 </tr>
 <tr>
-<td>@tanstack&#x2F;react-router</td>
-<td>路由库 js&#x2F;ts&#x2F;react&#x2F;vue&#x2F;solid&#x2F;svelte 等</td>
-<td></td>
+<td><code>husky</code></td>
+<td>管理 Git hooks，常用于提交前检查、格式化、测试。</td>
 </tr>
 <tr>
-<td>highlight.js</td>
-<td>高亮代码块</td>
-<td></td>
+<td><code>commitizen</code></td>
+<td>交互式生成规范化 commit message。</td>
 </tr>
 <tr>
-<td>marked</td>
-<td>markdown 编辑器</td>
-<td></td>
+<td><code>cz-customizable</code></td>
+<td>自定义 Commitizen 的交互选项和提交格式。</td>
 </tr>
 <tr>
-<td>subjx</td>
-<td>拖动、缩放、旋转</td>
-<td></td>
-</tr>
-<tr>
-<td>copy-to-clipboard</td>
-<td>前端复制剪切板</td>
-<td></td>
-</tr>
-<tr>
-<td>html2canvas</td>
-<td>通过 html 生成 canvas</td>
-<td></td>
-</tr>
-<tr>
-<td>canvas2Image</td>
-<td>把 canvas 转图片</td>
-<td></td>
-</tr>
-<tr>
-<td>fullpage.js</td>
-<td>全屏滚动库</td>
-<td></td>
-</tr>
-<tr>
-<td>animejs</td>
-<td>轻小型动画库</td>
-<td></td>
-</tr>
-<tr>
-<td>sentry</td>
-<td>前端异常监控系统</td>
-<td></td>
-</tr>
-<tr>
-<td>aegis</td>
-<td>前端异常监控系统，tdesign在使用</td>
-<td></td>
-</tr>
-<tr>
-<td>nprogress</td>
-<td>网页顶部进度条样式</td>
-<td></td>
-</tr>
-<tr>
-<td>html-to-text</td>
-<td>将标签内容转为text内容，去掉所有标签元素</td>
-<td></td>
-</tr>
-<tr>
-<td>gsap</td>
-<td>牛逼的动画效果库</td>
-<td></td>
-</tr>
-<tr>
-<td>@blocksuite&#x2F;editor</td>
-<td>好看的编辑器</td>
-<td></td>
-</tr>
-<tr>
-<td>driver.js</td>
-<td>步骤提示库, 引导用户操作</td>
-<td></td>
-</tr>
-<tr>
-<td>@n1rjal&#x2F;pm_ts</td>
-<td>根据 postman 的 json 文件生成 typescript 的类型文件</td>
-<td></td>
-</tr>
-<tr>
-<td>@builder.io&#x2F;partytown</td>
-<td>通过 WebWorker 加载第三方脚本</td>
-<td></td>
-</tr>
-<tr>
-<td>@emailjs&#x2F;browser</td>
-<td>无需后端即可完成邮件发送</td>
-<td></td>
-</tr>
-<tr>
-<td>pixi.js</td>
-<td>canvas 与 webgl 结合的框架</td>
-<td></td>
-</tr>
-<tr>
-<td>@trpc&#x2F;client</td>
-<td>trpc 统一前后端的 typescript 类型</td>
-<td></td>
-</tr>
-<tr>
-<td>quill</td>
-<td>富文本工具(国外)</td>
-<td></td>
-</tr>
-<tr>
-<td>@wangeditor&#x2F;editor</td>
-<td>富文本工具(国内)</td>
-<td></td>
-</tr>
-<tr>
-<td>particles.js</td>
-<td>粒子效果装饰库</td>
-<td></td>
-</tr>
-<tr>
-<td>@editorjs&#x2F;editorjs</td>
-<td>类似 notion 的编辑器</td>
-<td></td>
-</tr>
-<tr>
-<td>pdfjs-dist</td>
-<td>react较好的pdf预览组件</td>
-<td></td>
-</tr>
-<tr>
-<td>pdf-viewer</td>
-<td>浏览 pdf 的库</td>
-<td></td>
-</tr>
-<tr>
-<td>@trpc&#x2F;client</td>
-<td>trpc 客户端</td>
-<td></td>
-</tr>
-<tr>
-<td>underscore</td>
-<td>填充一些浏览器中的一些通用函数, 在旧版本中</td>
-<td></td>
-</tr>
-<tr>
-<td>@builder.io&#x2F;partytown</td>
-<td>将资源密集的操作转到 web worker 中</td>
-<td></td>
-</tr>
-<tr>
-<td>watermark-js-plus</td>
-<td>暗水印添加</td>
-<td></td>
-</tr>
-<tr>
-<td>cropperjs</td>
-<td>图片裁剪</td>
-<td></td>
-</tr>
-<tr>
-<td>hotkeys-js</td>
-<td>快捷键库</td>
-<td></td>
-</tr>
-<tr>
-<td>html2canvas</td>
-<td>dom 转 canvas 库, 可用于截图</td>
-<td></td>
-</tr>
-<tr>
-<td>qrcode</td>
-<td>二维码生成</td>
-<td></td>
-</tr>
-<tr>
-<td>node-qrcode</td>
-<td>支持多端的二维码生成</td>
-<td></td>
-</tr>
-<tr>
-<td>file-saver</td>
-<td>保存文件</td>
-<td></td>
-</tr>
-<tr>
-<td>tailwind-merge</td>
-<td>合并重复的 tailwind 类名</td>
-<td></td>
-</tr>
-<tr>
-<td>three</td>
-<td>基于 webgl 的 3d 库</td>
-<td></td>
-</tr>
-<tr>
-<td>stats.js</td>
-<td>threejs 的性能检测面板</td>
-<td></td>
-</tr>
-<tr>
-<td>dat.gui</td>
-<td>threejs 的 gui 修改参数插件</td>
-<td></td>
-</tr>
-<tr>
-<td>three-orbitcontrols</td>
-<td>threejs 相机移动控件</td>
-<td></td>
-</tr>
-<tr>
-<td>@tweenjs&#x2F;tween.js</td>
-<td>补间动画, 类似 css 的关键帧动画</td>
-<td></td>
-</tr>
-<tr>
-<td>babylonjs</td>
-<td>用于游戏开发的 webgl 3d 库</td>
-<td></td>
-</tr>
-<tr>
-<td>chart.js</td>
-<td>国外评分最高的图表库</td>
-<td></td>
-</tr>
-<tr>
-<td>effector</td>
-<td>比较新颖的状态库, 局部和全局. 支持 react &#x2F; vue &#x2F; solid</td>
-<td></td>
-</tr>
-<tr>
-<td>xstate</td>
-<td>基于状态机的 状态管理库</td>
-<td></td>
-</tr>
-<tr>
-<td>@apollo&#x2F;client</td>
-<td>apollo 客户端, graphql</td>
-<td></td>
-</tr>
-<tr>
-<td>radar-sdk-js</td>
-<td>较为实惠的 google 地图替代方案</td>
-<td></td>
-</tr>
-<tr>
-<td>leader-line-new</td>
-<td>动效引导线</td>
-<td></td>
-</tr>
-<tr>
-<td>jheat.js</td>
-<td>类似 github 的热力图</td>
-<td></td>
-</tr>
-<tr>
-<td>JsBarcode</td>
-<td>条形码生成</td>
-<td></td>
-</tr>
-<tr>
-<td>lingo.dev</td>
-<td>基于 LLM 自动翻译网站</td>
-<td></td>
+<td><code>commitlint</code></td>
+<td>校验 commit message 是否符合规范，可替代早期的 commit message 校验工具。</td>
 </tr>
 </tbody></table>
-<h2 id="Node端工具"><a href="#Node端工具" class="headerlink" title="Node端工具"></a>Node端工具</h2><table>
+<h2 id="6-通用工具库"><a href="#6-通用工具库" class="headerlink" title="6. 通用工具库"></a>6. 通用工具库</h2><table>
 <thead>
 <tr>
 <th>包名</th>
@@ -883,275 +521,67 @@
 </tr>
 </thead>
 <tbody><tr>
-<td>dotenv</td>
-<td>读取 .env 文件</td>
+<td><code>lodash-es</code></td>
+<td>Lodash 的 ES Module 版本，适合现代打包工具按需 tree-shaking。</td>
 </tr>
 <tr>
-<td>mstts-js</td>
-<td>文字转语音</td>
+<td><code>radash</code></td>
+<td>现代 JavaScript 工具函数库，可作为 Lodash 的轻量替代方案。</td>
 </tr>
 <tr>
-<td>node-schedule</td>
-<td>定时器工具</td>
+<td><code>async</code></td>
+<td>异步流程控制工具库，适合队列、串并行任务编排。</td>
 </tr>
 <tr>
-<td>async-validator</td>
-<td>校验库</td>
+<td><code>p-limit</code></td>
+<td>控制 Promise 并发数量。</td>
 </tr>
 <tr>
-<td>md5</td>
-<td>md5 加密</td>
+<td><code>globby</code></td>
+<td>基于 glob 的文件路径匹配工具，API 更友好。</td>
 </tr>
 <tr>
-<td>spark-md5</td>
-<td>提供更多的 md5 方式</td>
+<td><code>glob</code></td>
+<td>通配符文件路径匹配库。</td>
 </tr>
 <tr>
-<td>glob</td>
-<td>通过通配符匹配路径</td>
+<td><code>semver</code></td>
+<td>解析和比较语义化版本号。</td>
 </tr>
 <tr>
-<td>yargs-parser</td>
-<td>获取 cmd 参数</td>
+<td><code>lru-cache</code></td>
+<td>LRU 缓存算法实现。</td>
 </tr>
 <tr>
-<td>chalk</td>
-<td>cmd 信息样式设置</td>
+<td><code>core-js</code></td>
+<td>JavaScript 标准库 polyfill，补齐旧环境缺失能力。</td>
 </tr>
 <tr>
-<td>cli-progress</td>
-<td>node 进度条</td>
+<td><code>qs</code></td>
+<td>URL querystring 与对象之间的序列化&#x2F;反序列化。</td>
 </tr>
 <tr>
-<td>inquirer</td>
-<td>命令行选项</td>
+<td><code>url-join</code></td>
+<td>安全拼接 URL 路径片段。</td>
 </tr>
 <tr>
-<td>commander</td>
-<td>定制命令行界面</td>
+<td><code>nanoid</code></td>
+<td>生成短小、URL 友好的唯一 ID。</td>
 </tr>
 <tr>
-<td>clear</td>
-<td>清空控制台</td>
+<td><code>uuid</code></td>
+<td>生成 UUID。</td>
 </tr>
 <tr>
-<td>figlet</td>
-<td>打印字符文字</td>
+<td><code>mathjs</code></td>
+<td>数学计算库，支持表达式、大数、矩阵等能力。</td>
 </tr>
 <tr>
-<td>download-git-repo</td>
-<td>下载 git 仓库</td>
-</tr>
-<tr>
-<td>ora</td>
-<td>命令行加载动画</td>
-</tr>
-<tr>
-<td>iconv-lite</td>
-<td>解决编码问题</td>
-</tr>
-<tr>
-<td>cheerio</td>
-<td>可以理解为 node 下的 jQuery</td>
-</tr>
-<tr>
-<td>request</td>
-<td>用于在 Node 端发送请求</td>
-</tr>
-<tr>
-<td>nodemailer</td>
-<td>发送邮件</td>
-</tr>
-<tr>
-<td>fs-extra</td>
-<td>文件操作（移动文件等）</td>
-</tr>
-<tr>
-<td>uuid</td>
-<td>uuid 库</td>
-</tr>
-<tr>
-<td>ogr2ogr</td>
-<td>文件格式转换，例如 dxf</td>
-</tr>
-<tr>
-<td>dxf</td>
-<td>dxf 解析工具，可以转 svg</td>
-</tr>
-<tr>
-<td>gh-pages</td>
-<td>github page部署库</td>
-</tr>
-<tr>
-<td>decompress</td>
-<td>解压压缩包</td>
-</tr>
-<tr>
-<td>compress-images</td>
-<td>图片压缩</td>
-</tr>
-<tr>
-<td>imagemin</td>
-<td>图片压缩</td>
-</tr>
-<tr>
-<td>picocolors</td>
-<td>输入颜色字符</td>
-</tr>
-<tr>
-<td>log4js</td>
-<td>生成日志文件</td>
-</tr>
-<tr>
-<td>@trpc&#x2F;server</td>
-<td>trpc 统一前后端的 typescript 类型</td>
-</tr>
-<tr>
-<td>sharp</td>
-<td>图像处理库</td>
-</tr>
-<tr>
-<td>morgan</td>
-<td>http 日志记录库</td>
-</tr>
-<tr>
-<td>zlib</td>
-<td>gzip 压缩解压缩库</td>
-</tr>
-<tr>
-<td>oxlint</td>
-<td>替代 eslint 的库</td>
-</tr>
-<tr>
-<td>@antfu&#x2F;eslint-config</td>
-<td>antfu 推荐的 eslint config</td>
-</tr>
-<tr>
-<td>@trpc&#x2F;server</td>
-<td>trpc 服务端</td>
-</tr>
-<tr>
-<td>consul</td>
-<td>微服务注册关联管理库</td>
-</tr>
-<tr>
-<td>npmlog</td>
-<td>在 cli 中的 log 工具</td>
-</tr>
-<tr>
-<td>semver</td>
-<td>比较版本号大小</td>
-</tr>
-<tr>
-<td>colors</td>
-<td>颜色库</td>
-</tr>
-<tr>
-<td>root-check</td>
-<td>降级 sudo 权限, 避免权限造成的影响</td>
-</tr>
-<tr>
-<td>user-home</td>
-<td>获取用户主目录路径</td>
-</tr>
-<tr>
-<td>path-exists</td>
-<td>判断文件 path 是否存在</td>
-</tr>
-<tr>
-<td>minimist</td>
-<td>命令行参数解析</td>
-</tr>
-<tr>
-<td>url-join</td>
-<td>url 的自动拼接</td>
-</tr>
-<tr>
-<td>npminstall</td>
-<td>cnpm 中通过代码 install 的库</td>
-</tr>
-<tr>
-<td>rimraf</td>
-<td>rm 多系统删除库</td>
-</tr>
-<tr>
-<td>simple-git</td>
-<td>代码进行 git 管理</td>
-</tr>
-<tr>
-<td>bcrypt</td>
-<td>加密库</td>
-</tr>
-<tr>
-<td>figlet</td>
-<td>FIG 字符, 终端绘制字符画</td>
-</tr>
-<tr>
-<td>lru-cache</td>
-<td>lru 缓存算法的实现库</td>
-</tr>
-<tr>
-<td>workerpool</td>
-<td>worker 封装库</td>
-</tr>
-<tr>
-<td>node-html-parser</td>
-<td>html 的解析库</td>
-</tr>
-<tr>
-<td>docusaurus</td>
-<td>文档自动生成工具</td>
-</tr>
-<tr>
-<td>hpp</td>
-<td>参数脏数据清理</td>
-</tr>
-<tr>
-<td>http-status</td>
-<td>http 状态的枚举定义库</td>
-</tr>
-<tr>
-<td>ioredis</td>
-<td>node-redis 的改良版</td>
-</tr>
-<tr>
-<td>@apollo&#x2F;server</td>
-<td>graphql 的实现标准, 支持多个 web 框架</td>
-</tr>
-<tr>
-<td>fast-folder-size</td>
-<td>快速获取文件夹的大小</td>
-</tr>
-<tr>
-<td>passport</td>
-<td>身份验证库</td>
-</tr>
-<tr>
-<td>svg2pdf.js</td>
-<td>svg 转 pdf 文件</td>
-</tr>
-<tr>
-<td>pdf2html</td>
-<td>pdf 文件转 html</td>
-</tr>
-<tr>
-<td>ink</td>
-<td>用 react 编写 cli 界面</td>
-</tr>
-<tr>
-<td>envalid</td>
-<td>验证环境变量的校验库</td>
-</tr>
-<tr>
-<td>@upyo&#x2F;core</td>
-<td>适配 bun node deno 的邮件库</td>
-</tr>
-<tr>
-<td>discord.js</td>
-<td>discord 的 api 库</td>
+<td><code>@faker-js/faker</code></td>
+<td>生成模拟数据，例如姓名、地址、邮箱、日期等。</td>
 </tr>
 </tbody></table>
-<h3 id="代码规范相关"><a href="#代码规范相关" class="headerlink" title="代码规范相关"></a>代码规范相关</h3><table>
+<h2 id="7-日期、时间与国际化"><a href="#7-日期、时间与国际化" class="headerlink" title="7. 日期、时间与国际化"></a>7. 日期、时间与国际化</h2><table>
 <thead>
 <tr>
 <th>包名</th>
@@ -1159,31 +589,35 @@
 </tr>
 </thead>
 <tbody><tr>
-<td>husky</td>
-<td>哈士奇，用于 githook</td>
+<td><code>dayjs</code></td>
+<td>轻量日期处理库，API 类似 Moment，适合替代传统重量级日期库。</td>
 </tr>
 <tr>
-<td>commitizen</td>
-<td>用于 commit log 生成</td>
+<td><code>date-fns</code></td>
+<td>函数式日期工具库，按需引入友好，适合替代传统重量级日期库。</td>
 </tr>
 <tr>
-<td>cz-customizable</td>
-<td>自定义 cz 命令行的展示文本</td>
+<td><code>date-fns-tz</code></td>
+<td>基于 <code>date-fns</code> 的时区处理工具。</td>
 </tr>
 <tr>
-<td>validate-commit-msg</td>
-<td>用于校验 commit log</td>
+<td><code>react-i18next</code></td>
+<td>React 国际化方案，基于 i18next。</td>
 </tr>
 <tr>
-<td>commitlint</td>
-<td>用于校验 commit 的 lint</td>
+<td><code>next-intl</code></td>
+<td>Next.js 国际化库，适配 App Router &#x2F; Server Components 场景。</td>
 </tr>
 <tr>
-<td></td>
-<td></td>
+<td><code>lingo.dev</code></td>
+<td>基于 LLM 的网站&#x2F;应用翻译工具。</td>
+</tr>
+<tr>
+<td><code>zod-i18n-map</code></td>
+<td>为 Zod 校验错误提供国际化文案映射。</td>
 </tr>
 </tbody></table>
-<h3 id="服务端相关"><a href="#服务端相关" class="headerlink" title="服务端相关"></a>服务端相关</h3><table>
+<h2 id="8-数据校验、Schema-与类型安全"><a href="#8-数据校验、Schema-与类型安全" class="headerlink" title="8. 数据校验、Schema 与类型安全"></a>8. 数据校验、Schema 与类型安全</h2><table>
 <thead>
 <tr>
 <th>包名</th>
@@ -1191,83 +625,35 @@
 </tr>
 </thead>
 <tbody><tr>
-<td>egg-router-group</td>
-<td>egg 的路由分组</td>
+<td><code>zod</code></td>
+<td>TypeScript 优先的 schema 校验库，可从 schema 推导类型。</td>
 </tr>
 <tr>
-<td>egg-mongoose</td>
-<td>egg 连接 MongoDB</td>
+<td><code>yup</code></td>
+<td>常用对象 schema 校验库，表单生态中较常见。</td>
 </tr>
 <tr>
-<td>egg-valiadate</td>
-<td>egg 校验前端传递参数</td>
+<td><code>valibot</code></td>
+<td>轻量、类型友好的 schema 校验库。</td>
 </tr>
 <tr>
-<td>co-wechat</td>
-<td>微信体系</td>
+<td><code>async-validator</code></td>
+<td>异步数据校验库，常见于表单和 UI 组件库内部。</td>
 </tr>
 <tr>
-<td>co-wechat-api</td>
-<td>微信体系 api</td>
+<td><code>express-validator</code></td>
+<td>Express 请求参数校验中间件。</td>
 </tr>
 <tr>
-<td>jsonwebtoken</td>
-<td>token 库</td>
+<td><code>envalid</code></td>
+<td>环境变量校验和类型转换工具。</td>
 </tr>
 <tr>
-<td>mysql</td>
-<td>mysql 库</td>
-</tr>
-<tr>
-<td>mysql2</td>
-<td>mysql 增强版库，里面有 promise 版本 mysql2&#x2F;promise</td>
-</tr>
-<tr>
-<td>sequelize</td>
-<td>orm 操作数据</td>
-</tr>
-<tr>
-<td>drizzle-orm</td>
-<td>新的 orm 数据库检索工具</td>
-</tr>
-<tr>
-<td>mongodb</td>
-<td>mongo 数据库操作</td>
-</tr>
-<tr>
-<td>mongoose</td>
-<td>基于 mongodb 封装简化操作</td>
-</tr>
-<tr>
-<td>svg-captcha</td>
-<td>验证码</td>
-</tr>
-<tr>
-<td>gm</td>
-<td>使用 <a target="_blank" rel="noopener" href="http://www.graphicsmagick.org/">GraphicsMagick</a> or <a target="_blank" rel="noopener" href="http://www.imagemagick.org/">ImageMagick</a> 生成缩略图</td>
-</tr>
-<tr>
-<td>body-parser</td>
-<td>解析body的内容</td>
-</tr>
-<tr>
-<td>koa2-connect-history-api-fallback</td>
-<td>koa中适配spa应用的history模式</td>
-</tr>
-<tr>
-<td>express</td>
-<td>后端框架</td>
-</tr>
-<tr>
-<td>express-validator<br></td>
-<td>express 请求入参校验</td>
-</tr>
-<tr>
-<td>ipstack</td>
-<td>各种工具 api 集成平台</td>
+<td><code>hpp</code></td>
+<td>清理 HTTP 参数污染，降低重复 query 参数带来的安全风险。</td>
 </tr>
 </tbody></table>
-<h4 id="Nest-js"><a href="#Nest-js" class="headerlink" title="Nest.js"></a>Nest.js</h4><table>
+<h2 id="9-网络请求、API-与全栈类型"><a href="#9-网络请求、API-与全栈类型" class="headerlink" title="9. 网络请求、API 与全栈类型"></a>9. 网络请求、API 与全栈类型</h2><table>
 <thead>
 <tr>
 <th>包名</th>
@@ -1275,11 +661,39 @@
 </tr>
 </thead>
 <tbody><tr>
-<td>necord</td>
-<td>配合 discord.js 的库</td>
+<td><code>flyio</code></td>
+<td>支持多端的 HTTP 请求库。</td>
+</tr>
+<tr>
+<td><code>@trpc/client</code></td>
+<td>tRPC 客户端，用于端到端类型安全的 API 调用。</td>
+</tr>
+<tr>
+<td><code>@trpc/server</code></td>
+<td>tRPC 服务端，用于构建类型安全的 API 服务。</td>
+</tr>
+<tr>
+<td><code>@apollo/client</code></td>
+<td>Apollo GraphQL 客户端。</td>
+</tr>
+<tr>
+<td><code>@apollo/server</code></td>
+<td>Apollo GraphQL 服务端实现。</td>
+</tr>
+<tr>
+<td><code>@n1rjal/pm_ts</code></td>
+<td>根据 Postman JSON 生成 TypeScript 类型定义。</td>
+</tr>
+<tr>
+<td><code>http-status</code></td>
+<td>HTTP 状态码枚举和说明。</td>
+</tr>
+<tr>
+<td><code>ipstack</code></td>
+<td>IP 地理位置等 API 服务。</td>
 </tr>
 </tbody></table>
-<h4 id="Koa"><a href="#Koa" class="headerlink" title="Koa"></a>Koa</h4><table>
+<h2 id="10-安全、加密与身份认证"><a href="#10-安全、加密与身份认证" class="headerlink" title="10. 安全、加密与身份认证"></a>10. 安全、加密与身份认证</h2><table>
 <thead>
 <tr>
 <th>包名</th>
@@ -1287,23 +701,43 @@
 </tr>
 </thead>
 <tbody><tr>
-<td>koa-router</td>
-<td>koa 路由库</td>
+<td><code>crypto-js</code></td>
+<td>浏览器&#x2F;Node 通用加密工具，支持 MD5、AES 等算法。</td>
 </tr>
 <tr>
-<td>@koa&#x2F;bodyparser</td>
-<td>koa body 处理</td>
+<td><code>md5</code></td>
+<td>MD5 摘要工具。</td>
 </tr>
 <tr>
-<td>@koa&#x2F;cors</td>
-<td>koa cors 库</td>
+<td><code>spark-md5</code></td>
+<td>支持增量计算的 MD5 工具，适合大文件分片场景。</td>
 </tr>
 <tr>
-<td>@types&#x2F;koa__cors</td>
-<td>koa cors 库类型</td>
+<td><code>bcrypt</code></td>
+<td>密码哈希库，常用于用户密码存储。</td>
+</tr>
+<tr>
+<td><code>jsonwebtoken</code></td>
+<td>生成和验证 JWT。</td>
+</tr>
+<tr>
+<td><code>passport</code></td>
+<td>Node.js 认证中间件，支持多种登录策略。</td>
+</tr>
+<tr>
+<td><code>dompurify</code></td>
+<td>清理 HTML 字符串，降低 XSS 风险。</td>
+</tr>
+<tr>
+<td><code>svg-captcha</code></td>
+<td>生成图形验证码。</td>
+</tr>
+<tr>
+<td><code>root-check</code></td>
+<td>避免 CLI 工具在 root 权限下运行，降低权限风险。</td>
 </tr>
 </tbody></table>
-<h3 id="babel相关"><a href="#babel相关" class="headerlink" title="babel相关"></a>babel相关</h3><table>
+<h2 id="11-文件、文档、图片与多媒体处理"><a href="#11-文件、文档、图片与多媒体处理" class="headerlink" title="11. 文件、文档、图片与多媒体处理"></a>11. 文件、文档、图片与多媒体处理</h2><table>
 <thead>
 <tr>
 <th>包名</th>
@@ -1311,23 +745,95 @@
 </tr>
 </thead>
 <tbody><tr>
-<td>@babel&#x2F;core</td>
-<td>babel 核心</td>
+<td><code>fs-extra</code></td>
+<td>增强版文件操作库，支持复制、移动、确保目录存在等常用能力。</td>
 </tr>
 <tr>
-<td>@babel&#x2F;preset-env</td>
-<td>解析 es</td>
+<td><code>decompress</code></td>
+<td>解压 ZIP、tar 等压缩包。</td>
 </tr>
 <tr>
-<td>@babel&#x2F;preset-react</td>
-<td>解析 react</td>
+<td><code>rimraf</code></td>
+<td>跨平台删除文件&#x2F;目录，常用于清理构建产物。</td>
 </tr>
 <tr>
-<td>@babel&#x2F;preset-typescript</td>
-<td>解析 typescript</td>
+<td><code>path-exists</code></td>
+<td>判断文件或目录是否存在。</td>
+</tr>
+<tr>
+<td><code>fast-folder-size</code></td>
+<td>快速计算文件夹大小。</td>
+</tr>
+<tr>
+<td><code>iconv-lite</code></td>
+<td>字符编码转换，常用于处理 GBK 等非 UTF-8 内容。</td>
+</tr>
+<tr>
+<td><code>sharp</code></td>
+<td>高性能图像处理库，支持缩放、裁剪、格式转换等。</td>
+</tr>
+<tr>
+<td><code>imagemin</code></td>
+<td>图片压缩工具链。</td>
+</tr>
+<tr>
+<td><code>compress-images</code></td>
+<td>图片压缩工具。</td>
+</tr>
+<tr>
+<td><code>gm</code></td>
+<td>GraphicsMagick &#x2F; ImageMagick 的 Node 封装，用于图像处理。</td>
+</tr>
+<tr>
+<td><code>ogr2ogr</code></td>
+<td>地理空间数据格式转换工具封装。</td>
+</tr>
+<tr>
+<td><code>dxf</code></td>
+<td>DXF 文件解析工具，可用于 CAD 数据处理。</td>
+</tr>
+<tr>
+<td><code>jspdf</code></td>
+<td>在浏览器或 Node 中生成 PDF。</td>
+</tr>
+<tr>
+<td><code>docx</code></td>
+<td>生成 <code>.docx</code> Word 文档。</td>
+</tr>
+<tr>
+<td><code>svg2pdf.js</code></td>
+<td>将 SVG 转换为 PDF。</td>
+</tr>
+<tr>
+<td><code>pdf2html</code></td>
+<td>将 PDF 转换为 HTML。</td>
+</tr>
+<tr>
+<td><code>pdfjs-dist</code></td>
+<td>Mozilla PDF.js 构建包，用于 PDF 渲染和预览。</td>
+</tr>
+<tr>
+<td><code>html-to-text</code></td>
+<td>将 HTML 转换为纯文本。</td>
+</tr>
+<tr>
+<td><code>html2canvas</code></td>
+<td>将 DOM 渲染为 canvas，常用于网页截图。</td>
+</tr>
+<tr>
+<td><code>canvas2image</code></td>
+<td>将 canvas 转换为图片。</td>
+</tr>
+<tr>
+<td><code>file-saver</code></td>
+<td>在浏览器中触发文件保存。</td>
+</tr>
+<tr>
+<td><code>cropperjs</code></td>
+<td>浏览器图片裁剪工具。</td>
 </tr>
 </tbody></table>
-<h3 id="Webpack相关"><a href="#Webpack相关" class="headerlink" title="Webpack相关"></a>Webpack相关</h3><h4 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h4><table>
+<h2 id="12-命令行交互与日志"><a href="#12-命令行交互与日志" class="headerlink" title="12. 命令行交互与日志"></a>12. 命令行交互与日志</h2><table>
 <thead>
 <tr>
 <th>包名</th>
@@ -1335,19 +841,67 @@
 </tr>
 </thead>
 <tbody><tr>
-<td>webpack-cli</td>
-<td>webpack 的 cli 工具</td>
+<td><code>commander</code></td>
+<td>构建命令行程序，支持命令、参数、帮助信息等。</td>
 </tr>
 <tr>
-<td>webpack-dev-server</td>
-<td>热更新</td>
+<td><code>inquirer</code></td>
+<td>命令行交互式问答工具。</td>
 </tr>
 <tr>
-<td></td>
-<td></td>
+<td><code>yargs-parser</code></td>
+<td>解析命令行参数。</td>
+</tr>
+<tr>
+<td><code>minimist</code></td>
+<td>轻量命令行参数解析工具。</td>
+</tr>
+<tr>
+<td><code>chalk</code></td>
+<td>终端彩色文本输出。</td>
+</tr>
+<tr>
+<td><code>picocolors</code></td>
+<td>极轻量终端颜色库。</td>
+</tr>
+<tr>
+<td><code>colors</code></td>
+<td>终端颜色输出库。</td>
+</tr>
+<tr>
+<td><code>ora</code></td>
+<td>终端加载动画。</td>
+</tr>
+<tr>
+<td><code>cli-progress</code></td>
+<td>终端进度条。</td>
+</tr>
+<tr>
+<td><code>clear</code></td>
+<td>清空终端屏幕。</td>
+</tr>
+<tr>
+<td><code>figlet</code></td>
+<td>在终端生成字符画标题。</td>
+</tr>
+<tr>
+<td><code>npmlog</code></td>
+<td>npm 风格日志工具。</td>
+</tr>
+<tr>
+<td><code>log4js</code></td>
+<td>日志记录库，支持文件输出、日志级别和格式化。</td>
+</tr>
+<tr>
+<td><code>morgan</code></td>
+<td>HTTP 请求日志中间件，常用于 Express&#x2F;Koa 服务。</td>
+</tr>
+<tr>
+<td><code>ink</code></td>
+<td>使用 React 构建命令行界面。</td>
 </tr>
 </tbody></table>
-<h4 id="loader"><a href="#loader" class="headerlink" title="loader"></a>loader</h4><table>
+<h2 id="13-后端框架与中间件"><a href="#13-后端框架与中间件" class="headerlink" title="13. 后端框架与中间件"></a>13. 后端框架与中间件</h2><table>
 <thead>
 <tr>
 <th>包名</th>
@@ -1355,31 +909,79 @@
 </tr>
 </thead>
 <tbody><tr>
-<td>stylus-loader</td>
-<td>stylus 加载器</td>
+<td><code>express</code></td>
+<td>Node.js Web 框架，生态成熟。</td>
 </tr>
 <tr>
-<td>ts-loader</td>
-<td>ts 加载器</td>
+<td><code>body-parser</code></td>
+<td>解析 HTTP body 的 Express 中间件；新版本 Express 已内置类似能力。</td>
 </tr>
 <tr>
-<td>awesome-typescript-loader</td>
-<td>ts-loader 的强化版</td>
+<td><code>koa-router</code></td>
+<td>Koa 路由库。</td>
 </tr>
 <tr>
-<td>babel-loader</td>
-<td>babel 加载器</td>
+<td><code>@koa/bodyparser</code></td>
+<td>Koa 请求体解析中间件。</td>
 </tr>
 <tr>
-<td>vue-loader</td>
-<td>vue 加载器</td>
+<td><code>@koa/cors</code></td>
+<td>Koa CORS 跨域处理中间件。</td>
 </tr>
 <tr>
-<td>loader-utils</td>
-<td>在 loader 中获取 options 的库</td>
+<td><code>@types/koa__cors</code></td>
+<td><code>@koa/cors</code> 的 TypeScript 类型声明。</td>
+</tr>
+<tr>
+<td><code>koa2-connect-history-api-fallback</code></td>
+<td>在 Koa 中支持 SPA history 路由回退。</td>
+</tr>
+<tr>
+<td><code>egg-router-group</code></td>
+<td>Egg.js 路由分组工具。</td>
+</tr>
+<tr>
+<td><code>egg-mongoose</code></td>
+<td>Egg.js MongoDB&#x2F;Mongoose 集成。</td>
+</tr>
+<tr>
+<td><code>egg-validate</code></td>
+<td>Egg.js 参数校验插件；原文为 <code>egg-valiadate</code>，建议核对包名。</td>
+</tr>
+<tr>
+<td><code>co-wechat</code></td>
+<td>微信公众平台相关能力封装。</td>
+</tr>
+<tr>
+<td><code>co-wechat-api</code></td>
+<td>微信 API 调用封装。</td>
+</tr>
+<tr>
+<td><code>necord</code></td>
+<td>NestJS 与 Discord.js 集成库。</td>
+</tr>
+<tr>
+<td><code>@upyo/core</code></td>
+<td>面向 Node&#x2F;Bun&#x2F;Deno 的邮件发送抽象库。</td>
+</tr>
+<tr>
+<td><code>nodemailer</code></td>
+<td>Node.js 邮件发送库。</td>
+</tr>
+<tr>
+<td><code>@novu/node</code></td>
+<td>Novu 通知系统的 Node SDK，可用于邮件、短信、站内通知等。</td>
+</tr>
+<tr>
+<td><code>discord.js</code></td>
+<td>Discord API SDK。</td>
+</tr>
+<tr>
+<td><code>mstts-js</code></td>
+<td>Microsoft 文本转语音相关 SDK&#x2F;封装。</td>
 </tr>
 </tbody></table>
-<h4 id="plugin"><a href="#plugin" class="headerlink" title="plugin"></a>plugin</h4><table>
+<h2 id="14-数据库、ORM-与服务发现"><a href="#14-数据库、ORM-与服务发现" class="headerlink" title="14. 数据库、ORM 与服务发现"></a>14. 数据库、ORM 与服务发现</h2><table>
 <thead>
 <tr>
 <th>包名</th>
@@ -1387,19 +989,39 @@
 </tr>
 </thead>
 <tbody><tr>
-<td>mini-css-extract-plugin</td>
-<td>抽离 css 的文件</td>
+<td><code>mysql</code></td>
+<td>MySQL Node 客户端。</td>
 </tr>
 <tr>
-<td>html-webpack-plugin</td>
-<td>html 模板插件</td>
+<td><code>mysql2</code></td>
+<td>MySQL 客户端增强版，支持 Promise API 和更好的性能。</td>
 </tr>
 <tr>
-<td>webpack-bundle-analyzer</td>
-<td>打包分析工具</td>
+<td><code>sequelize</code></td>
+<td>Node.js ORM，支持 MySQL、PostgreSQL、SQLite 等数据库。</td>
+</tr>
+<tr>
+<td><code>drizzle-orm</code></td>
+<td>类型安全、轻量的现代 TypeScript ORM。</td>
+</tr>
+<tr>
+<td><code>mongodb</code></td>
+<td>MongoDB 官方 Node.js 驱动。</td>
+</tr>
+<tr>
+<td><code>mongoose</code></td>
+<td>基于 MongoDB 的对象建模工具。</td>
+</tr>
+<tr>
+<td><code>ioredis</code></td>
+<td>Redis 客户端，支持集群、哨兵等高级能力。</td>
+</tr>
+<tr>
+<td><code>consul</code></td>
+<td>Consul 客户端，用于服务注册、发现和配置管理。</td>
 </tr>
 </tbody></table>
-<h2 id="React-类"><a href="#React-类" class="headerlink" title="React 类"></a>React 类</h2><h3 id="不再推荐"><a href="#不再推荐" class="headerlink" title="不再推荐"></a>不再推荐</h3><table>
+<h2 id="15-构建工具、Babel-与-Webpack"><a href="#15-构建工具、Babel-与-Webpack" class="headerlink" title="15. 构建工具、Babel 与 Webpack"></a>15. 构建工具、Babel 与 Webpack</h2><h3 id="Babel"><a href="#Babel" class="headerlink" title="Babel"></a>Babel</h3><table>
 <thead>
 <tr>
 <th>包名</th>
@@ -1407,11 +1029,23 @@
 </tr>
 </thead>
 <tbody><tr>
-<td>classnames</td>
-<td>类名写法优化(被 clsx 平替)</td>
+<td><code>@babel/core</code></td>
+<td>Babel 核心编译器。</td>
+</tr>
+<tr>
+<td><code>@babel/preset-env</code></td>
+<td>根据目标环境转换现代 JavaScript 语法。</td>
+</tr>
+<tr>
+<td><code>@babel/preset-react</code></td>
+<td>编译 JSX 和 React 相关语法。</td>
+</tr>
+<tr>
+<td><code>@babel/preset-typescript</code></td>
+<td>编译 TypeScript 语法。</td>
 </tr>
 </tbody></table>
-<h3 id="工具-1"><a href="#工具-1" class="headerlink" title="工具"></a>工具</h3><table>
+<h3 id="Webpack"><a href="#Webpack" class="headerlink" title="Webpack"></a>Webpack</h3><table>
 <thead>
 <tr>
 <th>包名</th>
@@ -1419,227 +1053,47 @@
 </tr>
 </thead>
 <tbody><tr>
-<td>react-hook-form</td>
-<td>评分较高的 form 表单封装库</td>
+<td><code>webpack-cli</code></td>
+<td>Webpack 命令行工具。</td>
 </tr>
 <tr>
-<td>clsx</td>
-<td>类名写法优化</td>
+<td><code>webpack-dev-server</code></td>
+<td>Webpack 本地开发服务器，支持热更新。</td>
 </tr>
 <tr>
-<td>braft-editor</td>
-<td>富文本编辑器</td>
+<td><code>babel-loader</code></td>
+<td>在 Webpack 中使用 Babel 编译代码。</td>
 </tr>
 <tr>
-<td>rc-form</td>
-<td>（类组件）react 表单处理，提供一些列 api（检验，默认值，数据读写）等</td>
+<td><code>ts-loader</code></td>
+<td>在 Webpack 中编译 TypeScript，可替代早期 TypeScript loader。</td>
 </tr>
 <tr>
-<td>react-spring</td>
-<td>交互动画库</td>
+<td><code>vue-loader</code></td>
+<td>在 Webpack 中处理 Vue 单文件组件。</td>
 </tr>
 <tr>
-<td>react-error-boundary</td>
-<td>错误边界库</td>
+<td><code>stylus-loader</code></td>
+<td>在 Webpack 中处理 Stylus 样式。</td>
 </tr>
 <tr>
-<td>recoil</td>
-<td>react 状态管理库</td>
+<td><code>loader-utils</code></td>
+<td>Webpack loader 开发辅助工具。</td>
 </tr>
 <tr>
-<td>react-redux</td>
-<td>react 封装的 redux 库</td>
+<td><code>mini-css-extract-plugin</code></td>
+<td>将 CSS 抽离为独立文件。</td>
 </tr>
 <tr>
-<td>@emotion&#x2F;styled @emotion&#x2F;react</td>
-<td>css-in方案</td>
+<td><code>html-webpack-plugin</code></td>
+<td>生成 HTML 入口文件并自动注入资源。</td>
 </tr>
 <tr>
-<td>react-helmet</td>
-<td>网站head相关的设置</td>
-</tr>
-<tr>
-<td>@welldone-software&#x2F;why-did-you-render</td>
-<td>查看是谁渲染</td>
-</tr>
-<tr>
-<td>immer</td>
-<td>数据不可变，直接改值</td>
-</tr>
-<tr>
-<td>redux-toolkit</td>
-<td>使用immer与react-redux结合，最佳实践</td>
-</tr>
-<tr>
-<td>swr</td>
-<td>与上面类似的兄弟库</td>
-</tr>
-<tr>
-<td>react-beautiful-dnd</td>
-<td>拖拽库</td>
-</tr>
-<tr>
-<td>@dnd-kit&#x2F;core</td>
-<td>拖拽库</td>
-</tr>
-<tr>
-<td>sonner</td>
-<td>比较普适的消息提示弹窗</td>
-</tr>
-<tr>
-<td>react-dragable</td>
-<td>拖拽库</td>
-</tr>
-<tr>
-<td>gridstack</td>
-<td>栅格化拖拽库</td>
-</tr>
-<tr>
-<td>react-grid-layout</td>
-<td>栅格化拖拽库</td>
-</tr>
-<tr>
-<td>rc-resize-observer</td>
-<td>大小监听组件</td>
-</tr>
-<tr>
-<td>react-email</td>
-<td>邮件组件模板</td>
-</tr>
-<tr>
-<td>swr</td>
-<td>接口请求库</td>
-</tr>
-<tr>
-<td>react-transition-group</td>
-<td>动画库</td>
-</tr>
-<tr>
-<td>react-animations</td>
-<td>动画库</td>
-</tr>
-<tr>
-<td>react reveal</td>
-<td>动画库</td>
-</tr>
-<tr>
-<td>tweenone</td>
-<td>动画库</td>
-</tr>
-<tr>
-<td>immutabale.js</td>
-<td>数据不可变库, 反直觉</td>
-</tr>
-<tr>
-<td>react-slick</td>
-<td>滑块轮播图组件, antd 内部使用的这个</td>
-</tr>
-<tr>
-<td>react-icons</td>
-<td>react 用的 icon 图标集</td>
-</tr>
-<tr>
-<td>framer-motion</td>
-<td>丝滑的动画库</td>
-</tr>
-<tr>
-<td>motion</td>
-<td>动画库</td>
-</tr>
-<tr>
-<td>wouter</td>
-<td>一个轻量的route库</td>
-</tr>
-<tr>
-<td>avvvatars-react</td>
-<td>精美的头像占位符</td>
-</tr>
-<tr>
-<td>react-i18next</td>
-<td>i18 库</td>
-</tr>
-<tr>
-<td>recharts</td>
-<td>基于 d3 的 chart 图表库</td>
-</tr>
-<tr>
-<td>react-typewriter</td>
-<td>react 模拟打字动画的库</td>
-</tr>
-<tr>
-<td>react-joyride</td>
-<td>react 引导下一步流程库</td>
-</tr>
-<tr>
-<td>@react-pdf&#x2F;renderer</td>
-<td>react pdf 渲染库</td>
-</tr>
-<tr>
-<td>swiper</td>
-<td>react 的轮播库</td>
-</tr>
-<tr>
-<td>@tanstack&#x2F;react-query</td>
-<td>react 异步状态管理库</td>
-</tr>
-<tr>
-<td>@react-spring&#x2F;web</td>
-<td>react 的动画库</td>
-</tr>
-<tr>
-<td>react-top-loading-bar</td>
-<td>顶部加载条</td>
-</tr>
-<tr>
-<td>react-image-cropper</td>
-<td>图片裁剪库</td>
-</tr>
-<tr>
-<td>react-hot-toast</td>
-<td>消息提示组件</td>
-</tr>
-<tr>
-<td>react.qrcode</td>
-<td>二维码生成</td>
-</tr>
-<tr>
-<td>tldraw</td>
-<td>画板库</td>
-</tr>
-<tr>
-<td>@blocknote&#x2F;core</td>
-<td>类似 notion 的富文本库</td>
-</tr>
-<tr>
-<td>react-error-boundary</td>
-<td>错误捕获</td>
-</tr>
-<tr>
-<td>react-confetti</td>
-<td>庆祝的烟花纸屑动画</td>
-</tr>
-<tr>
-<td>react-lazy-load-image-component</td>
-<td>图片懒加载库</td>
-</tr>
-<tr>
-<td>react-window-infinite-loader</td>
-<td>加载更多库</td>
-</tr>
-<tr>
-<td>react-window</td>
-<td>虚拟滚动库</td>
-</tr>
-<tr>
-<td>lucide-react</td>
-<td>lucide 图表库的 react 实现</td>
-</tr>
-<tr>
-<td>formik</td>
-<td>小巧的表单处理库</td>
+<td><code>webpack-bundle-analyzer</code></td>
+<td>分析 Webpack 打包体积。</td>
 </tr>
 </tbody></table>
-<h2 id="ReactNative"><a href="#ReactNative" class="headerlink" title="ReactNative"></a>ReactNative</h2><table>
+<h3 id="构建优化"><a href="#构建优化" class="headerlink" title="构建优化"></a>构建优化</h3><table>
 <thead>
 <tr>
 <th>包名</th>
@@ -1647,19 +1101,15 @@
 </tr>
 </thead>
 <tbody><tr>
-<td>react-navigation</td>
-<td>导航条</td>
+<td><code>@million/compiler</code></td>
+<td>面向 React 的编译期优化工具，主要用于减少不必要渲染。</td>
 </tr>
 <tr>
-<td>react-native-looped-carousel</td>
-<td>轮播图</td>
-</tr>
-<tr>
-<td>react-native-refresh-list-view</td>
-<td>上拉加载和下拉刷新</td>
+<td><code>tailwind-merge</code></td>
+<td>合并并消除冲突的 Tailwind CSS class。</td>
 </tr>
 </tbody></table>
-<h2 id="Next-js-类"><a href="#Next-js-类" class="headerlink" title="Next.js 类"></a>Next.js 类</h2><table>
+<h2 id="16-浏览器基础能力与交互"><a href="#16-浏览器基础能力与交互" class="headerlink" title="16. 浏览器基础能力与交互"></a>16. 浏览器基础能力与交互</h2><table>
 <thead>
 <tr>
 <th>包名</th>
@@ -1667,31 +1117,59 @@
 </tr>
 </thead>
 <tbody><tr>
-<td>next-intl</td>
-<td>国际化库</td>
+<td><code>copy-to-clipboard</code></td>
+<td>浏览器复制到剪贴板工具。</td>
 </tr>
 <tr>
-<td>server-only</td>
-<td>防止服务端组件, 在客户端渲染</td>
+<td><code>hotkeys-js</code></td>
+<td>快捷键绑定库。</td>
 </tr>
 <tr>
-<td>next-auth</td>
-<td>集成常用的授权应用</td>
+<td><code>@fingerprintjs/fingerprintjs</code></td>
+<td>浏览器指纹识别库。</td>
 </tr>
 <tr>
-<td>next-sitemap</td>
-<td>SEO 优化, 方便 google 检索你的网站</td>
+<td><code>mixpanel-browser</code></td>
+<td>Mixpanel 浏览器端埋点 SDK。</td>
 </tr>
 <tr>
-<td>next-seo</td>
-<td>SEO 优化, 生成一些常见的 metadata</td>
+<td><code>sentry</code></td>
+<td>应用异常监控和性能追踪平台 SDK。</td>
 </tr>
 <tr>
-<td>next-pwa</td>
-<td>快速创建离线应用</td>
+<td><code>aegis</code></td>
+<td>腾讯云前端监控 SDK。</td>
+</tr>
+<tr>
+<td><code>nprogress</code></td>
+<td>页面顶部加载进度条。</td>
+</tr>
+<tr>
+<td><code>driver.js</code></td>
+<td>用户引导和步骤提示库。</td>
+</tr>
+<tr>
+<td><code>@builder.io/partytown</code></td>
+<td>将第三方脚本转移到 Web Worker 中运行，降低主线程压力。</td>
+</tr>
+<tr>
+<td><code>web-worker</code></td>
+<td>统一浏览器和 Node.js 的 Worker 写法。</td>
+</tr>
+<tr>
+<td><code>@emailjs/browser</code></td>
+<td>浏览器端邮件发送服务 SDK。</td>
+</tr>
+<tr>
+<td><code>radar-sdk-js</code></td>
+<td>地图、地理围栏和位置服务 SDK，可作为 Google Maps 相关方案的替代选择。</td>
+</tr>
+<tr>
+<td><code>watermark-js-plus</code></td>
+<td>添加明水印或暗水印。</td>
 </tr>
 </tbody></table>
-<h3 id="Next-js-最佳实践框架"><a href="#Next-js-最佳实践框架" class="headerlink" title="Next.js 最佳实践框架"></a>Next.js 最佳实践框架</h3><table>
+<h2 id="17-动画、拖拽、图形与可视化"><a href="#17-动画、拖拽、图形与可视化" class="headerlink" title="17. 动画、拖拽、图形与可视化"></a>17. 动画、拖拽、图形与可视化</h2><table>
 <thead>
 <tr>
 <th>包名</th>
@@ -1699,11 +1177,71 @@
 </tr>
 </thead>
 <tbody><tr>
-<td>t3-app@latest</td>
-<td>ts 一个推崇类型安全的 next 实践框架</td>
+<td><code>animejs</code></td>
+<td>轻量 JavaScript 动画库。</td>
+</tr>
+<tr>
+<td><code>gsap</code></td>
+<td>专业级 Web 动画库，适合复杂时间轴和高质量动效。</td>
+</tr>
+<tr>
+<td><code>@tweenjs/tween.js</code></td>
+<td>补间动画库。</td>
+</tr>
+<tr>
+<td><code>subjx</code></td>
+<td>DOM 元素拖拽、缩放、旋转工具。</td>
+</tr>
+<tr>
+<td><code>@neodrag/vanilla</code></td>
+<td>轻量无框架拖拽库。</td>
+</tr>
+<tr>
+<td><code>leader-line-new</code></td>
+<td>绘制元素之间的引导线或连线。</td>
+</tr>
+<tr>
+<td><code>particles.js</code></td>
+<td>粒子背景效果库。</td>
+</tr>
+<tr>
+<td><code>pixi.js</code></td>
+<td>2D WebGL&#x2F;canvas 渲染引擎，适合游戏和复杂图形。</td>
+</tr>
+<tr>
+<td><code>three</code></td>
+<td>WebGL 3D 渲染库。</td>
+</tr>
+<tr>
+<td><code>stats.js</code></td>
+<td>性能面板，常用于 Three.js FPS 监控。</td>
+</tr>
+<tr>
+<td><code>dat.gui</code></td>
+<td>可视化调参面板，常用于图形&#x2F;Three.js demo。</td>
+</tr>
+<tr>
+<td><code>three-orbitcontrols</code></td>
+<td>Three.js 轨道相机控制器；现代项目通常从 <code>three/examples</code> 或 <code>three/addons</code> 引入。</td>
+</tr>
+<tr>
+<td><code>babylonjs</code></td>
+<td>WebGL 3D 游戏和渲染引擎。</td>
+</tr>
+<tr>
+<td><code>chart.js</code></td>
+<td>常用图表库，适合基础统计图表。</td>
+</tr>
+<tr>
+<td><code>jheat.js</code></td>
+<td>类 GitHub 贡献图的热力图组件。</td>
+</tr>
+<tr>
+<td><code>recharts</code></td>
+<td>React 图表库，基于 D3 与 SVG。</td>
 </tr>
 </tbody></table>
-<h2 id="UI-库"><a href="#UI-库" class="headerlink" title="UI 库"></a>UI 库</h2><table>
+<h2 id="18-编辑器、Markdown、代码高亮与内容展示"><a href="#18-编辑器、Markdown、代码高亮与内容展示" class="headerlink" title="18. 编辑器、Markdown、代码高亮与内容展示"></a>18. 编辑器、Markdown、代码高亮与内容展示</h2><table>
 <thead>
 <tr>
 <th>包名</th>
@@ -1711,23 +1249,43 @@
 </tr>
 </thead>
 <tbody><tr>
-<td>@mui&#x2F;material</td>
-<td>mui 谷歌风格的 material 组件库</td>
+<td><code>highlight.js</code></td>
+<td>代码高亮库。</td>
 </tr>
 <tr>
-<td>@mui&#x2F;joy</td>
-<td>mui 自己设计的组件库</td>
+<td><code>marked</code></td>
+<td>Markdown 解析器。</td>
 </tr>
 <tr>
-<td>Mantine</td>
-<td>Mantine UI 库</td>
+<td><code>quill</code></td>
+<td>富文本编辑器。</td>
 </tr>
 <tr>
-<td>shadcn&#x2F;ui</td>
-<td>使用 tailwindcss 编写, 本地组件</td>
+<td><code>@wangeditor/editor</code></td>
+<td>国内常用富文本编辑器。</td>
+</tr>
+<tr>
+<td><code>@editorjs/editorjs</code></td>
+<td>块编辑器，适合类 Notion 的内容编辑体验。</td>
+</tr>
+<tr>
+<td><code>@blocksuite/editor</code></td>
+<td>块编辑器框架，适合构建文档&#x2F;白板类产品。</td>
+</tr>
+<tr>
+<td><code>@blocknote/core</code></td>
+<td>类 Notion 的块编辑器核心库。</td>
+</tr>
+<tr>
+<td><code>braft-editor</code></td>
+<td>React 富文本编辑器。</td>
+</tr>
+<tr>
+<td><code>tldraw</code></td>
+<td>白板&#x2F;绘图编辑器。</td>
 </tr>
 </tbody></table>
-<h2 id="Vue-类"><a href="#Vue-类" class="headerlink" title="Vue 类"></a>Vue 类</h2><table>
+<h2 id="19-条码、二维码与标识"><a href="#19-条码、二维码与标识" class="headerlink" title="19. 条码、二维码与标识"></a>19. 条码、二维码与标识</h2><table>
 <thead>
 <tr>
 <th>包名</th>
@@ -1735,15 +1293,23 @@
 </tr>
 </thead>
 <tbody><tr>
-<td>vue</td>
-<td>vue 核心</td>
+<td><code>qrcode</code></td>
+<td>生成二维码，支持浏览器和 Node，可覆盖多数二维码生成场景。</td>
 </tr>
 <tr>
-<td>@vue&#x2F;compiler-sfc</td>
-<td>单文件编译器</td>
+<td><code>react.qrcode</code></td>
+<td>React 二维码组件，建议核对维护状态和包名。</td>
+</tr>
+<tr>
+<td><code>JsBarcode</code></td>
+<td>条形码生成库。</td>
+</tr>
+<tr>
+<td><code>avvvatars-react</code></td>
+<td>生成美观的 React 头像占位符。</td>
 </tr>
 </tbody></table>
-<h3 id="工具-2"><a href="#工具-2" class="headerlink" title="工具"></a>工具</h3><table>
+<h2 id="20-React-生态"><a href="#20-React-生态" class="headerlink" title="20. React 生态"></a>20. React 生态</h2><h3 id="表单与数据请求"><a href="#表单与数据请求" class="headerlink" title="表单与数据请求"></a>表单与数据请求</h3><table>
 <thead>
 <tr>
 <th>包名</th>
@@ -1751,31 +1317,27 @@
 </tr>
 </thead>
 <tbody><tr>
-<td>vuedraggable</td>
-<td>vue的拖拽库</td>
+<td><code>react-hook-form</code></td>
+<td>高性能 React 表单库，适合复杂表单。</td>
 </tr>
 <tr>
-<td>vue-clipboard3</td>
-<td>剪切板</td>
+<td><code>formik</code></td>
+<td>React 表单状态管理库，API 简洁。</td>
 </tr>
 <tr>
-<td>vuex-persist</td>
-<td>vuex持久化数据</td>
+<td><code>rc-form</code></td>
+<td>早期 React 表单库，主要用于类组件和旧项目。</td>
 </tr>
 <tr>
-<td>vue-reuse-template</td>
-<td>组件内重用部分模板 - 安法师 (非组件)</td>
+<td><code>@tanstack/react-query</code></td>
+<td>React 异步状态管理库，适合服务端数据缓存、请求状态和失效刷新。</td>
 </tr>
 <tr>
-<td>unplugin-vue-macros</td>
-<td>组件内重用部分模板</td>
-</tr>
-<tr>
-<td>@tanstack&#x2F;vue-query</td>
-<td>对标 react-query 的异步状态管理库</td>
+<td><code>swr</code></td>
+<td>React 数据请求和缓存库。</td>
 </tr>
 </tbody></table>
-<h2 id="环境类"><a href="#环境类" class="headerlink" title="环境类"></a>环境类</h2><table>
+<h3 id="状态管理"><a href="#状态管理" class="headerlink" title="状态管理"></a>状态管理</h3><table>
 <thead>
 <tr>
 <th>包名</th>
@@ -1783,15 +1345,31 @@
 </tr>
 </thead>
 <tbody><tr>
-<td>typescript</td>
-<td>ts 环境</td>
+<td><code>react-redux</code></td>
+<td>React 官方 Redux 绑定。</td>
 </tr>
 <tr>
-<td>zx</td>
-<td>用js编写bash脚本</td>
+<td><code>redux-toolkit</code></td>
+<td>Redux 官方推荐工具包，内置 Immer，简化样板代码。</td>
+</tr>
+<tr>
+<td><code>recoil</code></td>
+<td>React 状态管理库，支持 atom&#x2F;selector 模型。</td>
+</tr>
+<tr>
+<td><code>effector</code></td>
+<td>响应式状态管理库，支持 React&#x2F;Vue&#x2F;Solid 等生态。</td>
+</tr>
+<tr>
+<td><code>xstate</code></td>
+<td>状态机和状态图管理库，适合复杂流程状态。</td>
+</tr>
+<tr>
+<td><code>immer</code></td>
+<td>使用可变写法生成不可变数据，适合替代重量级不可变数据结构库。</td>
 </tr>
 </tbody></table>
-<h2 id="构建优化"><a href="#构建优化" class="headerlink" title="构建优化"></a>构建优化</h2><table>
+<h3 id="样式与-UI-辅助"><a href="#样式与-UI-辅助" class="headerlink" title="样式与 UI 辅助"></a>样式与 UI 辅助</h3><table>
 <thead>
 <tr>
 <th>包名</th>
@@ -1799,11 +1377,27 @@
 </tr>
 </thead>
 <tbody><tr>
-<td>@million&#x2F;compiler</td>
-<td>自动优化构建的代码, vite 支持</td>
+<td><code>clsx</code></td>
+<td>条件组合 className 的轻量工具，适合替代传统 className 拼接库。</td>
+</tr>
+<tr>
+<td><code>@emotion/react</code></td>
+<td>Emotion CSS-in-JS 核心包。</td>
+</tr>
+<tr>
+<td><code>@emotion/styled</code></td>
+<td>Emotion 的 styled API。</td>
+</tr>
+<tr>
+<td><code>lucide-react</code></td>
+<td>Lucide 图标库的 React 版本。</td>
+</tr>
+<tr>
+<td><code>react-icons</code></td>
+<td>React 图标集合，覆盖多个图标库。</td>
 </tr>
 </tbody></table>
-<h1 id="Mock-服务"><a href="#Mock-服务" class="headerlink" title="Mock 服务"></a>Mock 服务</h1><table>
+<h3 id="动画、拖拽与布局"><a href="#动画、拖拽与布局" class="headerlink" title="动画、拖拽与布局"></a>动画、拖拽与布局</h3><table>
 <thead>
 <tr>
 <th>包名</th>
@@ -1811,11 +1405,55 @@
 </tr>
 </thead>
 <tbody><tr>
-<td>msw</td>
-<td>比较新颖的 mock 服务</td>
+<td><code>framer-motion</code></td>
+<td>React 动画库，适合页面转场和复杂交互动效。</td>
+</tr>
+<tr>
+<td><code>motion</code></td>
+<td>Motion 动画库，Framer Motion 的现代包形态。</td>
+</tr>
+<tr>
+<td><code>react-spring</code></td>
+<td>基于弹簧物理模型的 React 动画库。</td>
+</tr>
+<tr>
+<td><code>@react-spring/web</code></td>
+<td>React Spring 的 Web 包。</td>
+</tr>
+<tr>
+<td><code>react-transition-group</code></td>
+<td>React 进入&#x2F;退出动画状态管理。</td>
+</tr>
+<tr>
+<td><code>react-animations</code></td>
+<td>CSS 动画预设集合。</td>
+</tr>
+<tr>
+<td><code>tweenone</code></td>
+<td>React 动画库，常见于 Ant Design 生态早期示例。</td>
+</tr>
+<tr>
+<td><code>@dnd-kit/core</code></td>
+<td>现代 React 拖拽库核心包，适合替代停止维护的 React 拖拽方案。</td>
+</tr>
+<tr>
+<td><code>react-draggable</code></td>
+<td>React 拖拽组件；原文 <code>react-dragable</code> 建议修正。</td>
+</tr>
+<tr>
+<td><code>gridstack</code></td>
+<td>网格拖拽布局库。</td>
+</tr>
+<tr>
+<td><code>react-grid-layout</code></td>
+<td>React 网格拖拽布局组件。</td>
+</tr>
+<tr>
+<td><code>rc-resize-observer</code></td>
+<td>监听元素尺寸变化的 React 组件。</td>
 </tr>
 </tbody></table>
-<h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><h2 id="基础库"><a href="#基础库" class="headerlink" title="基础库"></a>基础库</h2><table>
+<h3 id="组件、反馈与体验"><a href="#组件、反馈与体验" class="headerlink" title="组件、反馈与体验"></a>组件、反馈与体验</h3><table>
 <thead>
 <tr>
 <th>包名</th>
@@ -1823,15 +1461,83 @@
 </tr>
 </thead>
 <tbody><tr>
-<td>flush-promises</td>
-<td>将所有 promise 状态都改为完成</td>
+<td><code>sonner</code></td>
+<td>现代 toast 消息提示组件。</td>
 </tr>
 <tr>
-<td></td>
-<td></td>
+<td><code>react-hot-toast</code></td>
+<td>React toast 消息提示组件。</td>
+</tr>
+<tr>
+<td><code>react-error-boundary</code></td>
+<td>React 错误边界组件。</td>
+</tr>
+<tr>
+<td><code>@welldone-software/why-did-you-render</code></td>
+<td>分析 React 组件重复渲染原因。</td>
+</tr>
+<tr>
+<td><code>react-helmet</code></td>
+<td>管理页面 <code>&lt;head&gt;</code> 内容，常用于标题和 meta。</td>
+</tr>
+<tr>
+<td><code>react-slick</code></td>
+<td>React 轮播组件。</td>
+</tr>
+<tr>
+<td><code>swiper</code></td>
+<td>现代轮播&#x2F;滑动组件库，支持多框架。</td>
+</tr>
+<tr>
+<td><code>react-typewriter</code></td>
+<td>React 打字机效果组件。</td>
+</tr>
+<tr>
+<td><code>react-joyride</code></td>
+<td>React 用户引导流程组件。</td>
+</tr>
+<tr>
+<td><code>react-top-loading-bar</code></td>
+<td>React 顶部加载条组件。</td>
+</tr>
+<tr>
+<td><code>react-confetti</code></td>
+<td>礼花&#x2F;纸屑动画组件。</td>
+</tr>
+<tr>
+<td><code>react-lazy-load-image-component</code></td>
+<td>React 图片懒加载组件。</td>
+</tr>
+<tr>
+<td><code>react-window</code></td>
+<td>React 虚拟滚动库。</td>
+</tr>
+<tr>
+<td><code>react-window-infinite-loader</code></td>
+<td>配合 <code>react-window</code> 实现无限加载。</td>
+</tr>
+<tr>
+<td><code>react-image-cropper</code></td>
+<td>React 图片裁剪组件。</td>
+</tr>
+<tr>
+<td><code>@react-pdf/renderer</code></td>
+<td>使用 React 组件生成 PDF。</td>
+</tr>
+<tr>
+<td><code>react-email</code></td>
+<td>使用 React 编写邮件模板。</td>
+</tr>
+<tr>
+<td><code>wouter</code></td>
+<td>轻量 React 路由库。</td>
+</tr>
+<tr>
+<td>react-bits</td>
+<td>react bit 动效组件库</td>
 </tr>
 </tbody></table>
-<h2 id="E2E"><a href="#E2E" class="headerlink" title="E2E"></a>E2E</h2><table>
+<h2 id="21-Next-js-生态"><a href="#21-Next-js-生态" class="headerlink" title="21. Next.js 生态"></a>21. Next.js 生态</h2><table>
 <thead>
 <tr>
 <th>包名</th>
@@ -1839,19 +1545,31 @@
 </tr>
 </thead>
 <tbody><tr>
-<td>nightwatch</td>
-<td>基于 webdriver.js 的测试框架</td>
+<td><code>next-auth</code></td>
+<td>Next.js 身份认证方案；新版本生态中也常称 Auth.js。</td>
 </tr>
 <tr>
-<td>cypress</td>
-<td>高度内聚的集成测试框架</td>
+<td><code>server-only</code></td>
+<td>标记模块只能在服务端使用，避免被客户端组件误引用。</td>
 </tr>
 <tr>
-<td>testcafe</td>
-<td>傻瓜智能的测试框架</td>
+<td><code>next-sitemap</code></td>
+<td>为 Next.js 生成 sitemap 和 robots.txt。</td>
+</tr>
+<tr>
+<td><code>next-seo</code></td>
+<td>管理 SEO meta 信息，Pages Router 项目中更常见；App Router 可优先使用 Metadata API。</td>
+</tr>
+<tr>
+<td><code>next-pwa</code></td>
+<td>为 Next.js 添加 PWA 能力。</td>
+</tr>
+<tr>
+<td><code>t3-app</code></td>
+<td>类型安全优先的 Next.js 全栈项目模板&#x2F;脚手架。</td>
 </tr>
 </tbody></table>
-<h2 id="后端"><a href="#后端" class="headerlink" title="后端"></a>后端</h2><table>
+<h2 id="22-Vue-Nuxt-生态"><a href="#22-Vue-Nuxt-生态" class="headerlink" title="22. Vue &#x2F; Nuxt 生态"></a>22. Vue &#x2F; Nuxt 生态</h2><table>
 <thead>
 <tr>
 <th>包名</th>
@@ -1859,11 +1577,39 @@
 </tr>
 </thead>
 <tbody><tr>
-<td>supertest</td>
-<td>测试 http 的库</td>
+<td><code>vue</code></td>
+<td>Vue 核心框架。</td>
+</tr>
+<tr>
+<td><code>@vue/compiler-sfc</code></td>
+<td>Vue 单文件组件编译器。</td>
+</tr>
+<tr>
+<td><code>vuedraggable</code></td>
+<td>Vue 拖拽排序组件。</td>
+</tr>
+<tr>
+<td><code>vue-clipboard3</code></td>
+<td>Vue 3 剪贴板工具。</td>
+</tr>
+<tr>
+<td><code>vuex-persist</code></td>
+<td>Vuex 状态持久化。</td>
+</tr>
+<tr>
+<td><code>vue-reuse-template</code></td>
+<td>在 Vue 组件内复用模板片段。</td>
+</tr>
+<tr>
+<td><code>unplugin-vue-macros</code></td>
+<td>Vue 宏能力集合，增强组件写法。</td>
+</tr>
+<tr>
+<td><code>@tanstack/vue-query</code></td>
+<td>Vue 版本的 TanStack Query。</td>
 </tr>
 </tbody></table>
-<h1 id="小程序"><a href="#小程序" class="headerlink" title="小程序"></a>小程序</h1><table>
+<h2 id="23-React-Native-与小程序"><a href="#23-React-Native-与小程序" class="headerlink" title="23. React Native 与小程序"></a>23. React Native 与小程序</h2><table>
 <thead>
 <tr>
 <th>包名</th>
@@ -1871,11 +1617,23 @@
 </tr>
 </thead>
 <tbody><tr>
-<td>weapp-tailwindcss</td>
-<td>小程序支持 tailwindcss</td>
+<td><code>react-navigation</code></td>
+<td>React Native 导航库。</td>
+</tr>
+<tr>
+<td><code>react-native-looped-carousel</code></td>
+<td>React Native 轮播组件。</td>
+</tr>
+<tr>
+<td><code>react-native-refresh-list-view</code></td>
+<td>React Native 上拉加载、下拉刷新列表组件。</td>
+</tr>
+<tr>
+<td><code>weapp-tailwindcss</code></td>
+<td>在微信小程序中使用 Tailwind CSS。</td>
 </tr>
 </tbody></table>
-<h1 id="全栈框架"><a href="#全栈框架" class="headerlink" title="全栈框架"></a>全栈框架</h1><table>
+<h2 id="24-UI-组件库"><a href="#24-UI-组件库" class="headerlink" title="24. UI 组件库"></a>24. UI 组件库</h2><table>
 <thead>
 <tr>
 <th>包名</th>
@@ -1883,23 +1641,43 @@
 </tr>
 </thead>
 <tbody><tr>
-<td>TanStack Start</td>
-<td>tanstack 的全栈框架, 目前是 beta 版本</td>
+<td><code>@mui/material</code></td>
+<td>React Material Design 组件库。</td>
 </tr>
 <tr>
-<td>Nextjs</td>
-<td>react技术栈</td>
+<td><code>@mui/joy</code></td>
+<td>MUI 团队推出的 Joy UI 组件库。</td>
 </tr>
 <tr>
-<td>Nuxtjs</td>
-<td>vue技术栈</td>
+<td><code>mantine</code></td>
+<td>React 组件库，覆盖表单、布局、hooks 等能力。</td>
 </tr>
 <tr>
-<td>Astro</td>
-<td>领先的分岛框架</td>
+<td><code>shadcn/ui</code></td>
+<td>基于 Radix UI 和 Tailwind CSS 的可复制组件方案。</td>
+</tr>
+<tr>
+<td><code>@douyinfe/semi-ui</code></td>
+<td>抖音前端团队开源的 React 中后台组件库。</td>
+</tr>
+<tr>
+<td><code>naive-ui</code></td>
+<td>Vue 3 组件库；原文 <code>naive</code> 建议核对为 <code>naive-ui</code>。</td>
+</tr>
+<tr>
+<td><code>reka-ui</code></td>
+<td>Vue 无样式组件库，可用于构建类似 shadcn-vue 的组件系统。</td>
+</tr>
+<tr>
+<td><code>shadcn-vue</code></td>
+<td>shadcn&#x2F;ui 的 Vue 社区实现。</td>
+</tr>
+<tr>
+<td><code>@nuxt/ui</code></td>
+<td>Nuxt 官方&#x2F;生态 UI 组件库。</td>
 </tr>
 </tbody></table>
-<h1 id="文档构建"><a href="#文档构建" class="headerlink" title="文档构建"></a>文档构建</h1><table>
+<h2 id="25-全栈框架与文档站"><a href="#25-全栈框架与文档站" class="headerlink" title="25. 全栈框架与文档站"></a>25. 全栈框架与文档站</h2><table>
 <thead>
 <tr>
 <th>包名</th>
@@ -1907,8 +1685,52 @@
 </tr>
 </thead>
 <tbody><tr>
-<td>docusaurus</td>
-<td>国外比较流行的 md 文档网站构建</td>
+<td><code>Next.js</code></td>
+<td>React 全栈框架，支持 SSR、SSG、路由、Server Components 等能力。</td>
+</tr>
+<tr>
+<td><code>Nuxt</code></td>
+<td>Vue 全栈框架，支持 SSR、SSG、文件路由等能力。</td>
+</tr>
+<tr>
+<td><code>Astro</code></td>
+<td>内容驱动的网站框架，主打 Islands Architecture。</td>
+</tr>
+<tr>
+<td><code>TanStack Start</code></td>
+<td>TanStack 生态的全栈框架，仍处于快速演进阶段。</td>
+</tr>
+<tr>
+<td><code>docusaurus</code></td>
+<td>文档网站构建框架，适合技术文档、博客和产品文档站。</td>
+</tr>
+</tbody></table>
+<h2 id="26-测试工具"><a href="#26-测试工具" class="headerlink" title="26. 测试工具"></a>26. 测试工具</h2><table>
+<thead>
+<tr>
+<th>包名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>flush-promises</code></td>
+<td>等待当前队列中的 Promise 全部完成，常用于单元测试。</td>
+</tr>
+<tr>
+<td><code>supertest</code></td>
+<td>测试 HTTP 服务接口，常用于 Express&#x2F;Koa&#x2F;Nest 服务。</td>
+</tr>
+<tr>
+<td><code>cypress</code></td>
+<td>端到端和组件测试框架，集成度高。</td>
+</tr>
+<tr>
+<td><code>nightwatch</code></td>
+<td>基于 WebDriver 的端到端测试框架。</td>
+</tr>
+<tr>
+<td><code>testcafe</code></td>
+<td>端到端测试框架，使用门槛较低。</td>
 </tr>
 </tbody></table>
 
@@ -2059,13 +1881,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">86k</span>
+    <span title="站点总字数">94k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">5:13</span>
+    <span title="站点阅读时长">5:42</span>
   </span>
 </div><div style="display: flex; justify-content: center;">
     <a style="display: inline-flex; align-items: center;" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank"><span>本站由</span> <img style="height: 30px; margin: 0 10px 0;" src="/images/upyun-logo.png"/> <span>提供CDN加速/云存储服务</span></a>
