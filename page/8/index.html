@@ -244,7 +244,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.4van.top/2022/01/23/summary/docker/docker%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
+    <link itemprop="mainEntityOfPage" href="https://blog.4van.top/2022/01/23/summary/docker/docker-compose%20yml%20%E6%A0%B7%E6%9D%BF/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="../../images/logo.png">
@@ -262,7 +262,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="../../2022/01/23/summary/docker/docker%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" class="post-title-link" itemprop="url">docker 基础知识</a>
+          <a href="../../2022/01/23/summary/docker/docker-compose%20yml%20%E6%A0%B7%E6%9D%BF/" class="post-title-link" itemprop="url">docker-compose yml 样板</a>
         </h2>
 
         <div class="post-meta-container">
@@ -280,7 +280,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-06-05 19:34:24" itemprop="dateModified" datetime="2026-06-05T19:34:24+08:00">2026-06-05</time>
+      <time title="修改时间：2026-06-23 18:43:10" itemprop="dateModified" datetime="2026-06-23T18:43:10+08:00">2026-06-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -303,7 +303,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>52</span>
+      <span>87</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -321,11 +321,12 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="CMD"><a href="#CMD" class="headerlink" title="CMD"></a>CMD</h2><p>CMD 设定默认执行的命令</p>
-<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CMD</span><span class="language-bash"> [<span class="string">&quot;node&quot;</span>, <span class="string">&quot;dist/main.js&quot;</span>]</span></span><br></pre></td></tr></table></figure>
+          <h1 id="启动-mongo"><a href="#启动-mongo" class="headerlink" title="启动 mongo"></a>启动 mongo</h1><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">services:</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">mongo:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">mongo:7.0.5</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">27000</span><span class="string">:27017</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/home/avan/docker-compose/base-env/mongo/data/db:/data/db</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/home/avan/docker-compose/base-env/mongo/backup:/backup</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="attr">MONGO_INITDB_ROOT_USERNAME:</span> <span class="string">用户名</span></span><br><span class="line">      <span class="attr">MONGO_INITDB_ROOT_PASSWORD:</span> <span class="string">密码</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="启动-postgres"><a href="#启动-postgres" class="headerlink" title="启动 postgres"></a>启动 postgres</h1>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="../../2022/01/23/summary/docker/docker%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/#more" rel="contents">
+              <a class="btn" href="../../2022/01/23/summary/docker/docker-compose%20yml%20%E6%A0%B7%E6%9D%BF/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -392,7 +393,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-06-05 19:34:24" itemprop="dateModified" datetime="2026-06-05T19:34:24+08:00">2026-06-05</time>
+      <time title="修改时间：2026-06-23 18:43:10" itemprop="dateModified" datetime="2026-06-23T18:43:10+08:00">2026-06-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -471,7 +472,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.4van.top/2022/01/23/summary/docker/docker-compose%20yml%20%E6%A0%B7%E6%9D%BF/">
+    <link itemprop="mainEntityOfPage" href="https://blog.4van.top/2022/01/23/summary/docker/docker%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="../../images/logo.png">
@@ -489,7 +490,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="../../2022/01/23/summary/docker/docker-compose%20yml%20%E6%A0%B7%E6%9D%BF/" class="post-title-link" itemprop="url">docker-compose yml 样板</a>
+          <a href="../../2022/01/23/summary/docker/docker%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" class="post-title-link" itemprop="url">docker 基础知识</a>
         </h2>
 
         <div class="post-meta-container">
@@ -507,7 +508,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-06-05 19:34:24" itemprop="dateModified" datetime="2026-06-05T19:34:24+08:00">2026-06-05</time>
+      <time title="修改时间：2026-06-23 18:43:10" itemprop="dateModified" datetime="2026-06-23T18:43:10+08:00">2026-06-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -530,7 +531,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>87</span>
+      <span>52</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -548,12 +549,11 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="启动-mongo"><a href="#启动-mongo" class="headerlink" title="启动 mongo"></a>启动 mongo</h1><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">services:</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">mongo:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">mongo:7.0.5</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">27000</span><span class="string">:27017</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/home/avan/docker-compose/base-env/mongo/data/db:/data/db</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/home/avan/docker-compose/base-env/mongo/backup:/backup</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="attr">MONGO_INITDB_ROOT_USERNAME:</span> <span class="string">用户名</span></span><br><span class="line">      <span class="attr">MONGO_INITDB_ROOT_PASSWORD:</span> <span class="string">密码</span></span><br></pre></td></tr></table></figure>
-
-<h1 id="启动-postgres"><a href="#启动-postgres" class="headerlink" title="启动 postgres"></a>启动 postgres</h1>
+          <h2 id="CMD"><a href="#CMD" class="headerlink" title="CMD"></a>CMD</h2><p>CMD 设定默认执行的命令</p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CMD</span><span class="language-bash"> [<span class="string">&quot;node&quot;</span>, <span class="string">&quot;dist/main.js&quot;</span>]</span></span><br></pre></td></tr></table></figure>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="../../2022/01/23/summary/docker/docker-compose%20yml%20%E6%A0%B7%E6%9D%BF/#more" rel="contents">
+              <a class="btn" href="../../2022/01/23/summary/docker/docker%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -620,7 +620,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-06-05 19:34:24" itemprop="dateModified" datetime="2026-06-05T19:34:24+08:00">2026-06-05</time>
+      <time title="修改时间：2026-06-23 18:43:10" itemprop="dateModified" datetime="2026-06-23T18:43:10+08:00">2026-06-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -736,7 +736,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-06-05 19:34:24" itemprop="dateModified" datetime="2026-06-05T19:34:24+08:00">2026-06-05</time>
+      <time title="修改时间：2026-06-23 18:43:10" itemprop="dateModified" datetime="2026-06-23T18:43:10+08:00">2026-06-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -848,7 +848,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-06-05 19:34:24" itemprop="dateModified" datetime="2026-06-05T19:34:24+08:00">2026-06-05</time>
+      <time title="修改时间：2026-06-23 18:43:10" itemprop="dateModified" datetime="2026-06-23T18:43:10+08:00">2026-06-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -962,7 +962,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-06-05 19:34:24" itemprop="dateModified" datetime="2026-06-05T19:34:24+08:00">2026-06-05</time>
+      <time title="修改时间：2026-06-23 18:43:10" itemprop="dateModified" datetime="2026-06-23T18:43:10+08:00">2026-06-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1078,7 +1078,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-06-05 19:34:24" itemprop="dateModified" datetime="2026-06-05T19:34:24+08:00">2026-06-05</time>
+      <time title="修改时间：2026-06-23 18:43:10" itemprop="dateModified" datetime="2026-06-23T18:43:10+08:00">2026-06-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1190,7 +1190,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-06-05 19:34:24" itemprop="dateModified" datetime="2026-06-05T19:34:24+08:00">2026-06-05</time>
+      <time title="修改时间：2026-06-23 18:43:10" itemprop="dateModified" datetime="2026-06-23T18:43:10+08:00">2026-06-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1309,7 +1309,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-06-05 19:34:24" itemprop="dateModified" datetime="2026-06-05T19:34:24+08:00">2026-06-05</time>
+      <time title="修改时间：2026-06-23 18:43:10" itemprop="dateModified" datetime="2026-06-23T18:43:10+08:00">2026-06-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
