@@ -84,7 +84,7 @@ extras/powertoys `
 
 # 配置 git
 
-[[开发小锦囊#git 基本配置]]
+[[knowledge-summary/devops/git/Git#git 基本配置|开发小锦囊#git 基本配置]]
 
 # Nvm
 
@@ -133,3 +133,23 @@ ts-node
 ```
 
 > 与 mac 同步 [[Mac系统装机配置指北#Pnpm global package]]
+
+# 配置 AutoHotKey 快捷键
+
+MacLock.ahk
+
+```
+^!q::{
+    DllCall("LockWorkStation")
+}
+```
+
+%%# 禁用全局快捷键
+
+禁用 Win+L锁屏
+1. Win+R
+2. regedit
+3. 进入 `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies`
+4. 新建 key，System
+5. 新建 DWORD (32 位) 值 `DisableLockWorkstation`
+6. 设置值为 `1`%%

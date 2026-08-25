@@ -1,5 +1,5 @@
 ---
-title: agent 偏
+title: agent 篇
 uuid: 4dba6565-2222-4338-b88f-0663d543311f
 date: 2026-06-05
 tags:
@@ -9,182 +9,99 @@ categories:
   - 汇总
   - ai
 ---
-# Skill
+# Agent 工具与技能汇总
 
-## find-skills
+用于记录常用 Agent 插件、Skills、MCP 的用途与安装方式。
 
-## ponyo-cover-anchor-system 小红书封面图
+## 专题
 
-```bash
-npx skills add https://github.com/ponyodong2026/ponyo-cover-anchor-system.git
-```
+- [[blog/summary/ai/deepseek harness 篇|DeepSeek Harness 常用插件]]
 
-## obsidian-skills
+## Plugin
 
-```bash
-npx skills add https://github.com/kepano/obsidian-skills
-```
+| 名称          | 用途                                                                                                                          | 安装方式                                                                                                                                                                                                                                                                 |
+| ----------- | --------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Superpowers | 给 Agent 增加结构化工作流能力，例如头脑风暴、写计划、TDD、系统化调试、执行计划、验收验证等。适合复杂开发任务或需要严谨流程的工作。<br><br>备注：停用 `Test-Driven Development`，手动指定使用 `TDD`。 | Codex App：`plugins` → search `superpowers` → add<br>Cursor：`/add-plugin superpowers`，或在 plugin marketplace 搜索 `superpowers`<br>opencode：`Fetch and follow instructions from https://raw.githubusercontent.com/obra/superpowers/refs/heads/main/.opencode/INSTALL.md` |
 
-## Humanizer-zh
+## Skills
 
-```bash
-npx skills add https://github.com/op7418/Humanizer-zh.git
-```
+### Agent 工作流
 
-## nextlevelbuilder/ui-ux-pro-max-skill
+| Skill       | 用途                                                        | 安装方式                                                      |
+| ----------- | --------------------------------------------------------- | --------------------------------------------------------- |
+| find-skills | 搜索、发现和安装适合当前任务的 Agent Skills。适合“不知道该用哪个 skill”或想扩展技能库时使用。 | 未记录；安装后直接调用 `find-skills`。                                |
+| grill-me    | 用连续追问的方式拷打一个计划、想法、PRD 或技术方案，帮助暴露假设、遗漏、风险和优先级问题。           | `npx skills add mattpocock/skills --skill=grill-me -y -g` |
+| eli5        | 把复杂概念用“Explain Like I’m 5”的方式讲清楚。适合快速理解陌生技术、术语、方案或长文内容，并产出更直白的解释。 | `claude plugin marketplace add anthropics/claude-plugins-community`<br>`claude plugin install eli5@claude-community` |
 
-它的用途：
-给 AI 提供 UI/UX 设计指导，覆盖 React、Next.js、Vue、Svelte、Tailwind、shadcn/ui、React Native、Flutter 等栈
-内置大量设计资料：UI 风格、色板、字体搭配、产品类型规则、图表类型、交互/布局/可访问性建议
-可以按关键词搜索设计建议，比如 dashboard、glassmorphism、form validation
-可以生成项目级 design system，比如 SaaS、fintech、spa、美容、dashboard 等场景
-可用于 UI 审查、改进、重构、可访问性检查、响应式优化、配色/字体建议
+### UI / UX 设计
 
-```bash
-npx skills add nextlevelbuilder/ui-ux-pro-max-skill
-```
+#### 推荐使用顺序
 
-## pbakaus/impeccable
+- **最小优化**：`frontend-design` 主导 → `emil-design-eng` 补细节 → `web-design-guidelines` 做检查。
+- **最优效果**：`impeccable` 主导 → `design-taste-frontend` 定审美方向 → `high-end-visual-design` 补质感判断。
 
-它的主要用途是让 Codex、Claude Code、Cursor、Gemini CLI 这类工具在做界面时少生成“AI 味”很重的设计，比如默认 Inter 字体、紫蓝渐变、卡片套卡片、低对比度灰字等。它提供设计上下文、设计原则、反模式检查，以及一组命令来指导 AI 做更好的 UI/UX。
+#### 保留：测试下来可用的 Skill
 
-常见用途包括：
-/impeccable init：初始化项目设计上下文，生成 PRODUCT.md / DESIGN.md
-/impeccable shape：写代码前先规划界面结构和交互
-/impeccable audit：检查 UI 质量、可访问性、响应式等问题
-/impeccable critique：做 UX/视觉设计评审
-/impeccable polish：上线前细节打磨
-/impeccable animate：加入更有目的的动效
-/impeccable colorize / typeset / layout：分别改善颜色、字体、布局
+| Skill                  | 用途                                                                                                                                                        | 安装方式                                                                                                                                                                           |
+| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| frontend-design        | 生产级前端设计技能。适合创建高质量网页、落地页、仪表盘、产品界面，并提升视觉层次、排版、动效和完成度。                                                                                                       | `npx skills add https://github.com/anthropics/skills --skill frontend-design`                                                                                                  |
+| emil-design-eng        | 面向设计工程师的 UI 质量技能。适合补充界面结构、组件细节、交互状态、动效判断和整体产品质感。                                                                                                          | `npx skills@latest add emilkowalski/skills`                                                                                                                                    |
+| web-design-guidelines  | Web 界面设计规范审查。适合检查页面的信息层级、布局节奏、可读性、交互状态、响应式和无障碍问题。                                                                                                         | `npx skills add https://github.com/vercel-labs/agent-skills --skill web-design-guidelines`<br>或：`npx skills add https://github.com/antfu/skills --skill web-design-guidelines` |
+| impeccable             | 减少 AI 生成界面的“AI 味”，避免默认 Inter 字体、紫蓝渐变、卡片套卡片、低对比度灰字等问题。常用命令：`/impeccable init`、`shape`、`audit`、`critique`、`polish`、`animate`、`colorize`、`typeset`、`layout`。 | `npx skills add pbakaus/impeccable`                                                                                                                                            |
+| design-taste-frontend  | `Leonxlnx/taste-skill` 技能集合里的具体前端审美 skill。适合定审美方向，补充更明确的视觉风格、版式气质、色彩 / 字体方向和整体设计品味。 | `npx skills add Leonxlnx/taste-skill --skill design-taste-frontend` |
+| high-end-visual-design | 高端视觉设计审美指导。适合补质感判断，让网页、落地页、品牌视觉、作品集和产品界面显得更贵、更精致、更像顶级 agency。                                                                                             | `npx skills add https://github.com/leonxlnx/taste-skill --skill high-end-visual-design`                                                                                        |
 
-```bash
-npx skills add pbakaus/impeccable
-```
+#### 不推荐：测试下来表达不好用的 Skill
 
-### DavidHDev/react-bits
+| Skill                                | 用途                                                                                                                                   | 安装方式                                                                                 |
+| ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| nextlevelbuilder/ui-ux-pro-max-skill | 给 AI 提供 UI/UX 设计指导，覆盖 React、Next.js、Vue、Svelte、Tailwind、shadcn/ui、React Native、Flutter 等技术栈。可用于 design system、UI 审查、响应式优化、配色 / 字体建议。 | `npx skills add nextlevelbuilder/ui-ux-pro-max-skill`                                |
+| stitch-design-taste                  | 面向 Google Stitch / AI 设计生成的设计审美技能，用语义化方式描述视觉风格、布局层级和组件质感。                                                                            | `npx skills add https://github.com/leonxlnx/taste-skill --skill stitch-design-taste` |
+| design-an-interface                  | 生成多个差异明显的界面设计方向，而不是只给一个常规方案。适合早期探索、比稿、找视觉方向。                                                                                         | `npx skills add https://github.com/mattpocock/skills --skill design-an-interface`    |
 
-React 动效组件库
+### 前端动效
 
-```bash
-npx skills add DavidHDev/react-bits
-```
+| Skill | 用途 | 安装方式 |
+| --- | --- | --- |
+| gsap | 前端动效技能集。用于 GSAP 动画、timeline、ScrollTrigger、插件、React / Vue / Svelte 集成和性能优化。 | `npx skills add https://github.com/greensock/gsap-skills` |
+| DavidHDev/react-bits | React 动效组件库技能。适合快速找到、生成或接入 React 动画组件，让页面更有视觉表现力。 | `npx skills add DavidHDev/react-bits` |
 
-## shadcn-vue
+### Vue / 组件 / 最佳实践
 
-```bash
-npx skills add unovue/shadcn-vue
-```
+| Skill | 用途 | 安装方式 |
+| --- | --- | --- |
+| shadcn-vue | 管理 shadcn-vue 组件和项目。适合 Vue 项目里添加组件、配置主题、处理组件依赖和遵循 shadcn-vue 实践。 | `npx skills add unovue/shadcn-vue` |
+| vue-best-practices | Vue.js 最佳实践。适合组件设计、组合式 API、状态管理、项目结构、性能和可维护性建议。 | `npx skills add https://github.com/antfu/skills --skill vue-best-practices` |
+| vue-router-best-practices | Vue Router 4 最佳实践。适合处理路由结构、导航守卫、嵌套路由、懒加载、路由元信息和权限控制。 | `npx skills add https://github.com/antfu/skills --skill vue-router-best-practices` |
+| vue-testing-best-practices | Vue 测试最佳实践。适合 Vitest、Vue Test Utils、组件测试、组合式函数测试和测试策略设计。 | `npx skills add https://github.com/antfu/skills --skill vue-testing-best-practices` |
 
-## high-end-visual-design
+### 内容创作
 
-```bash
-npx skills add https://github.com/leonxlnx/taste-skill --skill high-end-visual-design
-```
+| Skill | 用途 | 安装方式 |
+| --- | --- | --- |
+| dashiai-ppt | PPT / 演示文稿生成技能，适合从主题、提纲或素材生成幻灯片结构、内容和设计建议。 | `npx skills add https://github.com/chuspeeism/dashiAI-ppt-skill --skill dashiai-ppt` |
+| gzh-design-skill | 公众号文章生成与设计排版技能，适合把文章内容整理成更适合公众号阅读的结构、标题、排版和视觉风格。 | `npx skills add https://github.com/isjiamu/gzh-design-skill` |
+| fpv-immersive-video-prompting | 根据简短提示词生成完整的第一人称沉浸式视频提示词。适合 image-to-video、套图生成、Seedance 等视频模型场景。 | 未记录。 |
+| ponyo-cover-anchor-system | 小红书 / 公众号封面图设计系统。核心是“强钩子 + 视觉锚点 + 高信息密度”，用于生成更容易被点击的封面方案。 | `npx skills add https://github.com/ponyodong2026/ponyo-cover-anchor-system.git` |
+| Humanizer-zh | 中文文本润色和去 AI 味。适合把生硬、模板化、AI 感强的文字改得更自然、更有人味。 | `npx skills add https://github.com/op7418/Humanizer-zh.git` |
 
-## stitch-design-taste
+### Obsidian / 知识库
 
-```bash
-npx skills add https://github.com/leonxlnx/taste-skill --skill stitch-design-taste
-```
+| Skill | 用途 | 安装方式 |
+| --- | --- | --- |
+| obsidian-skills | Obsidian 相关技能包，用于 Markdown 笔记整理、知识库结构、模板、链接、标签、Dataview 等工作流。 | `npx skills add https://github.com/kepano/obsidian-skills` |
 
-## design-an-interface
+## MCP
 
-```bash
-npx skills add https://github.com/mattpocock/skills --skill design-an-interface
-```
+| 名称             | 用途                                                                                          | 安装方式                                                                                                                                                                                                                                                              |
+| -------------- | ------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| shadcn-vue MCP | 把 shadcn-vue 接入 MCP，让 Agent 可以更方便地读取、安装或管理 shadcn-vue 组件。                                   | `npx shadcn-vue@latest mcp init --client codex`<br>`npx shadcn-vue@latest mcp init --client opencode`<br>`npx shadcn-vue@latest mcp init --client cursor`<br>`npx shadcn-vue@latest mcp init --client vscode`<br>`npx shadcn-vue@latest mcp init --client claude` |
+| context7       | 查询库、框架、SDK、API、CLI、云服务的最新文档。适合确认最新 API、配置方式、版本迁移和官方示例。                                      | `npx ctx7 setup`，安装时选择对应的 Agent 工具。                                                                                                                                                                                                                               |
+| figma          | 连接 Figma，让 Agent 能读取设计稿、理解组件 / 布局 / 样式，辅助设计生成、设计到代码或设计审查。MCP 地址：`https://mcp.figma.com/mcp` | `claude plugin install figma@claude-plugins-official`                                                                                                                                                                                                             |
+| cowart 无限画布    | 无限画布类 Codex 插件。适合画布式创作、空间化组织信息、可视化草图或设计探索。                                                  | `git clone https://github.com/zhongerxin/cowart.git ~/plugins/cowart` → 确认 `~/plugins/cowart/.codex-plugin/plugin.json` 存在 → `codex plugin marketplace add ~` → `codex plugin add cowart@personal`                                                                |
 
-## web-design-guidelines
+## 参考
 
-```bash
-npx skills add https://github.com/vercel-labs/agent-skills --skill web-design-guidelines
-```
-
-```bash
-npx skills add https://github.com/antfu/skills --skill web-design-guidelines
-```
-
-## vue-router-best-practices
-
-```bash
-npx skills add https://github.com/antfu/skills --skill vue-router-best-practices
-```
-
-## vue-best-practices
-
-```bash
-npx skills add https://github.com/antfu/skills --skill vue-best-practices
-```
-
-## vue-testing-best-practices
-
-```bash
-npx skills add https://github.com/antfu/skills --skill vue-testing-best-practices
-```
-
-## frontend-design
-
-```bash
-npx skills add https://github.com/anthropics/skills --skill frontend-design
-```
-
-## Superpowers
-
-### codex app
-
-- plugins
-- search `superpowers`
-- add
-
-### opencode
-
-tell opencode `Fetch and follow instructions from https://raw.githubusercontent.com/obra/superpowers/refs/heads/main/.opencode/INSTALL.md`
-
-### cursor
-
-- In Cursor Agent chat, install from marketplace:
-   `/add-plugin superpowers`
-- Or search for "superpowers" in the plugin marketplace.
-
-# MCP
-
-## shadcn-vue
-
-```bash
-npx shadcn-vue@latest mcp init --client codex
-npx shadcn-vue@latest mcp init --client opencode
-npx shadcn-vue@latest mcp init --client cursor
-npx shadcn-vue@latest mcp init --client vscode
-npx shadcn-vue@latest mcp init --client claude
-```
-
-## context7
-
-执行
-
-```bash
-npx ctx7 setup
-```
-
-选择对应的 agent 工具进行安装
-
-## figma
-
-mcp 地址: `https://mcp.figma.com/mcp`
-
-```bash
-claude plugin install figma@claude-plugins-official
-```
-
-## cowart 无限画布
-
-```bash
-请从 https://github.com/zhongerxin/cowart.git 安装 Cowart Codex 插件。
-请 clone 仓库到 ~/plugins/cowart，确认 .codex-plugin/plugin.json 存在，
-把插件加入 personal marketplace，先运行 codex plugin marketplace add ~，
-再运行 codex plugin add cowart@personal。
-安装后请校验插件，并告诉我是否需要开启一个新对话来加载新技能和 MCP 工具。
-```
-
-# DESIGN.md
-
-[awesome-design-md](https://github.com/VoltAgent/awesome-design-md/tree/main)
+| 名称                                                                            | 用途                      |
+| ----------------------------------------------------------------------------- | ----------------------- |
+| [awesome-design-md](https://github.com/VoltAgent/awesome-design-md/tree/main) | 收集 DESIGN.md 写法和设计文档参考。 |

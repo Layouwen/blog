@@ -191,11 +191,11 @@ uname -m
 
 对应关系：
 
-| 系统输出 | FRP 安装包 |
-|---|---|
-| `x86_64` | `linux_amd64` |
+| 系统输出      | FRP 安装包       |
+| --------- | ------------- |
+| `x86_64`  | `linux_amd64` |
 | `aarch64` | `linux_arm64` |
-| `arm64` | `linux_arm64` |
+| `arm64`   | `linux_arm64` |
 
 下面以 `linux_amd64` 为例。
 

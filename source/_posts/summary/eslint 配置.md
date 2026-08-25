@@ -69,3 +69,5 @@ react 安装
 ```bash
 npm i -D @eslint-react/eslint-plugin eslint-plugin-react-refresh
 ```
+
+[[husky]]

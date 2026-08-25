@@ -144,50 +144,51 @@ uuid: 8b82cdc2-57da-47ac-ac8d-c69597208347
 
 ## 11. 文件、文档、图片与多媒体处理
 
-| 包名 | 描述 |
-| --- | --- |
-| `fs-extra` | 增强版文件操作库，支持复制、移动、确保目录存在等常用能力。 |
-| `decompress` | 解压 ZIP、tar 等压缩包。 |
-| `rimraf` | 跨平台删除文件/目录，常用于清理构建产物。 |
-| `path-exists` | 判断文件或目录是否存在。 |
-| `fast-folder-size` | 快速计算文件夹大小。 |
-| `iconv-lite` | 字符编码转换，常用于处理 GBK 等非 UTF-8 内容。 |
-| `sharp` | 高性能图像处理库，支持缩放、裁剪、格式转换等。 |
-| `imagemin` | 图片压缩工具链。 |
-| `compress-images` | 图片压缩工具。 |
-| `gm` | GraphicsMagick / ImageMagick 的 Node 封装，用于图像处理。 |
-| `ogr2ogr` | 地理空间数据格式转换工具封装。 |
-| `dxf` | DXF 文件解析工具，可用于 CAD 数据处理。 |
-| `jspdf` | 在浏览器或 Node 中生成 PDF。 |
-| `docx` | 生成 `.docx` Word 文档。 |
-| `svg2pdf.js` | 将 SVG 转换为 PDF。 |
-| `pdf2html` | 将 PDF 转换为 HTML。 |
-| `pdfjs-dist` | Mozilla PDF.js 构建包，用于 PDF 渲染和预览。 |
-| `html-to-text` | 将 HTML 转换为纯文本。 |
-| `html2canvas` | 将 DOM 渲染为 canvas，常用于网页截图。 |
-| `canvas2image` | 将 canvas 转换为图片。 |
-| `file-saver` | 在浏览器中触发文件保存。 |
-| `cropperjs` | 浏览器图片裁剪工具。 |
-
+| 包名                 | 描述                                                                    |
+| ------------------ | --------------------------------------------------------------------- |
+| `fs-extra`         | 增强版文件操作库，支持复制、移动、确保目录存在等常用能力。                                         |
+| `decompress`       | 解压 ZIP、tar 等压缩包。                                                      |
+| `rimraf`           | 跨平台删除文件/目录，常用于清理构建产物。                                                 |
+| `path-exists`      | 判断文件或目录是否存在。                                                          |
+| `fast-folder-size` | 快速计算文件夹大小。                                                            |
+| `iconv-lite`       | 字符编码转换，常用于处理 GBK 等非 UTF-8 内容。                                         |
+| `sharp`            | 高性能图像处理库，支持缩放、裁剪、格式转换等。                                               |
+| `imagemin`         | 图片压缩工具链。                                                              |
+| `compress-images`  | 图片压缩工具。                                                               |
+| `gm`               | GraphicsMagick / ImageMagick 的 Node 封装，用于图像处理。                        |
+| `ogr2ogr`          | 地理空间数据格式转换工具封装。                                                       |
+| `dxf`              | DXF 文件解析工具，可用于 CAD 数据处理。                                              |
+| `jspdf`            | 在浏览器或 Node 中生成 PDF。                                                   |
+| `docx`             | 生成 `.docx` Word 文档。                                                   |
+| `svg2pdf.js`       | 将 SVG 转换为 PDF。                                                        |
+| `pdf2html`         | 将 PDF 转换为 HTML。                                                       |
+| `pdfjs-dist`       | Mozilla PDF.js 构建包，用于 PDF 渲染和预览。                                      |
+| `html-to-text`     | 将 HTML 转换为纯文本。                                                        |
+| `html2canvas`      | 将 DOM 渲染为 canvas，常用于网页截图。                                             |
+| `canvas2image`     | 将 canvas 转换为图片。                                                       |
+| `file-saver`       | 在浏览器中触发文件保存。                                                          |
+| `cropperjs`        | 浏览器图片裁剪工具。                                                            |
+| `file-viewer`      | 文件预览/查看组件或工具，常用于在 Web 页面中预览 PDF、Office 文档、图片、文本等附件，适合后台系统、网盘、文档管理等场景。 |
 ## 12. 命令行交互与日志
 
-| 包名 | 描述 |
-| --- | --- |
-| `commander` | 构建命令行程序，支持命令、参数、帮助信息等。 |
-| `inquirer` | 命令行交互式问答工具。 |
-| `yargs-parser` | 解析命令行参数。 |
-| `minimist` | 轻量命令行参数解析工具。 |
-| `chalk` | 终端彩色文本输出。 |
-| `picocolors` | 极轻量终端颜色库。 |
-| `colors` | 终端颜色输出库。 |
-| `ora` | 终端加载动画。 |
-| `cli-progress` | 终端进度条。 |
-| `clear` | 清空终端屏幕。 |
-| `figlet` | 在终端生成字符画标题。 |
-| `npmlog` | npm 风格日志工具。 |
-| `log4js` | 日志记录库，支持文件输出、日志级别和格式化。 |
-| `morgan` | HTTP 请求日志中间件，常用于 Express/Koa 服务。 |
-| `ink` | 使用 React 构建命令行界面。 |
+| 包名             | 描述                               |
+| -------------- | -------------------------------- |
+| `commander`    | 构建命令行程序，支持命令、参数、帮助信息等。           |
+| `inquirer`     | 命令行交互式问答工具。                      |
+| `yargs-parser` | 解析命令行参数。                         |
+| `minimist`     | 轻量命令行参数解析工具。                     |
+| `chalk`        | 终端彩色文本输出。                        |
+| `picocolors`   | 极轻量终端颜色库。                        |
+| `colors`       | 终端颜色输出库。                         |
+| `ora`          | 终端加载动画。                          |
+| `cli-progress` | 终端进度条。                           |
+| `clear`        | 清空终端屏幕。                          |
+| `figlet`       | 在终端生成字符画标题。                      |
+| `npmlog`       | npm 风格日志工具。                      |
+| `log4js`       | 日志记录库，支持文件输出、日志级别和格式化。           |
+| `tslog`        | TypeScript / JavaScript 日志库，支持彩色格式化输出、JSON 日志、日志级别过滤、子 logger 和多运行时使用。 |
+| `morgan`       | HTTP 请求日志中间件，常用于 Express/Koa 服务。 |
+| `ink`          | 使用 React 构建命令行界面。                |
 
 ## 13. 后端框架与中间件
 
@@ -205,6 +206,8 @@ uuid: 8b82cdc2-57da-47ac-ac8d-c69597208347
 | `egg-validate` | Egg.js 参数校验插件；原文为 `egg-valiadate`，建议核对包名。 |
 | `co-wechat` | 微信公众平台相关能力封装。 |
 | `co-wechat-api` | 微信 API 调用封装。 |
+| `bullmq` | 基于 Redis 的 Node.js 消息队列和后台任务库，支持任务生产与 Worker 消费、延迟/定时任务、重试、优先级等。 |
+| `@nestjs/bullmq` | NestJS 对 BullMQ 的官方集成模块，提供队列注册、处理器、事件监听和队列注入能力，适合在 Nest 应用中处理异步任务。 |
 | `necord` | NestJS 与 Discord.js 集成库。 |
 | `@upyo/core` | 面向 Node/Bun/Deno 的邮件发送抽象库。 |
 | `nodemailer` | Node.js 邮件发送库。 |
@@ -260,21 +263,22 @@ uuid: 8b82cdc2-57da-47ac-ac8d-c69597208347
 
 ## 16. 浏览器基础能力与交互
 
-| 包名 | 描述 |
-| --- | --- |
-| `copy-to-clipboard` | 浏览器复制到剪贴板工具。 |
-| `hotkeys-js` | 快捷键绑定库。 |
-| `@fingerprintjs/fingerprintjs` | 浏览器指纹识别库。 |
-| `mixpanel-browser` | Mixpanel 浏览器端埋点 SDK。 |
-| `sentry` | 应用异常监控和性能追踪平台 SDK。 |
-| `aegis` | 腾讯云前端监控 SDK。 |
-| `nprogress` | 页面顶部加载进度条。 |
-| `driver.js` | 用户引导和步骤提示库。 |
-| `@builder.io/partytown` | 将第三方脚本转移到 Web Worker 中运行，降低主线程压力。 |
-| `web-worker` | 统一浏览器和 Node.js 的 Worker 写法。 |
-| `@emailjs/browser` | 浏览器端邮件发送服务 SDK。 |
-| `radar-sdk-js` | 地图、地理围栏和位置服务 SDK，可作为 Google Maps 相关方案的替代选择。 |
-| `watermark-js-plus` | 添加明水印或暗水印。 |
+| 包名                             | 描述                                                    |
+| ------------------------------ | ----------------------------------------------------- |
+| `copy-to-clipboard`            | 浏览器复制到剪贴板工具。                                          |
+| `hotkeys-js`                   | 快捷键绑定库。                                               |
+| `@fingerprintjs/fingerprintjs` | 浏览器指纹识别库。                                             |
+| `mixpanel-browser`             | Mixpanel 浏览器端埋点 SDK。                                  |
+| `sentry`                       | 应用异常监控和性能追踪平台 SDK。                                    |
+| `aegis`                        | 腾讯云前端监控 SDK。                                          |
+| `nprogress`                    | 页面顶部加载进度条。                                            |
+| `driver.js`                    | 用户引导和步骤提示库。                                           |
+| `@builder.io/partytown`        | 将第三方脚本转移到 Web Worker 中运行，降低主线程压力。                     |
+| `web-worker`                   | 统一浏览器和 Node.js 的 Worker 写法。                           |
+| `@emailjs/browser`             | 浏览器端邮件发送服务 SDK。                                       |
+| `radar-sdk-js`                 | 地图、地理围栏和位置服务 SDK，可作为 Google Maps 相关方案的替代选择。           |
+| `watermark-js-plus`            | 添加明水印或暗水印。                                            |
+| `js.foresight`                 | 基于用户鼠标移动、键盘导航等行为预测下一步交互意图，并提前预取链接或资源，用于提升页面跳转和交互响应速度。 |
 
 ## 17. 动画、拖拽、图形与可视化
 
@@ -287,6 +291,7 @@ uuid: 8b82cdc2-57da-47ac-ac8d-c69597208347
 | `@neodrag/vanilla` | 轻量无框架拖拽库。 |
 | `leader-line-new` | 绘制元素之间的引导线或连线。 |
 | `particles.js` | 粒子背景效果库。 |
+| `edge-aura` | 框架无关的屏幕边缘光效 Canvas 引擎，内置弹簧物理和调色板 LUT，并提供轻量 React 适配器，适合做沉浸式氛围动效。 |
 | `pixi.js` | 2D WebGL/canvas 渲染引擎，适合游戏和复杂图形。 |
 | `three` | WebGL 3D 渲染库。 |
 | `stats.js` | 性能面板，常用于 Three.js FPS 监控。 |
@@ -302,7 +307,11 @@ uuid: 8b82cdc2-57da-47ac-ac8d-c69597208347
 | 包名 | 描述 |
 | --- | --- |
 | `highlight.js` | 代码高亮库。 |
+| `@tanstack/highlight` | TanStack 出品的轻量语法高亮库，常与 `@tanstack/markdown` 搭配用于 Markdown 代码块高亮，适合需要降低包体和客户端 JS 的文档站。 |
+| `takumi-js` | 将代码片段渲染为图片，适合生成代码分享图、技术文章配图或社交媒体代码卡片。 |
 | `marked` | Markdown 解析器。 |
+| `@tanstack/markdown` | TanStack 出品的 Markdown 解析与渲染库，支持可序列化 AST，并提供 React 渲染、HTML 输出和自定义组件映射能力。 |
+| `@mdxeditor/editor` | React Markdown/MDX 富文本编辑器组件，适合在应用内提供所见即所得的 Markdown 编辑体验。 |
 | `quill` | 富文本编辑器。 |
 | `@wangeditor/editor` | 国内常用富文本编辑器。 |
 | `@editorjs/editorjs` | 块编辑器，适合类 Notion 的内容编辑体验。 |
@@ -334,41 +343,42 @@ uuid: 8b82cdc2-57da-47ac-ac8d-c69597208347
 
 ### 状态管理
 
-| 包名 | 描述 |
-| --- | --- |
-| `react-redux` | React 官方 Redux 绑定。 |
-| `redux-toolkit` | Redux 官方推荐工具包，内置 Immer，简化样板代码。 |
-| `recoil` | React 状态管理库，支持 atom/selector 模型。 |
-| `effector` | 响应式状态管理库，支持 React/Vue/Solid 等生态。 |
-| `xstate` | 状态机和状态图管理库，适合复杂流程状态。 |
-| `immer` | 使用可变写法生成不可变数据，适合替代重量级不可变数据结构库。 |
+| 包名              | 描述                               |
+| --------------- | -------------------------------- |
+| `react-redux`   | React 官方 Redux 绑定。               |
+| `redux-toolkit` | Redux 官方推荐工具包，内置 Immer，简化样板代码。   |
+| `recoil`        | React 状态管理库，支持 atom/selector 模型。 |
+| `effector`      | 响应式状态管理库，支持 React/Vue/Solid 等生态。 |
+| `xstate`        | 状态机和状态图管理库，适合复杂流程状态。             |
+| `immer`         | 使用可变写法生成不可变数据，适合替代重量级不可变数据结构库。   |
 
 ### 样式与 UI 辅助
 
-| 包名 | 描述 |
-| --- | --- |
-| `clsx` | 条件组合 className 的轻量工具，适合替代传统 className 拼接库。 |
-| `@emotion/react` | Emotion CSS-in-JS 核心包。 |
-| `@emotion/styled` | Emotion 的 styled API。 |
-| `lucide-react` | Lucide 图标库的 React 版本。 |
-| `react-icons` | React 图标集合，覆盖多个图标库。 |
-
+| 包名                         | 描述                                                                      |
+| -------------------------- | ----------------------------------------------------------------------- |
+| `clsx`                     | 条件组合 className 的轻量工具，适合替代传统 className 拼接库。                              |
+| `@emotion/react`           | Emotion CSS-in-JS 核心包。                                                  |
+| `@emotion/styled`          | Emotion 的 styled API。                                                   |
+| `lucide-react`             | Lucide 图标库的 React 版本。                                                   |
+| `react-icons`              | React 图标集合，覆盖多个图标库。                                                     |
+| `class-variance-authority` | 基于 variants 管理 className 的轻量工具，常与 Tailwind CSS、shadcn/ui 搭配，用于封装组件样式变体。 |
 ### 动画、拖拽与布局
 
-| 包名 | 描述 |
-| --- | --- |
-| `framer-motion` | React 动画库，适合页面转场和复杂交互动效。 |
-| `motion` | Motion 动画库，Framer Motion 的现代包形态。 |
-| `react-spring` | 基于弹簧物理模型的 React 动画库。 |
-| `@react-spring/web` | React Spring 的 Web 包。 |
-| `react-transition-group` | React 进入/退出动画状态管理。 |
-| `react-animations` | CSS 动画预设集合。 |
-| `tweenone` | React 动画库，常见于 Ant Design 生态早期示例。 |
-| `@dnd-kit/core` | 现代 React 拖拽库核心包，适合替代停止维护的 React 拖拽方案。 |
-| `react-draggable` | React 拖拽组件；原文 `react-dragable` 建议修正。 |
-| `gridstack` | 网格拖拽布局库。 |
-| `react-grid-layout` | React 网格拖拽布局组件。 |
-| `rc-resize-observer` | 监听元素尺寸变化的 React 组件。 |
+| 包名                       | 描述                                    |
+| ------------------------ | ------------------------------------- |
+| `framer-motion`          | React 动画库，适合页面转场和复杂交互动效。              |
+| `motion`                 | Motion 动画库，Framer Motion 的现代包形态。      |
+| `react-spring`           | 基于弹簧物理模型的 React 动画库。                  |
+| `@react-spring/web`      | React Spring 的 Web 包。                 |
+| `react-transition-group` | React 进入/退出动画状态管理。                    |
+| `react-animations`       | CSS 动画预设集合。                           |
+| `tweenone`               | React 动画库，常见于 Ant Design 生态早期示例。      |
+| `@dnd-kit/core`          | 现代 React 拖拽库核心包，适合替代停止维护的 React 拖拽方案。 |
+| `react-draggable`        | React 拖拽组件；原文 `react-dragable` 建议修正。  |
+| `gridstack`              | 网格拖拽布局库。                              |
+| `react-grid-layout`      | React 网格拖拽布局组件。                       |
+| `rc-resize-observer`     | 监听元素尺寸变化的 React 组件。                   |
+| react-easy-crop          | 图片裁切                                  |
 
 ### 组件、反馈与体验
 
@@ -407,16 +417,20 @@ uuid: 8b82cdc2-57da-47ac-ac8d-c69597208347
 
 ## 22. Vue / Nuxt 生态
 
-| 包名 | 描述 |
-| --- | --- |
-| `vue` | Vue 核心框架。 |
-| `@vue/compiler-sfc` | Vue 单文件组件编译器。 |
-| `vuedraggable` | Vue 拖拽排序组件。 |
-| `vue-clipboard3` | Vue 3 剪贴板工具。 |
-| `vuex-persist` | Vuex 状态持久化。 |
-| `vue-reuse-template` | 在 Vue 组件内复用模板片段。 |
-| `unplugin-vue-macros` | Vue 宏能力集合，增强组件写法。 |
-| `@tanstack/vue-query` | Vue 版本的 TanStack Query。 |
+| 包名                            | 描述                                                          |
+| ----------------------------- | ----------------------------------------------------------- |
+| `vue`                         | Vue 核心框架。                                                   |
+| `@vue/compiler-sfc`           | Vue 单文件组件编译器。                                               |
+| `pinia`                       | Vue 官方推荐状态管理库，适合 Vue 3 / Nuxt 项目。                           |
+| `pinia-plugin-persistedstate` | Pinia 状态持久化插件，支持 localStorage、sessionStorage 或自定义存储。        |
+| `vuedraggable`                | Vue 拖拽排序组件。                                                 |
+| `vue-waterfall-plugin-next`   | Vue 3 瀑布流布局组件，支持 PC/移动端响应式列数、图片懒加载、卡片入场动画和手动重排，适合图片流、卡片流页面。 |
+| `vue-clipboard3`              | Vue 3 剪贴板工具。                                                |
+| `vuex-persist`                | Vuex 状态持久化。                                                 |
+| `vue-reuse-template`          | 在 Vue 组件内复用模板片段。                                            |
+| `unplugin-vue-macros`         | Vue 宏能力集合，增强组件写法。                                           |
+| `@tanstack/vue-query`         | Vue 版本的 TanStack Query。                                     |
+| vue-bits                      | react-bits 的 vue 迁移版本                                       |
 
 ## 23. React Native 与小程序
 
@@ -429,6 +443,8 @@ uuid: 8b82cdc2-57da-47ac-ac8d-c69597208347
 
 ## 24. UI 组件库
 
+### React
+
 | 包名 | 描述 |
 | --- | --- |
 | `@mui/material` | React Material Design 组件库。 |
@@ -436,10 +452,25 @@ uuid: 8b82cdc2-57da-47ac-ac8d-c69597208347
 | `mantine` | React 组件库，覆盖表单、布局、hooks 等能力。 |
 | `shadcn/ui` | 基于 Radix UI 和 Tailwind CSS 的可复制组件方案。 |
 | `@douyinfe/semi-ui` | 抖音前端团队开源的 React 中后台组件库。 |
+| `astryx` | React + StyleX 构建的组件库。 |
+
+### Vue / Nuxt
+
+| 包名 | 描述 |
+| --- | --- |
 | `naive-ui` | Vue 3 组件库；原文 `naive` 建议核对为 `naive-ui`。 |
 | `reka-ui` | Vue 无样式组件库，可用于构建类似 shadcn-vue 的组件系统。 |
 | `shadcn-vue` | shadcn/ui 的 Vue 社区实现。 |
 | `@nuxt/ui` | Nuxt 官方/生态 UI 组件库。 |
+| `vant` | 轻量、可定制的 Vue 移动端 Web UI 组件库，支持 Vue 3；Vue 2 项目可使用 Vant 2。 [GitHub](https://github.com/youzan/vant) |
+
+### 小程序
+
+| 包名 | 描述 |
+| --- | --- |
+| `@vant/weapp` | Vant 官方的微信小程序 UI 组件库，提供轻量、可靠且可定制的常用组件。 [GitHub](https://github.com/youzan/vant-weapp) |
+| `tdesign-miniprogram` | 腾讯 TDesign 官方微信小程序 UI 组件库，提供常用基础、表单、导航、数据展示和反馈组件。 [GitHub](https://github.com/Tencent/tdesign-miniprogram) |
+| `uview-ui` | uView 官方 2.x 包，面向 uni-app / Vue 2，支持 App、H5、多种小程序及 nvue。 [GitHub](https://github.com/umicro/uView2.0) |
 
 ## 25. 全栈框架与文档站
 
@@ -460,3 +491,10 @@ uuid: 8b82cdc2-57da-47ac-ac8d-c69597208347
 | `cypress`        | 端到端和组件测试框架，集成度高。                      |
 | `nightwatch`     | 基于 WebDriver 的端到端测试框架。                |
 | `testcafe`       | 端到端测试框架，使用门槛较低。                       |
+## 27. AI、LLM 与智能应用
+
+| 包名                        | 描述                                                                                                                            |
+| ------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| `ai`                      | Vercel AI SDK 核心包，统一封装大模型调用、流式响应、工具调用、结构化生成等能力，常与 Next.js、React 以及 `@ai-sdk/openai` 等模型 provider 搭配，用于构建聊天、生成式 AI 和 Agent 应用。 |
+| @ai-sdk/openai-compatible | Vercel AI 适配自定义模型接口                                                                                                           |
+| `@bitkyc08/opencodex` | 通用模型 Provider 代理，让 Codex CLI/App/SDK、Claude Code、Claude Desktop 和 Grok Build 使用任意 LLM（Claude、Gemini、Grok、DeepSeek、Kimi、Qwen、Ollama 等），并提供本地 Web 控制台与 ChatGPT 账号池管理。 |
